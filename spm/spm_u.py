@@ -1,0 +1,27 @@
+from spm.__wrap__ import _Runtime
+
+
+def spm_u(*args, **kwargs):
+  """  Uncorrected critical height threshold at a specified significance level  
+    FORMAT [u] = spm_u(a,df,STAT)  
+    a     - critical probability - {alpha}  
+    df    - [df{interest} df{error}]  
+    STAT  - Statistical field  
+                  'Z' - Gaussian field  
+                  'T' - T - field  
+                  'X' - Chi squared field  
+                  'F' - F - field  
+                  'P' - P - value  
+     
+    u     - critical height {uncorrected}  
+   __________________________________________________________________________  
+     
+    spm_u returns the uncorrected critical threshold at a specified   
+    significance.  
+   __________________________________________________________________________  
+  
+
+  [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/spm_u.m)
+  """
+
+  return _Runtime.call("spm_u", *args, **kwargs)

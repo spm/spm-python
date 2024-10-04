@@ -1,0 +1,18 @@
+from spm.__wrap__ import _Runtime
+
+
+def spm_run_normalise(*args, **kwargs):
+  """  SPM job execution function  
+    takes a harvested job data structure and call SPM functions to perform  
+    computations on the data.  
+    Input:  
+    job    - harvested job data structure (see matlabbatch help)  
+    Output:  
+    out    - computation results, usually a struct variable.  
+   __________________________________________________________________________  
+  
+
+  [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/toolbox/OldNorm/spm_run_normalise.m)
+  """
+
+  return _Runtime.call("spm_run_normalise", *args, **kwargs)

@@ -1,0 +1,18 @@
+from spm.__wrap__ import _Runtime
+
+
+def DATA_WID_data(*args, **kwargs):
+  """  Data retrieval function for COVID modelling  
+    FORMAT D = DATA_WID_data  
+     
+    n   - number of countries to retain [default: n]  
+     
+    This auxiliary routine retrieves data from comma separated data files  
+   __________________________________________________________________________  
+    Copyright (C) 2020 Wellcome Centre for Human Neuroimaging  
+  
+
+  [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/toolbox/DEM/DATA_WID_data.m)
+  """
+
+  return _Runtime.call("DATA_WID_data", *args, **kwargs)

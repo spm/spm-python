@@ -1,0 +1,13 @@
+from spm.__wrap__ import _Runtime
+
+
+def DEM_demo_factor_analysis(*args, **kwargs):
+  """  Demo for Probabilistic Factor Analysis; This uses a hierarchical model  
+    under the constraint that the causes have a deterministic and stochastic  
+    components.  The aim is to recover the true subspace of the real causes.  
+  
+
+  [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/toolbox/DEM/DEM_demo_factor_analysis.m)
+  """
+
+  return _Runtime.call("DEM_demo_factor_analysis", *args, **kwargs, nargout=0)

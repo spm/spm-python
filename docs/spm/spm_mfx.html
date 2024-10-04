@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+<meta name="generator" content="pdoc3 0.11.1">
+<title>spm.spm_mfx API documentation</title>
+<meta name="description" content="">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/13.0.0/sanitize.min.css" integrity="sha512-y1dtMcuvtTMJc1yPgEqF0ZjQbhnc/bFhyvIyVNb9Zk5mIGtqVaAB1Ttl28su8AvFMOY0EwRbAe+HCLqj6W7/KA==" crossorigin>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/13.0.0/typography.min.css" integrity="sha512-Y1DYSb995BAfxobCkKepB1BqJJTPrOp3zPL74AWFugHHmmdcvO+C48WLrUOlhGMc0QG7AE3f7gmvvcrmX2fDoA==" crossorigin>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css" crossorigin>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:1.5em;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:2em 0 .50em 0}h3{font-size:1.4em;margin:1.6em 0 .7em 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .2s ease-in-out}a:visited{color:#503}a:hover{color:#b62}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900;font-weight:bold}pre code{font-size:.8em;line-height:1.4em;padding:1em;display:block}code{background:#f3f3f3;font-family:"DejaVu Sans Mono",monospace;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em 1em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul ul{padding-left:1em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js" integrity="sha512-D9gUyxqja7hBtkWpPWGt9wfbfaMGVt9gnyCvYa+jojwwPHLCzUm5i8rpk7vD7wNee9bA35eYIjobYPaQuKS1MQ==" crossorigin></script>
+<script>window.addEventListener('DOMContentLoaded', () => {
+hljs.configure({languages: ['bash', 'css', 'diff', 'graphql', 'ini', 'javascript', 'json', 'plaintext', 'python', 'python-repl', 'rust', 'shell', 'sql', 'typescript', 'xml', 'yaml']});
+hljs.highlightAll();
+})</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>spm.spm_mfx</code></h1>
+</header>
+<section id="section-intro">
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-functions">Functions</h2>
+<dl>
+<dt id="spm.spm_mfx.spm_mfx"><code class="name flex">
+<span>def <span class="ident">spm_mfx</span></span>(<span>*args, **kwargs)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Convert a 1st-level design specification into a MFX specification<br>
+FORMAT [SPM] = spm_mfx(SPM,c)<br>
+SPM {in} - design and estimation structure after a 1st-level analysis<br>
+c
+- contrast used to define 2nd level design matrix. If this is<br>
+not specified spm_mfx will (1) suggest the ones(n,1) contrast<br>
+where n is the number of sessions/subjects, (2) call<br>
+spm_conman to allow this contrast to be modified interactively
+</p>
+<pre><code>         Note: the specification of a contrast that is not ones(n,1) allows,   
+         for example, specified sessions/subjects to be ignored.
+</code></pre>
+<p>SPM {out} is saved in fullfile(SPM.swd,'mfx','SPM.mat')
+</p>
+<p>spm_mfx takes the SPM.mat of a 1st-level estimation of a repeated-measure<br>
+multi-session study and produces the SPM design specification for a<br>
+full mixed-effects (MFX) analysis. The 1st-level design (X1) must have<br>
+the same number of parameters for each session. These are assumed to<br>
+represent session-specific realisations of 2nd-level effects.
+</p>
+<p>spm_mfx prompts for a 2nd-level design matrix (X2) in the form of an<br>
+F-contrast. This is expanded using the Kronecker tensor product to<br>
+model the effects of each 2nd-level parameter separately. A new<br>
+SPM.mat structure is saved in a subdirectory of the 1st-level results<br>
+directory and can be estimated in the usual way. 2nd-level contrasts<br>
+can then be used to test specific hypotheses at the 2nd-level in terms<br>
+of compounds of 1st-level parameters specified by X2 (e.g. their<br>
+mean).
+</p>
+<p>spm_mfx is a full mixed effects analysis in the sense that it allows<br>
+for unbalanced designs at the 1st-level and different 1st-level error<br>
+covariances. Operationally, ReML estimates of the 1st and 2nd-level<br>
+covariance components are computed by projecting the 2nd-level effects<br>
+down to the 1st-level and partitioning the covariance of the data in<br>
+observation space. The 2nd-level parameter estimates are then computed<br>
+as linear mixtures of the 1st-level estimates, using the appropriate<br>
+non-sphericity. This non-sphericity is a mixture of 1st- and 2nd-level<br>
+components that renders the ensuing 2nd-level estimates ML.
+</p>
+<p>In summary;
+</p>
+<p>ReML estimates of V1 are obtained where
+</p>
+<pre><code>             y    = X1*B1 + X0*B0 + e1  
+             B1   = X2*B2 + e2;
+</code></pre>
+<p>giving;
+y
+= X1<em>X2</em>B2 + X0<em>B0 + X1</em>e2 + e1
+</p>
+<p>where
+V1
+= cov(X1*e2 + e1)
+</p>
+<p>V1 is now used to give the covariance components of any 1st-level<br>
+parameter estimators B1h
+</p>
+<pre><code>             B1h  = M1*y
+</code></pre>
+<p>such that
+V2
+= cov(B1h) = M1<em>V1</em>M1'
+</p>
+<p>is the error covariance for the single level model
+</p>
+<pre><code>             B1h  = X2*B2 + r2
+</code></pre>
+<p>where cov(r2) = cov(B1h) = V2, which can be estimated non-iteratively<br>
+in the usual way to give the ML estimates of B2.
+</p>
+<p>Note that with balanced designs and equal error covariances over<br>
+sessions, at the 1st level there is no need to compute multiple<br>
+covariance components because, at the 2nd-level, they are exactly the<br>
+same (i.e. M1<em>X1</em>cov(e2)<em>X1</em>M1 has the same form as M1<em>cov(e1)</em>M1).
+</p>
+<p>The ReML hyperparameters are estimated using the covariance of y over<br>
+voxels. This means that the relative amounts of within and<br>
+between-session variance are assumed to be fixed over voxels but can<br>
+vary in their overall expression. The voxels used for this pooling are<br>
+those that show 1st-level responses.
+</p>
+<p>See spm_reml.m
+</p>
+<hr>
+<p><a href="https://github.com/spm/spm/blob/main/spm_mfx.m">Link to the Matlab implementation.</a></p></div>
+</dd>
+</dl>
+</section>
+<section>
+</section>
+</article>
+<nav id="sidebar">
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3>Super-module</h3>
+<ul>
+<li><code><a title="spm" href="index.html">spm</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-functions">Functions</a></h3>
+<ul class="">
+<li><code><a title="spm.spm_mfx.spm_mfx" href="#spm.spm_mfx.spm_mfx">spm_mfx</a></code></li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc" title="pdoc: Python API documentation generator"><cite>pdoc</cite> 0.11.1</a>.</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,18 @@
+from spm.__wrap__ import _Runtime
+
+
+def spm_inv_spd(*args, **kwargs):
+  """  Inverse for symmetric positive (semi)definite matrices  
+    FORMAT X = spm_inv_spd(A,TOL)  
+     
+    A   - symmetric positive definite matrix (e.g. covariance or precision)  
+    X   - inverse (should remain symmetric positive definite)  
+     
+    TOL - tolerance: default = exp(-32)  
+   __________________________________________________________________________  
+  
+
+  [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/spm_inv_spd.m)
+  """
+
+  return _Runtime.call("spm_inv_spd", *args, **kwargs)

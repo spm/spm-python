@@ -1,0 +1,826 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+<meta name="generator" content="pdoc3 0.11.1">
+<title>spm.slover API documentation</title>
+<meta name="description" content="">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/13.0.0/sanitize.min.css" integrity="sha512-y1dtMcuvtTMJc1yPgEqF0ZjQbhnc/bFhyvIyVNb9Zk5mIGtqVaAB1Ttl28su8AvFMOY0EwRbAe+HCLqj6W7/KA==" crossorigin>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/13.0.0/typography.min.css" integrity="sha512-Y1DYSb995BAfxobCkKepB1BqJJTPrOp3zPL74AWFugHHmmdcvO+C48WLrUOlhGMc0QG7AE3f7gmvvcrmX2fDoA==" crossorigin>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css" crossorigin>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:1.5em;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:2em 0 .50em 0}h3{font-size:1.4em;margin:1.6em 0 .7em 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .2s ease-in-out}a:visited{color:#503}a:hover{color:#b62}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900;font-weight:bold}pre code{font-size:.8em;line-height:1.4em;padding:1em;display:block}code{background:#f3f3f3;font-family:"DejaVu Sans Mono",monospace;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em 1em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul ul{padding-left:1em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js" integrity="sha512-D9gUyxqja7hBtkWpPWGt9wfbfaMGVt9gnyCvYa+jojwwPHLCzUm5i8rpk7vD7wNee9bA35eYIjobYPaQuKS1MQ==" crossorigin></script>
+<script>window.addEventListener('DOMContentLoaded', () => {
+hljs.configure({languages: ['bash', 'css', 'diff', 'graphql', 'ini', 'javascript', 'json', 'plaintext', 'python', 'python-repl', 'rust', 'shell', 'sql', 'typescript', 'xml', 'yaml']});
+hljs.highlightAll();
+})</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>spm.slover</code></h1>
+</header>
+<section id="section-intro">
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-classes">Classes</h2>
+<dl>
+<dt id="spm.slover.slover"><code class="flex name class">
+<span>class <span class="ident">slover</span></span>
+<span>(</span><span>*args, **kwargs)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>class constructor for slice overlay (slover) object<br>
+FORMAT [o, others] = slover(params, others, varargin)
+</p>
+<p>Inputs<br>
+params
+- either:<br>
+- action string implementing class methods (see below)<br>
+- array of image names / vol structs to display<br>
+- structure with some fields for object (see below)<br>
+others
+- structure, containing extra fields for object (or children)<br>
+varargin
+- maybe some other parameters for action calls (see below)
+</p>
+<p>Outputs<br>
+o
+- slover object<br>
+others
+- any unrecognized fields from params, others
+</p>
+<p>Object fields are:<br>
+- img - array of structs with information for images to display<br>
+- img structs contain fields<br>
+type - one of {'truecolour' 'split', 'contour'};<br>
+truecolour - displays transparent (see prop) image<br>
+overlaid with any previous<br>
+split - in defined area, replaces image present (SPM<br>
+type activation display)<br>
+contour - contour map of image overlaid.
+See help<br>
+for contours function in matlab<br>
+vol - vol struct info (see spm_vol)<br>
+can also be vol containing image as 3d matrix<br>
+set with add_blobs method<br>
+cmap - colormap for this image<br>
+nancol - color for NaN. If scalar, this is an index into<br>
+the image cmap.
+If 1x3 vector, it's a colour<br>
+prop - proportion of intensity for this cmap/img<br>
+func - function to apply to image before scaling to cmap<br>
+(and therefore before min/max thresholding. E.g. a func of<br>
+'i1(i1==0)=NaN' would convert zeros to NaNs<br>
+range - 2x1 vector of values for image to distribute colormap across<br>
+the first row of the colormap applies to the first<br>
+value in 'range', and the last value to the second<br>
+value in 'range'<br>
+outofrange - behavior for image values to the left and<br>
+right of image limits in 'range'.
+Left means<br>
+colormap values &lt; 1, i.e for image values &lt;<br>
+range(1), if (range(1)<range(2)), and image values ><br>
+range(1) where (range(1)&gt;range(2)). If missing,<br>
+display min (for Left) and max (for Right) value from colormap.<br>
+Otherwise should be a 2 element cell array, where<br>
+the first element is the colour value for image values<br>
+left of 'range', and the second is for image values<br>
+right of 'range'.
+Scalar values for<br>
+colour index the colormap, 3x1 vectors are colour<br>
+values.
+An empty array attracts default settings<br>
+appropriate to the mode - i.e. transparent colour (where<br>
+img(n).type is truecolour), or split colour.
+Empty cells<br>
+default to 0. 0 specifies that voxels with this<br>
+colour do not influence the image (split =<br>
+background, true = black)<br>
+hold
+- resampling order for image (see spm_sample_vol) -<br>
+default 1<br>
+background - value when resampling outside image - default<br>
+NaN<br>
+linespec - string, applies only to contour map,<br>
+e.g. 'w-' for white continuous lines<br>
+contours - vector, applies to contour map only, defines<br>
+values in image for which to show contours<br>
+(see help contours)<br>
+linewidth - scalar, width in points of contour lines
+</p>
+<ul>
+<li>transform - either - 4x4 transformation to apply to image slice position,<br>
+relative to mm given by slicedef, before display<br>
+or
+- text string, one of axial, coronal, sagittal<br>
+These orientations assume the image is currently<br>
+(after its mat file has been applied) axially<br>
+oriented
+</li>
+<li>slicedef - 2x3 array specifying dimensions for slice images in mm<br>
+where rows are x,and y of slice image, and cols are neg max dim,<br>
+slice separation and pos max dim
+</li>
+<li>slices
+- vector of slice positions in mm in z (of transformed image)
+</li>
+<li>figure
+- figure handle for slice display figure<br>
+The object used for the display is attached as 'UserData'<br>
+to this figure
+</li>
+<li>figure_struct - stored figure parameters (in case figure dies and<br>
+needs to be recreated)
+</li>
+<li>refreshf
+- flag - if set or empty, refresh axis info for figure<br>
+else assume this is OK
+</li>
+<li>clf
+- flag, non zero -&gt; clear figure before display.
+Redundant<br>
+if refreshf == 0
+</li>
+<li>resurrectf - if not zero, and figure (above) does not exist, will<br>
+attempt to recreate figure with same area properties.<br>
+Otherwise painting will give an error.
+</li>
+<li>userdata
+- flag, non zero -&gt; attaches object to figure when plotting,<br>
+for use by callbacks (default is 1)
+</li>
+<li>area
+- struct with fields<br>
+position - bottom left, x size y size 1x4 vector of<br>
+area in which to display slices<br>
+units
+- one of<br>
+inches,centimeters,normalized,points,{pixels}<br>
+halign - one of left,{center},right<br>
+valign - one of top,{middle},bottom
+</li>
+<li>xslices
+- no of slices to display across figure (defaults to an optimum)
+</li>
+<li>cbar
+- if empty, missing, no colourbar.
+If an array of integers, then<br>
+indexes img array, and makes colourbar for each cmap for<br>
+that img.
+Cbars specified in order of appearance L-&gt;R
+</li>
+<li>labels - struct can be:<br>
+- empty (-&gt; default numerical labels)<br>
+- 'none' (string) (no labels)<br>
+- or contain fields:<br>
+colour - colour for label text<br>
+size - font size in units normalized to slice axes<br>
+format - if = cell array of strings =<br>
+labels for each slice in Z.
+If is string, specifies<br>
+sprintf format string for labelling in distance of the<br>
+origin (Xmm=0, Ymm=0) of each slice from plane containing<br>
+the AC, in mm, in the space of the transformed image
+</li>
+<li>callback - callback string for button down on image panels. THe<br>
+following examples assume that you have the 'userdata'<br>
+field set to 1, giving you access to underlying object<br>
+To print to the matlab window the equivalent position in<br>
+mm of the position of a mouse click on one of the image<br>
+slices, set callback to:<br>
+'get_pos(get(gcf, ''UserData''))'<br>
+To print the intensity values of the images at the clicked point:<br>
+['so_obj = get(gcf, ''UserData''); ' &hellip;<br>
+'point_vals(so_obj, get_pos(so_obj))']
+</li>
+<li>printstr - string for printing slice overlay figure window, e.g.<br>
+'print -dpsc -painters -noui' (the default)
+</li>
+<li>printfile - name of file to print output to; default 'slices.ps'
+</li>
+</ul>
+<p>Action string formats:<br>
+FORMAT [cmap warnstr] = slover('getcmap', cmapname)<br>
+Gets colormap named in cmapname string
+</p>
+<p>FORMAT [mx mn] = slover('volmaxmin', vol)<br>
+Returns maximum and minimum finite values from vol struct 'vol'
+</p>
+<p>FORMAT vol = slover('blobs2vol', XYZ, vals, mat)<br>
+returns (pseudo) vol struct for 3d blob volume specified<br>
+in matrices as above
+</p>
+<p>FORMAT vol = slover('matrix2vol', mat3d, mat)<br>
+returns (pseudo) vol struct for 3d matrix<br>
+input matrices as above
+</p>
+<p>FORMAT obj = slover('basic_ui' [,dispf])<br>
+Runs basic UI to fetch some parameters, does display, returns object<br>
+If optional dispf parameter = 0, suppresses display
+</p>
+<hr>
+<pre><code>Documentation for slover  
+   doc slover
+</code></pre>
+<p><a href="https://github.com/spm/spm/blob/main/@slover/slover.m">Link to the Matlab implementation.</a></p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class slover(_MatlabClassWrapper):
+  def __init__(self, *args, _objdict=None, **kwargs):
+    &#34;&#34;&#34;  class constructor for slice overlay (slover) object  
+    FORMAT [o, others] = slover(params, others, varargin)  
+     
+    Inputs  
+    params    - either:  
+                - action string implementing class methods (see below)  
+                - array of image names / vol structs to display  
+                - structure with some fields for object (see below)  
+    others    - structure, containing extra fields for object (or children)  
+    varargin  - maybe some other parameters for action calls (see below)  
+     
+    Outputs  
+    o       - slover object  
+    others  - any unrecognized fields from params, others  
+     
+    Object fields are:  
+     - img - array of structs with information for images to display  
+           - img structs contain fields  
+                type - one of {&#39;truecolour&#39; &#39;split&#39;, &#39;contour&#39;};  
+                      truecolour - displays transparent (see prop) image  
+                         overlaid with any previous  
+                      split - in defined area, replaces image present (SPM  
+                         type activation display)  
+                      contour - contour map of image overlaid.  See help  
+                         for contours function in matlab  
+                vol - vol struct info (see spm_vol)  
+                      can also be vol containing image as 3d matrix  
+                      set with add_blobs method  
+                cmap - colormap for this image  
+                nancol - color for NaN. If scalar, this is an index into  
+                       the image cmap.  If 1x3 vector, it&#39;s a colour  
+                prop - proportion of intensity for this cmap/img  
+                func - function to apply to image before scaling to cmap  
+                       (and therefore before min/max thresholding. E.g. a func of  
+                       &#39;i1(i1==0)=NaN&#39; would convert zeros to NaNs  
+                range - 2x1 vector of values for image to distribute colormap across  
+                       the first row of the colormap applies to the first  
+                       value in &#39;range&#39;, and the last value to the second  
+                       value in &#39;range&#39;  
+                outofrange - behavior for image values to the left and  
+                       right of image limits in &#39;range&#39;.  Left means  
+                       colormap values &lt; 1, i.e for image values &lt;  
+                       range(1), if (range(1)&lt;range(2)), and image values &gt;  
+                       range(1) where (range(1)&gt;range(2)). If missing,  
+                       display min (for Left) and max (for Right) value from colormap.  
+                       Otherwise should be a 2 element cell array, where  
+                       the first element is the colour value for image values  
+                       left of &#39;range&#39;, and the second is for image values  
+                       right of &#39;range&#39;.  Scalar values for  
+                       colour index the colormap, 3x1 vectors are colour  
+                       values.  An empty array attracts default settings  
+                       appropriate to the mode - i.e. transparent colour (where  
+                       img(n).type is truecolour), or split colour.  Empty cells  
+                       default to 0. 0 specifies that voxels with this  
+                       colour do not influence the image (split =  
+                       background, true = black)  
+               hold  - resampling order for image (see spm_sample_vol) -  
+                       default 1  
+               background - value when resampling outside image - default  
+                       NaN  
+               linespec - string, applies only to contour map,  
+                       e.g. &#39;w-&#39; for white continuous lines  
+               contours - vector, applies to contour map only, defines  
+                       values in image for which to show contours  
+                       (see help contours)  
+               linewidth - scalar, width in points of contour lines  
+     
+    - transform - either - 4x4 transformation to apply to image slice position,  
+                relative to mm given by slicedef, before display  
+                  or     - text string, one of axial, coronal, sagittal  
+                           These orientations assume the image is currently  
+                           (after its mat file has been applied) axially  
+                           oriented  
+    - slicedef - 2x3 array specifying dimensions for slice images in mm  
+                where rows are x,and y of slice image, and cols are neg max dim,  
+                slice separation and pos max dim  
+    - slices   - vector of slice positions in mm in z (of transformed image)  
+    - figure    - figure handle for slice display figure  
+                  The object used for the display is attached as &#39;UserData&#39;  
+                  to this figure  
+    - figure_struct - stored figure parameters (in case figure dies and  
+                  needs to be recreated)  
+    - refreshf  - flag - if set or empty, refresh axis info for figure  
+                else assume this is OK  
+    - clf       - flag, non zero -&gt; clear figure before display.  Redundant  
+                  if refreshf == 0  
+    - resurrectf - if not zero, and figure (above) does not exist, will  
+                  attempt to recreate figure with same area properties.  
+                  Otherwise painting will give an error.  
+    - userdata  - flag, non zero -&gt; attaches object to figure when plotting,  
+                  for use by callbacks (default is 1)  
+    - area      - struct with fields  
+                     position - bottom left, x size y size 1x4 vector of  
+                         area in which to display slices  
+                     units    - one of  
+                       inches,centimeters,normalized,points,{pixels}  
+                     halign - one of left,{center},right  
+                     valign - one of top,{middle},bottom  
+    - xslices  - no of slices to display across figure (defaults to an optimum)  
+    - cbar      - if empty, missing, no colourbar.  If an array of integers, then  
+                indexes img array, and makes colourbar for each cmap for  
+                that img.  Cbars specified in order of appearance L-&gt;R  
+    - labels - struct can be:  
+                     - empty (-&gt; default numerical labels)  
+                     - &#39;none&#39; (string) (no labels)  
+                     - or contain fields:  
+                     colour - colour for label text  
+                     size - font size in units normalized to slice axes  
+                     format - if = cell array of strings =  
+                     labels for each slice in Z.  If is string, specifies  
+                     sprintf format string for labelling in distance of the  
+                     origin (Xmm=0, Ymm=0) of each slice from plane containing  
+                     the AC, in mm, in the space of the transformed image  
+    - callback - callback string for button down on image panels. THe  
+                 following examples assume that you have the &#39;userdata&#39;  
+                 field set to 1, giving you access to underlying object  
+                 To print to the matlab window the equivalent position in  
+                 mm of the position of a mouse click on one of the image  
+                 slices, set callback to:  
+                      &#39;get_pos(get(gcf, &#39;&#39;UserData&#39;&#39;))&#39;  
+                 To print the intensity values of the images at the clicked point:  
+                      [&#39;so_obj = get(gcf, &#39;&#39;UserData&#39;&#39;); &#39; ...  
+                       &#39;point_vals(so_obj, get_pos(so_obj))&#39;]  
+    - printstr - string for printing slice overlay figure window, e.g.  
+                 &#39;print -dpsc -painters -noui&#39; (the default)  
+    - printfile - name of file to print output to; default &#39;slices.ps&#39;  
+     
+    Action string formats:  
+    FORMAT [cmap warnstr] = slover(&#39;getcmap&#39;, cmapname)  
+    Gets colormap named in cmapname string  
+     
+    FORMAT [mx mn] = slover(&#39;volmaxmin&#39;, vol)  
+    Returns maximum and minimum finite values from vol struct &#39;vol&#39;  
+     
+    FORMAT vol = slover(&#39;blobs2vol&#39;, XYZ, vals, mat)  
+    returns (pseudo) vol struct for 3d blob volume specified  
+    in matrices as above  
+     
+    FORMAT vol = slover(&#39;matrix2vol&#39;, mat3d, mat)  
+    returns (pseudo) vol struct for 3d matrix  
+    input matrices as above  
+     
+    FORMAT obj = slover(&#39;basic_ui&#39; [,dispf])  
+    Runs basic UI to fetch some parameters, does display, returns object  
+    If optional dispf parameter = 0, suppresses display  
+   __________________________________________________________________________  
+    
+      Documentation for slover  
+         doc slover  
+    
+  
+
+  [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@slover/slover.m)
+    &#34;&#34;&#34;
+
+    if _objdict is None:
+      _objdict = _Runtime.call(&#34;slover&#34;, *args, **kwargs)
+    super().__init__(_objdict)
+
+  def add_blobs(self, *args, **kwargs):
+    &#34;&#34;&#34;  Add SPM blobs to img no &#39;imgno&#39;, as specified in  
+    FORMAT obj = add_blobs(obj, xyz, vals, mat, imgno)  
+     
+    Inputs  
+    XYZ   - 3xN voxel coordinates of N blob values  
+    vals  - N blob intensity values  
+    mat   - 4x4 matrix specifying voxels -&gt; mm  
+    imgno - slice overlay img number to add to (defaults last in object)  
+     
+    Outputs  
+    obj   - modified object  
+   __________________________________________________________________________  
+  
+
+  [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@slover/add_blobs.m)
+    &#34;&#34;&#34;
+
+    return _Runtime.call(&#34;add_blobs&#34;, self._as_matlab_object(), *args, **kwargs)
+
+
+  def add_matrix(self, *args, **kwargs):
+    &#34;&#34;&#34;  Add 3d matrix image vol to slice overlay  
+    FORMAT obj = add_matrix(obj, mat3d, mat, imgno)  
+     
+    Inputs  
+    obj          - object  
+    mat3d        - 3D matrix to add as img  
+    mat          - optional 4x4 voxel-&gt;world translation  
+    imgno        - optional img no to add to (defaults to last in object)  
+     
+    Outputs  
+    obj          - modified object  
+   __________________________________________________________________________  
+  
+
+  [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@slover/add_matrix.m)
+    &#34;&#34;&#34;
+
+    return _Runtime.call(&#34;add_matrix&#34;, self._as_matlab_object(), *args, **kwargs)
+
+
+  def add_spm(self, *args, **kwargs):
+    &#34;&#34;&#34;  Add SPM blobs as new img to object, split effect, &#39;hot&#39; colormap  
+    FORMAT obj = add_spm(obj)  
+     
+    SPM results are fetched from the workspace  
+   __________________________________________________________________________  
+  
+
+  [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@slover/add_spm.m)
+    &#34;&#34;&#34;
+
+    return _Runtime.call(&#34;add_spm&#34;, self._as_matlab_object(), *args, **kwargs)
+
+
+  def display(self, *args, **kwargs):
+    &#34;&#34;&#34;  Display method for slice overlay object  
+   __________________________________________________________________________  
+  
+
+  [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@slover/display.m)
+    &#34;&#34;&#34;
+
+    return _Runtime.call(&#34;display&#34;, self._as_matlab_object(), *args, **kwargs)
+
+
+  def fill_defaults(self, *args, **kwargs):
+    &#34;&#34;&#34;  Check and fill fields in object  
+    FORMAT obj = fill_defaults(obj)  
+     
+    Input  
+    obj    - object to fill  
+     
+    Output  
+    obj    - object filled  
+   __________________________________________________________________________  
+  
+
+  [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@slover/fill_defaults.m)
+    &#34;&#34;&#34;
+
+    return _Runtime.call(&#34;fill_defaults&#34;, self._as_matlab_object(), *args, **kwargs)
+
+
+  def get_pos(self, *args, **kwargs):
+    &#34;&#34;&#34;  Return point location from last click, in mm  
+   __________________________________________________________________________  
+  
+
+  [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@slover/get_pos.m)
+    &#34;&#34;&#34;
+
+    return _Runtime.call(&#34;get_pos&#34;, self._as_matlab_object(), *args, **kwargs)
+
+
+  def paint(self, *args, **kwargs):
+    &#34;&#34;&#34;  Method to display slice overlay  
+    FORMAT obj = paint(obj, params)  
+     
+    Inputs  
+    obj         - slice overlay object  
+    params      - optional structure containing extra display parameters  
+                  - refreshf - overrides refreshf in object  
+                  - clf      - overrides clf in object  
+                  - userdata - if 0, does not add object to userdata field  
+                  (see below)  
+     
+    Outputs  
+    obj         - which may have been filled with defaults  
+     
+    paint attaches the object used for painting to the &#39;UserData&#39; field of  
+    the figure handle, unless instructed not to with 0 in userdata flag  
+   __________________________________________________________________________  
+  
+
+  [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@slover/paint.m)
+    &#34;&#34;&#34;
+
+    return _Runtime.call(&#34;paint&#34;, self._as_matlab_object(), *args, **kwargs)
+
+
+  def point_vals(self, *args, **kwargs):
+    &#34;&#34;&#34;  Return values from all the images at points given in XYZmm  
+    FORMAT vals = point_vals(obj, XYZmm, holdlist)  
+     
+    (for the following,  I is number of images in object, N is the number  
+    of points to resample from)  
+    Input  
+    obj         - object  
+    XYZmm       - 3xN XYZ natrix of points (in mm)  
+    holdlist    - optional 1xI vector of resample hold values  
+     
+    Outputs  
+    vals        - IxN vector of values in images  
+   __________________________________________________________________________  
+  
+
+  [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@slover/point_vals.m)
+    &#34;&#34;&#34;
+
+    return _Runtime.call(&#34;point_vals&#34;, self._as_matlab_object(), *args, **kwargs)
+
+
+  def print_fig(self, *args, **kwargs):
+    &#34;&#34;&#34;  Print slice overlay figure  
+    FORMAT print_fig(obj, filename, printstr)  
+     
+    Input  
+    obj       - object  
+    filename  - optional filename to print to (obj.filename)  
+    printstr  - optional string giving print command (obj.printstr)  
+     
+    Based on spm_figure print, and including fix from thence for ps  
+    printing  
+   __________________________________________________________________________  
+  
+
+  [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@slover/print_fig.m)
+    &#34;&#34;&#34;
+
+    return _Runtime.call(&#34;print_fig&#34;, self._as_matlab_object(), *args, **kwargs)
+
+
+  def subsasgn(self, *args, **kwargs):
+    &#34;&#34;&#34;  Method to overload . notation in assignments.  
+    . assignment works directly on object fields  
+   __________________________________________________________________________  
+  
+
+  [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@slover/subsasgn.m)
+    &#34;&#34;&#34;
+
+    return _Runtime.call(&#34;subsasgn&#34;, self._as_matlab_object(), *args, **kwargs)
+
+
+  def subsref(self, *args, **kwargs):
+    &#34;&#34;&#34;  Method to overload the . notation.  
+    . reference works directly on object fields  
+   __________________________________________________________________________  
+  
+
+  [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@slover/subsref.m)
+    &#34;&#34;&#34;
+
+    return _Runtime.call(&#34;subsref&#34;, self._as_matlab_object(), *args, **kwargs)</code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li>spm.__wrap__._MatlabClassWrapper</li>
+</ul>
+<h3>Methods</h3>
+<dl>
+<dt id="spm.slover.slover.add_blobs"><code class="name flex">
+<span>def <span class="ident">add_blobs</span></span>(<span>self, *args, **kwargs)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Add SPM blobs to img no 'imgno', as specified in<br>
+FORMAT obj = add_blobs(obj, xyz, vals, mat, imgno)
+</p>
+<p>Inputs<br>
+XYZ
+- 3xN voxel coordinates of N blob values<br>
+vals
+- N blob intensity values<br>
+mat
+- 4x4 matrix specifying voxels -&gt; mm<br>
+imgno - slice overlay img number to add to (defaults last in object)
+</p>
+<p>Outputs<br>
+obj
+- modified object
+</p>
+<hr>
+<p><a href="https://github.com/spm/spm/blob/main/@slover/add_blobs.m">Link to the Matlab implementation.</a></p></div>
+</dd>
+<dt id="spm.slover.slover.add_matrix"><code class="name flex">
+<span>def <span class="ident">add_matrix</span></span>(<span>self, *args, **kwargs)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Add 3d matrix image vol to slice overlay<br>
+FORMAT obj = add_matrix(obj, mat3d, mat, imgno)
+</p>
+<p>Inputs<br>
+obj
+- object<br>
+mat3d
+- 3D matrix to add as img<br>
+mat
+- optional 4x4 voxel-&gt;world translation<br>
+imgno
+- optional img no to add to (defaults to last in object)
+</p>
+<p>Outputs<br>
+obj
+- modified object
+</p>
+<hr>
+<p><a href="https://github.com/spm/spm/blob/main/@slover/add_matrix.m">Link to the Matlab implementation.</a></p></div>
+</dd>
+<dt id="spm.slover.slover.add_spm"><code class="name flex">
+<span>def <span class="ident">add_spm</span></span>(<span>self, *args, **kwargs)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Add SPM blobs as new img to object, split effect, 'hot' colormap<br>
+FORMAT obj = add_spm(obj)
+</p>
+<p>SPM results are fetched from the workspace
+</p>
+<hr>
+<p><a href="https://github.com/spm/spm/blob/main/@slover/add_spm.m">Link to the Matlab implementation.</a></p></div>
+</dd>
+<dt id="spm.slover.slover.display"><code class="name flex">
+<span>def <span class="ident">display</span></span>(<span>self, *args, **kwargs)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Display method for slice overlay object
+</p>
+<hr>
+<p><a href="https://github.com/spm/spm/blob/main/@slover/display.m">Link to the Matlab implementation.</a></p></div>
+</dd>
+<dt id="spm.slover.slover.fill_defaults"><code class="name flex">
+<span>def <span class="ident">fill_defaults</span></span>(<span>self, *args, **kwargs)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Check and fill fields in object<br>
+FORMAT obj = fill_defaults(obj)
+</p>
+<p>Input<br>
+obj
+- object to fill
+</p>
+<p>Output<br>
+obj
+- object filled
+</p>
+<hr>
+<p><a href="https://github.com/spm/spm/blob/main/@slover/fill_defaults.m">Link to the Matlab implementation.</a></p></div>
+</dd>
+<dt id="spm.slover.slover.get_pos"><code class="name flex">
+<span>def <span class="ident">get_pos</span></span>(<span>self, *args, **kwargs)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Return point location from last click, in mm
+</p>
+<hr>
+<p><a href="https://github.com/spm/spm/blob/main/@slover/get_pos.m">Link to the Matlab implementation.</a></p></div>
+</dd>
+<dt id="spm.slover.slover.paint"><code class="name flex">
+<span>def <span class="ident">paint</span></span>(<span>self, *args, **kwargs)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Method to display slice overlay<br>
+FORMAT obj = paint(obj, params)
+</p>
+<p>Inputs<br>
+obj
+- slice overlay object<br>
+params
+- optional structure containing extra display parameters<br>
+- refreshf - overrides refreshf in object<br>
+- clf
+- overrides clf in object<br>
+- userdata - if 0, does not add object to userdata field<br>
+(see below)
+</p>
+<p>Outputs<br>
+obj
+- which may have been filled with defaults
+</p>
+<p>paint attaches the object used for painting to the 'UserData' field of<br>
+the figure handle, unless instructed not to with 0 in userdata flag
+</p>
+<hr>
+<p><a href="https://github.com/spm/spm/blob/main/@slover/paint.m">Link to the Matlab implementation.</a></p></div>
+</dd>
+<dt id="spm.slover.slover.point_vals"><code class="name flex">
+<span>def <span class="ident">point_vals</span></span>(<span>self, *args, **kwargs)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Return values from all the images at points given in XYZmm<br>
+FORMAT vals = point_vals(obj, XYZmm, holdlist)
+</p>
+<p>(for the following,
+I is number of images in object, N is the number<br>
+of points to resample from)<br>
+Input<br>
+obj
+- object<br>
+XYZmm
+- 3xN XYZ natrix of points (in mm)<br>
+holdlist
+- optional 1xI vector of resample hold values
+</p>
+<p>Outputs<br>
+vals
+- IxN vector of values in images
+</p>
+<hr>
+<p><a href="https://github.com/spm/spm/blob/main/@slover/point_vals.m">Link to the Matlab implementation.</a></p></div>
+</dd>
+<dt id="spm.slover.slover.print_fig"><code class="name flex">
+<span>def <span class="ident">print_fig</span></span>(<span>self, *args, **kwargs)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Print slice overlay figure<br>
+FORMAT print_fig(obj, filename, printstr)
+</p>
+<p>Input<br>
+obj
+- object<br>
+filename
+- optional filename to print to (obj.filename)<br>
+printstr
+- optional string giving print command (obj.printstr)
+</p>
+<p>Based on spm_figure print, and including fix from thence for ps<br>
+printing
+</p>
+<hr>
+<p><a href="https://github.com/spm/spm/blob/main/@slover/print_fig.m">Link to the Matlab implementation.</a></p></div>
+</dd>
+<dt id="spm.slover.slover.subsasgn"><code class="name flex">
+<span>def <span class="ident">subsasgn</span></span>(<span>self, *args, **kwargs)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Method to overload . notation in assignments.<br>
+. assignment works directly on object fields
+</p>
+<hr>
+<p><a href="https://github.com/spm/spm/blob/main/@slover/subsasgn.m">Link to the Matlab implementation.</a></p></div>
+</dd>
+<dt id="spm.slover.slover.subsref"><code class="name flex">
+<span>def <span class="ident">subsref</span></span>(<span>self, *args, **kwargs)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Method to overload the . notation.<br>
+. reference works directly on object fields
+</p>
+<hr>
+<p><a href="https://github.com/spm/spm/blob/main/@slover/subsref.m">Link to the Matlab implementation.</a></p></div>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+</article>
+<nav id="sidebar">
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3>Super-module</h3>
+<ul>
+<li><code><a title="spm" href="index.html">spm</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-classes">Classes</a></h3>
+<ul>
+<li>
+<h4><code><a title="spm.slover.slover" href="#spm.slover.slover">slover</a></code></h4>
+<ul class="two-column">
+<li><code><a title="spm.slover.slover.add_blobs" href="#spm.slover.slover.add_blobs">add_blobs</a></code></li>
+<li><code><a title="spm.slover.slover.add_matrix" href="#spm.slover.slover.add_matrix">add_matrix</a></code></li>
+<li><code><a title="spm.slover.slover.add_spm" href="#spm.slover.slover.add_spm">add_spm</a></code></li>
+<li><code><a title="spm.slover.slover.display" href="#spm.slover.slover.display">display</a></code></li>
+<li><code><a title="spm.slover.slover.fill_defaults" href="#spm.slover.slover.fill_defaults">fill_defaults</a></code></li>
+<li><code><a title="spm.slover.slover.get_pos" href="#spm.slover.slover.get_pos">get_pos</a></code></li>
+<li><code><a title="spm.slover.slover.paint" href="#spm.slover.slover.paint">paint</a></code></li>
+<li><code><a title="spm.slover.slover.point_vals" href="#spm.slover.slover.point_vals">point_vals</a></code></li>
+<li><code><a title="spm.slover.slover.print_fig" href="#spm.slover.slover.print_fig">print_fig</a></code></li>
+<li><code><a title="spm.slover.slover.subsasgn" href="#spm.slover.slover.subsasgn">subsasgn</a></code></li>
+<li><code><a title="spm.slover.slover.subsref" href="#spm.slover.slover.subsref">subsref</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc" title="pdoc: Python API documentation generator"><cite>pdoc</cite> 0.11.1</a>.</p>
+</footer>
+</body>
+</html>

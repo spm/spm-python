@@ -1,0 +1,23 @@
+from spm.__wrap__ import _Runtime
+
+
+def spm_voice_iff(*args, **kwargs):
+  """  Inverse decomposition at fundamental frequency  
+    FORMAT [Y,W] = spm_voice_iff(xY)  
+     
+    xY    -  cell array of word structures  
+    xY.W  -  parameters - lexical  
+    xY.P  -  parameters - prosody  
+    xY.R  -  parameters - speaker  
+      
+    xY.P.amp - log amplitude  
+    xY.P.dur - log duration (sec)  
+    xY.P.lat - log latency  (sec)  
+    xY.P.tim - timbre     (a.u.)  
+    xY.P.inf - inflection (a.u.)  
+  
+
+  [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/toolbox/DEM/spm_voice_iff.m)
+  """
+
+  return _Runtime.call("spm_voice_iff", *args, **kwargs)

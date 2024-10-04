@@ -1,0 +1,28 @@
+from spm.__wrap__ import _Runtime
+
+
+def _getdimsiz(*args, **kwargs):
+  """  GETDIMSIZ  
+     
+    Use as  
+      dimsiz = getdimsiz(data, field)  
+    or  
+      dimsiz = getdimsiz(data, field, numdim)  
+     
+    MATLAB will not return the size of a  field in the data structure that has trailing  
+    singleton dimensions, since those are automatically squeezed out. With the optional  
+    numdim parameter you can specify how many dimensions the data element has. This  
+    will result in the trailing singleton dimensions being added to the output vector.  
+     
+    Example use  
+      dimord = getdimord(datastructure, fieldname);  
+      dimtok = tokenize(dimord, '_');  
+      dimsiz = getdimsiz(datastructure, fieldname, numel(dimtok));  
+     
+    See also GETDIMORD, GETDATFIELD  
+  
+
+  [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/forward/private/getdimsiz.m)
+  """
+
+  return _Runtime.call("getdimsiz", *args, **kwargs)

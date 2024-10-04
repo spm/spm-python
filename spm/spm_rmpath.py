@@ -1,0 +1,25 @@
+from spm.__wrap__ import _Runtime
+
+
+def spm_rmpath(*args, **kwargs):
+  """  Recursively remove SPM paths from the MATLAB path  
+      SPM_RMPATH checks if the file spm.m is found and removes the  
+      path to that file and any subdirectories below it from the MATLAB  
+      path.  
+     
+      P = SPM_RMPATH performs the same function as above and returns the  
+      cleaned path string in P.  
+     
+      SPM_RMPATH(D) strips the path string D from the MATLAB path.  
+     
+      P = SPM_RMPATH(D) strips the path string D from the MATLAB path and  
+      returns the cleaned path string in P.  
+     
+      See also PATH, ADDPATH, RMPATH, GENPATH, PATHTOOL, SAVEPATH.  
+   __________________________________________________________________________  
+  
+
+  [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/spm_rmpath.m)
+  """
+
+  return _Runtime.call("spm_rmpath", *args, **kwargs)

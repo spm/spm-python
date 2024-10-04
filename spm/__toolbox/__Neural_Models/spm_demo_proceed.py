@@ -1,0 +1,16 @@
+from spm.__wrap__ import _Runtime
+
+
+def spm_demo_proceed(*args, **kwargs):
+  """  prompt for OK and activate correct figure  
+    FORMAT spm_demo_proceed(tag,str)  
+     
+    tag - graphics tag  
+    str - string for dialogue box  
+   __________________________________________________________________________  
+  
+
+  [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/toolbox/Neural_Models/spm_demo_proceed.m)
+  """
+
+  return _Runtime.call("spm_demo_proceed", *args, **kwargs, nargout=0)

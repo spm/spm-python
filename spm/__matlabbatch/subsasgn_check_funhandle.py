@@ -1,0 +1,19 @@
+from spm.__wrap__ import _Runtime
+
+
+def subsasgn_check_funhandle(*args, **kwargs):
+  """  function sts = subsasgn_check_funhandle(val)  
+    Return true if val is either empty, or a function or function handle.  
+    One could also check for nargin == 1 and nargout == 1.  
+     
+    This code is part of a batch job configuration system for MATLAB. See   
+         help matlabbatch  
+    for a general overview.  
+   _______________________________________________________________________  
+    Copyright (C) 2007 Freiburg Brain Imaging  
+  
+
+  [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/matlabbatch/subsasgn_check_funhandle.m)
+  """
+
+  return _Runtime.call("subsasgn_check_funhandle", *args, **kwargs)

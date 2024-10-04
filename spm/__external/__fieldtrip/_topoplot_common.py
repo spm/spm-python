@@ -1,0 +1,12 @@
+from spm.__wrap__ import _Runtime
+
+
+def _topoplot_common(*args, **kwargs):
+  """  TOPOPLOT_COMMON is shared by FT_TOPOPLOTTFR, FT_TOPOPLOTER and FT_TOPOPLOTIC, which  
+    serve as placeholder for the documentation and for the pre/postamble.  
+  
+
+  [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/private/topoplot_common.m)
+  """
+
+  return _Runtime.call("topoplot_common", *args, **kwargs)

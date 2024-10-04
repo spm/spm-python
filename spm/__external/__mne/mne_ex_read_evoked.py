@@ -1,0 +1,22 @@
+from spm.__wrap__ import _Runtime
+
+
+def mne_ex_read_evoked(*args, **kwargs):
+  """   
+      Load one evoked-response data set and do various kinds  
+      of preprocessing  
+     
+      [res] = mne_ex_read_evoked(fname,setno,apply_proj,dest_comp,use_ctf_head)  
+     
+      fname           - Name of the data file  
+      setno           - Data set number (default = 1)  
+      apply_proj      - Apply SSP to the data (default = true)  
+      dest_comp       - Desired (CTF/4D) compensation in the output data (default = keep the one in the file)  
+      use_ctf_head    - Use the CTF/4D head coordinate system instead of the  
+                        Neuromag one if available  
+  
+
+  [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/mne/mne_ex_read_evoked.m)
+  """
+
+  return _Runtime.call("mne_ex_read_evoked", *args, **kwargs)

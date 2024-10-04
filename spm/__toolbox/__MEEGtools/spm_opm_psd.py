@@ -1,0 +1,23 @@
+from spm.__wrap__ import _Runtime
+
+
+def spm_opm_psd(*args, **kwargs):
+  """  Compute PSD for OPM data(for checking noise floor)  
+    FORMAT D = spm_opm_psd(S)  
+      S               - input structure  
+     fields of S:  
+      S.D             - SPM MEEG object                       - Default: no Default  
+      S.triallength   - window size (ms)                      - Default: 1000  
+      S.bc            - boolean to dc correct                 - Default: 0  
+      S.channels      - channel  to estimate PSD from         - Default: 'ALL'  
+      S.plot          - boolean to plot or not                - Default: 0  
+      S.units         - units of measurement                  - Default: 'fT'  
+      S.constant      - constant line to draw as reference    - Default: 15  
+      S.wind          - function handle for window            - Default: @hanning  
+      S.plotbad       - place asterisk over unusual channels  - Default: 0  
+  
+
+  [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/toolbox/MEEGtools/spm_opm_psd.m)
+  """
+
+  return _Runtime.call("spm_opm_psd", *args, **kwargs)

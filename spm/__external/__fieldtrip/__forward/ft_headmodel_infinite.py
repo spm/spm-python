@@ -1,0 +1,19 @@
+from spm.__wrap__ import _Runtime
+
+
+def ft_headmodel_infinite(*args, **kwargs):
+  """  FT_HEADMODEL_INFINITE returns an infinitely large homogenous  
+    volume conduction model. For EEG the volume conductor can be used  
+    to compute the leadfield of electric current dipoles, for MEG it  
+    can be used for computing the leadfield of magnetic dipoles.  
+     
+    Use as  
+      headmodel = ft_headmodel_infinite;  
+     
+    See also FT_PREPARE_VOL_SENS, FT_COMPUTE_LEADFIELD  
+  
+
+  [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/forward/ft_headmodel_infinite.m)
+  """
+
+  return _Runtime.call("ft_headmodel_infinite", *args, **kwargs)

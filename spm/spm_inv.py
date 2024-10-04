@@ -1,0 +1,20 @@
+from spm.__wrap__ import _Runtime
+
+
+def spm_inv(*args, **kwargs):
+  """  Inverse for ill-conditioned matrices  
+    FORMAT X = spm_inv(A,TOL)  
+     
+    A   - matrix  
+    X   - inverse  
+     
+    TOL - tolerance: default = max(eps(norm(A,'inf'))*max(m,n),exp(-32))  
+     
+    This routine simply adds a small diagonal matrix to A and calls inv.m  
+   __________________________________________________________________________  
+  
+
+  [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/spm_inv.m)
+  """
+
+  return _Runtime.call("spm_inv", *args, **kwargs)

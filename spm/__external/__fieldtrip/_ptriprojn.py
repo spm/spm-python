@@ -1,0 +1,23 @@
+from spm.__wrap__ import _Runtime
+
+
+def _ptriprojn(*args, **kwargs):
+  """  PTRIPROJN projects a point onto the plane going through a set of  
+    triangles  
+     
+    Use as  
+      [proj, dist] = ptriprojn(v1, v2, v3, r, flag)  
+    where v1, v2 and v3 are Nx3 matrices with vertex positions of the triangles,   
+    and r is the point that is projected onto the planes spanned by the vertices  
+    This is a vectorized version of Robert's ptriproj function and is  
+    generally faster than a for-loop around the mex-file.  
+     
+    the optional flag can be:  
+      0 (default)  project the point anywhere on the complete plane  
+      1            project the point within or on the edge of the triangle  
+  
+
+  [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/private/ptriprojn.m)
+  """
+
+  return _Runtime.call("ptriprojn", *args, **kwargs)

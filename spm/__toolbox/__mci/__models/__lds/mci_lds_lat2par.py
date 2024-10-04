@@ -1,0 +1,20 @@
+from spm.__wrap__ import _Runtime
+
+
+def mci_lds_lat2par(*args, **kwargs):
+  """  Convert latent params to params  
+    FORMAT [Pt,a,b] = mci_lds_lat2par (P,M)  
+     
+    P         Parameters (latent)  
+    M         model structure  
+     
+    Pt        Parameters (transformed)  
+    a         diagonal values  
+    b         off-diagonal values  
+   __________________________________________________________________________  
+  
+
+  [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/toolbox/mci/models/lds/mci_lds_lat2par.m)
+  """
+
+  return _Runtime.call("mci_lds_lat2par", *args, **kwargs)

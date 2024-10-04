@@ -1,0 +1,20 @@
+from spm.__wrap__ import _Runtime
+
+
+def spm_eeg_inv_datareg_ui(*args, **kwargs):
+  """  User interface for EEG/MEG data coregistration within original sMRI space  
+    FORMAT D = spm_eeg_inv_datareg_ui(D,[val], [meegfid, newmrifid, useheadshape])  
+    D            - M/EEG dataset  
+     
+    meegfid      - M/EEG fiducials  
+    mrifid       - MRI fiducials  
+    useheadshape - use headshape points (1)  
+     
+    D            - same data struct including the new required files and variables  
+   __________________________________________________________________________  
+  
+
+  [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/spm_eeg_inv_datareg_ui.m)
+  """
+
+  return _Runtime.call("spm_eeg_inv_datareg_ui", *args, **kwargs)

@@ -1,0 +1,20 @@
+from spm.__wrap__ import _Runtime
+
+
+def spm_eeg_inv_vbecd_disp(*args, **kwargs):
+  """  Display the dipoles as obtained from VB-ECD  
+     
+    FORMAT spm_eeg_inv_vbecd_disp('Init',D)  
+    Display the latest VB-ECD solution saved in the .inv{} field of the  
+    data structure D.  
+     
+    FORMAT spm_eeg_inv_vbecd_disp('Init',D, ind)  
+    Display the ind^th .inv{} cell element, if it is actually a VB-ECD   
+    solution.  
+   __________________________________________________________________________  
+  
+
+  [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/spm_eeg_inv_vbecd_disp.m)
+  """
+
+  return _Runtime.call("spm_eeg_inv_vbecd_disp", *args, **kwargs, nargout=0)

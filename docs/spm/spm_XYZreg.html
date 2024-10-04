@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+<meta name="generator" content="pdoc3 0.11.1">
+<title>spm.spm_XYZreg API documentation</title>
+<meta name="description" content="">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/13.0.0/sanitize.min.css" integrity="sha512-y1dtMcuvtTMJc1yPgEqF0ZjQbhnc/bFhyvIyVNb9Zk5mIGtqVaAB1Ttl28su8AvFMOY0EwRbAe+HCLqj6W7/KA==" crossorigin>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/13.0.0/typography.min.css" integrity="sha512-Y1DYSb995BAfxobCkKepB1BqJJTPrOp3zPL74AWFugHHmmdcvO+C48WLrUOlhGMc0QG7AE3f7gmvvcrmX2fDoA==" crossorigin>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css" crossorigin>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:1.5em;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:2em 0 .50em 0}h3{font-size:1.4em;margin:1.6em 0 .7em 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .2s ease-in-out}a:visited{color:#503}a:hover{color:#b62}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900;font-weight:bold}pre code{font-size:.8em;line-height:1.4em;padding:1em;display:block}code{background:#f3f3f3;font-family:"DejaVu Sans Mono",monospace;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em 1em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul ul{padding-left:1em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js" integrity="sha512-D9gUyxqja7hBtkWpPWGt9wfbfaMGVt9gnyCvYa+jojwwPHLCzUm5i8rpk7vD7wNee9bA35eYIjobYPaQuKS1MQ==" crossorigin></script>
+<script>window.addEventListener('DOMContentLoaded', () => {
+hljs.configure({languages: ['bash', 'css', 'diff', 'graphql', 'ini', 'javascript', 'json', 'plaintext', 'python', 'python-repl', 'rust', 'shell', 'sql', 'typescript', 'xml', 'yaml']});
+hljs.highlightAll();
+})</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>spm.spm_XYZreg</code></h1>
+</header>
+<section id="section-intro">
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-functions">Functions</h2>
+<dl>
+<dt id="spm.spm_XYZreg.spm_XYZreg"><code class="name flex">
+<span>def <span class="ident">spm_XYZreg</span></span>(<span>*args, **kwargs)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Registry for GUI XYZ locations, and point list utility functions
+</p>
+<pre><code>                         ----------------
+</code></pre>
+<p>PointList &amp; voxel centre utilities&hellip;
+</p>
+<p>FORMAT [xyz,d] = spm_XYZreg('RoundCoords',xyz,M,D)<br>
+FORMAT [xyz,d] = spm_XYZreg('RoundCoords',xyz,V)<br>
+Round specified xyz location to nearest voxel centre<br>
+xyz - (Input) 3-vector of X, Y &amp; Z locations, in "real" coordinates<br>
+M
+- 4x4 transformation matrix relating voxel to "real" coordinates<br>
+D
+- 3 vector of image X, Y &amp; Z dimensions (DIM)<br>
+V
+- 9-vector of image and voxel sizes, and origin [DIM,VOX,ORIGIN]'<br>
+M derived as [ [diag(V(4:6)), -(V(7:9).*V(4:6))]; [zeros(1,3) ,1]]<br>
+DIM
+- D<br>
+VOX
+- Voxel dimensions in units of "real" coordinates<br>
+ORIGIN - Origin of "real" coordinates in voxel coordinates<br>
+xyz - (Output) coordinates of nearest voxel centre in "real" coordinates<br>
+d
+- Euclidean distance between requested xyz &amp; nearest voxel centre
+</p>
+<p>FORMAT i = spm_XYZreg('FindXYZ',xyz,XYZ)<br>
+find position of specified voxel in XYZ pointlist<br>
+xyz - 3-vector of coordinates<br>
+XYZ - Pointlist: 3xn matrix of coordinates<br>
+i
+- Column(s) of XYZ equal to xyz
+</p>
+<p>FORMAT [xyz,i,d] = spm_XYZreg('NearestXYZ',xyz,XYZ)<br>
+find nearest voxel in pointlist to specified location<br>
+xyz - (Input) 3-vector of coordinates<br>
+XYZ - Pointlist: 3xn matrix of coordinates<br>
+xyz - (Output) coordinates of nearest voxel in XYZ pointlist<br>
+(ties are broken in favour of the first location in the pointlist)<br>
+i
+- Column of XYZ containing coordinates of nearest pointlist location<br>
+d
+- Euclidean distance between requested xyz &amp; nearest pointlist location
+</p>
+<p>FORMAT d = spm_XYZreg('Edist',xyz,XYZ)<br>
+Euclidean distances between coordinates xyz &amp; points in XYZ pointlist<br>
+xyz - 3-vector of coordinates<br>
+XYZ - Pointlist: 3xn matrix of coordinates<br>
+d
+- n row-vector of Euclidean distances between xyz &amp; points of XYZ
+</p>
+<pre><code>                         ----------------
+</code></pre>
+<p>Registry functions
+</p>
+<p>FORMAT [hReg,xyz] = spm_XYZreg('InitReg',hReg,M,D,xyz)<br>
+Initialise registry in graphics object<br>
+hReg - Handle of HandleGraphics object to build registry in. Object must<br>
+be un'Tag'ged and have empty 'UserData'<br>
+M
+- 4x4 transformation matrix relating voxel to "real" coordinates,<br>
+used and stored for checking validity of coordinates<br>
+D
+- 3 vector of image X, Y &amp; Z dimensions (DIM), used<br>
+and stored for checking validity of coordinates<br>
+xyz
+- (Input) Initial coordinates [Default [0;0;0]]<br>
+These are rounded to the nearest voxel centre<br>
+hReg - (Output) confirmation of registry handle<br>
+xyz
+- (Output) Current registry coordinates, after rounding
+</p>
+<p>FORMAT spm_XYZreg('UnInitReg',hReg)<br>
+Clear registry information from graphics object<br>
+hReg - Handle of 'hReg' 'Tag'ged registry HandleGraphics object.<br>
+Object's 'Tag' &amp; 'UserData' are cleared
+</p>
+<p>FORMAT xyz = spm_XYZreg('GetCoords',hReg)<br>
+Get current registry coordinates<br>
+hReg - Handle of 'hReg' 'Tag'ged registry HandleGraphics object
+</p>
+<p>FORMAT [xyz,d] = spm_XYZreg('SetCoords',xyz,hReg,hC,Reg)<br>
+Set coordinates in registry &amp; update registered HGobjects/functions<br>
+xyz
+- (Input) desired coordinates<br>
+hReg - Handle of 'hReg' 'Tag'ged registry HandleGraphics object<br>
+If hReg doesn't contain a registry, a warning is printed.<br>
+hC
+- Handle of caller object (to prevent circularities) [Default 0]<br>
+If caller object passes invalid registry handle, then spm_XYZreg<br>
+attempts to blank the 'hReg' fiend of hC's 'UserData', printing<br>
+a warning notification.<br>
+Reg
+- Alternative nx2 cell array Registry of handles / functions<br>
+If specified, overrides use of registry held in hReg<br>
+[Default getfield(get(hReg,'UserData'),'Reg')]<br>
+xyz
+- (Output) Desired coordinates are rounded to nearest voxel if hC<br>
+is not specified, or is zero. Otherwise, caller is assumed to<br>
+have checked verity of desired xyz coordinates. Output xyz<br>
+returns coordinates actually set.<br>
+d
+- Euclidean distance between desired and set coordinates.
+</p>
+<p>FORMAT nReg = spm_XYZreg('XReg',hReg,{h,Fcn}pairs)<br>
+Cross registration object/function pairs with the registry, push xyz coords<br>
+hReg - Handle of 'hReg' 'Tag'ged registry HandleGraphics object<br>
+h
+- Handle of HandleGraphics object to be registered<br>
+The 'UserData' of h must be a structure with an 'Reg' field, which<br>
+is set to hReg, the handle of the registry (back registration)<br>
+Fcn
+- Handling function for HandleGraphics object h<br>
+This function <em>must</em> accept XYZ updates via the call:<br>
+feval(Fcn,'SetCoords',xyz,h,hReg)<br>
+and should <em>not</em> call back the registry with the update!<br>
+{h,Fcn} are appended to the registry (forward registration)<br>
+nReg - New registry cell array: Handles are checked for validity before<br>
+entry. Invalid handles are omitted, generating a warning.
+</p>
+<p>FORMAT nReg = spm_XYZreg('Add2Reg',hReg,{h,Fcn}pairs)<br>
+Add object/function pairs for XYZ updates to registry (forward registration)<br>
+hReg - Handle of 'hReg' 'Tag'ged registry HandleGraphics object<br>
+h
+- Handle of HandleGraphics object to be registered<br>
+Fcn
+- Handling function for HandleGraphics object h<br>
+This function <em>must</em> accept XYZ updates via the call:<br>
+feval(Fcn,'SetCoords',xyz,h,hReg)<br>
+and should <em>not</em> call back the registry with the update!<br>
+{h,Fcn} are appended to the registry (forward registration)<br>
+nReg - New registry cell array: Handles are checked for validity before<br>
+entry. Invalid handles are omitted, generating a warning.
+</p>
+<p>FORMAT spm_XYZreg('SetReg',h,hReg)<br>
+Set registry field of object's UserData (back registration)<br>
+h
+- Handle of HandleGraphics object to be registered<br>
+The 'UserData' of h must be a structure with an 'Reg' field, which<br>
+is set to hReg, the handle of the registry (back registration)<br>
+hReg - Handle of 'hReg' 'Tag'ged registry HandleGraphics object
+</p>
+<p>FORMAT nReg = spm_XYZreg('unXReg',hReg,hD1,hD2,hD3,&hellip;)<br>
+Un-cross registration of HandleGraphics object hD<br>
+hReg - Handle of 'hReg' 'Tag'ged registry HandleGraphics object<br>
+hD?
+- Handles of HandleGraphics object to be unregistered<br>
+The 'UserData' of hD must be a structure with a 'Reg' field, which<br>
+is set to empty (back un-registration)<br>
+nReg - New registry cell array: Registry entries with handle entry hD are<br>
+removed from the registry (forward un-registration)<br>
+Handles not in the registry generate a warning
+</p>
+<p>FORMAT nReg = spm_XYZreg('Del2Reg',hReg,hD)<br>
+Delete HandleGraphics object hD from registry (forward un-registration)<br>
+hReg - Handle of 'hReg' 'Tag'ged registry HandleGraphics object<br>
+hD?
+- Handles of HandleGraphics object to be unregistered<br>
+nReg - New registry cell array: Registry entries with handle entry hD are<br>
+removed from the registry. Handles not in registry generate a warning
+</p>
+<p>FORMAT spm_XYZreg('UnSetReg',h)<br>
+Unset registry field of object's UserData (back un-registration)<br>
+h - Handle of HandleGraphics object to be unregistered<br>
+The 'UserData' of hD must be a structure with a 'Reg' field, which<br>
+is set to empty (back un-registration)
+</p>
+<p>FORMAT spm_XYZreg('CleanReg',hReg)<br>
+Clean invalid handles from registry<br>
+hReg - Handle of 'hReg' 'Tag'ged registry HandleGraphics object
+</p>
+<p>FORMAT Reg = spm_XYZreg('VReg',Reg,Warn)<br>
+Prune invalid handles from Registry cell array<br>
+Reg
+- (Input) nx2 cell array of {handle,function} pairs<br>
+Warn - If specified, print warning if find invalid handles<br>
+Reg
+- (Output) mx2 cell array of valid {handle,function} pairs
+</p>
+<p>FORMAT hReg = spm_XYZreg('FindReg',h)<br>
+Find/check registry object<br>
+h
+- handle of Registry, or figure containing Registry (default gcf)<br>
+If ischar(h), then uses spm_figure('FindWin',h) to locate named figures<br>
+hReg - handle of confirmed registry object<br>
+Errors if h is not a registry or a figure containing a unique registry<br>
+Registry object is identified by 'hReg' 'Tag'
+</p>
+<hr>
+<p>spm_XYZreg provides a framework for modular inter-GUI communication of<br>
+XYZ co-orginates, and various utility functions for pointlist handling<br>
+and rounding in voxel coordinates.<br>
+Concept and examples can be found in the body of the function.
+</p>
+<hr>
+<p><a href="https://github.com/spm/spm/blob/main/spm_XYZreg.m">Link to the Matlab implementation.</a></p></div>
+</dd>
+</dl>
+</section>
+<section>
+</section>
+</article>
+<nav id="sidebar">
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3>Super-module</h3>
+<ul>
+<li><code><a title="spm" href="index.html">spm</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-functions">Functions</a></h3>
+<ul class="">
+<li><code><a title="spm.spm_XYZreg.spm_XYZreg" href="#spm.spm_XYZreg.spm_XYZreg">spm_XYZreg</a></code></li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc" title="pdoc: Python API documentation generator"><cite>pdoc</cite> 0.11.1</a>.</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,11 @@
+from spm.__wrap__ import _Runtime
+
+
+def _mtimes3x3(*args, **kwargs):
+  """  MTIMES3X3 compute x*y where the dimensionatity is 3x3xN or 3x3xNxM  
+  
+
+  [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/private/mtimes3x3.m)
+  """
+
+  return _Runtime.call("mtimes3x3", *args, **kwargs)

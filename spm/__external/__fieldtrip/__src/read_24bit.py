@@ -1,0 +1,18 @@
+from spm.__wrap__ import _Runtime
+
+
+def read_24bit(*args, **kwargs):
+  """  READ_24BIT read a stream of 24 bit values and converts them to doubles  
+    This function is designed for Biosemi BDF files and is implemented as mex  
+    file for efficiency.  
+     
+    Use as  
+      [dat] = read_24bit(filename, offset, numwords);  
+     
+    See also READ_16BIT  
+  
+
+  [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/src/read_24bit.m)
+  """
+
+  return _Runtime.call("read_24bit", *args, **kwargs)

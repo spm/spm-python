@@ -1,0 +1,15 @@
+from spm.__wrap__ import _Runtime
+
+
+def _align_xyz2ijk(*args, **kwargs):
+  """  ALIGN_XYZ2IJK updates the transform and coordsys fields such that the axes of the  
+    resulting head coordinate system are aligned with the voxel indices. The intention  
+    is to create a volume structure that can be plotted in native voxel coordinates.  
+     
+    See also ALIGN_IJK2XYZ, VOLUMEPERMUTE, VOLUMEFLIP  
+  
+
+  [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/private/align_xyz2ijk.m)
+  """
+
+  return _Runtime.call("align_xyz2ijk", *args, **kwargs)

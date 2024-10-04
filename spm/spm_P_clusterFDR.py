@@ -1,0 +1,24 @@
+from spm.__wrap__ import _Runtime
+
+
+def spm_P_clusterFDR(*args, **kwargs):
+  """  Return the corrected FDR q-value  
+    FORMAT [Q] = spm_P_clusterFDR(k,df,STAT,R,n,ui,Ps)  
+      
+    k        - extent {RESELS}  
+    df       - [df{interest} df{residuals}]  
+    STAT     - Statistical field  
+               'Z' - Gaussian field  
+               'T' - T - field  
+               'X' - Chi squared field  
+               'F' - F - field  
+    R        - RESEL Count {defining search volume}  
+    n        - Conjunction number  
+    ui       - feature-inducing threshold  
+    Ps       - Vector of sorted (ascending) p-values  
+  
+
+  [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/spm_P_clusterFDR.m)
+  """
+
+  return _Runtime.call("spm_P_clusterFDR", *args, **kwargs)

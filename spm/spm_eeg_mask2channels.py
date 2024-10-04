@@ -1,0 +1,20 @@
+from spm.__wrap__ import _Runtime
+
+
+def spm_eeg_mask2channels(*args, **kwargs):
+  """  Make a list of channel labels based on scalp mask  
+    FORMAT chanind = spm_eeg_mask2channels(D, mask)  
+     
+    D - M/EEG object (or filename)  
+    mask - mask (numeric array, nifti object or image file name)  
+           if the mask is 3D channels in all the blobs will be returned  
+     
+    Output:  
+    chanind - indices of channels in D which correspond to blobs in the mask  
+   __________________________________________________________________________  
+  
+
+  [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/spm_eeg_mask2channels.m)
+  """
+
+  return _Runtime.call("spm_eeg_mask2channels", *args, **kwargs)

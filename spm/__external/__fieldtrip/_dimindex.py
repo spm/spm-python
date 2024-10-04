@@ -1,0 +1,23 @@
+from spm.__wrap__ import _Runtime
+
+
+def _dimindex(*args, **kwargs):
+  """  DIMINDEX makes a selection from a multi-dimensional array where the dimension is  
+    selected by a scalar, not by the place between the brackets.  
+     
+    Use as  
+      M = dimindex(A,dim,idx)  
+     
+    The purpose of the function is shown by the following example:  
+     
+    A(:,:,:,23,:,:,...) is the same as dimindex(A,4,23)  
+    A(2,4,3)            is the same as dimindex(A,[1,2,3],[2,4,3])  
+    A(4,:,[5:10])       is the same as dimindex(A,[1,3],{4,[5:10]})  
+     
+    See also the function DIMASSIGN  
+  
+
+  [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/private/dimindex.m)
+  """
+
+  return _Runtime.call("dimindex", *args, **kwargs)

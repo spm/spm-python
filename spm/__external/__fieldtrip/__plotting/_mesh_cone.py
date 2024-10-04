@@ -1,0 +1,18 @@
+from spm.__wrap__ import _Runtime
+
+
+def _mesh_cone(*args, **kwargs):
+  """  MESH_CONE creates a triangulated cone  
+     
+    Use as  
+      [pnt, tri] = mesh_cone(N)  
+     
+    This creates a cone with N-2 vertices on the bottom circle and N vertices in total.  
+     
+    See also MESH_TETRAHEDRON, MESH_OCTAHEDRON, MESH_ICOSAHEDRON, MESH_SPHERE, MESH_CUBE  
+  
+
+  [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/plotting/private/mesh_cone.m)
+  """
+
+  return _Runtime.call("mesh_cone", *args, **kwargs)

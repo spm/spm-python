@@ -1,0 +1,22 @@
+from spm.__wrap__ import _Runtime
+
+
+def _read_asa_mri(*args, **kwargs):
+  """  READ_ASA_MRI reads an ASA format MRI file  
+     
+    Use as  
+      [mri, seg, hdr] = read_asa_mri(filename)  
+     
+    The raw image data is returned, together with the position of the  
+    external head markers in raw image coordinates.  
+     
+    In the ASA default PAN (pre-auricular/nasion) coordinate system  
+      PointOnPositiveYAxis -> LPA  
+      PointOnNegativeYAxis -> RPA  
+      PointOnPositiveXAxis -> nasion  
+  
+
+  [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/read_asa_mri.m)
+  """
+
+  return _Runtime.call("read_asa_mri", *args, **kwargs)

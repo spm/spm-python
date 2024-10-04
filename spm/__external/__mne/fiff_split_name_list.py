@@ -1,0 +1,16 @@
+from spm.__wrap__ import _Runtime
+
+
+def fiff_split_name_list(*args, **kwargs):
+  """   
+    [names] = fiff_split_name_list(list)  
+     
+     
+    Split a name list containing colon-separated entries into a cell array  
+    containing the strings  
+  
+
+  [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/mne/fiff_split_name_list.m)
+  """
+
+  return _Runtime.call("fiff_split_name_list", *args, **kwargs)

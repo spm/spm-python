@@ -1,0 +1,26 @@
+from spm.__wrap__ import _Runtime
+
+
+def spm_robust_glm(*args, **kwargs):
+  """  Apply robust GLM  
+    FORMAT [B, W] = spm_robust_glm(Y, X, dim, ks)  
+    Y      - data matrix  
+    X      - design matrix  
+    dim    - the dimension along which the function will work  
+    ks     - offset of the weighting function (default: 3)  
+     
+    OUTPUT:  
+    B      - parameter estimates  
+    W      - estimated weights  
+     
+    Implementation of:  
+      Wager TD, Keller MC, Lacey SC, Jonides J.  
+      Increased sensitivity in neuroimaging analyses using robust regression.  
+      Neuroimage. 2005 May 15;26(1):99-113  
+   __________________________________________________________________________  
+  
+
+  [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/spm_robust_glm.m)
+  """
+
+  return _Runtime.call("spm_robust_glm", *args, **kwargs)

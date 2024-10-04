@@ -1,0 +1,21 @@
+from spm.__wrap__ import _Runtime
+
+
+def spm_lg_gamma(*args, **kwargs):
+  """  Log of generalised gamma function  
+    FORMAT [lng] = spm_lg_gamma(p,b)  
+     
+    p       - dimension parameter  
+    b       - degrees of freedom type parameter  
+   __________________________________________________________________________  
+     
+    References:  
+    * Bayesian Inference in Statistical Analysis, Box & Tiao, 1992, p. 427.  
+    * Aspects of Multivariate Statistical Theory, R.J. Muirhead, p. 62.  
+   __________________________________________________________________________  
+  
+
+  [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/spm_lg_gamma.m)
+  """
+
+  return _Runtime.call("spm_lg_gamma", *args, **kwargs)

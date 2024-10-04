@@ -1,0 +1,20 @@
+from spm.__wrap__ import _Runtime
+
+
+def spm_check_orientations(*args, **kwargs):
+  """  Check the dimensions and orientations of the images  
+    FORMAT [sts, str] = spm_check_orientations(V [,verbose])  
+    V       - a struct array as returned by spm_vol  
+    verbose - [Default: true]  
+     
+    sts     - status (true means OK)  
+    str     - string describing status, empty if OK  
+     
+    When used without LHS, this function throws an error accordingly.  
+   __________________________________________________________________________  
+  
+
+  [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/spm_check_orientations.m)
+  """
+
+  return _Runtime.call("spm_check_orientations", *args, **kwargs)

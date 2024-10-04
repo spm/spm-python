@@ -1,0 +1,31 @@
+# Python cache files
+**/__pycache__/
+
+# Virtual environment
+**/venv/
+**/.env/
+**/env/
+**/.venv/
+
+# Distribution files
+**/dist/
+**/build/
+**/*.egg-info/
+
+# Jupyter Notebook checkpoints
+**/.ipynb_checkpoints/
+
+# IDE and editor files
+**/.vscode/
+**/.idea/
+**/*.swp
+
+# Pytest cache
+.cache/
+
+# OS-specific files
+**/.DS_Store
+**/Thumbs.db
+
+# MPython Hashmaps
+**/.mpython_hashmap.csv

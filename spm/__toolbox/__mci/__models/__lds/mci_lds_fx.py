@@ -1,0 +1,22 @@
+from spm.__wrap__ import _Runtime
+
+
+def mci_lds_fx(*args, **kwargs):
+  """  Flow for linear system, dx/dt=Ax, with constrained connectivity  
+    FORMAT [f,A,Pt] = mci_lds_fx (x,u,P,M)  
+     
+    x     State vector  
+    u     input  
+    P     parameters (vectorised)  
+    M     model structure  
+     
+    f     Flow, dx/dt  
+    A     f=Ax  
+    Pt    Parameters (transformed from latent pars)  
+   __________________________________________________________________________  
+  
+
+  [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/toolbox/mci/models/lds/mci_lds_fx.m)
+  """
+
+  return _Runtime.call("mci_lds_fx", *args, **kwargs)

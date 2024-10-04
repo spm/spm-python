@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+<meta name="generator" content="pdoc3 0.11.1">
+<title>spm.spm_FcUtil API documentation</title>
+<meta name="description" content="">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/13.0.0/sanitize.min.css" integrity="sha512-y1dtMcuvtTMJc1yPgEqF0ZjQbhnc/bFhyvIyVNb9Zk5mIGtqVaAB1Ttl28su8AvFMOY0EwRbAe+HCLqj6W7/KA==" crossorigin>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/13.0.0/typography.min.css" integrity="sha512-Y1DYSb995BAfxobCkKepB1BqJJTPrOp3zPL74AWFugHHmmdcvO+C48WLrUOlhGMc0QG7AE3f7gmvvcrmX2fDoA==" crossorigin>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css" crossorigin>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:1.5em;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:2em 0 .50em 0}h3{font-size:1.4em;margin:1.6em 0 .7em 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .2s ease-in-out}a:visited{color:#503}a:hover{color:#b62}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900;font-weight:bold}pre code{font-size:.8em;line-height:1.4em;padding:1em;display:block}code{background:#f3f3f3;font-family:"DejaVu Sans Mono",monospace;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em 1em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul ul{padding-left:1em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js" integrity="sha512-D9gUyxqja7hBtkWpPWGt9wfbfaMGVt9gnyCvYa+jojwwPHLCzUm5i8rpk7vD7wNee9bA35eYIjobYPaQuKS1MQ==" crossorigin></script>
+<script>window.addEventListener('DOMContentLoaded', () => {
+hljs.configure({languages: ['bash', 'css', 'diff', 'graphql', 'ini', 'javascript', 'json', 'plaintext', 'python', 'python-repl', 'rust', 'shell', 'sql', 'typescript', 'xml', 'yaml']});
+hljs.highlightAll();
+})</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>spm.spm_FcUtil</code></h1>
+</header>
+<section id="section-intro">
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-functions">Functions</h2>
+<dl>
+<dt id="spm.spm_FcUtil.spm_FcUtil"><code class="name flex">
+<span>def <span class="ident">spm_FcUtil</span></span>(<span>*args, **kwargs)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Contrast utilities<br>
+FORMAT varargout = spm_FcUtil(action,varargin)
+</p>
+<hr>
+<p>spm_FcUtil is a multi-function function containing various utilities<br>
+for contrast construction and manipulation. In general, it accepts<br>
+design matrices as plain matrices or as space structures setup by<br>
+spm_sp (that is preferable in general).
+</p>
+<p>The use of spm_FcUtil should help with robustness issues and<br>
+maintainability of SPM.
+% Note that when space structures are passed<br>
+as arguments is is assumed that their basic fields are filled in.<br>
+See spm_sp for details of (design) space structures and their<br>
+manipulation.
+</p>
+<p>======================================================================<br>
+case 'fconfields'
+%- fields of F contrast<br>
+Fc = spm_FcUtil('FconFields')
+</p>
+<ul>
+<li>simply returns the fields of a contrast structure.
+</li>
+</ul>
+<p>=======================================================================<br>
+case 'set'
+%- Create an F contrast<br>
+Fc = spm_FcUtil('Set',name, STAT, set_action, value, sX)
+</p>
+<ul>
+<li>Set will fill in the contrast structure, in particular
+</li>
+<li>c (in the contrast space), X1o (the space actually tested) and
+</li>
+<li>X0 (the space left untested), such that space([X1o X0]) == sX.
+</li>
+<li>STAT is either 'F' or 'T';
+</li>
+<li>
+<p>name is a string describing the contrast.
+</p>
+</li>
+<li>
+<p>There are three ways to set a contrast :
+</p>
+</li>
+<li>set_action is 'c','c+'
+: value can then be zeros.
+</li>
+<li>dimensions are in X',
+</li>
+<li>f c+ is used, value is projected onto sX';
+</li>
+<li>iX0 is set to 'c' or 'c+';
+</li>
+<li>set_action is 'iX0'
+: defines the indices of the columns
+</li>
+<li>that will not be tested. Can be empty.
+</li>
+<li>set_action is 'X0'
+: defines the space that will remain
+</li>
+<li>unchanged. The orthogonal complement is
+</li>
+<li>tested; iX0 is set to 'X0';
+</li>
+<li>=======================================================================<br>
+case 'isfcon'
+%- Is it an F contrast ?<br>
+b = spm_FcUtil('IsFcon',Fc)
+</li>
+</ul>
+<p>=======================================================================<br>
+case 'fconedf'
+%- F contrast edf<br>
+[edf_tsp edf_Xsp] = spm_FcUtil('FconEdf', Fc, sX [, V])
+</p>
+<ul>
+<li>compute the effective degrees of freedom of the numerator edf_tsp
+</li>
+<li>and (optionally) the denominator edf_Xsp of the contrast.
+</li>
+</ul>
+<p>=======================================================================<br>
+case 'hsqr' %-Extra sum of squares sqr matrix for beta's from contrast<br>
+hsqr = spm_FcUtil('Hsqr',Fc, sX)
+</p>
+<ul>
+<li>This computes the matrix hsqr such that a the numerator of an F test
+</li>
+<li>will be beta'<em>hsqr'</em>hsqr*beta
+</li>
+</ul>
+<p>=======================================================================<br>
+case 'h'
+%-Extra sum of squares matrix for beta's from contrast<br>
+H = spm_FcUtil('H',Fc, sX)
+</p>
+<ul>
+<li>This computes the matrix H such that a the numerator of an F test
+</li>
+<li>will be beta'<em>H</em>beta
+</li>
+<li>
+<p>=======================================================================<br>
+case 'yc' %- Fitted data corrected for confounds defined by Fc <br>
+Yc = spm_FcUtil('Yc',Fc, sX, b)
+</p>
+</li>
+<li>
+<p>Input : b : the betas
+</p>
+</li>
+<li>Returns the corrected data Yc for given contrast. Y = Yc + Y0 + error
+</li>
+</ul>
+<p>=======================================================================<br>
+case 'y0' %-
+Confounds data defined by Fc <br>
+Y0 = spm_FcUtil('Y0',Fc, sX, b)
+</p>
+<ul>
+<li>Input : b : the betas
+</li>
+<li>Returns the confound data Y0 for a given contrast. Y = Yc + Y0 + error
+</li>
+</ul>
+<p>=======================================================================<br>
+case {'|<em>'}
+%-
+Fc orthogonalisation <br>
+Fc = spm_FcUtil('|</em>',Fc1, sX, Fc2)
+</p>
+<ul>
+<li>Orthogonolise a (list of) contrasts Fc1 wrt a (list of) contrast Fc2
+</li>
+<li>such that the space these contrasts test are orthogonal.
+</li>
+<li>If contrasts are not estimable contrasts, works with the estimable
+</li>
+<li>part. In any case, returns estimable contrasts.
+</li>
+</ul>
+<p>=======================================================================<br>
+case {'|<em>?'}
+%-
+Are contrasts orthogonals <br>
+b = spm_FcUtil('|</em>?',Fc1, sX [, Fc2])
+</p>
+<ul>
+<li>Tests whether a (list of) contrast is orthogonal. Works with the
+</li>
+<li>estimable part if they are not estimable. With only one argument,
+</li>
+<li>tests whether the list is made of orthogonal contrasts. With Fc2
+</li>
+<li>provided, tests whether the two (list of) contrast are orthogonal.
+</li>
+</ul>
+<p>=======================================================================<br>
+case 'in'
+%-
+Fc1 is in list of
+contrasts Fc2<br>
+[iFc2 iFc1] = spm_FcUtil('In', Fc1, sX, Fc2)
+</p>
+<ul>
+<li>Tests whether a (list of) contrast Fc1 is in a list of contrast Fc2.
+</li>
+<li>returns the indices iFc2 where element of Fc1 have been found
+</li>
+<li>in Fc2 and the indices iFc1 of the element of Fc1 found in Fc2.
+</li>
+<li>These indices are not necessarily unique.
+</li>
+</ul>
+<p>=======================================================================<br>
+case '~unique'
+%-
+Fc list unique <br>
+idx = spm_FcUtil('~unique', Fc, sX)
+</p>
+<ul>
+<li>returns indices ofredundant contrasts in Fc
+</li>
+<li>such that Fc(idx) = [] makes Fc unique.
+</li>
+</ul>
+<p>=======================================================================<br>
+case {'0|[]','[]|0'}
+%-
+Fc is null or empty <br>
+b = spm_FcUtil('0|[]', Fc, sX)
+</p>
+<ul>
+<li>NB : for the "null" part, checks if the contrast is in the null space
+</li>
+<li>of sX (completely non estimable !)<br>
+=======================================================================
+</li>
+</ul>
+<hr>
+<p><a href="https://github.com/spm/spm/blob/main/spm_FcUtil.m">Link to the Matlab implementation.</a></p></div>
+</dd>
+</dl>
+</section>
+<section>
+</section>
+</article>
+<nav id="sidebar">
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3>Super-module</h3>
+<ul>
+<li><code><a title="spm" href="index.html">spm</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-functions">Functions</a></h3>
+<ul class="">
+<li><code><a title="spm.spm_FcUtil.spm_FcUtil" href="#spm.spm_FcUtil.spm_FcUtil">spm_FcUtil</a></code></li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc" title="pdoc: Python API documentation generator"><cite>pdoc</cite> 0.11.1</a>.</p>
+</footer>
+</body>
+</html>

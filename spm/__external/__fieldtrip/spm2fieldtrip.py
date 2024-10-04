@@ -1,0 +1,19 @@
+from spm.__wrap__ import _Runtime
+
+
+def spm2fieldtrip(*args, **kwargs):
+  """  SPM2FIELDTRIP converts an SPM8 meeg object into a FieldTrip raw data structure  
+     
+    Use as  
+      data = spm2fieldtrip(D)  
+    where D is the SPM meeg object which you can load in with SPM_EEG_LOAD  
+    and where data is a FieldTrip raw data structure as if it were returned  
+    by FT_PREPROCESSING.  
+     
+    See also FT_PREPROCESSING, SPM_EEG_LOAD  
+  
+
+  [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/spm2fieldtrip.m)
+  """
+
+  return _Runtime.call("spm2fieldtrip", *args, **kwargs)

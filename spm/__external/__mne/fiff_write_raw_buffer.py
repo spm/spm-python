@@ -1,0 +1,17 @@
+from spm.__wrap__ import _Runtime
+
+
+def fiff_write_raw_buffer(*args, **kwargs):
+  """   
+    function fiff_write_raw_buffer(fid,buf,cals,datatype)  
+     
+    fid        of an open raw data file  
+    buf        the buffer to write  
+    cals       calibration factors  
+    datatype   (optional) datatype to write, default float  
+  
+
+  [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/mne/fiff_write_raw_buffer.m)
+  """
+
+  return _Runtime.call("fiff_write_raw_buffer", *args, **kwargs, nargout=0)

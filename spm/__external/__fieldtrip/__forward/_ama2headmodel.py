@@ -1,0 +1,16 @@
+from spm.__wrap__ import _Runtime
+
+
+def _ama2headmodel(*args, **kwargs):
+  """  AMA2HEADMODEL converts a dipoli structure with boundary geometries  
+    and a boundary element method transfer matrix to a volume conduction  
+    model.  
+     
+    Use as  
+      headmodel = ama2headmodel(ama)  
+  
+
+  [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/forward/private/ama2headmodel.m)
+  """
+
+  return _Runtime.call("ama2headmodel", *args, **kwargs)

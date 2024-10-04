@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+<meta name="generator" content="pdoc3 0.11.1">
+<title>spm.spm_DesMtx API documentation</title>
+<meta name="description" content="">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/13.0.0/sanitize.min.css" integrity="sha512-y1dtMcuvtTMJc1yPgEqF0ZjQbhnc/bFhyvIyVNb9Zk5mIGtqVaAB1Ttl28su8AvFMOY0EwRbAe+HCLqj6W7/KA==" crossorigin>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/13.0.0/typography.min.css" integrity="sha512-Y1DYSb995BAfxobCkKepB1BqJJTPrOp3zPL74AWFugHHmmdcvO+C48WLrUOlhGMc0QG7AE3f7gmvvcrmX2fDoA==" crossorigin>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css" crossorigin>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:1.5em;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:2em 0 .50em 0}h3{font-size:1.4em;margin:1.6em 0 .7em 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .2s ease-in-out}a:visited{color:#503}a:hover{color:#b62}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900;font-weight:bold}pre code{font-size:.8em;line-height:1.4em;padding:1em;display:block}code{background:#f3f3f3;font-family:"DejaVu Sans Mono",monospace;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em 1em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul ul{padding-left:1em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js" integrity="sha512-D9gUyxqja7hBtkWpPWGt9wfbfaMGVt9gnyCvYa+jojwwPHLCzUm5i8rpk7vD7wNee9bA35eYIjobYPaQuKS1MQ==" crossorigin></script>
+<script>window.addEventListener('DOMContentLoaded', () => {
+hljs.configure({languages: ['bash', 'css', 'diff', 'graphql', 'ini', 'javascript', 'json', 'plaintext', 'python', 'python-repl', 'rust', 'shell', 'sql', 'typescript', 'xml', 'yaml']});
+hljs.highlightAll();
+})</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>spm.spm_DesMtx</code></h1>
+</header>
+<section id="section-intro">
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-functions">Functions</h2>
+<dl>
+<dt id="spm.spm_DesMtx.spm_DesMtx"><code class="name flex">
+<span>def <span class="ident">spm_DesMtx</span></span>(<span>*args, **kwargs)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Design matrix construction from factor level and covariate vectors<br>
+FORMAT [X,Pnames] = spm_DesMtx(<FCLevels-Constraint-FCnames> list)<br>
+FORMAT [X,Pnames,Index,idx,jdx,kdx] = spm_DesMtx(FCLevels,Constraint,FCnames)
+</p>
+<p><FCLevels-Constraints-FCnames><br>
+- set of arguments specifying a portion of design matrix (see below)<br>
+- FCnames parameter, or Constraint and FCnames parameters, are optional<br>
+- a list of multiple <FCLevels-Constraint-FCnames> triples can be<br>
+specified, where FCnames or Constraint-FCnames may be omitted<br>
+within any triple. The program then works recursively.
+</p>
+<p>X
+- design matrix<br>
+Pnames - parameter names as (constructed from FCnames) - a cellstr<br>
+Index
+- integer index of factor levels<br>
+- only returned when computing a single design matrix partition
+</p>
+<p>idx,jdx,kdx - reference vectors mapping I &amp; Index (described below)<br>
+- only returned when computing a single design matrix partition<br>
+for unconstrained factor effects ('-' or '~')
+</p>
+<pre><code>                        ----------------
+</code></pre>
+<p>FORMAT [nX,nPnames] = spm_DesMtx('sca',X1,Pnames1,X2,Pnames2,&hellip;)<br>
+Produces a scaled design matrix nX with max(abs(nX(:))&lt;=1, suitable<br>
+for imaging with: image((nX+1)*32)<br>
+X1,X2,&hellip;
+- Design matrix partitions<br>
+Pnames1, Pnames2,&hellip;
+- Corresponding parameter name string mtx/cellstr (opt)<br>
+nX
+- Scaled design matrix<br>
+nPnames
+- Concatenated parameter names for columns of nX
+</p>
+<hr>
+<p>Returns design matrix corresponding to given vectors containing<br>
+levels of a factor; two way interactions; covariates (n vectors);<br>
+ready-made sections of design matrix; and factor by covariate<br>
+interactions.
+</p>
+<p>The specification for the design matrix is passed in sets of arguments,<br>
+each set corresponding to a particular Factor/Covariate/&amp;c., specifying<br>
+a section of the design matrix. The set of arguments consists of the <br>
+FCLevels matrix (Factor/Covariate levels), an optional constraint string,<br>
+and an optional (string) name matrix containing the names of the <br>
+Factor/Covariate/&amp;c.
+</p>
+<p>MAIN EFFECTS: For a main effect, or single factor, the FCLevels<br>
+matrix is an integer vector whose values represent the levels of the<br>
+factor. The integer factor levels need not be positive, nor in<br>
+order.
+In the '~' constraint types (below), a factor level of zero<br>
+is ignored (treated as no effect), and no corresponding column of<br>
+design matrix is created.
+Effects for the factor levels are entered<br>
+into the design matrix <em>in increasing order</em> of the factor levels.<br>
+Check Pnames to find out which columns correspond to which levels of<br>
+the factor.
+</p>
+<p>TWO WAY INTERACTIONS: For a two way interaction effect between two<br>
+factors, the FCLevels matrix is an nx2 integer matrix whose columns<br>
+indicate the levels of the two factors. An effect is included for<br>
+each unique combination of the levels of the two factors. Again,<br>
+factor levels must be integer, though not necessarily positive.<br>
+Zero levels are ignored in the '~' constraint types described below.
+</p>
+<p>CONSTRAINTS: Each FactorLevels vector/matrix may be followed by an <br>
+(optional) ConstraintString.
+</p>
+<p>ConstraintStrings for main effects are:<br>
+'-'
+- No Constraint<br>
+'~'
+- Ignore zero level of factor<br>
+(I.e. cornerPoint constraint on zero level,<br>
+(same as '.0', except zero level is always ignored,<br>
+(even if factor only has zero level, in which case<br>
+(an empty DesMtx results and a warning is given<br>
+'+0'
+- sum-to-zero constraint<br>
+'+0m' - Implicit sum-to-zero constraint<br>
+'.'
+- CornerPoint constraint<br>
+'.0'
+- CornerPoint constraint applied to zero factor level<br>
+(warns if there is no zero factor level)<br>
+Constraints for two way interaction effects are<br>
+'-'
+- No Constraints<br>
+'~'
+- Ignore zero level of any factor<br>
+(I.e. cornerPoint constraint on zero level,<br>
+(same as '.ij0', except zero levels are always ignored<br>
+'+i0','+j0','+ij0'
+- sum-to-zero constraints<br>
+'.i', '.j', '.ij'
+- CornerPoint constraints<br>
+'.i0','.j0','.ij0'
+- CornerPoint constraints applied to zero factor level<br>
+(warns if there is no zero factor level)<br>
+'+i0m', '+j0m'
+- Implicit sum-to-zero constraints
+</p>
+<p>With the exception of the "ignore zero" '~' constraint, constraints<br>
+are only applied if there are sufficient factor levels. CornerPoint<br>
+and explicit sum-to-zero Constraints are applied to the last level of<br>
+the factor.
+</p>
+<p>The implicit sum-to-zero constraints "mean correct" appropriate rows<br>
+of the relevant design matrix block. For a main effect, constraint<br>
+'+0m' "mean corrects" the main effect block across columns,<br>
+corresponding to factor effects B_i, where B_i = B'_i - mean(B'_i) :<br>
+The B'_i are the fitted parameters, effectively <em>relative</em> factor<br>
+parameters, relative to their mean. This leads to a rank deficient<br>
+design matrix block. If Matlab's pinv, which implements a<br>
+Moore-Penrose pseudoinverse, is used to solve the least squares<br>
+problem, then the solution with smallest L2 norm is found, which has<br>
+mean(B'_i)=0 provided the remainder of the design is unique (design<br>
+matrix blocks of full rank). In this case therefore the B_i are<br>
+identically the B'_i - the mean correction imposes the constraint.
+</p>
+<p>COVARIATES: The FCLevels matrix here is an nxc matrix whose columns<br>
+contain the covariate values. An effect is included for each covariate.<br>
+Covariates are identified by ConstraintString 'C'.
+</p>
+<p>PRE-SPECIFIED DESIGN BLOCKS: ConstraintString 'X' identifies a<br>
+ready-made bit of design matrix - the effect is the same as 'C'.
+</p>
+<p>FACTOR BY COVARIATE INTERACTIONS: are identified by ConstraintString<br>
+'FxC'. The last column is understood to contain the covariate. Other<br>
+columns are taken to contain integer FactorLevels vectors. The<br>
+(unconstrained) interaction of the factors is interacted with the<br>
+covariate. Zero factor levels are ignored if ConstraintString '~FxC'<br>
+is used.
+</p>
+<p>NAMES: Each Factor/Covariate can be 'named', by passing a name<br>
+string.
+Pass a string matrix, or cell array (vector) of strings,<br>
+with rows (cells) naming the factors/covariates in the respective<br>
+columns of the FCLevels matrix.
+These names default to <Fac>, <Cov>,<br>
+<Fac1>, <Fac2> &amp;c., and are used in the construction of the Pnames<br>
+parameter names.<br>
+E.g. for an interaction, spm_DesMtx([F1,F2],'+ij0',['subj';'cond'])<br>
+giving parameter names such as subj*cond_{1,2} etc&hellip;
+</p>
+<p>Pnames returns a string matrix whose successive rows describe the<br>
+effects parameterised in the corresponding columns of the design<br>
+matrix. <code>Fac1*Fac2_{2,3}' would refer to the parameter for the
+interaction of the two factors Fac1 &amp; Fac2, at the 2nd level of the
+former and the 3rd level of the latter. Other forms are
+- Simple main effect (level 1)
+: &lt;Fac&gt;_{1}
+- Three way interaction (level 1,2,3) : &lt;Fac1&gt;*&lt;Fac2&gt;*&lt;Fac3&gt;_{1,2,3}
+- Two way factor interaction by covariate interaction :
+: &lt;Cov&gt;@&lt;Fac1&gt;*&lt;Fac2&gt;_{1,1}
+- Column 3 of prespecified DesMtx block (if unnamed)
+: &lt;X&gt; [1]
+The special characters</code>_*()[]{}' are recognised by the scaling<br>
+function (spm_DesMtx('sca',&hellip;), and should therefore be avoided<br>
+when naming effects and covariates.
+</p>
+<p>INDEX: An Integer Index matrix is returned if only a single block of<br>
+design matrix is being computed (single set of parameters). It<br>
+indexes the actual order of the effect levels in the design matrix block.<br>
+(Factor levels are introduced in order, regardless of order of<br>
+appearance in the factor index matrices, so that the parameters<br>
+vector has a sensible order.) This is used to aid recursion.
+</p>
+<p>Similarly idx,jdx &amp; kdx are indexes returned for a single block of<br>
+design matrix consisting of unconstrained factor effects ('-' or '~').<br>
+These indexes map I and Index (in a similar fashion to the <code>unique</code><br>
+function) as follows:<br>
+- idx &amp; jdx are such that I = Index(:,jdx)' and
+Index = I(idx,:)'<br>
+where vector I is given as a column vector<br>
+- If the "ignore zeros" constraint '~' is used, then kdx indexes the<br>
+non-zero (combinations) of factor levels, such that<br>
+I(kdx,:) = Index(:,jdx)' and
+Index == I(kdx(idx),:)'
+</p>
+<pre><code>                        ----------------
+</code></pre>
+<p>The design matrix scaling feature is designed to return a scaled<br>
+version of a design matrix, with values in [-1,1], suitable for<br>
+visualisation. Special care is taken to apply the same normalisation<br>
+to blocks of design matrix reflecting a single effect, to preserve<br>
+appropriate relationships between columns. Identification of effects<br>
+corresponding to columns of design matrix portions is via the parameter<br>
+names matrices. The design matrix may be passed in any number of<br>
+parts, provided the corresponding parameter names are given. It is<br>
+assumed that the block representing an effect is contained within a<br>
+single partition. Partitions supplied without corresponding parameter<br>
+names are scaled on a column by column basis, the parameters labelled as<br>
+<UnSpec> in the returned nPnames matrix.
+</p>
+<p>Effects are identified using the special characters `<em _="?">*()[]{}' used in<br>
+parameter naming as follows: (here ? is a wildcard)<br>
+- ?(?)
+- general
+block (column normalised)<br>
+- ?[?]
+- specific block (block normalised)<br>
+- ?</em>
+- main effect or interaction of main effects<br>
+- ?@?<em _="?">{?}
+- factor by covariate interaction<br>
+Blocks are identified by looking for runs of parameters of the same type<br>
+with the same names: E.g. a block of main effects for factor 'Fac1'<br>
+would have names like Fac1</em>.
+</p>
+<p>Scaling is as follows:<br>
+* fMRI blocks are scaled around zero to lie in [-1,1]<br>
+* No scaling is carried out if max(abs(tX(:))) is in [.4,1]<br>
+This protects dummy variables from normalisation, even if<br>
+using implicit sum-to-zero constraints.<br>
+* If the block has a single value, it's replaced by 1's<br>
+* FxC blocks are normalised so the covariate values cover [-1,1]<br>
+but leaving zeros as zero.<br>
+* Otherwise, block is scaled to cover [-1,1].
+</p>
+<hr>
+<p><a href="https://github.com/spm/spm/blob/main/spm_DesMtx.m">Link to the Matlab implementation.</a></p></div>
+</dd>
+</dl>
+</section>
+<section>
+</section>
+</article>
+<nav id="sidebar">
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3>Super-module</h3>
+<ul>
+<li><code><a title="spm" href="index.html">spm</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-functions">Functions</a></h3>
+<ul class="">
+<li><code><a title="spm.spm_DesMtx.spm_DesMtx" href="#spm.spm_DesMtx.spm_DesMtx">spm_DesMtx</a></code></li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc" title="pdoc: Python API documentation generator"><cite>pdoc</cite> 0.11.1</a>.</p>
+</footer>
+</body>
+</html>

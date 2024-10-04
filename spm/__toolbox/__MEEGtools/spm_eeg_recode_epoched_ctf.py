@@ -1,0 +1,20 @@
+from spm.__wrap__ import _Runtime
+
+
+def spm_eeg_recode_epoched_ctf(*args, **kwargs):
+  """  Temporary solution for using trial labels in epoched CTF dataset  
+    FORMAT  D = spm_eeg_recode_epoched_ctf(S)  
+     
+    S                    - input structure (optional)  
+    (optional) fields of S:  
+             .D       - converted epoched CTF dataset  
+     
+    Output:  
+    D                 - MEEG object relabeled trials (also saved to disk)  
+   __________________________________________________________________________  
+  
+
+  [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/toolbox/MEEGtools/spm_eeg_recode_epoched_ctf.m)
+  """
+
+  return _Runtime.call("spm_eeg_recode_epoched_ctf", *args, **kwargs)

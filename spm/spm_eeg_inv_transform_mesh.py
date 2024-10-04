@@ -1,0 +1,16 @@
+from spm.__wrap__ import _Runtime
+
+
+def spm_eeg_inv_transform_mesh(*args, **kwargs):
+  """  Apply affine transformation to surface mesh  
+    FORMAT mesh = spm_eeg_inv_transform_mesh(M, mesh)  
+     
+    M           - affine transformation matrix [4 x 4]  
+    mesh        - patch structure  
+   __________________________________________________________________________  
+  
+
+  [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/spm_eeg_inv_transform_mesh.m)
+  """
+
+  return _Runtime.call("spm_eeg_inv_transform_mesh", *args, **kwargs)

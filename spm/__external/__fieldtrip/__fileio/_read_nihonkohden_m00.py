@@ -1,0 +1,20 @@
+from spm.__wrap__ import _Runtime
+
+
+def _read_nihonkohden_m00(*args, **kwargs):
+  """  READ_NIHONKOHDEN_M00 reads the header and data from a file in the Nihon Kohden *.m00 format.  
+    This implementation is an adaptation of convert_nkascii2mat.m and get_nkheader.m written  
+    by Timothy Ellmore, see https://openwetware.org/wiki/Beauchamp:AnalyzeEEGinMatlab.  
+     
+    Use as  
+      [hdr, dat] = read_nihonkohden_m00(filename)  
+     
+    This returns a FieldTrip compatible header structure and the data matrix.  
+     
+    See also FT_READ_HEADER, FT_READ_DATA  
+  
+
+  [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/read_nihonkohden_m00.m)
+  """
+
+  return _Runtime.call("read_nihonkohden_m00", *args, **kwargs)

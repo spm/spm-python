@@ -1,0 +1,20 @@
+from spm.__wrap__ import _Runtime
+
+
+def mci_nmm_r2p6_fx(*args, **kwargs):
+  """  Flow for two region, six parameter NMM  
+    FORMAT [f] = mci_nmm_r2p6_fx (x,u,P,M)  
+     
+    x         State  
+    u         Inputs  
+    P         Parameters  
+    M         Model structure  
+     
+    f         Flow, dx/dt  
+   __________________________________________________________________________  
+  
+
+  [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/toolbox/mci/models/nmm/mci_nmm_r2p6_fx.m)
+  """
+
+  return _Runtime.call("mci_nmm_r2p6_fx", *args, **kwargs)

@@ -1,0 +1,15 @@
+from spm.__wrap__ import _Runtime
+
+
+def _wizard_base(*args, **kwargs):
+  """  This is the low level wizard function. It evaluates the MATLAB content  
+    in the workspace of the calling function. To prevent overwriting  
+    variables in the BASE workspace, this function should be called from a  
+    wrapper function. The wrapper function whoudl pause execution untill the  
+    wizard figure is deleted.  
+  
+
+  [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/private/wizard_base.m)
+  """
+
+  return _Runtime.call("wizard_base", *args, **kwargs)

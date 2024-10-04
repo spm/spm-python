@@ -1,0 +1,18 @@
+from spm.__wrap__ import _Runtime
+
+
+def spm_uw_show(*args, **kwargs):
+  """  Manage graphical output for spm_uw_estimate  
+    FORMAT spm_uw_show(mode,p1,...)  
+     
+    mode      - Verb specifying action.  
+    p1-p6     - Depends on mode.  
+     
+    FORMAT spm_uw_show('FinIter',SS,beta,fot,sot,ref,q)  
+   __________________________________________________________________________  
+  
+
+  [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/spm_uw_show.m)
+  """
+
+  return _Runtime.call("spm_uw_show", *args, **kwargs, nargout=0)

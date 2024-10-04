@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+<meta name="generator" content="pdoc3 0.11.1">
+<title>spm.spm_input API documentation</title>
+<meta name="description" content="">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/13.0.0/sanitize.min.css" integrity="sha512-y1dtMcuvtTMJc1yPgEqF0ZjQbhnc/bFhyvIyVNb9Zk5mIGtqVaAB1Ttl28su8AvFMOY0EwRbAe+HCLqj6W7/KA==" crossorigin>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/13.0.0/typography.min.css" integrity="sha512-Y1DYSb995BAfxobCkKepB1BqJJTPrOp3zPL74AWFugHHmmdcvO+C48WLrUOlhGMc0QG7AE3f7gmvvcrmX2fDoA==" crossorigin>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css" crossorigin>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:1.5em;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:2em 0 .50em 0}h3{font-size:1.4em;margin:1.6em 0 .7em 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .2s ease-in-out}a:visited{color:#503}a:hover{color:#b62}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900;font-weight:bold}pre code{font-size:.8em;line-height:1.4em;padding:1em;display:block}code{background:#f3f3f3;font-family:"DejaVu Sans Mono",monospace;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em 1em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul ul{padding-left:1em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js" integrity="sha512-D9gUyxqja7hBtkWpPWGt9wfbfaMGVt9gnyCvYa+jojwwPHLCzUm5i8rpk7vD7wNee9bA35eYIjobYPaQuKS1MQ==" crossorigin></script>
+<script>window.addEventListener('DOMContentLoaded', () => {
+hljs.configure({languages: ['bash', 'css', 'diff', 'graphql', 'ini', 'javascript', 'json', 'plaintext', 'python', 'python-repl', 'rust', 'shell', 'sql', 'typescript', 'xml', 'yaml']});
+hljs.highlightAll();
+})</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>spm.spm_input</code></h1>
+</header>
+<section id="section-intro">
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-functions">Functions</h2>
+<dl>
+<dt id="spm.spm_input.spm_input"><code class="name flex">
+<span>def <span class="ident">spm_input</span></span>(<span>*args, **kwargs)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Comprehensive graphical and command line input function<br>
+FORMATs (given in Programmers Help)
+</p>
+<hr>
+<p>spm_input handles most forms of interactive user input for SPM.<br>
+(File selection is handled by spm_select.m)
+</p>
+<p>There are five types of input: String, Evaluated, Conditions, Buttons<br>
+and Menus:
+These prompt for string input; string input which is<br>
+evaluated to give a numerical result; selection of one item from a<br>
+set of buttons; selection of an item from a menu.
+</p>
+<ul>
+<li>STRING, EVALUATED &amp; CONDITION input -<br>
+For STRING, EVALUATED and CONDITION input types, a prompt is<br>
+displayed adjacent to an editable text entry widget (with a lilac<br>
+background!). Clicking in the entry widget allows editing, pressing<br>
+<RETURN> or <ENTER> enters the result. You must enter something,<br>
+empty answers are not accepted. A default response may be pre-specified<br>
+in the entry widget, which will then be outlined. Clicking the border<br>
+accepts the default value.
+</li>
+</ul>
+<p>Basic editing of the entry widget is supported <em>without</em> clicking in<br>
+the widget, provided no other graphics widget has the focus. (If a<br>
+widget has the focus, it is shown highlighted with a thin coloured<br>
+line. Clicking on the window background returns the focus to the<br>
+window, enabling keyboard accelerators.). This enables you to type<br>
+responses to a sequence of questions without having to repeatedly<br>
+click the mouse in the text widgets. Supported are BackSpace and<br>
+Delete, line kill (^U). Other standard ASCII characters are appended<br>
+to the text in the entry widget. Press <RETURN> or <ENTER> to submit<br>
+your response.
+</p>
+<p>A ContextMenu is provided (in the figure background) giving access to<br>
+relevant utilities including the facility to load input from a file<br>
+(see spm_load.m and examples given below): Click the right button on<br>
+the figure background.
+</p>
+<p>For EVALUATED input, the string submitted is evaluated in the base<br>
+MatLab workspace (see MatLab's <code>eval</code> command) to give a numerical<br>
+value. This permits the entry of numerics, matrices, expressions,<br>
+functions or workspace variables. I.e.:<br>
+i)
+- a number, vector or matrix
+e.g. "[1 2 3 4]"<br>
+"[1:4]"<br>
+"1:4"<br>
+ii)
+- an expression
+e.g. "pi^2"<br>
+"exp(-[1:36]/5.321)"<br>
+iii)
+- a function (that will be invoked) e.g. "spm_load('tmp.dat')"<br>
+(function must be on MATLABPATH)
+"input_cov(36,5.321)"<br>
+iv)
+- a variable from the base workspace<br>
+e.g. "tmp"
+</p>
+<p>The last three options provide a great deal of power: spm_load will<br>
+load a matrix from an ASCII data file and return the results. When<br>
+called without an argument, spm_load will pop up a file selection<br>
+dialog. Alternatively, this facility can be gained from the<br>
+ContextMenu. The second example assumes a custom function called<br>
+input_cov has been written which expects two arguments, for example<br>
+the following file saved as input_cov.m somewhere on the MATLABPATH<br>
+(~/matlab, the matlab subdirectory of your home area, and the current<br>
+directory, are on the MATLABPATH by default):
+</p>
+<pre><code>    function [x] = input_cov(n,decay)  
+    % data input routine - mono-exponential covariate  
+    % FORMAT [x] = input_cov(n,decay)  
+    % n     -  number of time points  
+    % decay - decay constant  
+    x = exp(-[1:n]/decay);
+</code></pre>
+<p>Although this example is trivial, specifying large vectors of<br>
+empirical data (e.g. reaction times for 72 scans) is efficient and<br>
+reliable using this device. In the last option, a variable called tmp<br>
+is picked up from the base workspace. To use this method, set the<br>
+variables in the MatLab base workspace before starting an SPM<br>
+procedure (but after starting the SPM interface). E.g.
+</p>
+<blockquote>
+<blockquote>
+<p>tmp=exp(-[1:36]/5.321)
+</p>
+</blockquote>
+</blockquote>
+<p>Occasionally a vector of a specific length will be required: This<br>
+will be indicated in the prompt, which will start with "[#]", where<br>
+# is the length of vector(s) required. (If a matrix is entered then<br>
+at least one dimension should equal #.)
+</p>
+<p>Occasionally a specific type of number will be required. This should<br>
+be obvious from the context. If you enter a number of the wrong type,<br>
+you'll be alerted and asked to re-specify. The types are i) Real<br>
+numbers; ii) Integers; iii) Whole numbers [0,1,2,3,&hellip;] &amp; iv) Natural<br>
+numbers [1,2,3,&hellip;]
+</p>
+<p>CONDITIONS type input is for getting indicator vectors. The features<br>
+of evaluated input described above are complimented as follows:<br>
+v)
+- a compressed list of digits 0-9
+e.g. "12121212"<br>
+ii)
+- a list of indicator characters
+e.g. "abababab"<br>
+a-z mapped to 1-26 in alphabetical order, <em>except</em> r ("rest")<br>
+which is mapped to zero (case insensitive, [A:Z,a:z] only)<br>
+&hellip;in addition the response is checked to ensure integer condition indices.<br>
+Occasionally a specific number of conditions will be required: This<br>
+will be indicated in the prompt, which will end with (#), where # is<br>
+the number of conditions required.
+</p>
+<p>CONTRAST type input is for getting contrast weight vectors. Enter<br>
+contrasts as row-vectors. Contrast weight vectors will be padded with<br>
+zeros to the correct length, and checked for validity. (Valid<br>
+contrasts are estimable, which are those whose weights vector is in<br>
+the row-space of the design matrix.)
+</p>
+<p>Errors in string evaluation for EVALUATED &amp; CONDITION types are<br>
+handled gracefully, the user notified, and prompted to re-enter.
+</p>
+<ul>
+<li>BUTTON input -<br>
+For Button input, the prompt is displayed adjacent to a small row of<br>
+buttons. Press the appropriate button. The default button (if<br>
+available) has a dark outline. Keyboard accelerators are available<br>
+(provided no graphics widget has the focus):
+<RETURN> or <ENTER><br>
+selects the default button (if available). Typing the first character<br>
+of the button label (case insensitive) "presses" that button. (If<br>
+these Keys are not unique, then the integer keys 1,2,&hellip;
+"press" the<br>
+appropriate button.)
+</li>
+</ul>
+<p>The CommandLine variant presents a simple menu of buttons and prompts<br>
+for a selection. Any default response is indicated, and accepted if<br>
+an empty line is input.
+</p>
+<ul>
+<li>MENU input -<br>
+For Menu input, the prompt is displayed in a pull down menu widget.<br>
+Using the mouse, a selection is made by pulling down the widget and<br>
+releasing the mouse on the appropriate response. The default response<br>
+(if set) is marked with an asterisk. Keyboard accelerators are<br>
+available (provided no graphic widget has the focus) as follows: 'f',<br>
+'n' or 'd' move forward to next response down; 'b', 'p' or 'u' move<br>
+backwards to the previous response up the list; the number keys jump<br>
+to the appropriate response number; <RETURN> or <ENTER> slelects the<br>
+currently displayed response. If a default is available, then<br>
+pressing <RETURN> or <ENTER> when the prompt is displayed jumps to<br>
+the default response.
+</li>
+</ul>
+<p>The CommandLine variant presents a simple menu and prompts for a selection.<br>
+Any default response is indicated, and accepted if an empty line is<br>
+input.
+</p>
+<ul>
+<li>
+<p>Combination BUTTON/EDIT input -<br>
+In this usage, you will be presented with a set of buttons and an<br>
+editable text widget. Click one of the buttons to choose that option,<br>
+or type your response in the edit widget. Any default response will<br>
+be shown in the edit widget. The edit widget behaves in the same way<br>
+as with the STRING/EVALUATED input, and expects a single number.<br>
+Keypresses edit the text widget (rather than "press" the buttons)<br>
+(provided no other graphics widget has the focus). A default response<br>
+can be selected with the mouse by clicking the thick border of the<br>
+edit widget.
+</p>
+</li>
+<li>
+<p>Command line -<br>
+If YPos is 0 or global CMDLINE is true, then the command line is used.<br>
+Negative YPos overrides CMDLINE, ensuring the GUI is used, at<br>
+YPos=abs(YPos). Similarly relative YPos beginning with '!'<br>
+(E.g.YPos='!+1') ensures the GUI is used.
+</p>
+</li>
+</ul>
+<p>spm_input uses the SPM 'Interactive' window, which is 'Tag'ged<br>
+'Interactive'. If there is no such window, then the current figure is<br>
+used, or an 'Interactive' window created if no windows are open.
+</p>
+<hr>
+<p>Programmers help is contained in the main body of spm_input.m
+</p>
+<hr>
+<p>See
+: input.m
+(MatLab Reference Guide)<br>
+See also : spm_select.m
+(SPM file selector dialog)<br>
+: spm_input.m (Input wrapper function - handles batch mode)
+</p>
+<hr>
+<p><a href="https://github.com/spm/spm/blob/main/spm_input.m">Link to the Matlab implementation.</a></p></div>
+</dd>
+</dl>
+</section>
+<section>
+</section>
+</article>
+<nav id="sidebar">
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3>Super-module</h3>
+<ul>
+<li><code><a title="spm" href="index.html">spm</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-functions">Functions</a></h3>
+<ul class="">
+<li><code><a title="spm.spm_input.spm_input" href="#spm.spm_input.spm_input">spm_input</a></code></li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc" title="pdoc: Python API documentation generator"><cite>pdoc</cite> 0.11.1</a>.</p>
+</footer>
+</body>
+</html>

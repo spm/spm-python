@@ -1,0 +1,18 @@
+from spm.__wrap__ import _Runtime
+
+
+def spm_slice2vol_reslice(*args, **kwargs):
+  """  Slice-to-volume alignment reslicing  
+    FORMAT spm_slice2vol_reslice(Nii,Q,fwhm)  
+     
+    Nii  - NIfTI data structure encoding volumes to align  
+           Most all have the same dimensions  
+    Q    - A 3D array of slicewise motion parameters  
+    fwhm - Smoothing FWHM (mm)  
+   __________________________________________________________________________  
+  
+
+  [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/toolbox/Spatial/spm_slice2vol_reslice.m)
+  """
+
+  return _Runtime.call("spm_slice2vol_reslice", *args, **kwargs, nargout=0)

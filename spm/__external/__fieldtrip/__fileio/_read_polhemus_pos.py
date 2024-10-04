@@ -1,0 +1,19 @@
+from spm.__wrap__ import _Runtime
+
+
+def _read_polhemus_pos(*args, **kwargs):
+  """  READ_POLHEMUS_POS reads electrode positions measured with the Polhemus tracker in  
+    one of the EEG labs at the DCCN. The software used with the Polhemus is from CTF.  
+     
+    Use as:  
+      [elec] = read_polhemus_pos(filename)  
+     
+    This returns an electrode structure with  
+      elec.label     cell-array with electrode labels (strings)  
+      elec.pnt       position of each electrode  
+  
+
+  [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/read_polhemus_pos.m)
+  """
+
+  return _Runtime.call("read_polhemus_pos", *args, **kwargs)

@@ -1,0 +1,25 @@
+from spm.__wrap__ import _Runtime
+
+
+def spm_eeg_prep(*args, **kwargs):
+  """  Prepare converted M/EEG data for further analysis  
+    FORMAT D = spm_eeg_prep(S)  
+    S                 - configuration structure (optional)  
+    (optional) fields of S:  
+      S.D             - MEEG object or filename of M/EEG mat-file  
+      S.task          - action string. One of 'settype', 'defaulttype',  
+                        'loadtemplate','setcoor2d', 'project3d', 'loadeegsens',  
+                        'defaulteegsens', 'sens2chan', 'headshape',  
+                        'coregister', 'sortconditions'  
+     
+      S.updatehistory - update history information [default: true]  
+      S.save          - save MEEG object [default: false]  
+     
+    D                 - MEEG object  
+   __________________________________________________________________________  
+  
+
+  [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/spm_eeg_prep.m)
+  """
+
+  return _Runtime.call("spm_eeg_prep", *args, **kwargs)

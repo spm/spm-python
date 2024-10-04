@@ -1,0 +1,23 @@
+from spm.__wrap__ import _Runtime
+
+
+def spm_eeg_inv_extract(*args, **kwargs):
+  """  Exports source activity using the MAP projector  
+    FORMAT [Ds] = spm_eeg_inv_extract(D)  
+    Requires:  
+     
+        D.inv{i}.source.XYZ   - (n x 3) matrix of MNI coordinates  
+     
+    Optional:  
+     
+        D.inv{i}.source.rad   - radius (mm) of VOIs (default 5 mm)  
+        D.inv{i}.source.label - label(s) for sources (cell array)  
+        D.inv{i}.source.fname - output file name  
+        D.inv{i}.source.type  - output type ('evoked'/'trials')  
+   __________________________________________________________________________  
+  
+
+  [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/spm_eeg_inv_extract.m)
+  """
+
+  return _Runtime.call("spm_eeg_inv_extract", *args, **kwargs)

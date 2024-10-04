@@ -1,0 +1,26 @@
+from spm.__wrap__ import _Runtime
+
+
+def spm_mesh_pack_points(*args, **kwargs):
+  """  Place approximately equally spaced points over a convex (ideally) mesh  
+    FORMAT [Pout,ms2s ,ims2s,n] = spm_mesh_pack_points(S)  
+      S          - input structure  
+    Fields of S:  
+      S.g        - gifti mesh                  - Default: mni scalp template  
+      S.niter    - number of iterations        - Default: 2000  
+      S.p        - initial points (nx3 matrix) - Default: guesses...  
+      S.space    - desired spacing (mm)        - Default: 10  
+      S.division - number of mesh subdivisions - Default: 3  
+      S.nDens    - number of density checks    - Default: 40  
+    Output:  
+      Pnew        - N x 3 matrix containing new points  
+      ms2s        - nearest neighbour distances  
+      ims2s       - initial nearest neighbour distances  
+      n           - number of sensors at each iteration  
+   __________________________________________________________________________  
+  
+
+  [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/toolbox/MEEGtools/spm_mesh_pack_points.m)
+  """
+
+  return _Runtime.call("spm_mesh_pack_points", *args, **kwargs)

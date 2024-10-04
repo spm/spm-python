@@ -1,0 +1,21 @@
+from spm.__wrap__ import _Runtime
+
+
+def glm_phi(*args, **kwargs):
+  """  Estimate connectivity parameters using GLM/EMA method  
+    FORMAT [A,fint] = glm_phi(phi,dt,fb)  
+     
+    phi    -  [N x Nr] matrix of phase time series  
+           -  (N time points, Nr regions)  
+    dt     -  sample period  
+    fb     -  bandwidth parameter  
+     
+    A      -  [Nr x Nr] normalised connectivities  
+    fint   -  [Nr x 1] intrinsic frequencies  
+   __________________________________________________________________________  
+  
+
+  [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/man/example_scripts/glm_phi.m)
+  """
+
+  return _Runtime.call("glm_phi", *args, **kwargs)

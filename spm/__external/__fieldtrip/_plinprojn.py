@@ -1,0 +1,22 @@
+from spm.__wrap__ import _Runtime
+
+
+def _plinprojn(*args, **kwargs):
+  """  PLINPROJN projects a point onto a line or linepiece  
+     
+    [proj, dist] = plinprojn(l1, l2, r, flag)  
+      
+    where l1 and l2 are Nx3 matrices with the begin and endpoints of the linepieces,   
+    and r is the point that is projected onto the lines  
+    This is a vectorized version of Robert's plinproj function and is  
+    generally faster than a for-loop around the mex-file.  
+     
+    the optional flag can be:  
+      0 (default)  project the point anywhere on the complete line  
+      1            project the point within or on the edge of the linepiece  
+  
+
+  [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/private/plinprojn.m)
+  """
+
+  return _Runtime.call("plinprojn", *args, **kwargs)

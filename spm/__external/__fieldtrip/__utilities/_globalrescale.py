@@ -1,0 +1,26 @@
+from spm.__wrap__ import _Runtime
+
+
+def _globalrescale(*args, **kwargs):
+  """  GLOBALRESCALE creates the homogenous spatial transformation matrix  
+    for a 7 parameter rigid-body transformation with global rescaling  
+     
+    Use as  
+      [H] = globalrescale(f)  
+     
+    The transformation vector f should contain the   
+      x-shift  
+      y-shift  
+      z-shift  
+    followed by the  
+      pitch (rotation around x-axis)  
+      roll  (rotation around y-axis)  
+      yaw   (rotation around z-axis)  
+    followed by the  
+      global rescaling factor  
+  
+
+  [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/utilities/private/globalrescale.m)
+  """
+
+  return _Runtime.call("globalrescale", *args, **kwargs)

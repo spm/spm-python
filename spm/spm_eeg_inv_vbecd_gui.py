@@ -1,0 +1,16 @@
+from spm.__wrap__ import _Runtime
+
+
+def spm_eeg_inv_vbecd_gui(*args, **kwargs):
+  """  GUI function for Bayesian ECD inversion  
+    - load the necessary data, if not provided  
+    - fill in all the necessary bits for the VB-ECD inversion routine,  
+    - launch the B_ECD routine, aka. spm_eeg_inv_vbecd  
+    - displays the results.  
+   __________________________________________________________________________  
+  
+
+  [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/spm_eeg_inv_vbecd_gui.m)
+  """
+
+  return _Runtime.call("spm_eeg_inv_vbecd_gui", *args, **kwargs)

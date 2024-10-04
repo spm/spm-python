@@ -1,0 +1,22 @@
+from spm.__wrap__ import _Runtime
+
+
+def _prepare_mesh_manual(*args, **kwargs):
+  """  PREPARE_MESH_MANUAL is called by PREPARE_MESH and opens a GUI to manually  
+    select points/polygons in an mri dataset.  
+     
+    It allows:  
+      Visualization of 3d data in 3 different projections  
+      Adjustment of brightness for every slice  
+      Storage of the data points in an external .mat file  
+      Retrieval of previously saved data points  
+      Slice fast scrolling with keyboard arrows  
+      Polygons or points selection/deselection  
+     
+    See also PREPARE_MESH_SEGMENTATION, PREPARE_MESH_HEADSHAPE  
+  
+
+  [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/private/prepare_mesh_manual.m)
+  """
+
+  return _Runtime.call("prepare_mesh_manual", *args, **kwargs)

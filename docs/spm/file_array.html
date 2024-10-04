@@ -1,0 +1,643 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+<meta name="generator" content="pdoc3 0.11.1">
+<title>spm.file_array API documentation</title>
+<meta name="description" content="">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/13.0.0/sanitize.min.css" integrity="sha512-y1dtMcuvtTMJc1yPgEqF0ZjQbhnc/bFhyvIyVNb9Zk5mIGtqVaAB1Ttl28su8AvFMOY0EwRbAe+HCLqj6W7/KA==" crossorigin>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/13.0.0/typography.min.css" integrity="sha512-Y1DYSb995BAfxobCkKepB1BqJJTPrOp3zPL74AWFugHHmmdcvO+C48WLrUOlhGMc0QG7AE3f7gmvvcrmX2fDoA==" crossorigin>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css" crossorigin>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:1.5em;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:2em 0 .50em 0}h3{font-size:1.4em;margin:1.6em 0 .7em 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .2s ease-in-out}a:visited{color:#503}a:hover{color:#b62}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900;font-weight:bold}pre code{font-size:.8em;line-height:1.4em;padding:1em;display:block}code{background:#f3f3f3;font-family:"DejaVu Sans Mono",monospace;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em 1em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul ul{padding-left:1em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js" integrity="sha512-D9gUyxqja7hBtkWpPWGt9wfbfaMGVt9gnyCvYa+jojwwPHLCzUm5i8rpk7vD7wNee9bA35eYIjobYPaQuKS1MQ==" crossorigin></script>
+<script>window.addEventListener('DOMContentLoaded', () => {
+hljs.configure({languages: ['bash', 'css', 'diff', 'graphql', 'ini', 'javascript', 'json', 'plaintext', 'python', 'python-repl', 'rust', 'shell', 'sql', 'typescript', 'xml', 'yaml']});
+hljs.highlightAll();
+})</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>spm.file_array</code></h1>
+</header>
+<section id="section-intro">
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-classes">Classes</h2>
+<dl>
+<dt id="spm.file_array.file_array"><code class="flex name class">
+<span>class <span class="ident">file_array</span></span>
+<span>(</span><span>*args, **kwargs)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Function for creating file_array objects.<br>
+FORMAT a = file_array(fname,dim,dtype,offset,scl_slope,scl_inter,permission)<br>
+a
+- file_array object<br>
+fname
+- filename<br>
+dim
+- dimensions (default = [0 0] )<br>
+dtype
+- datatype
+(default = 'uint8-le')<br>
+offset
+- offset into file (default = 0)<br>
+scl_slope
+- scalefactor (default = 1)<br>
+scl_inter
+- DC offset, such that dat = raw*scale + inter (default = 0)<br>
+permission - Write permission, either 'rw' or 'ro' (default = 'rw')
+</p>
+<hr>
+<pre><code>Documentation for file_array  
+   doc file_array
+</code></pre>
+<p><a href="https://github.com/spm/spm/blob/main/@file_array/file_array.m">Link to the Matlab implementation.</a></p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class file_array(_MatlabClassWrapper):
+  def __init__(self, *args, _objdict=None, **kwargs):
+    &#34;&#34;&#34;  Function for creating file_array objects.  
+    FORMAT a = file_array(fname,dim,dtype,offset,scl_slope,scl_inter,permission)  
+    a          - file_array object  
+    fname      - filename  
+    dim        - dimensions (default = [0 0] )  
+    dtype      - datatype   (default = &#39;uint8-le&#39;)  
+    offset     - offset into file (default = 0)  
+    scl_slope  - scalefactor (default = 1)  
+    scl_inter  - DC offset, such that dat = raw*scale + inter (default = 0)  
+    permission - Write permission, either &#39;rw&#39; or &#39;ro&#39; (default = &#39;rw&#39;)  
+   __________________________________________________________________________  
+    
+      Documentation for file_array  
+         doc file_array  
+    
+  
+
+  [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@file_array/file_array.m)
+    &#34;&#34;&#34;
+
+    if _objdict is None:
+      _objdict = _Runtime.call(&#34;file_array&#34;, *args, **kwargs)
+    super().__init__(_objdict)
+
+  def cat(self, *args, **kwargs):
+    &#34;&#34;&#34;  Concatenate file_array objects.  The result is a non-simple object  
+    that can no longer be reshaped.  
+   __________________________________________________________________________  
+  
+
+  [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@file_array/cat.m)
+    &#34;&#34;&#34;
+
+    return _Runtime.call(&#34;cat&#34;, self._as_matlab_object(), *args, **kwargs)
+
+
+  def ctranspose(self, *args, **kwargs):
+    &#34;&#34;&#34;  Transposing not allowed  
+   __________________________________________________________________________  
+  
+
+  [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@file_array/ctranspose.m)
+    &#34;&#34;&#34;
+
+    return _Runtime.call(&#34;ctranspose&#34;, self._as_matlab_object(), *args, **kwargs)
+
+
+  def disp(self, *args, **kwargs):
+    &#34;&#34;&#34;  Display a file_array object  
+   __________________________________________________________________________  
+  
+
+  [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@file_array/disp.m)
+    &#34;&#34;&#34;
+
+    return _Runtime.call(&#34;disp&#34;, self._as_matlab_object(), *args, **kwargs)
+
+
+  def display(self, *args, **kwargs):
+    &#34;&#34;&#34;  Display a file_array object  
+   __________________________________________________________________________  
+  
+
+  [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@file_array/display.m)
+    &#34;&#34;&#34;
+
+    return _Runtime.call(&#34;display&#34;, self._as_matlab_object(), *args, **kwargs)
+
+
+  def double(self, *args, **kwargs):
+    &#34;&#34;&#34;  Convert to double precision  
+    FORMAT double(fa)  
+    fa - a file_array  
+   __________________________________________________________________________  
+  
+
+  [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@file_array/double.m)
+    &#34;&#34;&#34;
+
+    return _Runtime.call(&#34;double&#34;, self._as_matlab_object(), *args, **kwargs)
+
+
+  def end(self, *args, **kwargs):
+    &#34;&#34;&#34;  Overloaded end function for file_array objects.  
+   __________________________________________________________________________  
+  
+
+  [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@file_array/end.m)
+    &#34;&#34;&#34;
+
+    return _Runtime.call(&#34;end&#34;, self._as_matlab_object(), *args, **kwargs)
+
+
+  def fieldnames(self, *args, **kwargs):
+    &#34;&#34;&#34;  Fieldnames of a file-array object  
+   __________________________________________________________________________  
+  
+
+  [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@file_array/fieldnames.m)
+    &#34;&#34;&#34;
+
+    return _Runtime.call(&#34;fieldnames&#34;, self._as_matlab_object(), *args, **kwargs)
+
+
+  def full(self, *args, **kwargs):
+    &#34;&#34;&#34;  Convert to numeric form  
+    FORMAT full(fa)  
+    fa - a file_array  
+   __________________________________________________________________________  
+  
+
+  [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@file_array/full.m)
+    &#34;&#34;&#34;
+
+    return _Runtime.call(&#34;full&#34;, self._as_matlab_object(), *args, **kwargs)
+
+
+  def horzcat(self, *args, **kwargs):
+    &#34;&#34;&#34;  Horizontal concatenation of file_array objects  
+   __________________________________________________________________________  
+  
+
+  [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@file_array/horzcat.m)
+    &#34;&#34;&#34;
+
+    return _Runtime.call(&#34;horzcat&#34;, self._as_matlab_object(), *args, **kwargs)
+
+
+  def initialise(self, *args, **kwargs):
+    &#34;&#34;&#34;  Initialise file on disk  
+     
+    This creates a file on disk with the appropriate size by explicitly  
+    writing data to prevent a sparse file.  
+   __________________________________________________________________________  
+  
+
+  [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@file_array/initialise.m)
+    &#34;&#34;&#34;
+
+    return _Runtime.call(&#34;initialise&#34;, self._as_matlab_object(), *args, **kwargs)
+
+
+  def isnan(self, *args, **kwargs):
+    &#34;&#34;&#34;  Logical array containing true where the elements of file_array are NaN&#39;s  
+    FORMAT isnan(fa)  
+    fa - a file_array  
+   __________________________________________________________________________  
+  
+
+  [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@file_array/isnan.m)
+    &#34;&#34;&#34;
+
+    return _Runtime.call(&#34;isnan&#34;, self._as_matlab_object(), *args, **kwargs)
+
+
+  def length(self, *args, **kwargs):
+    &#34;&#34;&#34;  Overloaded length function for file_array objects  
+   __________________________________________________________________________  
+  
+
+  [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@file_array/length.m)
+    &#34;&#34;&#34;
+
+    return _Runtime.call(&#34;length&#34;, self._as_matlab_object(), *args, **kwargs)
+
+
+  def loadobj(self, *args, **kwargs):
+    &#34;&#34;&#34;  loadobj for file_array class  
+   __________________________________________________________________________  
+  
+
+  [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@file_array/loadobj.m)
+    &#34;&#34;&#34;
+
+    return _Runtime.call(&#34;loadobj&#34;, self._as_matlab_object(), *args, **kwargs)
+
+
+  def ndims(self, *args, **kwargs):
+    &#34;&#34;&#34;  Number of dimensions  
+   __________________________________________________________________________  
+  
+
+  [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@file_array/ndims.m)
+    &#34;&#34;&#34;
+
+    return _Runtime.call(&#34;ndims&#34;, self._as_matlab_object(), *args, **kwargs)
+
+
+  def numel(self, *args, **kwargs):
+    &#34;&#34;&#34;  Number of simple file arrays involved.  
+   __________________________________________________________________________  
+  
+
+  [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@file_array/numel.m)
+    &#34;&#34;&#34;
+
+    return _Runtime.call(&#34;numel&#34;, self._as_matlab_object(), *args, **kwargs)
+
+
+  def numeric(self, *args, **kwargs):
+    &#34;&#34;&#34;  Convert to numeric form  
+    FORMAT numeric(fa)  
+    fa - a file_array  
+   __________________________________________________________________________  
+  
+
+  [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@file_array/numeric.m)
+    &#34;&#34;&#34;
+
+    return _Runtime.call(&#34;numeric&#34;, self._as_matlab_object(), *args, **kwargs)
+
+
+  def permute(self, *args, **kwargs):
+    &#34;&#34;&#34;  file_array objects can not be permuted  
+   __________________________________________________________________________  
+  
+
+  [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@file_array/permute.m)
+    &#34;&#34;&#34;
+
+    return _Runtime.call(&#34;permute&#34;, self._as_matlab_object(), *args, **kwargs)
+
+
+  def reshape(self, *args, **kwargs):
+    &#34;&#34;&#34;  Overloaded reshape function for file_array objects  
+   __________________________________________________________________________  
+  
+
+  [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@file_array/reshape.m)
+    &#34;&#34;&#34;
+
+    return _Runtime.call(&#34;reshape&#34;, self._as_matlab_object(), *args, **kwargs)
+
+
+  def size(self, *args, **kwargs):
+    &#34;&#34;&#34;  Method &#39;size&#39; for file_array objects  
+   __________________________________________________________________________  
+  
+
+  [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@file_array/size.m)
+    &#34;&#34;&#34;
+
+    return _Runtime.call(&#34;size&#34;, self._as_matlab_object(), *args, **kwargs)
+
+
+  def subsasgn(self, *args, **kwargs):
+    &#34;&#34;&#34;  Overloaded subsasgn function for file_array objects  
+   __________________________________________________________________________  
+  
+
+  [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@file_array/subsasgn.m)
+    &#34;&#34;&#34;
+
+    return _Runtime.call(&#34;subsasgn&#34;, self._as_matlab_object(), *args, **kwargs)
+
+
+  def subsref(self, *args, **kwargs):
+    &#34;&#34;&#34;  SUBSREF Subscripted reference  
+    An overloaded function...  
+   __________________________________________________________________________  
+  
+
+  [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@file_array/subsref.m)
+    &#34;&#34;&#34;
+
+    return _Runtime.call(&#34;subsref&#34;, self._as_matlab_object(), *args, **kwargs)
+
+
+  def transpose(self, *args, **kwargs):
+    &#34;&#34;&#34;  file_array objects can not be transposed  
+   __________________________________________________________________________  
+  
+
+  [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@file_array/transpose.m)
+    &#34;&#34;&#34;
+
+    return _Runtime.call(&#34;transpose&#34;, self._as_matlab_object(), *args, **kwargs)
+
+
+  def vertcat(self, *args, **kwargs):
+    &#34;&#34;&#34;  Vertical concatenation of file_array objects.  
+   __________________________________________________________________________  
+  
+
+  [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@file_array/vertcat.m)
+    &#34;&#34;&#34;
+
+    return _Runtime.call(&#34;vertcat&#34;, self._as_matlab_object(), *args, **kwargs)</code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li>spm.__wrap__._MatlabClassWrapper</li>
+</ul>
+<h3>Methods</h3>
+<dl>
+<dt id="spm.file_array.file_array.cat"><code class="name flex">
+<span>def <span class="ident">cat</span></span>(<span>self, *args, **kwargs)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Concatenate file_array objects.
+The result is a non-simple object<br>
+that can no longer be reshaped.
+</p>
+<hr>
+<p><a href="https://github.com/spm/spm/blob/main/@file_array/cat.m">Link to the Matlab implementation.</a></p></div>
+</dd>
+<dt id="spm.file_array.file_array.ctranspose"><code class="name flex">
+<span>def <span class="ident">ctranspose</span></span>(<span>self, *args, **kwargs)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Transposing not allowed
+</p>
+<hr>
+<p><a href="https://github.com/spm/spm/blob/main/@file_array/ctranspose.m">Link to the Matlab implementation.</a></p></div>
+</dd>
+<dt id="spm.file_array.file_array.disp"><code class="name flex">
+<span>def <span class="ident">disp</span></span>(<span>self, *args, **kwargs)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Display a file_array object
+</p>
+<hr>
+<p><a href="https://github.com/spm/spm/blob/main/@file_array/disp.m">Link to the Matlab implementation.</a></p></div>
+</dd>
+<dt id="spm.file_array.file_array.display"><code class="name flex">
+<span>def <span class="ident">display</span></span>(<span>self, *args, **kwargs)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Display a file_array object
+</p>
+<hr>
+<p><a href="https://github.com/spm/spm/blob/main/@file_array/display.m">Link to the Matlab implementation.</a></p></div>
+</dd>
+<dt id="spm.file_array.file_array.double"><code class="name flex">
+<span>def <span class="ident">double</span></span>(<span>self, *args, **kwargs)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Convert to double precision<br>
+FORMAT double(fa)<br>
+fa - a file_array
+</p>
+<hr>
+<p><a href="https://github.com/spm/spm/blob/main/@file_array/double.m">Link to the Matlab implementation.</a></p></div>
+</dd>
+<dt id="spm.file_array.file_array.end"><code class="name flex">
+<span>def <span class="ident">end</span></span>(<span>self, *args, **kwargs)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Overloaded end function for file_array objects.
+</p>
+<hr>
+<p><a href="https://github.com/spm/spm/blob/main/@file_array/end.m">Link to the Matlab implementation.</a></p></div>
+</dd>
+<dt id="spm.file_array.file_array.fieldnames"><code class="name flex">
+<span>def <span class="ident">fieldnames</span></span>(<span>self, *args, **kwargs)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Fieldnames of a file-array object
+</p>
+<hr>
+<p><a href="https://github.com/spm/spm/blob/main/@file_array/fieldnames.m">Link to the Matlab implementation.</a></p></div>
+</dd>
+<dt id="spm.file_array.file_array.full"><code class="name flex">
+<span>def <span class="ident">full</span></span>(<span>self, *args, **kwargs)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Convert to numeric form<br>
+FORMAT full(fa)<br>
+fa - a file_array
+</p>
+<hr>
+<p><a href="https://github.com/spm/spm/blob/main/@file_array/full.m">Link to the Matlab implementation.</a></p></div>
+</dd>
+<dt id="spm.file_array.file_array.horzcat"><code class="name flex">
+<span>def <span class="ident">horzcat</span></span>(<span>self, *args, **kwargs)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Horizontal concatenation of file_array objects
+</p>
+<hr>
+<p><a href="https://github.com/spm/spm/blob/main/@file_array/horzcat.m">Link to the Matlab implementation.</a></p></div>
+</dd>
+<dt id="spm.file_array.file_array.initialise"><code class="name flex">
+<span>def <span class="ident">initialise</span></span>(<span>self, *args, **kwargs)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Initialise file on disk
+</p>
+<p>This creates a file on disk with the appropriate size by explicitly<br>
+writing data to prevent a sparse file.
+</p>
+<hr>
+<p><a href="https://github.com/spm/spm/blob/main/@file_array/initialise.m">Link to the Matlab implementation.</a></p></div>
+</dd>
+<dt id="spm.file_array.file_array.isnan"><code class="name flex">
+<span>def <span class="ident">isnan</span></span>(<span>self, *args, **kwargs)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Logical array containing true where the elements of file_array are NaN's<br>
+FORMAT isnan(fa)<br>
+fa - a file_array
+</p>
+<hr>
+<p><a href="https://github.com/spm/spm/blob/main/@file_array/isnan.m">Link to the Matlab implementation.</a></p></div>
+</dd>
+<dt id="spm.file_array.file_array.length"><code class="name flex">
+<span>def <span class="ident">length</span></span>(<span>self, *args, **kwargs)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Overloaded length function for file_array objects
+</p>
+<hr>
+<p><a href="https://github.com/spm/spm/blob/main/@file_array/length.m">Link to the Matlab implementation.</a></p></div>
+</dd>
+<dt id="spm.file_array.file_array.loadobj"><code class="name flex">
+<span>def <span class="ident">loadobj</span></span>(<span>self, *args, **kwargs)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>loadobj for file_array class
+</p>
+<hr>
+<p><a href="https://github.com/spm/spm/blob/main/@file_array/loadobj.m">Link to the Matlab implementation.</a></p></div>
+</dd>
+<dt id="spm.file_array.file_array.ndims"><code class="name flex">
+<span>def <span class="ident">ndims</span></span>(<span>self, *args, **kwargs)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Number of dimensions
+</p>
+<hr>
+<p><a href="https://github.com/spm/spm/blob/main/@file_array/ndims.m">Link to the Matlab implementation.</a></p></div>
+</dd>
+<dt id="spm.file_array.file_array.numel"><code class="name flex">
+<span>def <span class="ident">numel</span></span>(<span>self, *args, **kwargs)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Number of simple file arrays involved.
+</p>
+<hr>
+<p><a href="https://github.com/spm/spm/blob/main/@file_array/numel.m">Link to the Matlab implementation.</a></p></div>
+</dd>
+<dt id="spm.file_array.file_array.numeric"><code class="name flex">
+<span>def <span class="ident">numeric</span></span>(<span>self, *args, **kwargs)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Convert to numeric form<br>
+FORMAT numeric(fa)<br>
+fa - a file_array
+</p>
+<hr>
+<p><a href="https://github.com/spm/spm/blob/main/@file_array/numeric.m">Link to the Matlab implementation.</a></p></div>
+</dd>
+<dt id="spm.file_array.file_array.permute"><code class="name flex">
+<span>def <span class="ident">permute</span></span>(<span>self, *args, **kwargs)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>file_array objects can not be permuted
+</p>
+<hr>
+<p><a href="https://github.com/spm/spm/blob/main/@file_array/permute.m">Link to the Matlab implementation.</a></p></div>
+</dd>
+<dt id="spm.file_array.file_array.reshape"><code class="name flex">
+<span>def <span class="ident">reshape</span></span>(<span>self, *args, **kwargs)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Overloaded reshape function for file_array objects
+</p>
+<hr>
+<p><a href="https://github.com/spm/spm/blob/main/@file_array/reshape.m">Link to the Matlab implementation.</a></p></div>
+</dd>
+<dt id="spm.file_array.file_array.size"><code class="name flex">
+<span>def <span class="ident">size</span></span>(<span>self, *args, **kwargs)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Method 'size' for file_array objects
+</p>
+<hr>
+<p><a href="https://github.com/spm/spm/blob/main/@file_array/size.m">Link to the Matlab implementation.</a></p></div>
+</dd>
+<dt id="spm.file_array.file_array.subsasgn"><code class="name flex">
+<span>def <span class="ident">subsasgn</span></span>(<span>self, *args, **kwargs)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Overloaded subsasgn function for file_array objects
+</p>
+<hr>
+<p><a href="https://github.com/spm/spm/blob/main/@file_array/subsasgn.m">Link to the Matlab implementation.</a></p></div>
+</dd>
+<dt id="spm.file_array.file_array.subsref"><code class="name flex">
+<span>def <span class="ident">subsref</span></span>(<span>self, *args, **kwargs)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>SUBSREF Subscripted reference<br>
+An overloaded function&hellip;
+</p>
+<hr>
+<p><a href="https://github.com/spm/spm/blob/main/@file_array/subsref.m">Link to the Matlab implementation.</a></p></div>
+</dd>
+<dt id="spm.file_array.file_array.transpose"><code class="name flex">
+<span>def <span class="ident">transpose</span></span>(<span>self, *args, **kwargs)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>file_array objects can not be transposed
+</p>
+<hr>
+<p><a href="https://github.com/spm/spm/blob/main/@file_array/transpose.m">Link to the Matlab implementation.</a></p></div>
+</dd>
+<dt id="spm.file_array.file_array.vertcat"><code class="name flex">
+<span>def <span class="ident">vertcat</span></span>(<span>self, *args, **kwargs)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Vertical concatenation of file_array objects.
+</p>
+<hr>
+<p><a href="https://github.com/spm/spm/blob/main/@file_array/vertcat.m">Link to the Matlab implementation.</a></p></div>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+</article>
+<nav id="sidebar">
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3>Super-module</h3>
+<ul>
+<li><code><a title="spm" href="index.html">spm</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-classes">Classes</a></h3>
+<ul>
+<li>
+<h4><code><a title="spm.file_array.file_array" href="#spm.file_array.file_array">file_array</a></code></h4>
+<ul class="two-column">
+<li><code><a title="spm.file_array.file_array.cat" href="#spm.file_array.file_array.cat">cat</a></code></li>
+<li><code><a title="spm.file_array.file_array.ctranspose" href="#spm.file_array.file_array.ctranspose">ctranspose</a></code></li>
+<li><code><a title="spm.file_array.file_array.disp" href="#spm.file_array.file_array.disp">disp</a></code></li>
+<li><code><a title="spm.file_array.file_array.display" href="#spm.file_array.file_array.display">display</a></code></li>
+<li><code><a title="spm.file_array.file_array.double" href="#spm.file_array.file_array.double">double</a></code></li>
+<li><code><a title="spm.file_array.file_array.end" href="#spm.file_array.file_array.end">end</a></code></li>
+<li><code><a title="spm.file_array.file_array.fieldnames" href="#spm.file_array.file_array.fieldnames">fieldnames</a></code></li>
+<li><code><a title="spm.file_array.file_array.full" href="#spm.file_array.file_array.full">full</a></code></li>
+<li><code><a title="spm.file_array.file_array.horzcat" href="#spm.file_array.file_array.horzcat">horzcat</a></code></li>
+<li><code><a title="spm.file_array.file_array.initialise" href="#spm.file_array.file_array.initialise">initialise</a></code></li>
+<li><code><a title="spm.file_array.file_array.isnan" href="#spm.file_array.file_array.isnan">isnan</a></code></li>
+<li><code><a title="spm.file_array.file_array.length" href="#spm.file_array.file_array.length">length</a></code></li>
+<li><code><a title="spm.file_array.file_array.loadobj" href="#spm.file_array.file_array.loadobj">loadobj</a></code></li>
+<li><code><a title="spm.file_array.file_array.ndims" href="#spm.file_array.file_array.ndims">ndims</a></code></li>
+<li><code><a title="spm.file_array.file_array.numel" href="#spm.file_array.file_array.numel">numel</a></code></li>
+<li><code><a title="spm.file_array.file_array.numeric" href="#spm.file_array.file_array.numeric">numeric</a></code></li>
+<li><code><a title="spm.file_array.file_array.permute" href="#spm.file_array.file_array.permute">permute</a></code></li>
+<li><code><a title="spm.file_array.file_array.reshape" href="#spm.file_array.file_array.reshape">reshape</a></code></li>
+<li><code><a title="spm.file_array.file_array.size" href="#spm.file_array.file_array.size">size</a></code></li>
+<li><code><a title="spm.file_array.file_array.subsasgn" href="#spm.file_array.file_array.subsasgn">subsasgn</a></code></li>
+<li><code><a title="spm.file_array.file_array.subsref" href="#spm.file_array.file_array.subsref">subsref</a></code></li>
+<li><code><a title="spm.file_array.file_array.transpose" href="#spm.file_array.file_array.transpose">transpose</a></code></li>
+<li><code><a title="spm.file_array.file_array.vertcat" href="#spm.file_array.file_array.vertcat">vertcat</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc" title="pdoc: Python API documentation generator"><cite>pdoc</cite> 0.11.1</a>.</p>
+</footer>
+</body>
+</html>

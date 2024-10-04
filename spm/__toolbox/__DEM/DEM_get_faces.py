@@ -1,0 +1,15 @@
+from spm.__wrap__ import _Runtime
+
+
+def DEM_get_faces(*args, **kwargs):
+  """  Utility routine to load images and create basis functions using a  
+    discrete cosine basis set (over a feature dimension). This is written  
+    specifically for the images used in this demonstration and should be  
+    tailored for any new images.  
+   __________________________________________________________________________  
+  
+
+  [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/toolbox/DEM/DEM_get_faces.m)
+  """
+
+  return _Runtime.call("DEM_get_faces", *args, **kwargs, nargout=0)

@@ -1,0 +1,1134 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+<meta name="generator" content="pdoc3 0.11.1">
+<title>spm.xmltree API documentation</title>
+<meta name="description" content="">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/13.0.0/sanitize.min.css" integrity="sha512-y1dtMcuvtTMJc1yPgEqF0ZjQbhnc/bFhyvIyVNb9Zk5mIGtqVaAB1Ttl28su8AvFMOY0EwRbAe+HCLqj6W7/KA==" crossorigin>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/13.0.0/typography.min.css" integrity="sha512-Y1DYSb995BAfxobCkKepB1BqJJTPrOp3zPL74AWFugHHmmdcvO+C48WLrUOlhGMc0QG7AE3f7gmvvcrmX2fDoA==" crossorigin>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css" crossorigin>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:1.5em;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:2em 0 .50em 0}h3{font-size:1.4em;margin:1.6em 0 .7em 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .2s ease-in-out}a:visited{color:#503}a:hover{color:#b62}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900;font-weight:bold}pre code{font-size:.8em;line-height:1.4em;padding:1em;display:block}code{background:#f3f3f3;font-family:"DejaVu Sans Mono",monospace;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em 1em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul ul{padding-left:1em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js" integrity="sha512-D9gUyxqja7hBtkWpPWGt9wfbfaMGVt9gnyCvYa+jojwwPHLCzUm5i8rpk7vD7wNee9bA35eYIjobYPaQuKS1MQ==" crossorigin></script>
+<script>window.addEventListener('DOMContentLoaded', () => {
+hljs.configure({languages: ['bash', 'css', 'diff', 'graphql', 'ini', 'javascript', 'json', 'plaintext', 'python', 'python-repl', 'rust', 'shell', 'sql', 'typescript', 'xml', 'yaml']});
+hljs.highlightAll();
+})</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>spm.xmltree</code></h1>
+</header>
+<section id="section-intro">
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-classes">Classes</h2>
+<dl>
+<dt id="spm.xmltree.xmltree"><code class="flex name class">
+<span>class <span class="ident">xmltree</span></span>
+<span>(</span><span>*args, **kwargs)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>XMLTREE/XMLTREE Constructor of the XMLTree class<br>
+FORMAT tree = xmltree(varargin)
+</p>
+<p>varargin - XML filename or XML string<br>
+tree
+- XMLTree Object
+</p>
+<pre><code>  tree = xmltree;             % creates a minimal XML tree: '&lt;tag/&gt;'  
+  tree = xmltree('foo.xml');  % creates a tree from XML file 'foo.xml'  
+  tree = xmltree('&lt;tag&gt;content&lt;/tag&gt;') % creates a tree from string
+</code></pre>
+<hr>
+<p>This is the constructor of the XMLTree class. <br>
+It creates a tree of an XML 1.0 file (after parsing) that is stored <br>
+using a Document Object Model (DOM) representation.<br>
+See <a href="http://www.w3.org/TR/REC-xml">http://www.w3.org/TR/REC-xml</a> for details about XML 1.0.<br>
+See <a href="http://www.w3.org/DOM/">http://www.w3.org/DOM/</a> for details about DOM platform.
+</p>
+<hr>
+<pre><code>Documentation for xmltree  
+   doc xmltree
+</code></pre>
+<p><a href="https://github.com/spm/spm/blob/main/@xmltree/xmltree.m">Link to the Matlab implementation.</a></p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class xmltree(_MatlabClassWrapper):
+  def __init__(self, *args, _objdict=None, **kwargs):
+    &#34;&#34;&#34;  XMLTREE/XMLTREE Constructor of the XMLTree class  
+    FORMAT tree = xmltree(varargin)  
+      
+    varargin - XML filename or XML string  
+    tree     - XMLTree Object  
+     
+        tree = xmltree;             % creates a minimal XML tree: &#39;&lt;tag/&gt;&#39;  
+        tree = xmltree(&#39;foo.xml&#39;);  % creates a tree from XML file &#39;foo.xml&#39;  
+        tree = xmltree(&#39;&lt;tag&gt;content&lt;/tag&gt;&#39;) % creates a tree from string  
+   __________________________________________________________________________  
+     
+    This is the constructor of the XMLTree class.   
+    It creates a tree of an XML 1.0 file (after parsing) that is stored   
+    using a Document Object Model (DOM) representation.  
+    See http://www.w3.org/TR/REC-xml for details about XML 1.0.  
+    See http://www.w3.org/DOM/ for details about DOM platform.  
+   __________________________________________________________________________  
+    
+      Documentation for xmltree  
+         doc xmltree  
+    
+  
+
+  [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@xmltree/xmltree.m)
+    &#34;&#34;&#34;
+
+    if _objdict is None:
+      _objdict = _Runtime.call(&#34;xmltree&#34;, *args, **kwargs)
+    super().__init__(_objdict)
+
+  def add(self, *args, **kwargs):
+    &#34;&#34;&#34;  XMLTREE/ADD Method (add children to elements of an XML Tree)  
+    FORMAT vararout = add(tree,uid,type,parameter)  
+      
+    tree      - XMLTree object  
+    uid       - array of uid&#39;s  
+    type      - &#39;element&#39;, &#39;chardata&#39;, &#39;cdata&#39;, &#39;pi&#39; or &#39;comment&#39;  
+    parameter - property name (a character array unless type=&#39;pi&#39; for  
+                which parameter=struct(&#39;target&#39;,&#39;&#39;,&#39;value&#39;,&#39;&#39;))  
+     
+    new_uid   - UID&#39;s of the newly created nodes  
+     
+           tree = add(tree,uid,type,parameter);  
+           [tree, new_uid] = add(tree,uid,type,parameter);  
+   __________________________________________________________________________  
+     
+    Add a node (element, chardata, cdata, pi or comment) in the XML Tree.  
+    It adds a child to the element whose UID is iud.  
+    Use attributes({&#39;set&#39;,&#39;get&#39;,&#39;add&#39;,&#39;del&#39;,&#39;length&#39;},...) function to   
+    deal with the attributes of an element node (initialized empty).  
+    The tree parameter must be in input AND in output.  
+   __________________________________________________________________________  
+  
+
+  [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@xmltree/add.m)
+    &#34;&#34;&#34;
+
+    return _Runtime.call(&#34;add&#34;, self._as_matlab_object(), *args, **kwargs)
+
+
+  def attributes(self, *args, **kwargs):
+    &#34;&#34;&#34;  XMLTREE/ATTRIBUTES Method (handle attributes of an element node)  
+    FORMAT varargout = attributes(varargin)  
+      
+    tree    - XMLTree object  
+    method  - &#39;set&#39;,&#39;get&#39;,&#39;add&#39;,&#39;del&#39; or &#39;length&#39;  
+    uid     - the UID of an element node  
+    n       - indice of the attribute  
+    key     - string key=&#34;...&#34;  
+    val     - string ...=&#34;val&#34;  
+    attr    - cell array of struct(key,val) or just struct(key,val)  
+    l       - number of attributes of the element node uid  
+     
+        tree = attributes(tree,&#39;set&#39;,uid,n,key,val)  
+        attr = attributes(tree,&#39;get&#39;,uid[,n])  
+        tree = attributes(tree,&#39;add&#39;,uid,key,val)  
+        tree = attributes(tree,&#39;del&#39;,uid[,n])  
+        l    = attributes(tree,&#39;length&#39;,uid)  
+   __________________________________________________________________________  
+     
+    Handle attributes of an element node.  
+    The tree parameter must be in input AND in output for &#39;set&#39;, &#39;add&#39; and  
+    &#39;del&#39; methods.  
+   __________________________________________________________________________  
+  
+
+  [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@xmltree/attributes.m)
+    &#34;&#34;&#34;
+
+    return _Runtime.call(&#34;attributes&#34;, self._as_matlab_object(), *args, **kwargs)
+
+
+  def branch(self, *args, **kwargs):
+    &#34;&#34;&#34;  XMLTREE/BRANCH Branch Method  
+    FORMAT uid = parent(tree,uid)  
+      
+    tree    - XMLTree object  
+    uid     - UID of the root element of the subtree  
+    subtree - XMLTree object (a subtree from tree)  
+   __________________________________________________________________________  
+     
+    Return a subtree from a tree.  
+   __________________________________________________________________________  
+  
+
+  [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@xmltree/branch.m)
+    &#34;&#34;&#34;
+
+    return _Runtime.call(&#34;branch&#34;, self._as_matlab_object(), *args, **kwargs)
+
+
+  def char(self, *args, **kwargs):
+    &#34;&#34;&#34;  XMLTREE/CHAR Converter function from XMLTree to a description string  
+    FORMAT s = char(tree)  
+     
+    tree - XMLTree object  
+    s    - a description string of an XMLTree  
+   __________________________________________________________________________  
+     
+    Return a string describing the XMLTree:  
+                  &#39;XMLTree object (x nodes) [filename]&#39;  
+   __________________________________________________________________________  
+  
+
+  [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@xmltree/char.m)
+    &#34;&#34;&#34;
+
+    return _Runtime.call(&#34;char&#34;, self._as_matlab_object(), *args, **kwargs)
+
+
+  def children(self, *args, **kwargs):
+    &#34;&#34;&#34;  XMLTREE/CHILDREN Return children&#39;s UIDs of node uid  
+    FORMAT child = children(tree,uid)  
+     
+    tree   - a tree  
+    uid    - uid of the element  
+    child  - array of the UIDs of children of node uid  
+   __________________________________________________________________________  
+     
+    Return UID&#39;s of children of node uid  
+   __________________________________________________________________________  
+  
+
+  [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@xmltree/children.m)
+    &#34;&#34;&#34;
+
+    return _Runtime.call(&#34;children&#34;, self._as_matlab_object(), *args, **kwargs)
+
+
+  def convert(self, *args, **kwargs):
+    &#34;&#34;&#34;  XMLTREE/CONVERT Convert an XML tree into a structure  
+      
+    tree     - XMLTree object  
+    uid      - uid of the root of the subtree, if provided.  
+               Default is root  
+    s        - converted structure  
+   __________________________________________________________________________  
+     
+    Convert an XMLTree into a structure, when possible.  
+    When several identical tags are present, a cell array is used.  
+    The root tag is not saved in the structure.  
+    If provided, only the structure corresponding to the subtree defined  
+    by the uid UID is returned.  
+     
+    Example:  
+    xml = &#39;&lt;a&gt;&lt;b&gt;field1&lt;/b&gt;&lt;c&gt;field2&lt;/c&gt;&lt;b&gt;field3&lt;/b&gt;&lt;/a&gt;&#39;;  
+    tree = convert(xmltree(xml));  
+    &lt;=&gt; tree = struct(&#39;b&#39;,{{&#39;field1&#39;, &#39;field3&#39;}},&#39;c&#39;,&#39;field2&#39;)  
+   __________________________________________________________________________  
+  
+
+  [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@xmltree/convert.m)
+    &#34;&#34;&#34;
+
+    return _Runtime.call(&#34;convert&#34;, self._as_matlab_object(), *args, **kwargs)
+
+
+  def copy(self, *args, **kwargs):
+    &#34;&#34;&#34;  XMLTREE/COPY Copy Method (copy a subtree in another branch)  
+    FORMAT tree = copy(tree,subuid,uid)  
+      
+    tree      - XMLTree object  
+    subuid    - UID of the subtree to copy  
+    uid       - UID of the element where the subtree must be duplicated  
+   __________________________________________________________________________  
+     
+    Copy a subtree to another branch.  
+    The tree parameter must be in input AND in output.  
+   __________________________________________________________________________  
+  
+
+  [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@xmltree/copy.m)
+    &#34;&#34;&#34;
+
+    return _Runtime.call(&#34;copy&#34;, self._as_matlab_object(), *args, **kwargs)
+
+
+  def delete(self, *args, **kwargs):
+    &#34;&#34;&#34;  XMLTREE/DELETE Delete (delete a subtree given its UID)  
+      
+    tree      - XMLTree object  
+    uid       - array of UID&#39;s of subtrees to be deleted  
+   __________________________________________________________________________  
+     
+    Delete a subtree given its UID  
+    The tree parameter must be in input AND in output  
+   __________________________________________________________________________  
+  
+
+  [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@xmltree/delete.m)
+    &#34;&#34;&#34;
+
+    return _Runtime.call(&#34;delete&#34;, self._as_matlab_object(), *args, **kwargs)
+
+
+  def display(self, *args, **kwargs):
+    &#34;&#34;&#34;  XMLTREE/DISPLAY Command window display of an XMLTree  
+    FORMAT display(tree)  
+      
+    tree - XMLTree object  
+   __________________________________________________________________________  
+     
+    This method is called when the semicolon is not used to terminate a  
+    statement which returns an XMLTree.  
+   __________________________________________________________________________  
+  
+
+  [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@xmltree/display.m)
+    &#34;&#34;&#34;
+
+    return _Runtime.call(&#34;display&#34;, self._as_matlab_object(), *args, **kwargs)
+
+
+  def editor(self, *args, **kwargs):
+    &#34;&#34;&#34; XMLTREE/EDITOR A Graphical User Interface for an XML tree  
+     EDITOR(TREE) opens a new figure displaying the xmltree object TREE.  
+     H = EDITOR(TREE) also returns the figure handle H.  
+     
+     This is a beta version of &lt;xmltree/view&gt; successor  
+     
+     See also XMLTREE  
+   __________________________________________________________________________  
+  
+
+  [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@xmltree/editor.m)
+    &#34;&#34;&#34;
+
+    return _Runtime.call(&#34;editor&#34;, self._as_matlab_object(), *args, **kwargs)
+
+
+  def find(self, *args, **kwargs):
+    &#34;&#34;&#34;  XMLTREE/FIND Find elements in a tree with specified characteristics  
+    FORMAT list = find(varargin)  
+     
+    tree  - XMLTree object  
+    xpath - string path with specific grammar (XPath)  
+    uid   - lists of root uid&#39;s  
+    parameter/value - pair of pattern  
+    list  - list of uid&#39;s of matched elements  
+     
+         list = find(tree,xpath)  
+         list = find(tree,parameter,value[,parameter,value])  
+         list = find(tree,uid,parameter,value[,parameter,value])  
+     
+    Grammar for addressing parts of an XML document:   
+           XML Path Language XPath (http://www.w3.org/TR/xpath)  
+    Example: /element1//element2[1]/element3[5]/element4  
+   __________________________________________________________________________  
+     
+    Find elements in an XML tree with specified characteristics or given  
+    a path (using a subset of XPath language).  
+   __________________________________________________________________________  
+  
+
+  [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@xmltree/find.m)
+    &#34;&#34;&#34;
+
+    return _Runtime.call(&#34;find&#34;, self._as_matlab_object(), *args, **kwargs)
+
+
+  def flush(self, *args, **kwargs):
+    &#34;&#34;&#34;  XMLTREE/FLUSH Flush (Clear a subtree given its UID)  
+      
+    tree      - XMLTree object  
+    uid       - array of UID&#39;s of subtrees to be cleared  
+                Default is root  
+   __________________________________________________________________________  
+     
+    Clear a subtree given its UID (remove all the leaves of the tree)  
+    The tree parameter must be in input AND in output  
+   __________________________________________________________________________  
+  
+
+  [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@xmltree/flush.m)
+    &#34;&#34;&#34;
+
+    return _Runtime.call(&#34;flush&#34;, self._as_matlab_object(), *args, **kwargs)
+
+
+  def get(self, *args, **kwargs):
+    &#34;&#34;&#34;  XMLTREE/GET Get Method (get object properties)  
+    FORMAT value = get(tree,uid,parameter)  
+      
+    tree      - XMLTree object  
+    uid       - array of uid&#39;s  
+    parameter - property name  
+    value     - property value  
+   __________________________________________________________________________  
+     
+    Get object properties of a tree given their UIDs.  
+   __________________________________________________________________________  
+  
+
+  [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@xmltree/get.m)
+    &#34;&#34;&#34;
+
+    return _Runtime.call(&#34;get&#34;, self._as_matlab_object(), *args, **kwargs)
+
+
+  def getfilename(self, *args, **kwargs):
+    &#34;&#34;&#34;  XMLTREE/GETFILENAME Get filename method  
+    FORMAT filename = getfilename(tree)  
+      
+    tree     - XMLTree object  
+    filename - XML filename  
+   __________________________________________________________________________  
+     
+    Return the filename of the XML tree if loaded from disk and an empty   
+    string otherwise.  
+   __________________________________________________________________________  
+  
+
+  [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@xmltree/getfilename.m)
+    &#34;&#34;&#34;
+
+    return _Runtime.call(&#34;getfilename&#34;, self._as_matlab_object(), *args, **kwargs)
+
+
+  def isfield(self, *args, **kwargs):
+    &#34;&#34;&#34;  XMLTREE/ISFIELD Is parameter a field of tree{uid} ?  
+    FORMAT F = isfield(tree,uid,parameter)  
+     
+    tree      - a tree  
+    uid       - uid of the element  
+    parameter - a field of the root tree  
+    F         - 1 if present, 0 otherwise  
+   __________________________________________________________________________  
+     
+    Is parameter a field of tree{uid} ?  
+   __________________________________________________________________________  
+  
+
+  [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@xmltree/isfield.m)
+    &#34;&#34;&#34;
+
+    return _Runtime.call(&#34;isfield&#34;, self._as_matlab_object(), *args, **kwargs)
+
+
+  def length(self, *args, **kwargs):
+    &#34;&#34;&#34;  XMLTREE/LENGTH Length Method  
+    FORMAT l = length(tree,r)  
+      
+    tree - XMLTree object  
+    r    - &#39;real&#39; if present, returns the real number of nodes in the  
+            tree (deleted nodes aren&#39;t populated)  
+    l    - length of the XML tree (number of nodes)  
+   __________________________________________________________________________  
+     
+    Return the number of nodes of an XMLTree object.  
+   __________________________________________________________________________  
+  
+
+  [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@xmltree/length.m)
+    &#34;&#34;&#34;
+
+    return _Runtime.call(&#34;length&#34;, self._as_matlab_object(), *args, **kwargs)
+
+
+  def move(self, *args, **kwargs):
+    &#34;&#34;&#34;  XMLTREE/MOVE Move (move a subtree inside a tree from A to B)  
+      
+    tree   - XMLTree object  
+    uida   - initial position of the subtree  
+    uidb   - parent of the final position of the subtree  
+   __________________________________________________________________________  
+     
+    Move a subtree inside a tree from A to B.  
+    The tree parameter must be in input AND in output.  
+   __________________________________________________________________________  
+  
+
+  [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@xmltree/move.m)
+    &#34;&#34;&#34;
+
+    return _Runtime.call(&#34;move&#34;, self._as_matlab_object(), *args, **kwargs)
+
+
+  def parent(self, *args, **kwargs):
+    &#34;&#34;&#34;  XMLTREE/PARENT Parent Method  
+    FORMAT uid = parent(tree,uid)  
+      
+    tree   - XMLTree object  
+    uid    - UID of the lonely child  
+    p      - UID of the parent ([] if root is the child)  
+   __________________________________________________________________________  
+     
+    Return the uid of the parent of a node.  
+   __________________________________________________________________________  
+  
+
+  [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@xmltree/parent.m)
+    &#34;&#34;&#34;
+
+    return _Runtime.call(&#34;parent&#34;, self._as_matlab_object(), *args, **kwargs)
+
+
+  def root(self, *args, **kwargs):
+    &#34;&#34;&#34;  XMLTREE/ROOT Root Method  
+    FORMAT uid = root(tree)  
+      
+    tree   - XMLTree object  
+    uid    - UID of the root element of tree  
+   __________________________________________________________________________  
+     
+    Return the uid of the root element of the tree.  
+   __________________________________________________________________________  
+  
+
+  [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@xmltree/root.m)
+    &#34;&#34;&#34;
+
+    return _Runtime.call(&#34;root&#34;, self._as_matlab_object(), *args, **kwargs)
+
+
+  def save(self, *args, **kwargs):
+    &#34;&#34;&#34;  XMLTREE/SAVE Save an XML tree in an XML file  
+    FORMAT varargout = save(tree,filename)  
+     
+    tree      - XMLTree  
+    filename  - XML output filename  
+    varargout - XML string  
+   __________________________________________________________________________  
+     
+    Convert an XML tree into a well-formed XML string and write it into  
+    a file or return it as a string if no filename is provided.  
+   __________________________________________________________________________  
+  
+
+  [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@xmltree/save.m)
+    &#34;&#34;&#34;
+
+    return _Runtime.call(&#34;save&#34;, self._as_matlab_object(), *args, **kwargs)
+
+
+  def set(self, *args, **kwargs):
+    &#34;&#34;&#34;  XMLTREE/SET Method (set object properties)  
+    FORMAT tree = set(tree,uid,parameter,value)  
+      
+    tree      - XMLTree object  
+    uid       - array (or cell) of uid&#39;s  
+    parameter - property name  
+    value     - property value  
+   __________________________________________________________________________  
+     
+    Set object properties given its uid and pairs parameter/value  
+    The tree parameter must be in input AND in output  
+   __________________________________________________________________________  
+  
+
+  [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@xmltree/set.m)
+    &#34;&#34;&#34;
+
+    return _Runtime.call(&#34;set&#34;, self._as_matlab_object(), *args, **kwargs)
+
+
+  def setfilename(self, *args, **kwargs):
+    &#34;&#34;&#34;  XMLTREE/SETFILENAME Set filename method  
+    FORMAT tree = setfilename(tree,filename)  
+      
+    tree     - XMLTree object  
+    filename - XML filename  
+   __________________________________________________________________________  
+     
+    Set the filename linked to the XML tree as filename.  
+   __________________________________________________________________________  
+  
+
+  [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@xmltree/setfilename.m)
+    &#34;&#34;&#34;
+
+    return _Runtime.call(&#34;setfilename&#34;, self._as_matlab_object(), *args, **kwargs)
+
+
+  def view(self, *args, **kwargs):
+    &#34;&#34;&#34;  XMLTREE/VIEW View Method (deprecated)  
+    FORMAT view(tree)  
+      
+    tree   - XMLTree object  
+   __________________________________________________________________________  
+     
+    Display an XML tree in a graphical interface.  
+     
+    This function is DEPRECATED: use EDITOR instead.  
+   __________________________________________________________________________  
+  
+
+  [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@xmltree/view.m)
+    &#34;&#34;&#34;
+
+    return _Runtime.call(&#34;view&#34;, self._as_matlab_object(), *args, **kwargs)</code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li>spm.__wrap__._MatlabClassWrapper</li>
+</ul>
+<h3>Methods</h3>
+<dl>
+<dt id="spm.xmltree.xmltree.add"><code class="name flex">
+<span>def <span class="ident">add</span></span>(<span>self, *args, **kwargs)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>XMLTREE/ADD Method (add children to elements of an XML Tree)<br>
+FORMAT vararout = add(tree,uid,type,parameter)
+</p>
+<p>tree
+- XMLTree object<br>
+uid
+- array of uid's<br>
+type
+- 'element', 'chardata', 'cdata', 'pi' or 'comment'<br>
+parameter - property name (a character array unless type='pi' for<br>
+which parameter=struct('target','','value',''))
+</p>
+<p>new_uid
+- UID's of the newly created nodes
+</p>
+<pre><code>     tree = add(tree,uid,type,parameter);  
+     [tree, new_uid] = add(tree,uid,type,parameter);
+</code></pre>
+<hr>
+<p>Add a node (element, chardata, cdata, pi or comment) in the XML Tree.<br>
+It adds a child to the element whose UID is iud.<br>
+Use attributes({'set','get','add','del','length'},&hellip;) function to <br>
+deal with the attributes of an element node (initialized empty).<br>
+The tree parameter must be in input AND in output.
+</p>
+<hr>
+<p><a href="https://github.com/spm/spm/blob/main/@xmltree/add.m">Link to the Matlab implementation.</a></p></div>
+</dd>
+<dt id="spm.xmltree.xmltree.attributes"><code class="name flex">
+<span>def <span class="ident">attributes</span></span>(<span>self, *args, **kwargs)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>XMLTREE/ATTRIBUTES Method (handle attributes of an element node)<br>
+FORMAT varargout = attributes(varargin)
+</p>
+<p>tree
+- XMLTree object<br>
+method
+- 'set','get','add','del' or 'length'<br>
+uid
+- the UID of an element node<br>
+n
+- indice of the attribute<br>
+key
+- string key="&hellip;"<br>
+val
+- string &hellip;="val"<br>
+attr
+- cell array of struct(key,val) or just struct(key,val)<br>
+l
+- number of attributes of the element node uid
+</p>
+<pre><code>  tree = attributes(tree,'set',uid,n,key,val)  
+  attr = attributes(tree,'get',uid[,n])  
+  tree = attributes(tree,'add',uid,key,val)  
+  tree = attributes(tree,'del',uid[,n])  
+  l    = attributes(tree,'length',uid)
+</code></pre>
+<hr>
+<p>Handle attributes of an element node.<br>
+The tree parameter must be in input AND in output for 'set', 'add' and<br>
+'del' methods.
+</p>
+<hr>
+<p><a href="https://github.com/spm/spm/blob/main/@xmltree/attributes.m">Link to the Matlab implementation.</a></p></div>
+</dd>
+<dt id="spm.xmltree.xmltree.branch"><code class="name flex">
+<span>def <span class="ident">branch</span></span>(<span>self, *args, **kwargs)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>XMLTREE/BRANCH Branch Method<br>
+FORMAT uid = parent(tree,uid)
+</p>
+<p>tree
+- XMLTree object<br>
+uid
+- UID of the root element of the subtree<br>
+subtree - XMLTree object (a subtree from tree)
+</p>
+<hr>
+<p>Return a subtree from a tree.
+</p>
+<hr>
+<p><a href="https://github.com/spm/spm/blob/main/@xmltree/branch.m">Link to the Matlab implementation.</a></p></div>
+</dd>
+<dt id="spm.xmltree.xmltree.char"><code class="name flex">
+<span>def <span class="ident">char</span></span>(<span>self, *args, **kwargs)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>XMLTREE/CHAR Converter function from XMLTree to a description string<br>
+FORMAT s = char(tree)
+</p>
+<p>tree - XMLTree object<br>
+s
+- a description string of an XMLTree
+</p>
+<hr>
+<p>Return a string describing the XMLTree:<br>
+'XMLTree object (x nodes) [filename]'
+</p>
+<hr>
+<p><a href="https://github.com/spm/spm/blob/main/@xmltree/char.m">Link to the Matlab implementation.</a></p></div>
+</dd>
+<dt id="spm.xmltree.xmltree.children"><code class="name flex">
+<span>def <span class="ident">children</span></span>(<span>self, *args, **kwargs)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>XMLTREE/CHILDREN Return children's UIDs of node uid<br>
+FORMAT child = children(tree,uid)
+</p>
+<p>tree
+- a tree<br>
+uid
+- uid of the element<br>
+child
+- array of the UIDs of children of node uid
+</p>
+<hr>
+<p>Return UID's of children of node uid
+</p>
+<hr>
+<p><a href="https://github.com/spm/spm/blob/main/@xmltree/children.m">Link to the Matlab implementation.</a></p></div>
+</dd>
+<dt id="spm.xmltree.xmltree.convert"><code class="name flex">
+<span>def <span class="ident">convert</span></span>(<span>self, *args, **kwargs)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>XMLTREE/CONVERT Convert an XML tree into a structure
+</p>
+<p>tree
+- XMLTree object<br>
+uid
+- uid of the root of the subtree, if provided.<br>
+Default is root<br>
+s
+- converted structure
+</p>
+<hr>
+<p>Convert an XMLTree into a structure, when possible.<br>
+When several identical tags are present, a cell array is used.<br>
+The root tag is not saved in the structure.<br>
+If provided, only the structure corresponding to the subtree defined<br>
+by the uid UID is returned.
+</p>
+<p>Example:<br>
+xml = '<a><b>field1</b><c>field2</c><b>field3</b></a>';<br>
+tree = convert(xmltree(xml));<br>
+&lt;=&gt; tree = struct('b',{{'field1', 'field3'}},'c','field2')
+</p>
+<hr>
+<p><a href="https://github.com/spm/spm/blob/main/@xmltree/convert.m">Link to the Matlab implementation.</a></p></div>
+</dd>
+<dt id="spm.xmltree.xmltree.copy"><code class="name flex">
+<span>def <span class="ident">copy</span></span>(<span>self, *args, **kwargs)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>XMLTREE/COPY Copy Method (copy a subtree in another branch)<br>
+FORMAT tree = copy(tree,subuid,uid)
+</p>
+<p>tree
+- XMLTree object<br>
+subuid
+- UID of the subtree to copy<br>
+uid
+- UID of the element where the subtree must be duplicated
+</p>
+<hr>
+<p>Copy a subtree to another branch.<br>
+The tree parameter must be in input AND in output.
+</p>
+<hr>
+<p><a href="https://github.com/spm/spm/blob/main/@xmltree/copy.m">Link to the Matlab implementation.</a></p></div>
+</dd>
+<dt id="spm.xmltree.xmltree.delete"><code class="name flex">
+<span>def <span class="ident">delete</span></span>(<span>self, *args, **kwargs)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>XMLTREE/DELETE Delete (delete a subtree given its UID)
+</p>
+<p>tree
+- XMLTree object<br>
+uid
+- array of UID's of subtrees to be deleted
+</p>
+<hr>
+<p>Delete a subtree given its UID<br>
+The tree parameter must be in input AND in output
+</p>
+<hr>
+<p><a href="https://github.com/spm/spm/blob/main/@xmltree/delete.m">Link to the Matlab implementation.</a></p></div>
+</dd>
+<dt id="spm.xmltree.xmltree.display"><code class="name flex">
+<span>def <span class="ident">display</span></span>(<span>self, *args, **kwargs)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>XMLTREE/DISPLAY Command window display of an XMLTree<br>
+FORMAT display(tree)
+</p>
+<p>tree - XMLTree object
+</p>
+<hr>
+<p>This method is called when the semicolon is not used to terminate a<br>
+statement which returns an XMLTree.
+</p>
+<hr>
+<p><a href="https://github.com/spm/spm/blob/main/@xmltree/display.m">Link to the Matlab implementation.</a></p></div>
+</dd>
+<dt id="spm.xmltree.xmltree.editor"><code class="name flex">
+<span>def <span class="ident">editor</span></span>(<span>self, *args, **kwargs)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>XMLTREE/EDITOR A Graphical User Interface for an XML tree<br>
+EDITOR(TREE) opens a new figure displaying the xmltree object TREE.<br>
+H = EDITOR(TREE) also returns the figure handle H.
+</p>
+<p>This is a beta version of <xmltree/view> successor
+</p>
+<p>See also XMLTREE
+</p>
+<hr>
+<p><a href="https://github.com/spm/spm/blob/main/@xmltree/editor.m">Link to the Matlab implementation.</a></p></div>
+</dd>
+<dt id="spm.xmltree.xmltree.find"><code class="name flex">
+<span>def <span class="ident">find</span></span>(<span>self, *args, **kwargs)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>XMLTREE/FIND Find elements in a tree with specified characteristics<br>
+FORMAT list = find(varargin)
+</p>
+<p>tree
+- XMLTree object<br>
+xpath - string path with specific grammar (XPath)<br>
+uid
+- lists of root uid's<br>
+parameter/value - pair of pattern<br>
+list
+- list of uid's of matched elements
+</p>
+<pre><code>   list = find(tree,xpath)  
+   list = find(tree,parameter,value[,parameter,value])  
+   list = find(tree,uid,parameter,value[,parameter,value])
+</code></pre>
+<p>Grammar for addressing parts of an XML document: <br>
+XML Path Language XPath (<a href="http://www.w3.org/TR/xpath">http://www.w3.org/TR/xpath</a>)<br>
+Example: /element1//element2[1]/element3[5]/element4
+</p>
+<hr>
+<p>Find elements in an XML tree with specified characteristics or given<br>
+a path (using a subset of XPath language).
+</p>
+<hr>
+<p><a href="https://github.com/spm/spm/blob/main/@xmltree/find.m">Link to the Matlab implementation.</a></p></div>
+</dd>
+<dt id="spm.xmltree.xmltree.flush"><code class="name flex">
+<span>def <span class="ident">flush</span></span>(<span>self, *args, **kwargs)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>XMLTREE/FLUSH Flush (Clear a subtree given its UID)
+</p>
+<p>tree
+- XMLTree object<br>
+uid
+- array of UID's of subtrees to be cleared<br>
+Default is root
+</p>
+<hr>
+<p>Clear a subtree given its UID (remove all the leaves of the tree)<br>
+The tree parameter must be in input AND in output
+</p>
+<hr>
+<p><a href="https://github.com/spm/spm/blob/main/@xmltree/flush.m">Link to the Matlab implementation.</a></p></div>
+</dd>
+<dt id="spm.xmltree.xmltree.get"><code class="name flex">
+<span>def <span class="ident">get</span></span>(<span>self, *args, **kwargs)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>XMLTREE/GET Get Method (get object properties)<br>
+FORMAT value = get(tree,uid,parameter)
+</p>
+<p>tree
+- XMLTree object<br>
+uid
+- array of uid's<br>
+parameter - property name<br>
+value
+- property value
+</p>
+<hr>
+<p>Get object properties of a tree given their UIDs.
+</p>
+<hr>
+<p><a href="https://github.com/spm/spm/blob/main/@xmltree/get.m">Link to the Matlab implementation.</a></p></div>
+</dd>
+<dt id="spm.xmltree.xmltree.getfilename"><code class="name flex">
+<span>def <span class="ident">getfilename</span></span>(<span>self, *args, **kwargs)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>XMLTREE/GETFILENAME Get filename method<br>
+FORMAT filename = getfilename(tree)
+</p>
+<p>tree
+- XMLTree object<br>
+filename - XML filename
+</p>
+<hr>
+<p>Return the filename of the XML tree if loaded from disk and an empty <br>
+string otherwise.
+</p>
+<hr>
+<p><a href="https://github.com/spm/spm/blob/main/@xmltree/getfilename.m">Link to the Matlab implementation.</a></p></div>
+</dd>
+<dt id="spm.xmltree.xmltree.isfield"><code class="name flex">
+<span>def <span class="ident">isfield</span></span>(<span>self, *args, **kwargs)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>XMLTREE/ISFIELD Is parameter a field of tree{uid} ?<br>
+FORMAT F = isfield(tree,uid,parameter)
+</p>
+<p>tree
+- a tree<br>
+uid
+- uid of the element<br>
+parameter - a field of the root tree<br>
+F
+- 1 if present, 0 otherwise
+</p>
+<hr>
+<p>Is parameter a field of tree{uid} ?
+</p>
+<hr>
+<p><a href="https://github.com/spm/spm/blob/main/@xmltree/isfield.m">Link to the Matlab implementation.</a></p></div>
+</dd>
+<dt id="spm.xmltree.xmltree.length"><code class="name flex">
+<span>def <span class="ident">length</span></span>(<span>self, *args, **kwargs)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>XMLTREE/LENGTH Length Method<br>
+FORMAT l = length(tree,r)
+</p>
+<p>tree - XMLTree object<br>
+r
+- 'real' if present, returns the real number of nodes in the<br>
+tree (deleted nodes aren't populated)<br>
+l
+- length of the XML tree (number of nodes)
+</p>
+<hr>
+<p>Return the number of nodes of an XMLTree object.
+</p>
+<hr>
+<p><a href="https://github.com/spm/spm/blob/main/@xmltree/length.m">Link to the Matlab implementation.</a></p></div>
+</dd>
+<dt id="spm.xmltree.xmltree.move"><code class="name flex">
+<span>def <span class="ident">move</span></span>(<span>self, *args, **kwargs)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>XMLTREE/MOVE Move (move a subtree inside a tree from A to B)
+</p>
+<p>tree
+- XMLTree object<br>
+uida
+- initial position of the subtree<br>
+uidb
+- parent of the final position of the subtree
+</p>
+<hr>
+<p>Move a subtree inside a tree from A to B.<br>
+The tree parameter must be in input AND in output.
+</p>
+<hr>
+<p><a href="https://github.com/spm/spm/blob/main/@xmltree/move.m">Link to the Matlab implementation.</a></p></div>
+</dd>
+<dt id="spm.xmltree.xmltree.parent"><code class="name flex">
+<span>def <span class="ident">parent</span></span>(<span>self, *args, **kwargs)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>XMLTREE/PARENT Parent Method<br>
+FORMAT uid = parent(tree,uid)
+</p>
+<p>tree
+- XMLTree object<br>
+uid
+- UID of the lonely child<br>
+p
+- UID of the parent ([] if root is the child)
+</p>
+<hr>
+<p>Return the uid of the parent of a node.
+</p>
+<hr>
+<p><a href="https://github.com/spm/spm/blob/main/@xmltree/parent.m">Link to the Matlab implementation.</a></p></div>
+</dd>
+<dt id="spm.xmltree.xmltree.root"><code class="name flex">
+<span>def <span class="ident">root</span></span>(<span>self, *args, **kwargs)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>XMLTREE/ROOT Root Method<br>
+FORMAT uid = root(tree)
+</p>
+<p>tree
+- XMLTree object<br>
+uid
+- UID of the root element of tree
+</p>
+<hr>
+<p>Return the uid of the root element of the tree.
+</p>
+<hr>
+<p><a href="https://github.com/spm/spm/blob/main/@xmltree/root.m">Link to the Matlab implementation.</a></p></div>
+</dd>
+<dt id="spm.xmltree.xmltree.save"><code class="name flex">
+<span>def <span class="ident">save</span></span>(<span>self, *args, **kwargs)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>XMLTREE/SAVE Save an XML tree in an XML file<br>
+FORMAT varargout = save(tree,filename)
+</p>
+<p>tree
+- XMLTree<br>
+filename
+- XML output filename<br>
+varargout - XML string
+</p>
+<hr>
+<p>Convert an XML tree into a well-formed XML string and write it into<br>
+a file or return it as a string if no filename is provided.
+</p>
+<hr>
+<p><a href="https://github.com/spm/spm/blob/main/@xmltree/save.m">Link to the Matlab implementation.</a></p></div>
+</dd>
+<dt id="spm.xmltree.xmltree.set"><code class="name flex">
+<span>def <span class="ident">set</span></span>(<span>self, *args, **kwargs)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>XMLTREE/SET Method (set object properties)<br>
+FORMAT tree = set(tree,uid,parameter,value)
+</p>
+<p>tree
+- XMLTree object<br>
+uid
+- array (or cell) of uid's<br>
+parameter - property name<br>
+value
+- property value
+</p>
+<hr>
+<p>Set object properties given its uid and pairs parameter/value<br>
+The tree parameter must be in input AND in output
+</p>
+<hr>
+<p><a href="https://github.com/spm/spm/blob/main/@xmltree/set.m">Link to the Matlab implementation.</a></p></div>
+</dd>
+<dt id="spm.xmltree.xmltree.setfilename"><code class="name flex">
+<span>def <span class="ident">setfilename</span></span>(<span>self, *args, **kwargs)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>XMLTREE/SETFILENAME Set filename method<br>
+FORMAT tree = setfilename(tree,filename)
+</p>
+<p>tree
+- XMLTree object<br>
+filename - XML filename
+</p>
+<hr>
+<p>Set the filename linked to the XML tree as filename.
+</p>
+<hr>
+<p><a href="https://github.com/spm/spm/blob/main/@xmltree/setfilename.m">Link to the Matlab implementation.</a></p></div>
+</dd>
+<dt id="spm.xmltree.xmltree.view"><code class="name flex">
+<span>def <span class="ident">view</span></span>(<span>self, *args, **kwargs)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>XMLTREE/VIEW View Method (deprecated)<br>
+FORMAT view(tree)
+</p>
+<p>tree
+- XMLTree object
+</p>
+<hr>
+<p>Display an XML tree in a graphical interface.
+</p>
+<p>This function is DEPRECATED: use EDITOR instead.
+</p>
+<hr>
+<p><a href="https://github.com/spm/spm/blob/main/@xmltree/view.m">Link to the Matlab implementation.</a></p></div>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+</article>
+<nav id="sidebar">
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3>Super-module</h3>
+<ul>
+<li><code><a title="spm" href="index.html">spm</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-classes">Classes</a></h3>
+<ul>
+<li>
+<h4><code><a title="spm.xmltree.xmltree" href="#spm.xmltree.xmltree">xmltree</a></code></h4>
+<ul class="two-column">
+<li><code><a title="spm.xmltree.xmltree.add" href="#spm.xmltree.xmltree.add">add</a></code></li>
+<li><code><a title="spm.xmltree.xmltree.attributes" href="#spm.xmltree.xmltree.attributes">attributes</a></code></li>
+<li><code><a title="spm.xmltree.xmltree.branch" href="#spm.xmltree.xmltree.branch">branch</a></code></li>
+<li><code><a title="spm.xmltree.xmltree.char" href="#spm.xmltree.xmltree.char">char</a></code></li>
+<li><code><a title="spm.xmltree.xmltree.children" href="#spm.xmltree.xmltree.children">children</a></code></li>
+<li><code><a title="spm.xmltree.xmltree.convert" href="#spm.xmltree.xmltree.convert">convert</a></code></li>
+<li><code><a title="spm.xmltree.xmltree.copy" href="#spm.xmltree.xmltree.copy">copy</a></code></li>
+<li><code><a title="spm.xmltree.xmltree.delete" href="#spm.xmltree.xmltree.delete">delete</a></code></li>
+<li><code><a title="spm.xmltree.xmltree.display" href="#spm.xmltree.xmltree.display">display</a></code></li>
+<li><code><a title="spm.xmltree.xmltree.editor" href="#spm.xmltree.xmltree.editor">editor</a></code></li>
+<li><code><a title="spm.xmltree.xmltree.find" href="#spm.xmltree.xmltree.find">find</a></code></li>
+<li><code><a title="spm.xmltree.xmltree.flush" href="#spm.xmltree.xmltree.flush">flush</a></code></li>
+<li><code><a title="spm.xmltree.xmltree.get" href="#spm.xmltree.xmltree.get">get</a></code></li>
+<li><code><a title="spm.xmltree.xmltree.getfilename" href="#spm.xmltree.xmltree.getfilename">getfilename</a></code></li>
+<li><code><a title="spm.xmltree.xmltree.isfield" href="#spm.xmltree.xmltree.isfield">isfield</a></code></li>
+<li><code><a title="spm.xmltree.xmltree.length" href="#spm.xmltree.xmltree.length">length</a></code></li>
+<li><code><a title="spm.xmltree.xmltree.move" href="#spm.xmltree.xmltree.move">move</a></code></li>
+<li><code><a title="spm.xmltree.xmltree.parent" href="#spm.xmltree.xmltree.parent">parent</a></code></li>
+<li><code><a title="spm.xmltree.xmltree.root" href="#spm.xmltree.xmltree.root">root</a></code></li>
+<li><code><a title="spm.xmltree.xmltree.save" href="#spm.xmltree.xmltree.save">save</a></code></li>
+<li><code><a title="spm.xmltree.xmltree.set" href="#spm.xmltree.xmltree.set">set</a></code></li>
+<li><code><a title="spm.xmltree.xmltree.setfilename" href="#spm.xmltree.xmltree.setfilename">setfilename</a></code></li>
+<li><code><a title="spm.xmltree.xmltree.view" href="#spm.xmltree.xmltree.view">view</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc" title="pdoc: Python API documentation generator"><cite>pdoc</cite> 0.11.1</a>.</p>
+</footer>
+</body>
+</html>

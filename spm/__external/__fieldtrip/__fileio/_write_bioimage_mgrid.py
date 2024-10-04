@@ -1,0 +1,25 @@
+from spm.__wrap__ import _Runtime
+
+
+def _write_bioimage_mgrid(*args, **kwargs):
+  """  --------------------------------------------------------  
+    WRITE_BIOIMAGE_MGRID writes BioImage Suite .mgrid files from a FieldTrip  
+    elec datatype structure  
+     
+    Use as:  
+      write_bioimage_mgrid(filename, elec)  
+      where filename has an .mgrid file extension and elec has both a label  
+      and an elecpos field  
+     
+    To view the mgrid file in BioImage Suite, ensure that the orientation of  
+    the scan (e.g., RAS) corresponds with the orientation of the electrode  
+    positions (in head coordinates) of elec  
+     
+    Copyright (C) 2017, Arjen Stolk & Sandon Griffin  
+    --------------------------------------------------------  
+  
+
+  [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/write_bioimage_mgrid.m)
+  """
+
+  return _Runtime.call("write_bioimage_mgrid", *args, **kwargs, nargout=0)
