@@ -10,3 +10,123 @@ Copyright (C) 1991,1994-2024 Wellcome Centre for Human Neuroimaging
 ```
 
 # SPM _in Python_
+
+## Installation instructions: 
+Assuming an existing setup with Python and Pip, 
+1. Install [Matlab Runtime](https://uk.mathworks.com/products/compiler/matlab-runtime.html) 
+2. Install SPM:
+   ```python
+   pip install git+https://github.com/spm/spm-python.git
+   ```
+3. That's all!
+
+## Minimal example
+Here is a minimal set of examples showcasing changes to do to use existing Matlab code in Python (taken from the [OPM tutorial](https://www.fil.ion.ucl.ac.uk/spm/docs/tutorials/opm/evoked/)).
+
+### 1. Importing and setting up SPM
+In Matlab:
+```Matlab
+ spm('defaults', 'eeg');
+```
+In Python: 
+```Python
+from spm import *
+spm('defaults', 'eeg');
+```
+
+### 2. Constructing objects
+In Matlab: 
+```Matlab
+S = [];
+S.data = 'OPM_meg_001.cMEG';
+S.positions = 'OPM_HelmConfig.tsv';
+D = spm_opm_create(S);
+```
+In Python, create a `dict` instead of a `struct`:
+```Python
+S = dict(
+    data='OPM_meg_001.cMEG', 
+    positions='OPM_HelmConfig.tsv'
+)
+D = spm_opm_create(S)
+```
+Here, `D` will be a `meeg` object which contains a virtual representation of the Matlab object. Class methods should work as expected, e.g.:
+```Python
+D.fullfile()
+>>> './OPM_meg_001.mat'
+```
+Note that the alternative call that exist in Matlab (i.e., `fullfile(D)`) will not work.  
+
+### 3. Creating and handling figures
+In Matlab: 
+```Matlab
+S = [];
+S.triallength = 3000; 
+S.plot = 1;
+S.D = D;
+S.channels = 'MEG';
+spm_opm_psd(S);
+ylim([1,1e5])
+```
+In Python:
+```Python
+S = dict(
+    triallength = 3000, 
+    plot = 1,
+    D = D,
+    channels = 'MEG',
+)
+spm_opm_psd(S)
+```
+This opens a Matlab figure, but we do not have the possibility of manipulating it yet (e.g., calling `ylim`). As of now, we can view the figures, have GUI interactions, but cannot manipulate figures with Python code.
+
+### 4. Variable number of output arguments
+In Matlab:
+```Matlab
+S = [];
+S.triallength = 3000; 
+S.plot = 1;
+S.D = mD;
+[~,freq] = spm_opm_psd(S);
+```
+In Python, the number of output arguments must be specified by the `nargout` keyword argument:
+```Python
+S = dict(
+    triallength = 3000, 
+    plot=1,
+    D=mD,
+)
+[_,freq] = spm_opm_psd(S, nargout=2);
+```
+
+### 5. Other examples 
+In Matlab:
+```Matlab 
+S=[];
+S.D=D;
+S.freq=[10];
+S.band = 'high';
+fD = spm_eeg_ffilter(S);
+
+S = [];
+S.D = fD;
+S.freq = [70];
+S.band = 'low';
+fD = spm_eeg_ffilter(S);
+```
+In Python: 
+```Python
+S = dict(
+    D = D,
+    freq = 10,
+    band = 'high'
+)
+fD = spm_eeg_ffilter(S)
+
+S = dict(
+    D = fD,
+    freq = 70,
+    band = 'low'
+)
+fD = spm_eeg_ffilter(S)
+```
