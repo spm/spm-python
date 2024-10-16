@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def pm_merge_regions_m(*args, **kwargs):
@@ -96,4 +96,4 @@ def pm_merge_regions_m(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/toolbox/FieldMap/pm_merge_regions_m.m)
   """
 
-  return _Runtime.call("pm_merge_regions_m", *args, **kwargs)
+  return Runtime.call("pm_merge_regions_m", *args, **kwargs)

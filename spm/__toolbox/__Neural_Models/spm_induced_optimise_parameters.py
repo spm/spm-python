@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def spm_induced_optimise_parameters(*args, **kwargs):
@@ -15,4 +15,4 @@ def spm_induced_optimise_parameters(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/toolbox/Neural_Models/spm_induced_optimise_parameters.m)
   """
 
-  return _Runtime.call("spm_induced_optimise_parameters", *args, **kwargs)
+  return Runtime.call("spm_induced_optimise_parameters", *args, **kwargs)

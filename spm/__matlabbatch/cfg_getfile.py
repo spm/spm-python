@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def cfg_getfile(*args, **kwargs):
@@ -94,4 +94,4 @@ def cfg_getfile(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/matlabbatch/cfg_getfile.m)
   """
 
-  return _Runtime.call("cfg_getfile", *args, **kwargs)
+  return Runtime.call("cfg_getfile", *args, **kwargs)

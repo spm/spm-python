@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _magnetic_dipole(*args, **kwargs):
@@ -17,4 +17,4 @@ def _magnetic_dipole(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/forward/private/magnetic_dipole.m)
   """
 
-  return _Runtime.call("magnetic_dipole", *args, **kwargs)
+  return Runtime.call("magnetic_dipole", *args, **kwargs)

@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def mci_compare_jacobians(*args, **kwargs):
@@ -12,4 +12,4 @@ def mci_compare_jacobians(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/toolbox/mci/demo-gradients/mci_compare_jacobians.m)
   """
 
-  return _Runtime.call("mci_compare_jacobians", *args, **kwargs)
+  return Runtime.call("mci_compare_jacobians", *args, **kwargs)

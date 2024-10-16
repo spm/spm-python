@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def ft_artifact_jump(*args, **kwargs):
@@ -53,4 +53,4 @@ def ft_artifact_jump(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/ft_artifact_jump.m)
   """
 
-  return _Runtime.call("ft_artifact_jump", *args, **kwargs)
+  return Runtime.call("ft_artifact_jump", *args, **kwargs)

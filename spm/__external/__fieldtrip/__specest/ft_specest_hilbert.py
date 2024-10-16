@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def ft_specest_hilbert(*args, **kwargs):
@@ -34,4 +34,4 @@ def ft_specest_hilbert(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/specest/ft_specest_hilbert.m)
   """
 
-  return _Runtime.call("ft_specest_hilbert", *args, **kwargs)
+  return Runtime.call("ft_specest_hilbert", *args, **kwargs)

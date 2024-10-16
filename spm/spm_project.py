@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def spm_project(*args, **kwargs):
@@ -26,4 +26,4 @@ def spm_project(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/spm_project.m)
   """
 
-  return _Runtime.call("spm_project", *args, **kwargs)
+  return Runtime.call("spm_project", *args, **kwargs)

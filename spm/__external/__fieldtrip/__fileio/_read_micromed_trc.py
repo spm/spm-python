@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _read_micromed_trc(*args, **kwargs):
@@ -12,4 +12,4 @@ def _read_micromed_trc(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/read_micromed_trc.m)
   """
 
-  return _Runtime.call("read_micromed_trc", *args, **kwargs)
+  return Runtime.call("read_micromed_trc", *args, **kwargs)

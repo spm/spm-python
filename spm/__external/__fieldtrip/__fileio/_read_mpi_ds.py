@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _read_mpi_ds(*args, **kwargs):
@@ -18,4 +18,4 @@ def _read_mpi_ds(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/read_mpi_ds.m)
   """
 
-  return _Runtime.call("read_mpi_ds", *args, **kwargs)
+  return Runtime.call("read_mpi_ds", *args, **kwargs)

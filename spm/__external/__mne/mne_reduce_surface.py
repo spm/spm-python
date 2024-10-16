@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def mne_reduce_surface(*args, **kwargs):
@@ -16,4 +16,4 @@ def mne_reduce_surface(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/mne/mne_reduce_surface.m)
   """
 
-  return _Runtime.call("mne_reduce_surface", *args, **kwargs)
+  return Runtime.call("mne_reduce_surface", *args, **kwargs)

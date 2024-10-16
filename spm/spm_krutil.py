@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def spm_krutil(*args, **kwargs):
@@ -52,4 +52,4 @@ def spm_krutil(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/spm_krutil.m)
   """
 
-  return _Runtime.call("spm_krutil", *args, **kwargs)
+  return Runtime.call("spm_krutil", *args, **kwargs)

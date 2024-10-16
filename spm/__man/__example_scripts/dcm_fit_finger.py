@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def dcm_fit_finger(*args, **kwargs):
@@ -17,4 +17,4 @@ def dcm_fit_finger(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/man/example_scripts/dcm_fit_finger.m)
   """
 
-  return _Runtime.call("dcm_fit_finger", *args, **kwargs)
+  return Runtime.call("dcm_fit_finger", *args, **kwargs)

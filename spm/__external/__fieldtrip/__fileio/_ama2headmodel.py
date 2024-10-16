@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _ama2headmodel(*args, **kwargs):
@@ -13,4 +13,4 @@ def _ama2headmodel(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/ama2headmodel.m)
   """
 
-  return _Runtime.call("ama2headmodel", *args, **kwargs)
+  return Runtime.call("ama2headmodel", *args, **kwargs)

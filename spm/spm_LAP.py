@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def spm_LAP(*args, **kwargs):
@@ -94,4 +94,4 @@ def spm_LAP(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/spm_LAP.m)
   """
 
-  return _Runtime.call("spm_LAP", *args, **kwargs)
+  return Runtime.call("spm_LAP", *args, **kwargs)

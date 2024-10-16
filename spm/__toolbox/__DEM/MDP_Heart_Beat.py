@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def MDP_Heart_Beat(*args, **kwargs):
@@ -13,4 +13,4 @@ def MDP_Heart_Beat(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/toolbox/DEM/MDP_Heart_Beat.m)
   """
 
-  return _Runtime.call("MDP_Heart_Beat", *args, **kwargs)
+  return Runtime.call("MDP_Heart_Beat", *args, **kwargs)

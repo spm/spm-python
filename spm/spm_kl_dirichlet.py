@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def spm_kl_dirichlet(*args, **kwargs):
@@ -18,4 +18,4 @@ def spm_kl_dirichlet(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/spm_kl_dirichlet.m)
   """
 
-  return _Runtime.call("spm_kl_dirichlet", *args, **kwargs)
+  return Runtime.call("spm_kl_dirichlet", *args, **kwargs)

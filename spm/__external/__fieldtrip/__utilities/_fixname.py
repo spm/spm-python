@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _fixname(*args, **kwargs):
@@ -20,4 +20,4 @@ def _fixname(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/utilities/private/fixname.m)
   """
 
-  return _Runtime.call("fixname", *args, **kwargs)
+  return Runtime.call("fixname", *args, **kwargs)

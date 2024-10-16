@@ -1,7 +1,7 @@
-from spm.__wrap__ import _Runtime, _MatlabClassWrapper
+from spm.__wrapper__ import Runtime, MatlabClassWrapper
 
 
-class meeg(_MatlabClassWrapper):
+class meeg(MatlabClassWrapper):
   def __init__(self, *args, _objdict=None, **kwargs):
     """  Function for creating meeg objects.  
     FORMAT   
@@ -129,7 +129,7 @@ class meeg(_MatlabClassWrapper):
     """
 
     if _objdict is None:
-      _objdict = _Runtime.call("meeg", *args, **kwargs)
+      _objdict = Runtime.call("meeg", *args, **kwargs)
     super().__init__(_objdict)
 
   def badchannels(self, *args, **kwargs):
@@ -141,8 +141,7 @@ class meeg(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@meeg/badchannels.m)
     """
 
-    return _Runtime.call("badchannels", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("badchannels", self._as_matlab_object(), *args, **kwargs)
 
   def badsamples(self, *args, **kwargs):
     """  Returns an array of 0/1 marking bad data based on artefact events and bad flags  
@@ -153,8 +152,7 @@ class meeg(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@meeg/badsamples.m)
     """
 
-    return _Runtime.call("badsamples", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("badsamples", self._as_matlab_object(), *args, **kwargs)
 
   def badtrials(self, *args, **kwargs):
     """  Method for getting/setting bad trials  
@@ -165,8 +163,7 @@ class meeg(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@meeg/badtrials.m)
     """
 
-    return _Runtime.call("badtrials", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("badtrials", self._as_matlab_object(), *args, **kwargs)
 
   def blank(self, *args, **kwargs):
     """  Creates a blank datafile matching in the header in dimensions   
@@ -181,8 +178,7 @@ class meeg(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@meeg/blank.m)
     """
 
-    return _Runtime.call("blank", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("blank", self._as_matlab_object(), *args, **kwargs)
 
   def chanlabels(self, *args, **kwargs):
     """  Method for getting/setting the channel labels  
@@ -193,8 +189,7 @@ class meeg(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@meeg/chanlabels.m)
     """
 
-    return _Runtime.call("chanlabels", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("chanlabels", self._as_matlab_object(), *args, **kwargs)
 
   def chantype(self, *args, **kwargs):
     """  Method for setting/getting channel types  
@@ -210,8 +205,7 @@ class meeg(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@meeg/chantype.m)
     """
 
-    return _Runtime.call("chantype", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("chantype", self._as_matlab_object(), *args, **kwargs)
 
   def check(self, *args, **kwargs):
     """  Method that performs integrity checks of the meeg object  
@@ -230,8 +224,7 @@ class meeg(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@meeg/check.m)
     """
 
-    return _Runtime.call("check", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("check", self._as_matlab_object(), *args, **kwargs)
 
   def clone(self, *args, **kwargs):
     """  Creates a copy of the object with a new, empty data file,  
@@ -251,8 +244,7 @@ class meeg(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@meeg/clone.m)
     """
 
-    return _Runtime.call("clone", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("clone", self._as_matlab_object(), *args, **kwargs)
 
   def conditions(self, *args, **kwargs):
     """  Method for getting condition labels, over trials  
@@ -263,8 +255,7 @@ class meeg(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@meeg/conditions.m)
     """
 
-    return _Runtime.call("conditions", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("conditions", self._as_matlab_object(), *args, **kwargs)
 
   def condlist(self, *args, **kwargs):
     """  Method for getting a list of unique condition labels sorted according to  
@@ -276,8 +267,7 @@ class meeg(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@meeg/condlist.m)
     """
 
-    return _Runtime.call("condlist", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("condlist", self._as_matlab_object(), *args, **kwargs)
 
   def coor2D(self, *args, **kwargs):
     """  x and y coordinates of channels in 2D plane  
@@ -288,8 +278,7 @@ class meeg(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@meeg/coor2D.m)
     """
 
-    return _Runtime.call("coor2D", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("coor2D", self._as_matlab_object(), *args, **kwargs)
 
   def copy(self, *args, **kwargs):
     """  Method for copying a dataset  
@@ -304,8 +293,7 @@ class meeg(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@meeg/copy.m)
     """
 
-    return _Runtime.call("copy", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("copy", self._as_matlab_object(), *args, **kwargs)
 
   def delete(self, *args, **kwargs):
     """  Delete files of an M/EEG dataset from disk and return unlinked object  
@@ -316,8 +304,7 @@ class meeg(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@meeg/delete.m)
     """
 
-    return _Runtime.call("delete", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("delete", self._as_matlab_object(), *args, **kwargs)
 
   def display(self, *args, **kwargs):
     """  Method for displaying information about an meeg object  
@@ -328,8 +315,9 @@ class meeg(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@meeg/display.m)
     """
 
-    return _Runtime.call("display", self._as_matlab_object(), *args, **kwargs)
+    return Runtime.call("display", self._as_matlab_object(), *args, **kwargs)
 
+  __repr__ = display # Use display to represent objects
 
   def end(self, *args, **kwargs):
     """  Overloaded end function for meeg objects.  
@@ -339,8 +327,7 @@ class meeg(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@meeg/end.m)
     """
 
-    return _Runtime.call("end", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("end", self._as_matlab_object(), *args, **kwargs)
 
   def events(self, *args, **kwargs):
     """  Method for getting/setting events per trial  
@@ -352,8 +339,7 @@ class meeg(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@meeg/events.m)
     """
 
-    return _Runtime.call("events", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("events", self._as_matlab_object(), *args, **kwargs)
 
   def fiducials(self, *args, **kwargs):
     """  Method for getting/setting the fiducials field  
@@ -364,8 +350,7 @@ class meeg(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@meeg/fiducials.m)
     """
 
-    return _Runtime.call("fiducials", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("fiducials", self._as_matlab_object(), *args, **kwargs)
 
   def fieldnames(self, *args, **kwargs):
     """  Returns names of the fields in .other  
@@ -378,8 +363,7 @@ class meeg(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@meeg/fieldnames.m)
     """
 
-    return _Runtime.call("fieldnames", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("fieldnames", self._as_matlab_object(), *args, **kwargs)
 
   def fname(self, *args, **kwargs):
     """  Method for getting/setting file name  
@@ -390,8 +374,7 @@ class meeg(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@meeg/fname.m)
     """
 
-    return _Runtime.call("fname", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("fname", self._as_matlab_object(), *args, **kwargs)
 
   def fnamedat(self, *args, **kwargs):
     """  Method for getting the name of the data file  
@@ -402,8 +385,7 @@ class meeg(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@meeg/fnamedat.m)
     """
 
-    return _Runtime.call("fnamedat", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("fnamedat", self._as_matlab_object(), *args, **kwargs)
 
   def frequencies(self, *args, **kwargs):
     """  Method for getting/setting frequencies of TF data  
@@ -414,8 +396,7 @@ class meeg(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@meeg/frequencies.m)
     """
 
-    return _Runtime.call("frequencies", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("frequencies", self._as_matlab_object(), *args, **kwargs)
 
   def fsample(self, *args, **kwargs):
     """  Method for getting and setting the sampling rate  
@@ -426,8 +407,7 @@ class meeg(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@meeg/fsample.m)
     """
 
-    return _Runtime.call("fsample", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("fsample", self._as_matlab_object(), *args, **kwargs)
 
   def ftraw(self, *args, **kwargs):
     """  Method for converting meeg object to Fieldtrip raw struct  
@@ -438,8 +418,7 @@ class meeg(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@meeg/ftraw.m)
     """
 
-    return _Runtime.call("ftraw", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("ftraw", self._as_matlab_object(), *args, **kwargs)
 
   def fttimelock(self, *args, **kwargs):
     """  Method for converting meeg object to Fieldtrip timelock/freq struct  
@@ -454,8 +433,7 @@ class meeg(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@meeg/fttimelock.m)
     """
 
-    return _Runtime.call("fttimelock", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("fttimelock", self._as_matlab_object(), *args, **kwargs)
 
   def fullfile(self, *args, **kwargs):
     """  Returns full path to the meeg mat file  
@@ -466,8 +444,7 @@ class meeg(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@meeg/fullfile.m)
     """
 
-    return _Runtime.call("fullfile", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("fullfile", self._as_matlab_object(), *args, **kwargs)
 
   def getfield(self, *args, **kwargs):
     """  Returns  fields in .other  
@@ -480,8 +457,7 @@ class meeg(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@meeg/getfield.m)
     """
 
-    return _Runtime.call("getfield", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("getfield", self._as_matlab_object(), *args, **kwargs)
 
   def history(self, *args, **kwargs):
     """  Method for getting or adding to the history of function calls of some  
@@ -493,8 +469,7 @@ class meeg(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@meeg/history.m)
     """
 
-    return _Runtime.call("history", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("history", self._as_matlab_object(), *args, **kwargs)
 
   def indchannel(self, *args, **kwargs):
     """  Method for getting channel indices based on channel labels  
@@ -509,8 +484,7 @@ class meeg(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@meeg/indchannel.m)
     """
 
-    return _Runtime.call("indchannel", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("indchannel", self._as_matlab_object(), *args, **kwargs)
 
   def indchantype(self, *args, **kwargs):
     """  Method for getting channel indices based on labels and/or types  
@@ -528,8 +502,7 @@ class meeg(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@meeg/indchantype.m)
     """
 
-    return _Runtime.call("indchantype", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("indchantype", self._as_matlab_object(), *args, **kwargs)
 
   def indfrequency(self, *args, **kwargs):
     """  Method for getting the index closest to given frequency  
@@ -544,8 +517,7 @@ class meeg(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@meeg/indfrequency.m)
     """
 
-    return _Runtime.call("indfrequency", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("indfrequency", self._as_matlab_object(), *args, **kwargs)
 
   def indsample(self, *args, **kwargs):
     """  Method for getting the sample closest to some time point  
@@ -560,8 +532,7 @@ class meeg(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@meeg/indsample.m)
     """
 
-    return _Runtime.call("indsample", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("indsample", self._as_matlab_object(), *args, **kwargs)
 
   def indtrial(self, *args, **kwargs):
     """  Method for getting trial indices based on condition labels  
@@ -580,8 +551,7 @@ class meeg(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@meeg/indtrial.m)
     """
 
-    return _Runtime.call("indtrial", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("indtrial", self._as_matlab_object(), *args, **kwargs)
 
   def isempty(self, *args, **kwargs):
     """  True if the object is empty   
@@ -592,8 +562,7 @@ class meeg(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@meeg/isempty.m)
     """
 
-    return _Runtime.call("isempty", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("isempty", self._as_matlab_object(), *args, **kwargs)
 
   def isequal(self, *args, **kwargs):
     """  Method to check if 2 MEEG objects are the same  
@@ -604,8 +573,7 @@ class meeg(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@meeg/isequal.m)
     """
 
-    return _Runtime.call("isequal", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("isequal", self._as_matlab_object(), *args, **kwargs)
 
   def isfield(self, *args, **kwargs):
     """  Returns true if the string fieldname is the name of a field in the   
@@ -619,8 +587,7 @@ class meeg(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@meeg/isfield.m)
     """
 
-    return _Runtime.call("isfield", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("isfield", self._as_matlab_object(), *args, **kwargs)
 
   def islinked(self, *args, **kwargs):
     """  True if the object is linked to data file  
@@ -631,8 +598,7 @@ class meeg(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@meeg/islinked.m)
     """
 
-    return _Runtime.call("islinked", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("islinked", self._as_matlab_object(), *args, **kwargs)
 
   def link(self, *args, **kwargs):
     """  Links the object to data file (only if exists)  
@@ -648,8 +614,7 @@ class meeg(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@meeg/link.m)
     """
 
-    return _Runtime.call("link", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("link", self._as_matlab_object(), *args, **kwargs)
 
   def modality(self, *args, **kwargs):
     """  Returns data modality   
@@ -667,8 +632,7 @@ class meeg(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@meeg/modality.m)
     """
 
-    return _Runtime.call("modality", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("modality", self._as_matlab_object(), *args, **kwargs)
 
   def montage(self, *args, **kwargs):
     """  Method for specifying an online montage, or setting one to use  
@@ -697,8 +661,7 @@ class meeg(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@meeg/montage.m)
     """
 
-    return _Runtime.call("montage", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("montage", self._as_matlab_object(), *args, **kwargs)
 
   def move(self, *args, **kwargs):
     """  Method for moving or changing name of data file  
@@ -714,8 +677,7 @@ class meeg(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@meeg/move.m)
     """
 
-    return _Runtime.call("move", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("move", self._as_matlab_object(), *args, **kwargs)
 
   def nchannels(self, *args, **kwargs):
     """  returns number of channels  
@@ -726,8 +688,7 @@ class meeg(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@meeg/nchannels.m)
     """
 
-    return _Runtime.call("nchannels", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("nchannels", self._as_matlab_object(), *args, **kwargs)
 
   def nconditions(self, *args, **kwargs):
     """  Method for getting the number of unique conditions in the file  
@@ -738,8 +699,7 @@ class meeg(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@meeg/nconditions.m)
     """
 
-    return _Runtime.call("nconditions", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("nconditions", self._as_matlab_object(), *args, **kwargs)
 
   def nfrequencies(self, *args, **kwargs):
     """  Method for getting the number of frequencies for TF data  
@@ -750,8 +710,7 @@ class meeg(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@meeg/nfrequencies.m)
     """
 
-    return _Runtime.call("nfrequencies", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("nfrequencies", self._as_matlab_object(), *args, **kwargs)
 
   def nsamples(self, *args, **kwargs):
     """  Method for getting the number of samples per trial  
@@ -762,8 +721,7 @@ class meeg(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@meeg/nsamples.m)
     """
 
-    return _Runtime.call("nsamples", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("nsamples", self._as_matlab_object(), *args, **kwargs)
 
   def ntrials(self, *args, **kwargs):
     """  Method for getting the number of trials in the file  
@@ -774,8 +732,7 @@ class meeg(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@meeg/ntrials.m)
     """
 
-    return _Runtime.call("ntrials", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("ntrials", self._as_matlab_object(), *args, **kwargs)
 
   def path(self, *args, **kwargs):
     """  Method for getting/setting path  
@@ -786,8 +743,7 @@ class meeg(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@meeg/path.m)
     """
 
-    return _Runtime.call("path", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("path", self._as_matlab_object(), *args, **kwargs)
 
   def reload(self, *args, **kwargs):
     """  Reload the file from disk  
@@ -800,8 +756,7 @@ class meeg(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@meeg/reload.m)
     """
 
-    return _Runtime.call("reload", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("reload", self._as_matlab_object(), *args, **kwargs)
 
   def repl(self, *args, **kwargs):
     """  Method for getting replication counts, over trials  
@@ -812,8 +767,7 @@ class meeg(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@meeg/repl.m)
     """
 
-    return _Runtime.call("repl", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("repl", self._as_matlab_object(), *args, **kwargs)
 
   def rmdata(self, *args, **kwargs):
     """  Deletes the data file and unlinks the header  
@@ -824,8 +778,7 @@ class meeg(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@meeg/rmdata.m)
     """
 
-    return _Runtime.call("rmdata", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("rmdata", self._as_matlab_object(), *args, **kwargs)
 
   def rmfield(self, *args, **kwargs):
     """  Method for removing an object field  
@@ -836,8 +789,7 @@ class meeg(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@meeg/rmfield.m)
     """
 
-    return _Runtime.call("rmfield", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("rmfield", self._as_matlab_object(), *args, **kwargs)
 
   def save(self, *args, **kwargs):
     """  Save an meeg object into a file  
@@ -850,8 +802,7 @@ class meeg(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@meeg/save.m)
     """
 
-    return _Runtime.call("save", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("save", self._as_matlab_object(), *args, **kwargs)
 
   def sconfounds(self, *args, **kwargs):
     """  Method for getting/setting spatial confounds  
@@ -862,8 +813,7 @@ class meeg(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@meeg/sconfounds.m)
     """
 
-    return _Runtime.call("sconfounds", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("sconfounds", self._as_matlab_object(), *args, **kwargs)
 
   def selectchannels(self, *args, **kwargs):
     """  Method for getting channel indices based on labels and/or types  
@@ -879,8 +829,7 @@ class meeg(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@meeg/selectchannels.m)
     """
 
-    return _Runtime.call("selectchannels", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("selectchannels", self._as_matlab_object(), *args, **kwargs)
 
   def selectdata(self, *args, **kwargs):
     """  Selects data using channel labels, time and condition labels as indices  
@@ -898,8 +847,7 @@ class meeg(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@meeg/selectdata.m)
     """
 
-    return _Runtime.call("selectdata", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("selectdata", self._as_matlab_object(), *args, **kwargs)
 
   def sensors(self, *args, **kwargs):
     """  Sets and gets sensor fields for EEG and MEG  
@@ -912,8 +860,7 @@ class meeg(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@meeg/sensors.m)
     """
 
-    return _Runtime.call("sensors", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("sensors", self._as_matlab_object(), *args, **kwargs)
 
   def size(self, *args, **kwargs):
     """  returns the dimensions of the data matrix  
@@ -924,8 +871,7 @@ class meeg(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@meeg/size.m)
     """
 
-    return _Runtime.call("size", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("size", self._as_matlab_object(), *args, **kwargs)
 
   def subsasgn(self, *args, **kwargs):
     """  Overloaded subsasgn function for meeg objects.  
@@ -935,8 +881,7 @@ class meeg(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@meeg/subsasgn.m)
     """
 
-    return _Runtime.call("subsasgn", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("subsasgn", self._as_matlab_object(), *args, **kwargs)
 
   def subsref(self, *args, **kwargs):
     """  SUBSREF Subscripted reference  
@@ -947,8 +892,7 @@ class meeg(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@meeg/subsref.m)
     """
 
-    return _Runtime.call("subsref", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("subsref", self._as_matlab_object(), *args, **kwargs)
 
   def time(self, *args, **kwargs):
     """  Method for getting the time axis  
@@ -959,8 +903,7 @@ class meeg(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@meeg/time.m)
     """
 
-    return _Runtime.call("time", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("time", self._as_matlab_object(), *args, **kwargs)
 
   def timeonset(self, *args, **kwargs):
     """  Method for reading and setting the time onset  
@@ -972,8 +915,7 @@ class meeg(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@meeg/timeonset.m)
     """
 
-    return _Runtime.call("timeonset", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("timeonset", self._as_matlab_object(), *args, **kwargs)
 
   def transformtype(self, *args, **kwargs):
     """  Method for getting/setting type of transform  
@@ -984,8 +926,7 @@ class meeg(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@meeg/transformtype.m)
     """
 
-    return _Runtime.call("transformtype", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("transformtype", self._as_matlab_object(), *args, **kwargs)
 
   def trialonset(self, *args, **kwargs):
     """  Method for getting/setting trial onset times  
@@ -997,8 +938,7 @@ class meeg(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@meeg/trialonset.m)
     """
 
-    return _Runtime.call("trialonset", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("trialonset", self._as_matlab_object(), *args, **kwargs)
 
   def trialtag(self, *args, **kwargs):
     """  Method for getting/setting trial tag  
@@ -1014,8 +954,7 @@ class meeg(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@meeg/trialtag.m)
     """
 
-    return _Runtime.call("trialtag", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("trialtag", self._as_matlab_object(), *args, **kwargs)
 
   def type(self, *args, **kwargs):
     """  Method for and getting/setting EEG file type  
@@ -1026,8 +965,7 @@ class meeg(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@meeg/type.m)
     """
 
-    return _Runtime.call("type", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("type", self._as_matlab_object(), *args, **kwargs)
 
   def units(self, *args, **kwargs):
     """  Method for setting/getting all units, over channels  
@@ -1038,8 +976,7 @@ class meeg(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@meeg/units.m)
     """
 
-    return _Runtime.call("units", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("units", self._as_matlab_object(), *args, **kwargs)
 
   def unlink(self, *args, **kwargs):
     """  Unlinks the object from the data file   
@@ -1050,6 +987,5 @@ class meeg(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@meeg/unlink.m)
     """
 
-    return _Runtime.call("unlink", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("unlink", self._as_matlab_object(), *args, **kwargs)
 

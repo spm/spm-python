@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def spm_NESS_gen(*args, **kwargs):
@@ -43,4 +43,4 @@ def spm_NESS_gen(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/spm_NESS_gen.m)
   """
 
-  return _Runtime.call("spm_NESS_gen", *args, **kwargs)
+  return Runtime.call("spm_NESS_gen", *args, **kwargs)

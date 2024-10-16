@@ -1,7 +1,7 @@
-from spm.__wrap__ import _Runtime, _MatlabClassWrapper
+from spm.__wrapper__ import Runtime, MatlabClassWrapper
 
 
-class xmltree(_MatlabClassWrapper):
+class xmltree(MatlabClassWrapper):
   def __init__(self, *args, _objdict=None, **kwargs):
     """  XMLTREE/XMLTREE Constructor of the XMLTree class  
     FORMAT tree = xmltree(varargin)  
@@ -30,7 +30,7 @@ class xmltree(_MatlabClassWrapper):
     """
 
     if _objdict is None:
-      _objdict = _Runtime.call("xmltree", *args, **kwargs)
+      _objdict = Runtime.call("xmltree", *args, **kwargs)
     super().__init__(_objdict)
 
   def add(self, *args, **kwargs):
@@ -60,8 +60,7 @@ class xmltree(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@xmltree/add.m)
     """
 
-    return _Runtime.call("add", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("add", self._as_matlab_object(), *args, **kwargs)
 
   def attributes(self, *args, **kwargs):
     """  XMLTREE/ATTRIBUTES Method (handle attributes of an element node)  
@@ -92,8 +91,7 @@ class xmltree(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@xmltree/attributes.m)
     """
 
-    return _Runtime.call("attributes", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("attributes", self._as_matlab_object(), *args, **kwargs)
 
   def branch(self, *args, **kwargs):
     """  XMLTREE/BRANCH Branch Method  
@@ -111,8 +109,7 @@ class xmltree(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@xmltree/branch.m)
     """
 
-    return _Runtime.call("branch", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("branch", self._as_matlab_object(), *args, **kwargs)
 
   def char(self, *args, **kwargs):
     """  XMLTREE/CHAR Converter function from XMLTree to a description string  
@@ -130,8 +127,7 @@ class xmltree(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@xmltree/char.m)
     """
 
-    return _Runtime.call("char", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("char", self._as_matlab_object(), *args, **kwargs)
 
   def children(self, *args, **kwargs):
     """  XMLTREE/CHILDREN Return children's UIDs of node uid  
@@ -149,8 +145,7 @@ class xmltree(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@xmltree/children.m)
     """
 
-    return _Runtime.call("children", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("children", self._as_matlab_object(), *args, **kwargs)
 
   def convert(self, *args, **kwargs):
     """  XMLTREE/CONVERT Convert an XML tree into a structure  
@@ -177,8 +172,7 @@ class xmltree(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@xmltree/convert.m)
     """
 
-    return _Runtime.call("convert", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("convert", self._as_matlab_object(), *args, **kwargs)
 
   def copy(self, *args, **kwargs):
     """  XMLTREE/COPY Copy Method (copy a subtree in another branch)  
@@ -197,8 +191,7 @@ class xmltree(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@xmltree/copy.m)
     """
 
-    return _Runtime.call("copy", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("copy", self._as_matlab_object(), *args, **kwargs)
 
   def delete(self, *args, **kwargs):
     """  XMLTREE/DELETE Delete (delete a subtree given its UID)  
@@ -215,8 +208,7 @@ class xmltree(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@xmltree/delete.m)
     """
 
-    return _Runtime.call("delete", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("delete", self._as_matlab_object(), *args, **kwargs)
 
   def display(self, *args, **kwargs):
     """  XMLTREE/DISPLAY Command window display of an XMLTree  
@@ -233,8 +225,9 @@ class xmltree(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@xmltree/display.m)
     """
 
-    return _Runtime.call("display", self._as_matlab_object(), *args, **kwargs)
+    return Runtime.call("display", self._as_matlab_object(), *args, **kwargs)
 
+  __repr__ = display # Use display to represent objects
 
   def editor(self, *args, **kwargs):
     """ XMLTREE/EDITOR A Graphical User Interface for an XML tree  
@@ -250,8 +243,7 @@ class xmltree(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@xmltree/editor.m)
     """
 
-    return _Runtime.call("editor", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("editor", self._as_matlab_object(), *args, **kwargs)
 
   def find(self, *args, **kwargs):
     """  XMLTREE/FIND Find elements in a tree with specified characteristics  
@@ -280,8 +272,7 @@ class xmltree(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@xmltree/find.m)
     """
 
-    return _Runtime.call("find", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("find", self._as_matlab_object(), *args, **kwargs)
 
   def flush(self, *args, **kwargs):
     """  XMLTREE/FLUSH Flush (Clear a subtree given its UID)  
@@ -299,8 +290,7 @@ class xmltree(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@xmltree/flush.m)
     """
 
-    return _Runtime.call("flush", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("flush", self._as_matlab_object(), *args, **kwargs)
 
   def get(self, *args, **kwargs):
     """  XMLTREE/GET Get Method (get object properties)  
@@ -319,8 +309,7 @@ class xmltree(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@xmltree/get.m)
     """
 
-    return _Runtime.call("get", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("get", self._as_matlab_object(), *args, **kwargs)
 
   def getfilename(self, *args, **kwargs):
     """  XMLTREE/GETFILENAME Get filename method  
@@ -338,8 +327,7 @@ class xmltree(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@xmltree/getfilename.m)
     """
 
-    return _Runtime.call("getfilename", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("getfilename", self._as_matlab_object(), *args, **kwargs)
 
   def isfield(self, *args, **kwargs):
     """  XMLTREE/ISFIELD Is parameter a field of tree{uid} ?  
@@ -358,8 +346,7 @@ class xmltree(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@xmltree/isfield.m)
     """
 
-    return _Runtime.call("isfield", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("isfield", self._as_matlab_object(), *args, **kwargs)
 
   def length(self, *args, **kwargs):
     """  XMLTREE/LENGTH Length Method  
@@ -378,8 +365,7 @@ class xmltree(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@xmltree/length.m)
     """
 
-    return _Runtime.call("length", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("length", self._as_matlab_object(), *args, **kwargs)
 
   def move(self, *args, **kwargs):
     """  XMLTREE/MOVE Move (move a subtree inside a tree from A to B)  
@@ -397,8 +383,7 @@ class xmltree(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@xmltree/move.m)
     """
 
-    return _Runtime.call("move", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("move", self._as_matlab_object(), *args, **kwargs)
 
   def parent(self, *args, **kwargs):
     """  XMLTREE/PARENT Parent Method  
@@ -416,8 +401,7 @@ class xmltree(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@xmltree/parent.m)
     """
 
-    return _Runtime.call("parent", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("parent", self._as_matlab_object(), *args, **kwargs)
 
   def root(self, *args, **kwargs):
     """  XMLTREE/ROOT Root Method  
@@ -434,8 +418,7 @@ class xmltree(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@xmltree/root.m)
     """
 
-    return _Runtime.call("root", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("root", self._as_matlab_object(), *args, **kwargs)
 
   def save(self, *args, **kwargs):
     """  XMLTREE/SAVE Save an XML tree in an XML file  
@@ -454,8 +437,7 @@ class xmltree(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@xmltree/save.m)
     """
 
-    return _Runtime.call("save", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("save", self._as_matlab_object(), *args, **kwargs)
 
   def set(self, *args, **kwargs):
     """  XMLTREE/SET Method (set object properties)  
@@ -475,8 +457,7 @@ class xmltree(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@xmltree/set.m)
     """
 
-    return _Runtime.call("set", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("set", self._as_matlab_object(), *args, **kwargs)
 
   def setfilename(self, *args, **kwargs):
     """  XMLTREE/SETFILENAME Set filename method  
@@ -493,8 +474,7 @@ class xmltree(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@xmltree/setfilename.m)
     """
 
-    return _Runtime.call("setfilename", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("setfilename", self._as_matlab_object(), *args, **kwargs)
 
   def view(self, *args, **kwargs):
     """  XMLTREE/VIEW View Method (deprecated)  
@@ -512,6 +492,5 @@ class xmltree(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@xmltree/view.m)
     """
 
-    return _Runtime.call("view", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("view", self._as_matlab_object(), *args, **kwargs)
 

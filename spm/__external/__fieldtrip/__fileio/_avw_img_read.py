@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _avw_img_read(*args, **kwargs):
@@ -64,4 +64,4 @@ def _avw_img_read(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/avw_img_read.m)
   """
 
-  return _Runtime.call("avw_img_read", *args, **kwargs)
+  return Runtime.call("avw_img_read", *args, **kwargs)

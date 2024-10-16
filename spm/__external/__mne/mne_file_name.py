@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def mne_file_name(*args, **kwargs):
@@ -14,4 +14,4 @@ def mne_file_name(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/mne/mne_file_name.m)
   """
 
-  return _Runtime.call("mne_file_name", *args, **kwargs)
+  return Runtime.call("mne_file_name", *args, **kwargs)

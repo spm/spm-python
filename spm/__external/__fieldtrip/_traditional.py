@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _traditional(*args, **kwargs):
@@ -28,4 +28,4 @@ def _traditional(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/private/traditional.m)
   """
 
-  return _Runtime.call("traditional", *args, **kwargs)
+  return Runtime.call("traditional", *args, **kwargs)

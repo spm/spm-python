@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _read_tdt_tev(*args, **kwargs):
@@ -16,4 +16,4 @@ def _read_tdt_tev(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/read_tdt_tev.m)
   """
 
-  return _Runtime.call("read_tdt_tev", *args, **kwargs)
+  return Runtime.call("read_tdt_tev", *args, **kwargs)

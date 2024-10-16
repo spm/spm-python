@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def FieldMap_preprocess(*args, **kwargs):
@@ -70,4 +70,4 @@ def FieldMap_preprocess(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/toolbox/FieldMap/FieldMap_preprocess.m)
   """
 
-  return _Runtime.call("FieldMap_preprocess", *args, **kwargs)
+  return Runtime.call("FieldMap_preprocess", *args, **kwargs)

@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def tbx_cfg_shoot(*args, **kwargs):
@@ -9,4 +9,4 @@ def tbx_cfg_shoot(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/toolbox/Shoot/tbx_cfg_shoot.m)
   """
 
-  return _Runtime.call("tbx_cfg_shoot", *args, **kwargs)
+  return Runtime.call("tbx_cfg_shoot", *args, **kwargs)

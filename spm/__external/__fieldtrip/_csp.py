@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _csp(*args, **kwargs):
@@ -41,4 +41,4 @@ def _csp(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/private/csp.m)
   """
 
-  return _Runtime.call("csp", *args, **kwargs)
+  return Runtime.call("csp", *args, **kwargs)

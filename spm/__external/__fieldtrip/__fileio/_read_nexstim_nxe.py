@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _read_nexstim_nxe(*args, **kwargs):
@@ -29,4 +29,4 @@ def _read_nexstim_nxe(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/read_nexstim_nxe.m)
   """
 
-  return _Runtime.call("read_nexstim_nxe", *args, **kwargs)
+  return Runtime.call("read_nexstim_nxe", *args, **kwargs)

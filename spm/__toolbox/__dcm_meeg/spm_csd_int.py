@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def spm_csd_int(*args, **kwargs):
@@ -39,4 +39,4 @@ def spm_csd_int(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/toolbox/dcm_meeg/spm_csd_int.m)
   """
 
-  return _Runtime.call("spm_csd_int", *args, **kwargs)
+  return Runtime.call("spm_csd_int", *args, **kwargs)

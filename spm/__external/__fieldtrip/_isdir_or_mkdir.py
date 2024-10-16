@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _isdir_or_mkdir(*args, **kwargs):
@@ -11,4 +11,4 @@ def _isdir_or_mkdir(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/private/isdir_or_mkdir.m)
   """
 
-  return _Runtime.call("isdir_or_mkdir", *args, **kwargs, nargout=0)
+  return Runtime.call("isdir_or_mkdir", *args, **kwargs, nargout=0)

@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def cfg_mlbatch_appcfg(*args, **kwargs):
@@ -10,4 +10,4 @@ def cfg_mlbatch_appcfg(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/config/cfg_mlbatch_appcfg.m)
   """
 
-  return _Runtime.call("cfg_mlbatch_appcfg", *args, **kwargs)
+  return Runtime.call("cfg_mlbatch_appcfg", *args, **kwargs)

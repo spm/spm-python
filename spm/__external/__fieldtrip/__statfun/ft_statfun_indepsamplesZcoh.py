@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def ft_statfun_indepsamplesZcoh(*args, **kwargs):
@@ -46,4 +46,4 @@ def ft_statfun_indepsamplesZcoh(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/statfun/ft_statfun_indepsamplesZcoh.m)
   """
 
-  return _Runtime.call("ft_statfun_indepsamplesZcoh", *args, **kwargs)
+  return Runtime.call("ft_statfun_indepsamplesZcoh", *args, **kwargs)

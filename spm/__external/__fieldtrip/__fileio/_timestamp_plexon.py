@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _timestamp_plexon(*args, **kwargs):
@@ -9,4 +9,4 @@ def _timestamp_plexon(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/timestamp_plexon.m)
   """
 
-  return _Runtime.call("timestamp_plexon", *args, **kwargs)
+  return Runtime.call("timestamp_plexon", *args, **kwargs)

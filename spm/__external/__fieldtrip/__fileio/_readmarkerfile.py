@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _readmarkerfile(*args, **kwargs):
@@ -14,4 +14,4 @@ def _readmarkerfile(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/readmarkerfile.m)
   """
 
-  return _Runtime.call("readmarkerfile", *args, **kwargs)
+  return Runtime.call("readmarkerfile", *args, **kwargs)

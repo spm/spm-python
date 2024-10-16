@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _poly2tri(*args, **kwargs):
@@ -16,4 +16,4 @@ def _poly2tri(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/private/poly2tri.m)
   """
 
-  return _Runtime.call("poly2tri", *args, **kwargs)
+  return Runtime.call("poly2tri", *args, **kwargs)

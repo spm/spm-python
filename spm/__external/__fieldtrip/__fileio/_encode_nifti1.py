@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _encode_nifti1(*args, **kwargs):
@@ -13,4 +13,4 @@ def _encode_nifti1(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/encode_nifti1.m)
   """
 
-  return _Runtime.call("encode_nifti1", *args, **kwargs)
+  return Runtime.call("encode_nifti1", *args, **kwargs)

@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def fiff_start_writing_raw(*args, **kwargs):
@@ -15,4 +15,4 @@ def fiff_start_writing_raw(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/mne/fiff_start_writing_raw.m)
   """
 
-  return _Runtime.call("fiff_start_writing_raw", *args, **kwargs)
+  return Runtime.call("fiff_start_writing_raw", *args, **kwargs)

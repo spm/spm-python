@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def DFP_demo_hdm(*args, **kwargs):
@@ -9,4 +9,4 @@ def DFP_demo_hdm(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/toolbox/DEM/DFP_demo_hdm.m)
   """
 
-  return _Runtime.call("DFP_demo_hdm", *args, **kwargs, nargout=0)
+  return Runtime.call("DFP_demo_hdm", *args, **kwargs, nargout=0)

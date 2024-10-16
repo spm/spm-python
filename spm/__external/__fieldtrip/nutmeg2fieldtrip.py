@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def nutmeg2fieldtrip(*args, **kwargs):
@@ -35,4 +35,4 @@ def nutmeg2fieldtrip(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/nutmeg2fieldtrip.m)
   """
 
-  return _Runtime.call("nutmeg2fieldtrip", *args, **kwargs)
+  return Runtime.call("nutmeg2fieldtrip", *args, **kwargs)

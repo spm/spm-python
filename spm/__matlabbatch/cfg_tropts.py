@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def cfg_tropts(*args, **kwargs):
@@ -21,4 +21,4 @@ def cfg_tropts(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/matlabbatch/cfg_tropts.m)
   """
 
-  return _Runtime.call("cfg_tropts", *args, **kwargs)
+  return Runtime.call("cfg_tropts", *args, **kwargs)

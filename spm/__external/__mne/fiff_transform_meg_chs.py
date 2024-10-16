@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def fiff_transform_meg_chs(*args, **kwargs):
@@ -15,4 +15,4 @@ def fiff_transform_meg_chs(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/mne/fiff_transform_meg_chs.m)
   """
 
-  return _Runtime.call("fiff_transform_meg_chs", *args, **kwargs)
+  return Runtime.call("fiff_transform_meg_chs", *args, **kwargs)

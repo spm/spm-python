@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def lbessi(*args, **kwargs):
@@ -10,4 +10,4 @@ def lbessi(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/toolbox/Spatial/lbessi.m)
   """
 
-  return _Runtime.call("lbessi", *args, **kwargs)
+  return Runtime.call("lbessi", *args, **kwargs)

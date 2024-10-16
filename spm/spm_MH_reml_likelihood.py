@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def spm_MH_reml_likelihood(*args, **kwargs):
@@ -15,4 +15,4 @@ def spm_MH_reml_likelihood(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/spm_MH_reml_likelihood.m)
   """
 
-  return _Runtime.call("spm_MH_reml_likelihood", *args, **kwargs)
+  return Runtime.call("spm_MH_reml_likelihood", *args, **kwargs)

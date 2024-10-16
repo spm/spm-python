@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def test_checkcode(*args, **kwargs):
@@ -9,4 +9,4 @@ def test_checkcode(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/tests/test_checkcode.m)
   """
 
-  return _Runtime.call("test_checkcode", *args, **kwargs)
+  return Runtime.call("test_checkcode", *args, **kwargs)

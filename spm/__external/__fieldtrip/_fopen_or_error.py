@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _fopen_or_error(*args, **kwargs):
@@ -13,4 +13,4 @@ def _fopen_or_error(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/private/fopen_or_error.m)
   """
 
-  return _Runtime.call("fopen_or_error", *args, **kwargs)
+  return Runtime.call("fopen_or_error", *args, **kwargs)

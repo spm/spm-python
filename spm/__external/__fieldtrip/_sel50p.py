@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _sel50p(*args, **kwargs):
@@ -11,4 +11,4 @@ def _sel50p(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/private/sel50p.m)
   """
 
-  return _Runtime.call("sel50p", *args, **kwargs)
+  return Runtime.call("sel50p", *args, **kwargs)

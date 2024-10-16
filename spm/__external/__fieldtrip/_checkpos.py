@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _checkpos(*args, **kwargs):
@@ -8,4 +8,4 @@ def _checkpos(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/private/checkpos.m)
   """
 
-  return _Runtime.call("checkpos", *args, **kwargs)
+  return Runtime.call("checkpos", *args, **kwargs)

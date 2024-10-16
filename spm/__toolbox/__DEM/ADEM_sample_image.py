@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def ADEM_sample_image(*args, **kwargs):
@@ -30,4 +30,4 @@ def ADEM_sample_image(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/toolbox/DEM/ADEM_sample_image.m)
   """
 
-  return _Runtime.call("ADEM_sample_image", *args, **kwargs)
+  return Runtime.call("ADEM_sample_image", *args, **kwargs)

@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def spm_spm_Bayes_specify(*args, **kwargs):
@@ -25,4 +25,4 @@ def spm_spm_Bayes_specify(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/spm_spm_Bayes_specify.m)
   """
 
-  return _Runtime.call("spm_spm_Bayes_specify", *args, **kwargs)
+  return Runtime.call("spm_spm_Bayes_specify", *args, **kwargs)

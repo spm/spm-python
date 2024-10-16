@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def FEP_information_length(*args, **kwargs):
@@ -71,4 +71,4 @@ def FEP_information_length(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/toolbox/DEM/FEP_information_length.m)
   """
 
-  return _Runtime.call("FEP_information_length", *args, **kwargs, nargout=0)
+  return Runtime.call("FEP_information_length", *args, **kwargs, nargout=0)

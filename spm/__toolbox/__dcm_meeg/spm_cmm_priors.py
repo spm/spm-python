@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def spm_cmm_priors(*args, **kwargs):
@@ -48,4 +48,4 @@ def spm_cmm_priors(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/toolbox/dcm_meeg/spm_cmm_priors.m)
   """
 
-  return _Runtime.call("spm_cmm_priors", *args, **kwargs)
+  return Runtime.call("spm_cmm_priors", *args, **kwargs)

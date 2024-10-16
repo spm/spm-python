@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _yokogawa2grad_new(*args, **kwargs):
@@ -13,4 +13,4 @@ def _yokogawa2grad_new(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/yokogawa2grad_new.m)
   """
 
-  return _Runtime.call("yokogawa2grad_new", *args, **kwargs)
+  return Runtime.call("yokogawa2grad_new", *args, **kwargs)

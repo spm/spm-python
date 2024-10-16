@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def spm_fmri_concatenate(*args, **kwargs):
@@ -27,4 +27,4 @@ def spm_fmri_concatenate(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/spm_fmri_concatenate.m)
   """
 
-  return _Runtime.call("spm_fmri_concatenate", *args, **kwargs)
+  return Runtime.call("spm_fmri_concatenate", *args, **kwargs)

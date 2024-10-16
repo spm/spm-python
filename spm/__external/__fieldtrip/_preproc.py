@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _preproc(*args, **kwargs):
@@ -119,4 +119,4 @@ def _preproc(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/private/preproc.m)
   """
 
-  return _Runtime.call("preproc", *args, **kwargs)
+  return Runtime.call("preproc", *args, **kwargs)

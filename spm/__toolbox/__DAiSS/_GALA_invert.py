@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _GALA_invert(*args, **kwargs):
@@ -9,4 +9,4 @@ def _GALA_invert(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/toolbox/DAiSS/private/GALA_invert.m)
   """
 
-  return _Runtime.call("GALA_invert", *args, **kwargs)
+  return Runtime.call("GALA_invert", *args, **kwargs)

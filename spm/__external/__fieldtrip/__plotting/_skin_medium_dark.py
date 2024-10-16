@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _skin_medium_dark(*args, **kwargs):
@@ -35,4 +35,4 @@ def _skin_medium_dark(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/plotting/private/skin_medium_dark.m)
   """
 
-  return _Runtime.call("skin_medium_dark", *args, **kwargs)
+  return Runtime.call("skin_medium_dark", *args, **kwargs)

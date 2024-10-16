@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _cortex_dark(*args, **kwargs):
@@ -27,4 +27,4 @@ def _cortex_dark(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/plotting/private/cortex_dark.m)
   """
 
-  return _Runtime.call("cortex_dark", *args, **kwargs)
+  return Runtime.call("cortex_dark", *args, **kwargs)

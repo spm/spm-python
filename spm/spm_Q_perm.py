@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def spm_Q_perm(*args, **kwargs):
@@ -10,4 +10,4 @@ def spm_Q_perm(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/spm_Q_perm.m)
   """
 
-  return _Runtime.call("spm_Q_perm", *args, **kwargs)
+  return Runtime.call("spm_Q_perm", *args, **kwargs)

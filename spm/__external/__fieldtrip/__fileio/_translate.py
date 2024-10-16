@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _translate(*args, **kwargs):
@@ -17,4 +17,4 @@ def _translate(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/translate.m)
   """
 
-  return _Runtime.call("translate", *args, **kwargs)
+  return Runtime.call("translate", *args, **kwargs)

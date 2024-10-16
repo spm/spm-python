@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def cfg_example_master(*args, **kwargs):
@@ -15,4 +15,4 @@ def cfg_example_master(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/matlabbatch/examples/cfg_example_master.m)
   """
 
-  return _Runtime.call("cfg_example_master", *args, **kwargs)
+  return Runtime.call("cfg_example_master", *args, **kwargs)

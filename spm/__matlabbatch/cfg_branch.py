@@ -1,7 +1,7 @@
-from spm.__wrap__ import _Runtime, _MatlabClassWrapper
+from spm.__wrapper__ import Runtime, MatlabClassWrapper
 
 
-class cfg_branch(_MatlabClassWrapper):
+class cfg_branch(MatlabClassWrapper):
   def __init__(self, *args, _objdict=None, **kwargs):
     """  This is the branch configuration item class for non-executable  
     branches. It implements branch harvest, all_set, get_strings.  
@@ -61,7 +61,7 @@ class cfg_branch(_MatlabClassWrapper):
     """
 
     if _objdict is None:
-      _objdict = _Runtime.call("cfg_branch", *args, **kwargs)
+      _objdict = Runtime.call("cfg_branch", *args, **kwargs)
     super().__init__(_objdict)
 
   def all_leafs(self, *args, **kwargs):
@@ -81,8 +81,7 @@ class cfg_branch(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/matlabbatch/@cfg_branch/all_leafs.m)
     """
 
-    return _Runtime.call("all_leafs", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("all_leafs", self._as_matlab_object(), *args, **kwargs)
 
   def all_set(self, *args, **kwargs):
     """  function ok = all_set(item)  
@@ -107,8 +106,7 @@ class cfg_branch(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/matlabbatch/@cfg_branch/all_set.m)
     """
 
-    return _Runtime.call("all_set", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("all_set", self._as_matlab_object(), *args, **kwargs)
 
   def all_set_item(self, *args, **kwargs):
     """  function ok = all_set_item(item)  
@@ -124,8 +122,7 @@ class cfg_branch(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/matlabbatch/@cfg_branch/all_set_item.m)
     """
 
-    return _Runtime.call("all_set_item", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("all_set_item", self._as_matlab_object(), *args, **kwargs)
 
   def cfg2jobsubs(self, *args, **kwargs):
     """  function jsubs = cfg2jobsubs(item, subs)  
@@ -143,8 +140,7 @@ class cfg_branch(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/matlabbatch/@cfg_branch/cfg2jobsubs.m)
     """
 
-    return _Runtime.call("cfg2jobsubs", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("cfg2jobsubs", self._as_matlab_object(), *args, **kwargs)
 
   def cfg2struct(self, *args, **kwargs):
     """  function sitem = cfg2struct(item)  
@@ -161,8 +157,7 @@ class cfg_branch(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/matlabbatch/@cfg_branch/cfg2struct.m)
     """
 
-    return _Runtime.call("cfg2struct", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("cfg2struct", self._as_matlab_object(), *args, **kwargs)
 
   def checksubs_job(self, *args, **kwargs):
     """  function [sts vind] = checksubs_job(item, subs, dflag)  
@@ -183,8 +178,7 @@ class cfg_branch(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/matlabbatch/@cfg_branch/checksubs_job.m)
     """
 
-    return _Runtime.call("checksubs_job", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("checksubs_job", self._as_matlab_object(), *args, **kwargs)
 
   def clearval(self, *args, **kwargs):
     """  function item = clearval(item, dflag)  
@@ -201,8 +195,7 @@ class cfg_branch(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/matlabbatch/@cfg_branch/clearval.m)
     """
 
-    return _Runtime.call("clearval", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("clearval", self._as_matlab_object(), *args, **kwargs)
 
   def expand(self, *args, **kwargs):
     """  function [item, sts] = expand(item, eflag, tropts)  
@@ -242,8 +235,7 @@ class cfg_branch(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/matlabbatch/@cfg_branch/expand.m)
     """
 
-    return _Runtime.call("expand", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("expand", self._as_matlab_object(), *args, **kwargs)
 
   def fillvals(self, *args, **kwargs):
     """  function [item, inputs] = fillvals(item, inputs, infcn)  
@@ -268,8 +260,7 @@ class cfg_branch(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/matlabbatch/@cfg_branch/fillvals.m)
     """
 
-    return _Runtime.call("fillvals", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("fillvals", self._as_matlab_object(), *args, **kwargs)
 
   def harvest(self, *args, **kwargs):
     """  function [tag, val, typ, dep, chk, cj] = harvest(item, cj, dflag, rflag)  
@@ -301,8 +292,7 @@ class cfg_branch(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/matlabbatch/@cfg_branch/harvest.m)
     """
 
-    return _Runtime.call("harvest", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("harvest", self._as_matlab_object(), *args, **kwargs)
 
   def initialise(self, *args, **kwargs):
     """  function item = initialise(item, val, dflag)  
@@ -325,8 +315,7 @@ class cfg_branch(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/matlabbatch/@cfg_branch/initialise.m)
     """
 
-    return _Runtime.call("initialise", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("initialise", self._as_matlab_object(), *args, **kwargs)
 
   def list(self, *args, **kwargs):
     """  function [id, stop, val] = list(item, spec, tropts, fn)  
@@ -384,8 +373,7 @@ class cfg_branch(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/matlabbatch/@cfg_branch/list.m)
     """
 
-    return _Runtime.call("list", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("list", self._as_matlab_object(), *args, **kwargs)
 
   def setval(self, *args, **kwargs):
     """  function item = setval(item, val, dflag)  
@@ -401,8 +389,7 @@ class cfg_branch(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/matlabbatch/@cfg_branch/setval.m)
     """
 
-    return _Runtime.call("setval", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("setval", self._as_matlab_object(), *args, **kwargs)
 
   def showdetail(self, *args, **kwargs):
     """  function str = showdetail(item)  
@@ -418,8 +405,7 @@ class cfg_branch(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/matlabbatch/@cfg_branch/showdetail.m)
     """
 
-    return _Runtime.call("showdetail", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("showdetail", self._as_matlab_object(), *args, **kwargs)
 
   def showdoc(self, *args, **kwargs):
     """  function str = showdoc(item, indent)  
@@ -437,8 +423,7 @@ class cfg_branch(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/matlabbatch/@cfg_branch/showdoc.m)
     """
 
-    return _Runtime.call("showdoc", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("showdoc", self._as_matlab_object(), *args, **kwargs)
 
   def showmydoc(self, *args, **kwargs):
     """  function str = showmydoc(item, indent)  
@@ -455,8 +440,7 @@ class cfg_branch(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/matlabbatch/@cfg_branch/showmydoc.m)
     """
 
-    return _Runtime.call("showmydoc", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("showmydoc", self._as_matlab_object(), *args, **kwargs)
 
   def subs_fields(self, *args, **kwargs):
     """  function fnames = subs_fields(item)  
@@ -476,8 +460,7 @@ class cfg_branch(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/matlabbatch/@cfg_branch/subs_fields.m)
     """
 
-    return _Runtime.call("subs_fields", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("subs_fields", self._as_matlab_object(), *args, **kwargs)
 
   def subsasgn(self, *args, **kwargs):
     """  function item = subsasgn(item, subs, varargin)  
@@ -515,8 +498,7 @@ class cfg_branch(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/matlabbatch/@cfg_branch/subsasgn.m)
     """
 
-    return _Runtime.call("subsasgn", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("subsasgn", self._as_matlab_object(), *args, **kwargs)
 
   def subsasgn_check(self, *args, **kwargs):
     """  function [sts, val] = subsasgn_check(item,subs,val)  
@@ -532,8 +514,7 @@ class cfg_branch(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/matlabbatch/@cfg_branch/subsasgn_check.m)
     """
 
-    return _Runtime.call("subsasgn_check", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("subsasgn_check", self._as_matlab_object(), *args, **kwargs)
 
   def subsasgn_job(self, *args, **kwargs):
     """  function item = subsasgn_job(item, subs, val)  
@@ -555,8 +536,7 @@ class cfg_branch(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/matlabbatch/@cfg_branch/subsasgn_job.m)
     """
 
-    return _Runtime.call("subsasgn_job", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("subsasgn_job", self._as_matlab_object(), *args, **kwargs)
 
   def subsref(self, *args, **kwargs):
     """  function varargout = subsref(item, subs)  
@@ -585,8 +565,7 @@ class cfg_branch(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/matlabbatch/@cfg_branch/subsref.m)
     """
 
-    return _Runtime.call("subsref", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("subsref", self._as_matlab_object(), *args, **kwargs)
 
   def subsref_job(self, *args, **kwargs):
     """  function [ritem varargout] = subsref_job(item, subs, c0)  
@@ -611,8 +590,7 @@ class cfg_branch(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/matlabbatch/@cfg_branch/subsref_job.m)
     """
 
-    return _Runtime.call("subsref_job", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("subsref_job", self._as_matlab_object(), *args, **kwargs)
 
   def tag2cfgsubs(self, *args, **kwargs):
     """  function [id, stop, rtaglist] = tag2cfgsubs(item, taglist, finalspec, tropts)  
@@ -641,8 +619,7 @@ class cfg_branch(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/matlabbatch/@cfg_branch/tag2cfgsubs.m)
     """
 
-    return _Runtime.call("tag2cfgsubs", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("tag2cfgsubs", self._as_matlab_object(), *args, **kwargs)
 
   def tagnames(self, *args, **kwargs):
     """  function tn = tagnames(item, dflag)  
@@ -663,8 +640,7 @@ class cfg_branch(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/matlabbatch/@cfg_branch/tagnames.m)
     """
 
-    return _Runtime.call("tagnames", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("tagnames", self._as_matlab_object(), *args, **kwargs)
 
   def treepart(self, *args, **kwargs):
     """  function tname = treepart(item, dflag)  
@@ -680,8 +656,7 @@ class cfg_branch(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/matlabbatch/@cfg_branch/treepart.m)
     """
 
-    return _Runtime.call("treepart", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("treepart", self._as_matlab_object(), *args, **kwargs)
 
   def update_deps(self, *args, **kwargs):
     """  function item = update_deps(item, varargin)  
@@ -701,8 +676,7 @@ class cfg_branch(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/matlabbatch/@cfg_branch/update_deps.m)
     """
 
-    return _Runtime.call("update_deps", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("update_deps", self._as_matlab_object(), *args, **kwargs)
 
   def val2def(self, *args, **kwargs):
     """  function [item, defaults] = val2def(item, defaults, funname, deftag)  
@@ -724,6 +698,5 @@ class cfg_branch(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/matlabbatch/@cfg_branch/val2def.m)
     """
 
-    return _Runtime.call("val2def", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("val2def", self._as_matlab_object(), *args, **kwargs)
 

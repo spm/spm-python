@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _bst_prctile(*args, **kwargs):
@@ -10,4 +10,4 @@ def _bst_prctile(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/toolbox/MEEGtools/private/bst_prctile.m)
   """
 
-  return _Runtime.call("bst_prctile", *args, **kwargs)
+  return Runtime.call("bst_prctile", *args, **kwargs)

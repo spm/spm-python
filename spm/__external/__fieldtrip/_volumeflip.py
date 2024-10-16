@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _volumeflip(*args, **kwargs):
@@ -10,4 +10,4 @@ def _volumeflip(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/private/volumeflip.m)
   """
 
-  return _Runtime.call("volumeflip", *args, **kwargs)
+  return Runtime.call("volumeflip", *args, **kwargs)

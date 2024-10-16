@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _getdimsiz(*args, **kwargs):
@@ -25,4 +25,4 @@ def _getdimsiz(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/private/getdimsiz.m)
   """
 
-  return _Runtime.call("getdimsiz", *args, **kwargs)
+  return Runtime.call("getdimsiz", *args, **kwargs)

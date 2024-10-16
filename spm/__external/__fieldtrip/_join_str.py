@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _join_str(*args, **kwargs):
@@ -9,4 +9,4 @@ def _join_str(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/private/join_str.m)
   """
 
-  return _Runtime.call("join_str", *args, **kwargs)
+  return Runtime.call("join_str", *args, **kwargs)

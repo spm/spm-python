@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _np_readfileinfo(*args, **kwargs):
@@ -88,4 +88,4 @@ def _np_readfileinfo(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/np_readfileinfo.m)
   """
 
-  return _Runtime.call("np_readfileinfo", *args, **kwargs)
+  return Runtime.call("np_readfileinfo", *args, **kwargs)

@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _brain(*args, **kwargs):
@@ -21,4 +21,4 @@ def _brain(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/plotting/private/brain.m)
   """
 
-  return _Runtime.call("brain", *args, **kwargs)
+  return Runtime.call("brain", *args, **kwargs)

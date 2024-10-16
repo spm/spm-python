@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _ft_singletrialanalysis_aseo(*args, **kwargs):
@@ -28,4 +28,4 @@ def _ft_singletrialanalysis_aseo(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/private/ft_singletrialanalysis_aseo.m)
   """
 
-  return _Runtime.call("ft_singletrialanalysis_aseo", *args, **kwargs)
+  return Runtime.call("ft_singletrialanalysis_aseo", *args, **kwargs)

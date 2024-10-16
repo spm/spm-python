@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _artifact2event(*args, **kwargs):
@@ -23,4 +23,4 @@ def _artifact2event(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/private/artifact2event.m)
   """
 
-  return _Runtime.call("artifact2event", *args, **kwargs)
+  return Runtime.call("artifact2event", *args, **kwargs)

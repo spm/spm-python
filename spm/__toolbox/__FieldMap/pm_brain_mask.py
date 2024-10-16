@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def pm_brain_mask(*args, **kwargs):
@@ -32,4 +32,4 @@ def pm_brain_mask(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/toolbox/FieldMap/pm_brain_mask.m)
   """
 
-  return _Runtime.call("pm_brain_mask", *args, **kwargs)
+  return Runtime.call("pm_brain_mask", *args, **kwargs)

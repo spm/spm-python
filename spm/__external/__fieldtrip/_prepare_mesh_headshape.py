@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _prepare_mesh_headshape(*args, **kwargs):
@@ -18,4 +18,4 @@ def _prepare_mesh_headshape(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/private/prepare_mesh_headshape.m)
   """
 
-  return _Runtime.call("prepare_mesh_headshape", *args, **kwargs)
+  return Runtime.call("prepare_mesh_headshape", *args, **kwargs)

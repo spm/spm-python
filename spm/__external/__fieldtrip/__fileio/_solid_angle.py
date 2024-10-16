@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _solid_angle(*args, **kwargs):
@@ -21,4 +21,4 @@ def _solid_angle(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/solid_angle.m)
   """
 
-  return _Runtime.call("solid_angle", *args, **kwargs)
+  return Runtime.call("solid_angle", *args, **kwargs)

@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _size_equal(*args, **kwargs):
@@ -8,4 +8,4 @@ def _size_equal(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/external/stats/private/size_equal.m)
   """
 
-  return _Runtime.call("size_equal", *args, **kwargs)
+  return Runtime.call("size_equal", *args, **kwargs)

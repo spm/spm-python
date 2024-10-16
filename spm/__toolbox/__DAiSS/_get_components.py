@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _get_components(*args, **kwargs):
@@ -25,4 +25,4 @@ def _get_components(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/toolbox/DAiSS/private/get_components.m)
   """
 
-  return _Runtime.call("get_components", *args, **kwargs)
+  return Runtime.call("get_components", *args, **kwargs)

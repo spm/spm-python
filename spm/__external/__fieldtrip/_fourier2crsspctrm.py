@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _fourier2crsspctrm(*args, **kwargs):
@@ -24,4 +24,4 @@ def _fourier2crsspctrm(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/private/fourier2crsspctrm.m)
   """
 
-  return _Runtime.call("fourier2crsspctrm", *args, **kwargs)
+  return Runtime.call("fourier2crsspctrm", *args, **kwargs)

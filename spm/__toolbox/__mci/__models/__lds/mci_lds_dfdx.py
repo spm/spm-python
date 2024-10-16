@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def mci_lds_dfdx(*args, **kwargs):
@@ -18,4 +18,4 @@ def mci_lds_dfdx(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/toolbox/mci/models/lds/mci_lds_dfdx.m)
   """
 
-  return _Runtime.call("mci_lds_dfdx", *args, **kwargs)
+  return Runtime.call("mci_lds_dfdx", *args, **kwargs)

@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _neuralynx_timestamp(*args, **kwargs):
@@ -10,4 +10,4 @@ def _neuralynx_timestamp(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/neuralynx_timestamp.m)
   """
 
-  return _Runtime.call("neuralynx_timestamp", *args, **kwargs)
+  return Runtime.call("neuralynx_timestamp", *args, **kwargs)

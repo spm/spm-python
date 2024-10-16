@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _warp_fsaverage(*args, **kwargs):
@@ -20,4 +20,4 @@ def _warp_fsaverage(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/private/warp_fsaverage.m)
   """
 
-  return _Runtime.call("warp_fsaverage", *args, **kwargs)
+  return Runtime.call("warp_fsaverage", *args, **kwargs)

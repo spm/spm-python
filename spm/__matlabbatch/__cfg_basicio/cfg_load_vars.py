@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def cfg_load_vars(*args, **kwargs):
@@ -28,4 +28,4 @@ def cfg_load_vars(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/matlabbatch/cfg_basicio/cfg_load_vars.m)
   """
 
-  return _Runtime.call("cfg_load_vars", *args, **kwargs)
+  return Runtime.call("cfg_load_vars", *args, **kwargs)

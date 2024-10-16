@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _SAM_costfun(*args, **kwargs):
@@ -17,4 +17,4 @@ def _SAM_costfun(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/inverse/private/SAM_costfun.m)
   """
 
-  return _Runtime.call("SAM_costfun", *args, **kwargs)
+  return Runtime.call("SAM_costfun", *args, **kwargs)

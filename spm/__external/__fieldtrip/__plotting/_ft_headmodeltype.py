@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _ft_headmodeltype(*args, **kwargs):
@@ -40,4 +40,4 @@ def _ft_headmodeltype(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/plotting/private/ft_headmodeltype.m)
   """
 
-  return _Runtime.call("ft_headmodeltype", *args, **kwargs)
+  return Runtime.call("ft_headmodeltype", *args, **kwargs)

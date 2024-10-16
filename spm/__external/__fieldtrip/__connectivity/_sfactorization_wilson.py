@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _sfactorization_wilson(*args, **kwargs):
@@ -26,4 +26,4 @@ def _sfactorization_wilson(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/connectivity/private/sfactorization_wilson.m)
   """
 
-  return _Runtime.call("sfactorization_wilson", *args, **kwargs)
+  return Runtime.call("sfactorization_wilson", *args, **kwargs)

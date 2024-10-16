@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _ftcolors(*args, **kwargs):
@@ -16,4 +16,4 @@ def _ftcolors(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/plotting/private/ftcolors.m)
   """
 
-  return _Runtime.call("ftcolors", *args, **kwargs)
+  return Runtime.call("ftcolors", *args, **kwargs)

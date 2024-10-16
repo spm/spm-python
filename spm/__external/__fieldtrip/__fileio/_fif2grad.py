@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _fif2grad(*args, **kwargs):
@@ -16,4 +16,4 @@ def _fif2grad(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/fif2grad.m)
   """
 
-  return _Runtime.call("fif2grad", *args, **kwargs)
+  return Runtime.call("fif2grad", *args, **kwargs)

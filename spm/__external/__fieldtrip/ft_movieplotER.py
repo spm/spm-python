@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def ft_movieplotER(*args, **kwargs):
@@ -49,4 +49,4 @@ def ft_movieplotER(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/ft_movieplotER.m)
   """
 
-  return _Runtime.call("ft_movieplotER", *args, **kwargs)
+  return Runtime.call("ft_movieplotER", *args, **kwargs)

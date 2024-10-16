@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def spm_brainwarp(*args, **kwargs):
@@ -74,4 +74,4 @@ def spm_brainwarp(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/toolbox/OldNorm/spm_brainwarp.m)
   """
 
-  return _Runtime.call("spm_brainwarp", *args, **kwargs)
+  return Runtime.call("spm_brainwarp", *args, **kwargs)

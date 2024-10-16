@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def cfg_vout_file_filter(*args, **kwargs):
@@ -15,4 +15,4 @@ def cfg_vout_file_filter(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/matlabbatch/cfg_basicio/cfg_vout_file_filter.m)
   """
 
-  return _Runtime.call("cfg_vout_file_filter", *args, **kwargs)
+  return Runtime.call("cfg_vout_file_filter", *args, **kwargs)

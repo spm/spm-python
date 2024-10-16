@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _inputlabel2outputlabel(*args, **kwargs):
@@ -16,4 +16,4 @@ def _inputlabel2outputlabel(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/private/inputlabel2outputlabel.m)
   """
 
-  return _Runtime.call("inputlabel2outputlabel", *args, **kwargs)
+  return Runtime.call("inputlabel2outputlabel", *args, **kwargs)

@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _compile_mex_list(*args, **kwargs):
@@ -15,4 +15,4 @@ def _compile_mex_list(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/forward/private/compile_mex_list.m)
   """
 
-  return _Runtime.call("compile_mex_list", *args, **kwargs, nargout=0)
+  return Runtime.call("compile_mex_list", *args, **kwargs, nargout=0)

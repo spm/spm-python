@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _read_ricoh_header(*args, **kwargs):
@@ -23,4 +23,4 @@ def _read_ricoh_header(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/read_ricoh_header.m)
   """
 
-  return _Runtime.call("read_ricoh_header", *args, **kwargs)
+  return Runtime.call("read_ricoh_header", *args, **kwargs)

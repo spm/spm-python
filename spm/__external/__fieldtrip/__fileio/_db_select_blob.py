@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _db_select_blob(*args, **kwargs):
@@ -15,4 +15,4 @@ def _db_select_blob(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/db_select_blob.m)
   """
 
-  return _Runtime.call("db_select_blob", *args, **kwargs)
+  return Runtime.call("db_select_blob", *args, **kwargs)

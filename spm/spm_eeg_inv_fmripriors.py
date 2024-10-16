@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def spm_eeg_inv_fmripriors(*args, **kwargs):
@@ -35,4 +35,4 @@ def spm_eeg_inv_fmripriors(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/spm_eeg_inv_fmripriors.m)
   """
 
-  return _Runtime.call("spm_eeg_inv_fmripriors", *args, **kwargs)
+  return Runtime.call("spm_eeg_inv_fmripriors", *args, **kwargs)

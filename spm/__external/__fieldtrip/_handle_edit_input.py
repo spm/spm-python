@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _handle_edit_input(*args, **kwargs):
@@ -21,4 +21,4 @@ def _handle_edit_input(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/private/handle_edit_input.m)
   """
 
-  return _Runtime.call("handle_edit_input", *args, **kwargs)
+  return Runtime.call("handle_edit_input", *args, **kwargs)

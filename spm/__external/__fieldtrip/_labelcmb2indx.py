@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _labelcmb2indx(*args, **kwargs):
@@ -32,4 +32,4 @@ def _labelcmb2indx(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/private/labelcmb2indx.m)
   """
 
-  return _Runtime.call("labelcmb2indx", *args, **kwargs)
+  return Runtime.call("labelcmb2indx", *args, **kwargs)

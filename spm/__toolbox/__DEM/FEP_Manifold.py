@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def FEP_Manifold(*args, **kwargs):
@@ -35,4 +35,4 @@ def FEP_Manifold(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/toolbox/DEM/FEP_Manifold.m)
   """
 
-  return _Runtime.call("FEP_Manifold", *args, **kwargs, nargout=0)
+  return Runtime.call("FEP_Manifold", *args, **kwargs, nargout=0)

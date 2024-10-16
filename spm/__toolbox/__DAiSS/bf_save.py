@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def bf_save(*args, **kwargs):
@@ -9,4 +9,4 @@ def bf_save(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/toolbox/DAiSS/bf_save.m)
   """
 
-  return _Runtime.call("bf_save", *args, **kwargs, nargout=0)
+  return Runtime.call("bf_save", *args, **kwargs, nargout=0)

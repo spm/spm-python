@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _splitstruct(*args, **kwargs):
@@ -10,4 +10,4 @@ def _splitstruct(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/private/splitstruct.m)
   """
 
-  return _Runtime.call("splitstruct", *args, **kwargs)
+  return Runtime.call("splitstruct", *args, **kwargs)

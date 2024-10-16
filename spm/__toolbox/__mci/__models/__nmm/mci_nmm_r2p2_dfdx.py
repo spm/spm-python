@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def mci_nmm_r2p2_dfdx(*args, **kwargs):
@@ -17,4 +17,4 @@ def mci_nmm_r2p2_dfdx(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/toolbox/mci/models/nmm/mci_nmm_r2p2_dfdx.m)
   """
 
-  return _Runtime.call("mci_nmm_r2p2_dfdp", *args, **kwargs)
+  return Runtime.call("mci_nmm_r2p2_dfdp", *args, **kwargs)

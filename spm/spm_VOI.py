@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def spm_VOI(*args, **kwargs):
@@ -58,4 +58,4 @@ def spm_VOI(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/spm_VOI.m)
   """
 
-  return _Runtime.call("spm_VOI", *args, **kwargs)
+  return Runtime.call("spm_VOI", *args, **kwargs)

@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def routlm(*args, **kwargs):
@@ -13,4 +13,4 @@ def routlm(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/src/routlm.m)
   """
 
-  return _Runtime.call("routlm", *args, **kwargs)
+  return Runtime.call("routlm", *args, **kwargs)

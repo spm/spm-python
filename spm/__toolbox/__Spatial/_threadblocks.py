@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _threadblocks(*args, **kwargs):
@@ -10,4 +10,4 @@ def _threadblocks(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/toolbox/Spatial/private/threadblocks.m)
   """
 
-  return _Runtime.call("threadblocks", *args, **kwargs)
+  return Runtime.call("threadblocks", *args, **kwargs)

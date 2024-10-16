@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def mne_block_diag(*args, **kwargs):
@@ -23,4 +23,4 @@ def mne_block_diag(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/mne/mne_block_diag.m)
   """
 
-  return _Runtime.call("mne_block_diag", *args, **kwargs)
+  return Runtime.call("mne_block_diag", *args, **kwargs)

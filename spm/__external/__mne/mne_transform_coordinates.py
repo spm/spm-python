@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def mne_transform_coordinates(*args, **kwargs):
@@ -26,4 +26,4 @@ def mne_transform_coordinates(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/mne/mne_transform_coordinates.m)
   """
 
-  return _Runtime.call("mne_transform_coordinates", *args, **kwargs)
+  return Runtime.call("mne_transform_coordinates", *args, **kwargs)

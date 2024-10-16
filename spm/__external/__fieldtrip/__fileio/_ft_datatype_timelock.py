@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _ft_datatype_timelock(*args, **kwargs):
@@ -48,4 +48,4 @@ def _ft_datatype_timelock(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/ft_datatype_timelock.m)
   """
 
-  return _Runtime.call("ft_datatype_timelock", *args, **kwargs)
+  return Runtime.call("ft_datatype_timelock", *args, **kwargs)

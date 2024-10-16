@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def bf_wizard_data(*args, **kwargs):
@@ -36,4 +36,4 @@ def bf_wizard_data(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/toolbox/DAiSS/bf_wizard_data.m)
   """
 
-  return _Runtime.call("bf_wizard_data", *args, **kwargs)
+  return Runtime.call("bf_wizard_data", *args, **kwargs)

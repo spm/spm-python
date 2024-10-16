@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def ft_multiplotTFR(*args, **kwargs):
@@ -125,4 +125,4 @@ def ft_multiplotTFR(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/ft_multiplotTFR.m)
   """
 
-  return _Runtime.call("ft_multiplotTFR", *args, **kwargs)
+  return Runtime.call("ft_multiplotTFR", *args, **kwargs)

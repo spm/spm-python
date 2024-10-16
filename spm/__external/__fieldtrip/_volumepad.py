@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _volumepad(*args, **kwargs):
@@ -12,4 +12,4 @@ def _volumepad(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/private/volumepad.m)
   """
 
-  return _Runtime.call("volumepad", *args, **kwargs)
+  return Runtime.call("volumepad", *args, **kwargs)

@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _avgoverlabel(*args, **kwargs):
@@ -9,4 +9,4 @@ def _avgoverlabel(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/utilities/private/avgoverlabel.m)
   """
 
-  return _Runtime.call("avgoverlabel", *args, **kwargs)
+  return Runtime.call("avgoverlabel", *args, **kwargs)

@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _mat2ades(*args, **kwargs):
@@ -19,4 +19,4 @@ def _mat2ades(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/mat2ades.m)
   """
 
-  return _Runtime.call("mat2ades", *args, **kwargs, nargout=0)
+  return Runtime.call("mat2ades", *args, **kwargs, nargout=0)

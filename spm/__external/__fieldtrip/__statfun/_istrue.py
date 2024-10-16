@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _istrue(*args, **kwargs):
@@ -9,4 +9,4 @@ def _istrue(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/statfun/private/istrue.m)
   """
 
-  return _Runtime.call("istrue", *args, **kwargs)
+  return Runtime.call("istrue", *args, **kwargs)

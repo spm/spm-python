@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _getsubfield(*args, **kwargs):
@@ -17,4 +17,4 @@ def _getsubfield(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/inverse/private/getsubfield.m)
   """
 
-  return _Runtime.call("getsubfield", *args, **kwargs)
+  return Runtime.call("getsubfield", *args, **kwargs)

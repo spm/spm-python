@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _homogenous2traditional(*args, **kwargs):
@@ -39,4 +39,4 @@ def _homogenous2traditional(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/private/homogenous2traditional.m)
   """
 
-  return _Runtime.call("homogenous2traditional", *args, **kwargs)
+  return Runtime.call("homogenous2traditional", *args, **kwargs)

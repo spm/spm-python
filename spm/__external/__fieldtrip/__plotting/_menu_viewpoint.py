@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _menu_viewpoint(*args, **kwargs):
@@ -10,4 +10,4 @@ def _menu_viewpoint(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/plotting/private/menu_viewpoint.m)
   """
 
-  return _Runtime.call("menu_viewpoint", *args, **kwargs, nargout=0)
+  return Runtime.call("menu_viewpoint", *args, **kwargs, nargout=0)

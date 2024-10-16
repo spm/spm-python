@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def spm_fx_hdm(*args, **kwargs):
@@ -32,4 +32,4 @@ def spm_fx_hdm(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/spm_fx_hdm.m)
   """
 
-  return _Runtime.call("spm_fx_hdm", *args, **kwargs)
+  return Runtime.call("spm_fx_hdm", *args, **kwargs)

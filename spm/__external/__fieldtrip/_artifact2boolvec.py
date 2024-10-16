@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _artifact2boolvec(*args, **kwargs):
@@ -29,4 +29,4 @@ def _artifact2boolvec(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/private/artifact2boolvec.m)
   """
 
-  return _Runtime.call("artifact2boolvec", *args, **kwargs)
+  return Runtime.call("artifact2boolvec", *args, **kwargs)

@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def mne_ex_rt(*args, **kwargs):
@@ -17,4 +17,4 @@ def mne_ex_rt(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/mne/mne_ex_rt.m)
   """
 
-  return _Runtime.call("mne_ex_rt", *args, **kwargs)
+  return Runtime.call("mne_ex_rt", *args, **kwargs)

@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def loadxml(*args, **kwargs):
@@ -29,4 +29,4 @@ def loadxml(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/compat/loadxml.m)
   """
 
-  return _Runtime.call("loadxml", *args, **kwargs)
+  return Runtime.call("loadxml", *args, **kwargs)

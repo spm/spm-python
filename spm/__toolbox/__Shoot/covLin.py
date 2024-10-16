@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def covLin(*args, **kwargs):
@@ -11,4 +11,4 @@ def covLin(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/toolbox/Shoot/covLin.m)
   """
 
-  return _Runtime.call("covLin", *args, **kwargs)
+  return Runtime.call("covLin", *args, **kwargs)

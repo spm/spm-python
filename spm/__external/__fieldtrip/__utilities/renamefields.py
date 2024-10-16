@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def renamefields(*args, **kwargs):
@@ -15,4 +15,4 @@ def renamefields(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/utilities/renamefields.m)
   """
 
-  return _Runtime.call("renamefields", *args, **kwargs)
+  return Runtime.call("renamefields", *args, **kwargs)

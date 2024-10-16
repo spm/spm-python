@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def bf_group(*args, **kwargs):
@@ -9,4 +9,4 @@ def bf_group(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/toolbox/DAiSS/bf_group.m)
   """
 
-  return _Runtime.call("bf_group", *args, **kwargs)
+  return Runtime.call("bf_group", *args, **kwargs)

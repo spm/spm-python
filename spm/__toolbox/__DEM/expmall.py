@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def expmall(*args, **kwargs):
@@ -9,4 +9,4 @@ def expmall(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/toolbox/DEM/expmall.m)
   """
 
-  return _Runtime.call("expmall", *args, **kwargs)
+  return Runtime.call("expmall", *args, **kwargs)

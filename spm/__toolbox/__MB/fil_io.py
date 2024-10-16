@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def fil_io(*args, **kwargs):
@@ -32,4 +32,4 @@ def fil_io(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/toolbox/MB/fil_io.m)
   """
 
-  return _Runtime.call("fil_io", *args, **kwargs)
+  return Runtime.call("fil_io", *args, **kwargs)

@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _setviewpoint(*args, **kwargs):
@@ -16,4 +16,4 @@ def _setviewpoint(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/plotting/private/setviewpoint.m)
   """
 
-  return _Runtime.call("setviewpoint", *args, **kwargs, nargout=0)
+  return Runtime.call("setviewpoint", *args, **kwargs, nargout=0)

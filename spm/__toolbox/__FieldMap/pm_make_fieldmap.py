@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def pm_make_fieldmap(*args, **kwargs):
@@ -75,4 +75,4 @@ def pm_make_fieldmap(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/toolbox/FieldMap/pm_make_fieldmap.m)
   """
 
-  return _Runtime.call("pm_make_fieldmap", *args, **kwargs)
+  return Runtime.call("pm_make_fieldmap", *args, **kwargs)

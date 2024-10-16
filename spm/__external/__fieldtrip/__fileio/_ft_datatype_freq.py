@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _ft_datatype_freq(*args, **kwargs):
@@ -63,4 +63,4 @@ def _ft_datatype_freq(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/ft_datatype_freq.m)
   """
 
-  return _Runtime.call("ft_datatype_freq", *args, **kwargs)
+  return Runtime.call("ft_datatype_freq", *args, **kwargs)

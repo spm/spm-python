@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def estimate_greens_mmclab(*args, **kwargs):
@@ -47,4 +47,4 @@ def estimate_greens_mmclab(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/toolbox/dcm_fnirs/mmclab/estimate_greens_mmclab.m)
   """
 
-  return _Runtime.call("estimate_greens_mmclab", *args, **kwargs)
+  return Runtime.call("estimate_greens_mmclab", *args, **kwargs)

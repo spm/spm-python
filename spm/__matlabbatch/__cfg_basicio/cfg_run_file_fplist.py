@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def cfg_run_file_fplist(*args, **kwargs):
@@ -17,4 +17,4 @@ def cfg_run_file_fplist(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/matlabbatch/cfg_basicio/cfg_run_file_fplist.m)
   """
 
-  return _Runtime.call("cfg_run_file_fplist", *args, **kwargs)
+  return Runtime.call("cfg_run_file_fplist", *args, **kwargs)

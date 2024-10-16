@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _get_dip_halfspace(*args, **kwargs):
@@ -12,4 +12,4 @@ def _get_dip_halfspace(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/forward/private/get_dip_halfspace.m)
   """
 
-  return _Runtime.call("get_dip_halfspace", *args, **kwargs)
+  return Runtime.call("get_dip_halfspace", *args, **kwargs)

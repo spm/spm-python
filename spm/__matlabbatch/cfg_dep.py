@@ -1,7 +1,7 @@
-from spm.__wrap__ import _Runtime, _MatlabClassWrapper
+from spm.__wrapper__ import Runtime, MatlabClassWrapper
 
 
-class cfg_dep(_MatlabClassWrapper):
+class cfg_dep(MatlabClassWrapper):
   def __init__(self, *args, _objdict=None, **kwargs):
     """  This is the configuration dependency class  
      
@@ -51,7 +51,7 @@ class cfg_dep(_MatlabClassWrapper):
     """
 
     if _objdict is None:
-      _objdict = _Runtime.call("cfg_dep", *args, **kwargs)
+      _objdict = Runtime.call("cfg_dep", *args, **kwargs)
     super().__init__(_objdict)
 
   def add_to_source(self, *args, **kwargs):
@@ -76,8 +76,7 @@ class cfg_dep(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/matlabbatch/@cfg_dep/add_to_source.m)
     """
 
-    return _Runtime.call("add_to_source", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("add_to_source", self._as_matlab_object(), *args, **kwargs)
 
   def ctranspose(self, *args, **kwargs):
     """  function b = ctranspose(a)  
@@ -93,8 +92,7 @@ class cfg_dep(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/matlabbatch/@cfg_dep/ctranspose.m)
     """
 
-    return _Runtime.call("ctranspose", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("ctranspose", self._as_matlab_object(), *args, **kwargs)
 
   def del_in_source(self, *args, **kwargs):
     """  function cj = del_in_source(tdeps, cj)  
@@ -110,8 +108,7 @@ class cfg_dep(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/matlabbatch/@cfg_dep/del_in_source.m)
     """
 
-    return _Runtime.call("del_in_source", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("del_in_source", self._as_matlab_object(), *args, **kwargs)
 
   def del_in_target(self, *args, **kwargs):
     """  function cj = del_in_target(sdeps, cj)  
@@ -130,8 +127,7 @@ class cfg_dep(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/matlabbatch/@cfg_dep/del_in_target.m)
     """
 
-    return _Runtime.call("del_in_target", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("del_in_target", self._as_matlab_object(), *args, **kwargs)
 
   def dep_add(self, *args, **kwargs):
     """  augment cdep tsubs references, and add them to dependency list  
@@ -146,8 +142,7 @@ class cfg_dep(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/matlabbatch/@cfg_dep/dep_add.m)
     """
 
-    return _Runtime.call("dep_add", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("dep_add", self._as_matlab_object(), *args, **kwargs)
 
   def disp(self, *args, **kwargs):
     """  function disp(obj)  
@@ -163,8 +158,7 @@ class cfg_dep(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/matlabbatch/@cfg_dep/disp.m)
     """
 
-    return _Runtime.call("disp", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("disp", self._as_matlab_object(), *args, **kwargs)
 
   def display(self, *args, **kwargs):
     """  function display(dep)  
@@ -180,8 +174,9 @@ class cfg_dep(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/matlabbatch/@cfg_dep/display.m)
     """
 
-    return _Runtime.call("display", self._as_matlab_object(), *args, **kwargs)
+    return Runtime.call("display", self._as_matlab_object(), *args, **kwargs)
 
+  __repr__ = display # Use display to represent objects
 
   def gencode(self, *args, **kwargs):
     """  function [str, tag, cind] = gencode(item, tag, tagctx)  
@@ -197,8 +192,7 @@ class cfg_dep(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/matlabbatch/@cfg_dep/gencode.m)
     """
 
-    return _Runtime.call("gencode", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("gencode", self._as_matlab_object(), *args, **kwargs)
 
   def isequalsource(self, *args, **kwargs):
     """  function sts = isequalsource(dep1, dep2)  
@@ -215,8 +209,7 @@ class cfg_dep(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/matlabbatch/@cfg_dep/isequalsource.m)
     """
 
-    return _Runtime.call("isequalsource", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("isequalsource", self._as_matlab_object(), *args, **kwargs)
 
   def isequaltarget(self, *args, **kwargs):
     """  function sts = isequaltarget(dep1, dep2)  
@@ -233,8 +226,7 @@ class cfg_dep(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/matlabbatch/@cfg_dep/isequaltarget.m)
     """
 
-    return _Runtime.call("isequaltarget", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("isequaltarget", self._as_matlab_object(), *args, **kwargs)
 
   def subs_fields(self, *args, **kwargs):
     """  function fnames = subs_fields(item)  
@@ -253,8 +245,7 @@ class cfg_dep(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/matlabbatch/@cfg_dep/subs_fields.m)
     """
 
-    return _Runtime.call("subs_fields", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("subs_fields", self._as_matlab_object(), *args, **kwargs)
 
   def subsasgn(self, *args, **kwargs):
     """  function dep = subsasgn(dep, subs, varargin)  
@@ -280,8 +271,7 @@ class cfg_dep(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/matlabbatch/@cfg_dep/subsasgn.m)
     """
 
-    return _Runtime.call("subsasgn", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("subsasgn", self._as_matlab_object(), *args, **kwargs)
 
   def subsref(self, *args, **kwargs):
     """  function varargout = subsref(dep, subs)  
@@ -307,8 +297,7 @@ class cfg_dep(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/matlabbatch/@cfg_dep/subsref.m)
     """
 
-    return _Runtime.call("subsref", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("subsref", self._as_matlab_object(), *args, **kwargs)
 
   def update_deps(self, *args, **kwargs):
     """  function dep = update_deps(dep, oid, nid)  
@@ -324,6 +313,5 @@ class cfg_dep(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/matlabbatch/@cfg_dep/update_deps.m)
     """
 
-    return _Runtime.call("update_deps", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("update_deps", self._as_matlab_object(), *args, **kwargs)
 

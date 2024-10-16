@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _sphericalSplineInterpolate(*args, **kwargs):
@@ -24,4 +24,4 @@ def _sphericalSplineInterpolate(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/private/sphericalSplineInterpolate.m)
   """
 
-  return _Runtime.call("sphericalSplineInterpolate", *args, **kwargs)
+  return Runtime.call("sphericalSplineInterpolate", *args, **kwargs)

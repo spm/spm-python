@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def spm_file_split(*args, **kwargs):
@@ -14,4 +14,4 @@ def spm_file_split(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/spm_file_split.m)
   """
 
-  return _Runtime.call("spm_file_split", *args, **kwargs)
+  return Runtime.call("spm_file_split", *args, **kwargs)

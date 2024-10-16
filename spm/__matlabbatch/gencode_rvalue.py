@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def gencode_rvalue(*args, **kwargs):
@@ -33,4 +33,4 @@ def gencode_rvalue(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/matlabbatch/gencode_rvalue.m)
   """
 
-  return _Runtime.call("gencode_rvalue", *args, **kwargs)
+  return Runtime.call("gencode_rvalue", *args, **kwargs)

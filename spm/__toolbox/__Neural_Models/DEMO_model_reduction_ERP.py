@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def DEMO_model_reduction_ERP(*args, **kwargs):
@@ -26,4 +26,4 @@ def DEMO_model_reduction_ERP(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/toolbox/Neural_Models/DEMO_model_reduction_ERP.m)
   """
 
-  return _Runtime.call("DEMO_model_reduction_ERP", *args, **kwargs, nargout=0)
+  return Runtime.call("DEMO_model_reduction_ERP", *args, **kwargs, nargout=0)

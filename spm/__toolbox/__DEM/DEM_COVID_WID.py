@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def DEM_COVID_WID(*args, **kwargs):
@@ -41,4 +41,4 @@ def DEM_COVID_WID(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/toolbox/DEM/DEM_COVID_WID.m)
   """
 
-  return _Runtime.call("DEM_COVID_WID", *args, **kwargs)
+  return Runtime.call("DEM_COVID_WID", *args, **kwargs)

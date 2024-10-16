@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def bf_output_PLI(*args, **kwargs):
@@ -17,4 +17,4 @@ def bf_output_PLI(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/toolbox/DAiSS/bf_output_PLI.m)
   """
 
-  return _Runtime.call("bf_output_PLI", *args, **kwargs)
+  return Runtime.call("bf_output_PLI", *args, **kwargs)

@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _loadvar(*args, **kwargs):
@@ -10,4 +10,4 @@ def _loadvar(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/utilities/private/loadvar.m)
   """
 
-  return _Runtime.call("loadvar", *args, **kwargs)
+  return Runtime.call("loadvar", *args, **kwargs)

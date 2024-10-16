@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _mesh_tetrahedron(*args, **kwargs):
@@ -13,4 +13,4 @@ def _mesh_tetrahedron(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/plotting/private/mesh_tetrahedron.m)
   """
 
-  return _Runtime.call("mesh_tetrahedron", *args, **kwargs)
+  return Runtime.call("mesh_tetrahedron", *args, **kwargs)

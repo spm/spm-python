@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _fixsegmentation(*args, **kwargs):
@@ -11,4 +11,4 @@ def _fixsegmentation(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/utilities/private/fixsegmentation.m)
   """
 
-  return _Runtime.call("fixsegmentation", *args, **kwargs)
+  return Runtime.call("fixsegmentation", *args, **kwargs)

@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _savevar(*args, **kwargs):
@@ -10,4 +10,4 @@ def _savevar(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/private/savevar.m)
   """
 
-  return _Runtime.call("savevar", *args, **kwargs, nargout=0)
+  return Runtime.call("savevar", *args, **kwargs, nargout=0)

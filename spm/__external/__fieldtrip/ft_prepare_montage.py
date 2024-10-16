@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def ft_prepare_montage(*args, **kwargs):
@@ -42,4 +42,4 @@ def ft_prepare_montage(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/ft_prepare_montage.m)
   """
 
-  return _Runtime.call("ft_prepare_montage", *args, **kwargs)
+  return Runtime.call("ft_prepare_montage", *args, **kwargs)

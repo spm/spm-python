@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def pull(*args, **kwargs):
@@ -13,4 +13,4 @@ def pull(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/toolbox/Spatial/pull.m)
   """
 
-  return _Runtime.call("pull", *args, **kwargs)
+  return Runtime.call("pull", *args, **kwargs)

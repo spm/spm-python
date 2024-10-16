@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _shiftpredict(*args, **kwargs):
@@ -21,4 +21,4 @@ def _shiftpredict(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/private/shiftpredict.m)
   """
 
-  return _Runtime.call("shiftpredict", *args, **kwargs)
+  return Runtime.call("shiftpredict", *args, **kwargs)

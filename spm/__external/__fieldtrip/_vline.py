@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _vline(*args, **kwargs):
@@ -8,4 +8,4 @@ def _vline(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/private/vline.m)
   """
 
-  return _Runtime.call("vline", *args, **kwargs, nargout=0)
+  return Runtime.call("vline", *args, **kwargs, nargout=0)

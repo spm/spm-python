@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def spm_results_nidm(*args, **kwargs):
@@ -28,4 +28,4 @@ def spm_results_nidm(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/spm_results_nidm.m)
   """
 
-  return _Runtime.call("spm_results_nidm", *args, **kwargs)
+  return Runtime.call("spm_results_nidm", *args, **kwargs)

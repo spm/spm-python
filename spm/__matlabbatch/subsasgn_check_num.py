@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def subsasgn_check_num(*args, **kwargs):
@@ -19,4 +19,4 @@ def subsasgn_check_num(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/matlabbatch/subsasgn_check_num.m)
   """
 
-  return _Runtime.call("subsasgn_check_num", *args, **kwargs)
+  return Runtime.call("subsasgn_check_num", *args, **kwargs)

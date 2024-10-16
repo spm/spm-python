@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def ADEM_occlusion(*args, **kwargs):
@@ -35,4 +35,4 @@ def ADEM_occlusion(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/toolbox/DEM/ADEM_occlusion.m)
   """
 
-  return _Runtime.call("ADEM_occlusion", *args, **kwargs, nargout=0)
+  return Runtime.call("ADEM_occlusion", *args, **kwargs, nargout=0)

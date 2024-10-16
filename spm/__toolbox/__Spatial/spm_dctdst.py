@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def spm_dctdst(*args, **kwargs):
@@ -49,4 +49,4 @@ def spm_dctdst(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/toolbox/Spatial/spm_dctdst.m)
   """
 
-  return _Runtime.call("spm_dctdst", *args, **kwargs)
+  return Runtime.call("spm_dctdst", *args, **kwargs)

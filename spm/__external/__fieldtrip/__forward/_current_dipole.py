@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _current_dipole(*args, **kwargs):
@@ -20,4 +20,4 @@ def _current_dipole(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/forward/private/current_dipole.m)
   """
 
-  return _Runtime.call("current_dipole", *args, **kwargs)
+  return Runtime.call("current_dipole", *args, **kwargs)

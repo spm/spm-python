@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _cstructdecode(*args, **kwargs):
@@ -10,4 +10,4 @@ def _cstructdecode(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/cstructdecode.m)
   """
 
-  return _Runtime.call("cstructdecode", *args, **kwargs)
+  return Runtime.call("cstructdecode", *args, **kwargs)

@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _wizard_base(*args, **kwargs):
@@ -12,4 +12,4 @@ def _wizard_base(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/private/wizard_base.m)
   """
 
-  return _Runtime.call("wizard_base", *args, **kwargs)
+  return Runtime.call("wizard_base", *args, **kwargs)

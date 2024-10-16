@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def ft_defaults(*args, **kwargs):
@@ -16,7 +16,6 @@ def ft_defaults(*args, **kwargs):
       ft_default.checkconfig       = string, can be 'pedantic', 'loose', 'silent' (default = 'loose')  
       ft_default.checkpath         = string, can be 'pedantic', 'once', 'no' (default = 'pedantic')  
       ft_default.checksize         = number in bytes, can be inf (default = 1e5)  
-      ft_default.checkstring       = string, can be 'yes' or 'no' (default = 'yes'), convert "strings" in cfg to 'chars'  
       ft_default.showlogo          = string, can be 'yes' or 'no' (default = 'yes')  
       ft_default.showcallinfo      = string, can be 'yes' or 'no' (default = 'yes')  
       ft_default.trackcallinfo     = string, can be 'yes' or 'no' (default = 'yes')  
@@ -51,4 +50,4 @@ def ft_defaults(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/ft_defaults.m)
   """
 
-  return _Runtime.call("ft_defaults", *args, **kwargs, nargout=0)
+  return Runtime.call("ft_defaults", *args, **kwargs, nargout=0)

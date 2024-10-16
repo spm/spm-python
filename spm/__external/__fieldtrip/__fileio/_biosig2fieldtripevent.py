@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _biosig2fieldtripevent(*args, **kwargs):
@@ -9,4 +9,4 @@ def _biosig2fieldtripevent(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/biosig2fieldtripevent.m)
   """
 
-  return _Runtime.call("biosig2fieldtripevent", *args, **kwargs)
+  return Runtime.call("biosig2fieldtripevent", *args, **kwargs)

@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def pp_settings(*args, **kwargs):
@@ -21,4 +21,4 @@ def pp_settings(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/toolbox/Spatial/pp_settings.m)
   """
 
-  return _Runtime.call("pp_settings", *args, **kwargs)
+  return Runtime.call("pp_settings", *args, **kwargs)

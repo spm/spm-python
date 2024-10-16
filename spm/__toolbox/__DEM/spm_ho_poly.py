@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def spm_ho_poly(*args, **kwargs):
@@ -17,4 +17,4 @@ def spm_ho_poly(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/toolbox/DEM/spm_ho_poly.m)
   """
 
-  return _Runtime.call("spm_ho_poly", *args, **kwargs)
+  return Runtime.call("spm_ho_poly", *args, **kwargs)

@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _ptxlocation(*args, **kwargs):
@@ -10,4 +10,4 @@ def _ptxlocation(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/toolbox/Spatial/private/ptxlocation.m)
   """
 
-  return _Runtime.call("ptxlocation", *args, **kwargs)
+  return Runtime.call("ptxlocation", *args, **kwargs)

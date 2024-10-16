@@ -1,7 +1,7 @@
-from spm.__wrap__ import _Runtime, _MatlabClassWrapper
+from spm.__wrapper__ import Runtime, MatlabClassWrapper
 
 
-class cfg_menu(_MatlabClassWrapper):
+class cfg_menu(MatlabClassWrapper):
   def __init__(self, *args, _objdict=None, **kwargs):
     """  This is the menu configuration item class  
      
@@ -57,7 +57,7 @@ class cfg_menu(_MatlabClassWrapper):
     """
 
     if _objdict is None:
-      _objdict = _Runtime.call("cfg_menu", *args, **kwargs)
+      _objdict = Runtime.call("cfg_menu", *args, **kwargs)
     super().__init__(_objdict)
 
   def cfg2struct(self, *args, **kwargs):
@@ -75,8 +75,7 @@ class cfg_menu(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/matlabbatch/@cfg_menu/cfg2struct.m)
     """
 
-    return _Runtime.call("cfg2struct", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("cfg2struct", self._as_matlab_object(), *args, **kwargs)
 
   def fieldnames(self, *args, **kwargs):
     """  function fn = fieldnames(item)  
@@ -92,8 +91,7 @@ class cfg_menu(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/matlabbatch/@cfg_menu/fieldnames.m)
     """
 
-    return _Runtime.call("fieldnames", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("fieldnames", self._as_matlab_object(), *args, **kwargs)
 
   def gencode_item(self, *args, **kwargs):
     """  function [str, tag, cind, ccnt] = gencode_item(item, tag, tagctx, stoptag, tropts)  
@@ -121,8 +119,7 @@ class cfg_menu(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/matlabbatch/@cfg_menu/gencode_item.m)
     """
 
-    return _Runtime.call("gencode_item", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("gencode_item", self._as_matlab_object(), *args, **kwargs)
 
   def setval(self, *args, **kwargs):
     """  function item = setval(item, val, dflag)  
@@ -142,8 +139,7 @@ class cfg_menu(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/matlabbatch/@cfg_menu/setval.m)
     """
 
-    return _Runtime.call("setval", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("setval", self._as_matlab_object(), *args, **kwargs)
 
   def showdetail(self, *args, **kwargs):
     """  function str = showdetail(item)  
@@ -159,8 +155,7 @@ class cfg_menu(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/matlabbatch/@cfg_menu/showdetail.m)
     """
 
-    return _Runtime.call("showdetail", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("showdetail", self._as_matlab_object(), *args, **kwargs)
 
   def showdoc(self, *args, **kwargs):
     """  function str = showdoc(item, indent)  
@@ -176,8 +171,7 @@ class cfg_menu(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/matlabbatch/@cfg_menu/showdoc.m)
     """
 
-    return _Runtime.call("showdoc", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("showdoc", self._as_matlab_object(), *args, **kwargs)
 
   def subs_fields(self, *args, **kwargs):
     """  function fnames = subs_fields(item)  
@@ -197,8 +191,7 @@ class cfg_menu(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/matlabbatch/@cfg_menu/subs_fields.m)
     """
 
-    return _Runtime.call("subs_fields", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("subs_fields", self._as_matlab_object(), *args, **kwargs)
 
   def subsasgn(self, *args, **kwargs):
     """  function item = subsasgn(item, subs, varargin)  
@@ -236,8 +229,7 @@ class cfg_menu(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/matlabbatch/@cfg_menu/subsasgn.m)
     """
 
-    return _Runtime.call("subsasgn", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("subsasgn", self._as_matlab_object(), *args, **kwargs)
 
   def subsasgn_check(self, *args, **kwargs):
     """  function [sts, val] = subsasgn_check(item,subs,val)  
@@ -253,8 +245,7 @@ class cfg_menu(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/matlabbatch/@cfg_menu/subsasgn_check.m)
     """
 
-    return _Runtime.call("subsasgn_check", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("subsasgn_check", self._as_matlab_object(), *args, **kwargs)
 
   def subsref(self, *args, **kwargs):
     """  function varargout = subsref(item, subs)  
@@ -283,6 +274,5 @@ class cfg_menu(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/matlabbatch/@cfg_menu/subsref.m)
     """
 
-    return _Runtime.call("subsref", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("subsref", self._as_matlab_object(), *args, **kwargs)
 

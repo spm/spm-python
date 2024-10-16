@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def ft_preproc_online_downsample_init(*args, **kwargs):
@@ -13,4 +13,4 @@ def ft_preproc_online_downsample_init(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/preproc/ft_preproc_online_downsample_init.m)
   """
 
-  return _Runtime.call("ft_preproc_online_downsample_init", *args, **kwargs)
+  return Runtime.call("ft_preproc_online_downsample_init", *args, **kwargs)

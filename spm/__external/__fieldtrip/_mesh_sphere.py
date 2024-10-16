@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _mesh_sphere(*args, **kwargs):
@@ -25,4 +25,4 @@ def _mesh_sphere(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/private/mesh_sphere.m)
   """
 
-  return _Runtime.call("mesh_sphere", *args, **kwargs)
+  return Runtime.call("mesh_sphere", *args, **kwargs)

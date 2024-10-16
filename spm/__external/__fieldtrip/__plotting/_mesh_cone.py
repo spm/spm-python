@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _mesh_cone(*args, **kwargs):
@@ -15,4 +15,4 @@ def _mesh_cone(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/plotting/private/mesh_cone.m)
   """
 
-  return _Runtime.call("mesh_cone", *args, **kwargs)
+  return Runtime.call("mesh_cone", *args, **kwargs)

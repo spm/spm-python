@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _tritrisect(*args, **kwargs):
@@ -11,4 +11,4 @@ def _tritrisect(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/private/tritrisect.m)
   """
 
-  return _Runtime.call("tritrisect", *args, **kwargs)
+  return Runtime.call("tritrisect", *args, **kwargs)

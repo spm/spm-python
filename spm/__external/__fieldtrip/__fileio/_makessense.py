@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _makessense(*args, **kwargs):
@@ -14,4 +14,4 @@ def _makessense(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/makessense.m)
   """
 
-  return _Runtime.call("makessense", *args, **kwargs)
+  return Runtime.call("makessense", *args, **kwargs)

@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def bemcp_example(*args, **kwargs):
@@ -26,4 +26,4 @@ def bemcp_example(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/bemcp/bemcp_example.m)
   """
 
-  return _Runtime.call("bemcp_example", *args, **kwargs, nargout=0)
+  return Runtime.call("bemcp_example", *args, **kwargs, nargout=0)

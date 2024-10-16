@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _channelconnectivity(*args, **kwargs):
@@ -11,4 +11,4 @@ def _channelconnectivity(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/private/channelconnectivity.m)
   """
 
-  return _Runtime.call("channelconnectivity", *args, **kwargs)
+  return Runtime.call("channelconnectivity", *args, **kwargs)

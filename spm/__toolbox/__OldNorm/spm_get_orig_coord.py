@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def spm_get_orig_coord(*args, **kwargs):
@@ -21,4 +21,4 @@ def spm_get_orig_coord(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/toolbox/OldNorm/spm_get_orig_coord.m)
   """
 
-  return _Runtime.call("spm_get_orig_coord", *args, **kwargs)
+  return Runtime.call("spm_get_orig_coord", *args, **kwargs)

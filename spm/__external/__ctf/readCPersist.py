@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def readCPersist(*args, **kwargs):
@@ -10,4 +10,4 @@ def readCPersist(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/ctf/readCPersist.m)
   """
 
-  return _Runtime.call("readCPersist", *args, **kwargs)
+  return Runtime.call("readCPersist", *args, **kwargs)

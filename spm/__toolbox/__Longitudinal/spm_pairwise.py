@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def spm_pairwise(*args, **kwargs):
@@ -11,4 +11,4 @@ def spm_pairwise(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/toolbox/Longitudinal/spm_pairwise.m)
   """
 
-  return _Runtime.call("spm_pairwise", *args, **kwargs)
+  return Runtime.call("spm_pairwise", *args, **kwargs)

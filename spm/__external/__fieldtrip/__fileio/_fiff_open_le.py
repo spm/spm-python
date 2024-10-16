@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _fiff_open_le(*args, **kwargs):
@@ -18,4 +18,4 @@ def _fiff_open_le(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/fiff_open_le.m)
   """
 
-  return _Runtime.call("fiff_open_le", *args, **kwargs)
+  return Runtime.call("fiff_open_le", *args, **kwargs)

@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def ft_sourceanalysis(*args, **kwargs):
@@ -12,8 +12,8 @@ def ft_sourceanalysis(*args, **kwargs):
      
     where the second input argument with the data should be organised in a structure  
     as obtained from the FT_FREQANALYSIS or FT_TIMELOCKANALYSIS function. The  
-    configuration "cfg" is a structure containing the specification of the head model,  
-    the source model, and other options.  
+    configuration "cfg" is a structure containing information about source positions  
+    and other options.  
      
     The different source reconstruction algorithms that are implemented are  
       cfg.method     = 'lcmv'    linear constrained minimum variance beamformer  
@@ -131,4 +131,4 @@ def ft_sourceanalysis(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/ft_sourceanalysis.m)
   """
 
-  return _Runtime.call("ft_sourceanalysis", *args, **kwargs)
+  return Runtime.call("ft_sourceanalysis", *args, **kwargs)

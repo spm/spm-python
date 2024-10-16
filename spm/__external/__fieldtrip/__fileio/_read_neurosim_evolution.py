@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _read_neurosim_evolution(*args, **kwargs):
@@ -18,4 +18,4 @@ def _read_neurosim_evolution(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/read_neurosim_evolution.m)
   """
 
-  return _Runtime.call("read_neurosim_evolution", *args, **kwargs)
+  return Runtime.call("read_neurosim_evolution", *args, **kwargs)

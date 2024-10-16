@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def keepfields(*args, **kwargs):
@@ -13,4 +13,4 @@ def keepfields(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/utilities/keepfields.m)
   """
 
-  return _Runtime.call("keepfields", *args, **kwargs)
+  return Runtime.call("keepfields", *args, **kwargs)

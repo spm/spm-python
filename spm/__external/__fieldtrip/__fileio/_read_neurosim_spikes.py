@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _read_neurosim_spikes(*args, **kwargs):
@@ -25,4 +25,4 @@ def _read_neurosim_spikes(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/read_neurosim_spikes.m)
   """
 
-  return _Runtime.call("read_neurosim_spikes", *args, **kwargs)
+  return Runtime.call("read_neurosim_spikes", *args, **kwargs)

@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _grid2transform(*args, **kwargs):
@@ -12,4 +12,4 @@ def _grid2transform(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/private/grid2transform.m)
   """
 
-  return _Runtime.call("grid2transform", *args, **kwargs)
+  return Runtime.call("grid2transform", *args, **kwargs)

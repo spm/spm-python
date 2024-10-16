@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _plinprojn(*args, **kwargs):
@@ -19,4 +19,4 @@ def _plinprojn(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/utilities/private/plinprojn.m)
   """
 
-  return _Runtime.call("plinprojn", *args, **kwargs)
+  return Runtime.call("plinprojn", *args, **kwargs)

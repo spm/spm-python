@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _meg_ini(*args, **kwargs):
@@ -35,4 +35,4 @@ def _meg_ini(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/forward/private/meg_ini.m)
   """
 
-  return _Runtime.call("meg_ini", *args, **kwargs)
+  return Runtime.call("meg_ini", *args, **kwargs)

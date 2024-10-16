@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def FEP_lorenz_surprise(*args, **kwargs):
@@ -27,4 +27,4 @@ def FEP_lorenz_surprise(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/toolbox/DEM/FEP_lorenz_surprise.m)
   """
 
-  return _Runtime.call("FEP_lorenz_surprise", *args, **kwargs, nargout=0)
+  return Runtime.call("FEP_lorenz_surprise", *args, **kwargs, nargout=0)

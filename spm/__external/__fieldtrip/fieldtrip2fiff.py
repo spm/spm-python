@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def fieldtrip2fiff(*args, **kwargs):
@@ -49,4 +49,4 @@ def fieldtrip2fiff(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/fieldtrip2fiff.m)
   """
 
-  return _Runtime.call("fieldtrip2fiff", *args, **kwargs, nargout=0)
+  return Runtime.call("fieldtrip2fiff", *args, **kwargs, nargout=0)

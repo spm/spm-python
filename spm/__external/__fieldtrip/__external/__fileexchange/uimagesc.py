@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def uimagesc(*args, **kwargs):
@@ -20,4 +20,4 @@ def uimagesc(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/external/fileexchange/uimagesc.m)
   """
 
-  return _Runtime.call("uimagesc", *args, **kwargs)
+  return Runtime.call("uimagesc", *args, **kwargs)

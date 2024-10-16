@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _inifile(*args, **kwargs):
@@ -62,4 +62,4 @@ def _inifile(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/inifile.m)
   """
 
-  return _Runtime.call("inifile", *args, **kwargs)
+  return Runtime.call("inifile", *args, **kwargs)

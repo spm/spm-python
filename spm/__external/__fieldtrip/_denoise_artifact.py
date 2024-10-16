@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _denoise_artifact(*args, **kwargs):
@@ -11,4 +11,4 @@ def _denoise_artifact(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/private/denoise_artifact.m)
   """
 
-  return _Runtime.call("denoise_artifact", *args, **kwargs)
+  return Runtime.call("denoise_artifact", *args, **kwargs)

@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def spm_boxcars(*args, **kwargs):
@@ -19,4 +19,4 @@ def spm_boxcars(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/toolbox/mixture/spm_boxcars.m)
   """
 
-  return _Runtime.call("spm_boxcars", *args, **kwargs)
+  return Runtime.call("spm_boxcars", *args, **kwargs)

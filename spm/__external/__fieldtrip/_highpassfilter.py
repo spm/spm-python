@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _highpassfilter(*args, **kwargs):
@@ -29,4 +29,4 @@ def _highpassfilter(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/private/highpassfilter.m)
   """
 
-  return _Runtime.call("highpassfilter", *args, **kwargs)
+  return Runtime.call("highpassfilter", *args, **kwargs)

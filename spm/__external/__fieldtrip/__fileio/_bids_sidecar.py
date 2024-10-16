@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _bids_sidecar(*args, **kwargs):
@@ -39,4 +39,4 @@ def _bids_sidecar(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/bids_sidecar.m)
   """
 
-  return _Runtime.call("bids_sidecar", *args, **kwargs)
+  return Runtime.call("bids_sidecar", *args, **kwargs)

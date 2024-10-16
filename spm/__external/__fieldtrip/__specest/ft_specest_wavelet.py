@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def ft_specest_wavelet(*args, **kwargs):
@@ -32,4 +32,4 @@ def ft_specest_wavelet(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/specest/ft_specest_wavelet.m)
   """
 
-  return _Runtime.call("ft_specest_wavelet", *args, **kwargs)
+  return Runtime.call("ft_specest_wavelet", *args, **kwargs)

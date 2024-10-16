@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def mne_find_source_space_hemi(*args, **kwargs):
@@ -14,4 +14,4 @@ def mne_find_source_space_hemi(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/mne/mne_find_source_space_hemi.m)
   """
 
-  return _Runtime.call("mne_find_source_space_hemi", *args, **kwargs)
+  return Runtime.call("mne_find_source_space_hemi", *args, **kwargs)

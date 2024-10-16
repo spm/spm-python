@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def spass2fieldtrip(*args, **kwargs):
@@ -40,4 +40,4 @@ def spass2fieldtrip(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/spass2fieldtrip.m)
   """
 
-  return _Runtime.call("spass2fieldtrip", *args, **kwargs)
+  return Runtime.call("spass2fieldtrip", *args, **kwargs)

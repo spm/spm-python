@@ -100,6 +100,7 @@ from .spm_cfg_setlevel import spm_cfg_setlevel
 from .spm_cfg_smooth import spm_cfg_smooth
 from .spm_cfg_split import spm_cfg_split
 from .spm_cfg_st import spm_cfg_st
+from .spm_cfg_static_tools import spm_cfg_static_tools
 from .spm_cfg_tissue_volumes import spm_cfg_tissue_volumes
 from .spm_cfg_voi import spm_cfg_voi
 from .spm_make_standalone import spm_make_standalone

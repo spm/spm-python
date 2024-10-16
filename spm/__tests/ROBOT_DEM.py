@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def ROBOT_DEM(*args, **kwargs):
@@ -9,4 +9,4 @@ def ROBOT_DEM(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/tests/ROBOT_DEM.m)
   """
 
-  return _Runtime.call("ROBOT_DEM", *args, **kwargs)
+  return Runtime.call("ROBOT_DEM", *args, **kwargs)

@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _fiff_getpos(*args, **kwargs):
@@ -17,4 +17,4 @@ def _fiff_getpos(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/toolbox/TSSS/private/fiff_getpos.m)
   """
 
-  return _Runtime.call("fiff_getpos", *args, **kwargs)
+  return Runtime.call("fiff_getpos", *args, **kwargs)

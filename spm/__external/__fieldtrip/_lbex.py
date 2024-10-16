@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _lbex(*args, **kwargs):
@@ -11,4 +11,4 @@ def _lbex(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/private/lbex.m)
   """
 
-  return _Runtime.call("lbex", *args, **kwargs)
+  return Runtime.call("lbex", *args, **kwargs)

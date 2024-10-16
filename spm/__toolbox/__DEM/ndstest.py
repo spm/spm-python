@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def ndstest(*args, **kwargs):
@@ -14,4 +14,4 @@ def ndstest(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/toolbox/DEM/ndstest.m)
   """
 
-  return _Runtime.call("ndstest", *args, **kwargs)
+  return Runtime.call("ndstest", *args, **kwargs)

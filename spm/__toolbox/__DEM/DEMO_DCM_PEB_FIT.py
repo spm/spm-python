@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def DEMO_DCM_PEB_FIT(*args, **kwargs):
@@ -23,4 +23,4 @@ def DEMO_DCM_PEB_FIT(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/toolbox/DEM/DEMO_DCM_PEB_FIT.m)
   """
 
-  return _Runtime.call("DEMO_DCM_PEB_FIT", *args, **kwargs, nargout=0)
+  return Runtime.call("DEMO_DCM_PEB_FIT", *args, **kwargs, nargout=0)

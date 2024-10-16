@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _db_insert(*args, **kwargs):
@@ -12,4 +12,4 @@ def _db_insert(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/db_insert.m)
   """
 
-  return _Runtime.call("db_insert", *args, **kwargs, nargout=0)
+  return Runtime.call("db_insert", *args, **kwargs, nargout=0)

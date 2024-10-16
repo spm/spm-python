@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def spm_standalone(*args, **kwargs):
@@ -16,4 +16,4 @@ def spm_standalone(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/spm_standalone.m)
   """
 
-  return _Runtime.call("spm_standalone", *args, **kwargs, nargout=0)
+  return Runtime.call("spm_standalone", *args, **kwargs, nargout=0)

@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def dccnpath(*args, **kwargs):
@@ -34,4 +34,4 @@ def dccnpath(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/utilities/dccnpath.m)
   """
 
-  return _Runtime.call("dccnpath", *args, **kwargs)
+  return Runtime.call("dccnpath", *args, **kwargs)

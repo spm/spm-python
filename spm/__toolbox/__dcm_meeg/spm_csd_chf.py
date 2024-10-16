@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def spm_csd_chf(*args, **kwargs):
@@ -17,4 +17,4 @@ def spm_csd_chf(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/toolbox/dcm_meeg/spm_csd_chf.m)
   """
 
-  return _Runtime.call("spm_csd_chf", *args, **kwargs)
+  return Runtime.call("spm_csd_chf", *args, **kwargs)

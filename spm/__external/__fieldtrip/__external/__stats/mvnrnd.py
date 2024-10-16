@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def mvnrnd(*args, **kwargs):
@@ -25,4 +25,4 @@ def mvnrnd(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/external/stats/mvnrnd.m)
   """
 
-  return _Runtime.call("mvnrnd", *args, **kwargs)
+  return Runtime.call("mvnrnd", *args, **kwargs)

@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def gencode(*args, **kwargs):
@@ -37,4 +37,4 @@ def gencode(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/matlabbatch/gencode.m)
   """
 
-  return _Runtime.call("gencode", *args, **kwargs)
+  return Runtime.call("gencode", *args, **kwargs)

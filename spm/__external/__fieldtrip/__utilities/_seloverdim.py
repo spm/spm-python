@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _seloverdim(*args, **kwargs):
@@ -9,4 +9,4 @@ def _seloverdim(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/utilities/private/seloverdim.m)
   """
 
-  return _Runtime.call("seloverdim", *args, **kwargs)
+  return Runtime.call("seloverdim", *args, **kwargs)

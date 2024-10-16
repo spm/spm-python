@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _tal2mni(*args, **kwargs):
@@ -14,4 +14,4 @@ def _tal2mni(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/private/tal2mni.m)
   """
 
-  return _Runtime.call("tal2mni", *args, **kwargs)
+  return Runtime.call("tal2mni", *args, **kwargs)

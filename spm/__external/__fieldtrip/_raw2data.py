@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _raw2data(*args, **kwargs):
@@ -12,4 +12,4 @@ def _raw2data(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/private/raw2data.m)
   """
 
-  return _Runtime.call("raw2data", *args, **kwargs)
+  return Runtime.call("raw2data", *args, **kwargs)

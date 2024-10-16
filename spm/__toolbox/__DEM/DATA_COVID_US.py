@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def DATA_COVID_US(*args, **kwargs):
@@ -30,4 +30,4 @@ def DATA_COVID_US(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/toolbox/DEM/DATA_COVID_US.m)
   """
 
-  return _Runtime.call("DATA_COVID_US", *args, **kwargs)
+  return Runtime.call("DATA_COVID_US", *args, **kwargs)

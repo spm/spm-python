@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def cfg_run_assignin(*args, **kwargs):
@@ -14,4 +14,4 @@ def cfg_run_assignin(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/matlabbatch/cfg_basicio/cfg_run_assignin.m)
   """
 
-  return _Runtime.call("cfg_run_assignin", *args, **kwargs, nargout=0)
+  return Runtime.call("cfg_run_assignin", *args, **kwargs, nargout=0)

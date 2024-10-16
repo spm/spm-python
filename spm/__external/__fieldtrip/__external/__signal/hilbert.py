@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def hilbert(*args, **kwargs):
@@ -14,4 +14,4 @@ def hilbert(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/external/signal/hilbert.m)
   """
 
-  return _Runtime.call("hilbert", *args, **kwargs)
+  return Runtime.call("hilbert", *args, **kwargs)

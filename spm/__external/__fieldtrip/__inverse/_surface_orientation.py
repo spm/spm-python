@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _surface_orientation(*args, **kwargs):
@@ -16,4 +16,4 @@ def _surface_orientation(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/inverse/private/surface_orientation.m)
   """
 
-  return _Runtime.call("surface_orientation", *args, **kwargs)
+  return Runtime.call("surface_orientation", *args, **kwargs)

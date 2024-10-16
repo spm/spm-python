@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def imotions2fieldtrip(*args, **kwargs):
@@ -32,4 +32,4 @@ def imotions2fieldtrip(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/imotions2fieldtrip.m)
   """
 
-  return _Runtime.call("imotions2fieldtrip", *args, **kwargs)
+  return Runtime.call("imotions2fieldtrip", *args, **kwargs)

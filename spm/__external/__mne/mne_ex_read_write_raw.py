@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def mne_ex_read_write_raw(*args, **kwargs):
@@ -11,4 +11,4 @@ def mne_ex_read_write_raw(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/mne/mne_ex_read_write_raw.m)
   """
 
-  return _Runtime.call("mne_ex_read_write_raw", *args, **kwargs, nargout=0)
+  return Runtime.call("mne_ex_read_write_raw", *args, **kwargs, nargout=0)

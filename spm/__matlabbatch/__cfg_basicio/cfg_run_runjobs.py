@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def cfg_run_runjobs(*args, **kwargs):
@@ -17,4 +17,4 @@ def cfg_run_runjobs(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/matlabbatch/cfg_basicio/cfg_run_runjobs.m)
   """
 
-  return _Runtime.call("cfg_run_runjobs", *args, **kwargs)
+  return Runtime.call("cfg_run_runjobs", *args, **kwargs)

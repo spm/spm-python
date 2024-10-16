@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _bids_datafile(*args, **kwargs):
@@ -13,4 +13,4 @@ def _bids_datafile(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/bids_datafile.m)
   """
 
-  return _Runtime.call("bids_datafile", *args, **kwargs)
+  return Runtime.call("bids_datafile", *args, **kwargs)

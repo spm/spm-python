@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _randomseed(*args, **kwargs):
@@ -22,4 +22,4 @@ def _randomseed(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/utilities/private/randomseed.m)
   """
 
-  return _Runtime.call("randomseed", *args, **kwargs)
+  return Runtime.call("randomseed", *args, **kwargs)

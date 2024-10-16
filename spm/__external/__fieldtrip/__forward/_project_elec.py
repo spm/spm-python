@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _project_elec(*args, **kwargs):
@@ -17,4 +17,4 @@ def _project_elec(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/forward/private/project_elec.m)
   """
 
-  return _Runtime.call("project_elec", *args, **kwargs)
+  return Runtime.call("project_elec", *args, **kwargs)

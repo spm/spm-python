@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def nearest(*args, **kwargs):
@@ -31,4 +31,4 @@ def nearest(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/utilities/nearest.m)
   """
 
-  return _Runtime.call("nearest", *args, **kwargs)
+  return Runtime.call("nearest", *args, **kwargs)

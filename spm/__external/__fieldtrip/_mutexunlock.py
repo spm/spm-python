@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _mutexunlock(*args, **kwargs):
@@ -13,4 +13,4 @@ def _mutexunlock(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/private/mutexunlock.m)
   """
 
-  return _Runtime.call("mutexunlock", *args, **kwargs, nargout=0)
+  return Runtime.call("mutexunlock", *args, **kwargs, nargout=0)

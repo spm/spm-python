@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _closedf(*args, **kwargs):
@@ -12,4 +12,4 @@ def _closedf(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/private/closedf.m)
   """
 
-  return _Runtime.call("closedf", *args, **kwargs)
+  return Runtime.call("closedf", *args, **kwargs)

@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def ft_electroderealign(*args, **kwargs):
@@ -145,4 +145,4 @@ def ft_electroderealign(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/ft_electroderealign.m)
   """
 
-  return _Runtime.call("ft_electroderealign", *args, **kwargs)
+  return Runtime.call("ft_electroderealign", *args, **kwargs)

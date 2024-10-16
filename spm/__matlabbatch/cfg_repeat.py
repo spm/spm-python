@@ -1,7 +1,7 @@
-from spm.__wrap__ import _Runtime, _MatlabClassWrapper
+from spm.__wrapper__ import Runtime, MatlabClassWrapper
 
 
-class cfg_repeat(_MatlabClassWrapper):
+class cfg_repeat(MatlabClassWrapper):
   def __init__(self, *args, _objdict=None, **kwargs):
     """  This is the repeat configuration item class  
      
@@ -70,7 +70,7 @@ class cfg_repeat(_MatlabClassWrapper):
     """
 
     if _objdict is None:
-      _objdict = _Runtime.call("cfg_repeat", *args, **kwargs)
+      _objdict = Runtime.call("cfg_repeat", *args, **kwargs)
     super().__init__(_objdict)
 
   def all_leafs(self, *args, **kwargs):
@@ -90,8 +90,7 @@ class cfg_repeat(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/matlabbatch/@cfg_repeat/all_leafs.m)
     """
 
-    return _Runtime.call("all_leafs", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("all_leafs", self._as_matlab_object(), *args, **kwargs)
 
   def all_set(self, *args, **kwargs):
     """  function ok = all_set(item)  
@@ -116,8 +115,7 @@ class cfg_repeat(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/matlabbatch/@cfg_repeat/all_set.m)
     """
 
-    return _Runtime.call("all_set", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("all_set", self._as_matlab_object(), *args, **kwargs)
 
   def all_set_item(self, *args, **kwargs):
     """  function ok = all_set_item(item)  
@@ -134,8 +132,7 @@ class cfg_repeat(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/matlabbatch/@cfg_repeat/all_set_item.m)
     """
 
-    return _Runtime.call("all_set_item", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("all_set_item", self._as_matlab_object(), *args, **kwargs)
 
   def cfg2jobsubs(self, *args, **kwargs):
     """  function jsubs = cfg2jobsubs(item, subs)  
@@ -152,8 +149,7 @@ class cfg_repeat(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/matlabbatch/@cfg_repeat/cfg2jobsubs.m)
     """
 
-    return _Runtime.call("cfg2jobsubs", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("cfg2jobsubs", self._as_matlab_object(), *args, **kwargs)
 
   def cfg2struct(self, *args, **kwargs):
     """  function sitem = cfg2struct(item)  
@@ -171,8 +167,7 @@ class cfg_repeat(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/matlabbatch/@cfg_repeat/cfg2struct.m)
     """
 
-    return _Runtime.call("cfg2struct", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("cfg2struct", self._as_matlab_object(), *args, **kwargs)
 
   def checksubs_job(self, *args, **kwargs):
     """  function [sts vind] = checksubs_job(item, subs, dflag)  
@@ -193,8 +188,7 @@ class cfg_repeat(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/matlabbatch/@cfg_repeat/checksubs_job.m)
     """
 
-    return _Runtime.call("checksubs_job", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("checksubs_job", self._as_matlab_object(), *args, **kwargs)
 
   def clearval(self, *args, **kwargs):
     """  function item = clearval(item, dflag)  
@@ -213,8 +207,7 @@ class cfg_repeat(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/matlabbatch/@cfg_repeat/clearval.m)
     """
 
-    return _Runtime.call("clearval", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("clearval", self._as_matlab_object(), *args, **kwargs)
 
   def expand(self, *args, **kwargs):
     """  function [item, sts] = expand(item, eflag, tropts)  
@@ -254,8 +247,7 @@ class cfg_repeat(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/matlabbatch/@cfg_repeat/expand.m)
     """
 
-    return _Runtime.call("expand", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("expand", self._as_matlab_object(), *args, **kwargs)
 
   def fieldnames(self, *args, **kwargs):
     """  function fn = fieldnames(item)  
@@ -271,8 +263,7 @@ class cfg_repeat(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/matlabbatch/@cfg_repeat/fieldnames.m)
     """
 
-    return _Runtime.call("fieldnames", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("fieldnames", self._as_matlab_object(), *args, **kwargs)
 
   def fillvals(self, *args, **kwargs):
     """  function [item, inputs] = fillvals(item, inputs, infcn)  
@@ -297,8 +288,7 @@ class cfg_repeat(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/matlabbatch/@cfg_repeat/fillvals.m)
     """
 
-    return _Runtime.call("fillvals", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("fillvals", self._as_matlab_object(), *args, **kwargs)
 
   def gencode_item(self, *args, **kwargs):
     """  function [str, tag, cind, ccnt] = gencode_item(item, tag, tagctx, stoptag, tropts)  
@@ -327,8 +317,7 @@ class cfg_repeat(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/matlabbatch/@cfg_repeat/gencode_item.m)
     """
 
-    return _Runtime.call("gencode_item", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("gencode_item", self._as_matlab_object(), *args, **kwargs)
 
   def gettag(self, *args, **kwargs):
     """  function tag = gettag(item)  
@@ -345,8 +334,7 @@ class cfg_repeat(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/matlabbatch/@cfg_repeat/gettag.m)
     """
 
-    return _Runtime.call("gettag", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("gettag", self._as_matlab_object(), *args, **kwargs)
 
   def harvest(self, *args, **kwargs):
     """  function [tag, val, typ, dep, chk, cj] = harvest(item, cj, dflag, rflag)  
@@ -376,8 +364,7 @@ class cfg_repeat(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/matlabbatch/@cfg_repeat/harvest.m)
     """
 
-    return _Runtime.call("harvest", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("harvest", self._as_matlab_object(), *args, **kwargs)
 
   def initialise(self, *args, **kwargs):
     """  function item = initialise(item, val, dflag)  
@@ -404,8 +391,7 @@ class cfg_repeat(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/matlabbatch/@cfg_repeat/initialise.m)
     """
 
-    return _Runtime.call("initialise", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("initialise", self._as_matlab_object(), *args, **kwargs)
 
   def list(self, *args, **kwargs):
     """  function [id, stop, val] = list(item, spec, tropts, fn)  
@@ -463,8 +449,7 @@ class cfg_repeat(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/matlabbatch/@cfg_repeat/list.m)
     """
 
-    return _Runtime.call("list", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("list", self._as_matlab_object(), *args, **kwargs)
 
   def setval(self, *args, **kwargs):
     """  function item = setval(item, val, dflag)  
@@ -491,8 +476,7 @@ class cfg_repeat(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/matlabbatch/@cfg_repeat/setval.m)
     """
 
-    return _Runtime.call("setval", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("setval", self._as_matlab_object(), *args, **kwargs)
 
   def showdetail(self, *args, **kwargs):
     """  function str = showdetail(item)  
@@ -508,8 +492,7 @@ class cfg_repeat(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/matlabbatch/@cfg_repeat/showdetail.m)
     """
 
-    return _Runtime.call("showdetail", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("showdetail", self._as_matlab_object(), *args, **kwargs)
 
   def showdoc(self, *args, **kwargs):
     """  function str = showdoc(item, indent)  
@@ -527,8 +510,7 @@ class cfg_repeat(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/matlabbatch/@cfg_repeat/showdoc.m)
     """
 
-    return _Runtime.call("showdoc", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("showdoc", self._as_matlab_object(), *args, **kwargs)
 
   def showmydoc(self, *args, **kwargs):
     """  function str = showmydoc(item, indent)  
@@ -545,8 +527,7 @@ class cfg_repeat(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/matlabbatch/@cfg_repeat/showmydoc.m)
     """
 
-    return _Runtime.call("showmydoc", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("showmydoc", self._as_matlab_object(), *args, **kwargs)
 
   def subs_fields(self, *args, **kwargs):
     """  function fnames = subs_fields(item)  
@@ -566,8 +547,7 @@ class cfg_repeat(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/matlabbatch/@cfg_repeat/subs_fields.m)
     """
 
-    return _Runtime.call("subs_fields", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("subs_fields", self._as_matlab_object(), *args, **kwargs)
 
   def subsasgn(self, *args, **kwargs):
     """  function item = subsasgn(item, subs, varargin)  
@@ -605,8 +585,7 @@ class cfg_repeat(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/matlabbatch/@cfg_repeat/subsasgn.m)
     """
 
-    return _Runtime.call("subsasgn", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("subsasgn", self._as_matlab_object(), *args, **kwargs)
 
   def subsasgn_check(self, *args, **kwargs):
     """  function [sts, val] = subsasgn_check(item,subs,val)  
@@ -621,8 +600,7 @@ class cfg_repeat(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/matlabbatch/@cfg_repeat/subsasgn_check.m)
     """
 
-    return _Runtime.call("subsasgn_check", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("subsasgn_check", self._as_matlab_object(), *args, **kwargs)
 
   def subsasgn_job(self, *args, **kwargs):
     """  function varargout = subsasgn_job(item, subs)  
@@ -644,8 +622,7 @@ class cfg_repeat(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/matlabbatch/@cfg_repeat/subsasgn_job.m)
     """
 
-    return _Runtime.call("subsasgn_job", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("subsasgn_job", self._as_matlab_object(), *args, **kwargs)
 
   def subsref(self, *args, **kwargs):
     """  function varargout = subsref(item, subs)  
@@ -674,8 +651,7 @@ class cfg_repeat(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/matlabbatch/@cfg_repeat/subsref.m)
     """
 
-    return _Runtime.call("subsref", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("subsref", self._as_matlab_object(), *args, **kwargs)
 
   def subsref_job(self, *args, **kwargs):
     """  function [ritem varargout] = subsref_job(item, subs, c0)  
@@ -701,8 +677,7 @@ class cfg_repeat(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/matlabbatch/@cfg_repeat/subsref_job.m)
     """
 
-    return _Runtime.call("subsref_job", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("subsref_job", self._as_matlab_object(), *args, **kwargs)
 
   def tag2cfgsubs(self, *args, **kwargs):
     """  function [id, stop, rtaglist] = tag2cfgsubs(item, taglist, finalspec, tropts)  
@@ -731,8 +706,7 @@ class cfg_repeat(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/matlabbatch/@cfg_repeat/tag2cfgsubs.m)
     """
 
-    return _Runtime.call("tag2cfgsubs", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("tag2cfgsubs", self._as_matlab_object(), *args, **kwargs)
 
   def tagnames(self, *args, **kwargs):
     """  function tn = tagnames(item, dflag)  
@@ -753,8 +727,7 @@ class cfg_repeat(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/matlabbatch/@cfg_repeat/tagnames.m)
     """
 
-    return _Runtime.call("tagnames", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("tagnames", self._as_matlab_object(), *args, **kwargs)
 
   def treepart(self, *args, **kwargs):
     """  function tname = treepart(item, dflag)  
@@ -771,8 +744,7 @@ class cfg_repeat(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/matlabbatch/@cfg_repeat/treepart.m)
     """
 
-    return _Runtime.call("treepart", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("treepart", self._as_matlab_object(), *args, **kwargs)
 
   def update_deps(self, *args, **kwargs):
     """  function item = update_deps(item, varargin)  
@@ -792,8 +764,7 @@ class cfg_repeat(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/matlabbatch/@cfg_repeat/update_deps.m)
     """
 
-    return _Runtime.call("update_deps", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("update_deps", self._as_matlab_object(), *args, **kwargs)
 
   def val2def(self, *args, **kwargs):
     """  function [item, defaults] = val2def(item, defaults, funname, deftag)  
@@ -814,6 +785,5 @@ class cfg_repeat(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/matlabbatch/@cfg_repeat/val2def.m)
     """
 
-    return _Runtime.call("val2def", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("val2def", self._as_matlab_object(), *args, **kwargs)
 

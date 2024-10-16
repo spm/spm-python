@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _determine_griddim(*args, **kwargs):
@@ -17,4 +17,4 @@ def _determine_griddim(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/private/determine_griddim.m)
   """
 
-  return _Runtime.call("determine_griddim", *args, **kwargs)
+  return Runtime.call("determine_griddim", *args, **kwargs)

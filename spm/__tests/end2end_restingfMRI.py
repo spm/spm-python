@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def end2end_restingfMRI(*args, **kwargs):
@@ -9,4 +9,4 @@ def end2end_restingfMRI(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/tests/end2end_restingfMRI.m)
   """
 
-  return _Runtime.call("end2end_restingfMRI", *args, **kwargs)
+  return Runtime.call("end2end_restingfMRI", *args, **kwargs)

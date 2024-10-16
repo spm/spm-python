@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _transfer2coeffs(*args, **kwargs):
@@ -10,4 +10,4 @@ def _transfer2coeffs(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/connectivity/private/transfer2coeffs.m)
   """
 
-  return _Runtime.call("transfer2coeffs", *args, **kwargs)
+  return Runtime.call("transfer2coeffs", *args, **kwargs)

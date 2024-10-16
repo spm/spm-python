@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _leadfield_simbio(*args, **kwargs):
@@ -17,4 +17,4 @@ def _leadfield_simbio(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/forward/private/leadfield_simbio.m)
   """
 
-  return _Runtime.call("leadfield_simbio", *args, **kwargs)
+  return Runtime.call("leadfield_simbio", *args, **kwargs)

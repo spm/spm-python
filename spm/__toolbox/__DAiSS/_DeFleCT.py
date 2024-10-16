@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _DeFleCT(*args, **kwargs):
@@ -37,4 +37,4 @@ def _DeFleCT(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/toolbox/DAiSS/private/DeFleCT.m)
   """
 
-  return _Runtime.call("DeFleCT", *args, **kwargs)
+  return Runtime.call("DeFleCT", *args, **kwargs)

@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def uimage(*args, **kwargs):
@@ -47,4 +47,4 @@ def uimage(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/external/fileexchange/uimage.m)
   """
 
-  return _Runtime.call("uimage", *args, **kwargs)
+  return Runtime.call("uimage", *args, **kwargs)

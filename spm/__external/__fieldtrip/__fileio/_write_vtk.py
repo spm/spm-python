@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _write_vtk(*args, **kwargs):
@@ -21,4 +21,4 @@ def _write_vtk(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/write_vtk.m)
   """
 
-  return _Runtime.call("write_vtk", *args, **kwargs, nargout=0)
+  return Runtime.call("write_vtk", *args, **kwargs, nargout=0)

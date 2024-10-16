@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _homer2opto(*args, **kwargs):
@@ -27,4 +27,4 @@ def _homer2opto(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/private/homer2opto.m)
   """
 
-  return _Runtime.call("homer2opto", *args, **kwargs)
+  return Runtime.call("homer2opto", *args, **kwargs)

@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _printor(*args, **kwargs):
@@ -11,4 +11,4 @@ def _printor(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/printor.m)
   """
 
-  return _Runtime.call("printor", *args, **kwargs)
+  return Runtime.call("printor", *args, **kwargs)

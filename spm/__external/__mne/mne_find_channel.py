@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def mne_find_channel(*args, **kwargs):
@@ -18,4 +18,4 @@ def mne_find_channel(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/mne/mne_find_channel.m)
   """
 
-  return _Runtime.call("mne_find_channel", *args, **kwargs)
+  return Runtime.call("mne_find_channel", *args, **kwargs)

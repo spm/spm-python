@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _isrealmat(*args, **kwargs):
@@ -13,4 +13,4 @@ def _isrealmat(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/private/isrealmat.m)
   """
 
-  return _Runtime.call("isrealmat", *args, **kwargs)
+  return Runtime.call("isrealmat", *args, **kwargs)

@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def spm_combinations(*args, **kwargs):
@@ -13,4 +13,4 @@ def spm_combinations(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/spm_combinations.m)
   """
 
-  return _Runtime.call("spm_combinations", *args, **kwargs)
+  return Runtime.call("spm_combinations", *args, **kwargs)

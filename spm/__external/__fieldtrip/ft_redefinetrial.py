@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def ft_redefinetrial(*args, **kwargs):
@@ -23,28 +23,17 @@ def ft_redefinetrial(*args, **kwargs):
     For realiging the time axes of all trials to a new reference time  
     point (i.e. change the definition for t=0) you can use the following  
     configuration option  
-      cfg.offset    = single number or Nx1 vector, by how many samples should the   
-                      time axes be shifted. i.e. if you want t=1 to be the new t=0,  
-                      set cfg.offset = -1*Fs (Fs is the sampling frequency in Hz).  
-                      If cfg.trials is defined, N must be equal to the original  
-                      number of trials or to the number of selected trials.  
+      cfg.offset    = single number or Nx1 vector, by how many samples should the time axes be shifted.  
+                      i.e. if you want t=1 to be the new t=0, set cfg.offset = -1*Fs (Fs is the sampling frequency in Hz).  
      
-    For selecting a specific subsection within trials (i.e. cut out a time window  
-    of interest) you can use the following configuration option  
-      cfg.toilim    = [tmin tmax], latency window in seconds, can be  
-                      Nx2 vector. If cfg.trials is defined, N must be equal  
-                      to the original number of trials or to the number of   
-                      selected trials.  
+    For selecting a specific subsection of (i.e. cut out a time window  
+    of interest) you can select a time window in seconds that is common  
+    in all trials  
+      cfg.toilim    = [tmin tmax] to specify a latency window in seconds, can be Nx2 vector  
      
     Alternatively you can specify the begin and end sample in each trial  
-      cfg.begsample = single number or Nx1 vector, expressed in samples relative  
-                      to the start of the input trial. If cfg.trials is defined,   
-                      N must be equal to the original number of trials or to the  
-                      number of selected trials.  
-      cfg.endsample = single number or Nx1 vector, expressed in samples relative  
-                      to the start of the input trial. If cfg.trials is defined,   
-                      N must be equal to the original number of trials or to the  
-                      number of selected trials.  
+      cfg.begsample = single number or Nx1 vector, expressed in samples relative to the start of the input trial  
+      cfg.endsample = single number or Nx1 vector, expressed in samples relative to the start of the input trial  
      
     Alternatively you can specify a new trial definition, expressed in  
     samples relative to the original recording  
@@ -78,4 +67,4 @@ def ft_redefinetrial(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/ft_redefinetrial.m)
   """
 
-  return _Runtime.call("ft_redefinetrial", *args, **kwargs)
+  return Runtime.call("ft_redefinetrial", *args, **kwargs)

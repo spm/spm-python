@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def ft_defacemesh(*args, **kwargs):
@@ -26,4 +26,4 @@ def ft_defacemesh(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/ft_defacemesh.m)
   """
 
-  return _Runtime.call("ft_defacemesh", *args, **kwargs)
+  return Runtime.call("ft_defacemesh", *args, **kwargs)

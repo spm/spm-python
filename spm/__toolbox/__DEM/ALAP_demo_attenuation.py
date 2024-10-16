@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def ALAP_demo_attenuation(*args, **kwargs):
@@ -20,4 +20,4 @@ def ALAP_demo_attenuation(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/toolbox/DEM/ALAP_demo_attenuation.m)
   """
 
-  return _Runtime.call("ALAP_demo_attenuation", *args, **kwargs, nargout=0)
+  return Runtime.call("ALAP_demo_attenuation", *args, **kwargs, nargout=0)

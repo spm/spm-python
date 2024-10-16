@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def match_val(*args, **kwargs):
@@ -15,4 +15,4 @@ def match_val(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/utilities/match_val.m)
   """
 
-  return _Runtime.call("match_val", *args, **kwargs)
+  return Runtime.call("match_val", *args, **kwargs)

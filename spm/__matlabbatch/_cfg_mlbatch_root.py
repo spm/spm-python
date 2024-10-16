@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _cfg_mlbatch_root(*args, **kwargs):
@@ -16,4 +16,4 @@ def _cfg_mlbatch_root(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/matlabbatch/private/cfg_mlbatch_root.m)
   """
 
-  return _Runtime.call("cfg_mlbatch_root", *args, **kwargs)
+  return Runtime.call("cfg_mlbatch_root", *args, **kwargs)

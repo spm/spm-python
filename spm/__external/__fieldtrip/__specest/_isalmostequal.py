@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _isalmostequal(*args, **kwargs):
@@ -25,4 +25,4 @@ def _isalmostequal(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/specest/private/isalmostequal.m)
   """
 
-  return _Runtime.call("isalmostequal", *args, **kwargs)
+  return Runtime.call("isalmostequal", *args, **kwargs)

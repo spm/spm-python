@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def ft_examplefunction(*args, **kwargs):
@@ -32,4 +32,4 @@ def ft_examplefunction(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/ft_examplefunction.m)
   """
 
-  return _Runtime.call("ft_examplefunction", *args, **kwargs)
+  return Runtime.call("ft_examplefunction", *args, **kwargs)

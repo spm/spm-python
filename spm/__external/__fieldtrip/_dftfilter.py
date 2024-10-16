@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _dftfilter(*args, **kwargs):
@@ -24,4 +24,4 @@ def _dftfilter(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/private/dftfilter.m)
   """
 
-  return _Runtime.call("dftfilter", *args, **kwargs)
+  return Runtime.call("dftfilter", *args, **kwargs)

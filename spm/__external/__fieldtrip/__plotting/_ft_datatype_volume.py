@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _ft_datatype_volume(*args, **kwargs):
@@ -61,4 +61,4 @@ def _ft_datatype_volume(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/plotting/private/ft_datatype_volume.m)
   """
 
-  return _Runtime.call("ft_datatype_volume", *args, **kwargs)
+  return Runtime.call("ft_datatype_volume", *args, **kwargs)

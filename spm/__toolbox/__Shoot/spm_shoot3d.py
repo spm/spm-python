@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def spm_shoot3d(*args, **kwargs):
@@ -61,4 +61,4 @@ def spm_shoot3d(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/toolbox/Shoot/spm_shoot3d.m)
   """
 
-  return _Runtime.call("spm_shoot3d", *args, **kwargs)
+  return Runtime.call("spm_shoot3d", *args, **kwargs)

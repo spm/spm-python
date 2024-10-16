@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _ctranspose2x2(*args, **kwargs):
@@ -8,4 +8,4 @@ def _ctranspose2x2(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/connectivity/private/ctranspose2x2.m)
   """
 
-  return _Runtime.call("ctranspose2x2", *args, **kwargs)
+  return Runtime.call("ctranspose2x2", *args, **kwargs)

@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _buffer_wait_dat(*args, **kwargs):
@@ -17,4 +17,4 @@ def _buffer_wait_dat(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/buffer_wait_dat.m)
   """
 
-  return _Runtime.call("buffer_wait_dat", *args, **kwargs)
+  return Runtime.call("buffer_wait_dat", *args, **kwargs)

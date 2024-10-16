@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _triangle4pt(*args, **kwargs):
@@ -43,4 +43,4 @@ def _triangle4pt(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/forward/private/triangle4pt.m)
   """
 
-  return _Runtime.call("triangle4pt", *args, **kwargs)
+  return Runtime.call("triangle4pt", *args, **kwargs)

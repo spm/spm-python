@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _loadama(*args, **kwargs):
@@ -14,4 +14,4 @@ def _loadama(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/loadama.m)
   """
 
-  return _Runtime.call("loadama", *args, **kwargs)
+  return Runtime.call("loadama", *args, **kwargs)

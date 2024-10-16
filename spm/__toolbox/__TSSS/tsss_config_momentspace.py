@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def tsss_config_momentspace(*args, **kwargs):
@@ -9,4 +9,4 @@ def tsss_config_momentspace(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/toolbox/TSSS/tsss_config_momentspace.m)
   """
 
-  return _Runtime.call("tsss_config_momentspace", *args, **kwargs)
+  return Runtime.call("tsss_config_momentspace", *args, **kwargs)

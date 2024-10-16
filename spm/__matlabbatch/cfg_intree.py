@@ -1,7 +1,7 @@
-from spm.__wrap__ import _Runtime, _MatlabClassWrapper
+from spm.__wrapper__ import Runtime, MatlabClassWrapper
 
 
-class cfg_intree(_MatlabClassWrapper):
+class cfg_intree(MatlabClassWrapper):
   def __init__(self, *args, _objdict=None, **kwargs):
     """  This is currently only a "marker" class that should be inherited by all  
     within-tree classes. It does not add fields and does not have methods.  
@@ -21,7 +21,7 @@ class cfg_intree(_MatlabClassWrapper):
     """
 
     if _objdict is None:
-      _objdict = _Runtime.call("cfg_intree", *args, **kwargs)
+      _objdict = Runtime.call("cfg_intree", *args, **kwargs)
     super().__init__(_objdict)
 
   def disp(self, *args, **kwargs):
@@ -38,8 +38,7 @@ class cfg_intree(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/matlabbatch/@cfg_intree/disp.m)
     """
 
-    return _Runtime.call("disp", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("disp", self._as_matlab_object(), *args, **kwargs)
 
   def display(self, *args, **kwargs):
     """  function display(varargin)  
@@ -55,6 +54,7 @@ class cfg_intree(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/matlabbatch/@cfg_intree/display.m)
     """
 
-    return _Runtime.call("display", self._as_matlab_object(), *args, **kwargs)
+    return Runtime.call("display", self._as_matlab_object(), *args, **kwargs)
 
+  __repr__ = display # Use display to represent objects
 

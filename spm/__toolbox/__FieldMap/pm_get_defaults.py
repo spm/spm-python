@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def pm_get_defaults(*args, **kwargs):
@@ -20,4 +20,4 @@ def pm_get_defaults(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/toolbox/FieldMap/pm_get_defaults.m)
   """
 
-  return _Runtime.call("pm_get_defaults", *args, **kwargs)
+  return Runtime.call("pm_get_defaults", *args, **kwargs)

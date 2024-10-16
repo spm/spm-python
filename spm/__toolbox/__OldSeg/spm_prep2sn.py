@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def spm_prep2sn(*args, **kwargs):
@@ -16,4 +16,4 @@ def spm_prep2sn(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/toolbox/OldSeg/spm_prep2sn.m)
   """
 
-  return _Runtime.call("spm_prep2sn", *args, **kwargs)
+  return Runtime.call("spm_prep2sn", *args, **kwargs)

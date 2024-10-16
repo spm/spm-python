@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def ft_badsegment(*args, **kwargs):
@@ -29,18 +29,16 @@ def ft_badsegment(*args, **kwargs):
      
     The configuration should contain  
       cfg.metric        = string, describes the metric that should be computed in summary mode for each channel in each trial, can be  
-                          'var'          variance within each channel (default)  
-                          'std'          standard deviation within each channel  
-                          'db'           decibel value within each channel  
-                          'mad'          median absolute deviation within each channel  
-                          '1/var'        inverse variance within each channel  
-                          'min'          minimum value in each channel  
-                          'max'          maximum value in each channel  
-                          'maxabs'       maximum absolute value in each channel  
-                          'range'        range from min to max in each channel  
-                          'kurtosis'     kurtosis, i.e. measure of peakedness of the amplitude distribution  
-                          'zvalue'       mean and std computed over all time and trials, per channel  
-                          'neighbexpvar' relative variance explained by neighboring channels in each trial  
+                          'var'       variance within each channel (default)  
+                          'std'       standard deviation within each channel  
+                          'mad'       median absolute deviation within each channel  
+                          '1/var'     inverse variance within each channel  
+                          'min'       minimum value in each channel  
+                          'max'       maximum value in each channel  
+                          'maxabs'    maximum absolute value in each channel  
+                          'range'     range from min to max in each channel  
+                          'kurtosis'  kurtosis, i.e. measure of peakedness of the amplitude distribution  
+                          'zvalue'    mean and std computed over all time and trials, per channel  
       cfg.threshold     = scalar, the optimal value depends on the methods and on the data characteristics  
       cfg.neighbours    = neighbourhood structure, see FT_PREPARE_NEIGHBOURS for details  
       cfg.nbdetect      = 'any', 'most', 'all', 'median', see below (default = 'median')  
@@ -64,10 +62,10 @@ def ft_badsegment(*args, **kwargs):
     You can also specify 'median', in which case the threshold is applied to the median  
     value over neighbours.  
      
-    See also FT_BADCHANNEL, FT_BADDATA, FT_REJECTVISUAL, FT_REJECTARTIFACT  
+    See also FT_BADCHANNEL, FT_REJECTVISUAL, FT_REJECTARTIFACT  
   
 
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/ft_badsegment.m)
   """
 
-  return _Runtime.call("ft_badsegment", *args, **kwargs)
+  return Runtime.call("ft_badsegment", *args, **kwargs)

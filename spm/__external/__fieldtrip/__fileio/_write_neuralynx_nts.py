@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _write_neuralynx_nts(*args, **kwargs):
@@ -13,4 +13,4 @@ def _write_neuralynx_nts(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/write_neuralynx_nts.m)
   """
 
-  return _Runtime.call("write_neuralynx_nts", *args, **kwargs, nargout=0)
+  return Runtime.call("write_neuralynx_nts", *args, **kwargs, nargout=0)

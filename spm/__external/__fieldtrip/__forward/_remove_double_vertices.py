@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _remove_double_vertices(*args, **kwargs):
@@ -16,4 +16,4 @@ def _remove_double_vertices(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/forward/private/remove_double_vertices.m)
   """
 
-  return _Runtime.call("remove_double_vertices", *args, **kwargs)
+  return Runtime.call("remove_double_vertices", *args, **kwargs)

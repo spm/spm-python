@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def cfg_cfg_basicio(*args, **kwargs):
@@ -16,4 +16,4 @@ def cfg_cfg_basicio(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/matlabbatch/cfg_basicio/cfg_cfg_basicio.m)
   """
 
-  return _Runtime.call("cfg_cfg_basicio", *args, **kwargs)
+  return Runtime.call("cfg_cfg_basicio", *args, **kwargs)

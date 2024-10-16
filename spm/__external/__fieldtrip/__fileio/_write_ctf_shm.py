@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _write_ctf_shm(*args, **kwargs):
@@ -15,4 +15,4 @@ def _write_ctf_shm(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/write_ctf_shm.m)
   """
 
-  return _Runtime.call("write_ctf_shm", *args, **kwargs)
+  return Runtime.call("write_ctf_shm", *args, **kwargs)

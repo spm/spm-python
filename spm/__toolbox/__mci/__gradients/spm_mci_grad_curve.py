@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def spm_mci_grad_curve(*args, **kwargs):
@@ -20,4 +20,4 @@ def spm_mci_grad_curve(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/toolbox/mci/gradients/spm_mci_grad_curve.m)
   """
 
-  return _Runtime.call("spm_mci_grad_curve", *args, **kwargs)
+  return Runtime.call("spm_mci_grad_curve", *args, **kwargs)

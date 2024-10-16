@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _output_image_mv_cva(*args, **kwargs):
@@ -10,4 +10,4 @@ def _output_image_mv_cva(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/toolbox/DAiSS/private/output_image_mv_cva.m)
   """
 
-  return _Runtime.call("output_image_mv_cva", *args, **kwargs)
+  return Runtime.call("output_image_mv_cva", *args, **kwargs)

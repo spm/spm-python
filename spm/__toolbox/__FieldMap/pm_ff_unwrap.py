@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def pm_ff_unwrap(*args, **kwargs):
@@ -42,4 +42,4 @@ def pm_ff_unwrap(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/toolbox/FieldMap/pm_ff_unwrap.m)
   """
 
-  return _Runtime.call("pm_ff_unwrap", *args, **kwargs)
+  return Runtime.call("pm_ff_unwrap", *args, **kwargs)

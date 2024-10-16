@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _find_mesh_edge(*args, **kwargs):
@@ -13,4 +13,4 @@ def _find_mesh_edge(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/private/find_mesh_edge.m)
   """
 
-  return _Runtime.call("find_mesh_edge", *args, **kwargs)
+  return Runtime.call("find_mesh_edge", *args, **kwargs)

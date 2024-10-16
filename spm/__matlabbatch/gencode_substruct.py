@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def gencode_substruct(*args, **kwargs):
@@ -33,4 +33,4 @@ def gencode_substruct(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/matlabbatch/gencode_substruct.m)
   """
 
-  return _Runtime.call("gencode_substruct", *args, **kwargs)
+  return Runtime.call("gencode_substruct", *args, **kwargs)

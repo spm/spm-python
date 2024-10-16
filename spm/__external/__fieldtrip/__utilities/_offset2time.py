@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _offset2time(*args, **kwargs):
@@ -21,4 +21,4 @@ def _offset2time(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/utilities/private/offset2time.m)
   """
 
-  return _Runtime.call("offset2time", *args, **kwargs)
+  return Runtime.call("offset2time", *args, **kwargs)

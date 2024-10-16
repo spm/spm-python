@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _filter_with_correction(*args, **kwargs):
@@ -28,4 +28,4 @@ def _filter_with_correction(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/preproc/private/filter_with_correction.m)
   """
 
-  return _Runtime.call("filter_with_correction", *args, **kwargs)
+  return Runtime.call("filter_with_correction", *args, **kwargs)

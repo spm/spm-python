@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def Markov_blankets_and_NESS(*args, **kwargs):
@@ -30,4 +30,4 @@ def Markov_blankets_and_NESS(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/toolbox/DEM/Markov_blankets_and_NESS.m)
   """
 
-  return _Runtime.call("Markov_blankets_and_NESS", *args, **kwargs, nargout=0)
+  return Runtime.call("Markov_blankets_and_NESS", *args, **kwargs, nargout=0)

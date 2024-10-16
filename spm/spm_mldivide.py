@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def spm_mldivide(*args, **kwargs):
@@ -20,4 +20,4 @@ def spm_mldivide(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/spm_mldivide.m)
   """
 
-  return _Runtime.call("spm_mldivide", *args, **kwargs)
+  return Runtime.call("spm_mldivide", *args, **kwargs)

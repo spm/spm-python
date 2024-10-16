@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def binopdf(*args, **kwargs):
@@ -13,4 +13,4 @@ def binopdf(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/external/stats/binopdf.m)
   """
 
-  return _Runtime.call("binopdf", *args, **kwargs)
+  return Runtime.call("binopdf", *args, **kwargs)

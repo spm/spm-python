@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _yellow(*args, **kwargs):
@@ -27,4 +27,4 @@ def _yellow(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/plotting/private/yellow.m)
   """
 
-  return _Runtime.call("yellow", *args, **kwargs)
+  return Runtime.call("yellow", *args, **kwargs)

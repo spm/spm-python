@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def spm_dem_reach_plot(*args, **kwargs):
@@ -12,4 +12,4 @@ def spm_dem_reach_plot(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/toolbox/DEM/spm_dem_reach_plot.m)
   """
 
-  return _Runtime.call("spm_dem_reach_plot", *args, **kwargs)
+  return Runtime.call("spm_dem_reach_plot", *args, **kwargs)

@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _fetch_url(*args, **kwargs):
@@ -16,4 +16,4 @@ def _fetch_url(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/fetch_url.m)
   """
 
-  return _Runtime.call("fetch_url", *args, **kwargs)
+  return Runtime.call("fetch_url", *args, **kwargs)

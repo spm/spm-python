@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def spm_MDP_urn(*args, **kwargs):
@@ -38,4 +38,4 @@ def spm_MDP_urn(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/toolbox/DEM/spm_MDP_urn.m)
   """
 
-  return _Runtime.call("spm_MDP_urn", *args, **kwargs, nargout=0)
+  return Runtime.call("spm_MDP_urn", *args, **kwargs, nargout=0)

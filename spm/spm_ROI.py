@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def spm_ROI(*args, **kwargs):
@@ -25,4 +25,4 @@ def spm_ROI(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/spm_ROI.m)
   """
 
-  return _Runtime.call("spm_ROI", *args, **kwargs)
+  return Runtime.call("spm_ROI", *args, **kwargs)

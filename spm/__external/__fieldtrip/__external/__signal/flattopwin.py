@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def flattopwin(*args, **kwargs):
@@ -31,4 +31,4 @@ def flattopwin(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/external/signal/flattopwin.m)
   """
 
-  return _Runtime.call("flattopwin", *args, **kwargs)
+  return Runtime.call("flattopwin", *args, **kwargs)

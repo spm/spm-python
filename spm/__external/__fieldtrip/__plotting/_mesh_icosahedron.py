@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _mesh_icosahedron(*args, **kwargs):
@@ -14,4 +14,4 @@ def _mesh_icosahedron(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/plotting/private/mesh_icosahedron.m)
   """
 
-  return _Runtime.call("mesh_icosahedron", *args, **kwargs)
+  return Runtime.call("mesh_icosahedron", *args, **kwargs)

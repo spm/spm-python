@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _isfunction(*args, **kwargs):
@@ -12,4 +12,4 @@ def _isfunction(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/private/isfunction.m)
   """
 
-  return _Runtime.call("isfunction", *args, **kwargs)
+  return Runtime.call("isfunction", *args, **kwargs)

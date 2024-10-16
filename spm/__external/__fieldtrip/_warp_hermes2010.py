@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _warp_hermes2010(*args, **kwargs):
@@ -15,4 +15,4 @@ def _warp_hermes2010(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/private/warp_hermes2010.m)
   """
 
-  return _Runtime.call("warp_hermes2010", *args, **kwargs)
+  return Runtime.call("warp_hermes2010", *args, **kwargs)

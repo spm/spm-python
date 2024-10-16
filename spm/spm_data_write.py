@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def spm_data_write(*args, **kwargs):
@@ -17,4 +17,4 @@ def spm_data_write(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/spm_data_write.m)
   """
 
-  return _Runtime.call("spm_data_write", *args, **kwargs)
+  return Runtime.call("spm_data_write", *args, **kwargs)

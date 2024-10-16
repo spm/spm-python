@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _GALA_find_localmin(*args, **kwargs):
@@ -9,4 +9,4 @@ def _GALA_find_localmin(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/toolbox/DAiSS/private/GALA_find_localmin.m)
   """
 
-  return _Runtime.call("GALA_find_localmin", *args, **kwargs)
+  return Runtime.call("GALA_find_localmin", *args, **kwargs)

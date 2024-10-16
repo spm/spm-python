@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def spm_slice_timing(*args, **kwargs):
@@ -94,4 +94,4 @@ def spm_slice_timing(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/spm_slice_timing.m)
   """
 
-  return _Runtime.call("spm_slice_timing", *args, **kwargs, nargout=0)
+  return Runtime.call("spm_slice_timing", *args, **kwargs, nargout=0)

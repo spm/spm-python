@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def spm_gen_phase(*args, **kwargs):
@@ -16,4 +16,4 @@ def spm_gen_phase(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/toolbox/dcm_meeg/spm_gen_phase.m)
   """
 
-  return _Runtime.call("spm_gen_phase", *args, **kwargs)
+  return Runtime.call("spm_gen_phase", *args, **kwargs)

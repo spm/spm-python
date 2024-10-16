@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def mci_discount_like(*args, **kwargs):
@@ -19,4 +19,4 @@ def mci_discount_like(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/toolbox/mci/models/discount/mci_discount_like.m)
   """
 
-  return _Runtime.call("mci_discount_like", *args, **kwargs)
+  return Runtime.call("mci_discount_like", *args, **kwargs)

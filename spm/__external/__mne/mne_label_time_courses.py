@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def mne_label_time_courses(*args, **kwargs):
@@ -19,4 +19,4 @@ def mne_label_time_courses(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/mne/mne_label_time_courses.m)
   """
 
-  return _Runtime.call("mne_label_time_courses", *args, **kwargs)
+  return Runtime.call("mne_label_time_courses", *args, **kwargs)

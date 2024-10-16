@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _tfcestat(*args, **kwargs):
@@ -11,4 +11,4 @@ def _tfcestat(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/private/tfcestat.m)
   """
 
-  return _Runtime.call("tfcestat", *args, **kwargs)
+  return Runtime.call("tfcestat", *args, **kwargs)

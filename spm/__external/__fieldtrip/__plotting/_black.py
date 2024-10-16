@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _black(*args, **kwargs):
@@ -27,4 +27,4 @@ def _black(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/plotting/private/black.m)
   """
 
-  return _Runtime.call("black", *args, **kwargs)
+  return Runtime.call("black", *args, **kwargs)

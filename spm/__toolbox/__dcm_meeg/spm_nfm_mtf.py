@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def spm_nfm_mtf(*args, **kwargs):
@@ -19,4 +19,4 @@ def spm_nfm_mtf(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/toolbox/dcm_meeg/spm_nfm_mtf.m)
   """
 
-  return _Runtime.call("spm_nfm_mtf", *args, **kwargs)
+  return Runtime.call("spm_nfm_mtf", *args, **kwargs)

@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def ft_headmodel_bemcp(*args, **kwargs):
@@ -25,4 +25,4 @@ def ft_headmodel_bemcp(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/forward/ft_headmodel_bemcp.m)
   """
 
-  return _Runtime.call("ft_headmodel_bemcp", *args, **kwargs)
+  return Runtime.call("ft_headmodel_bemcp", *args, **kwargs)

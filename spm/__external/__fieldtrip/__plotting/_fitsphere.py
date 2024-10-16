@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _fitsphere(*args, **kwargs):
@@ -17,4 +17,4 @@ def _fitsphere(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/plotting/private/fitsphere.m)
   """
 
-  return _Runtime.call("fitsphere", *args, **kwargs)
+  return Runtime.call("fitsphere", *args, **kwargs)

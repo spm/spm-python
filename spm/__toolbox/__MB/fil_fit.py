@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def fil_fit(*args, **kwargs):
@@ -18,4 +18,4 @@ def fil_fit(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/toolbox/MB/fil_fit.m)
   """
 
-  return _Runtime.call("fil_fit", *args, **kwargs)
+  return Runtime.call("fil_fit", *args, **kwargs)

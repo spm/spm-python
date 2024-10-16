@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _selparam(*args, **kwargs):
@@ -10,4 +10,4 @@ def _selparam(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/utilities/private/selparam.m)
   """
 
-  return _Runtime.call("selparam", *args, **kwargs)
+  return Runtime.call("selparam", *args, **kwargs)

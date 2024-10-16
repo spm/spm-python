@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _ft_warp_apply(*args, **kwargs):
@@ -56,4 +56,4 @@ def _ft_warp_apply(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/plotting/private/ft_warp_apply.m)
   """
 
-  return _Runtime.call("ft_warp_apply", *args, **kwargs)
+  return Runtime.call("ft_warp_apply", *args, **kwargs)

@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def ft_save_workspace(*args, **kwargs):
@@ -24,4 +24,4 @@ def ft_save_workspace(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/utilities/ft_save_workspace.m)
   """
 
-  return _Runtime.call("ft_save_workspace", *args, **kwargs, nargout=0)
+  return Runtime.call("ft_save_workspace", *args, **kwargs, nargout=0)

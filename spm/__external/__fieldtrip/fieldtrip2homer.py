@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def fieldtrip2homer(*args, **kwargs):
@@ -22,4 +22,4 @@ def fieldtrip2homer(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/fieldtrip2homer.m)
   """
 
-  return _Runtime.call("fieldtrip2homer", *args, **kwargs)
+  return Runtime.call("fieldtrip2homer", *args, **kwargs)

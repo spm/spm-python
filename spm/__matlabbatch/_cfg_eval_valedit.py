@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _cfg_eval_valedit(*args, **kwargs):
@@ -19,4 +19,4 @@ def _cfg_eval_valedit(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/matlabbatch/private/cfg_eval_valedit.m)
   """
 
-  return _Runtime.call("cfg_eval_valedit", *args, **kwargs)
+  return Runtime.call("cfg_eval_valedit", *args, **kwargs)

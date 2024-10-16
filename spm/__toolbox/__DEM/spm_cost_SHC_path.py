@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def spm_cost_SHC_path(*args, **kwargs):
@@ -14,4 +14,4 @@ def spm_cost_SHC_path(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/toolbox/DEM/spm_cost_SHC_path.m)
   """
 
-  return _Runtime.call("spm_cost_SHC_path", *args, **kwargs, nargout=0)
+  return Runtime.call("spm_cost_SHC_path", *args, **kwargs, nargout=0)

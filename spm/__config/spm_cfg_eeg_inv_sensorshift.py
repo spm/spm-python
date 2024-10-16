@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def spm_cfg_eeg_inv_sensorshift(*args, **kwargs):
@@ -11,4 +11,4 @@ def spm_cfg_eeg_inv_sensorshift(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/config/spm_cfg_eeg_inv_sensorshift.m)
   """
 
-  return _Runtime.call("spm_cfg_eeg_inv_sensorshift", *args, **kwargs)
+  return Runtime.call("spm_cfg_eeg_inv_sensorshift", *args, **kwargs)

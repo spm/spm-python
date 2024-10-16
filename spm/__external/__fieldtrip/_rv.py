@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _rv(*args, **kwargs):
@@ -10,4 +10,4 @@ def _rv(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/private/rv.m)
   """
 
-  return _Runtime.call("rv", *args, **kwargs)
+  return Runtime.call("rv", *args, **kwargs)

@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _prepare_freq_matrices(*args, **kwargs):
@@ -19,4 +19,4 @@ def _prepare_freq_matrices(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/private/prepare_freq_matrices.m)
   """
 
-  return _Runtime.call("prepare_freq_matrices", *args, **kwargs)
+  return Runtime.call("prepare_freq_matrices", *args, **kwargs)

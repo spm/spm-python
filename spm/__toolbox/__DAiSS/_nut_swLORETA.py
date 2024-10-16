@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _nut_swLORETA(*args, **kwargs):
@@ -14,4 +14,4 @@ def _nut_swLORETA(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/toolbox/DAiSS/private/nut_swLORETA.m)
   """
 
-  return _Runtime.call("nut_swLORETA", *args, **kwargs)
+  return Runtime.call("nut_swLORETA", *args, **kwargs)

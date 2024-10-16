@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _undobalancing(*args, **kwargs):
@@ -10,4 +10,4 @@ def _undobalancing(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/utilities/private/undobalancing.m)
   """
 
-  return _Runtime.call("undobalancing", *args, **kwargs)
+  return Runtime.call("undobalancing", *args, **kwargs)

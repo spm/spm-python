@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def mne_omit_first_line(*args, **kwargs):
@@ -12,4 +12,4 @@ def mne_omit_first_line(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/mne/mne_omit_first_line.m)
   """
 
-  return _Runtime.call("mne_omit_first_line", *args, **kwargs)
+  return Runtime.call("mne_omit_first_line", *args, **kwargs)

@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _align_presentation(*args, **kwargs):
@@ -25,4 +25,4 @@ def _align_presentation(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/private/align_presentation.m)
   """
 
-  return _Runtime.call("align_presentation", *args, **kwargs)
+  return Runtime.call("align_presentation", *args, **kwargs)

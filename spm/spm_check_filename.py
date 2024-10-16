@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def spm_check_filename(*args, **kwargs):
@@ -12,4 +12,4 @@ def spm_check_filename(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/spm_check_filename.m)
   """
 
-  return _Runtime.call("spm_check_filename", *args, **kwargs)
+  return Runtime.call("spm_check_filename", *args, **kwargs)

@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _procrustes_trans(*args, **kwargs):
@@ -21,4 +21,4 @@ def _procrustes_trans(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/private/procrustes_trans.m)
   """
 
-  return _Runtime.call("procrustes_trans", *args, **kwargs)
+  return Runtime.call("procrustes_trans", *args, **kwargs)

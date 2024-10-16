@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def ROBOT_DCM_fMRI(*args, **kwargs):
@@ -19,4 +19,4 @@ def ROBOT_DCM_fMRI(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/tests/ROBOT_DCM_fMRI.m)
   """
 
-  return _Runtime.call("ROBOT_DCM_fMRI", *args, **kwargs)
+  return Runtime.call("ROBOT_DCM_fMRI", *args, **kwargs)

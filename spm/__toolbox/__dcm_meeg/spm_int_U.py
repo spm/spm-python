@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def spm_int_U(*args, **kwargs):
@@ -69,4 +69,4 @@ def spm_int_U(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/toolbox/dcm_meeg/spm_int_U.m)
   """
 
-  return _Runtime.call("spm_int_U", *args, **kwargs)
+  return Runtime.call("spm_int_U", *args, **kwargs)

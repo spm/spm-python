@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def mne_license(*args, **kwargs):
@@ -11,4 +11,4 @@ def mne_license(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/mne/mne_license.m)
   """
 
-  return _Runtime.call("mne_license", *args, **kwargs, nargout=0)
+  return Runtime.call("mne_license", *args, **kwargs, nargout=0)

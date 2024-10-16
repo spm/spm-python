@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def ft_read_header(*args, **kwargs):
@@ -61,32 +61,30 @@ def ft_read_header(*args, **kwargs):
       ANT - Advanced Neuro Technology, EEProbe (*.avr, *.eeg, *.cnt)  
       BCI2000 (*.dat)  
       Biosemi (*.bdf)  
-      Bitalino OpenSignals (*.txt)  
       BrainVision (*.eeg, *.seg, *.dat, *.vhdr, *.vmrk)  
       CED - Cambridge Electronic Design (*.smr)  
       EGI - Electrical Geodesics, Inc. (*.egis, *.ave, *.gave, *.ses, *.raw, *.sbin, *.mff)  
       GTec (*.mat, *.hdf5)  
-      GTec Unicorn (*.csv)  
       Generic data formats (*.edf, *.gdf)  
       Megis/BESA (*.avr, *.swf, *.besa)  
+      NeuroScan (*.eeg, *.cnt, *.avg)  
+      Nexstim (*.nxe)  
+      TMSi (*.Poly5)  
       Mega Neurone (directory)  
       Natus/Nicolet/Nervus (.e files)  
       Nihon Kohden (*.m00, *.EEG)  
-      NeuroScan (*.eeg, *.cnt, *.avg)  
-      Nexstim (*.nxe)  
+      Bitalino OpenSignals (*.txt)  
       OpenBCI (*.txt)  
-      TMSi (*.Poly5)  
      
     The following spike and LFP dataformats are supported  
+      Neuralynx (*.ncs, *.nse, *.nts, *.nev, *.nrd, *.dma, *.log)  
+      Plextor (*.nex, *.plx, *.ddt)  
       CED - Cambridge Electronic Design (*.smr)  
       MPI - Max Planck Institute (*.dap)  
-      Neuralynx (*.ncs, *.nse, *.nts, *.nev, *.nrd, *.dma, *.log)  
-      Neurodata Without Borders (*.nwb)  
       Neurosim  (neurosim_spikes, neurosim_signals, neurosim_ds)  
-      NeuroOmega (*.mat transformed from *.mpx)  
-      Neuropixel data recorded with SpikeGLX (*.bin, *.meta)  
-      Plextor (*.nex, *.plx, *.ddt)  
       Windaq (*.wdq)  
+      NeuroOmega (*.mat transformed from *.mpx)  
+      Neurodata Without Borders: Neurophysiology (*.nwb)  
      
     The following NIRS dataformats are supported  
       Artinis - Artinis Medical Systems B.V. (*.oxy3, *.oxy4, *.oxy5, *.oxyproj)  
@@ -105,4 +103,4 @@ def ft_read_header(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/ft_read_header.m)
   """
 
-  return _Runtime.call("ft_read_header", *args, **kwargs)
+  return Runtime.call("ft_read_header", *args, **kwargs)

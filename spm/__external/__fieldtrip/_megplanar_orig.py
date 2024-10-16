@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _megplanar_orig(*args, **kwargs):
@@ -9,4 +9,4 @@ def _megplanar_orig(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/private/megplanar_orig.m)
   """
 
-  return _Runtime.call("megplanar_orig", *args, **kwargs)
+  return Runtime.call("megplanar_orig", *args, **kwargs)

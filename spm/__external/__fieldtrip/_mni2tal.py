@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _mni2tal(*args, **kwargs):
@@ -14,4 +14,4 @@ def _mni2tal(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/private/mni2tal.m)
   """
 
-  return _Runtime.call("mni2tal", *args, **kwargs)
+  return Runtime.call("mni2tal", *args, **kwargs)

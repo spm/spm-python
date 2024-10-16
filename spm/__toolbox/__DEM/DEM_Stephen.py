@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def DEM_Stephen(*args, **kwargs):
@@ -19,4 +19,4 @@ def DEM_Stephen(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/toolbox/DEM/DEM_Stephen.m)
   """
 
-  return _Runtime.call("DEM_Stephen", *args, **kwargs)
+  return Runtime.call("DEM_Stephen", *args, **kwargs)

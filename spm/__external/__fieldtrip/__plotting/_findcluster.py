@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _findcluster(*args, **kwargs):
@@ -28,4 +28,4 @@ def _findcluster(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/plotting/private/findcluster.m)
   """
 
-  return _Runtime.call("findcluster", *args, **kwargs)
+  return Runtime.call("findcluster", *args, **kwargs)

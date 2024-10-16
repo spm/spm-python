@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _smudge(*args, **kwargs):
@@ -10,4 +10,4 @@ def _smudge(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/private/smudge.m)
   """
 
-  return _Runtime.call("smudge", *args, **kwargs)
+  return Runtime.call("smudge", *args, **kwargs)

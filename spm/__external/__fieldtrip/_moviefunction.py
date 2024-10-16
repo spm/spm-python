@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _moviefunction(*args, **kwargs):
@@ -10,4 +10,4 @@ def _moviefunction(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/private/moviefunction.m)
   """
 
-  return _Runtime.call("moviefunction", *args, **kwargs, nargout=0)
+  return Runtime.call("moviefunction", *args, **kwargs, nargout=0)

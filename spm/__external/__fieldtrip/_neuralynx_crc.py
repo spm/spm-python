@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _neuralynx_crc(*args, **kwargs):
@@ -13,4 +13,4 @@ def _neuralynx_crc(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/private/neuralynx_crc.m)
   """
 
-  return _Runtime.call("neuralynx_crc", *args, **kwargs)
+  return Runtime.call("neuralynx_crc", *args, **kwargs)

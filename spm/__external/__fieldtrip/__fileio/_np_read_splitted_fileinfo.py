@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _np_read_splitted_fileinfo(*args, **kwargs):
@@ -17,4 +17,4 @@ def _np_read_splitted_fileinfo(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/np_read_splitted_fileinfo.m)
   """
 
-  return _Runtime.call("np_read_splitted_fileinfo", *args, **kwargs)
+  return Runtime.call("np_read_splitted_fileinfo", *args, **kwargs)

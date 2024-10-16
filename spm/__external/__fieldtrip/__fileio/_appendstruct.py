@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _appendstruct(*args, **kwargs):
@@ -15,4 +15,4 @@ def _appendstruct(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/appendstruct.m)
   """
 
-  return _Runtime.call("appendstruct", *args, **kwargs)
+  return Runtime.call("appendstruct", *args, **kwargs)

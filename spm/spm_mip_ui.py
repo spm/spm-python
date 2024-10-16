@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def spm_mip_ui(*args, **kwargs):
@@ -74,4 +74,4 @@ def spm_mip_ui(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/spm_mip_ui.m)
   """
 
-  return _Runtime.call("spm_mip_ui", *args, **kwargs)
+  return Runtime.call("spm_mip_ui", *args, **kwargs)

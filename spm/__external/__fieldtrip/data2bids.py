@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def data2bids(*args, **kwargs):
@@ -183,4 +183,4 @@ def data2bids(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/data2bids.m)
   """
 
-  return _Runtime.call("data2bids", *args, **kwargs)
+  return Runtime.call("data2bids", *args, **kwargs)

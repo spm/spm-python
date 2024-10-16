@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _trl2event(*args, **kwargs):
@@ -23,4 +23,4 @@ def _trl2event(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/private/trl2event.m)
   """
 
-  return _Runtime.call("trl2event", *args, **kwargs)
+  return Runtime.call("trl2event", *args, **kwargs)

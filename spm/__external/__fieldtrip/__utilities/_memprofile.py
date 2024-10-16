@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _memprofile(*args, **kwargs):
@@ -8,4 +8,4 @@ def _memprofile(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/utilities/private/memprofile.m)
   """
 
-  return _Runtime.call("memprofile", *args, **kwargs)
+  return Runtime.call("memprofile", *args, **kwargs)

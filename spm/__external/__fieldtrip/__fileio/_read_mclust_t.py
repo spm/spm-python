@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _read_mclust_t(*args, **kwargs):
@@ -8,4 +8,4 @@ def _read_mclust_t(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/read_mclust_t.m)
   """
 
-  return _Runtime.call("read_mclust_t", *args, **kwargs)
+  return Runtime.call("read_mclust_t", *args, **kwargs)

@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _varsize(*args, **kwargs):
@@ -11,4 +11,4 @@ def _varsize(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/utilities/private/varsize.m)
   """
 
-  return _Runtime.call("varsize", *args, **kwargs)
+  return Runtime.call("varsize", *args, **kwargs)

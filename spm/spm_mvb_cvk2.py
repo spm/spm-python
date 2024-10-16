@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def spm_mvb_cvk2(*args, **kwargs):
@@ -22,4 +22,4 @@ def spm_mvb_cvk2(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/spm_mvb_cvk2.m)
   """
 
-  return _Runtime.call("spm_mvb_cvk2", *args, **kwargs)
+  return Runtime.call("spm_mvb_cvk2", *args, **kwargs)

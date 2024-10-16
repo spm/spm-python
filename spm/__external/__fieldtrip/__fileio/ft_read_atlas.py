@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def ft_read_atlas(*args, **kwargs):
@@ -78,4 +78,4 @@ def ft_read_atlas(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/ft_read_atlas.m)
   """
 
-  return _Runtime.call("ft_read_atlas", *args, **kwargs)
+  return Runtime.call("ft_read_atlas", *args, **kwargs)

@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _base64encode(*args, **kwargs):
@@ -45,4 +45,4 @@ def _base64encode(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/utilities/private/base64encode.m)
   """
 
-  return _Runtime.call("base64encode", *args, **kwargs)
+  return Runtime.call("base64encode", *args, **kwargs)

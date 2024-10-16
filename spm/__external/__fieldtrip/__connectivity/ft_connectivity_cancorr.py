@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def ft_connectivity_cancorr(*args, **kwargs):
@@ -31,4 +31,4 @@ def ft_connectivity_cancorr(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/connectivity/ft_connectivity_cancorr.m)
   """
 
-  return _Runtime.call("ft_connectivity_cancorr", *args, **kwargs)
+  return Runtime.call("ft_connectivity_cancorr", *args, **kwargs)

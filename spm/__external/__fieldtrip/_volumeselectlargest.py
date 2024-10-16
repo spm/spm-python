@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _volumeselectlargest(*args, **kwargs):
@@ -10,4 +10,4 @@ def _volumeselectlargest(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/private/volumeselectlargest.m)
   """
 
-  return _Runtime.call("volumeselectlargest", *args, **kwargs)
+  return Runtime.call("volumeselectlargest", *args, **kwargs)

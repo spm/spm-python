@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def DEM_demo_MDP_rule(*args, **kwargs):
@@ -37,4 +37,4 @@ def DEM_demo_MDP_rule(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/toolbox/DEM/DEM_demo_MDP_rule.m)
   """
 
-  return _Runtime.call("DEM_demo_MDP_rule", *args, **kwargs)
+  return Runtime.call("DEM_demo_MDP_rule", *args, **kwargs)

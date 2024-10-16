@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def spm_eeg_artefact_zscorediff(*args, **kwargs):
@@ -22,4 +22,4 @@ def spm_eeg_artefact_zscorediff(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/spm_eeg_artefact_zscorediff.m)
   """
 
-  return _Runtime.call("spm_eeg_artefact_zscorediff", *args, **kwargs)
+  return Runtime.call("spm_eeg_artefact_zscorediff", *args, **kwargs)

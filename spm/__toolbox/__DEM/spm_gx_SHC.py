@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def spm_gx_SHC(*args, **kwargs):
@@ -14,4 +14,4 @@ def spm_gx_SHC(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/toolbox/DEM/spm_gx_SHC.m)
   """
 
-  return _Runtime.call("spm_gx_SHC", *args, **kwargs)
+  return Runtime.call("spm_gx_SHC", *args, **kwargs)

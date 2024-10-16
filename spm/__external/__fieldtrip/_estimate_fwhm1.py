@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _estimate_fwhm1(*args, **kwargs):
@@ -15,4 +15,4 @@ def _estimate_fwhm1(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/private/estimate_fwhm1.m)
   """
 
-  return _Runtime.call("estimate_fwhm1", *args, **kwargs)
+  return Runtime.call("estimate_fwhm1", *args, **kwargs)

@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def fiff_write_float_sparse_rcs(*args, **kwargs):
@@ -15,4 +15,4 @@ def fiff_write_float_sparse_rcs(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/mne/fiff_write_float_sparse_rcs.m)
   """
 
-  return _Runtime.call("fiff_write_float_sparse_rcs", *args, **kwargs, nargout=0)
+  return Runtime.call("fiff_write_float_sparse_rcs", *args, **kwargs, nargout=0)

@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def read_24bit(*args, **kwargs):
@@ -15,4 +15,4 @@ def read_24bit(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/src/read_24bit.m)
   """
 
-  return _Runtime.call("read_24bit", *args, **kwargs)
+  return Runtime.call("read_24bit", *args, **kwargs)

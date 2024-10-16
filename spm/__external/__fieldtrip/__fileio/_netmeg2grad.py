@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _netmeg2grad(*args, **kwargs):
@@ -11,4 +11,4 @@ def _netmeg2grad(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/netmeg2grad.m)
   """
 
-  return _Runtime.call("netmeg2grad", *args, **kwargs)
+  return Runtime.call("netmeg2grad", *args, **kwargs)

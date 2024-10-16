@@ -1,7 +1,7 @@
-from spm.__wrap__ import _Runtime, _MatlabClassWrapper
+from spm.__wrapper__ import Runtime, MatlabClassWrapper
 
 
-class nifti(_MatlabClassWrapper):
+class nifti(MatlabClassWrapper):
   def __init__(self, *args, _objdict=None, **kwargs):
     """  Create a NIFTI-1 object  
    __________________________________________________________________________  
@@ -15,7 +15,7 @@ class nifti(_MatlabClassWrapper):
     """
 
     if _objdict is None:
-      _objdict = _Runtime.call("nifti", *args, **kwargs)
+      _objdict = Runtime.call("nifti", *args, **kwargs)
     super().__init__(_objdict)
 
   def cifti(self, *args, **kwargs):
@@ -26,8 +26,7 @@ class nifti(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@nifti/cifti.m)
     """
 
-    return _Runtime.call("cifti", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("cifti", self._as_matlab_object(), *args, **kwargs)
 
   def create(self, *args, **kwargs):
     """  Create a NIFTI-1 file  
@@ -42,8 +41,7 @@ class nifti(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@nifti/create.m)
     """
 
-    return _Runtime.call("create", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("create", self._as_matlab_object(), *args, **kwargs)
 
   def disp(self, *args, **kwargs):
     """  Disp a NIFTI-1 object  
@@ -53,8 +51,7 @@ class nifti(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@nifti/disp.m)
     """
 
-    return _Runtime.call("disp", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("disp", self._as_matlab_object(), *args, **kwargs)
 
   def display(self, *args, **kwargs):
     """  Display a NIFTI-1 object  
@@ -64,8 +61,9 @@ class nifti(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@nifti/display.m)
     """
 
-    return _Runtime.call("display", self._as_matlab_object(), *args, **kwargs)
+    return Runtime.call("display", self._as_matlab_object(), *args, **kwargs)
 
+  __repr__ = display # Use display to represent objects
 
   def fieldnames(self, *args, **kwargs):
     """  Fieldnames of a NIFTI-1 object  
@@ -75,8 +73,7 @@ class nifti(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@nifti/fieldnames.m)
     """
 
-    return _Runtime.call("fieldnames", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("fieldnames", self._as_matlab_object(), *args, **kwargs)
 
   def structn(self, *args, **kwargs):
     """  Convert a NIFTI-1 object into a form of struct  
@@ -86,8 +83,7 @@ class nifti(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@nifti/structn.m)
     """
 
-    return _Runtime.call("structn", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("structn", self._as_matlab_object(), *args, **kwargs)
 
   def subsasgn(self, *args, **kwargs):
     """  Subscript assignment  
@@ -98,8 +94,7 @@ class nifti(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@nifti/subsasgn.m)
     """
 
-    return _Runtime.call("subsasgn", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("subsasgn", self._as_matlab_object(), *args, **kwargs)
 
   def subsref(self, *args, **kwargs):
     """  Subscript referencing  
@@ -144,6 +139,5 @@ class nifti(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@nifti/subsref.m)
     """
 
-    return _Runtime.call("subsref", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("subsref", self._as_matlab_object(), *args, **kwargs)
 

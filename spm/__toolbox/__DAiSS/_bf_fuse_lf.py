@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _bf_fuse_lf(*args, **kwargs):
@@ -9,4 +9,4 @@ def _bf_fuse_lf(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/toolbox/DAiSS/private/bf_fuse_lf.m)
   """
 
-  return _Runtime.call("bf_fuse_lf", *args, **kwargs)
+  return Runtime.call("bf_fuse_lf", *args, **kwargs)

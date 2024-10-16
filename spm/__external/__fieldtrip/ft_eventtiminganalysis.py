@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def ft_eventtiminganalysis(*args, **kwargs):
@@ -79,4 +79,4 @@ def ft_eventtiminganalysis(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/ft_eventtiminganalysis.m)
   """
 
-  return _Runtime.call("ft_eventtiminganalysis", *args, **kwargs)
+  return Runtime.call("ft_eventtiminganalysis", *args, **kwargs)

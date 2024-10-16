@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _select3d(*args, **kwargs):
@@ -61,4 +61,4 @@ def _select3d(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/plotting/private/select3d.m)
   """
 
-  return _Runtime.call("select3d", *args, **kwargs)
+  return Runtime.call("select3d", *args, **kwargs)

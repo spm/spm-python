@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _interp_ungridded(*args, **kwargs):
@@ -24,4 +24,4 @@ def _interp_ungridded(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/private/interp_ungridded.m)
   """
 
-  return _Runtime.call("interp_ungridded", *args, **kwargs)
+  return Runtime.call("interp_ungridded", *args, **kwargs)

@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _read_caret_spec(*args, **kwargs):
@@ -17,4 +17,4 @@ def _read_caret_spec(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/read_caret_spec.m)
   """
 
-  return _Runtime.call("read_caret_spec", *args, **kwargs)
+  return Runtime.call("read_caret_spec", *args, **kwargs)

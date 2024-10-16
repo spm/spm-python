@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def ft_rejectartifact(*args, **kwargs):
@@ -42,7 +42,6 @@ def ft_rejectartifact(*args, **kwargs):
     Output:  
       If cfg is the only input parameter, the output is a cfg structure with an updated trl.  
       If cfg and data are both input parameters, the output is an updated raw data structure with only the clean data segments.  
-      If cfg and data are both input parameters, and the cfg contains a trl field, an error is thrown.  
      
     To facilitate data-handling and distributed computing you can use  
       cfg.inputfile   =  ...  
@@ -58,4 +57,4 @@ def ft_rejectartifact(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/ft_rejectartifact.m)
   """
 
-  return _Runtime.call("ft_rejectartifact", *args, **kwargs)
+  return Runtime.call("ft_rejectartifact", *args, **kwargs)

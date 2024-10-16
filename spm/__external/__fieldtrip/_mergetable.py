@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _mergetable(*args, **kwargs):
@@ -17,4 +17,4 @@ def _mergetable(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/private/mergetable.m)
   """
 
-  return _Runtime.call("mergetable", *args, **kwargs)
+  return Runtime.call("mergetable", *args, **kwargs)

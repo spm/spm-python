@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _write_gdf(*args, **kwargs):
@@ -13,4 +13,4 @@ def _write_gdf(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/write_gdf.m)
   """
 
-  return _Runtime.call("write_gdf", *args, **kwargs, nargout=0)
+  return Runtime.call("write_gdf", *args, **kwargs, nargout=0)

@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _getthreads(*args, **kwargs):
@@ -10,4 +10,4 @@ def _getthreads(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/toolbox/Spatial/private/getthreads.m)
   """
 
-  return _Runtime.call("getthreads", *args, **kwargs)
+  return Runtime.call("getthreads", *args, **kwargs)

@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _refine(*args, **kwargs):
@@ -33,4 +33,4 @@ def _refine(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/plotting/private/refine.m)
   """
 
-  return _Runtime.call("refine", *args, **kwargs)
+  return Runtime.call("refine", *args, **kwargs)

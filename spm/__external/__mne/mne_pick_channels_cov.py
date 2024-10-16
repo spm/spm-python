@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def mne_pick_channels_cov(*args, **kwargs):
@@ -15,4 +15,4 @@ def mne_pick_channels_cov(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/mne/mne_pick_channels_cov.m)
   """
 
-  return _Runtime.call("mne_pick_channels_cov", *args, **kwargs)
+  return Runtime.call("mne_pick_channels_cov", *args, **kwargs)

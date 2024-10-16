@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def FEP_MB_demo(*args, **kwargs):
@@ -21,4 +21,4 @@ def FEP_MB_demo(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/toolbox/DEM/FEP_MB_demo.m)
   """
 
-  return _Runtime.call("FEP_MB_demo", *args, **kwargs, nargout=0)
+  return Runtime.call("FEP_MB_demo", *args, **kwargs, nargout=0)

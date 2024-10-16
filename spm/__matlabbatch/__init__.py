@@ -41,6 +41,9 @@ from ._cfg_disp_error import _cfg_disp_error
 from ._cfg_eval_valedit import _cfg_eval_valedit
 from ._cfg_justify import _cfg_justify
 from ._cfg_maxextent import _cfg_maxextent
+from ._cfg_mlbatch_appcfg_1 import _cfg_mlbatch_appcfg_1
+from ._cfg_mlbatch_appcfg_2 import _cfg_mlbatch_appcfg_2
+from ._cfg_mlbatch_appcfg_master import _cfg_mlbatch_appcfg_master
 from ._cfg_mlbatch_defaults import _cfg_mlbatch_defaults
 from ._cfg_mlbatch_root import _cfg_mlbatch_root
 from ._cfg_onscreen import _cfg_onscreen

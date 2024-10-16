@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def spm_ness_m2S(*args, **kwargs):
@@ -15,4 +15,4 @@ def spm_ness_m2S(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/spm_ness_m2S.m)
   """
 
-  return _Runtime.call("spm_ness_m2S", *args, **kwargs)
+  return Runtime.call("spm_ness_m2S", *args, **kwargs)

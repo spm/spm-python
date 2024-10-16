@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def nanvar(*args, **kwargs):
@@ -13,4 +13,4 @@ def nanvar(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/external/stats/nanvar.m)
   """
 
-  return _Runtime.call("nanvar", *args, **kwargs)
+  return Runtime.call("nanvar", *args, **kwargs)

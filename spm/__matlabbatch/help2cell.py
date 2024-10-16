@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def help2cell(*args, **kwargs):
@@ -18,4 +18,4 @@ def help2cell(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/matlabbatch/help2cell.m)
   """
 
-  return _Runtime.call("help2cell", *args, **kwargs)
+  return Runtime.call("help2cell", *args, **kwargs)

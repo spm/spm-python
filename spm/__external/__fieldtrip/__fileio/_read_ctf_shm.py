@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _read_ctf_shm(*args, **kwargs):
@@ -18,4 +18,4 @@ def _read_ctf_shm(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/read_ctf_shm.m)
   """
 
-  return _Runtime.call("read_ctf_shm", *args, **kwargs)
+  return Runtime.call("read_ctf_shm", *args, **kwargs)

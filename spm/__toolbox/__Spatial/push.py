@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def push(*args, **kwargs):
@@ -14,4 +14,4 @@ def push(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/toolbox/Spatial/push.m)
   """
 
-  return _Runtime.call("push", *args, **kwargs)
+  return Runtime.call("push", *args, **kwargs)

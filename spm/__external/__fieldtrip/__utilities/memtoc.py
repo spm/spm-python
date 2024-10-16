@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def memtoc(*args, **kwargs):
@@ -44,4 +44,4 @@ def memtoc(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/utilities/memtoc.m)
   """
 
-  return _Runtime.call("memtoc", *args, **kwargs)
+  return Runtime.call("memtoc", *args, **kwargs)

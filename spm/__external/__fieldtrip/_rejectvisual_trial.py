@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _rejectvisual_trial(*args, **kwargs):
@@ -8,4 +8,4 @@ def _rejectvisual_trial(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/private/rejectvisual_trial.m)
   """
 
-  return _Runtime.call("rejectvisual_trial", *args, **kwargs)
+  return Runtime.call("rejectvisual_trial", *args, **kwargs)

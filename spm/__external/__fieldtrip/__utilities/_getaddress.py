@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _getaddress(*args, **kwargs):
@@ -15,4 +15,4 @@ def _getaddress(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/utilities/private/getaddress.m)
   """
 
-  return _Runtime.call("getaddress", *args, **kwargs)
+  return Runtime.call("getaddress", *args, **kwargs)

@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _interp_gridded(*args, **kwargs):
@@ -25,4 +25,4 @@ def _interp_gridded(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/private/interp_gridded.m)
   """
 
-  return _Runtime.call("interp_gridded", *args, **kwargs)
+  return Runtime.call("interp_gridded", *args, **kwargs)

@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def hgsave_pre2008a(*args, **kwargs):
@@ -63,4 +63,4 @@ def hgsave_pre2008a(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/matlabbatch/hgsave_pre2008a.m)
   """
 
-  return _Runtime.call("hgsave_pre2008a", *args, **kwargs)
+  return Runtime.call("hgsave_pre2008a", *args, **kwargs)

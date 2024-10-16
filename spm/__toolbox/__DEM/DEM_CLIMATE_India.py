@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def DEM_CLIMATE_India(*args, **kwargs):
@@ -90,4 +90,4 @@ def DEM_CLIMATE_India(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/toolbox/DEM/DEM_CLIMATE_India.m)
   """
 
-  return _Runtime.call("DEM_CLIMATE_India", *args, **kwargs)
+  return Runtime.call("DEM_CLIMATE_India", *args, **kwargs)

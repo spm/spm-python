@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def mci_ramsay_gx(*args, **kwargs):
@@ -15,4 +15,4 @@ def mci_ramsay_gx(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/toolbox/mci/models/ramsay/mci_ramsay_gx.m)
   """
 
-  return _Runtime.call("spm_ramsay_gx", *args, **kwargs)
+  return Runtime.call("spm_ramsay_gx", *args, **kwargs)

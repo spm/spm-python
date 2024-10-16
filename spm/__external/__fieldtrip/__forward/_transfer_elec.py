@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _transfer_elec(*args, **kwargs):
@@ -15,4 +15,4 @@ def _transfer_elec(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/forward/private/transfer_elec.m)
   """
 
-  return _Runtime.call("transfer_elec", *args, **kwargs)
+  return Runtime.call("transfer_elec", *args, **kwargs)

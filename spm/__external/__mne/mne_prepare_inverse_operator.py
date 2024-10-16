@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def mne_prepare_inverse_operator(*args, **kwargs):
@@ -17,4 +17,4 @@ def mne_prepare_inverse_operator(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/mne/mne_prepare_inverse_operator.m)
   """
 
-  return _Runtime.call("mne_prepare_inverse_operator", *args, **kwargs)
+  return Runtime.call("mne_prepare_inverse_operator", *args, **kwargs)

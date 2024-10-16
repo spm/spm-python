@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _leadsphere_all(*args, **kwargs):
@@ -8,4 +8,4 @@ def _leadsphere_all(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/forward/private/leadsphere_all.m)
   """
 
-  return _Runtime.call("leadsphere_all", *args, **kwargs)
+  return Runtime.call("leadsphere_all", *args, **kwargs)

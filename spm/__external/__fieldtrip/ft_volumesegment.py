@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def ft_volumesegment(*args, **kwargs):
@@ -127,4 +127,4 @@ def ft_volumesegment(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/ft_volumesegment.m)
   """
 
-  return _Runtime.call("ft_volumesegment", *args, **kwargs)
+  return Runtime.call("ft_volumesegment", *args, **kwargs)

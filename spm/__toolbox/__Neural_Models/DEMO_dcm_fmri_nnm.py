@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def DEMO_dcm_fmri_nnm(*args, **kwargs):
@@ -41,4 +41,4 @@ def DEMO_dcm_fmri_nnm(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/toolbox/Neural_Models/DEMO_dcm_fmri_nnm.m)
   """
 
-  return _Runtime.call("DEMO_dcm_fmri_nnm", *args, **kwargs)
+  return Runtime.call("DEMO_dcm_fmri_nnm", *args, **kwargs)

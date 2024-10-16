@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _plx_orig_header(*args, **kwargs):
@@ -18,4 +18,4 @@ def _plx_orig_header(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/plx_orig_header.m)
   """
 
-  return _Runtime.call("plx_orig_header", *args, **kwargs)
+  return Runtime.call("plx_orig_header", *args, **kwargs)

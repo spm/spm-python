@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _add_mex_source(*args, **kwargs):
@@ -25,4 +25,4 @@ def _add_mex_source(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/add_mex_source.m)
   """
 
-  return _Runtime.call("add_mex_source", *args, **kwargs)
+  return Runtime.call("add_mex_source", *args, **kwargs)

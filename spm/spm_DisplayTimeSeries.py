@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def spm_DisplayTimeSeries(*args, **kwargs):
@@ -62,4 +62,4 @@ def spm_DisplayTimeSeries(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/spm_DisplayTimeSeries.m)
   """
 
-  return _Runtime.call("spm_DisplayTimeSeries", *args, **kwargs)
+  return Runtime.call("spm_DisplayTimeSeries", *args, **kwargs)

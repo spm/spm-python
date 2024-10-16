@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _yokogawa2headmodel(*args, **kwargs):
@@ -10,4 +10,4 @@ def _yokogawa2headmodel(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/yokogawa2headmodel.m)
   """
 
-  return _Runtime.call("yokogawa2headmodel", *args, **kwargs)
+  return Runtime.call("yokogawa2headmodel", *args, **kwargs)

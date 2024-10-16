@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _validate_seg(*args, **kwargs):
@@ -24,4 +24,4 @@ def _validate_seg(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/private/validate_seg.m)
   """
 
-  return _Runtime.call("validate_seg", *args, **kwargs)
+  return Runtime.call("validate_seg", *args, **kwargs)

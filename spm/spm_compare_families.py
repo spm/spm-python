@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def spm_compare_families(*args, **kwargs):
@@ -49,4 +49,4 @@ def spm_compare_families(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/spm_compare_families.m)
   """
 
-  return _Runtime.call("spm_compare_families", *args, **kwargs)
+  return Runtime.call("spm_compare_families", *args, **kwargs)

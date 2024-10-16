@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def boxcar(*args, **kwargs):
@@ -11,4 +11,4 @@ def boxcar(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/external/signal/boxcar.m)
   """
 
-  return _Runtime.call("boxcar", *args, **kwargs)
+  return Runtime.call("boxcar", *args, **kwargs)

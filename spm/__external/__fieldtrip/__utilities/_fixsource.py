@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _fixsource(*args, **kwargs):
@@ -35,4 +35,4 @@ def _fixsource(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/utilities/private/fixsource.m)
   """
 
-  return _Runtime.call("fixsource", *args, **kwargs)
+  return Runtime.call("fixsource", *args, **kwargs)

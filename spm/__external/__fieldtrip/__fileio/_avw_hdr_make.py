@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _avw_hdr_make(*args, **kwargs):
@@ -18,4 +18,4 @@ def _avw_hdr_make(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/avw_hdr_make.m)
   """
 
-  return _Runtime.call("avw_hdr_make", *args, **kwargs)
+  return Runtime.call("avw_hdr_make", *args, **kwargs)

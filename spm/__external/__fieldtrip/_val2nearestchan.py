@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _val2nearestchan(*args, **kwargs):
@@ -13,4 +13,4 @@ def _val2nearestchan(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/private/val2nearestchan.m)
   """
 
-  return _Runtime.call("val2nearestchan", *args, **kwargs)
+  return Runtime.call("val2nearestchan", *args, **kwargs)

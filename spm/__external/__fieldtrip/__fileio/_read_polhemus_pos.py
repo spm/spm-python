@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _read_polhemus_pos(*args, **kwargs):
@@ -16,4 +16,4 @@ def _read_polhemus_pos(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/read_polhemus_pos.m)
   """
 
-  return _Runtime.call("read_polhemus_pos", *args, **kwargs)
+  return Runtime.call("read_polhemus_pos", *args, **kwargs)

@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _trl2boolvec(*args, **kwargs):
@@ -23,4 +23,4 @@ def _trl2boolvec(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/private/trl2boolvec.m)
   """
 
-  return _Runtime.call("trl2boolvec", *args, **kwargs)
+  return Runtime.call("trl2boolvec", *args, **kwargs)

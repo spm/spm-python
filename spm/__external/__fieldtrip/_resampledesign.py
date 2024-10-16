@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _resampledesign(*args, **kwargs):
@@ -52,4 +52,4 @@ def _resampledesign(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/private/resampledesign.m)
   """
 
-  return _Runtime.call("resampledesign", *args, **kwargs)
+  return Runtime.call("resampledesign", *args, **kwargs)

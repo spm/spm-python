@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _univariate2bivariate(*args, **kwargs):
@@ -21,4 +21,4 @@ def _univariate2bivariate(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/private/univariate2bivariate.m)
   """
 
-  return _Runtime.call("univariate2bivariate", *args, **kwargs)
+  return Runtime.call("univariate2bivariate", *args, **kwargs)

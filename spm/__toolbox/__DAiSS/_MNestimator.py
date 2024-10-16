@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _MNestimator(*args, **kwargs):
@@ -33,4 +33,4 @@ def _MNestimator(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/toolbox/DAiSS/private/MNestimator.m)
   """
 
-  return _Runtime.call("MNestimator", *args, **kwargs)
+  return Runtime.call("MNestimator", *args, **kwargs)

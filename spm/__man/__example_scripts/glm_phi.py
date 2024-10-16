@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def glm_phi(*args, **kwargs):
@@ -18,4 +18,4 @@ def glm_phi(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/man/example_scripts/glm_phi.m)
   """
 
-  return _Runtime.call("glm_phi", *args, **kwargs)
+  return Runtime.call("glm_phi", *args, **kwargs)

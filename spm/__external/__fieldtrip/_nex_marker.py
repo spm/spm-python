@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _nex_marker(*args, **kwargs):
@@ -26,4 +26,4 @@ def _nex_marker(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/private/nex_marker.m)
   """
 
-  return _Runtime.call("nex_marker", *args, **kwargs)
+  return Runtime.call("nex_marker", *args, **kwargs)

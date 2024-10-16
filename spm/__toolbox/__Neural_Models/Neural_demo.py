@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def Neural_demo(*args, **kwargs):
@@ -27,4 +27,4 @@ def Neural_demo(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/toolbox/Neural_Models/Neural_demo.m)
   """
 
-  return _Runtime.call("Neural_demo", *args, **kwargs)
+  return Runtime.call("Neural_demo", *args, **kwargs)

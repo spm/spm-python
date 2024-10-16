@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _rmsubfield(*args, **kwargs):
@@ -18,4 +18,4 @@ def _rmsubfield(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/plotting/private/rmsubfield.m)
   """
 
-  return _Runtime.call("rmsubfield", *args, **kwargs)
+  return Runtime.call("rmsubfield", *args, **kwargs)

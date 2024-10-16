@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def mci_linear_post(*args, **kwargs):
@@ -18,4 +18,4 @@ def mci_linear_post(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/toolbox/mci/models/linear/mci_linear_post.m)
   """
 
-  return _Runtime.call("mci_linear_post", *args, **kwargs)
+  return Runtime.call("mci_linear_post", *args, **kwargs)

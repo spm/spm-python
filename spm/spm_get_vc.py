@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def spm_get_vc(*args, **kwargs):
@@ -32,4 +32,4 @@ def spm_get_vc(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/spm_get_vc.m)
   """
 
-  return _Runtime.call("spm_get_vc", *args, **kwargs)
+  return Runtime.call("spm_get_vc", *args, **kwargs)

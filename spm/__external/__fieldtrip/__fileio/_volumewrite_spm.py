@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _volumewrite_spm(*args, **kwargs):
@@ -12,4 +12,4 @@ def _volumewrite_spm(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/volumewrite_spm.m)
   """
 
-  return _Runtime.call("volumewrite_spm", *args, **kwargs)
+  return Runtime.call("volumewrite_spm", *args, **kwargs)

@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def spm_Gcdf(*args, **kwargs):
@@ -66,4 +66,4 @@ def spm_Gcdf(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/spm_Gcdf.m)
   """
 
-  return _Runtime.call("spm_Gcdf", *args, **kwargs)
+  return Runtime.call("spm_Gcdf", *args, **kwargs)

@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def spm_mvNpdf(*args, **kwargs):
@@ -29,4 +29,4 @@ def spm_mvNpdf(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/spm_mvNpdf.m)
   """
 
-  return _Runtime.call("spm_mvNpdf", *args, **kwargs)
+  return Runtime.call("spm_mvNpdf", *args, **kwargs)

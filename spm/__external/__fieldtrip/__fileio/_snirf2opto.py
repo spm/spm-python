@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _snirf2opto(*args, **kwargs):
@@ -15,4 +15,4 @@ def _snirf2opto(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/snirf2opto.m)
   """
 
-  return _Runtime.call("snirf2opto", *args, **kwargs)
+  return Runtime.call("snirf2opto", *args, **kwargs)

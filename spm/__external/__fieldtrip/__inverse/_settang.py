@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _settang(*args, **kwargs):
@@ -10,4 +10,4 @@ def _settang(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/inverse/private/settang.m)
   """
 
-  return _Runtime.call("settang", *args, **kwargs)
+  return Runtime.call("settang", *args, **kwargs)

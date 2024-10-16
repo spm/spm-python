@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def mci_plot_surface(*args, **kwargs):
@@ -17,4 +17,4 @@ def mci_plot_surface(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/toolbox/mci/plotting/mci_plot_surface.m)
   """
 
-  return _Runtime.call("mci_plot_surface", *args, **kwargs)
+  return Runtime.call("mci_plot_surface", *args, **kwargs)

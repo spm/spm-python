@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _checktime(*args, **kwargs):
@@ -8,4 +8,4 @@ def _checktime(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/private/checktime.m)
   """
 
-  return _Runtime.call("checktime", *args, **kwargs)
+  return Runtime.call("checktime", *args, **kwargs)

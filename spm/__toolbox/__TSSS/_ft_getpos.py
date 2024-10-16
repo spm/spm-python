@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _ft_getpos(*args, **kwargs):
@@ -20,4 +20,4 @@ def _ft_getpos(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/toolbox/TSSS/private/ft_getpos.m)
   """
 
-  return _Runtime.call("ft_getpos", *args, **kwargs)
+  return Runtime.call("ft_getpos", *args, **kwargs)

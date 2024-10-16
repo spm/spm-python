@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _CalcMD5(*args, **kwargs):
@@ -66,4 +66,4 @@ def _CalcMD5(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/utilities/private/CalcMD5.m)
   """
 
-  return _Runtime.call("CalcMD5", *args, **kwargs)
+  return Runtime.call("CalcMD5", *args, **kwargs)

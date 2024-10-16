@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def copyfields(*args, **kwargs):
@@ -15,4 +15,4 @@ def copyfields(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/utilities/copyfields.m)
   """
 
-  return _Runtime.call("copyfields", *args, **kwargs)
+  return Runtime.call("copyfields", *args, **kwargs)

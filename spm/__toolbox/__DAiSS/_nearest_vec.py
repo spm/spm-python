@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _nearest_vec(*args, **kwargs):
@@ -9,4 +9,4 @@ def _nearest_vec(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/toolbox/DAiSS/private/nearest_vec.m)
   """
 
-  return _Runtime.call("nearest_vec", *args, **kwargs)
+  return Runtime.call("nearest_vec", *args, **kwargs)

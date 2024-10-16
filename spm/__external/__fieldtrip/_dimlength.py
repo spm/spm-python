@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _dimlength(*args, **kwargs):
@@ -22,4 +22,4 @@ def _dimlength(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/private/dimlength.m)
   """
 
-  return _Runtime.call("dimlength", *args, **kwargs)
+  return Runtime.call("dimlength", *args, **kwargs)

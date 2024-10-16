@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _ft_urlread(*args, **kwargs):
@@ -11,4 +11,4 @@ def _ft_urlread(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/utilities/private/ft_urlread.m)
   """
 
-  return _Runtime.call("ft_urlread", *args, **kwargs)
+  return Runtime.call("ft_urlread", *args, **kwargs)

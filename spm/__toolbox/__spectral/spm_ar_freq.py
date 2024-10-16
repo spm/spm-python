@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def spm_ar_freq(*args, **kwargs):
@@ -16,4 +16,4 @@ def spm_ar_freq(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/toolbox/spectral/spm_ar_freq.m)
   """
 
-  return _Runtime.call("spm_ar_freq", *args, **kwargs)
+  return Runtime.call("spm_ar_freq", *args, **kwargs)

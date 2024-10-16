@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def ADEM_occulomotor_delays(*args, **kwargs):
@@ -24,4 +24,4 @@ def ADEM_occulomotor_delays(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/toolbox/DEM/ADEM_occulomotor_delays.m)
   """
 
-  return _Runtime.call("ADEM_occulomotor_delays", *args, **kwargs, nargout=0)
+  return Runtime.call("ADEM_occulomotor_delays", *args, **kwargs, nargout=0)

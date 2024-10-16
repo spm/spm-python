@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def spm_unvec(*args, **kwargs):
@@ -17,4 +17,4 @@ def spm_unvec(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/spm_unvec.m)
   """
 
-  return _Runtime.call("spm_unvec", *args, **kwargs)
+  return Runtime.call("spm_unvec", *args, **kwargs)

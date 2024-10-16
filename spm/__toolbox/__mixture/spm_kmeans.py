@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def spm_kmeans(*args, **kwargs):
@@ -22,4 +22,4 @@ def spm_kmeans(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/toolbox/mixture/spm_kmeans.m)
   """
 
-  return _Runtime.call("spm_kmeans", *args, **kwargs)
+  return Runtime.call("spm_kmeans", *args, **kwargs)

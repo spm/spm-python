@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _magenta(*args, **kwargs):
@@ -27,4 +27,4 @@ def _magenta(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/plotting/private/magenta.m)
   """
 
-  return _Runtime.call("magenta", *args, **kwargs)
+  return Runtime.call("magenta", *args, **kwargs)

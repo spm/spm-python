@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def spm_dcm_peb_full(*args, **kwargs):
@@ -78,4 +78,4 @@ def spm_dcm_peb_full(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/spm_dcm_peb_full.m)
   """
 
-  return _Runtime.call("spm_dcm_peb_full", *args, **kwargs)
+  return Runtime.call("spm_dcm_peb_full", *args, **kwargs)

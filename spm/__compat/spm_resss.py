@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def spm_resss(*args, **kwargs):
@@ -81,4 +81,4 @@ def spm_resss(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/compat/spm_resss.m)
   """
 
-  return _Runtime.call("spm_resss", *args, **kwargs)
+  return Runtime.call("spm_resss", *args, **kwargs)

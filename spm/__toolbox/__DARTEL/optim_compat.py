@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def optim_compat(*args, **kwargs):
@@ -14,4 +14,4 @@ def optim_compat(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/toolbox/DARTEL/optim_compat.m)
   """
 
-  return _Runtime.call("optim_compat", *args, **kwargs)
+  return Runtime.call("optim_compat", *args, **kwargs)

@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _specest_nanfft(*args, **kwargs):
@@ -25,4 +25,4 @@ def _specest_nanfft(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/private/specest_nanfft.m)
   """
 
-  return _Runtime.call("specest_nanfft", *args, **kwargs)
+  return Runtime.call("specest_nanfft", *args, **kwargs)

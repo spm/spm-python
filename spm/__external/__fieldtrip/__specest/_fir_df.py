@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _fir_df(*args, **kwargs):
@@ -23,4 +23,4 @@ def _fir_df(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/specest/private/fir_df.m)
   """
 
-  return _Runtime.call("fir_df", *args, **kwargs)
+  return Runtime.call("fir_df", *args, **kwargs)

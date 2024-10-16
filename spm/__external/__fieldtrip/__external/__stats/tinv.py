@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def tinv(*args, **kwargs):
@@ -16,4 +16,4 @@ def tinv(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/external/stats/tinv.m)
   """
 
-  return _Runtime.call("tinv", *args, **kwargs)
+  return Runtime.call("tinv", *args, **kwargs)

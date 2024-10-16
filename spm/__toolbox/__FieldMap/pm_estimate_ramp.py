@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def pm_estimate_ramp(*args, **kwargs):
@@ -26,4 +26,4 @@ def pm_estimate_ramp(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/toolbox/FieldMap/pm_estimate_ramp.m)
   """
 
-  return _Runtime.call("pm_estimate_ramp", *args, **kwargs)
+  return Runtime.call("pm_estimate_ramp", *args, **kwargs)

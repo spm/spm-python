@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _coeffs2iis(*args, **kwargs):
@@ -16,4 +16,4 @@ def _coeffs2iis(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/connectivity/private/coeffs2iis.m)
   """
 
-  return _Runtime.call("coeffs2iis", *args, **kwargs)
+  return Runtime.call("coeffs2iis", *args, **kwargs)

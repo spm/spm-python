@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def DATA_WID_data(*args, **kwargs):
@@ -15,4 +15,4 @@ def DATA_WID_data(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/toolbox/DEM/DATA_WID_data.m)
   """
 
-  return _Runtime.call("DATA_WID_data", *args, **kwargs)
+  return Runtime.call("DATA_WID_data", *args, **kwargs)

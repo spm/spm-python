@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def spm_fmin(*args, **kwargs):
@@ -29,4 +29,4 @@ def spm_fmin(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/spm_fmin.m)
   """
 
-  return _Runtime.call("spm_fmin", *args, **kwargs)
+  return Runtime.call("spm_fmin", *args, **kwargs)

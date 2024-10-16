@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def rgb2hsv(*args, **kwargs):
@@ -11,4 +11,4 @@ def rgb2hsv(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/external/images/rgb2hsv.m)
   """
 
-  return _Runtime.call("rgb2hsv", *args, **kwargs)
+  return Runtime.call("rgb2hsv", *args, **kwargs)

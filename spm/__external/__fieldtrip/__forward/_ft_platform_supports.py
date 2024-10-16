@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _ft_platform_supports(*args, **kwargs):
@@ -48,4 +48,4 @@ def _ft_platform_supports(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/forward/private/ft_platform_supports.m)
   """
 
-  return _Runtime.call("ft_platform_supports", *args, **kwargs)
+  return Runtime.call("ft_platform_supports", *args, **kwargs)

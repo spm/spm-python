@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _multivariate_decomp(*args, **kwargs):
@@ -33,4 +33,4 @@ def _multivariate_decomp(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/connectivity/private/multivariate_decomp.m)
   """
 
-  return _Runtime.call("multivariate_decomp", *args, **kwargs)
+  return Runtime.call("multivariate_decomp", *args, **kwargs)

@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def ft_checkopt(*args, **kwargs):
@@ -49,4 +49,4 @@ def ft_checkopt(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/utilities/ft_checkopt.m)
   """
 
-  return _Runtime.call("ft_checkopt", *args, **kwargs)
+  return Runtime.call("ft_checkopt", *args, **kwargs)

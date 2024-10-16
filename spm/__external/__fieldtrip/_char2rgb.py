@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _char2rgb(*args, **kwargs):
@@ -11,4 +11,4 @@ def _char2rgb(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/private/char2rgb.m)
   """
 
-  return _Runtime.call("char2rgb", *args, **kwargs)
+  return Runtime.call("char2rgb", *args, **kwargs)

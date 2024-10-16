@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _sn2individual(*args, **kwargs):
@@ -14,4 +14,4 @@ def _sn2individual(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/utilities/private/sn2individual.m)
   """
 
-  return _Runtime.call("sn2individual", *args, **kwargs)
+  return Runtime.call("sn2individual", *args, **kwargs)

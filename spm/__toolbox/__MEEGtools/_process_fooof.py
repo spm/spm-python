@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _process_fooof(*args, **kwargs):
@@ -14,4 +14,4 @@ def _process_fooof(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/toolbox/MEEGtools/private/process_fooof.m)
   """
 
-  return _Runtime.call("process_fooof", *args, **kwargs)
+  return Runtime.call("process_fooof", *args, **kwargs)

@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _mesh2edge(*args, **kwargs):
@@ -16,4 +16,4 @@ def _mesh2edge(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/forward/private/mesh2edge.m)
   """
 
-  return _Runtime.call("mesh2edge", *args, **kwargs)
+  return Runtime.call("mesh2edge", *args, **kwargs)

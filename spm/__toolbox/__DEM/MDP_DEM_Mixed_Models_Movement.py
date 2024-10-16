@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def MDP_DEM_Mixed_Models_Movement(*args, **kwargs):
@@ -21,4 +21,4 @@ def MDP_DEM_Mixed_Models_Movement(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/toolbox/DEM/MDP_DEM_Mixed_Models_Movement.m)
   """
 
-  return _Runtime.call("MDP_DEM_Mixed_Models_Movement", *args, **kwargs, nargout=0)
+  return Runtime.call("MDP_DEM_Mixed_Models_Movement", *args, **kwargs, nargout=0)

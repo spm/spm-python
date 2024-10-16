@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _isrealvec(*args, **kwargs):
@@ -13,4 +13,4 @@ def _isrealvec(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/private/isrealvec.m)
   """
 
-  return _Runtime.call("isrealvec", *args, **kwargs)
+  return Runtime.call("isrealvec", *args, **kwargs)

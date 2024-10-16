@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _ignorefields(*args, **kwargs):
@@ -10,4 +10,4 @@ def _ignorefields(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/ignorefields.m)
   """
 
-  return _Runtime.call("ignorefields", *args, **kwargs)
+  return Runtime.call("ignorefields", *args, **kwargs)

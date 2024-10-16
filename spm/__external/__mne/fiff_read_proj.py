@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def fiff_read_proj(*args, **kwargs):
@@ -11,4 +11,4 @@ def fiff_read_proj(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/mne/fiff_read_proj.m)
   """
 
-  return _Runtime.call("fiff_read_proj", *args, **kwargs)
+  return Runtime.call("fiff_read_proj", *args, **kwargs)

@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def markdown2matlab(*args, **kwargs):
@@ -25,4 +25,4 @@ def markdown2matlab(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/utilities/markdown2matlab.m)
   """
 
-  return _Runtime.call("markdown2matlab", *args, **kwargs, nargout=0)
+  return Runtime.call("markdown2matlab", *args, **kwargs, nargout=0)

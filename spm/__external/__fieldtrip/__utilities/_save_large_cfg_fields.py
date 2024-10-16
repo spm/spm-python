@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _save_large_cfg_fields(*args, **kwargs):
@@ -9,4 +9,4 @@ def _save_large_cfg_fields(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/utilities/private/save_large_cfg_fields.m)
   """
 
-  return _Runtime.call("save_large_cfg_fields", *args, **kwargs)
+  return Runtime.call("save_large_cfg_fields", *args, **kwargs)

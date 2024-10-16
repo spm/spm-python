@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def spm_cfg_preproc(*args, **kwargs):
@@ -9,4 +9,4 @@ def spm_cfg_preproc(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/toolbox/OldSeg/spm_cfg_preproc.m)
   """
 
-  return _Runtime.call("spm_cfg_preproc", *args, **kwargs)
+  return Runtime.call("spm_cfg_preproc", *args, **kwargs)

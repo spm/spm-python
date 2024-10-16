@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def spm_check_installation(*args, **kwargs):
@@ -21,4 +21,4 @@ def spm_check_installation(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/spm_check_installation.m)
   """
 
-  return _Runtime.call("spm_check_installation", *args, **kwargs)
+  return Runtime.call("spm_check_installation", *args, **kwargs)

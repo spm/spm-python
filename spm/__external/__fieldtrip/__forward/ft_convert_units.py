@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def ft_convert_units(*args, **kwargs):
@@ -26,4 +26,4 @@ def ft_convert_units(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/forward/ft_convert_units.m)
   """
 
-  return _Runtime.call("ft_convert_units", *args, **kwargs)
+  return Runtime.call("ft_convert_units", *args, **kwargs)

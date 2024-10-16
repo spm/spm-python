@@ -1,9 +1,8 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _artifact_level(*args, **kwargs):
-  """  This function is shared between FT_REJECTVISUAL, FT_BADCHANNEL,   
-    FT_BADSEGMENT, and FT_BADDATA  
+  """  This function is shared between FT_REJECTVISUAL and FT_BADCHANNEL  
      
     Use as  
       level = artifact_level(dat, metric, mval, sd, connectivity)  
@@ -20,4 +19,4 @@ def _artifact_level(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/private/artifact_level.m)
   """
 
-  return _Runtime.call("artifact_level", *args, **kwargs)
+  return Runtime.call("artifact_level", *args, **kwargs)

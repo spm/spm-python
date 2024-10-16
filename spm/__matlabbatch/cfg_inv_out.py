@@ -1,7 +1,7 @@
-from spm.__wrap__ import _Runtime, _MatlabClassWrapper
+from spm.__wrapper__ import Runtime, MatlabClassWrapper
 
 
-class cfg_inv_out(_MatlabClassWrapper):
+class cfg_inv_out(MatlabClassWrapper):
   def __init__(self, *args, _objdict=None, **kwargs):
     """  function obj = cfg_inv_out(varargin)  
     Auxiliary class to mark invalid (i.e. not yet available) outputs of  
@@ -24,6 +24,6 @@ class cfg_inv_out(_MatlabClassWrapper):
     """
 
     if _objdict is None:
-      _objdict = _Runtime.call("cfg_inv_out", *args, **kwargs)
+      _objdict = Runtime.call("cfg_inv_out", *args, **kwargs)
     super().__init__(_objdict)
 

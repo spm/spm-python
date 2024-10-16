@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def spm_matlab_version_chk(*args, **kwargs):
@@ -25,4 +25,4 @@ def spm_matlab_version_chk(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/compat/spm_matlab_version_chk.m)
   """
 
-  return _Runtime.call("spm_matlab_version_chk", *args, **kwargs)
+  return Runtime.call("spm_matlab_version_chk", *args, **kwargs)

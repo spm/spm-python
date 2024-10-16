@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def cfg_findspec(*args, **kwargs):
@@ -34,4 +34,4 @@ def cfg_findspec(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/matlabbatch/cfg_findspec.m)
   """
 
-  return _Runtime.call("cfg_findspec", *args, **kwargs)
+  return Runtime.call("cfg_findspec", *args, **kwargs)

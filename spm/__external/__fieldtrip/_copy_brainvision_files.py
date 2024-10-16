@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _copy_brainvision_files(*args, **kwargs):
@@ -25,4 +25,4 @@ def _copy_brainvision_files(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/private/copy_brainvision_files.m)
   """
 
-  return _Runtime.call("copy_brainvision_files", *args, **kwargs, nargout=0)
+  return Runtime.call("copy_brainvision_files", *args, **kwargs, nargout=0)

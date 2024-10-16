@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _find_outermost_boundary(*args, **kwargs):
@@ -16,4 +16,4 @@ def _find_outermost_boundary(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/forward/private/find_outermost_boundary.m)
   """
 
-  return _Runtime.call("find_outermost_boundary", *args, **kwargs)
+  return Runtime.call("find_outermost_boundary", *args, **kwargs)

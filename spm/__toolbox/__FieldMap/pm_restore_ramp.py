@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def pm_restore_ramp(*args, **kwargs):
@@ -30,4 +30,4 @@ def pm_restore_ramp(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/toolbox/FieldMap/pm_restore_ramp.m)
   """
 
-  return _Runtime.call("pm_restore_ramp", *args, **kwargs)
+  return Runtime.call("pm_restore_ramp", *args, **kwargs)

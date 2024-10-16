@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def strel_bol(*args, **kwargs):
@@ -11,4 +11,4 @@ def strel_bol(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/utilities/strel_bol.m)
   """
 
-  return _Runtime.call("strel_bol", *args, **kwargs)
+  return Runtime.call("strel_bol", *args, **kwargs)

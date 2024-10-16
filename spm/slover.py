@@ -1,7 +1,7 @@
-from spm.__wrap__ import _Runtime, _MatlabClassWrapper
+from spm.__wrapper__ import Runtime, MatlabClassWrapper
 
 
-class slover(_MatlabClassWrapper):
+class slover(MatlabClassWrapper):
   def __init__(self, *args, _objdict=None, **kwargs):
     """  class constructor for slice overlay (slover) object  
     FORMAT [o, others] = slover(params, others, varargin)  
@@ -159,7 +159,7 @@ class slover(_MatlabClassWrapper):
     """
 
     if _objdict is None:
-      _objdict = _Runtime.call("slover", *args, **kwargs)
+      _objdict = Runtime.call("slover", *args, **kwargs)
     super().__init__(_objdict)
 
   def add_blobs(self, *args, **kwargs):
@@ -180,8 +180,7 @@ class slover(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@slover/add_blobs.m)
     """
 
-    return _Runtime.call("add_blobs", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("add_blobs", self._as_matlab_object(), *args, **kwargs)
 
   def add_matrix(self, *args, **kwargs):
     """  Add 3d matrix image vol to slice overlay  
@@ -201,8 +200,7 @@ class slover(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@slover/add_matrix.m)
     """
 
-    return _Runtime.call("add_matrix", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("add_matrix", self._as_matlab_object(), *args, **kwargs)
 
   def add_spm(self, *args, **kwargs):
     """  Add SPM blobs as new img to object, split effect, 'hot' colormap  
@@ -215,8 +213,7 @@ class slover(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@slover/add_spm.m)
     """
 
-    return _Runtime.call("add_spm", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("add_spm", self._as_matlab_object(), *args, **kwargs)
 
   def display(self, *args, **kwargs):
     """  Display method for slice overlay object  
@@ -226,8 +223,9 @@ class slover(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@slover/display.m)
     """
 
-    return _Runtime.call("display", self._as_matlab_object(), *args, **kwargs)
+    return Runtime.call("display", self._as_matlab_object(), *args, **kwargs)
 
+  __repr__ = display # Use display to represent objects
 
   def fill_defaults(self, *args, **kwargs):
     """  Check and fill fields in object  
@@ -244,8 +242,7 @@ class slover(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@slover/fill_defaults.m)
     """
 
-    return _Runtime.call("fill_defaults", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("fill_defaults", self._as_matlab_object(), *args, **kwargs)
 
   def get_pos(self, *args, **kwargs):
     """  Return point location from last click, in mm  
@@ -255,8 +252,7 @@ class slover(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@slover/get_pos.m)
     """
 
-    return _Runtime.call("get_pos", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("get_pos", self._as_matlab_object(), *args, **kwargs)
 
   def paint(self, *args, **kwargs):
     """  Method to display slice overlay  
@@ -281,8 +277,7 @@ class slover(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@slover/paint.m)
     """
 
-    return _Runtime.call("paint", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("paint", self._as_matlab_object(), *args, **kwargs)
 
   def point_vals(self, *args, **kwargs):
     """  Return values from all the images at points given in XYZmm  
@@ -303,8 +298,7 @@ class slover(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@slover/point_vals.m)
     """
 
-    return _Runtime.call("point_vals", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("point_vals", self._as_matlab_object(), *args, **kwargs)
 
   def print_fig(self, *args, **kwargs):
     """  Print slice overlay figure  
@@ -323,8 +317,7 @@ class slover(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@slover/print_fig.m)
     """
 
-    return _Runtime.call("print_fig", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("print_fig", self._as_matlab_object(), *args, **kwargs)
 
   def subsasgn(self, *args, **kwargs):
     """  Method to overload . notation in assignments.  
@@ -335,8 +328,7 @@ class slover(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@slover/subsasgn.m)
     """
 
-    return _Runtime.call("subsasgn", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("subsasgn", self._as_matlab_object(), *args, **kwargs)
 
   def subsref(self, *args, **kwargs):
     """  Method to overload the . notation.  
@@ -347,6 +339,5 @@ class slover(_MatlabClassWrapper):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@slover/subsref.m)
     """
 
-    return _Runtime.call("subsref", self._as_matlab_object(), *args, **kwargs)
-
+    return Runtime.call("subsref", self._as_matlab_object(), *args, **kwargs)
 

@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def writeRes4(*args, **kwargs):
@@ -10,4 +10,4 @@ def writeRes4(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/ctf/writeRes4.m)
   """
 
-  return _Runtime.call("writeRes4", *args, **kwargs)
+  return Runtime.call("writeRes4", *args, **kwargs)

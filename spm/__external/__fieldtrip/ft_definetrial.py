@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def ft_definetrial(*args, **kwargs):
@@ -90,4 +90,4 @@ def ft_definetrial(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/ft_definetrial.m)
   """
 
-  return _Runtime.call("ft_definetrial", *args, **kwargs)
+  return Runtime.call("ft_definetrial", *args, **kwargs)

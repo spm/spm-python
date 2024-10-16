@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def spm_rglm(*args, **kwargs):
@@ -45,4 +45,4 @@ def spm_rglm(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/toolbox/mixture/spm_rglm.m)
   """
 
-  return _Runtime.call("spm_rglm", *args, **kwargs)
+  return Runtime.call("spm_rglm", *args, **kwargs)

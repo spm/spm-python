@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _tokenize(*args, **kwargs):
@@ -24,4 +24,4 @@ def _tokenize(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/tokenize.m)
   """
 
-  return _Runtime.call("tokenize", *args, **kwargs)
+  return Runtime.call("tokenize", *args, **kwargs)

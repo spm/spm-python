@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _freq2cumtapcnt(*args, **kwargs):
@@ -9,4 +9,4 @@ def _freq2cumtapcnt(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/private/freq2cumtapcnt.m)
   """
 
-  return _Runtime.call("freq2cumtapcnt", *args, **kwargs)
+  return Runtime.call("freq2cumtapcnt", *args, **kwargs)

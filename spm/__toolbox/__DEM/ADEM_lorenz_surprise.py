@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def ADEM_lorenz_surprise(*args, **kwargs):
@@ -12,4 +12,4 @@ def ADEM_lorenz_surprise(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/toolbox/DEM/ADEM_lorenz_surprise.m)
   """
 
-  return _Runtime.call("ADEM_lorenz_surprise", *args, **kwargs, nargout=0)
+  return Runtime.call("ADEM_lorenz_surprise", *args, **kwargs, nargout=0)

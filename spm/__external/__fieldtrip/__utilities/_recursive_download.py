@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _recursive_download(*args, **kwargs):
@@ -13,4 +13,4 @@ def _recursive_download(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/utilities/private/recursive_download.m)
   """
 
-  return _Runtime.call("recursive_download", *args, **kwargs, nargout=0)
+  return Runtime.call("recursive_download", *args, **kwargs, nargout=0)

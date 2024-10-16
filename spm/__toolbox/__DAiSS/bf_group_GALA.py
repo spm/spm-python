@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def bf_group_GALA(*args, **kwargs):
@@ -16,4 +16,4 @@ def bf_group_GALA(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/toolbox/DAiSS/bf_group_GALA.m)
   """
 
-  return _Runtime.call("bf_group_GALA", *args, **kwargs)
+  return Runtime.call("bf_group_GALA", *args, **kwargs)

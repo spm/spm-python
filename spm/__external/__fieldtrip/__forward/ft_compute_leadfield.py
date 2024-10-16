@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def ft_compute_leadfield(*args, **kwargs):
@@ -69,4 +69,4 @@ def ft_compute_leadfield(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/forward/ft_compute_leadfield.m)
   """
 
-  return _Runtime.call("ft_compute_leadfield", *args, **kwargs)
+  return Runtime.call("ft_compute_leadfield", *args, **kwargs)

@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def mne_transpose_named_matrix(*args, **kwargs):
@@ -11,4 +11,4 @@ def mne_transpose_named_matrix(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/mne/mne_transpose_named_matrix.m)
   """
 
-  return _Runtime.call("mne_transpose_named_matrix", *args, **kwargs)
+  return Runtime.call("mne_transpose_named_matrix", *args, **kwargs)

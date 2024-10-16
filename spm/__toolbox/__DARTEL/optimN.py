@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def optimN(*args, **kwargs):
@@ -66,4 +66,4 @@ def optimN(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/toolbox/DARTEL/optimN.m)
   """
 
-  return _Runtime.call("optimN", *args, **kwargs)
+  return Runtime.call("optimN", *args, **kwargs)

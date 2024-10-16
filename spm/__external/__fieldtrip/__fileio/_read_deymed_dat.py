@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _read_deymed_dat(*args, **kwargs):
@@ -13,4 +13,4 @@ def _read_deymed_dat(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/read_deymed_dat.m)
   """
 
-  return _Runtime.call("read_deymed_dat", *args, **kwargs)
+  return Runtime.call("read_deymed_dat", *args, **kwargs)

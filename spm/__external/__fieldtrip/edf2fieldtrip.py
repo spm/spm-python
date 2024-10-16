@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def edf2fieldtrip(*args, **kwargs):
@@ -22,4 +22,4 @@ def edf2fieldtrip(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/edf2fieldtrip.m)
   """
 
-  return _Runtime.call("edf2fieldtrip", *args, **kwargs)
+  return Runtime.call("edf2fieldtrip", *args, **kwargs)

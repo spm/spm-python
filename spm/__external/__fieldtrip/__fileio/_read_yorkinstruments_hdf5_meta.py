@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _read_yorkinstruments_hdf5_meta(*args, **kwargs):
@@ -11,4 +11,4 @@ def _read_yorkinstruments_hdf5_meta(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/read_yorkinstruments_hdf5_meta.m)
   """
 
-  return _Runtime.call("read_yorkinstruments_hdf5_meta", *args, **kwargs)
+  return Runtime.call("read_yorkinstruments_hdf5_meta", *args, **kwargs)

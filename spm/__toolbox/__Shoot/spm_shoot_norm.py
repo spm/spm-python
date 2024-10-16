@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def spm_shoot_norm(*args, **kwargs):
@@ -39,4 +39,4 @@ def spm_shoot_norm(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/toolbox/Shoot/spm_shoot_norm.m)
   """
 
-  return _Runtime.call("spm_shoot_norm", *args, **kwargs)
+  return Runtime.call("spm_shoot_norm", *args, **kwargs)

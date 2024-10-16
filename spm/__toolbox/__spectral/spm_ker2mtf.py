@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def spm_ker2mtf(*args, **kwargs):
@@ -16,4 +16,4 @@ def spm_ker2mtf(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/toolbox/spectral/spm_ker2mtf.m)
   """
 
-  return _Runtime.call("spm_ker2mtf", *args, **kwargs)
+  return Runtime.call("spm_ker2mtf", *args, **kwargs)

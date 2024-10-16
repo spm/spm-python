@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _nut_dSPM(*args, **kwargs):
@@ -13,4 +13,4 @@ def _nut_dSPM(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/toolbox/DAiSS/private/nut_dSPM.m)
   """
 
-  return _Runtime.call("nut_dSPM", *args, **kwargs)
+  return Runtime.call("nut_dSPM", *args, **kwargs)

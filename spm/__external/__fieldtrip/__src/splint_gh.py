@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def splint_gh(*args, **kwargs):
@@ -9,4 +9,4 @@ def splint_gh(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/src/splint_gh.m)
   """
 
-  return _Runtime.call("splint_gh", *args, **kwargs)
+  return Runtime.call("splint_gh", *args, **kwargs)

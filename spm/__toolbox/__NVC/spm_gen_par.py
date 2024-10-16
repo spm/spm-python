@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def spm_gen_par(*args, **kwargs):
@@ -22,4 +22,4 @@ def spm_gen_par(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/toolbox/NVC/spm_gen_par.m)
   """
 
-  return _Runtime.call("spm_gen_par", *args, **kwargs)
+  return Runtime.call("spm_gen_par", *args, **kwargs)

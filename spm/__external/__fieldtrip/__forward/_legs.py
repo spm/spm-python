@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _legs(*args, **kwargs):
@@ -35,4 +35,4 @@ def _legs(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/forward/private/legs.m)
   """
 
-  return _Runtime.call("legs", *args, **kwargs)
+  return Runtime.call("legs", *args, **kwargs)

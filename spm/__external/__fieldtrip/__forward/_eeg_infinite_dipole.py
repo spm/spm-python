@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _eeg_infinite_dipole(*args, **kwargs):
@@ -14,4 +14,4 @@ def _eeg_infinite_dipole(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/forward/private/eeg_infinite_dipole.m)
   """
 
-  return _Runtime.call("eeg_infinite_dipole", *args, **kwargs)
+  return Runtime.call("eeg_infinite_dipole", *args, **kwargs)

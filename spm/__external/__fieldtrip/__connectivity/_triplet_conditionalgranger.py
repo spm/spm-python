@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _triplet_conditionalgranger(*args, **kwargs):
@@ -15,4 +15,4 @@ def _triplet_conditionalgranger(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/connectivity/private/triplet_conditionalgranger.m)
   """
 
-  return _Runtime.call("triplet_conditionalgranger", *args, **kwargs)
+  return Runtime.call("triplet_conditionalgranger", *args, **kwargs)

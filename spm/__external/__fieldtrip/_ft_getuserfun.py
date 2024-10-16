@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _ft_getuserfun(*args, **kwargs):
@@ -21,4 +21,4 @@ def _ft_getuserfun(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/private/ft_getuserfun.m)
   """
 
-  return _Runtime.call("ft_getuserfun", *args, **kwargs)
+  return Runtime.call("ft_getuserfun", *args, **kwargs)

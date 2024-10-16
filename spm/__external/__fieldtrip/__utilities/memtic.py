@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def memtic(*args, **kwargs):
@@ -44,4 +44,4 @@ def memtic(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/utilities/memtic.m)
   """
 
-  return _Runtime.call("memtic", *args, **kwargs)
+  return Runtime.call("memtic", *args, **kwargs)

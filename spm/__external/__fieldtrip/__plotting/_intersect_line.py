@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _intersect_line(*args, **kwargs):
@@ -23,4 +23,4 @@ def _intersect_line(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/plotting/private/intersect_line.m)
   """
 
-  return _Runtime.call("intersect_line", *args, **kwargs)
+  return Runtime.call("intersect_line", *args, **kwargs)

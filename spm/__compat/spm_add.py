@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def spm_add(*args, **kwargs):
@@ -25,4 +25,4 @@ def spm_add(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/compat/spm_add.m)
   """
 
-  return _Runtime.call("spm_add", *args, **kwargs)
+  return Runtime.call("spm_add", *args, **kwargs)

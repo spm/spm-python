@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def cfg_serial(*args, **kwargs):
@@ -55,4 +55,4 @@ def cfg_serial(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/matlabbatch/cfg_serial.m)
   """
 
-  return _Runtime.call("cfg_serial", *args, **kwargs, nargout=0)
+  return Runtime.call("cfg_serial", *args, **kwargs, nargout=0)

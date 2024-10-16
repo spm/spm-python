@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _dicom2transform(*args, **kwargs):
@@ -32,4 +32,4 @@ def _dicom2transform(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/dicom2transform.m)
   """
 
-  return _Runtime.call("dicom2transform", *args, **kwargs)
+  return Runtime.call("dicom2transform", *args, **kwargs)

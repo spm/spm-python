@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def tsss_spm_enm(*args, **kwargs):
@@ -21,4 +21,4 @@ def tsss_spm_enm(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/toolbox/TSSS/tsss_spm_enm.m)
   """
 
-  return _Runtime.call("tsss_spm_enm", *args, **kwargs)
+  return Runtime.call("tsss_spm_enm", *args, **kwargs)

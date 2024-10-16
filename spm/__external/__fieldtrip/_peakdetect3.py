@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _peakdetect3(*args, **kwargs):
@@ -13,4 +13,4 @@ def _peakdetect3(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/private/peakdetect3.m)
   """
 
-  return _Runtime.call("peakdetect3", *args, **kwargs)
+  return Runtime.call("peakdetect3", *args, **kwargs)

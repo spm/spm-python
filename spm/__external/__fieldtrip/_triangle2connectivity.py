@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _triangle2connectivity(*args, **kwargs):
@@ -24,4 +24,4 @@ def _triangle2connectivity(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/private/triangle2connectivity.m)
   """
 
-  return _Runtime.call("triangle2connectivity", *args, **kwargs)
+  return Runtime.call("triangle2connectivity", *args, **kwargs)

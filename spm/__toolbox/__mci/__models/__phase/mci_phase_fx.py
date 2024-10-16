@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def mci_phase_fx(*args, **kwargs):
@@ -17,4 +17,4 @@ def mci_phase_fx(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/toolbox/mci/models/phase/mci_phase_fx.m)
   """
 
-  return _Runtime.call("mci_phase_fx", *args, **kwargs)
+  return Runtime.call("mci_phase_fx", *args, **kwargs)

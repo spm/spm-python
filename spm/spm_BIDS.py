@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def spm_BIDS(*args, **kwargs):
@@ -24,4 +24,4 @@ def spm_BIDS(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/spm_BIDS.m)
   """
 
-  return _Runtime.call("spm_BIDS", *args, **kwargs)
+  return Runtime.call("spm_BIDS", *args, **kwargs)

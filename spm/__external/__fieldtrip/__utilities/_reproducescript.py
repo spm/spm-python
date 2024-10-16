@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _reproducescript(*args, **kwargs):
@@ -9,4 +9,4 @@ def _reproducescript(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/utilities/private/reproducescript.m)
   """
 
-  return _Runtime.call("reproducescript", *args, **kwargs, nargout=0)
+  return Runtime.call("reproducescript", *args, **kwargs, nargout=0)

@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def spm_mtf2csd(*args, **kwargs):
@@ -21,4 +21,4 @@ def spm_mtf2csd(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/toolbox/spectral/spm_mtf2csd.m)
   """
 
-  return _Runtime.call("spm_mtf2csd", *args, **kwargs)
+  return Runtime.call("spm_mtf2csd", *args, **kwargs)

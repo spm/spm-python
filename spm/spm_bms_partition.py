@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def spm_bms_partition(*args, **kwargs):
@@ -17,4 +17,4 @@ def spm_bms_partition(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/spm_bms_partition.m)
   """
 
-  return _Runtime.call("spm_bms_partition", *args, **kwargs, nargout=0)
+  return Runtime.call("spm_bms_partition", *args, **kwargs, nargout=0)

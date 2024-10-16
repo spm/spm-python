@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _defaultId(*args, **kwargs):
@@ -11,4 +11,4 @@ def _defaultId(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/preproc/private/defaultId.m)
   """
 
-  return _Runtime.call("defaultId", *args, **kwargs)
+  return Runtime.call("defaultId", *args, **kwargs)

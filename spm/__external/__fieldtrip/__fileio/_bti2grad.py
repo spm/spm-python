@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _bti2grad(*args, **kwargs):
@@ -27,4 +27,4 @@ def _bti2grad(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/bti2grad.m)
   """
 
-  return _Runtime.call("bti2grad", *args, **kwargs)
+  return Runtime.call("bti2grad", *args, **kwargs)

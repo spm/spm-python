@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _mplgndr(*args, **kwargs):
@@ -15,4 +15,4 @@ def _mplgndr(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/private/mplgndr.m)
   """
 
-  return _Runtime.call("mplgndr", *args, **kwargs)
+  return Runtime.call("mplgndr", *args, **kwargs)

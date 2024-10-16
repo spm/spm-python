@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def spm_chi2_plot(*args, **kwargs):
@@ -21,4 +21,4 @@ def spm_chi2_plot(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/compat/spm_chi2_plot.m)
   """
 
-  return _Runtime.call("spm_chi2_plot", *args, **kwargs, nargout=0)
+  return Runtime.call("spm_chi2_plot", *args, **kwargs, nargout=0)

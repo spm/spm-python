@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _align_fsaverage2mni(*args, **kwargs):
@@ -21,4 +21,4 @@ def _align_fsaverage2mni(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/utilities/private/align_fsaverage2mni.m)
   """
 
-  return _Runtime.call("align_fsaverage2mni", *args, **kwargs)
+  return Runtime.call("align_fsaverage2mni", *args, **kwargs)

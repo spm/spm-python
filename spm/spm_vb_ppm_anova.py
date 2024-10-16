@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def spm_vb_ppm_anova(*args, **kwargs):
@@ -34,4 +34,4 @@ def spm_vb_ppm_anova(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/spm_vb_ppm_anova.m)
   """
 
-  return _Runtime.call("spm_vb_ppm_anova", *args, **kwargs, nargout=0)
+  return Runtime.call("spm_vb_ppm_anova", *args, **kwargs, nargout=0)

@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _headsurface(*args, **kwargs):
@@ -24,4 +24,4 @@ def _headsurface(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/plotting/private/headsurface.m)
   """
 
-  return _Runtime.call("headsurface", *args, **kwargs)
+  return Runtime.call("headsurface", *args, **kwargs)

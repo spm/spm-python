@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _scale(*args, **kwargs):
@@ -17,4 +17,4 @@ def _scale(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/utilities/private/scale.m)
   """
 
-  return _Runtime.call("scale", *args, **kwargs)
+  return Runtime.call("scale", *args, **kwargs)

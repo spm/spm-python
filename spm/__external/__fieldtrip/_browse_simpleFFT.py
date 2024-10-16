@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _browse_simpleFFT(*args, **kwargs):
@@ -15,4 +15,4 @@ def _browse_simpleFFT(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/private/browse_simpleFFT.m)
   """
 
-  return _Runtime.call("browse_simpleFFT", *args, **kwargs, nargout=0)
+  return Runtime.call("browse_simpleFFT", *args, **kwargs, nargout=0)

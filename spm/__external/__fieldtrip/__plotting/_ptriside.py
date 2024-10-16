@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _ptriside(*args, **kwargs):
@@ -15,4 +15,4 @@ def _ptriside(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/plotting/private/ptriside.m)
   """
 
-  return _Runtime.call("ptriside", *args, **kwargs)
+  return Runtime.call("ptriside", *args, **kwargs)

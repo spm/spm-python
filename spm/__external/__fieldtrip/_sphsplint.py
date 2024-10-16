@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _sphsplint(*args, **kwargs):
@@ -32,4 +32,4 @@ def _sphsplint(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/private/sphsplint.m)
   """
 
-  return _Runtime.call("sphsplint", *args, **kwargs)
+  return Runtime.call("sphsplint", *args, **kwargs)

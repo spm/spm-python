@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _rotate(*args, **kwargs):
@@ -22,4 +22,4 @@ def _rotate(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/plotting/private/rotate.m)
   """
 
-  return _Runtime.call("rotate", *args, **kwargs)
+  return Runtime.call("rotate", *args, **kwargs)

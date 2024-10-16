@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _printstruct_as_table(*args, **kwargs):
@@ -17,4 +17,4 @@ def _printstruct_as_table(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/utilities/private/printstruct_as_table.m)
   """
 
-  return _Runtime.call("printstruct_as_table", *args, **kwargs, nargout=0)
+  return Runtime.call("printstruct_as_table", *args, **kwargs, nargout=0)

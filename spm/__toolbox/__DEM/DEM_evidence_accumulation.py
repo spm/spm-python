@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def DEM_evidence_accumulation(*args, **kwargs):
@@ -25,4 +25,4 @@ def DEM_evidence_accumulation(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/toolbox/DEM/DEM_evidence_accumulation.m)
   """
 
-  return _Runtime.call("DEM_evidence_accumulation", *args, **kwargs)
+  return Runtime.call("DEM_evidence_accumulation", *args, **kwargs)

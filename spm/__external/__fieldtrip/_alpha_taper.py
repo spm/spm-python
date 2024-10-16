@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _alpha_taper(*args, **kwargs):
@@ -37,4 +37,4 @@ def _alpha_taper(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/private/alpha_taper.m)
   """
 
-  return _Runtime.call("alpha_taper", *args, **kwargs)
+  return Runtime.call("alpha_taper", *args, **kwargs)

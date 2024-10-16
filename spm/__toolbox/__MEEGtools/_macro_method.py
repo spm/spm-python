@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _macro_method(*args, **kwargs):
@@ -8,4 +8,4 @@ def _macro_method(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/toolbox/MEEGtools/private/macro_method.m)
   """
 
-  return _Runtime.call("macro_method", *args, **kwargs)
+  return Runtime.call("macro_method", *args, **kwargs)

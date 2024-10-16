@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def ft_rejectvisual(*args, **kwargs):
@@ -33,18 +33,16 @@ def ft_rejectvisual(*args, **kwargs):
                         'zero'   fill the trials that are deselected with zeros  
       cfg.metric      = string, describes the metric that should be computed in summary mode  
                         for each channel in each trial, can be  
-                        'var'          variance within each channel (default)  
-                        'std'          standard deviation within each channel  
-                        'db'           decibel value within each channel  
-                        'mad'          median absolute deviation within each channel  
-                        '1/var'        inverse variance within each channel  
-                        'min'          minimum value in each channel  
-                        'max'          maximum value each channel  
-                        'maxabs'       maximum absolute value in each channel  
-                        'range'        range from min to max in each channel  
-                        'kurtosis'     kurtosis, i.e. measure of peakedness of the amplitude distribution  
-                        'zvalue'       mean and std computed over all time and trials, per channel  
-                        'neighbexpvar' relative variance explained by neighboring channels in each trial  
+                        'var'       variance within each channel (default)  
+                        'std'       standard deviation within each channel  
+                        'mad'       median absolute deviation within each channel  
+                        '1/var'     inverse variance within each channel  
+                        'min'       minimum value in each channel  
+                        'max'       maximum value each channel  
+                        'maxabs'    maximum absolute value in each channel  
+                        'range'     range from min to max in each channel  
+                        'kurtosis'  kurtosis, i.e. measure of peakedness of the amplitude distribution  
+                        'zvalue'    mean and std computed over all time and trials, per channel  
       cfg.neighbours  = neighbourhood structure, see FT_PREPARE_NEIGHBOURS for details  
       cfg.latency     = [begin end] in seconds, or 'all', 'minperiod', 'maxperiod', 'prestim', 'poststim' (default = 'all')  
       cfg.viewmode    = 'remove', 'toggle' or 'hide', only applies to summary mode (default = 'remove')  
@@ -100,4 +98,4 @@ def ft_rejectvisual(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/ft_rejectvisual.m)
   """
 
-  return _Runtime.call("ft_rejectvisual", *args, **kwargs)
+  return Runtime.call("ft_rejectvisual", *args, **kwargs)

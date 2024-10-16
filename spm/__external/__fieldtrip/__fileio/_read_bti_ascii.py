@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _read_bti_ascii(*args, **kwargs):
@@ -15,4 +15,4 @@ def _read_bti_ascii(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/read_bti_ascii.m)
   """
 
-  return _Runtime.call("read_bti_ascii", *args, **kwargs)
+  return Runtime.call("read_bti_ascii", *args, **kwargs)

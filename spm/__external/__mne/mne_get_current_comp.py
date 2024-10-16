@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def mne_get_current_comp(*args, **kwargs):
@@ -11,4 +11,4 @@ def mne_get_current_comp(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/mne/mne_get_current_comp.m)
   """
 
-  return _Runtime.call("mne_get_current_comp", *args, **kwargs)
+  return Runtime.call("mne_get_current_comp", *args, **kwargs)

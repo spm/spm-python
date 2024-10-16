@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def DEM_get_faces(*args, **kwargs):
@@ -12,4 +12,4 @@ def DEM_get_faces(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/toolbox/DEM/DEM_get_faces.m)
   """
 
-  return _Runtime.call("DEM_get_faces", *args, **kwargs, nargout=0)
+  return Runtime.call("DEM_get_faces", *args, **kwargs, nargout=0)

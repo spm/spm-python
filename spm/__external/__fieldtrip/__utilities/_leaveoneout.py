@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _leaveoneout(*args, **kwargs):
@@ -9,4 +9,4 @@ def _leaveoneout(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/utilities/private/leaveoneout.m)
   """
 
-  return _Runtime.call("leaveoneout", *args, **kwargs)
+  return Runtime.call("leaveoneout", *args, **kwargs)

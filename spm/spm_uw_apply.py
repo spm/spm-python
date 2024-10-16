@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def spm_uw_apply(*args, **kwargs):
@@ -123,4 +123,4 @@ def spm_uw_apply(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/spm_uw_apply.m)
   """
 
-  return _Runtime.call("spm_uw_apply", *args, **kwargs)
+  return Runtime.call("spm_uw_apply", *args, **kwargs)

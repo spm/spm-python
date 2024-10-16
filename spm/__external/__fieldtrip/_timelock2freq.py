@@ -1,4 +1,4 @@
-from spm.__wrap__ import _Runtime
+from spm.__wrapper__ import Runtime
 
 
 def _timelock2freq(*args, **kwargs):
@@ -12,4 +12,4 @@ def _timelock2freq(*args, **kwargs):
   [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/private/timelock2freq.m)
   """
 
-  return _Runtime.call("timelock2freq", *args, **kwargs)
+  return Runtime.call("timelock2freq", *args, **kwargs)
