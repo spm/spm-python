@@ -18,7 +18,7 @@ end
 if ~exist('mpython', 'dir')
     system('git clone --depth=1 https://github.com/johmedr/mpython.git');
 else 
-    system('git -C spm pull');
+    system('git -C mpython pull');
 end
 
 cd('..'); 
