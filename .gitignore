@@ -27,6 +27,10 @@
 **/.DS_Store
 **/Thumbs.db
 
+*.nii
+
 # MPython Hashmaps
 **/.mpython_hashmap.csv
-*.nii
+.mpython/build
+.mpython/external
+**/*.asv
