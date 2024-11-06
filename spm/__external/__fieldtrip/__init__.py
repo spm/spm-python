@@ -1,6 +1,5 @@
 from .besa2fieldtrip import besa2fieldtrip
 from .bis2fieldtrip import bis2fieldtrip
-from .__compat import *
 from .__connectivity import *
 from .data2bids import data2bids
 from .edf2fieldtrip import edf2fieldtrip
