@@ -2,11 +2,13 @@ from spm.__wrapper__ import Runtime
 
 
 def _leaveoneout(*args, **kwargs):
-  """leaveoneout is a function.  
-      data = leaveoneout(data)  
-  
+    """
+    leaveoneout is a function.  
+          data = leaveoneout(data)  
+      
 
-  [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/utilities/private/leaveoneout.m)
-  """
+    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/utilities/private/leaveoneout.m )
 
-  return Runtime.call("leaveoneout", *args, **kwargs)
+    Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    """
+    return Runtime.call("leaveoneout", *args, **kwargs)

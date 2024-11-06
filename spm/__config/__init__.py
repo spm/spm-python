@@ -60,13 +60,13 @@ from .spm_cfg_eeg_merge import spm_cfg_eeg_merge
 from .spm_cfg_eeg_momentfit import spm_cfg_eeg_momentfit
 from .spm_cfg_eeg_montage import spm_cfg_eeg_montage
 from .spm_cfg_eeg_opmsetup import spm_cfg_eeg_opmsetup
-from .spm_cfg_eeg_pca_distort import spm_cfg_eeg_pca_distort
-from .spm_cfg_eeg_pca_gainmat import spm_cfg_eeg_pca_gainmat
 from .spm_cfg_eeg_prepare import spm_cfg_eeg_prepare
 from .spm_cfg_eeg_reduce import spm_cfg_eeg_reduce
 from .spm_cfg_eeg_regressors import spm_cfg_eeg_regressors
 from .spm_cfg_eeg_remove_bad_trials import spm_cfg_eeg_remove_bad_trials
 from .spm_cfg_eeg_review import spm_cfg_eeg_review
+from .spm_cfg_eeg_shp_distort import spm_cfg_eeg_shp_distort
+from .spm_cfg_eeg_shp_gainmat import spm_cfg_eeg_shp_gainmat
 from .spm_cfg_eeg_spatial_confounds import spm_cfg_eeg_spatial_confounds
 from .spm_cfg_eeg_tf import spm_cfg_eeg_tf
 from .spm_cfg_eeg_tf_rescale import spm_cfg_eeg_tf_rescale
@@ -127,3 +127,4 @@ from .spm_run_smooth import spm_run_smooth
 from .spm_run_st import spm_run_st
 from .spm_run_tissue_volumes import spm_run_tissue_volumes
 from .spm_run_voi import spm_run_voi
+

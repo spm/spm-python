@@ -2,14 +2,16 @@ from spm.__wrapper__ import Runtime
 
 
 def spm_dotprods2(*args, **kwargs):
-  """  Generate a kernel from dot-products of images  
-    FORMAT spm_dotprods(job)  
-    job.images  - Images to use  
-    job.dotprod - Part of filename for results  
-   __________________________________________________________________________  
-  
+    """
+      Generate a kernel from dot-products of images  
+        FORMAT spm_dotprods(job)  
+        job.images  - Images to use  
+        job.dotprod - Part of filename for results  
+       __________________________________________________________________________  
+      
 
-  [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/toolbox/Shoot/spm_dotprods2.m)
-  """
+    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/Shoot/spm_dotprods2.m )
 
-  return Runtime.call("spm_dotprods2", *args, **kwargs)
+    Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    """
+    return Runtime.call("spm_dotprods2", *args, **kwargs)

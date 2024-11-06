@@ -2,14 +2,16 @@ from spm.__wrapper__ import Runtime
 
 
 def _raw2data(*args, **kwargs):
-  """  RAW2DATA is a helper function that converts raw data to various types of  
-    averages. This function is used to apply the analysis steps that were  
-    written for use on preprocessed data also on averaged data.  
-     
-    This function is the counterpart of DATA2RAW and is used in MEGREALIGN, MEGPLANAR, MEGREPAIR  
-  
+    """
+      RAW2DATA is a helper function that converts raw data to various types of  
+        averages. This function is used to apply the analysis steps that were  
+        written for use on preprocessed data also on averaged data.  
+         
+        This function is the counterpart of DATA2RAW and is used in MEGREALIGN, MEGPLANAR, MEGREPAIR  
+      
 
-  [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/private/raw2data.m)
-  """
+    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/raw2data.m )
 
-  return Runtime.call("raw2data", *args, **kwargs)
+    Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    """
+    return Runtime.call("raw2data", *args, **kwargs)

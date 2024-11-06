@@ -18,3 +18,4 @@ from .spm_read_hdr import spm_read_hdr
 from .spm_resss import spm_resss
 from .spm_spm_ui import spm_spm_ui
 from .spm_tbx_config2cfg import spm_tbx_config2cfg
+

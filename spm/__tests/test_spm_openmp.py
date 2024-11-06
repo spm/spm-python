@@ -2,11 +2,13 @@ from spm.__wrapper__ import Runtime
 
 
 def test_spm_openmp(*args, **kwargs):
-  """  Unit Tests for OpenMP  
-   __________________________________________________________________________  
-  
+    """
+      Unit Tests for OpenMP  
+       __________________________________________________________________________  
+      
 
-  [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/tests/test_spm_openmp.m)
-  """
+    [Matlab code]( https://github.com/spm/spm/blob/main/tests/test_spm_openmp.m )
 
-  return Runtime.call("test_spm_openmp", *args, **kwargs)
+    Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    """
+    return Runtime.call("test_spm_openmp", *args, **kwargs)

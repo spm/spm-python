@@ -2,18 +2,20 @@ from spm.__wrapper__ import Runtime
 
 
 def spm_fx_adem_cue(*args, **kwargs):
-  """  returns the flow for cued response (with action)  
-    FORMAT [f]= spm_fx_adem_cue(x,v,a,P)  
-     
-    x    - hidden states:  
-      x.o  - motor angle  
-     
-    v    - hidden causes  
-     
-   __________________________________________________________________________  
-  
+    """
+      returns the flow for cued response (with action)  
+        FORMAT [f]= spm_fx_adem_cue(x,v,a,P)  
+         
+        x    - hidden states:  
+          x.o  - motor angle  
+         
+        v    - hidden causes  
+         
+       __________________________________________________________________________  
+      
 
-  [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/toolbox/DEM/spm_fx_adem_cue.m)
-  """
+    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DEM/spm_fx_adem_cue.m )
 
-  return Runtime.call("spm_fx_adem_cue", *args, **kwargs)
+    Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    """
+    return Runtime.call("spm_fx_adem_cue", *args, **kwargs)

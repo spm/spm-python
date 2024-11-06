@@ -2,17 +2,19 @@ from spm.__wrapper__ import Runtime
 
 
 def _keyvalcheck(*args, **kwargs):
-  """  KEYVALCHECK is a helper function for parsing optional key-value input pairs.  
-     
-    Use as  
-      keyvalcheck(argin, 'required',  {'key1', 'key2', ...})  
-      keyvalcheck(argin, 'forbidden', {'key1', 'key2', ...})  
-      keyvalcheck(argin, 'optional',  {'key1', 'key2', ...})  
-     
-    See also KEYVAL  
-  
+    """
+      KEYVALCHECK is a helper function for parsing optional key-value input pairs.  
+         
+        Use as  
+          keyvalcheck(argin, 'required',  {'key1', 'key2', ...})  
+          keyvalcheck(argin, 'forbidden', {'key1', 'key2', ...})  
+          keyvalcheck(argin, 'optional',  {'key1', 'key2', ...})  
+         
+        See also KEYVAL  
+      
 
-  [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/plotting/private/keyvalcheck.m)
-  """
+    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/plotting/private/keyvalcheck.m )
 
-  return Runtime.call("keyvalcheck", *args, **kwargs, nargout=0)
+    Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    """
+    return Runtime.call("keyvalcheck", *args, **kwargs, nargout=0)

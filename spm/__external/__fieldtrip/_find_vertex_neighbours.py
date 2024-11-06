@@ -2,13 +2,15 @@ from spm.__wrapper__ import Runtime
 
 
 def _find_vertex_neighbours(*args, **kwargs):
-  """  FIND_VERTEX_NEIGHBOURS determines the neighbours of a specified vertex  
-    in a mesh.  
+    """
+      FIND_VERTEX_NEIGHBOURS determines the neighbours of a specified vertex  
+        in a mesh.  
+          
+        [nb] = find_vertex_neighbours(pnt, tri, indx)  
       
-    [nb] = find_vertex_neighbours(pnt, tri, indx)  
-  
 
-  [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/private/find_vertex_neighbours.m)
-  """
+    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/find_vertex_neighbours.m )
 
-  return Runtime.call("find_vertex_neighbours", *args, **kwargs)
+    Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    """
+    return Runtime.call("find_vertex_neighbours", *args, **kwargs)

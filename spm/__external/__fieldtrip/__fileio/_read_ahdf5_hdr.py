@@ -2,10 +2,12 @@ from spm.__wrapper__ import Runtime
 
 
 def _read_ahdf5_hdr(*args, **kwargs):
-  """ read header  
-  
+    """
+     read header  
+      
 
-  [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/read_ahdf5_hdr.m)
-  """
+    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/read_ahdf5_hdr.m )
 
-  return Runtime.call("read_ahdf5_hdr", *args, **kwargs)
+    Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    """
+    return Runtime.call("read_ahdf5_hdr", *args, **kwargs)

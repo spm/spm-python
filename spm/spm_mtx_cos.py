@@ -2,16 +2,18 @@ from spm.__wrapper__ import Runtime
 
 
 def spm_mtx_cos(*args, **kwargs):
-  """  returns the cosine of the angle between A and B  
-    FORMAT c = spm_mtx_cos(A,B)  
-     
-    a    - (Dirichlet) parameters of a conditional probability matrix  
-     
-    c = arccos( <A|B> /(<A|A><B|B>))  
-   __________________________________________________________________________  
-  
+    """
+      returns the cosine of the angle between A and B  
+        FORMAT c = spm_mtx_cos(A,B)  
+         
+        a    - (Dirichlet) parameters of a conditional probability matrix  
+         
+        c = arccos( <A|B> /(<A|A><B|B>))  
+       __________________________________________________________________________  
+      
 
-  [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/spm_mtx_cos.m)
-  """
+    [Matlab code]( https://github.com/spm/spm/blob/main/spm_mtx_cos.m )
 
-  return Runtime.call("spm_mtx_cos", *args, **kwargs)
+    Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    """
+    return Runtime.call("spm_mtx_cos", *args, **kwargs)

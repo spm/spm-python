@@ -2,10 +2,12 @@ from spm.__wrapper__ import Runtime
 
 
 def _mollify(*args, **kwargs):
-  """  This function does something  
-  
+    """
+      This function does something  
+      
 
-  [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/private/mollify.m)
-  """
+    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/mollify.m )
 
-  return Runtime.call("mollify", *args, **kwargs)
+    Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    """
+    return Runtime.call("mollify", *args, **kwargs)

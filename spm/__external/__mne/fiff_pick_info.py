@@ -2,17 +2,19 @@ from spm.__wrapper__ import Runtime
 
 
 def fiff_pick_info(*args, **kwargs):
-  """   
-    [res] = fiff_pick_info(info,sel)  
-     
-    Pick desired channels from measurement info  
-     
-    res       - Info modified according to sel  
-    info      - The original data  
-    sel       - List of channels to select  
-  
+    """
+       
+        [res] = fiff_pick_info(info,sel)  
+         
+        Pick desired channels from measurement info  
+         
+        res       - Info modified according to sel  
+        info      - The original data  
+        sel       - List of channels to select  
+      
 
-  [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/mne/fiff_pick_info.m)
-  """
+    [Matlab code]( https://github.com/spm/spm/blob/main/external/mne/fiff_pick_info.m )
 
-  return Runtime.call("fiff_pick_info", *args, **kwargs)
+    Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    """
+    return Runtime.call("fiff_pick_info", *args, **kwargs)

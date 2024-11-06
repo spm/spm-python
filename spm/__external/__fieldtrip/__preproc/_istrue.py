@@ -2,11 +2,13 @@ from spm.__wrapper__ import Runtime
 
 
 def _istrue(*args, **kwargs):
-  """  ISTRUE converts an input argument like "yes/no", "true/false" or "on/off" into a  
-    boolean. If the input is boolean, then it will remain like that.  
-  
+    """
+      ISTRUE converts an input argument like "yes/no", "true/false" or "on/off" into a  
+        boolean. If the input is boolean, then it will remain like that.  
+      
 
-  [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/preproc/private/istrue.m)
-  """
+    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/preproc/private/istrue.m )
 
-  return Runtime.call("istrue", *args, **kwargs)
+    Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    """
+    return Runtime.call("istrue", *args, **kwargs)

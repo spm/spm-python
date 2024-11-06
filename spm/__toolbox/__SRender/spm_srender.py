@@ -2,13 +2,15 @@ from spm.__wrapper__ import Runtime
 
 
 def spm_srender(*args, **kwargs):
-  """  A function for rendering surfaces  
-    FORMAT spm_srender(job)  
-    job - a job structure (see tbx_cfg_render.m)  
-   __________________________________________________________________________  
-  
+    """
+      A function for rendering surfaces  
+        FORMAT spm_srender(job)  
+        job - a job structure (see tbx_cfg_render.m)  
+       __________________________________________________________________________  
+      
 
-  [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/toolbox/SRender/spm_srender.m)
-  """
+    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/SRender/spm_srender.m )
 
-  return Runtime.call("spm_srender", *args, **kwargs, nargout=0)
+    Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    """
+    return Runtime.call("spm_srender", *args, **kwargs, nargout=0)

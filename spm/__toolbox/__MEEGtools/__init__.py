@@ -41,3 +41,4 @@ from .spm_opm_rpsd import spm_opm_rpsd
 from .spm_opm_sim import spm_opm_sim
 from .spm_opm_synth_gradiometer import spm_opm_synth_gradiometer
 from .spm_opm_vslm import spm_opm_vslm
+

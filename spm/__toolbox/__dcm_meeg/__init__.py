@@ -108,3 +108,4 @@ from .spm_x_lfp import spm_x_lfp
 from .spm_x_mfm import spm_x_mfm
 from .spm_x_nmda import spm_x_nmda
 from .spm_x_nmm import spm_x_nmm
+

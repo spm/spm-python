@@ -37,3 +37,4 @@ from .spm_nmda_priors import spm_nmda_priors
 from .spm_opt_bfun import spm_opt_bfun
 from .spm_seizure_demo import spm_seizure_demo
 from .spm_sigmoid_demo import spm_sigmoid_demo
+

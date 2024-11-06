@@ -1,4 +1,4 @@
-# Copyright 2015-2023 MathWorks, Inc.
+# Copyright 2015-2024 MathWorks, Inc.
 
 
 """ Package for executing deployed MATLAB functions """
@@ -16,9 +16,9 @@ import weakref
 
 class _PathInitializer(object):
     PLATFORM_DICT = {'Windows': ['PATH','dll',''], 'Linux': ['LD_LIBRARY_PATH','so','libmw'], 'Darwin': ['DYLD_LIBRARY_PATH','dylib','libmw']}
-    SUPPORTED_PYTHON_VERSIONS = ['3_9', '3_10', '3_11']
-    RUNTIME_VERSION_W_DOTS = '24.1'
-    RUNTIME_VERSION_W_UNDERSCORES = '24_1'
+    SUPPORTED_PYTHON_VERSIONS = ['3_9', '3_10', '3_11', '3_12']
+    RUNTIME_VERSION_W_DOTS = '24.2'
+    RUNTIME_VERSION_W_UNDERSCORES = '24_2'
     PACKAGE_NAME = '_spm'
     
     def set_interpreter_version(self):    

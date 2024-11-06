@@ -2,11 +2,13 @@ from spm.__wrapper__ import Runtime
 
 
 def bf_inverse_ebb(*args, **kwargs):
-  """  Computes Empirical Bayes Beamformer filters  
-   __________________________________________________________________________  
-  
+    """
+      Computes Empirical Bayes Beamformer filters  
+       __________________________________________________________________________  
+      
 
-  [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/toolbox/DAiSS/bf_inverse_ebb.m)
-  """
+    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DAiSS/bf_inverse_ebb.m )
 
-  return Runtime.call("bf_inverse_ebb", *args, **kwargs)
+    Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    """
+    return Runtime.call("bf_inverse_ebb", *args, **kwargs)

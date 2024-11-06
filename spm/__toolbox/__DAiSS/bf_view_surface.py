@@ -2,11 +2,13 @@ from spm.__wrapper__ import Runtime
 
 
 def bf_view_surface(*args, **kwargs):
-  """  Diplay surface plot of DAISS output results  
-   __________________________________________________________________________  
-  
+    """
+      Diplay surface plot of DAISS output results  
+       __________________________________________________________________________  
+      
 
-  [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/toolbox/DAiSS/bf_view_surface.m)
-  """
+    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DAiSS/bf_view_surface.m )
 
-  return Runtime.call("bf_view_surface", *args, **kwargs)
+    Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    """
+    return Runtime.call("bf_view_surface", *args, **kwargs)

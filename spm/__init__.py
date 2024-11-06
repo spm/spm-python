@@ -381,6 +381,7 @@ from .spm_eeg_locate_channels import spm_eeg_locate_channels
 from .spm_eeg_mask import spm_eeg_mask
 from .spm_eeg_mask2channels import spm_eeg_mask2channels
 from .spm_eeg_merge import spm_eeg_merge
+from .spm_eeg_meshnative2mni import spm_eeg_meshnative2mni
 from .spm_eeg_modality_ui import spm_eeg_modality_ui
 from .spm_eeg_montage import spm_eeg_montage
 from .spm_eeg_montage_ui import spm_eeg_montage_ui
@@ -666,13 +667,6 @@ from .__spm_orthviews import *
 from .spm_orthviews import spm_orthviews
 from .spm_padarray import spm_padarray
 from .spm_parrec2nifti import spm_parrec2nifti
-from .spm_pca_get_transforms import spm_pca_get_transforms
-from .spm_pca_project_velocity import spm_pca_project_velocity
-from .spm_pca_sample_brains import spm_pca_sample_brains
-from .spm_pca_sample_deformation import spm_pca_sample_deformation
-from .spm_pca_transform_mesh import spm_pca_transform_mesh
-from .spm_pca_transform_volume import spm_pca_transform_volume
-from .spm_pca_warps import spm_pca_warps
 from .spm_peb_ppi import spm_peb_ppi
 from .spm_percentile import spm_percentile
 from .spm_perm_mtx import spm_perm_mtx
@@ -726,6 +720,15 @@ from .spm_searchlight import spm_searchlight
 from .spm_sections import spm_sections
 from .spm_select import spm_select
 from .spm_sepmul3d import spm_sepmul3d
+from .spm_shp_get_model import spm_shp_get_model
+from .spm_shp_get_transforms import spm_shp_get_transforms
+from .spm_shp_install import spm_shp_install
+from .spm_shp_project_velocity import spm_shp_project_velocity
+from .spm_shp_sample_brains import spm_shp_sample_brains
+from .spm_shp_sample_deformation import spm_shp_sample_deformation
+from .spm_shp_transform_mesh import spm_shp_transform_mesh
+from .spm_shp_transform_volume import spm_shp_transform_volume
+from .spm_shp_warps import spm_shp_warps
 from .spm_sixel import spm_sixel
 from .spm_slice_timing import spm_slice_timing
 from .spm_slice_vol import spm_slice_vol
@@ -822,3 +825,4 @@ from .spm_z2p import spm_z2p
 from .spm_zeros import spm_zeros
 from .__tests import *
 from .__toolbox import *
+

@@ -10,3 +10,4 @@ from .spm_fnirs_wavg import spm_fnirs_wavg
 from .spm_fx_fnirs import spm_fx_fnirs
 from .spm_gx_fnirs import spm_gx_fnirs
 from .spm_gx_state_fnirs import spm_gx_state_fnirs
+

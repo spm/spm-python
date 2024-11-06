@@ -2,11 +2,13 @@ from spm.__wrapper__ import Runtime
 
 
 def _fixdipole(*args, **kwargs):
-  """  FIXDIPOLE ensures that the dipole position and moment are  
-    consistently represented throughout FieldTrip functions.  
-  
+    """
+      FIXDIPOLE ensures that the dipole position and moment are  
+        consistently represented throughout FieldTrip functions.  
+      
 
-  [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/utilities/private/fixdipole.m)
-  """
+    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/utilities/private/fixdipole.m )
 
-  return Runtime.call("fixdipole", *args, **kwargs)
+    Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    """
+    return Runtime.call("fixdipole", *args, **kwargs)

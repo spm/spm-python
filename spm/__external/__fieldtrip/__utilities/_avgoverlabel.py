@@ -2,11 +2,13 @@ from spm.__wrapper__ import Runtime
 
 
 def _avgoverlabel(*args, **kwargs):
-  """avgoverlabel is a function.  
-      str = avgoverlabel(label)  
-  
+    """
+    avgoverlabel is a function.  
+          str = avgoverlabel(label)  
+      
 
-  [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/utilities/private/avgoverlabel.m)
-  """
+    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/utilities/private/avgoverlabel.m )
 
-  return Runtime.call("avgoverlabel", *args, **kwargs)
+    Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    """
+    return Runtime.call("avgoverlabel", *args, **kwargs)

@@ -2,16 +2,18 @@ from spm.__wrapper__ import Runtime
 
 
 def _makessense(*args, **kwargs):
-  """  MAKESSENSE determines whether a some specific fields in a FieldTrip data structure  
-    make sense.  
-     
-    Use as  
-      status = makessense(data, field)  
-     
-    See also GETDIMORD, GETDIMSIZ, GETDATFIELD  
-  
+    """
+      MAKESSENSE determines whether a some specific fields in a FieldTrip data structure  
+        make sense.  
+         
+        Use as  
+          status = makessense(data, field)  
+         
+        See also GETDIMORD, GETDIMSIZ, GETDATFIELD  
+      
 
-  [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/utilities/private/makessense.m)
-  """
+    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/utilities/private/makessense.m )
 
-  return Runtime.call("makessense", *args, **kwargs)
+    Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    """
+    return Runtime.call("makessense", *args, **kwargs)

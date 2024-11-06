@@ -94,3 +94,4 @@ from ._vbfa_aug2015 import _vbfa_aug2015
 from .spm_DAiSS import spm_DAiSS
 from .spm_beamforming import spm_beamforming
 from .tbx_cfg_bf import tbx_cfg_bf
+

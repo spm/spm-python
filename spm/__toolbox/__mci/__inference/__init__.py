@@ -41,3 +41,4 @@ from .spm_nwcov import spm_nwcov
 from .spm_nwpost import spm_nwpost
 from .spm_nwrnd import spm_nwrnd
 from .spm_wishrnd import spm_wishrnd
+

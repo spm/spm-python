@@ -2,14 +2,16 @@ from spm.__wrapper__ import Runtime
 
 
 def spm_load_priors(*args, **kwargs):
-  """  Load the tissue probability maps for segmentation  
-    FORMAT b0 = spm_load_priors(B)  
-    B  - structures of image volume information (or filenames)  
-    b0 - a cell array of tissue probabilities  
-   __________________________________________________________________________  
-  
+    """
+      Load the tissue probability maps for segmentation  
+        FORMAT b0 = spm_load_priors(B)  
+        B  - structures of image volume information (or filenames)  
+        b0 - a cell array of tissue probabilities  
+       __________________________________________________________________________  
+      
 
-  [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/toolbox/OldSeg/spm_load_priors.m)
-  """
+    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/OldSeg/spm_load_priors.m )
 
-  return Runtime.call("spm_load_priors", *args, **kwargs)
+    Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    """
+    return Runtime.call("spm_load_priors", *args, **kwargs)

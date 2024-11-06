@@ -2,11 +2,13 @@ from spm.__wrapper__ import Runtime
 
 
 def expmall(*args, **kwargs):
-  """expmall is a function.  
-      dx = expmall(J, f, t, EP)  
-  
+    """
+    expmall is a function.  
+          dx = expmall(J, f, t, EP)  
+      
 
-  [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/toolbox/DEM/expmall.m)
-  """
+    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DEM/expmall.m )
 
-  return Runtime.call("expmall", *args, **kwargs)
+    Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    """
+    return Runtime.call("expmall", *args, **kwargs)

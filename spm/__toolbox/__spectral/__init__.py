@@ -44,3 +44,4 @@ from .spm_ssm2csd import spm_ssm2csd
 from .spm_ssm2ker import spm_ssm2ker
 from .spm_ssm2mtf import spm_ssm2mtf
 from .spm_wavspec import spm_wavspec
+

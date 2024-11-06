@@ -8,3 +8,4 @@ from .spm_vpca import spm_vpca
 from .spm_vpca_f import spm_vpca_f
 from .spm_vpca_init import spm_vpca_init
 from .spm_vpca_update import spm_vpca_update
+

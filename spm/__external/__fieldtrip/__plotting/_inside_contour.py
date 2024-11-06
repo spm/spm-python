@@ -2,11 +2,13 @@ from spm.__wrapper__ import Runtime
 
 
 def _inside_contour(*args, **kwargs):
-  """inside_contour is a function.  
-      bool = inside_contour(pos, contour)  
-  
+    """
+    inside_contour is a function.  
+          bool = inside_contour(pos, contour)  
+      
 
-  [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/plotting/private/inside_contour.m)
-  """
+    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/plotting/private/inside_contour.m )
 
-  return Runtime.call("inside_contour", *args, **kwargs)
+    Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    """
+    return Runtime.call("inside_contour", *args, **kwargs)

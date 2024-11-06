@@ -2,10 +2,12 @@ from spm.__wrapper__ import Runtime
 
 
 def _cfg_mlbatch_appcfg_master(*args, **kwargs):
-  """cfg_mlbatch_appcfg_master is a function.  
-  
+    """
+    cfg_mlbatch_appcfg_master is a function.  
+      
 
-  [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/matlabbatch/private/cfg_mlbatch_appcfg_master.m)
-  """
+    [Matlab code]( https://github.com/spm/spm/blob/main/matlabbatch/private/cfg_mlbatch_appcfg_master.m )
 
-  return Runtime.call("cfg_mlbatch_appcfg_master", *args, **kwargs, nargout=0)
+    Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    """
+    return Runtime.call("cfg_mlbatch_appcfg_master", *args, **kwargs, nargout=0)

@@ -6,3 +6,4 @@ from .spm_normalise import spm_normalise
 from .spm_normalise_disp import spm_normalise_disp
 from .spm_run_normalise import spm_run_normalise
 from .spm_write_sn import spm_write_sn
+

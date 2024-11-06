@@ -2,12 +2,14 @@ from spm.__wrapper__ import Runtime
 
 
 def _neuralynx_timestamp(*args, **kwargs):
-  """ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  
-    SUBFUNCTION for reading a single timestamp of a single channel Neuralynx file  
-   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  
-  
+    """
+     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  
+        SUBFUNCTION for reading a single timestamp of a single channel Neuralynx file  
+       %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  
+      
 
-  [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/neuralynx_timestamp.m)
-  """
+    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/neuralynx_timestamp.m )
 
-  return Runtime.call("neuralynx_timestamp", *args, **kwargs)
+    Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    """
+    return Runtime.call("neuralynx_timestamp", *args, **kwargs)

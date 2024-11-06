@@ -2,13 +2,15 @@ from spm.__wrapper__ import Runtime
 
 
 def fiff_read_named_matrix(*args, **kwargs):
-  """   
-    [mat] = fiff_read_named_matrix(fid,node)  
-     
-    Read named matrix from the given node  
-  
+    """
+       
+        [mat] = fiff_read_named_matrix(fid,node)  
+         
+        Read named matrix from the given node  
+      
 
-  [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/mne/fiff_read_named_matrix.m)
-  """
+    [Matlab code]( https://github.com/spm/spm/blob/main/external/mne/fiff_read_named_matrix.m )
 
-  return Runtime.call("fiff_read_named_matrix", *args, **kwargs)
+    Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    """
+    return Runtime.call("fiff_read_named_matrix", *args, **kwargs)

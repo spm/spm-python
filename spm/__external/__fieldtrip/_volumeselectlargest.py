@@ -2,12 +2,14 @@ from spm.__wrapper__ import Runtime
 
 
 def _volumeselectlargest(*args, **kwargs):
-  """  VOLUMESELECTLARGEST is a helper function for segmentations  
-     
-    See also VOLUMEFILLHOLES, VOLUMETHRESHOLD, VOLUMESMOOTH, VOLUMEPAD  
-  
+    """
+      VOLUMESELECTLARGEST is a helper function for segmentations  
+         
+        See also VOLUMEFILLHOLES, VOLUMETHRESHOLD, VOLUMESMOOTH, VOLUMEPAD  
+      
 
-  [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/private/volumeselectlargest.m)
-  """
+    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/volumeselectlargest.m )
 
-  return Runtime.call("volumeselectlargest", *args, **kwargs)
+    Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    """
+    return Runtime.call("volumeselectlargest", *args, **kwargs)

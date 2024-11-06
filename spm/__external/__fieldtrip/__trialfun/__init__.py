@@ -18,3 +18,4 @@ from ._bids_sidecar import _bids_sidecar
 from ._defaultId import _defaultId
 from ._ismatch import _ismatch
 from ._select_channel_list import _select_channel_list
+

@@ -8,3 +8,4 @@ from .spm_mix_demo1d import spm_mix_demo1d
 from .spm_rglm import spm_rglm
 from .spm_samp_gauss import spm_samp_gauss
 from .spm_samp_mix import spm_samp_mix
+

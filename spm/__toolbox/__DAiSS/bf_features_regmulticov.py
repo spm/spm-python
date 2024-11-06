@@ -2,11 +2,13 @@ from spm.__wrapper__ import Runtime
 
 
 def bf_features_regmulticov(*args, **kwargs):
-  """  Simple covariance computation with regularization  
-   __________________________________________________________________________  
-  
+    """
+      Simple covariance computation with regularization  
+       __________________________________________________________________________  
+      
 
-  [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/toolbox/DAiSS/bf_features_regmulticov.m)
-  """
+    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DAiSS/bf_features_regmulticov.m )
 
-  return Runtime.call("bf_features_regmulticov", *args, **kwargs)
+    Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    """
+    return Runtime.call("bf_features_regmulticov", *args, **kwargs)

@@ -2,10 +2,12 @@ from spm.__wrapper__ import Runtime
 
 
 def create_cfg_cfg_basicio(*args, **kwargs):
-  """create_cfg_cfg_basicio is a function.  
-  
+    """
+    create_cfg_cfg_basicio is a function.  
+      
 
-  [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/matlabbatch/cfg_basicio/src/create_cfg_cfg_basicio.m)
-  """
+    [Matlab code]( https://github.com/spm/spm/blob/main/matlabbatch/cfg_basicio/src/create_cfg_cfg_basicio.m )
 
-  return Runtime.call("fileparts", *args, **kwargs)
+    Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    """
+    return Runtime.call("fileparts", *args, **kwargs)

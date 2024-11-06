@@ -2,12 +2,14 @@ from spm.__wrapper__ import Runtime
 
 
 def _savevar(*args, **kwargs):
-  """  SAVEVAR is a helper function for cfg.outputfile  
-     
-    See also LOADVAR  
-  
+    """
+      SAVEVAR is a helper function for cfg.outputfile  
+         
+        See also LOADVAR  
+      
 
-  [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/utilities/private/savevar.m)
-  """
+    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/utilities/private/savevar.m )
 
-  return Runtime.call("savevar", *args, **kwargs, nargout=0)
+    Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    """
+    return Runtime.call("savevar", *args, **kwargs, nargout=0)

@@ -2,12 +2,14 @@ from spm.__wrapper__ import Runtime
 
 
 def _undobalancing(*args, **kwargs):
-  """  UNDOBALANCING removes all balancing coefficients from the gradiometer sensor array  
-     
-    This is used in CHANNELPOSITION, FT_PREPARE_LAYOUT, FT_SENSTYPE  
-  
+    """
+      UNDOBALANCING removes all balancing coefficients from the gradiometer sensor array  
+         
+        This is used in CHANNELPOSITION, FT_PREPARE_LAYOUT, FT_SENSTYPE  
+      
 
-  [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/external/fieldtrip/plotting/private/undobalancing.m)
-  """
+    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/plotting/private/undobalancing.m )
 
-  return Runtime.call("undobalancing", *args, **kwargs)
+    Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    """
+    return Runtime.call("undobalancing", *args, **kwargs)

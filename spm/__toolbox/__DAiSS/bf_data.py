@@ -2,11 +2,13 @@ from spm.__wrapper__ import Runtime
 
 
 def bf_data(*args, **kwargs):
-  """  Prepare the data and initialise the beamforming pipeline  
-   __________________________________________________________________________  
-  
+    """
+      Prepare the data and initialise the beamforming pipeline  
+       __________________________________________________________________________  
+      
 
-  [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/toolbox/DAiSS/bf_data.m)
-  """
+    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DAiSS/bf_data.m )
 
-  return Runtime.call("bf_data", *args, **kwargs)
+    Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    """
+    return Runtime.call("bf_data", *args, **kwargs)

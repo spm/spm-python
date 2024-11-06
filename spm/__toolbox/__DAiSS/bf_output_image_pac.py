@@ -2,11 +2,13 @@ from spm.__wrapper__ import Runtime
 
 
 def bf_output_image_pac(*args, **kwargs):
-  """  Computes phase-amplitude coupling  
-   __________________________________________________________________________  
-  
+    """
+      Computes phase-amplitude coupling  
+       __________________________________________________________________________  
+      
 
-  [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/toolbox/DAiSS/bf_output_image_pac.m)
-  """
+    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DAiSS/bf_output_image_pac.m )
 
-  return Runtime.call("bf_output_image_pac", *args, **kwargs)
+    Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    """
+    return Runtime.call("bf_output_image_pac", *args, **kwargs)
