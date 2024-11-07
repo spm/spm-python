@@ -9,7 +9,7 @@
 Copyright (C) 1991,1994-2024 Wellcome Centre for Human Neuroimaging
 ```
 
-# SPM _in Python_
+# Python bindings for _SPM_
 
 ## Installation instructions: 
 Assuming an existing setup with Python and Pip, 
