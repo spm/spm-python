@@ -38,6 +38,8 @@ def ft_databrowser(*args, **kwargs):
           cfg.plotlabels              = 'yes', 'no' or 'some', whether to plot channel labels in vertical viewmode. The option 'some' plots one label for every ten channels, which is useful if there are many channels (default = 'some')  
           cfg.plotevents              = 'no' or 'yes', whether to plot event markers (default = 'yes')  
           cfg.ploteventlabels         = 'type=value', 'colorvalue' (default = 'type=value')  
+          cfg.eventcolor              = string with line colors or Nx3 color map, colors used for plotting the different types of events (default is automatic)  
+          cfg.artifactcolor           = string with line colors or Nx3 color map, colors used for plotting the different types of artifacts (default is automatic)  
           cfg.artfctdef.xxx.artifact  = Nx2 matrix with artifact segments see FT_ARTIFACT_xxx functions  
           cfg.selectfeature           = string, name of feature to be selected/added (default = 'visual')  
           cfg.selectmode              = 'markartifact', 'markpeakevent', 'marktroughevent' (default = 'markartifact')  

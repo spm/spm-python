@@ -354,6 +354,7 @@ from ._setsubfield import _setsubfield
 from ._snirf import _snirf
 from ._snirf2opto import _snirf2opto
 from ._solid_angle import _solid_angle
+from ._spikeglx_bin import _spikeglx_bin
 from ._surf_to_tetgen import _surf_to_tetgen
 from ._surface_inside import _surface_inside
 from ._surface_normals import _surface_normals

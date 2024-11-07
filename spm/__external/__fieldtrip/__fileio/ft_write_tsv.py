@@ -10,7 +10,7 @@ def ft_write_tsv(*args, **kwargs):
         Use as  
           ft_write_tsv(filename, table)  
          
-        See also FT_READ_TSV, FT_READ_JSON, FT_WRITE_JSON, READTABLE, WRITETABLE  
+        See also FT_READ_TSV, FT_READ_JSON, FT_WRITE_JSON, READTABLE, WRITETABLE, TBLWRITE  
       
 
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/ft_write_tsv.m )

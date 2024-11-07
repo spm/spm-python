@@ -8,7 +8,7 @@ def ft_read_tsv(*args, **kwargs):
         Use as  
           tsv = ft_read_tsv(filename)  
          
-        See also FT_WRITE_TSV, FT_READ_JSON, FT_WRITE_JSON, READTABLE, WRITETABLE  
+        See also FT_WRITE_TSV, FT_READ_JSON, FT_WRITE_JSON, READTABLE, WRITETABLE, TDFREAD, TBLREAD  
       
 
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/ft_read_tsv.m )

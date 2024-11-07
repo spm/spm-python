@@ -11,7 +11,7 @@ def _surface_orientation(*args, **kwargs):
         or  
           str = surface_orientation(pos, tri, ori)  
          
-        See also SURFACE_NESTING, SURFACE_NORMALS, SURFACE_NESTING  
+        See also SURFACE_AREA, SURFACE_NESTING, SURFACE_NORMALS, SURFACE_NESTING  
       
 
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/surface_orientation.m )

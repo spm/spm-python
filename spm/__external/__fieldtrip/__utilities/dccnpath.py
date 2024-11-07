@@ -25,11 +25,34 @@ def dccnpath(*args, **kwargs):
            global ft_default  
            ft_default.dccnpath = '/your/copy';  
          
-        If you do not have a local copy and do not define ft_default.dccnpath manually,  
-        then dccnpath will automatically use a temporary directory and try to download the  
-        data.  
+        If you DO HAVE a local copy, it should contain a directory with the name 'ftp'. The   
+        content of the ftp directory should match that on the FieldTrip download server,   
+        for example '/your/copy/ftp/test/ctf'.  
+         
+        If you DO NOT have a local copy and do not define ft_default.dccnpath manually,  
+        then this function will automatically try to download the publicly available data   
+        to a temporary directory.  
          
         See also WHICH, WEBSAVE  
+        Copyright (C) 2012-2024, Donders Centre for Cognitive Neuroimaging, Nijmegen, NL  
+         
+        This file is part of FieldTrip, see http://www.fieldtriptoolbox.org  
+        for the documentation and details.  
+         
+           FieldTrip is free software: you can redistribute it and/or modify  
+           it under the terms of the GNU General Public License as published by  
+           the Free Software Foundation, either version 3 of the License, or  
+           (at your option) any later version.  
+         
+           FieldTrip is distributed in the hope that it will be useful,  
+           but WITHOUT ANY WARRANTY; without even the implied warranty of  
+           MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the  
+           GNU General Public License for more details.  
+         
+           You should have received a copy of the GNU General Public License  
+           along with FieldTrip. If not, see <http://www.gnu.org/licenses/>.  
+         
+        $Id$  
       
 
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/utilities/dccnpath.m )

@@ -13,7 +13,7 @@ def _surface_inside(*args, **kwargs):
           pos     bounding mesh vertices  
           tri     bounding mesh triangles  
          
-        See also SURFACE_ORIENTATION, SURFACE_NORMALS, SURFACE_NESTING, SOLID_ANGLE  
+        See also SURFACE_AREA, SURFACE_ORIENTATION, SURFACE_NORMALS, SURFACE_NESTING, SOLID_ANGLE  
       
 
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/surface_inside.m )

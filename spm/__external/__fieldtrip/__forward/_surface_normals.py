@@ -10,7 +10,7 @@ def _surface_normals(*args, **kwargs):
           nrm = surface_normals(pnt, tri, opt)  
         where opt is either 'vertex' (default) or 'triangle'.  
          
-        See also SURFACE_ORIENTATION, SURFACE_INSIDE, SURFACE_NESTING, PROJECTTRI, PCNORMALS  
+        See also SURFACE_AREA, SURFACE_ORIENTATION, SURFACE_INSIDE, SURFACE_NESTING, PROJECTTRI, PCNORMALS  
       
 
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/forward/private/surface_normals.m )

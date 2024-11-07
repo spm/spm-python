@@ -33,6 +33,7 @@ from .ft_artifact_tms import ft_artifact_tms
 from .ft_artifact_zvalue import ft_artifact_zvalue
 from .ft_audiovideobrowser import ft_audiovideobrowser
 from .ft_badchannel import ft_badchannel
+from .ft_baddata import ft_baddata
 from .ft_badsegment import ft_badsegment
 from .ft_channelnormalise import ft_channelnormalise
 from .ft_channelrepair import ft_channelrepair
@@ -49,11 +50,13 @@ from .ft_defacemesh import ft_defacemesh
 from .ft_defacevolume import ft_defacevolume
 from .ft_defaults import ft_defaults
 from .ft_definetrial import ft_definetrial
+from .ft_denoise_amm import ft_denoise_amm
 from .ft_denoise_dssp import ft_denoise_dssp
 from .ft_denoise_hfc import ft_denoise_hfc
 from .ft_denoise_pca import ft_denoise_pca
 from .ft_denoise_prewhiten import ft_denoise_prewhiten
 from .ft_denoise_ssp import ft_denoise_ssp
+from .ft_denoise_sss import ft_denoise_sss
 from .ft_denoise_synthetic import ft_denoise_synthetic
 from .ft_denoise_tsr import ft_denoise_tsr
 from .ft_detect_movement import ft_detect_movement
@@ -74,6 +77,7 @@ from .ft_freqsimulation import ft_freqsimulation
 from .ft_freqstatistics import ft_freqstatistics
 from .ft_geometryplot import ft_geometryplot
 from .ft_globalmeanfield import ft_globalmeanfield
+from .ft_headcircumference import ft_headcircumference
 from .ft_headmovement import ft_headmovement
 from .ft_heartrate import ft_heartrate
 from .ft_interactiverealign import ft_interactiverealign
@@ -422,6 +426,7 @@ from ._splint import _splint
 from ._splitstruct import _splitstruct
 from ._standardise import _standardise
 from ._strel_bol import _strel_bol
+from ._surface_area import _surface_area
 from ._surface_inside import _surface_inside
 from ._surface_normals import _surface_normals
 from ._surface_orientation import _surface_orientation
