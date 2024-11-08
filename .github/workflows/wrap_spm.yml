@@ -1,0 +1,39 @@
+name: Wrap SPM
+on:
+  workflow_dispatch:
+
+jobs:
+  wrap:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        version: ["R2024b"]
+        os: [ubuntu-latest, macos-13, macos-latest, windows-latest]
+        include:
+          - os: ubuntu-latest
+          - os: macos-13
+          - os: macos-latest
+          - os: windows-latest
+
+    steps:
+      - name: Set up MATLAB
+        uses: matlab-actions/setup-matlab@v2
+        with:
+          release: ${{matrix.version}}
+          
+      - name: Check out repository
+        uses: actions/checkout@v4
+        
+      - name: Run MPython
+        uses: matlab-actions/run-command@v2
+        with:
+          command: addpath(fullfile(pwd, .mpython)); spm_make_python; 
+
+      
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: runtime-${{ matrix.os }}
+          path: ./spm/_spm/resources/*
+          retention-days: 1
+          
