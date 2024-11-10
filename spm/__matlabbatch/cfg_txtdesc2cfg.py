@@ -56,8 +56,7 @@ def cfg_txtdesc2cfg(*args, **kwargs):
          
          cfg = cfg_txtdesc2cfg('mygrammar.txt');  
          cfgstr = gencode(cfg);  
-         cfgchr = sprintf('%s
-    ',cfgstr{:});  
+         cfgchr = sprintf('%s\n',cfgstr{:});  
          clipboard('copy', cfgchr)  
          
         will create a cfg_item tree as defined in 'mygrammar.txt', convert it  

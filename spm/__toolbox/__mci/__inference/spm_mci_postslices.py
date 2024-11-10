@@ -11,7 +11,7 @@ def spm_mci_postslices(*args, **kwargs):
         Nbins     Number of bins per dimension  
          
         x         [Np x Nbins] matrix where x(p,:) is domain for pth variable  
-        pnum      [Np x Nbins] where pnum(p,j) = p(x(p)=xj|x(p),Y) ie. the posterior  
+        pnum      [Np x Nbins] where pnum(p,j) = p(x(p)=xj|x(\p),Y) ie. the posterior  
                   density of variable p conditioned on the posterior mean of the other  
                   variables. This is estimated numerically from evaluation of log joint  
         pgauss    As pnum but under assumption that posterior is multivariate Gaussian  

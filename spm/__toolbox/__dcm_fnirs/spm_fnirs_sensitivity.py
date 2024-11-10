@@ -12,7 +12,7 @@ def spm_fnirs_sensitivity(*args, **kwargs):
          
         A - sensitivity matrix   
           
-        Green's function (see dcm_fnirsmmclabestimate_greens_mmclab.m)  
+        Green's function (see \dcm_fnirs\mmclab\estimate_greens_mmclab.m)  
        --------------------------------------------------------------------------  
         G.s - estimated Green's function from sensor (light emitter) positions  
         into source positions [# sensor x # voxels x # wavelengths]   

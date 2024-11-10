@@ -17,7 +17,7 @@ def spm_Xcdf(*args, **kwargs):
         distributions.  
          
         Returns the probability p, that a Students Chi-squared variate on v  
-        degrees of freedom is less than x. F(x) = Pr{X<x} for X~Chi^2(v)  
+        degrees of freedom is less than x. F(x) = Pr{X<x} for X~\Chi^2(v)  
          
         Definition:  
        --------------------------------------------------------------------------  

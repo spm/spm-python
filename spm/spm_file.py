@@ -34,8 +34,8 @@ def spm_file(*args, **kwargs):
          
         Examples:  
          
-        spm_file('C:datamyimage.nii', 'prefix','rp_', 'ext','.txt')  
-        returns 'C:datap_myimage.txt' on a Windows platform  
+        spm_file('C:\data\myimage.nii', 'prefix','rp_', 'ext','.txt')  
+        returns 'C:\data\rp_myimage.txt' on a Windows platform  
          
         spm_file({'/home/karl/software/spm.m'},'path','/home/karl/spm')  
         returns {'/home/karl/spm/spm.m'}  

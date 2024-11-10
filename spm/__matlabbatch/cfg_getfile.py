@@ -21,12 +21,7 @@ def cfg_getfile(*args, **kwargs):
                              ASCII representation of a 2D-numeric array)  
                    'xml'   - XML files  
                    Other strings act as a filter to regexp.  This means  
-                   that e.g. DCM*.mat files should have a typ of '^DCM.*.mat
-
-    [Matlab code]( https://github.com/spm/spm/blob/main/matlabbatch/cfg_getfile.m )
-
-    Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
-    """.  
+                   that e.g. DCM*.mat files should have a typ of '^DCM.*\.mat$'.  
                    A combination of types can be specified as a cellstr list of  
                    types. A file must match at least one of the specified types.  
             mesg - a prompt (default 'Select files...')  
@@ -61,12 +56,7 @@ def cfg_getfile(*args, **kwargs):
         direc    - directory to search. Defaults to pwd.  
         typ      - file type  
         filt     - additional filter to select files with (see regexp)  
-                   e.g. '^w.*.img
-
-    [Matlab code]( https://github.com/spm/spm/blob/main/matlabbatch/cfg_getfile.m )
-
-    Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
-    """   
+                   e.g. '^w.*\.img$'   
         files    - files matching 'typ' and 'filt' in directory 'direc'  
         dirs     - subdirectories of 'direc'  
         FORMAT [files,dirs]=cfg_getfile('FPList'[,direc[,typ[,filt[,prms]]]])  

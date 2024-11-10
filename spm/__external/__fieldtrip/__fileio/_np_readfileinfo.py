@@ -19,7 +19,7 @@ def _np_readfileinfo(*args, **kwargs):
         Input data:  
          
           filename        -   the complete filename with path  
-                              (e. g.  C:Document...30716103637.EEG)  
+                              (e. g.  C:\Document...\20030716103637.EEG)  
           option          -   if option = 'NO_MINMAX' then physical minima  
           (optional)          and maxima off all channels will not be calculated  
                               (faster for long recordings)  

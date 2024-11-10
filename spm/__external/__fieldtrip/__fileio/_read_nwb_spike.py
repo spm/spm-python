@@ -22,11 +22,9 @@ def _read_nwb_spike(*args, **kwargs):
         https://neurodatawithoutborders.github.io/matnwb  
          
         With util.getSchemaVersion(file.nwb) the nwb file version can be  
-        querried. It may be necessary to replace the files in ..matnwb
-    wb-schemacore  
+        querried. It may be necessary to replace the files in ..\matnwb\nwb-schema\core  
         with the files from the nwb-schema version the file was created in from  
-        ..
-    wb-schemacore.   
+        ..\nwb-schema\core.   
         Nwb-schemas can be obtained from here:   
         https://github.com/NeurodataWithoutBorders/nwb-schema/releases  
           

@@ -49,16 +49,8 @@ def _select3d(*args, **kwargs):
                         'erasemode','xor','markerfacecolor','k');  
          marker2 = line('erasemode','xor','xdata',face(1,:),'ydata',face(2,:),...  
                         'zdata',face(3,:),'linewidth',10);  
-         disp(sprintf('
-    You clicked at
-    X: %.2f
-    Y: %.2f
-    Z: %.2f',p(1),p(2),p(3)'))  
-         disp(sprintf('
-    The nearest vertex is
-    X: %.2f
-    Y: %.2f
-    Z: %.2f',v(1),v(2),v(3)'))  
+         disp(sprintf('\nYou clicked at\nX: %.2f\nY: %.2f\nZ: %.2f',p(1),p(2),p(3)'))  
+         disp(sprintf('\nThe nearest vertex is\nX: %.2f\nY: %.2f\nZ: %.2f',v(1),v(2),v(3)'))  
           
          Version 1.2 2-15-02  
          Copyright Joe Conti 2002   

@@ -29,22 +29,22 @@ def spm_invNcdf(*args, **kwargs):
          
         If X~N(u,v), then Z=(Z-u)/sqrt(v) has a standard normal distribution,  
         Z~N(0,1). The CDF of the standard normal distribution is known as  
-        Phi(z), its inverse as Phi^{-1}(F).  
+        \Phi(z), its inverse as \Phi^{-1}(F).  
          
         Algorithm:  
        --------------------------------------------------------------------------  
-        The CDF for a standard N(0,1) Normal distribution, Phi(z), is  
+        The CDF for a standard N(0,1) Normal distribution, \Phi(z), is  
         related to the error function by: (Abramowitz & Stegun, 26.2.29)  
          
-              Phi(z)      = 0.5 + erf(z/sqrt(2))/2  
+              \Phi(z)      = 0.5 + erf(z/sqrt(2))/2  
         so  
          
-              Phi^{-1}(p) = sqrt(2) * erfinv(2*p-1)  
+              \Phi^{-1}(p) = sqrt(2) * erfinv(2*p-1)  
          
         where erfinv(.) is the inverse error function.  
          
         MATLAB's implementation of the inverse error function is used for  
-        computation of z=Phi^{-1}(F), the corresponding standard normal  
+        computation of z=\Phi^{-1}(F), the corresponding standard normal  
         variate, which converted to a variate x from a N(u,v) distribution by:  
               x = u+z*sqrt(v)  
          

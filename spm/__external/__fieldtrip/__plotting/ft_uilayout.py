@@ -52,24 +52,9 @@ def ft_uilayout(*args, **kwargs):
           ft_uilayout(h, 'tag', '^row1', 'vpos', 100);  
           ft_uilayout(h, 'tag', '^row2', 'vpos', 200);  
          
-          ft_uilayout(h, 'tag', 'column1
-
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/plotting/ft_uilayout.m )
-
-    Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
-    """, 'hpos', 100);  
-          ft_uilayout(h, 'tag', 'column2
-
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/plotting/ft_uilayout.m )
-
-    Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
-    """, 'hpos', 200);  
-          ft_uilayout(h, 'tag', 'column3
-
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/plotting/ft_uilayout.m )
-
-    Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
-    """, 'hpos', 300);  
+          ft_uilayout(h, 'tag', 'column1$', 'hpos', 100);  
+          ft_uilayout(h, 'tag', 'column2$', 'hpos', 200);  
+          ft_uilayout(h, 'tag', 'column3$', 'hpos', 300);  
          
           ft_uilayout(h, 'tag', '.*', 'BackGroundColor', [1 0 0]);  
          

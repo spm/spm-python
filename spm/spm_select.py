@@ -24,12 +24,7 @@ def spm_select(*args, **kwargs):
                  'batch' - SPM batch files (.m or .mat)  
                  'dir'   - select a directory  
                  Other strings act as a filter to regexp. This means that  
-                 e.g. DCM*.mat files should have a typ of '^DCM.*.mat
-
-    [Matlab code]( https://github.com/spm/spm/blob/main/spm_select.m )
-
-    Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
-    """  
+                 e.g. DCM*.mat files should have a typ of '^DCM.*\.mat$'  
         mesg   - a prompt [Default: 'Select files...']  
         sel    - list of already selected files [Default: {}]  
         wd     - directory to start off in [Default: pwd]  
@@ -42,12 +37,7 @@ def spm_select(*args, **kwargs):
         FORMAT [files,dirs] = spm_select('List',direc,filt)  
         Return files matching the filter 'filt' and directories within 'direc'  
         direc  - directory to search [Default: pwd]  
-        filt   - filter to select files with regexp, e.g. '^w.*.img
-
-    [Matlab code]( https://github.com/spm/spm/blob/main/spm_select.m )
-
-    Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
-    """ [Default: '.*']  
+        filt   - filter to select files with regexp, e.g. '^w.*\.img$' [Default: '.*']  
          
         files  - files matching 'filt' in directory 'direc'  
         dirs   - subdirectories of 'direc'  

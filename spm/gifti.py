@@ -80,8 +80,7 @@ class gifti(MatlabClassWrapper):
          BASE64ENCODE Perform base64 encoding on a string.  
              
               BASE64ENCODE(STR, EOL) encode the given string STR.  EOL is the line ending  
-              sequence to use; it is optional and defaults to '
-        ' (ASCII decimal 10).  
+              sequence to use; it is optional and defaults to '\n' (ASCII decimal 10).  
               The returned encoded string is broken into lines of no more than 76  
               characters each, and each line will end with EOL unless it is empty.  Let  
               EOL be empty if you do not want the encoded string broken into lines.  

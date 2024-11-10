@@ -25,7 +25,7 @@ def spm_preproc8(*args, **kwargs):
                       then lkp=[1,1,2,2,3,3,4,4,5,5,5,5,6,6].  
            Affine   - a 4x4 affine transformation matrix, such that the mapping  
                       from voxels in the individual to those in the template  
-                      is by tpm.MAffine*obj.image(1).mat.  
+                      is by tpm.M\Affine*obj.image(1).mat.  
            reg      - Regularisation for the nonlinear registration of the  
                       template (tissue probability maps) to the individual.  
            samp     - The distance (mm) between samples.  In order to achieve  

@@ -16,8 +16,7 @@ def spm_dicom_text_to_dict(*args, **kwargs):
         and manually tidying it up (about a solid day's effort).  A  
         re-formatted text version is then obtained by running the following:  
          
-        awk < DICOM2011_dict.txt '{if ($NF=="RET") print $1,$(NF-3),$(NF-2),$(NF-1); else print $1,$(NF-2),$(NF-1),$(NF);}' | sed 's/(/ /' | sed 's/,/ /' | sed 's/)//' | awk '{printf("%s	%s	%s	%s	%s
-    ", $1,$2,$3,$4,$5)}' > new_dicom_dict.txt   
+        awk < DICOM2011_dict.txt '{if ($NF=="RET") print $1,$(NF-3),$(NF-2),$(NF-1); else print $1,$(NF-2),$(NF-1),$(NF);}' | sed 's/(/ /' | sed 's/,/ /' | sed 's/)//' | awk '{printf("%s\t%s\t%s\t%s\t%s\n", $1,$2,$3,$4,$5)}' > new_dicom_dict.txt   
          
         After this, the spm_dicom_text_to_dict function can be run to generate  
         the data dictionary.  

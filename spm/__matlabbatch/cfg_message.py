@@ -26,12 +26,7 @@ def cfg_message(*args, **kwargs):
         function [oldsts msgids] = cfg_message('on'|'off', 'verbose'|'backtrace', msgidregexp)  
         Set verbosity and backtrace display for all messages where msgid  
         matches msgidregexp. To match a message id exactly, use the regexp  
-        '^msgid
-
-    [Matlab code]( https://github.com/spm/spm/blob/main/matlabbatch/cfg_message.m )
-
-    Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
-    """.  
+        '^msgid$'.  
          
         function [olddest msgids] = cfg_message('none'|'stdout'|'stderr'|'syslog', 'destination', msgidregexp)  
         Set destination for all messages matching msgidregexp.  

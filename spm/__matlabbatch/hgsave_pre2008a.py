@@ -33,7 +33,7 @@ def hgsave_pre2008a(*args, **kwargs):
         2) generate code for it using GENCODE  
         if doreplace  
           3) look for the characteristic regexp   
-             @(hObject,eventdata)figname(([^,]*).*  
+             @\(hObject,eventdata\)figname\(([^,]*).*  
           4) if found, replace it with string  
              figname($1,gcbo,[],guidata(gcbo))  
           if success  

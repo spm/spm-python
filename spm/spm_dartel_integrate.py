@@ -14,7 +14,7 @@ def spm_dartel_integrate(*args, **kwargs):
             DPhi - Jacobian determinant field (nx x ny x nz)  
          
         The function integrates  
-            Phi(x,t) = int_{t_0}^{t_1} U(Phi(x,t),t) dt  
+            Phi(x,t) = \int_{t_0}^{t_1} U(Phi(x,t),t) dt  
         where U is a piecewise constant flow field  
          
         Note: this function is ready for LDDMM-style flow fields, even  

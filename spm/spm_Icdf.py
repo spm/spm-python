@@ -40,9 +40,9 @@ def spm_Icdf(*args, **kwargs):
         approximation to the Binomial may be used:  
               X~Bin(n,p),  X~:~N(np,npq)              ( ~:~ -> approx. distributed as)  
         where q=1-p. With continuity correction this gives:  
-              F(x) pprox Phi((x+0.5-n*p)/sqrt(n*p*q))  
+              F(x) \approx \Phi((x+0.5-n*p)/sqrt(n*p*q))  
         for Phi the standard normal CDF, related to the error function by  
-              Phi(x) = 0.5+0.5*erf(x/sqrt(2))  
+              \Phi(x) = 0.5+0.5*erf(x/sqrt(2))  
          
         Algorithm:  
        --------------------------------------------------------------------------  

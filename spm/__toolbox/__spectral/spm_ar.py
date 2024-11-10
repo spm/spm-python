@@ -6,7 +6,7 @@ def spm_ar(*args, **kwargs):
       Bayesian autoregressive modelling  
         FORMAT [ar] = spm_ar (Z,p,verbose)  
          
-        y_pred (t) = -sum_{i=1}^p a_i y (t-i) + e (t)  
+        y_pred (t) = -\sum_{i=1}^p a_i y (t-i) + e (t)  
         Note the sign and ordering   
          
         The noise, e(t), is Gaussian  

@@ -27,7 +27,7 @@ def spm_Npdf(*args, **kwargs):
                   sqrt(v*2*pi)      (   2v    )  
          
         The PDF of the standard Normal distribution, with zero mean and unit  
-        variance, Z~N(0,1), is commonly referred to as phi(z).  
+        variance, Z~N(0,1), is commonly referred to as \phi(z).  
          
         References:  
        --------------------------------------------------------------------------  

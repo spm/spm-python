@@ -16,7 +16,7 @@ def _np_readmarker(*args, **kwargs):
         Input data:  
          
           filename    -   the complete filename with path  
-                          (e. g.  C:Document...30716103637.EEG)  
+                          (e. g.  C:\Document...\20030716103637.EEG)  
           idx_begin   -   the start index of the data block to be read  
           data_length -   the length of the data block to be read  
           option      -   if option = 'samples':  

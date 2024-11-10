@@ -19,7 +19,7 @@ def spm_get_closest_affine(*args, **kwargs):
         and          XY = [X 1]'*diag(W)*[Y 1]  
           
         These can then be used to compute an affine transform (M),  
-        by M = (XXXY)'  
+        by M = (XX\XY)'  
         A weighted procrustes decomposition is also performed,  
         so that a rigid-body transform matrix (R) is returned.  
          

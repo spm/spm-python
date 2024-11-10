@@ -72,7 +72,7 @@ def spm_realign(*args, **kwargs):
         z1 = M(3,1)*x0 + M(3,2)*y0 + M(3,3)*z0 + M(3,4)  
          
         Assuming that image1 has a transformation matrix M1, and image2 has a  
-        transformation matrix M2, the mapping from image1 to image2 is: M2M1  
+        transformation matrix M2, the mapping from image1 to image2 is: M2\M1  
         (ie. from the coordinate system of image1 into millimeters, followed  
         by a mapping from millimeters into the space of image2).  
          

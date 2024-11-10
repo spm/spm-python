@@ -31,15 +31,15 @@ def spm_shoot3d(*args, **kwargs):
         Younes and others.  
          
         LDDMM (Beg et al) uses the following evolution equation:  
-            dphi/dt = v_t(phi_t)  
+            d\phi/dt = v_t(\phi_t)  
         where a variational procedure is used to find the stationary solution  
         for the time varying velocity field.  
         In principle though, once the initial velocity is known, then the  
         velocity at subsequent time points can be computed.  This requires  
         initial momentum (m_0), computed (using differential operator L) by:  
             m_0 = L v_0  
-        Then (Ad_{phi_t})^* m_0 is computed:  
-            m_t = |d phi_t| (dphi_t)^T m_0(phi_t)  
+        Then (Ad_{\phi_t})^* m_0 is computed:  
+            m_t = |d \phi_t| (d\phi_t)^T m_0(\phi_t)  
         The velocity field at this time point is then obtained by using  
         multigrid to solve:  
             v_t = L^{-1} m_t  
@@ -49,7 +49,7 @@ def spm_shoot3d(*args, **kwargs):
         applications". Quarterly of Applied Mathematics, vol LXV,  
         number 1, pages 113-134 (2007).  
          
-        Note that in practice, (Ad_{phi_t})^* m_0 is computed differently,  
+        Note that in practice, (Ad_{\phi_t})^* m_0 is computed differently,  
         by multiplying the initial momentum by the inverse of the Jacobian  
         matrices of the inverse warp, and pushing the values to their new  
         location by the inverse warp (see the "pushg" code of shoot3).  

@@ -22,7 +22,7 @@ def dartel3(*args, **kwargs):
                     mu, lambda, and id  
                   - For "bending energy", the parameters are  
                     lambda, id1 and id2, such that regularisation is by  
-                    (-lambda*grad^2 + id1)^2 + id2  
+                    (-lambda*\grad^2 + id1)^2 + id2  
                 - [5] Levenberg-Marquardt regularisation  
                 - [6] Number of Full Multigrid cycles  
                 - [7] Number of relaxation iterations per cycle  

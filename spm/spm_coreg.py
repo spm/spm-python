@@ -27,7 +27,7 @@ def spm_coreg(*args, **kwargs):
          
         x     - the parameters describing the rigid body rotation, such that a  
                 mapping from voxels in G to voxels in F is attained by:  
-                VF.matspm_matrix(x(:)')*VG.mat  
+                VF.mat\spm_matrix(x(:)')*VG.mat  
          
         At the end, the voxel-to-voxel affine transformation matrix is  
         displayed, along with the histograms for the images in the original  

@@ -370,9 +370,9 @@ def spm_diffeo(*args, **kwargs):
         param - 10 parameters (settings)  
                 - [1][2][3] Voxel sizes  
                 - [4][5][6][7][8] Regularisation settings (see vel2mom).  
-        t     - approximation of [trace((L+H)L) trace((L+H)H)];  
+        t     - approximation of [trace((L+H)\L) trace((L+H)\H)];  
          
-        Generate an approximation of Trace((L+H)L) and Trace((L+H)H) for  
+        Generate an approximation of Trace((L+H)\L) and Trace((L+H)\H) for  
         to give a ball-park figure for the "degrees of freedom" in Laplace  
         approximations.  L is the regulariser in sparse matrix form.  The  
         approximation is a poor one, which assumes all the off-diagonals of L  

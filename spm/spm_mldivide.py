@@ -3,7 +3,7 @@ from spm.__wrapper__ import Runtime
 
 def spm_mldivide(*args, **kwargs):
     """
-      Regularised variant of mldivide(A, B) or A  B, similar to spm_inv(A) * B  
+      Regularised variant of mldivide(A, B) or A \ B, similar to spm_inv(A) * B  
         FORMAT D = spm_mldivide(A, B)  
          
         D = inv(A) * B, or if A is near singular D = inv(A + TOL*eye(size(A)) * B  

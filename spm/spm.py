@@ -6,9 +6,9 @@ def spm(*args, **kwargs):
       SPM: Statistical Parametric Mapping (startup function)  
        _______________________________________________________________________  
          ___  ____  __  __  
-        / __)(  _ (  /  )    
-        __  )___/ )    (   Statistical Parametric Mapping  
-        (___/(__)  (_//_)  SPM - https://www.fil.ion.ucl.ac.uk/spm/  
+        / __)(  _ \(  \/  )    
+        \__ \ )___/ )    (   Statistical Parametric Mapping  
+        (___/(__)  (_/\/\_)  SPM - https://www.fil.ion.ucl.ac.uk/spm/  
        _______________________________________________________________________  
          
         SPM (Statistical Parametric Mapping) is a package for the analysis  

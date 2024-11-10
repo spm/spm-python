@@ -24,7 +24,7 @@ def spm_affreg(*args, **kwargs):
         scal0     - (optional) starting estimate.  
          
         M         - affine transform, such that voxels in VF map to those in  
-                    VG by   VG.matM*VF.mat  
+                    VG by   VG.mat\M*VF.mat  
         scal      - scaling factors for VG  
          
         When only one template is used, then the cost function is approximately  

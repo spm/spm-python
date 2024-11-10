@@ -23,17 +23,17 @@ def spm_Ncdf(*args, **kwargs):
         Ch29 for further definitions and variate relationships.  
          
         If X~N(u,v), then Z=(Z-u)/sqrt(v) has a standard normal distribution,  
-        Z~N(0,1). The CDF of the standard normal distribution is known as Phi(z).  
+        Z~N(0,1). The CDF of the standard normal distribution is known as \Phi(z).  
          
         (KWorsley) For extreme variates with abs(z)>6 where z=(x-u)/sqrt(v), the  
-        approximation Phi(z) pprox exp(-z^2/2)/(z*sqrt(2*pi)) may be useful.  
+        approximation \Phi(z) \approx exp(-z^2/2)/(z*sqrt(2*pi)) may be useful.  
          
         Algorithm:  
        --------------------------------------------------------------------------  
-        The CDF for a standard N(0,1) Normal distribution, Phi(z), is  
+        The CDF for a standard N(0,1) Normal distribution, \Phi(z), is  
         related to the error function by: (Abramowitz & Stegun, 26.2.29)  
          
-              Phi(z) = 0.5 + erf(z/sqrt(2))/2  
+              \Phi(z) = 0.5 + erf(z/sqrt(2))/2  
          
         MATLAB's implementation of the error function is used for computation.  
          

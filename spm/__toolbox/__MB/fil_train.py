@@ -10,10 +10,8 @@ def fil_train(*args, **kwargs):
         sett  - a data structure encoding settings.  Fields used are (with suggested values):  
                 K       - Number of components to use in the model             [it depends]  
                 nit     - Number of inner iterations for updating mu, W & Z    [5]  
-                nu0     - Wishart degrees of freedom: A ~ W(I v_0 
-    u_0, nu_0) [2]  
-                v0      - Wishart scale parameter:    A ~ W(I v_0 
-    u_0, nu_0) [6.0]  
+                nu0     - Wishart degrees of freedom: A ~ W(I v_0 \nu_0, nu_0) [2]  
+                v0      - Wishart scale parameter:    A ~ W(I v_0 \nu_0, nu_0) [6.0]  
                 d1      - Patch-size (currently same in all directions)        [4]  
                 r       - search radius                                        [2 voxels]  
                 sd      - Standard deviation of weights within search radius   [0.75 voxels]  
