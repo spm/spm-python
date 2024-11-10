@@ -13,7 +13,7 @@ Copyright (C) 1991,1994-2024 Wellcome Centre for Human Neuroimaging
 
 ## Installation instructions: 
 Assuming an existing setup with Python and Pip, 
-1. Install [Matlab Runtime](https://uk.mathworks.com/products/compiler/matlab-runtime.html) 
+1. Install [Matlab Runtime 2024b](https://uk.mathworks.com/products/compiler/matlab-runtime.html) 
 2. Install SPM:
    ```python
    pip install git+https://github.com/spm/spm-python.git
@@ -42,12 +42,11 @@ S.data = 'OPM_meg_001.cMEG';
 S.positions = 'OPM_HelmConfig.tsv';
 D = spm_opm_create(S);
 ```
-In Python, create a `dict` instead of a `struct`:
+In Python, create a `Struct()` instead of a `struct`:
 ```Python
-S = dict(
-    data='OPM_meg_001.cMEG', 
-    positions='OPM_HelmConfig.tsv'
-)
+S = Struct()
+S.data='OPM_meg_001.cMEG'
+S.positions='OPM_HelmConfig.tsv'
 D = spm_opm_create(S)
 ```
 Here, `D` will be a `meeg` object which contains a virtual representation of the Matlab object. Class methods should work as expected, e.g.:
@@ -70,12 +69,11 @@ ylim([1,1e5])
 ```
 In Python:
 ```Python
-S = dict(
-    triallength = 3000, 
-    plot = 1,
-    D = D,
-    channels = 'MEG',
-)
+S = Struct()
+S.triallength = 3000
+S.plot = 1
+S.D = D
+S.channels = 'MEG'
 spm_opm_psd(S)
 ```
 This opens a Matlab figure, but we do not have the possibility of manipulating it yet (e.g., calling `ylim`). As of now, we can view the figures, have GUI interactions, but cannot manipulate figures with Python code.
@@ -91,12 +89,11 @@ S.D = mD;
 ```
 In Python, the number of output arguments must be specified by the `nargout` keyword argument:
 ```Python
-S = dict(
-    triallength = 3000, 
-    plot=1,
-    D=mD,
-)
-[_,freq] = spm_opm_psd(S, nargout=2);
+S = Struct()
+S.triallength = 3000
+S.plot=1
+S.D=mD
+[_,freq] = spm_opm_psd(S, nargout=2)
 ```
 
 ### 5. Other examples 
@@ -116,17 +113,15 @@ fD = spm_eeg_ffilter(S);
 ```
 In Python: 
 ```Python
-S = dict(
-    D = D,
-    freq = 10,
-    band = 'high'
-)
+S = Struct()
+S.D = D
+S.freq = 10
+S.band = 'high'
 fD = spm_eeg_ffilter(S)
 
-S = dict(
-    D = fD,
-    freq = 70,
-    band = 'low'
-)
+S = Struct()
+S.D = fD
+S.freq = 70
+S.band = 'low'
 fD = spm_eeg_ffilter(S)
 ```
