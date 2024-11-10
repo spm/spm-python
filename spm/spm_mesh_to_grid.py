@@ -12,9 +12,9 @@ def spm_mesh_to_grid(*args, **kwargs):
         R        - interpolated data on grid defined by V  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_mesh_to_grid.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_mesh_to_grid", *args, **kwargs)

@@ -36,9 +36,9 @@ def _ft_notice(*args, **kwargs):
          
         See also FT_ERROR, FT_WARNING, FT_NOTICE, FT_INFO, FT_DEBUG, ERROR, WARNING  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/plotting/private/ft_notice.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("ft_notice", *args, **kwargs)

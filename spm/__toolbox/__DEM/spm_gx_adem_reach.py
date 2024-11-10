@@ -20,9 +20,9 @@ def spm_gx_adem_reach(*args, **kwargs):
         P    - parameters  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DEM/spm_gx_adem_reach.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_gx_adem_reach", *args, **kwargs)

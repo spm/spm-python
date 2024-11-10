@@ -8,9 +8,9 @@ def covLin(*args, **kwargs):
         No usage documentation yet  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/Shoot/covLin.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("covLin", *args, **kwargs)

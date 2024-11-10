@@ -21,9 +21,9 @@ def spm_mci_fwd(*args, **kwargs):
                   eg. 'euler', 'ode15', 'sundials'  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/mci/gradients/spm_mci_fwd.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_mci_fwd", *args, **kwargs)

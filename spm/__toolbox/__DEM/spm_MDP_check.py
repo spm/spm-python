@@ -35,9 +35,9 @@ def spm_MDP_check(*args, **kwargs):
         marginal hidden state) are allowed.  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DEM/spm_MDP_check.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_MDP_check", *args, **kwargs)

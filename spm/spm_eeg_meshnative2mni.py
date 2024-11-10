@@ -11,9 +11,9 @@ def spm_eeg_meshnative2mni(*args, **kwargs):
         mnimesh as gitfi structure in mni space  
         replicates code segment from headmodel section of SPM code  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_eeg_meshnative2mni.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_eeg_meshnative2mni", *args, **kwargs)

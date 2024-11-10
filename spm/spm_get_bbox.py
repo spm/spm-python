@@ -15,9 +15,9 @@ def spm_get_bbox(*args, **kwargs):
         vx  - a [1 x 3] vector of voxel dimensions {mm}.  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_get_bbox.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_get_bbox", *args, **kwargs)

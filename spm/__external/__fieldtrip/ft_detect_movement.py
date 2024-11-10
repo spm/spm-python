@@ -48,9 +48,9 @@ def ft_detect_movement(*args, **kwargs):
          
         See also FT_DATABROWSER, FT_DATATYPE_SPIKE  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/ft_detect_movement.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("ft_detect_movement", *args, **kwargs)

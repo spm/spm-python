@@ -10,9 +10,9 @@ def ltrisect(*args, **kwargs):
         where v1, v2 and v3 are three vertices spanning the plane, and l1 and l2  
         are two points on the line  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/src/ltrisect.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("ltrisect", *args, **kwargs)

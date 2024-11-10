@@ -37,9 +37,9 @@ def spm_nested_oscillations_demo(*args, **kwargs):
         dynamic causal model of observed electromagnetic signals in future work.  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/Neural_Models/spm_nested_oscillations_demo.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_nested_oscillations_demo", *args, **kwargs, nargout=0)

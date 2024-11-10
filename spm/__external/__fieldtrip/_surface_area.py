@@ -10,9 +10,9 @@ def _surface_area(*args, **kwargs):
          
         See also SURFACE_ORIENTATION, SURFACE_INSIDE, SURFACE_NESTING, PROJECTTRI, PCNORMALS  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/surface_area.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("surface_area", *args, **kwargs)

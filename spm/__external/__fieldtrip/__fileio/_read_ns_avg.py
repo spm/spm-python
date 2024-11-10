@@ -21,9 +21,9 @@ def _read_ns_avg(*args, **kwargs):
           avg.xmin        - prestimulus epoch start (e.g., -100 msec)  
           avg.xmax        - poststimulus epoch end (e.g., 900 msec)  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/read_ns_avg.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("read_ns_avg", *args, **kwargs)

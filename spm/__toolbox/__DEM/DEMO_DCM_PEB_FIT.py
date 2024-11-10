@@ -20,9 +20,9 @@ def DEMO_DCM_PEB_FIT(*args, **kwargs):
         See also: DEMO_DCM_PEB_REC.m  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DEM/DEMO_DCM_PEB_FIT.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("DEMO_DCM_PEB_FIT", *args, **kwargs, nargout=0)

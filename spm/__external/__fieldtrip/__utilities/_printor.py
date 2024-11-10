@@ -8,9 +8,9 @@ def _printor(*args, **kwargs):
          
         See also PRINTAND  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/utilities/private/printor.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("printor", *args, **kwargs)

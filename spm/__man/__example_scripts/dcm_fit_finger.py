@@ -14,9 +14,9 @@ def dcm_fit_finger(*args, **kwargs):
         DCM    -  o/p data structure  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/man/example_scripts/dcm_fit_finger.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("dcm_fit_finger", *args, **kwargs)

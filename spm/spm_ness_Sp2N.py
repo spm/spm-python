@@ -14,9 +14,9 @@ def spm_ness_Sp2N(*args, **kwargs):
         C  - (Gaussian) covariance  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_ness_Sp2N.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_ness_Sp2N", *args, **kwargs)

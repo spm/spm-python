@@ -13,9 +13,9 @@ def DEM_demo_DFP(*args, **kwargs):
         spm_DEM (i.e., under a Laplace assumption) which involves integrating the  
         path of just one particle (i.e., the mode).  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DEM/DEM_demo_DFP.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("DEM_demo_DFP", *args, **kwargs, nargout=0)

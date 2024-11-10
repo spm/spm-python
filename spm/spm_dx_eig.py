@@ -49,9 +49,9 @@ def spm_dx_eig(*args, **kwargs):
         Statistica Sin. 2:113-135.  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_dx_eig.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_dx_eig", *args, **kwargs)

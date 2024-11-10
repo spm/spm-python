@@ -46,9 +46,9 @@ def ft_movieplotER(*args, **kwargs):
          
         See also FT_MULTIPLOTER, FT_TOPOPLOTER, FT_SINGLEPLOTER, FT_MOVIEPLOTTFR, FT_SOURCEMOVIE  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/ft_movieplotER.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("ft_movieplotER", *args, **kwargs)

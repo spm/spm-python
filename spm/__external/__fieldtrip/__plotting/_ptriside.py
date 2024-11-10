@@ -12,9 +12,9 @@ def _ptriside(*args, **kwargs):
         vertices v1, v2 and v3. v1,v2 and v3 should be 1x3 vectors. r should be a  
         Nx3 matrix  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/plotting/private/ptriside.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("ptriside", *args, **kwargs)

@@ -13,9 +13,9 @@ def spm_eeg_firstlevel(*args, **kwargs):
         electromagnetic responses. Neuroimage. 2013, 64:388-98  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_eeg_firstlevel.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_eeg_firstlevel", *args, **kwargs)

@@ -118,9 +118,9 @@ def ft_topoplotER(*args, **kwargs):
         See also FT_SINGLEPLOTER, FT_MULTIPLOTER, FT_SINGLEPLOTTFR, FT_MULTIPLOTTFR,  
         FT_TOPOPLOTTFR, FT_PREPARE_LAYOUT  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/ft_topoplotER.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("ft_topoplotER", *args, **kwargs)

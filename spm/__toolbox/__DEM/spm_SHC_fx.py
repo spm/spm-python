@@ -19,9 +19,9 @@ def spm_SHC_fx(*args, **kwargs):
          
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DEM/spm_SHC_fx.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_SHC_fx", *args, **kwargs)

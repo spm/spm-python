@@ -11,9 +11,9 @@ def spm_fMRI_design_show(*args, **kwargs):
        _______________________________________________________________________  
         Copyright (C) 2008 Wellcome Trust Centre for Neuroimaging  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/compat/spm_fMRI_design_show.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_fMRI_design_show", *args, **kwargs, nargout=0)

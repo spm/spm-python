@@ -59,9 +59,9 @@ def spm_int_D(*args, **kwargs):
         used primarily for integrating fMRI models  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_int_D.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_int_D", *args, **kwargs)

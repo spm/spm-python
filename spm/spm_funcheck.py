@@ -10,9 +10,9 @@ def spm_funcheck(*args, **kwargs):
         h   - corresponding function handle  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_funcheck.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_funcheck", *args, **kwargs)

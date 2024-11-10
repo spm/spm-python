@@ -19,9 +19,9 @@ def spm_shp_sample_deformation(*args, **kwargs):
         3. Exponentiates the forward and inverse deformation fields iy and y  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_shp_sample_deformation.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_shp_sample_deformation", *args, **kwargs)

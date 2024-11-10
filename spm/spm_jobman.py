@@ -58,9 +58,9 @@ def spm_jobman(*args, **kwargs):
                       'jobs'/'matlabbbatch' variable  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_jobman.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_jobman", *args, **kwargs)

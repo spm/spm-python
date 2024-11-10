@@ -17,9 +17,9 @@ def spm_cost_fx(*args, **kwargs):
         where C determines divergence of flow x(2) at any position x(1).  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DEM/spm_cost_fx.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_cost_fx", *args, **kwargs)

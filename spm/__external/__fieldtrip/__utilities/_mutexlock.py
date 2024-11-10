@@ -14,9 +14,9 @@ def _mutexlock(*args, **kwargs):
          
         See also MUTEXUNLOCK and http://en.wikipedia.org/wiki/Mutual_exclusion  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/utilities/private/mutexlock.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("mutexlock", *args, **kwargs, nargout=0)

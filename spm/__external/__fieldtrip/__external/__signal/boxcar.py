@@ -8,9 +8,9 @@ def boxcar(*args, **kwargs):
         Use as  
           w = boxcar(n)  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/external/signal/boxcar.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("boxcar", *args, **kwargs)

@@ -19,9 +19,9 @@ def _write_bioimage_mgrid(*args, **kwargs):
         Copyright (C) 2017, Arjen Stolk & Sandon Griffin  
         --------------------------------------------------------  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/write_bioimage_mgrid.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("write_bioimage_mgrid", *args, **kwargs, nargout=0)

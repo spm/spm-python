@@ -12,9 +12,9 @@ def copyfields(*args, **kwargs):
          
         See also KEEPFIELDS, REMOVEFIELDS, RENAMEFIELDS  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/utilities/copyfields.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("copyfields", *args, **kwargs)

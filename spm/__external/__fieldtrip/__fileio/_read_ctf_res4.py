@@ -10,9 +10,9 @@ def _read_ctf_res4(*args, **kwargs):
          
         See also READ_CTF_MEG4  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/read_ctf_res4.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("read_ctf_res4", *args, **kwargs)

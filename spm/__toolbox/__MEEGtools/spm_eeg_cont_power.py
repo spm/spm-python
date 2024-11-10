@@ -17,9 +17,9 @@ def spm_eeg_cont_power(*args, **kwargs):
         D           - MEEG object (also written to disk)  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/MEEGtools/spm_eeg_cont_power.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_eeg_cont_power", *args, **kwargs)

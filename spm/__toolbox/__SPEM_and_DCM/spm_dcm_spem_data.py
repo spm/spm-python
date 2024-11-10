@@ -22,9 +22,9 @@ def spm_dcm_spem_data(*args, **kwargs):
          single period of a (negative) cosine wave - of unit amplitude.  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/SPEM_and_DCM/spm_dcm_spem_data.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_dcm_spem_data", *args, **kwargs)

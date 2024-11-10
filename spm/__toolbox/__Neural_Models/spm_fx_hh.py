@@ -22,9 +22,9 @@ def spm_fx_hh(*args, **kwargs):
         P(1) = opening rate of NMDA channels  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/Neural_Models/spm_fx_hh.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_fx_hh", *args, **kwargs)

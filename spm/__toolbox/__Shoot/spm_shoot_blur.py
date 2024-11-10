@@ -22,9 +22,9 @@ def spm_shoot_blur(*args, **kwargs):
         of the parameters is rotated out.  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/Shoot/spm_shoot_blur.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_shoot_blur", *args, **kwargs)

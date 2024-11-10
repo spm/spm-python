@@ -52,9 +52,9 @@ def ft_colormap(*args, **kwargs):
          
         See also COLORMAP, COLORMAPEDITOR, BREWERMAP, MATPLOTLIB, CMOCEAN, COLORCET  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/plotting/ft_colormap.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("ft_colormap", *args, **kwargs)

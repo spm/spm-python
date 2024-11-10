@@ -27,9 +27,9 @@ def spm_ancova(*args, **kwargs):
         column T statistics are returned, otherwise F ratios are computed.  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_ancova.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_ancova", *args, **kwargs)

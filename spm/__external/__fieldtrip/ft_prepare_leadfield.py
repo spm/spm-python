@@ -77,9 +77,9 @@ def ft_prepare_leadfield(*args, **kwargs):
          
         See also FT_SOURCEANALYSIS, FT_DIPOLEFITTING, FT_PREPARE_HEADMODEL, FT_PREPARE_SOURCEMODEL  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/ft_prepare_leadfield.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("ft_prepare_leadfield", *args, **kwargs)

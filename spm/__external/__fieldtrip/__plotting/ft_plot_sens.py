@@ -64,9 +64,9 @@ def ft_plot_sens(*args, **kwargs):
         See also FT_DATATYPE_SENS, FT_READ_SENS, FT_PLOT_HEADSHAPE, FT_PLOT_HEADMODEL,  
         FT_PLOT_TOPO3D  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/plotting/ft_plot_sens.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("ft_plot_sens", *args, **kwargs)

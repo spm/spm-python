@@ -46,9 +46,9 @@ def fieldtrip2fiff(*args, **kwargs):
           
         See also FT_DATATYPE_RAW, FT_DATATYPE_TIMELOCK  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fieldtrip2fiff.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("fieldtrip2fiff", *args, **kwargs, nargout=0)

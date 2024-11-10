@@ -13,9 +13,9 @@ def spm_grid(*args, **kwargs):
         The grid is scaled to 10% of the input's maximum.  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_grid.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_grid", *args, **kwargs)

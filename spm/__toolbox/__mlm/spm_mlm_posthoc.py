@@ -26,9 +26,9 @@ def spm_mlm_posthoc(*args, **kwargs):
         logbf        Log Bayes Factor  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/mlm/spm_mlm_posthoc.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_mlm_posthoc", *args, **kwargs)

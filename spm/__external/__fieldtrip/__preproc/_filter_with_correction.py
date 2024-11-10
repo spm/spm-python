@@ -25,9 +25,9 @@ def _filter_with_correction(*args, **kwargs):
         strength of the filter, i.e. a two-pass filter with the same filter  
         order will attenuate the signal twice as strong.  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/preproc/private/filter_with_correction.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("filter_with_correction", *args, **kwargs)

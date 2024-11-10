@@ -18,9 +18,9 @@ def spm_vb_robust(*args, **kwargs):
         Models. NeuroImage, 36(3):661-671, 2007.  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_vb_robust.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_vb_robust", *args, **kwargs)

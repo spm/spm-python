@@ -20,9 +20,9 @@ def mne_make_combined_event_file(*args, **kwargs):
           This function facilitates processing of Neuromag 122 data which do not  
           contain a composite trigger channel  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/mne/mne_make_combined_event_file.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("mne_make_combined_event_file", *args, **kwargs, nargout=0)

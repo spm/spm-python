@@ -15,9 +15,9 @@ def _rmsubfield(*args, **kwargs):
          
         See also SETFIELD, GETSUBFIELD, ISSUBFIELD  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/statfun/private/rmsubfield.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("rmsubfield", *args, **kwargs)

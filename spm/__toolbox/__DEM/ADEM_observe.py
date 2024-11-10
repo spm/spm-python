@@ -15,9 +15,9 @@ def ADEM_observe(*args, **kwargs):
         simulations can be regarded as simulations of mirror neuron responses.  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DEM/ADEM_observe.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("ADEM_observe", *args, **kwargs, nargout=0)

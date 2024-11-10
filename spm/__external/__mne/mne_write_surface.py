@@ -13,9 +13,9 @@ def mne_write_surface(*args, **kwargs):
         faces       - The triangle descriptions  
         comment     - Optional comment to include  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/mne/mne_write_surface.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("mne_write_surface", *args, **kwargs, nargout=0)

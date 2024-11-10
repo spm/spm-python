@@ -31,9 +31,9 @@ def _constructplanargrad(*args, **kwargs):
         used to compute the position of the coils in the planar gradiometer  
         channels.  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/constructplanargrad.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("constructplanargrad", *args, **kwargs)

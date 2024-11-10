@@ -43,9 +43,9 @@ def spm_mtf_demo(*args, **kwargs):
         extracellular glutamate levels.  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/Neural_Models/spm_mtf_demo.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_mtf_demo", *args, **kwargs, nargout=0)

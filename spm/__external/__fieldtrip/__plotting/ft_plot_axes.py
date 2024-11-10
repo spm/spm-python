@@ -27,9 +27,9 @@ def ft_plot_axes(*args, **kwargs):
          
         See also FT_PLOT_SENS, FT_PLOT_MESH, FT_PLOT_ORTHO, FT_PLOT_HEADSHAPE, FT_PLOT_DIPOLE, FT_PLOT_HEADMODEL  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/plotting/ft_plot_axes.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("ft_plot_axes", *args, **kwargs, nargout=0)

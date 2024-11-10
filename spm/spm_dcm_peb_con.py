@@ -45,9 +45,9 @@ def spm_dcm_peb_con(*args, **kwargs):
         [P,c,v] = spm_dcm_peb_con(PEB, C, 0, true);  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_dcm_peb_con.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_dcm_peb_con", *args, **kwargs)

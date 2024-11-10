@@ -11,9 +11,9 @@ def _read_labview_dtlg(*args, **kwargs):
          
         The output of this function is a structure.  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/read_labview_dtlg.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("read_labview_dtlg", *args, **kwargs)

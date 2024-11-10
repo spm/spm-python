@@ -22,9 +22,9 @@ def spm_spm_Bayes_specify(*args, **kwargs):
         voxels is used as an empirical prior for voxel-wise estimation.  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_spm_Bayes_specify.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_spm_Bayes_specify", *args, **kwargs)

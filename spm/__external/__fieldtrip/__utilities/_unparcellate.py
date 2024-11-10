@@ -32,9 +32,9 @@ def _unparcellate(*args, **kwargs):
           If the input was bivariate data with a labelcmb, an optional second  
           output argument gives a list of the reference parcels.  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/utilities/private/unparcellate.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("unparcellate", *args, **kwargs)

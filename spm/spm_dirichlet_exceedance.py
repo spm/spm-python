@@ -24,9 +24,9 @@ def spm_dirichlet_exceedance(*args, **kwargs):
         Bayesian Model Selection for Group Studies. NeuroImage (in press)  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_dirichlet_exceedance.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_dirichlet_exceedance", *args, **kwargs)

@@ -23,9 +23,9 @@ def _read_yokogawa_header(*args, **kwargs):
          
         See also READ_YOKOGAWA_DATA, READ_YOKOGAWA_EVENT  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/read_yokogawa_header.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("read_yokogawa_header", *args, **kwargs)

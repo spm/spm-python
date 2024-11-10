@@ -55,9 +55,9 @@ def spm_est_smoothness(*args, **kwargs):
         methods. NeuroImage, 22:676-687, 2004.  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_est_smoothness.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_est_smoothness", *args, **kwargs)

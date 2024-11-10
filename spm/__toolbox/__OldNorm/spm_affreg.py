@@ -39,9 +39,9 @@ def spm_affreg(*args, **kwargs):
         NeuroImage 6:344-352 (1997).  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/OldNorm/spm_affreg.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_affreg", *args, **kwargs)

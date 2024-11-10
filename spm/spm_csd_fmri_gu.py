@@ -13,9 +13,9 @@ def spm_csd_fmri_gu(*args, **kwargs):
         standard frequency range specified by the sampling interval.  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_csd_fmri_gu.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_csd_fmri_gu", *args, **kwargs)

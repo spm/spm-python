@@ -13,9 +13,9 @@ def spm_bms_anova_img(*args, **kwargs):
                   See spm_bms_ttest.m and spm_bms_anova.m for more details  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_bms_anova_img.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_bms_anova_img", *args, **kwargs)

@@ -38,9 +38,9 @@ def FieldMap_applyvdm(*args, **kwargs):
         The resampled and resliced images resliced to the same subdirectory with a prefix.  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/FieldMap/FieldMap_applyvdm.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("FieldMap_applyvdm", *args, **kwargs)

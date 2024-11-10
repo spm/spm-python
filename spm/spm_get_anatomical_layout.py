@@ -82,9 +82,9 @@ def spm_get_anatomical_layout(*args, **kwargs):
             ears, outline and mask.  
        _________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_get_anatomical_layout.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_get_anatomical_layout", *args, **kwargs)

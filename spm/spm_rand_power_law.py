@@ -16,9 +16,9 @@ def spm_rand_power_law(*args, **kwargs):
         see also: spm_rand_mar; spm_Q  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_rand_power_law.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_rand_power_law", *args, **kwargs)

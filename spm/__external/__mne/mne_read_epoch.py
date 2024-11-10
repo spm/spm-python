@@ -18,9 +18,9 @@ def mne_read_epoch(*args, **kwargs):
          
         The data will contain nchan x ntimes calibrated values  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/mne/mne_read_epoch.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("mne_read_epoch", *args, **kwargs)

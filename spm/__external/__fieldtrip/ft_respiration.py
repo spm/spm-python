@@ -22,9 +22,9 @@ def ft_respiration(*args, **kwargs):
          
         See also FT_HEARTRATE, FT_ELECTRODERMALACTIVITY, FT_HEADMOVEMENT, FT_REGRESSCONFOUND  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/ft_respiration.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("ft_respiration", *args, **kwargs)

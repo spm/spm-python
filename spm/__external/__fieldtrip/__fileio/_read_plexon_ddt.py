@@ -15,9 +15,9 @@ def _read_plexon_ddt(*args, **kwargs):
         samples start counting at 1  
         returned values are in mV  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/read_plexon_ddt.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("read_plexon_ddt", *args, **kwargs)

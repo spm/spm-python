@@ -42,9 +42,9 @@ def ft_write_headshape(*args, **kwargs):
          
         See also FT_READ_HEADSHAPE, FT_WRITE_DATA, FT_WRITE_MRI, FT_WRITE_SENS  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/ft_write_headshape.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("ft_write_headshape", *args, **kwargs, nargout=0)

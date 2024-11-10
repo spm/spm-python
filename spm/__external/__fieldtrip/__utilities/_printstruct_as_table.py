@@ -14,9 +14,9 @@ def _printstruct_as_table(*args, **kwargs):
          
         See also PRINTSTRUCT, APPENDSTRUCT  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/utilities/private/printstruct_as_table.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("printstruct_as_table", *args, **kwargs, nargout=0)

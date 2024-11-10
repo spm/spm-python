@@ -26,9 +26,9 @@ def spm_jsonwrite(*args, **kwargs):
           jsonencode: https://www.mathworks.com/help/matlab/ref/jsonencode.html  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_jsonwrite.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_jsonwrite", *args, **kwargs)

@@ -9,9 +9,9 @@ def _read_bv_srf(*args, **kwargs):
           [pnt, tri] = read_bv_srf(filename) or  
           [pnt, tri, srf] = read_bv_srf(filename)  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/read_bv_srf.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("read_bv_srf", *args, **kwargs)

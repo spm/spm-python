@@ -7,9 +7,9 @@ def _pinvNx2(*args, **kwargs):
         Output has dimensionality Mx2xN. This implementation is generally faster  
         than calling pinv in a for-loop, once M > 2  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/plotting/private/pinvNx2.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("pinvNx2", *args, **kwargs)

@@ -36,9 +36,9 @@ def _read_dhn_med10(*args, **kwargs):
          
         See also FT_FILETYPE, FT_READ_HEADER, FT_READ_EVENT, FT_READ_DATA.  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/read_dhn_med10.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("read_dhn_med10", *args, **kwargs)

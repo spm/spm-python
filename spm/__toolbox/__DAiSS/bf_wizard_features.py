@@ -16,9 +16,9 @@ def bf_wizard_features(*args, **kwargs):
          features         - simplified summary of options selected  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DAiSS/bf_wizard_features.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("bf_wizard_features", *args, **kwargs)

@@ -23,9 +23,9 @@ def bemcp_example(*args, **kwargs):
         Be aware that this way of programming is generally NOT advisable!  
         I used it only to ensure a quick & dirty check of the BEM module...  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/bemcp/bemcp_example.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("bemcp_example", *args, **kwargs, nargout=0)

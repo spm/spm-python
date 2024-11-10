@@ -11,9 +11,9 @@ def _makessense(*args, **kwargs):
          
         See also GETDIMORD, GETDIMSIZ, GETDATFIELD  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/makessense.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("makessense", *args, **kwargs)

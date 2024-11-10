@@ -22,9 +22,9 @@ def _get_components(*args, **kwargs):
          
           J Goni, University of Navarra and Indiana University, 2009/2011  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DAiSS/private/get_components.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("get_components", *args, **kwargs)

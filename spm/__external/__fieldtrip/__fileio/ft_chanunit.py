@@ -27,9 +27,9 @@ def ft_chanunit(*args, **kwargs):
          
         See also FT_CHANTYPE  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/ft_chanunit.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("ft_chanunit", *args, **kwargs)

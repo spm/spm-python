@@ -18,9 +18,9 @@ def _select_channel_list(*args, **kwargs):
          
         If the user presses cancel, the initial selection will be returned.  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/select_channel_list.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("select_channel_list", *args, **kwargs)

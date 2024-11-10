@@ -155,15 +155,214 @@ class slover(MatlabClassWrapper):
                  doc slover  
             
           
-
+        
         [Matlab code]( https://github.com/spm/spm/blob/main/@slover/slover.m )
-
+        
         Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         if _objdict is None:
             _objdict = Runtime.call("slover", *args, **kwargs)
             
         super().__init__(_objdict)
+
+    def add_blobs(self, *args, **kwargs):
+        """
+          Add SPM blobs to img no 'imgno', as specified in  
+            FORMAT obj = add_blobs(obj, xyz, vals, mat, imgno)  
+             
+            Inputs  
+            XYZ   - 3xN voxel coordinates of N blob values  
+            vals  - N blob intensity values  
+            mat   - 4x4 matrix specifying voxels -> mm  
+            imgno - slice overlay img number to add to (defaults last in object)  
+             
+            Outputs  
+            obj   - modified object  
+           __________________________________________________________________________  
+          
+        
+        [Matlab code]( https://github.com/spm/spm/blob/main/@slover/add_blobs.m )
+        
+        Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        """
+        return Runtime.call("add_blobs", self._as_matlab_object(), *args, **kwargs)
+
+    def add_matrix(self, *args, **kwargs):
+        """
+          Add 3d matrix image vol to slice overlay  
+            FORMAT obj = add_matrix(obj, mat3d, mat, imgno)  
+             
+            Inputs  
+            obj          - object  
+            mat3d        - 3D matrix to add as img  
+            mat          - optional 4x4 voxel->world translation  
+            imgno        - optional img no to add to (defaults to last in object)  
+             
+            Outputs  
+            obj          - modified object  
+           __________________________________________________________________________  
+          
+        
+        [Matlab code]( https://github.com/spm/spm/blob/main/@slover/add_matrix.m )
+        
+        Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        """
+        return Runtime.call("add_matrix", self._as_matlab_object(), *args, **kwargs)
+
+    def add_spm(self, *args, **kwargs):
+        """
+          Add SPM blobs as new img to object, split effect, 'hot' colormap  
+            FORMAT obj = add_spm(obj)  
+             
+            SPM results are fetched from the workspace  
+           __________________________________________________________________________  
+          
+        
+        [Matlab code]( https://github.com/spm/spm/blob/main/@slover/add_spm.m )
+        
+        Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        """
+        return Runtime.call("add_spm", self._as_matlab_object(), *args, **kwargs)
+
+    def display(self, *args, **kwargs):
+        """
+          Display method for slice overlay object  
+           __________________________________________________________________________  
+          
+        
+        [Matlab code]( https://github.com/spm/spm/blob/main/@slover/display.m )
+        
+        Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        """
+        return Runtime.call("display", self._as_matlab_object(), *args, **kwargs, nargout=0)
+
+    def fill_defaults(self, *args, **kwargs):
+        """
+          Check and fill fields in object  
+            FORMAT obj = fill_defaults(obj)  
+             
+            Input  
+            obj    - object to fill  
+             
+            Output  
+            obj    - object filled  
+           __________________________________________________________________________  
+          
+        
+        [Matlab code]( https://github.com/spm/spm/blob/main/@slover/fill_defaults.m )
+        
+        Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        """
+        return Runtime.call("fill_defaults", self._as_matlab_object(), *args, **kwargs)
+
+    def get_pos(self, *args, **kwargs):
+        """
+          Return point location from last click, in mm  
+           __________________________________________________________________________  
+          
+        
+        [Matlab code]( https://github.com/spm/spm/blob/main/@slover/get_pos.m )
+        
+        Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        """
+        return Runtime.call("get_pos", self._as_matlab_object(), *args, **kwargs)
+
+    def paint(self, *args, **kwargs):
+        """
+          Method to display slice overlay  
+            FORMAT obj = paint(obj, params)  
+             
+            Inputs  
+            obj         - slice overlay object  
+            params      - optional structure containing extra display parameters  
+                          - refreshf - overrides refreshf in object  
+                          - clf      - overrides clf in object  
+                          - userdata - if 0, does not add object to userdata field  
+                          (see below)  
+             
+            Outputs  
+            obj         - which may have been filled with defaults  
+             
+            paint attaches the object used for painting to the 'UserData' field of  
+            the figure handle, unless instructed not to with 0 in userdata flag  
+           __________________________________________________________________________  
+          
+        
+        [Matlab code]( https://github.com/spm/spm/blob/main/@slover/paint.m )
+        
+        Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        """
+        return Runtime.call("paint", self._as_matlab_object(), *args, **kwargs)
+
+    def point_vals(self, *args, **kwargs):
+        """
+          Return values from all the images at points given in XYZmm  
+            FORMAT vals = point_vals(obj, XYZmm, holdlist)  
+             
+            (for the following,  I is number of images in object, N is the number  
+            of points to resample from)  
+            Input  
+            obj         - object  
+            XYZmm       - 3xN XYZ natrix of points (in mm)  
+            holdlist    - optional 1xI vector of resample hold values  
+             
+            Outputs  
+            vals        - IxN vector of values in images  
+           __________________________________________________________________________  
+          
+        
+        [Matlab code]( https://github.com/spm/spm/blob/main/@slover/point_vals.m )
+        
+        Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        """
+        return Runtime.call("point_vals", self._as_matlab_object(), *args, **kwargs)
+
+    def print_fig(self, *args, **kwargs):
+        """
+          Print slice overlay figure  
+            FORMAT print_fig(obj, filename, printstr)  
+             
+            Input  
+            obj       - object  
+            filename  - optional filename to print to (obj.filename)  
+            printstr  - optional string giving print command (obj.printstr)  
+             
+            Based on spm_figure print, and including fix from thence for ps  
+            printing  
+           __________________________________________________________________________  
+          
+        
+        [Matlab code]( https://github.com/spm/spm/blob/main/@slover/print_fig.m )
+        
+        Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        """
+        return Runtime.call("print_fig", self._as_matlab_object(), *args, **kwargs, nargout=0)
+
+    def subsasgn(self, *args, **kwargs):
+        """
+          Method to overload . notation in assignments.  
+            . assignment works directly on object fields  
+           __________________________________________________________________________  
+          
+        
+        [Matlab code]( https://github.com/spm/spm/blob/main/@slover/subsasgn.m )
+        
+        Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        """
+        return Runtime.call("subsasgn", self._as_matlab_object(), *args, **kwargs)
+
+    def subsref(self, *args, **kwargs):
+        """
+          Method to overload the . notation.  
+            . reference works directly on object fields  
+           __________________________________________________________________________  
+          
+        
+        [Matlab code]( https://github.com/spm/spm/blob/main/@slover/subsref.m )
+        
+        Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        """
+        return Runtime.call("subsref", self._as_matlab_object(), *args, **kwargs)
 
     def _mars_struct(self, *args, **kwargs):
         """
@@ -239,12 +438,12 @@ class slover(MatlabClassWrapper):
             Useful for printing text description of structure  
            __________________________________________________________________________  
           
-
+        
         [Matlab code]( https://github.com/spm/spm/blob/main/@slover/private/mars_struct.m )
-
+        
         Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
-        return Runtime.call("mars_struct", *args, **kwargs)
+        return Runtime.call("mars_struct", self._as_matlab_object(), *args, **kwargs)
 
     def _pr_basic_ui(self, *args, **kwargs):
         """
@@ -258,12 +457,12 @@ class slover(MatlabClassWrapper):
             dispf - optional flag: if set, displays overlay (default = 1)  
            __________________________________________________________________________  
           
-
+        
         [Matlab code]( https://github.com/spm/spm/blob/main/@slover/private/pr_basic_ui.m )
-
+        
         Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
-        return Runtime.call("pr_basic_ui", *args, **kwargs)
+        return Runtime.call("pr_basic_ui", self._as_matlab_object(), *args, **kwargs)
 
     def _pr_blobs2vol(self, *args, **kwargs):
         """
@@ -279,12 +478,12 @@ class slover(MatlabClassWrapper):
             vol      - vol struct, with matrix data 'imgdata' field  
            __________________________________________________________________________  
           
-
+        
         [Matlab code]( https://github.com/spm/spm/blob/main/@slover/private/pr_blobs2vol.m )
-
+        
         Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
-        return Runtime.call("pr_blobs2vol", *args, **kwargs)
+        return Runtime.call("pr_blobs2vol", self._as_matlab_object(), *args, **kwargs)
 
     def _pr_get_spm_results(self, *args, **kwargs):
         """
@@ -297,12 +496,12 @@ class slover(MatlabClassWrapper):
             M      - 4x4 voxel -> world transformation matrix  
            __________________________________________________________________________  
           
-
+        
         [Matlab code]( https://github.com/spm/spm/blob/main/@slover/private/pr_get_spm_results.m )
-
+        
         Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
-        return Runtime.call("pr_get_spm_results", *args, **kwargs)
+        return Runtime.call("pr_get_spm_results", self._as_matlab_object(), *args, **kwargs)
 
     def _pr_getcmap(self, *args, **kwargs):
         """
@@ -323,12 +522,12 @@ class slover(MatlabClassWrapper):
             warnstr     - warning message if fails  
            __________________________________________________________________________  
           
-
+        
         [Matlab code]( https://github.com/spm/spm/blob/main/@slover/private/pr_getcmap.m )
-
+        
         Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
-        return Runtime.call("pr_getcmap", *args, **kwargs)
+        return Runtime.call("pr_getcmap", self._as_matlab_object(), *args, **kwargs)
 
     def _pr_matrix2vol(self, *args, **kwargs):
         """
@@ -343,12 +542,12 @@ class slover(MatlabClassWrapper):
             vol     - kind of SPM vol struct with matrix data added  
            __________________________________________________________________________  
           
-
+        
         [Matlab code]( https://github.com/spm/spm/blob/main/@slover/private/pr_matrix2vol.m )
-
+        
         Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
-        return Runtime.call("pr_matrix2vol", *args, **kwargs)
+        return Runtime.call("pr_matrix2vol", self._as_matlab_object(), *args, **kwargs)
 
     def _pr_scaletocmap(self, *args, **kwargs):
         """
@@ -373,12 +572,12 @@ class slover(MatlabClassWrapper):
                          specified by lrn vector above  
            __________________________________________________________________________  
           
-
+        
         [Matlab code]( https://github.com/spm/spm/blob/main/@slover/private/pr_scaletocmap.m )
-
+        
         Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
-        return Runtime.call("pr_scaletocmap", *args, **kwargs)
+        return Runtime.call("pr_scaletocmap", self._as_matlab_object(), *args, **kwargs)
 
     def _pr_volmaxmin(self, *args, **kwargs):
         """
@@ -393,9 +592,9 @@ class slover(MatlabClassWrapper):
             mn       - minimum  
            __________________________________________________________________________  
           
-
+        
         [Matlab code]( https://github.com/spm/spm/blob/main/@slover/private/pr_volmaxmin.m )
-
+        
         Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
-        return Runtime.call("pr_volmaxmin", *args, **kwargs)
+        return Runtime.call("pr_volmaxmin", self._as_matlab_object(), *args, **kwargs)

@@ -13,9 +13,9 @@ def _read_tdt_tev(*args, **kwargs):
           tev and tsq files work together to get an event's data and attributes  
           sev files contains streamed binary data  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/read_tdt_tev.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("read_tdt_tev", *args, **kwargs)

@@ -12,9 +12,9 @@ def _write_stl(*args, **kwargs):
          
         See also READ_STL  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/write_stl.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("write_stl", *args, **kwargs, nargout=0)

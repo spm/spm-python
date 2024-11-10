@@ -14,9 +14,9 @@ def spm_bms_display(*args, **kwargs):
                  'overlays' (options overlays menu)  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_bms_display.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_bms_display", *args, **kwargs)

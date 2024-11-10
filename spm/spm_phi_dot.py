@@ -8,9 +8,9 @@ def spm_phi_dot(*args, **kwargs):
         see spm_phi and spm_inv_phi  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_phi_dot.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_phi_dot", *args, **kwargs)

@@ -25,9 +25,9 @@ def _findcluster(*args, **kwargs):
          
         See also SPM_BWLABEL, BWLABEL, BWLABELN  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/plotting/private/findcluster.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("findcluster", *args, **kwargs)

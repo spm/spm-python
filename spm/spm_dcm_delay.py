@@ -30,9 +30,9 @@ def spm_dcm_delay(*args, **kwargs):
         P.D (and M.pF.D if specified).  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_dcm_delay.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_dcm_delay", *args, **kwargs)

@@ -23,9 +23,9 @@ def spm_gx_fnirs(*args, **kwargs):
         modelling for functional near-infrared spectroscopy. NeuroImage 111: 338-349.  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/dcm_fnirs/spm_gx_fnirs.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_gx_fnirs", *args, **kwargs)

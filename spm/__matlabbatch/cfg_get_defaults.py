@@ -16,9 +16,9 @@ def cfg_get_defaults(*args, **kwargs):
        _______________________________________________________________________  
         Copyright (C) 2007 Freiburg Brain Imaging  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/matlabbatch/cfg_get_defaults.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("cfg_get_defaults", *args, **kwargs)

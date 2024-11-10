@@ -33,9 +33,9 @@ def spm_reml_ancova(*args, **kwargs):
         If Fc has only one column a T statistic is returned,  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_reml_ancova.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_reml_ancova", *args, **kwargs)

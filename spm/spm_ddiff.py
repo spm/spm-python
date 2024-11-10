@@ -30,9 +30,9 @@ def spm_ddiff(*args, **kwargs):
         dfdx  = (4*f(x + dx) - f(x + 2*dx) - 3*f(x))/(2*dx)  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_ddiff.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_ddiff", *args, **kwargs)

@@ -20,9 +20,9 @@ def spm_jsonread(*args, **kwargs):
           jsondecode: https://www.mathworks.com/help/matlab/ref/jsondecode.html  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_jsonread.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_jsonread", *args, **kwargs)

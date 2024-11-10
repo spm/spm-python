@@ -13,9 +13,9 @@ def ft_setopt(*args, **kwargs):
          
         See also FT_GETOPT, FT_CHECKOPT  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/utilities/ft_setopt.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("ft_setopt", *args, **kwargs)

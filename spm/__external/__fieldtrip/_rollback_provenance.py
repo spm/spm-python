@@ -22,9 +22,9 @@ def _rollback_provenance(*args, **kwargs):
          
         See also FT_PREAMBLE, FT_POSTAMBLE  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/rollback_provenance.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("rollback_provenance", *args, **kwargs)

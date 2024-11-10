@@ -14,9 +14,9 @@ def spm_write_vol(*args, **kwargs):
         scalefactors.  If 'pinfo' exists, then the scalefactor in this is used.  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_write_vol.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_write_vol", *args, **kwargs)

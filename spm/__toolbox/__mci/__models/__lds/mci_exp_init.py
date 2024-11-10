@@ -16,9 +16,9 @@ def mci_exp_init(*args, **kwargs):
         a         [d x N] matrix of exponential coefficients  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/mci/models/lds/mci_exp_init.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("mci_exp_init", *args, **kwargs)

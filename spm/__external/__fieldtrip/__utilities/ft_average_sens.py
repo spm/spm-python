@@ -16,9 +16,9 @@ def ft_average_sens(*args, **kwargs):
          
         See also FT_READ_SENS, FT_DATATYPE_SENS, FT_PREPARE_VOL_SENS  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/utilities/ft_average_sens.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("ft_average_sens", *args, **kwargs)

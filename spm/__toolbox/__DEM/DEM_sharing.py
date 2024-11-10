@@ -77,9 +77,9 @@ def DEM_sharing(*args, **kwargs):
         would be simpler to instantiate.  
        _________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DEM/DEM_sharing.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("DEM_sharing", *args, **kwargs)

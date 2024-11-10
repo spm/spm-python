@@ -12,9 +12,9 @@ def fieldtrip2bis(*args, **kwargs):
          
         See also BIS2FIELDTRIP, FT_WRITE_SENS, WRITE_BIOIMAGE_MGRID  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fieldtrip2bis.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("fieldtrip2bis", *args, **kwargs, nargout=0)

@@ -13,9 +13,9 @@ def _ft_datatype_dip(*args, **kwargs):
          
         See also FT_DATATYPE, FT_DATATYPE_SOURCE, FT_DATATYPE_VOLUME  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/ft_datatype_dip.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("ft_datatype_dip", *args, **kwargs)

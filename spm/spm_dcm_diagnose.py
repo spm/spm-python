@@ -36,9 +36,9 @@ def spm_dcm_diagnose(*args, **kwargs):
         cyan very strong evidence (> 5)  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_dcm_diagnose.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_dcm_diagnose", *args, **kwargs)

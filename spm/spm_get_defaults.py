@@ -21,9 +21,9 @@ def spm_get_defaults(*args, **kwargs):
         persistent changes, see help section in spm_defaults.m.  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_get_defaults.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_get_defaults", *args, **kwargs)

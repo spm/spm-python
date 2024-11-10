@@ -19,9 +19,9 @@ def spm_sepmul3d(*args, **kwargs):
         sparse B-spline basis functions could be used.  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_sepmul3d.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_sepmul3d", *args, **kwargs)

@@ -19,9 +19,9 @@ def match_str(*args, **kwargs):
         in the output, in this case. This can be convenient in rare cases if the  
         size of the input lists is meaningful.  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/utilities/match_str.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("match_str", *args, **kwargs)

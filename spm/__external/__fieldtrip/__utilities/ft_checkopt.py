@@ -46,9 +46,9 @@ def ft_checkopt(*args, **kwargs):
          
         See also FT_GETOPT, FT_SETOPT  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/utilities/ft_checkopt.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("ft_checkopt", *args, **kwargs)

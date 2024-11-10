@@ -21,9 +21,9 @@ def _read_ctf_ascii(*args, **kwargs):
           processing.cfg  
         and maybe for other files as well.  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/read_ctf_ascii.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("read_ctf_ascii", *args, **kwargs)

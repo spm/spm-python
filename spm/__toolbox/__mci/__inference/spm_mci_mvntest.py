@@ -31,9 +31,9 @@ def spm_mci_mvntest(*args, **kwargs):
              121-133.  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/mci/inference/spm_mci_mvntest.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_mci_mvntest", *args, **kwargs)

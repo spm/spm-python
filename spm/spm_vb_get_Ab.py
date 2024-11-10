@@ -16,9 +16,9 @@ def spm_vb_get_Ab(*args, **kwargs):
         cross-covariance matrices  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_vb_get_Ab.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_vb_get_Ab", *args, **kwargs)

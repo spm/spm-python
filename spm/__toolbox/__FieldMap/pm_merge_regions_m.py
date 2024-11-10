@@ -93,9 +93,9 @@ def pm_merge_regions_m(*args, **kwargs):
         upm = pm_merge_regions_m(pm,N,P,rima);  
        _________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/FieldMap/pm_merge_regions_m.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("pm_merge_regions_m", *args, **kwargs)

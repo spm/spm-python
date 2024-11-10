@@ -108,9 +108,9 @@ def FieldMap(*args, **kwargs):
         Wellcome Trust and IBIM Consortium  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/FieldMap/FieldMap.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("FieldMap", *args, **kwargs)

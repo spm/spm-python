@@ -18,9 +18,9 @@ def ft_preproc_detrend(*args, **kwargs):
          
         See also FT_PREPROC_BASELINECORRECT, FT_PREPROC_POLYREMOVAL  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/preproc/ft_preproc_detrend.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("ft_preproc_detrend", *args, **kwargs)

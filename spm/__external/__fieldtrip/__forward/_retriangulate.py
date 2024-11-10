@@ -28,9 +28,9 @@ def _retriangulate(*args, **kwargs):
          
         See also ICOSAHEDRONxxx, ISOSURFACE, REDUCEPATCH  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/forward/private/retriangulate.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("retriangulate", *args, **kwargs)

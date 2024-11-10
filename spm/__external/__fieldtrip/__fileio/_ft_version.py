@@ -39,9 +39,9 @@ def _ft_version(*args, **kwargs):
          
         See also FT_PLATFORM_SUPPORTS, VERSION, VER, VERLESSTHAN  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/ft_version.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("ft_version", *args, **kwargs)

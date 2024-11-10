@@ -41,9 +41,9 @@ def spm_mar_spectra(*args, **kwargs):
         Also note that PVE and GEW are only valid for d=2 time series  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/spectral/spm_mar_spectra.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_mar_spectra", *args, **kwargs)

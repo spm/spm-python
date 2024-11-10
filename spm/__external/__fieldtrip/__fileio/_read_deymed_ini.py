@@ -10,9 +10,9 @@ def _read_deymed_ini(*args, **kwargs):
          
         See also READ_DEYMED_DAT  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/read_deymed_ini.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("read_deymed_ini", *args, **kwargs)

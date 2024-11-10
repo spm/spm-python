@@ -24,9 +24,9 @@ def _cortex_light(*args, **kwargs):
           skin_medium_dark  = [155 102	65]/255;  
           skin_dark         = [ 91  71  61]/255;  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/plotting/private/cortex_light.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("cortex_light", *args, **kwargs)

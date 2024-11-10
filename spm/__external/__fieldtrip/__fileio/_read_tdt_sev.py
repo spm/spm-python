@@ -10,9 +10,9 @@ def _read_tdt_sev(*args, **kwargs):
          
         Note: sev files contain raw broadband data that is streamed to the RS4  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/read_tdt_sev.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("read_tdt_sev", *args, **kwargs)

@@ -17,9 +17,9 @@ def spm_kl_eig_normal(*args, **kwargs):
         c_p         Covariance of second (zero-mean) Normal density  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/spectral/spm_kl_eig_normal.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_kl_eig_normal", *args, **kwargs)

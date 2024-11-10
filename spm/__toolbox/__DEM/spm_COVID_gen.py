@@ -53,9 +53,9 @@ def spm_COVID_gen(*args, **kwargs):
        __________________________________________________________________________  
         Copyright (C) 2020 Wellcome Centre for Human Neuroimaging  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DEM/spm_COVID_gen.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_COVID_gen", *args, **kwargs)

@@ -20,9 +20,9 @@ def _intersect_line(*args, **kwargs):
          
         Adapted to FieldTrip by Jan-Mathijs Schoffelen 2012  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/intersect_line.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("intersect_line", *args, **kwargs)

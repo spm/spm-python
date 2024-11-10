@@ -11,9 +11,9 @@ def _process_fooof(*args, **kwargs):
            neural power spectra into periodic and aperiodic components.   
            Nature Neuroscience (2020)  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/MEEGtools/private/process_fooof.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("process_fooof", *args, **kwargs)

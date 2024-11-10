@@ -13,9 +13,9 @@ def mne_write_w_file1(*args, **kwargs):
         vertices - vector of vertex indices (1-based)  
         data     - vector of data values  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/mne/mne_write_w_file1.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("mne_write_w_file1", *args, **kwargs)

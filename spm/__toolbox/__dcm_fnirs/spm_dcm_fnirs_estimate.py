@@ -61,9 +61,9 @@ def spm_dcm_fnirs_estimate(*args, **kwargs):
         (ii) is based on spm_dcm_estimate.m by Karl Friston.  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/dcm_fnirs/spm_dcm_fnirs_estimate.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_dcm_fnirs_estimate", *args, **kwargs)

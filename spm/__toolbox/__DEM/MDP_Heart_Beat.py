@@ -10,9 +10,9 @@ def MDP_Heart_Beat(*args, **kwargs):
         interoceptive states. The example used here is the change in retinal  
         blood flow, and its influence on vision, during a cardiac cycle.  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DEM/MDP_Heart_Beat.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("MDP_Heart_Beat", *args, **kwargs)

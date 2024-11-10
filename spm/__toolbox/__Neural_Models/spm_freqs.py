@@ -23,9 +23,9 @@ def spm_freqs(*args, **kwargs):
          
           See also LOGSPACE, POLYVAL, INVFREQS, and FREQZ.  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/Neural_Models/spm_freqs.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_freqs", *args, **kwargs)

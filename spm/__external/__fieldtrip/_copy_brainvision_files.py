@@ -22,9 +22,9 @@ def _copy_brainvision_files(*args, **kwargs):
          
         See also COPY_CTF_FILES  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/copy_brainvision_files.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("copy_brainvision_files", *args, **kwargs, nargout=0)

@@ -14,9 +14,9 @@ def mci_plot_surface(*args, **kwargs):
         dist      'prior', 'like' or 'post'  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/mci/plotting/mci_plot_surface.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("mci_plot_surface", *args, **kwargs)

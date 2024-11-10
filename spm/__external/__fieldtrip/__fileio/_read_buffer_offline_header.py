@@ -12,9 +12,9 @@ def _read_buffer_offline_header(*args, **kwargs):
           1 = Fake labels were generated  
           2 = Got channel labels from chunk information  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/read_buffer_offline_header.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("read_buffer_offline_header", *args, **kwargs)

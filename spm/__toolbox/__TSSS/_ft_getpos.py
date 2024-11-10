@@ -17,9 +17,9 @@ def _ft_getpos(*args, **kwargs):
         merchantable, fit for a particular purpose. Developer/user agrees to bear the entire risk   
         in connection with its use and distribution of any and all parts of the Software under this license.  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/TSSS/private/ft_getpos.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("ft_getpos", *args, **kwargs)

@@ -15,9 +15,9 @@ def mne_ex_cancel_noise(*args, **kwargs):
                     desired compensation grade (will be useful in forward  
                     calculations)  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/mne/mne_ex_cancel_noise.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("mne_ex_cancel_noise", *args, **kwargs)

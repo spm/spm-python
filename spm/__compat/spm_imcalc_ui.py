@@ -29,9 +29,9 @@ def spm_imcalc_ui(*args, **kwargs):
        __________________________________________________________________________  
         Copyright (C) 1998-2011 Wellcome Trust Centre for Neuroimaging  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/compat/spm_imcalc_ui.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_imcalc_ui", *args, **kwargs)

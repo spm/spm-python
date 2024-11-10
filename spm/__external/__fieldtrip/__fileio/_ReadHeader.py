@@ -9,9 +9,9 @@ def _ReadHeader(*args, **kwargs):
          
          INPUT:  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/ReadHeader.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("ReadHeader", *args, **kwargs)

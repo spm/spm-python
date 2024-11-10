@@ -17,9 +17,9 @@ def spm_orth(*args, **kwargs):
         ed.), Johns Hopkins, ISBN 978-0-8018-5414-9.  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_orth.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_orth", *args, **kwargs)

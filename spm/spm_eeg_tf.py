@@ -46,9 +46,9 @@ def spm_eeg_tf(*args, **kwargs):
                                                   analysis  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_eeg_tf.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_eeg_tf", *args, **kwargs)

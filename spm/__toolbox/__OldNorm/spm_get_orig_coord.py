@@ -18,9 +18,9 @@ def spm_get_orig_coord(*args, **kwargs):
         orig_coord - Original co-ordinate (mm).  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/OldNorm/spm_get_orig_coord.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_get_orig_coord", *args, **kwargs)

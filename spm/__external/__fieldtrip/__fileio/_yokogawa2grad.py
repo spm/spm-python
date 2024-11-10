@@ -10,9 +10,9 @@ def _yokogawa2grad(*args, **kwargs):
         See also CTF2GRAD, BTI2GRAD, FIF2GRAD, MNE2GRAD, ITAB2GRAD,  
         FT_READ_SENS, FT_READ_HEADER  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/yokogawa2grad.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("yokogawa2grad", *args, **kwargs)

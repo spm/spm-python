@@ -13,9 +13,9 @@ def _write_nifti2_hdr(*args, **kwargs):
          
         See also READ_NIFTI_HDR, READ_CIFTI, WRITE_CIFTI  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/write_nifti2_hdr.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("write_nifti2_hdr", *args, **kwargs, nargout=0)

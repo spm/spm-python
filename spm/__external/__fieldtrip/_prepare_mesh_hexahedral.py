@@ -12,9 +12,9 @@ def _prepare_mesh_hexahedral(*args, **kwargs):
          
         See also PREPARE_MESH_SEGMENTATION, PREPARE_MESH_MANUAL, PREPARE_MESH_HEADSHAPE  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/prepare_mesh_hexahedral.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("prepare_mesh_hexahedral", *args, **kwargs)

@@ -10,9 +10,9 @@ def bf_output_image_cfGLM(*args, **kwargs):
         amplitude-amplitude coupling, as well as B coefficients per trial  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DAiSS/bf_output_image_cfGLM.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("bf_output_image_cfGLM", *args, **kwargs)

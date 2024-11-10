@@ -15,9 +15,9 @@ def spm_voice_dct(*args, **kwargs):
         logarithmically according to a scaling parameter.  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DEM/spm_voice_dct.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_voice_dct", *args, **kwargs)

@@ -14,9 +14,9 @@ def spm_preproc_write(*args, **kwargs):
                CSF     - similar to GM  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/OldSeg/spm_preproc_write.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_preproc_write", *args, **kwargs, nargout=0)

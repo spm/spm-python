@@ -42,9 +42,9 @@ def _lineattributes_common(*args, **kwargs):
         based on the layout.color field. Typically, this will be a color that is based on the x/y/z position of   
         the corresponding sensor.  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/lineattributes_common.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("lineattributes_common", *args, **kwargs)

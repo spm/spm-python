@@ -14,9 +14,9 @@ def spm_DEM_F(*args, **kwargs):
         the log-likehood (log-evidence) conditioned on the expected parameters.  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_DEM_F.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_DEM_F", *args, **kwargs)

@@ -19,9 +19,9 @@ def spm_cost_SHC_fxa(*args, **kwargs):
         also substitute for Morris water-maze simulations or unbounded saccades.  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DEM/spm_cost_SHC_fxa.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_cost_SHC_fxa", *args, **kwargs)

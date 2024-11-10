@@ -31,9 +31,9 @@ def spm_pca_order(*args, **kwargs):
         Cambridge University Press.  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/mlm/spm_pca_order.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_pca_order", *args, **kwargs)

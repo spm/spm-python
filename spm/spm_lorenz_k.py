@@ -12,9 +12,9 @@ def spm_lorenz_k(*args, **kwargs):
             P.k = 1 x 1  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_lorenz_k.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_lorenz_k", *args, **kwargs)

@@ -43,9 +43,9 @@ def spm_DEM_M(*args, **kwargs):
           M(i).l  = number of output v(i);  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DEM/spm_DEM_M.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_DEM_M", *args, **kwargs)

@@ -36,9 +36,9 @@ def spm_fx_fmri(*args, **kwargs):
            Neuroimage. 2008 Jan 1;39(1):269-78.  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_fx_fmri.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_fx_fmri", *args, **kwargs)

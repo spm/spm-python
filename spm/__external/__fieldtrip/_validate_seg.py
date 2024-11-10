@@ -21,9 +21,9 @@ def _validate_seg(*args, **kwargs):
          
         See also TRIANGULATE_SEG, PREPARE_MESH_SEGMENTATION  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/validate_seg.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("validate_seg", *args, **kwargs)

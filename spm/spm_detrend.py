@@ -15,9 +15,9 @@ def spm_detrend(*args, **kwargs):
         matrices.  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_detrend.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_detrend", *args, **kwargs)

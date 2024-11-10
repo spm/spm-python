@@ -14,9 +14,9 @@ def spm_ssm2mtf(*args, **kwargs):
         mtf  - directed or modulation transfer function  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/spectral/spm_ssm2mtf.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_ssm2mtf", *args, **kwargs)

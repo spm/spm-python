@@ -30,9 +30,9 @@ def _multivariate_decomp(*args, **kwargs):
               do orix = E(x,1)./norm(E(x,1)), and oriy = E(y,1)./norm(E(y,1));  
           D = diagonal matrix with eigenvalues  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/connectivity/private/multivariate_decomp.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("multivariate_decomp", *args, **kwargs)

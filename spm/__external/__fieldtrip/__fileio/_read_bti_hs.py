@@ -10,9 +10,9 @@ def _read_bti_hs(*args, **kwargs):
          
           (C) 2007 by Thomas Hartmann  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/read_bti_hs.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("read_bti_hs", *args, **kwargs)

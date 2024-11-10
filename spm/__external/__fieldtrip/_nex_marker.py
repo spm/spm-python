@@ -23,9 +23,9 @@ def _nex_marker(*args, **kwargs):
           names - names of marker fields ([nm 64] character array)  
           m - character array of marker values [n nl nm]  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/nex_marker.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("nex_marker", *args, **kwargs)

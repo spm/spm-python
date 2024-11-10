@@ -11,9 +11,9 @@ def spm_check_results(*args, **kwargs):
         Beware: syntax and features of this function are likely to change.  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_check_results.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_check_results", *args, **kwargs, nargout=0)

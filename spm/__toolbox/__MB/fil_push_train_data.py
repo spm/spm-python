@@ -22,9 +22,9 @@ def fil_push_train_data(*args, **kwargs):
                  for an implicit background class.  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/MB/fil_push_train_data.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("fil_push_train_data", *args, **kwargs, nargout=0)

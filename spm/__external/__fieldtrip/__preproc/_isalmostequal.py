@@ -22,9 +22,9 @@ def _isalmostequal(*args, **kwargs):
          
         See also ISEQUAL, ISEQUALNAN  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/preproc/private/isalmostequal.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("isalmostequal", *args, **kwargs)

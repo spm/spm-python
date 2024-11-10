@@ -15,9 +15,9 @@ def spm_mci_init_flow(*args, **kwargs):
         x_flow    flow params (includes out params)  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/mci/inference/spm_mci_init_flow.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_mci_init_flow", *args, **kwargs)

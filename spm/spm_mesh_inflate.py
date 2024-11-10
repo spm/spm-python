@@ -12,9 +12,9 @@ def spm_mesh_inflate(*args, **kwargs):
         S        - update display every S time steps [default: 0 (never)]  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_mesh_inflate.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_mesh_inflate", *args, **kwargs)

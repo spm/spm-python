@@ -47,9 +47,9 @@ def ft_virtualchannel(*args, **kwargs):
         See also FT_SOURCEANALYSIS, FT_DATATYPE_PARCELLATION, FT_DATATYPE_SEGMENTATION,  
         FT_SOURCEPARCELLATE, FT_COMPONENTANALYSIS  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/ft_virtualchannel.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("ft_virtualchannel", *args, **kwargs)

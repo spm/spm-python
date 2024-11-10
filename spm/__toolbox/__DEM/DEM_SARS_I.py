@@ -19,9 +19,9 @@ def DEM_SARS_I(*args, **kwargs):
        __________________________________________________________________________  
         Copyright (C) 2020 Wellcome Centre for Human Neuroimaging  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DEM/DEM_SARS_I.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("DEM_COVID_I", *args, **kwargs, nargout=0)

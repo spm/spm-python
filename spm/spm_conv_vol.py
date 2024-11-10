@@ -33,9 +33,9 @@ def spm_conv_vol(*args, **kwargs):
         See also spm_conv.m and spm_smooth.m spm_write_plane.m  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_conv_vol.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_conv_vol", *args, **kwargs)

@@ -17,9 +17,9 @@ def spm_fp_fmin(*args, **kwargs):
         the free parameters of the flow (M(1),f).  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_fp_fmin.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_fp_fmin", *args, **kwargs)

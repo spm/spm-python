@@ -27,9 +27,9 @@ def spm_voice_P300(*args, **kwargs):
         below.  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DEM/spm_voice_P300.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_voice_P300", *args, **kwargs, nargout=0)

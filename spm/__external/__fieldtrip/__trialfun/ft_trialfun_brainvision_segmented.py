@@ -26,9 +26,9 @@ def ft_trialfun_brainvision_segmented(*args, **kwargs):
          
         See also FT_DEFINETRIAL, FT_PREPROCESSING  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/trialfun/ft_trialfun_brainvision_segmented.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("ft_trialfun_brainvision_segmented", *args, **kwargs)

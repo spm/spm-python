@@ -70,9 +70,9 @@ def ft_analysispipeline(*args, **kwargs):
         See also FT_PREPROCESSING, FT_TIMELOCKANALYSIS, FT_FREQANALYSIS, FT_SOURCEANALYSIS,  
         FT_CONNECTIVITYANALYSIS, FT_NETWORKANALYSIS  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/ft_analysispipeline.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("ft_analysispipeline", *args, **kwargs)

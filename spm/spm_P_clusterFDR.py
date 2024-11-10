@@ -18,9 +18,9 @@ def spm_P_clusterFDR(*args, **kwargs):
         ui       - feature-inducing threshold  
         Ps       - Vector of sorted (ascending) p-values  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_P_clusterFDR.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_P_clusterFDR", *args, **kwargs)

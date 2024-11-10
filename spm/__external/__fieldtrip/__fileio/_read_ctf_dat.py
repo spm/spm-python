@@ -13,9 +13,9 @@ def _read_ctf_dat(*args, **kwargs):
           meg.trigger     1xNtime with trigger values  
           meg.label       1xNchans cell-array with channel labels (string)  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/read_ctf_dat.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("read_ctf_dat", *args, **kwargs)

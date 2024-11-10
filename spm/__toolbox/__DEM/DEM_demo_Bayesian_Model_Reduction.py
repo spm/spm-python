@@ -41,9 +41,9 @@ def DEM_demo_Bayesian_Model_Reduction(*args, **kwargs):
         generally perfect.  This scheme also illustrates inference over a   
         partition of model space (or families of models).  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DEM/DEM_demo_Bayesian_Model_Reduction.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("DEM_demo_Bayesian_Model_Reduction", *args, **kwargs)

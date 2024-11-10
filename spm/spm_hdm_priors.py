@@ -26,9 +26,9 @@ def spm_hdm_priors(*args, **kwargs):
          
        ___________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_hdm_priors.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_hdm_priors", *args, **kwargs)

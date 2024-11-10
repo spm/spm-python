@@ -15,9 +15,9 @@ def spm_vec(*args, **kwargs):
         spm_vec({eye(2) 3}) = [1 0 0 1 3]'  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_vec.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_vec", *args, **kwargs)

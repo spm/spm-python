@@ -36,9 +36,9 @@ def _homogenous2traditional(*args, **kwargs):
          
         See also TRANSLATE, ROTATE, SCALE, HOMOGENOUS2QUATERNION, QUATERNION  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/homogenous2traditional.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("homogenous2traditional", *args, **kwargs)

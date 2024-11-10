@@ -14,9 +14,9 @@ def spm_check_orientations(*args, **kwargs):
         When used without LHS, this function throws an error accordingly.  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_check_orientations.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_check_orientations", *args, **kwargs)

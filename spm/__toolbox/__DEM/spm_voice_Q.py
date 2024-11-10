@@ -21,9 +21,9 @@ def spm_voice_Q(*args, **kwargs):
         using a pair of discrete cosine transforms with logarithmic scaling.  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DEM/spm_voice_Q.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_voice_Q", *args, **kwargs)

@@ -11,9 +11,9 @@ def spm_vb_get_R(*args, **kwargs):
         R      - posterior correlation matrix of regression coefficients  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_vb_get_R.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_vb_get_R", *args, **kwargs)

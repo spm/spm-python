@@ -24,9 +24,9 @@ def _align_ijk2xyz(*args, **kwargs):
          
         See also ALIGN_XYZ2IJK, VOLUMEPERMUTE, VOLUMEFLIP  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/align_ijk2xyz.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("align_ijk2xyz", *args, **kwargs)

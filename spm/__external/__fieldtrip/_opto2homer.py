@@ -25,9 +25,9 @@ def _opto2homer(*args, **kwargs):
          
         See also HOMER2OPTO, FT_DATATYPE_SENS  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/opto2homer.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("opto2homer", *args, **kwargs)

@@ -14,9 +14,9 @@ def _mergetable(*args, **kwargs):
          
         See also MERGESTRUCT, JOIN, INNERJOIN, OUTERJOIN  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/mergetable.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("mergetable", *args, **kwargs)

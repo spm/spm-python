@@ -19,9 +19,9 @@ def _randomseed(*args, **kwargs):
          
         The output can be used as input re-create the same random number sequence  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/utilities/private/randomseed.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("randomseed", *args, **kwargs)

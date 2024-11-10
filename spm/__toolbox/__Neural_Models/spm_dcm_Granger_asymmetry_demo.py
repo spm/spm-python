@@ -27,9 +27,9 @@ def spm_dcm_Granger_asymmetry_demo(*args, **kwargs):
          spm_mar_spectral.m  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/Neural_Models/spm_dcm_Granger_asymmetry_demo.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_dcm_Granger_asymmetry_demo", *args, **kwargs, nargout=0)

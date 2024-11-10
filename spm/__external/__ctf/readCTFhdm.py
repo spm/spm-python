@@ -11,9 +11,9 @@ def readCTFhdm(*args, **kwargs):
          Head Model File format is a "Config Reader" file.  It is defined in document   
          "CTF MEG FIle Formats', PN900-0088.  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/ctf/readCTFhdm.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("readCTFhdm", *args, **kwargs)

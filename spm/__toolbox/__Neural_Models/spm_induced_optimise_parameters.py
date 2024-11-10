@@ -12,9 +12,9 @@ def spm_induced_optimise_parameters(*args, **kwargs):
         small number of complex values (roots).  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/Neural_Models/spm_induced_optimise_parameters.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_induced_optimise_parameters", *args, **kwargs)

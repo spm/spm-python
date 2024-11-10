@@ -18,9 +18,9 @@ def fiff_read_raw_segment(*args, **kwargs):
         data   - returns the data matrix (channels x samples)  
         times  - returns the time values corresponding to the samples (optional)  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/mne/fiff_read_raw_segment.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("fiff_read_raw_segment", *args, **kwargs)

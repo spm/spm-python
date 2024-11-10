@@ -9,9 +9,9 @@ def spm_mesh_mass_matrix(*args, **kwargs):
         A        - Mass matrix  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_mesh_mass_matrix.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_mesh_mass_matrix", *args, **kwargs)

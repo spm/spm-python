@@ -21,9 +21,9 @@ def _read_egis_header(*args, **kwargs):
          
         Modified from EGI's EGI Toolbox with permission 2007-06-28 Joseph Dien  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/read_egis_header.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("read_egis_header", *args, **kwargs)

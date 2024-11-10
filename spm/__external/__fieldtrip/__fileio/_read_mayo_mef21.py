@@ -37,9 +37,9 @@ def _read_mayo_mef21(*args, **kwargs):
          
         See also ft_filetype, ft_read_header, ft_read_event, ft_read_data.  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/read_mayo_mef21.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("read_mayo_mef21", *args, **kwargs)

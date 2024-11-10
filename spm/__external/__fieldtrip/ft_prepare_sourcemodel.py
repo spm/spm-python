@@ -114,9 +114,9 @@ def ft_prepare_sourcemodel(*args, **kwargs):
         See also FT_PREPARE_LEADFIELD, FT_PREPARE_HEADMODEL, FT_SOURCEANALYSIS,  
         FT_DIPOLEFITTING, FT_MEGREALIGN  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/ft_prepare_sourcemodel.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("ft_prepare_sourcemodel", *args, **kwargs)

@@ -14,9 +14,9 @@ def spm_check_registration(*args, **kwargs):
         direction (the same as you are reading this).  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_check_registration.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_check_registration", *args, **kwargs, nargout=0)

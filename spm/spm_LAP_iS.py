@@ -13,9 +13,9 @@ def spm_LAP_iS(*args, **kwargs):
         iS   - precision matrix for generalised states (causal and then hidden)  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_LAP_iS.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_LAP_iS", *args, **kwargs)

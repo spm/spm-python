@@ -27,9 +27,9 @@ def _filetype_check_uri(*args, **kwargs):
         http://www.iana.org/assignments/uri-schemes.html and  
         http://en.wikipedia.org/wiki/URI_scheme#Generic_syntax.  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/filetype_check_uri.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("filetype_check_uri", *args, **kwargs)

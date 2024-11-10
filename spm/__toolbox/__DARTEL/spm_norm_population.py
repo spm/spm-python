@@ -8,9 +8,9 @@ def spm_norm_population(*args, **kwargs):
         job.template - name of population average template  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DARTEL/spm_norm_population.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_norm_population", *args, **kwargs)

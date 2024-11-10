@@ -75,9 +75,9 @@ def ft_redefinetrial(*args, **kwargs):
          
         See also FT_DEFINETRIAL, FT_RECODEEVENT, FT_PREPROCESSING  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/ft_redefinetrial.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("ft_redefinetrial", *args, **kwargs)

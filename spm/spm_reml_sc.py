@@ -46,9 +46,9 @@ def spm_reml_sc(*args, **kwargs):
          
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_reml_sc.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_reml_sc", *args, **kwargs)

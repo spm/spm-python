@@ -28,9 +28,9 @@ def spm_mci_sens_sun(*args, **kwargs):
         Computation for Dynamical Models. Neuroimage,98, 521-527.   
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/mci/gradients/spm_mci_sens_sun.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_mci_sens_sun", *args, **kwargs)

@@ -27,9 +27,9 @@ def DEM_MDP_decision(*args, **kwargs):
         see also: DEM_demo_MDP_rule.m and spm_MPD_VB_X.m  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DEM/DEM_MDP_decision.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("DEM_MDP_decision", *args, **kwargs)

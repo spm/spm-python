@@ -14,9 +14,9 @@ def _determine_griddim(*args, **kwargs):
             
         See also FT_ELECTRODEREALIGN  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/determine_griddim.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("determine_griddim", *args, **kwargs)

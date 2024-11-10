@@ -23,9 +23,9 @@ def _read_sbin_header(*args, **kwargs):
          
         Modified from EGI's readEGLY.m with permission 2008-03-31 Joseph Dien  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/read_sbin_header.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("read_sbin_header", *args, **kwargs)

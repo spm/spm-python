@@ -34,9 +34,9 @@ def _alpha_taper(*args, **kwargs):
         which is simply  
           W(F,t) = taper(F,t) * exp(i*2*pi*F*t)  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/specest/private/alpha_taper.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("alpha_taper", *args, **kwargs)

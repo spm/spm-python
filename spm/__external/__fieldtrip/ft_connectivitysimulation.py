@@ -100,9 +100,9 @@ def ft_connectivitysimulation(*args, **kwargs):
         See also FT_FREQSIMULATION, FT_DIPOLESIMULATION, FT_SPIKESIMULATION,  
         FT_CONNECTIVITYANALYSIS  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/ft_connectivitysimulation.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("ft_connectivitysimulation", *args, **kwargs)

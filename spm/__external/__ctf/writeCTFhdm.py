@@ -13,9 +13,9 @@ def writeCTFhdm(*args, **kwargs):
          Creates a CTF-compatible head model file from structure hdm  
          Structure hdm is in the format produced by readCTFhdm.  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/ctf/writeCTFhdm.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("writeCTFhdm", *args, **kwargs, nargout=0)

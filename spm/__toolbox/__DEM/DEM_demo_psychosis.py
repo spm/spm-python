@@ -21,9 +21,9 @@ def DEM_demo_psychosis(*args, **kwargs):
         parameters of the likelihood mapping to symptom scores – and the initial  
         states.  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DEM/DEM_demo_psychosis.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("DEM_demo_psychosis", *args, **kwargs, nargout=0)

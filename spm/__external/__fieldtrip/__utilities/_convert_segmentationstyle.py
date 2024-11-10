@@ -9,9 +9,9 @@ def _convert_segmentationstyle(*args, **kwargs):
          
         See also FIXSEGMENTATION, DETERMINE_SEGMENTATIONSTYLE  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/utilities/private/convert_segmentationstyle.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("convert_segmentationstyle", *args, **kwargs)

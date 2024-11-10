@@ -68,9 +68,9 @@ def ft_datatype_headmodel(*args, **kwargs):
         FT_DATATYPE_FREQ, FT_DATATYPE_MVAR, FT_DATATYPE_RAW, FT_DATATYPE_SOURCE,   
         FT_DATATYPE_SPIKE, FT_DATATYPE_TIMELOCK, FT_DATATYPE_VOLUME  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/utilities/ft_datatype_headmodel.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("ft_datatype_headmodel", *args, **kwargs)

@@ -13,9 +13,9 @@ def _coeffs2iis(*args, **kwargs):
           A = 2x2xncmbxorder, matrix with MVAR-coefficients  
           C = 2x2xncmb      , covariance matrices of the noise  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/connectivity/private/coeffs2iis.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("coeffs2iis", *args, **kwargs)

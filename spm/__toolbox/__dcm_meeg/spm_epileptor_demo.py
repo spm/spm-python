@@ -15,9 +15,9 @@ def spm_epileptor_demo(*args, **kwargs):
         elicit fast gamma activity.  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/dcm_meeg/spm_epileptor_demo.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_epileptor_demo", *args, **kwargs, nargout=0)

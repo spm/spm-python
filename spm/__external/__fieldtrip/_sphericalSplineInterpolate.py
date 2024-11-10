@@ -21,9 +21,9 @@ def _sphericalSplineInterpolate(*args, **kwargs):
          
         Based upon the paper: Perrin89  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/sphericalSplineInterpolate.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("sphericalSplineInterpolate", *args, **kwargs)

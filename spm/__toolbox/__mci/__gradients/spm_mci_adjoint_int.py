@@ -16,9 +16,9 @@ def spm_mci_adjoint_int(*args, **kwargs):
         lambda    adjoint parameters, at times M.t  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/mci/gradients/spm_mci_adjoint_int.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_mci_adjoint_int", *args, **kwargs)

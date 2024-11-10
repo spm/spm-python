@@ -17,9 +17,9 @@ def spm_mean(*args, **kwargs):
         This is not a "softmean" - zero voxels are treated as zero.  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/compat/spm_mean.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_mean", *args, **kwargs, nargout=0)

@@ -8,9 +8,9 @@ def bf_wizard_headmodel(*args, **kwargs):
         performs coregistration between the data and the MRI  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DAiSS/bf_wizard_headmodel.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("bf_wizard_headmodel", *args, **kwargs)

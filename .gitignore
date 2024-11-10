@@ -34,3 +34,4 @@
 .mpython/build
 .mpython/external
 **/*.asv
+/examples/data/**

@@ -18,9 +18,9 @@ def ft_volumebiascorrect(*args, **kwargs):
          
         See also FT_VOLUMEREALIGN FT_VOLUMESEGMENT FT_VOLUMENORMALISE  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/ft_volumebiascorrect.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("ft_volumebiascorrect", *args, **kwargs)

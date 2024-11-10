@@ -61,9 +61,9 @@ def _avw_img_read(*args, **kwargs):
         See also: avw_hdr_read (called by this function),  
                   avw_view, avw_write, avw_img_write, avw_flip  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/avw_img_read.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("avw_img_read", *args, **kwargs)

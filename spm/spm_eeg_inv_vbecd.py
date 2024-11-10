@@ -33,9 +33,9 @@ def spm_eeg_inv_vbecd(*args, **kwargs):
         a non-linear model - see spm_nlsi_gn)  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_eeg_inv_vbecd.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_eeg_inv_vbecd", *args, **kwargs)

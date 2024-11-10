@@ -9,9 +9,9 @@ def spm_cond_units(*args, **kwargs):
           n - default 3  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_cond_units.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_cond_units", *args, **kwargs)

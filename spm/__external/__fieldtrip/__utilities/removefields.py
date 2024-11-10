@@ -10,9 +10,9 @@ def removefields(*args, **kwargs):
          
         See also KEEPFIELDS, COPYFIELDS  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/utilities/removefields.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("removefields", *args, **kwargs)

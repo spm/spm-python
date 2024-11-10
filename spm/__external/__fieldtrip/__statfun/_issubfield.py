@@ -17,9 +17,9 @@ def _issubfield(*args, **kwargs):
          
         See also ISFIELD, GETSUBFIELD, SETSUBFIELD  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/statfun/private/issubfield.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("issubfield", *args, **kwargs)

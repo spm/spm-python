@@ -7,9 +7,9 @@ def _smudge(*args, **kwargs):
         given a triangulation tri. The algorithm is according to what is in  
         MNE-Suite, documented in chapter 8.3  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/smudge.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("smudge", *args, **kwargs)
