@@ -15,9 +15,9 @@ def spm_mix_demo1d(*args, **kwargs):
         mix       - mix structure for simulated mixtures if scalar data given  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/mixture/spm_mix_demo1d.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_mix_demo1d", *args, **kwargs)

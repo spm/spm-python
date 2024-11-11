@@ -13,9 +13,9 @@ def spm_match_str(*args, **kwargs):
         cells, the matching is done for each row.  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_match_str.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_match_str", *args, **kwargs)

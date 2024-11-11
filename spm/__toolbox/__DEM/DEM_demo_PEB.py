@@ -9,9 +9,9 @@ def DEM_demo_PEB(*args, **kwargs):
         empirical shrinkage priors on the first-level parameters (c.f.,  
         DEM_demo_GLM, with no empirical priors)  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DEM/DEM_demo_PEB.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("DEM_demo_PEB", *args, **kwargs, nargout=0)

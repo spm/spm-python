@@ -19,9 +19,9 @@ def fieldtrip2ctf(*args, **kwargs):
          
         See also FT_DATATYPE, FT_APPLY_MONTAGE, FT_VOLUMEWRITE, FT_SOURCEWRITE, FT_WRITE_DATA  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fieldtrip2ctf.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("fieldtrip2ctf", *args, **kwargs, nargout=0)

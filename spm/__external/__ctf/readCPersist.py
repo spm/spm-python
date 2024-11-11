@@ -7,9 +7,9 @@ def readCPersist(*args, **kwargs):
          taglength is encountered.  Recently discovered .acq files with the string 'ssss' added  
          at the end of the file after the final 'EndofParameters' string.  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/ctf/readCPersist.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("readCPersist", *args, **kwargs)

@@ -45,9 +45,9 @@ def spm_mfm_demo(*args, **kwargs):
         dynamic causal model of observed electromagnetic signals in future work.  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/Neural_Models/spm_mfm_demo.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_mfm_demo", *args, **kwargs, nargout=0)

@@ -203,9 +203,9 @@ def ft_sourceplot(*args, **kwargs):
         See also FT_SOURCEMOVIE, FT_SOURCEANALYSIS, FT_SOURCEGRANDAVERAGE, FT_SOURCESTATISTICS,  
         FT_VOLUMELOOKUP, FT_READ_ATLAS, FT_READ_MRI  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/ft_sourceplot.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("ft_sourceplot", *args, **kwargs)

@@ -26,9 +26,9 @@ def ft_removetemplateartifact(*args, **kwargs):
          
         See also FT_ARTIFACT_ECG, FT_PREPROCESSING, FT_TIMELOCKANALYSIS, FT_REJECTCOMPONENT  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/ft_removetemplateartifact.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("ft_removetemplateartifact", *args, **kwargs)

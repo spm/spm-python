@@ -61,9 +61,9 @@ def _ft_scalingfactor(*args, **kwargs):
          
         See also http://en.wikipedia.org/wiki/International_System_of_Units  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/forward/private/ft_scalingfactor.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("ft_scalingfactor", *args, **kwargs)

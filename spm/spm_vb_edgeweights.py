@@ -12,9 +12,9 @@ def spm_vb_edgeweights(*args, **kwargs):
                  of the distance in physical space and that between the image  
                  at neighbouring nodes  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_vb_edgeweights.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_vb_edgeweights", *args, **kwargs)

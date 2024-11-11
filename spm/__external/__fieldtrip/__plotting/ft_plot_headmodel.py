@@ -34,9 +34,9 @@ def ft_plot_headmodel(*args, **kwargs):
         See also FT_PREPARE_HEADMODEL, FT_DATATAYPE_HEADMODEL, FT_PLOT_MESH,  
         FT_PLOT_HEADSHAPE, FT_PLOT_SENS, FT_PLOT_DIPOLE, FT_PLOT_ORTHO, FT_PLOT_TOPO3D  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/plotting/ft_plot_headmodel.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("ft_plot_headmodel", *args, **kwargs, nargout=0)

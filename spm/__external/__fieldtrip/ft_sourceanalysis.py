@@ -128,9 +128,9 @@ def ft_sourceanalysis(*args, **kwargs):
         See also FT_SOURCEDESCRIPTIVES, FT_SOURCESTATISTICS, FT_PREPARE_LEADFIELD,  
         FT_PREPARE_HEADMODEL, FT_PREPARE_SOURCEMODEL  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/ft_sourceanalysis.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("ft_sourceanalysis", *args, **kwargs)

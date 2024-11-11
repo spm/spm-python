@@ -75,9 +75,9 @@ def ft_read_atlas(*args, **kwargs):
          
         See also FT_READ_MRI, FT_READ_HEADSHAPE, FT_PREPARE_SOURCEMODEL, FT_SOURCEPARCELLATE, FT_PLOT_MESH  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/ft_read_atlas.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("ft_read_atlas", *args, **kwargs)

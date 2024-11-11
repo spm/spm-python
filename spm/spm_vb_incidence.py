@@ -15,9 +15,9 @@ def spm_vb_incidence(*args, **kwargs):
         connecting nodes i and j, and k is in node set  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_vb_incidence.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_vb_incidence", *args, **kwargs)

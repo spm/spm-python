@@ -17,9 +17,9 @@ class cfg_intree(MatlabClassWrapper):
                  doc cfg_intree  
             
           
-        
+
         [Matlab code]( https://github.com/spm/spm/blob/main/matlabbatch/@cfg_intree/cfg_intree.m )
-        
+
         Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         if _objdict is None:
@@ -38,9 +38,9 @@ class cfg_intree(MatlabClassWrapper):
            _______________________________________________________________________  
             Copyright (C) 2007 Freiburg Brain Imaging  
           
-        
+
         [Matlab code]( https://github.com/spm/spm/blob/main/matlabbatch/@cfg_intree/disp.m )
-        
+
         Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("disp", self._as_matlab_object(), *args, **kwargs, nargout=0)
@@ -56,9 +56,9 @@ class cfg_intree(MatlabClassWrapper):
            _______________________________________________________________________  
             Copyright (C) 2007 Freiburg Brain Imaging  
           
-        
+
         [Matlab code]( https://github.com/spm/spm/blob/main/matlabbatch/@cfg_intree/display.m )
-        
+
         Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("display", self._as_matlab_object(), *args, **kwargs, nargout=0)

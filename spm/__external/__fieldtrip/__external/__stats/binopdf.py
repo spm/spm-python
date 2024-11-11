@@ -10,9 +10,9 @@ def binopdf(*args, **kwargs):
          
         See also BINOCDF and STATS (Matlab statistics toolbox)  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/external/stats/binopdf.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("binopdf", *args, **kwargs)

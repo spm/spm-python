@@ -15,9 +15,9 @@ def spm_granger(*args, **kwargs):
         Psig           [d x d] matrix of corresponding significance values  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/spectral/spm_granger.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_granger", *args, **kwargs)

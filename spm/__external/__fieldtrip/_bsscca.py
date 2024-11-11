@@ -14,9 +14,9 @@ def _bsscca(*args, **kwargs):
          
         [1] DeClercq et al 2006, IEEE Biomed Eng 2583.  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/bsscca.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("bsscca", *args, **kwargs)

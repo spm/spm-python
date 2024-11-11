@@ -32,9 +32,9 @@ def _legs(*args, **kwargs):
                 gradbasis: Nx((n+1)^2-1) matrix containing in the j.th row the scalar   
                             product of the gradient of the former with the j.th row of dir  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/forward/private/legs.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("legs", *args, **kwargs)

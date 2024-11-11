@@ -29,9 +29,9 @@ def _ft_fetch_sens(*args, **kwargs):
          
         See also FT_READ_SENS, FT_DATATYPE_SENS, FT_FETCH_DATA, FT_PREPARE_LAYOUT  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/ft_fetch_sens.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("ft_fetch_sens", *args, **kwargs)

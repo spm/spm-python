@@ -12,9 +12,9 @@ def _select2d(*args, **kwargs):
         It returns a 2-element vector x and a 2-element vector y   
         with the corners of the selected region.  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/select2d.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("select2d", *args, **kwargs)

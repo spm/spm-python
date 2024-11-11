@@ -29,9 +29,9 @@ def ft_audiovideobrowser(*args, **kwargs):
          
         See also FT_DATABROWSER  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/ft_audiovideobrowser.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("ft_audiovideobrowser", *args, **kwargs, nargout=0)

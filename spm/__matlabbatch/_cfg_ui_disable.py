@@ -19,9 +19,9 @@ def _cfg_ui_disable(*args, **kwargs):
        _______________________________________________________________________  
         Copyright (C) 2007 Freiburg Brain Imaging  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/matlabbatch/private/cfg_ui_disable.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("cfg_ui_disable", *args, **kwargs)

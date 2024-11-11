@@ -12,9 +12,9 @@ def spm_perm_mtx(*args, **kwargs):
            K   - (length(n)! x n) permutation matrix  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_perm_mtx.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_perm_mtx", *args, **kwargs)

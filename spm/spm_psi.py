@@ -13,9 +13,9 @@ def spm_psi(*args, **kwargs):
         ~ Beta(a(i),a0 - a(i)). See also: psi.m  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_psi.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_psi", *args, **kwargs)

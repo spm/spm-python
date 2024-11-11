@@ -25,9 +25,9 @@ def DEM_morphogenesis(*args, **kwargs):
         processing.  
         _________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DEM/DEM_morphogenesis.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("DEM_morphogenesis", *args, **kwargs)

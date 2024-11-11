@@ -8,9 +8,9 @@ def _read_neurosim_signals(*args, **kwargs):
          
         See also FT_READ_HEADER, FT_READ_DATA  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/read_neurosim_signals.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("read_neurosim_signals", *args, **kwargs)

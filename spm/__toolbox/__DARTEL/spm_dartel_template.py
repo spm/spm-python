@@ -9,9 +9,9 @@ def spm_dartel_template(*args, **kwargs):
         The outputs are flow fields, and a series of Template images.  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DARTEL/spm_dartel_template.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_dartel_template", *args, **kwargs)

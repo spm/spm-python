@@ -11,9 +11,9 @@ def _sn2individual(*args, **kwargs):
         modified from code originally written by John Ashburner:  
         http://www.sph.umich.edu/~nichols/JG2/get_orig_coord2.m  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/utilities/private/sn2individual.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("sn2individual", *args, **kwargs)

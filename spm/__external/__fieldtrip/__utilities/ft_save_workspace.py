@@ -21,9 +21,9 @@ def ft_save_workspace(*args, **kwargs):
          
         See also SAVE, LOAD, SAVEFIG, CLEAR, KEEP  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/utilities/ft_save_workspace.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("ft_save_workspace", *args, **kwargs, nargout=0)

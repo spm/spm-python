@@ -23,9 +23,9 @@ def spm_mci_stat(*args, **kwargs):
         the calculation of posterior moments. Bayesian Statistics 4, OUP.  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/mci/inference/spm_mci_stat.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_mci_stat", *args, **kwargs)

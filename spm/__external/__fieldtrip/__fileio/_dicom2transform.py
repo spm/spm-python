@@ -29,9 +29,9 @@ def _dicom2transform(*args, **kwargs):
          
         See also DCMINFO, LOAD_DICOM_SERIES  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/dicom2transform.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("dicom2transform", *args, **kwargs)

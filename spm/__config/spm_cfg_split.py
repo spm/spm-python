@@ -6,9 +6,9 @@ def spm_cfg_split(*args, **kwargs):
       SPM Configuration file for 4D to 3D volumes conversion  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/config/spm_cfg_split.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_cfg_split", *args, **kwargs)

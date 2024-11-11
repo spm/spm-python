@@ -27,9 +27,9 @@ def spm_fp(*args, **kwargs):
         L    - output matrix                 <y> = L*q;  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_fp.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_fp", *args, **kwargs)

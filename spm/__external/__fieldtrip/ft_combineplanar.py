@@ -30,9 +30,9 @@ def ft_combineplanar(*args, **kwargs):
          
         See also FT_MEGPLANAR  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/ft_combineplanar.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("ft_combineplanar", *args, **kwargs)

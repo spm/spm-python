@@ -10,9 +10,9 @@ def spm_ness_N2Sp(*args, **kwargs):
         C  - (Gaussian) covariance  
         K  - Order of polynomial expansion (K = 3 corresponds to quadratic)  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_ness_N2Sp.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_ness_N2Sp", *args, **kwargs)

@@ -17,9 +17,9 @@ def DEM_self_entropy(*args, **kwargs):
         under a fixed density of hidden or external states.  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DEM/DEM_self_entropy.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("DEM_self_entropy", *args, **kwargs, nargout=0)

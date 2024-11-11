@@ -59,9 +59,9 @@ def _ft_preproc_bandpassfilter(*args, **kwargs):
          
         See also PREPROC  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/specest/private/ft_preproc_bandpassfilter.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("ft_preproc_bandpassfilter", *args, **kwargs)

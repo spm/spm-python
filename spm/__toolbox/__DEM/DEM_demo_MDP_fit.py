@@ -35,9 +35,9 @@ def DEM_demo_MDP_fit(*args, **kwargs):
         see also: spm_MPD_VB.m, spm_dcm_mdp.m and spm_nlsi_Newton.m  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DEM/DEM_demo_MDP_fit.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("DEM_demo_MDP_fit", *args, **kwargs)

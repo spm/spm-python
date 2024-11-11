@@ -19,9 +19,9 @@ def _mesh_spherify(*args, **kwargs):
           shift  = 'no', mean', 'range'  
           smooth = number (default = 20)  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/mesh_spherify.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("mesh_spherify", *args, **kwargs)

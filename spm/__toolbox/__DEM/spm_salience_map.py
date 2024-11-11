@@ -13,9 +13,9 @@ def spm_salience_map(*args, **kwargs):
         n  - dimension of map (S)  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DEM/spm_salience_map.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_salience_map", *args, **kwargs)

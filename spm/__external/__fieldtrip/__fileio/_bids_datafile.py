@@ -10,9 +10,9 @@ def _bids_datafile(*args, **kwargs):
          
         See also BIDS_SIDECAR, BIDS_TSV, EVENTS_TSV  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/bids_datafile.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("bids_datafile", *args, **kwargs)

@@ -19,9 +19,9 @@ def spm_gen_par(*args, **kwargs):
         of fMRI and MEG. arXiv preprint arXiv:1903.07478.  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/NVC/spm_gen_par.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_gen_par", *args, **kwargs)

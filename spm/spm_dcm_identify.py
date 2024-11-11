@@ -10,9 +10,9 @@ def spm_dcm_identify(*args, **kwargs):
         model - a string identifying the modality  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_dcm_identify.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_dcm_identify", *args, **kwargs)

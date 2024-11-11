@@ -17,9 +17,9 @@ def spm_dftmtx(*args, **kwargs):
                 Anil K. Jain 1989.  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_dftmtx.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_dftmtx", *args, **kwargs)

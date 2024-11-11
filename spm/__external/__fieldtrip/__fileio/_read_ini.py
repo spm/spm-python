@@ -25,9 +25,9 @@ def _read_ini(*args, **kwargs):
         The token argument is optional to specifiy a character that separates  
         the values from anything not wanted.  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/read_ini.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("read_ini", *args, **kwargs)

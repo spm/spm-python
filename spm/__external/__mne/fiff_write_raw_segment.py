@@ -21,9 +21,9 @@ def fiff_write_raw_segment(*args, **kwargs):
                                (required by maxfilter)  
         buffer_size          - float (size of data buffers)  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/mne/fiff_write_raw_segment.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("fiff_write_raw_segment", *args, **kwargs, nargout=0)

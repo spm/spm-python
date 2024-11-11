@@ -7,9 +7,9 @@ def _selparam(*args, **kwargs):
         data, which have a dimensionality consistent with the dimord field in the data. Selparam  
         is a helper function to selectdata  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/utilities/private/selparam.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("selparam", *args, **kwargs)

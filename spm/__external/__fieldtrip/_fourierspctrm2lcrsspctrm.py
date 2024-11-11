@@ -29,9 +29,9 @@ def _fourierspctrm2lcrsspctrm(*args, **kwargs):
         You may also want to acknowledge the fact that J.M. Schoffelen has  
         written the actual implementation.  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/fourierspctrm2lcrsspctrm.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("fourierspctrm2lcrsspctrm", *args, **kwargs)

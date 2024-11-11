@@ -11,9 +11,9 @@ def _loadama(*args, **kwargs):
          
         See also LOADTRI, LOADMAT  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/forward/private/loadama.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("loadama", *args, **kwargs)

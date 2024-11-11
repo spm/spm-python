@@ -15,9 +15,9 @@ def spm_softmax(*args, **kwargs):
         function over columns - so that spm_softmax([x1,x2,..]) = [1,1,...]  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_softmax.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_softmax", *args, **kwargs)

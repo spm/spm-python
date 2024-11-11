@@ -11,9 +11,9 @@ def fiff_write_coord_trans(*args, **kwargs):
             fid           An open fif file descriptor  
             trans         The coordinate transfomation structure  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/mne/fiff_write_coord_trans.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("fiff_write_coord_trans", *args, **kwargs, nargout=0)

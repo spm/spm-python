@@ -18,9 +18,9 @@ def _solid_angle(*args, **kwargs):
         pnt and tri contain a description of a triangular mesh (this will  
         compute the solid angle for each triangle)  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/inverse/private/solid_angle.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("solid_angle", *args, **kwargs)

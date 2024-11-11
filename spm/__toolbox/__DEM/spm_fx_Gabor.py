@@ -16,9 +16,9 @@ def spm_fx_Gabor(*args, **kwargs):
         f      - dx/dt  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DEM/spm_fx_Gabor.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_fx_Gabor", *args, **kwargs)

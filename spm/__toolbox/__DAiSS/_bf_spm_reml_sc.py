@@ -48,9 +48,9 @@ def _bf_spm_reml_sc(*args, **kwargs):
        __________________________________________________________________________  
         Copyright (C) 2007-2020 Wellcome Centre for Human Neuroimaging  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DAiSS/private/bf_spm_reml_sc.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_reml_sc", *args, **kwargs)

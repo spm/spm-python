@@ -38,9 +38,9 @@ def ft_rejectcomponent(*args, **kwargs):
          
         See also FT_COMPONENTANALYSIS, FT_PREPROCESSING  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/ft_rejectcomponent.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("ft_rejectcomponent", *args, **kwargs)

@@ -22,9 +22,9 @@ def spm_shp_transform_mesh(*args, **kwargs):
         * The affine transformation matrix (T) should map mm to mm.  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_shp_transform_mesh.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_shp_transform_mesh", *args, **kwargs)

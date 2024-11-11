@@ -118,9 +118,9 @@ def ft_multiplotER(*args, **kwargs):
         See also FT_MULTIPLOTTFR, FT_SINGLEPLOTER, FT_SINGLEPLOTTFR, FT_TOPOPLOTER,  
         FT_TOPOPLOTTFR, FT_PREPARE_LAYOUT  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/ft_multiplotER.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("ft_multiplotER", *args, **kwargs)

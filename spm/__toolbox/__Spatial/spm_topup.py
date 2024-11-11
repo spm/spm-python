@@ -40,9 +40,9 @@ def spm_topup(*args, **kwargs):
         https://doi.org/10.1016/s1053-8119(03)00336-7  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/Spatial/spm_topup.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_topup", *args, **kwargs)

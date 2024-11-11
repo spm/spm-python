@@ -18,9 +18,9 @@ def spm_morlet_conv(*args, **kwargs):
         wavelet transform.  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_morlet_conv.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_morlet_conv", *args, **kwargs)

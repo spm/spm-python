@@ -24,9 +24,9 @@ def spm_MDP_factor_graph(*args, **kwargs):
         likelihoods, forward and backward messages (1, 2 and 3,respectively).  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DEM/spm_MDP_factor_graph.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_MDP_factor_graph", *args, **kwargs, nargout=0)

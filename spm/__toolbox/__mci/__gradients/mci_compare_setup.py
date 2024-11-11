@@ -9,9 +9,9 @@ def mci_compare_setup(*args, **kwargs):
         model     'phase', 'nmm-r2p2'  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/mci/gradients/mci_compare_setup.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("mci_compare_setup", *args, **kwargs)

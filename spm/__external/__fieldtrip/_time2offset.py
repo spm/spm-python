@@ -18,9 +18,9 @@ def _time2offset(*args, **kwargs):
         offset indicates that the first sample is later than the trigger, a  
         negative offset indicates a trial beginning before the trigger.  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/time2offset.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("time2offset", *args, **kwargs)

@@ -96,9 +96,9 @@ def _ft_headcoordinates(*args, **kwargs):
          
         See also FT_ELECTRODEREALIGN, FT_VOLUMEREALIGN, FT_INTERACTIVEREALIGN, FT_AFFINECOORDINATES, COORDSYS2LABEL  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/ft_headcoordinates.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("ft_headcoordinates", *args, **kwargs)

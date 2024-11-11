@@ -28,9 +28,9 @@ def _nearest(*args, **kwargs):
          
         See also FIND  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/preproc/private/nearest.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("nearest", *args, **kwargs)

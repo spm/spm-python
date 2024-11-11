@@ -17,9 +17,9 @@ def spm_eeg_wrap_momfit_vbecd(*args, **kwargs):
         leads are the lead fields of the dipoles fit  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_eeg_wrap_momfit_vbecd.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_eeg_wrap_momfit_vbecd", *args, **kwargs)

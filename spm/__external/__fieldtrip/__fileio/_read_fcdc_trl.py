@@ -25,9 +25,9 @@ def _read_fcdc_trl(*args, **kwargs):
         begin), a trial of 1000ms with a pretrigger interval of 300ms would  
         correspond to "6.700 7.700 -0.300".  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/read_fcdc_trl.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("read_fcdc_trl", *args, **kwargs)

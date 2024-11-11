@@ -45,9 +45,9 @@ def ft_timelockgrandaverage(*args, **kwargs):
          
         See also FT_TIMELOCKANALYSIS, FT_TIMELOCKSTATISTICS, FT_TIMELOCKBASELINE  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/ft_timelockgrandaverage.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("ft_timelockgrandaverage", *args, **kwargs)

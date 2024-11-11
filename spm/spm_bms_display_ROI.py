@@ -12,9 +12,9 @@ def spm_bms_display_ROI(*args, **kwargs):
         method - inference method (FFX or RFX)  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_bms_display_ROI.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_bms_display_ROI", *args, **kwargs, nargout=0)

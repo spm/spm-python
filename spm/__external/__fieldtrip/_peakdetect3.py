@@ -10,9 +10,9 @@ def _peakdetect3(*args, **kwargs):
          
         See also PEAKDETECT, PEAKDETECT2  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/peakdetect3.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("peakdetect3", *args, **kwargs)

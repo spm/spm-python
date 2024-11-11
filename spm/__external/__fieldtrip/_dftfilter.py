@@ -21,9 +21,9 @@ def _dftfilter(*args, **kwargs):
          
         See also NOTCHFILTER,  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/dftfilter.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("dftfilter", *args, **kwargs)

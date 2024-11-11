@@ -19,9 +19,9 @@ def spm_convmtx(*args, **kwargs):
           With the circular option the convolution matrix is reduced to N X N  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_convmtx.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_convmtx", *args, **kwargs)

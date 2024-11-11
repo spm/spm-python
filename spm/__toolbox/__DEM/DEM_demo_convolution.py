@@ -9,9 +9,9 @@ def DEM_demo_convolution(*args, **kwargs):
         causes and hidden states: The notes provide a comparative evaluation with   
         extended Kalman filtering (see script after return).  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DEM/DEM_demo_convolution.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("DEM_demo_convolution", *args, **kwargs, nargout=0)

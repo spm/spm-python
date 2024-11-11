@@ -15,9 +15,9 @@ def spm_lfp_mtf(*args, **kwargs):
         w - frequencies  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/Neural_Models/spm_lfp_mtf.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_lfp_mtf", *args, **kwargs)

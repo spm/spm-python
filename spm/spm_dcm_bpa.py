@@ -45,9 +45,9 @@ def spm_dcm_bpa(*args, **kwargs):
         See also spm_dcm_bma.m, spm_dcm_bmr.m and spm_dcm_peb.m  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_dcm_bpa.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_dcm_bpa", *args, **kwargs)

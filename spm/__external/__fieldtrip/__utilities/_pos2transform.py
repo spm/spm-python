@@ -15,9 +15,9 @@ def _pos2transform(*args, **kwargs):
          
         See also POS2DIM  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/utilities/private/pos2transform.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("pos2transform", *args, **kwargs)

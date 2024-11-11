@@ -67,9 +67,9 @@ def spm_check_version(*args, **kwargs):
         See also VERSION, VER, VERLESSTHAN, ISMATLABRELEASEOLDERTHAN  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_check_version.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_check_version", *args, **kwargs)

@@ -13,9 +13,9 @@ def _read_neuralynx_cds(*args, **kwargs):
         Centre we use it as a directory/file organization in conjunction  
         with Neuralynx, SPIKESPLITTING and SPIKEDOWNSAMPLE.  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/read_neuralynx_cds.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("read_neuralynx_cds", *args, **kwargs)

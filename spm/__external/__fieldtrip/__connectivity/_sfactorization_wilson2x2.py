@@ -24,9 +24,9 @@ def _sfactorization_wilson2x2(*args, **kwargs):
         Written by M. Dhamala & G. Rangarajan, UF, Aug 3-4, 2006.  
         Email addresses: mdhamala@bme.ufl.edu, rangaraj@math.iisc.ernet.in  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/connectivity/private/sfactorization_wilson2x2.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("sfactorization_wilson2x2", *args, **kwargs)

@@ -22,9 +22,9 @@ def _specest_nanfft(*args, **kwargs):
          
         See also SPECEST_MTMFFT, SPECEST_CONVOL, SPECEST_HILBERT, SPECEST_MTMCONVOL, SPECEST_MVAR, SPECEST_WAVELET  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/specest_nanfft.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("specest_nanfft", *args, **kwargs)

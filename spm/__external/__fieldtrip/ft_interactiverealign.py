@@ -43,9 +43,9 @@ def ft_interactiverealign(*args, **kwargs):
         See also FT_VOLUMEREALIGN, FT_ELECTRODEREALIGN, FT_DETERMINE_COORDSYS,  
         FT_READ_SENS, FT_READ_HEADMODEL, FT_READ_HEADSHAPE  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/ft_interactiverealign.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("ft_interactiverealign", *args, **kwargs)

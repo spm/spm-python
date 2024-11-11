@@ -15,9 +15,9 @@ def fil_fit(*args, **kwargs):
         P0        - K x K  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/MB/fil_fit.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("fil_fit", *args, **kwargs)

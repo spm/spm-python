@@ -18,9 +18,9 @@ def spm_z2p(*args, **kwargs):
         P     - p-value  - P(STAT > Z)  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_z2p.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_z2p", *args, **kwargs)

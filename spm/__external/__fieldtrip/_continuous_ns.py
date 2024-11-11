@@ -16,9 +16,9 @@ def _continuous_ns(*args, **kwargs):
          
         See also SINGLETRIAL_NS  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/continuous_ns.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("continuous_ns", *args, **kwargs)

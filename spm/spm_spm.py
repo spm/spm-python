@@ -270,9 +270,9 @@ def spm_spm(*args, **kwargs):
         (1995) NeuroImage 2:173-181.  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_spm.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_spm", *args, **kwargs)

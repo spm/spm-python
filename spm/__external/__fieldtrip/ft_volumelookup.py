@@ -69,9 +69,9 @@ def ft_volumelookup(*args, **kwargs):
          
         See also FT_READ_ATLAS, FT_SOURCEPLOT  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/ft_volumelookup.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("ft_volumelookup", *args, **kwargs)

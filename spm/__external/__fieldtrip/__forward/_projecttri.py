@@ -13,9 +13,9 @@ def _projecttri(*args, **kwargs):
          
         See also SURFACE_NORMALS, PCNORMALS, ELPROJ  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/forward/private/projecttri.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("projecttri", *args, **kwargs)

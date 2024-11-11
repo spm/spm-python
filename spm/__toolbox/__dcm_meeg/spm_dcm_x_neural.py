@@ -14,9 +14,9 @@ def spm_dcm_x_neural(*args, **kwargs):
         h   - state equation dPdt = f(x,u,P,M)  - synaptic plasticity  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/dcm_meeg/spm_dcm_x_neural.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_dcm_x_neural", *args, **kwargs)

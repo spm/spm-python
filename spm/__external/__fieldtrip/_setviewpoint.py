@@ -13,9 +13,9 @@ def _setviewpoint(*args, **kwargs):
          
         See alo GETORTHOVIEWPOS, COORDSYS2LABEL  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/setviewpoint.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("setviewpoint", *args, **kwargs, nargout=0)

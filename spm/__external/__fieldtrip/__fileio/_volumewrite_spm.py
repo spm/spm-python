@@ -9,9 +9,9 @@ def _volumewrite_spm(*args, **kwargs):
         Use as  
           [Va] = volumewrite_spm(filename, data, transform)  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/volumewrite_spm.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("volumewrite_spm", *args, **kwargs)

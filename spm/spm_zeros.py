@@ -8,9 +8,9 @@ def spm_zeros(*args, **kwargs):
         X  - numeric, cell or structure array[s]  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_zeros.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_zeros", *args, **kwargs)

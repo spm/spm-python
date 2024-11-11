@@ -22,9 +22,9 @@ def spm_voice_test(*args, **kwargs):
          them back with and without prosody (or lexical content)  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DEM/spm_voice_test.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_voice_test", *args, **kwargs)

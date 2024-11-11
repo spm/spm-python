@@ -30,9 +30,9 @@ def spm_MDP_DEM(*args, **kwargs):
         over discrete outcomes; thereby constituting a posterior over outcomes.  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DEM/spm_MDP_DEM.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_MDP_DEM", *args, **kwargs)

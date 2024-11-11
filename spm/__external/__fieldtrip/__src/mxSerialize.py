@@ -8,9 +8,9 @@ def mxSerialize(*args, **kwargs):
          
         See also MXDESERIALIZE  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/src/mxSerialize.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("mxSerialize", *args, **kwargs)

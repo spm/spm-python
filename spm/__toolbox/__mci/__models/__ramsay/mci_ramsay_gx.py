@@ -12,9 +12,9 @@ def mci_ramsay_gx(*args, **kwargs):
         L           dy/dx  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/mci/models/ramsay/mci_ramsay_gx.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_ramsay_gx", *args, **kwargs)

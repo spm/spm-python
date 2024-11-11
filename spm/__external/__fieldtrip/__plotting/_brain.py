@@ -18,9 +18,9 @@ def _brain(*args, **kwargs):
         cortex_light = [199 194 169]/255;  
         cortex_dark  = [100 97 85]/255;  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/plotting/private/brain.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("brain", *args, **kwargs)

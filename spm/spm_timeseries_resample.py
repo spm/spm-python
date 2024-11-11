@@ -15,9 +15,9 @@ def spm_timeseries_resample(*args, **kwargs):
         This function operates on rows of a signal matrix.  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_timeseries_resample.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_timeseries_resample", *args, **kwargs)

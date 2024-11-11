@@ -38,9 +38,9 @@ def ft_anonymizedata(*args, **kwargs):
          
         See also FT_DEFACEVOLUME, FT_DEFACEMESH, FT_ANALYSISPIPELINE  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/ft_anonymizedata.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("ft_anonymizedata", *args, **kwargs)

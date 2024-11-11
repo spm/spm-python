@@ -16,9 +16,9 @@ def spm_write_plane(*args, **kwargs):
               modify scalefactors (for example).  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_write_plane.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_write_plane", *args, **kwargs)

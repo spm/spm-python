@@ -13,9 +13,9 @@ def spm_deformations(*args, **kwargs):
         See spm_cfg_deformations.m for more information.  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_deformations.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_deformations", *args, **kwargs)

@@ -18,9 +18,9 @@ def spm_ncTcdf(*args, **kwargs):
         Applied Statistics, Vol. 38, No. 1 (1989), pp. 185-189  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_ncTcdf.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_ncTcdf", *args, **kwargs)

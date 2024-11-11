@@ -28,9 +28,9 @@ def ft_headmodel_concentricspheres(*args, **kwargs):
          
         See also FT_PREPARE_VOL_SENS, FT_COMPUTE_LEADFIELD  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/forward/ft_headmodel_concentricspheres.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("ft_headmodel_concentricspheres", *args, **kwargs)

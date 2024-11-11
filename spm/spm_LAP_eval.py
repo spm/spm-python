@@ -18,9 +18,9 @@ def spm_LAP_eval(*args, **kwargs):
         dp.g.dg - dp.g/dg  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_LAP_eval.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_LAP_eval", *args, **kwargs)

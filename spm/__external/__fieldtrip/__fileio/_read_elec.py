@@ -13,9 +13,9 @@ def _read_elec(*args, **kwargs):
          
         See also READ_TRI, TRANSFER_ELEC  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/read_elec.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("read_elec", *args, **kwargs)

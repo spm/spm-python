@@ -14,9 +14,9 @@ def spm_inv(*args, **kwargs):
         This routine simply adds a small diagonal matrix to A and calls inv.m  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_inv.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_inv", *args, **kwargs)

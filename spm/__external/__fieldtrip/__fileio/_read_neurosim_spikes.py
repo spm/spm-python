@@ -22,9 +22,9 @@ def _read_neurosim_spikes(*args, **kwargs):
           
         See also FT_READ_SPIKE, FT_DATATYPE_SPIKE  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/read_neurosim_spikes.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("read_neurosim_spikes", *args, **kwargs)

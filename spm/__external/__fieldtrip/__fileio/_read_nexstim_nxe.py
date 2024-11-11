@@ -26,9 +26,9 @@ def _read_nexstim_nxe(*args, **kwargs):
            chanindx        index of channels to read (optional, default is all)  
         This returns a Nchans X Nsamples data matrix  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/read_nexstim_nxe.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("read_nexstim_nxe", *args, **kwargs)

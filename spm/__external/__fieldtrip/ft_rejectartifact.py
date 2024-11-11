@@ -55,9 +55,9 @@ def ft_rejectartifact(*args, **kwargs):
         FT_ARTIFACT_THRESHOLD, FT_ARTIFACT_CLIP, FT_ARTIFACT_ECG, FT_DATABROWSER,  
         FT_REJECTVISUAL  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/ft_rejectartifact.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("ft_rejectartifact", *args, **kwargs)

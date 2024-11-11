@@ -22,9 +22,9 @@ def spm_matlab_version_chk(*args, **kwargs):
        __________________________________________________________________________  
         Copyright (C) 2008 Wellcome Trust Centre for Neuroimaging  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/compat/spm_matlab_version_chk.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_matlab_version_chk", *args, **kwargs)

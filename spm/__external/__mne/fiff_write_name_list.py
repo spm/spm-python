@@ -12,9 +12,9 @@ def fiff_write_name_list(*args, **kwargs):
             kind          The tag kind  
             data          An array of names to create the list from  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/mne/fiff_write_name_list.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("fiff_write_name_list", *args, **kwargs, nargout=0)

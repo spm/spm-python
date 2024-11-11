@@ -26,9 +26,9 @@ def _highpassfilter(*args, **kwargs):
          
         See also LOWPASSFILTER, BANDPASSFILTER  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/highpassfilter.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("highpassfilter", *args, **kwargs)

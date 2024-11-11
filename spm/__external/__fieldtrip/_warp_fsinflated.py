@@ -13,9 +13,9 @@ def _warp_fsinflated(*args, **kwargs):
          
         See also FT_ELECTRODEREALIGN, FT_PREPARE_MESH  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/warp_fsinflated.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("warp_fsinflated", *args, **kwargs)

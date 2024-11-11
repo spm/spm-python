@@ -180,9 +180,9 @@ def data2bids(*args, **kwargs):
         See also FT_DATAYPE_RAW, FT_DATAYPE_VOLUME, FT_DATATYPE_SENS, FT_DEFINETRIAL,  
         FT_PREPROCESSING, FT_READ_MRI, FT_READ_EVENT  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/data2bids.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("data2bids", *args, **kwargs)

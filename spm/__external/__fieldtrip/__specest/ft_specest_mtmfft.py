@@ -29,9 +29,9 @@ def ft_specest_mtmfft(*args, **kwargs):
          
         See also FT_FREQANALYSIS, FT_SPECEST_MTMCONVOL, FT_SPECEST_TFR, FT_SPECEST_HILBERT, FT_SPECEST_WAVELET  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/specest/ft_specest_mtmfft.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("ft_specest_mtmfft", *args, **kwargs)

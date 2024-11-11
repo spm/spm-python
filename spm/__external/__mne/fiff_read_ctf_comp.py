@@ -8,9 +8,9 @@ def fiff_read_ctf_comp(*args, **kwargs):
          
         Read the CTF software compensation data from the given node  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/mne/fiff_read_ctf_comp.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("fiff_read_ctf_comp", *args, **kwargs)

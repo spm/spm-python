@@ -42,9 +42,9 @@ def ft_convert_coordsys(*args, **kwargs):
          
         See also FT_DETERMINE_COORDSYS, FT_DETERMINE_UNITS, FT_CONVERT_UNITS, FT_PLOT_AXES, FT_PLOT_XXX  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/utilities/ft_convert_coordsys.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("ft_convert_coordsys", *args, **kwargs)

@@ -12,9 +12,9 @@ def _read_asa_dip(*args, **kwargs):
          
         See also READ_ASA_VOL, READ_ASA_MRI  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/read_asa_dip.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("read_asa_dip", *args, **kwargs)

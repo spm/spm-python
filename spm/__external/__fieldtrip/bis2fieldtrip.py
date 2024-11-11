@@ -13,9 +13,9 @@ def bis2fieldtrip(*args, **kwargs):
          
         See also FIELDTRIP2BIS, FT_READ_SENS, READ_BIOIMAGE_MGRID  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/bis2fieldtrip.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("bis2fieldtrip", *args, **kwargs)

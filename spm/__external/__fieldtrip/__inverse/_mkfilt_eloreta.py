@@ -20,12 +20,12 @@ def _mkfilt_eloreta(*args, **kwargs):
           
         code implemented by Guido Nolte  
         please cite  
-        “R.D. Pascual-Marqui: Discrete, 3D distributed, linear imaging methods of electric neuronal activity. Part 1: exact, zero  
-        error localization. arXiv:0710.3341 [math-ph], 2007-October-17, http://arxiv.org/pdf/0710.3341 ”  
+        R.D. Pascual-Marqui: Discrete, 3D distributed, linear imaging methods of electric neuronal activity. Part 1: exact, zero  
+        error localization. arXiv:0710.3341 [math-ph], 2007-October-17, http://arxiv.org/pdf/0710.3341   
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/inverse/private/mkfilt_eloreta.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("mkfilt_eloreta", *args, **kwargs)

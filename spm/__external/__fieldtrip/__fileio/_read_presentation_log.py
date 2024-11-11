@@ -8,9 +8,9 @@ def _read_presentation_log(*args, **kwargs):
          
         See also FT_READ_EVENT  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/read_presentation_log.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("read_presentation_log", *args, **kwargs)

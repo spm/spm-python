@@ -13,9 +13,9 @@ def cfg_cfg_basicio(*args, **kwargs):
         files Files  
         ---------------------------------------------------------------------  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/matlabbatch/cfg_basicio/cfg_cfg_basicio.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("cfg_cfg_basicio", *args, **kwargs)

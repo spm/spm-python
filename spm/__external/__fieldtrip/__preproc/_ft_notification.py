@@ -26,9 +26,9 @@ def _ft_notification(*args, **kwargs):
          
         See also DEFAULTID, FT_ERROR, FT_WARNING, FT_NOTICE, FT_INFO, FT_DEBUG, ERROR, WARNING  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/preproc/private/ft_notification.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("ft_notification", *args, **kwargs)

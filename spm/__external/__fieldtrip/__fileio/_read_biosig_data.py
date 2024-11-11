@@ -12,9 +12,9 @@ def _read_biosig_data(*args, **kwargs):
          
         The following data formats are supported: EDF, BKR, CNT, BDF, GDF  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/read_biosig_data.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("read_biosig_data", *args, **kwargs)

@@ -7,9 +7,9 @@ def _undobalancing(*args, **kwargs):
          
         This is used in CHANNELPOSITION, FT_PREPARE_LAYOUT, FT_SENSTYPE  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/undobalancing.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("undobalancing", *args, **kwargs)

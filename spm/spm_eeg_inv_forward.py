@@ -14,9 +14,9 @@ def spm_eeg_inv_forward(*args, **kwargs):
         D                - EEG/MEG struct with filenames of Gain matrices)  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_eeg_inv_forward.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_eeg_inv_forward", *args, **kwargs)

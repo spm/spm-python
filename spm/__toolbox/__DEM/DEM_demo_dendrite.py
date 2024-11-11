@@ -26,9 +26,9 @@ def DEM_demo_dendrite(*args, **kwargs):
         plasticity.  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DEM/DEM_demo_dendrite.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("DEM_demo_dendrite", *args, **kwargs, nargout=0)

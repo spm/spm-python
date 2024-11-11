@@ -22,9 +22,9 @@ def _dimnum(*args, **kwargs):
         When dim is not found in dimord, an empty matrix is returned, but  
         dims then still contains all dims in dimord.  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/dimnum.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("dimnum", *args, **kwargs)

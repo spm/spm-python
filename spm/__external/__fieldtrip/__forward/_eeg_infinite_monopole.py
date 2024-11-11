@@ -13,9 +13,9 @@ def _eeg_infinite_monopole(*args, **kwargs):
          
         See also EEG_INFINITE_DIPOLE, EEG_HALFSPACE_DIPOLE, EEG_HALFSPACE_MONOPOLE  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/forward/private/eeg_infinite_monopole.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("eeg_infinite_monopole", *args, **kwargs)

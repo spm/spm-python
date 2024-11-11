@@ -14,9 +14,9 @@ def spm_load_priors8(*args, **kwargs):
         B = spm_sample_priors(T,X,Y,Z);  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_load_priors8.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_load_priors8", *args, **kwargs)

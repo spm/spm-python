@@ -37,9 +37,9 @@ def ft_denoise_pca(*args, **kwargs):
          
         See also FT_PREPROCESSING, FT_DENOISE_SYNTHETIC, FT_DENOISE_SSP  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/ft_denoise_pca.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("ft_denoise_pca", *args, **kwargs)

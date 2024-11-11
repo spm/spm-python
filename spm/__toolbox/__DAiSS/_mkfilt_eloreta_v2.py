@@ -23,9 +23,9 @@ def _mkfilt_eloreta_v2(*args, **kwargs):
         R.D. Pascual-Marqui: Discrete, 3D distributed, linear imaging methods of electric neuronal activity. Part 1: exact, zero  
         error localization. arXiv:0710.3341 [math-ph], 2007-October-17, http://arxiv.org/pdf/0710.3341  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DAiSS/private/mkfilt_eloreta_v2.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("mkfilt_eloreta_v2", *args, **kwargs)

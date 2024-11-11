@@ -31,9 +31,9 @@ def spm_dctmtx(*args, **kwargs):
         Fundamentals of Digital Image Processing (p 150-154). Anil K. Jain, 1989.  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_dctmtx.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_dctmtx", *args, **kwargs)

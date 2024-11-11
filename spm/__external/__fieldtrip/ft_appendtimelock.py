@@ -22,9 +22,9 @@ def ft_appendtimelock(*args, **kwargs):
         See also FT_TIMELOCKANALYSIS, FT_DATATYPE_TIMELOCK, FT_APPENDDATA, FT_APPENDFREQ,  
         FT_APPENDSOURCE, FT_APPENDSENS  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/ft_appendtimelock.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("ft_appendtimelock", *args, **kwargs)

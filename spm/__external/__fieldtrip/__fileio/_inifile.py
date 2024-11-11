@@ -59,9 +59,9 @@ def _inifile(*args, **kwargs):
           also work on Unix/Linux platforms. Since some short-circuit operators  
           are used, at least Matlab 6.5 should be used.  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/inifile.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("inifile", *args, **kwargs)

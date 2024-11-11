@@ -15,9 +15,9 @@ def spm_NESS_constraints(*args, **kwargs):
         kg  - indices for dissipative parameters  
         kh  - indices for curvature   parameters  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DEM/spm_NESS_constraints.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_NESS_constraints", *args, **kwargs)

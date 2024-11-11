@@ -20,9 +20,9 @@ def spm_MH_reml(*args, **kwargs):
         This routine is using MCMC sampling (reverible Metropolis-Hastings)  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_MH_reml.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_MH_reml", *args, **kwargs)

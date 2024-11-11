@@ -31,9 +31,9 @@ def spm_mfa_G(*args, **kwargs):
           G.q0: [n x 1 sparse]  - equilibrium density  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/Neural_Models/spm_mfa_G.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_mfa_G", *args, **kwargs)

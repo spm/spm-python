@@ -21,9 +21,9 @@ def spm_shoot_update(*args, **kwargs):
         The easiest way to figure out what this function does is to read the code.  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/Shoot/spm_shoot_update.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_shoot_update", *args, **kwargs)

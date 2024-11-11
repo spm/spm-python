@@ -9,9 +9,9 @@ def spm_eeg_tms_correct(*args, **kwargs):
         (optional) fields of S:  
           S.D                - MEEG object or filename of M/EEG mat-file  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/MEEGtools/spm_eeg_tms_correct.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_eeg_tms_correct", *args, **kwargs)

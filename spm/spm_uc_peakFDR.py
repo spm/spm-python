@@ -37,9 +37,9 @@ def spm_uc_peakFDR(*args, **kwargs):
         FDR for NeuroImaging". NeuroImage, 49(4):3057-3064, 2010.  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_uc_peakFDR.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_uc_peakFDR", *args, **kwargs)

@@ -29,9 +29,9 @@ def _read_polhemus_fil(*args, **kwargs):
         _________________________________________________________________________  
         Copyright (C) 2008 Wellcome Trust Centre for Neuroimaging  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/read_polhemus_fil.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("read_polhemus_fil", *args, **kwargs)

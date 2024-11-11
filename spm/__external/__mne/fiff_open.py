@@ -12,9 +12,9 @@ def fiff_open(*args, **kwargs):
         tree    tag directory organized into a tree  
         dir     the sequential tag directory  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/mne/fiff_open.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("fiff_open", *args, **kwargs)

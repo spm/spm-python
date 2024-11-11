@@ -13,9 +13,9 @@ def fiff_write_events(*args, **kwargs):
         mappings). The filename argument can be a string, or a file identifier to  
         an open (for writing) fif-file.  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/mne/fiff_write_events.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("fiff_write_events", *args, **kwargs, nargout=0)

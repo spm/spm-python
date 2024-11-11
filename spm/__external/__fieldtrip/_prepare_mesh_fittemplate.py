@@ -9,9 +9,9 @@ def _prepare_mesh_fittemplate(*args, **kwargs):
          
         See also FT_PREPARE_MESH  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/prepare_mesh_fittemplate.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("prepare_mesh_fittemplate", *args, **kwargs)

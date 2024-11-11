@@ -19,9 +19,9 @@ def spm_mesh_max(*args, **kwargs):
         See also: spm_max.m, spm_mesh_clusters.m and spm_mesh_get_lm.m  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_mesh_max.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_mesh_max", *args, **kwargs)

@@ -18,9 +18,9 @@ def DEM_birdsong(*args, **kwargs):
         illustrating DEM_demo_sequences  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DEM/DEM_birdsong.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("DEM_birdsong", *args, **kwargs)

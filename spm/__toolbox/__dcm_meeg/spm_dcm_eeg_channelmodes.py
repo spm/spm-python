@@ -22,9 +22,9 @@ def spm_dcm_eeg_channelmodes(*args, **kwargs):
         U is scaled to ensure trace(U'*L*L'*U) = Nm  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/dcm_meeg/spm_dcm_eeg_channelmodes.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_dcm_eeg_channelmodes", *args, **kwargs)

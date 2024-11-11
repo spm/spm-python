@@ -10,9 +10,9 @@ def spm_demo_proceed(*args, **kwargs):
         str - string for dialogue box  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/Neural_Models/spm_demo_proceed.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_demo_proceed", *args, **kwargs, nargout=0)

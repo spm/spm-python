@@ -26,9 +26,9 @@ def loadxml(*args, **kwargs):
          
          See also LOAD, XML2MAT, XMLTREE.  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/compat/loadxml.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("loadxml", *args, **kwargs)

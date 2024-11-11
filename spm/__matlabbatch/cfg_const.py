@@ -53,9 +53,9 @@ class cfg_const(MatlabClassWrapper):
                  doc cfg_const  
             
           
-        
+
         [Matlab code]( https://github.com/spm/spm/blob/main/matlabbatch/@cfg_const/cfg_const.m )
-        
+
         Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         if _objdict is None:
@@ -75,9 +75,9 @@ class cfg_const(MatlabClassWrapper):
            _______________________________________________________________________  
             Copyright (C) 2007 Freiburg Brain Imaging  
           
-        
+
         [Matlab code]( https://github.com/spm/spm/blob/main/matlabbatch/@cfg_const/cfg2struct.m )
-        
+
         Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("cfg2struct", self._as_matlab_object(), *args, **kwargs)
@@ -93,9 +93,9 @@ class cfg_const(MatlabClassWrapper):
            _______________________________________________________________________  
             Copyright (C) 2007 Freiburg Brain Imaging  
           
-        
+
         [Matlab code]( https://github.com/spm/spm/blob/main/matlabbatch/@cfg_const/showdetail.m )
-        
+
         Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("showdetail", self._as_matlab_object(), *args, **kwargs)
@@ -111,9 +111,9 @@ class cfg_const(MatlabClassWrapper):
            _______________________________________________________________________  
             Copyright (C) 2007 Freiburg Brain Imaging  
           
-        
+
         [Matlab code]( https://github.com/spm/spm/blob/main/matlabbatch/@cfg_const/showdoc.m )
-        
+
         Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("showdoc", self._as_matlab_object(), *args, **kwargs)
@@ -133,9 +133,9 @@ class cfg_const(MatlabClassWrapper):
            _______________________________________________________________________  
             Copyright (C) 2007 Freiburg Brain Imaging  
           
-        
+
         [Matlab code]( https://github.com/spm/spm/blob/main/matlabbatch/@cfg_const/subs_fields.m )
-        
+
         Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("subs_fields", self._as_matlab_object(), *args, **kwargs)
@@ -173,9 +173,9 @@ class cfg_const(MatlabClassWrapper):
            _______________________________________________________________________  
             Copyright (C) 2007 Freiburg Brain Imaging  
           
-        
+
         [Matlab code]( https://github.com/spm/spm/blob/main/matlabbatch/@cfg_const/subsasgn.m )
-        
+
         Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("subsasgn", self._as_matlab_object(), *args, **kwargs)
@@ -204,9 +204,9 @@ class cfg_const(MatlabClassWrapper):
            _______________________________________________________________________  
             Copyright (C) 2007 Freiburg Brain Imaging  
           
-        
+
         [Matlab code]( https://github.com/spm/spm/blob/main/matlabbatch/@cfg_const/subsref.m )
-        
+
         Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("subsref", self._as_matlab_object(), *args, **kwargs)
@@ -223,9 +223,9 @@ class cfg_const(MatlabClassWrapper):
            _______________________________________________________________________  
             Copyright (C) 2007 Freiburg Brain Imaging  
           
-        
+
         [Matlab code]( https://github.com/spm/spm/blob/main/matlabbatch/@cfg_const/private/mysubs_fields.m )
-        
+
         Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("mysubs_fields", self._as_matlab_object(), *args, **kwargs)

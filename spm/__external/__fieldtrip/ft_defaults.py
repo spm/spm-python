@@ -48,9 +48,9 @@ def ft_defaults(*args, **kwargs):
          
         See also FT_HASTOOLBOX, FT_CHECKCONFIG, FT_TRACKUSAGE, LICENSE  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/ft_defaults.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("ft_defaults", *args, **kwargs, nargout=0)

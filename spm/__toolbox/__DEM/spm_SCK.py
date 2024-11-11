@@ -89,9 +89,9 @@ def spm_SCK(*args, **kwargs):
        __________________________________________________________________________  
         Copyright (C) - Martin Havlicek  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DEM/spm_SCK.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_SCK", *args, **kwargs)

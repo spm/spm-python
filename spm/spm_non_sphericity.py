@@ -59,9 +59,9 @@ def spm_non_sphericity(*args, **kwargs):
         estimation procedure exactly as the serial correlations in fMRI models.  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_non_sphericity.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_non_sphericity", *args, **kwargs)

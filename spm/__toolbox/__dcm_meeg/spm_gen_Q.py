@@ -20,9 +20,9 @@ def spm_gen_Q(*args, **kwargs):
         P.BN and P.AN operate at NMDA receptors along extrinsic connections  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/dcm_meeg/spm_gen_Q.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_gen_Q", *args, **kwargs)

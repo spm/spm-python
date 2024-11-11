@@ -26,9 +26,9 @@ class xmltree(MatlabClassWrapper):
                  doc xmltree  
             
           
-        
+
         [Matlab code]( https://github.com/spm/spm/blob/main/@xmltree/xmltree.m )
-        
+
         Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         if _objdict is None:
@@ -60,9 +60,9 @@ class xmltree(MatlabClassWrapper):
             The tree parameter must be in input AND in output.  
            __________________________________________________________________________  
           
-        
+
         [Matlab code]( https://github.com/spm/spm/blob/main/@xmltree/add.m )
-        
+
         Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("add", self._as_matlab_object(), *args, **kwargs)
@@ -93,9 +93,9 @@ class xmltree(MatlabClassWrapper):
             'del' methods.  
            __________________________________________________________________________  
           
-        
+
         [Matlab code]( https://github.com/spm/spm/blob/main/@xmltree/attributes.m )
-        
+
         Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("attributes", self._as_matlab_object(), *args, **kwargs)
@@ -113,9 +113,9 @@ class xmltree(MatlabClassWrapper):
             Return a subtree from a tree.  
            __________________________________________________________________________  
           
-        
+
         [Matlab code]( https://github.com/spm/spm/blob/main/@xmltree/branch.m )
-        
+
         Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("branch", self._as_matlab_object(), *args, **kwargs)
@@ -133,9 +133,9 @@ class xmltree(MatlabClassWrapper):
                           'XMLTree object (x nodes) [filename]'  
            __________________________________________________________________________  
           
-        
+
         [Matlab code]( https://github.com/spm/spm/blob/main/@xmltree/char.m )
-        
+
         Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("char", self._as_matlab_object(), *args, **kwargs)
@@ -153,9 +153,9 @@ class xmltree(MatlabClassWrapper):
             Return UID's of children of node uid  
            __________________________________________________________________________  
           
-        
+
         [Matlab code]( https://github.com/spm/spm/blob/main/@xmltree/children.m )
-        
+
         Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("children", self._as_matlab_object(), *args, **kwargs)
@@ -182,9 +182,9 @@ class xmltree(MatlabClassWrapper):
             <=> tree = struct('b',{{'field1', 'field3'}},'c','field2')  
            __________________________________________________________________________  
           
-        
+
         [Matlab code]( https://github.com/spm/spm/blob/main/@xmltree/convert.m )
-        
+
         Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("convert", self._as_matlab_object(), *args, **kwargs)
@@ -203,9 +203,9 @@ class xmltree(MatlabClassWrapper):
             The tree parameter must be in input AND in output.  
            __________________________________________________________________________  
           
-        
+
         [Matlab code]( https://github.com/spm/spm/blob/main/@xmltree/copy.m )
-        
+
         Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("copy", self._as_matlab_object(), *args, **kwargs)
@@ -222,9 +222,9 @@ class xmltree(MatlabClassWrapper):
             The tree parameter must be in input AND in output  
            __________________________________________________________________________  
           
-        
+
         [Matlab code]( https://github.com/spm/spm/blob/main/@xmltree/delete.m )
-        
+
         Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("delete", self._as_matlab_object(), *args, **kwargs)
@@ -241,9 +241,9 @@ class xmltree(MatlabClassWrapper):
             statement which returns an XMLTree.  
            __________________________________________________________________________  
           
-        
+
         [Matlab code]( https://github.com/spm/spm/blob/main/@xmltree/display.m )
-        
+
         Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("display", self._as_matlab_object(), *args, **kwargs, nargout=0)
@@ -259,9 +259,9 @@ class xmltree(MatlabClassWrapper):
              See also XMLTREE  
            __________________________________________________________________________  
           
-        
+
         [Matlab code]( https://github.com/spm/spm/blob/main/@xmltree/editor.m )
-        
+
         Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("editor", self._as_matlab_object(), *args, **kwargs, nargout=0)
@@ -290,9 +290,9 @@ class xmltree(MatlabClassWrapper):
             a path (using a subset of XPath language).  
            __________________________________________________________________________  
           
-        
+
         [Matlab code]( https://github.com/spm/spm/blob/main/@xmltree/find.m )
-        
+
         Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("find", self._as_matlab_object(), *args, **kwargs)
@@ -310,9 +310,9 @@ class xmltree(MatlabClassWrapper):
             The tree parameter must be in input AND in output  
            __________________________________________________________________________  
           
-        
+
         [Matlab code]( https://github.com/spm/spm/blob/main/@xmltree/flush.m )
-        
+
         Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("flush", self._as_matlab_object(), *args, **kwargs)
@@ -331,9 +331,9 @@ class xmltree(MatlabClassWrapper):
             Get object properties of a tree given their UIDs.  
            __________________________________________________________________________  
           
-        
+
         [Matlab code]( https://github.com/spm/spm/blob/main/@xmltree/get.m )
-        
+
         Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("get", self._as_matlab_object(), *args, **kwargs)
@@ -351,9 +351,9 @@ class xmltree(MatlabClassWrapper):
             string otherwise.  
            __________________________________________________________________________  
           
-        
+
         [Matlab code]( https://github.com/spm/spm/blob/main/@xmltree/getfilename.m )
-        
+
         Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("getfilename", self._as_matlab_object(), *args, **kwargs)
@@ -372,9 +372,9 @@ class xmltree(MatlabClassWrapper):
             Is parameter a field of tree{uid} ?  
            __________________________________________________________________________  
           
-        
+
         [Matlab code]( https://github.com/spm/spm/blob/main/@xmltree/isfield.m )
-        
+
         Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("isfield", self._as_matlab_object(), *args, **kwargs)
@@ -393,9 +393,9 @@ class xmltree(MatlabClassWrapper):
             Return the number of nodes of an XMLTree object.  
            __________________________________________________________________________  
           
-        
+
         [Matlab code]( https://github.com/spm/spm/blob/main/@xmltree/length.m )
-        
+
         Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("length", self._as_matlab_object(), *args, **kwargs)
@@ -413,9 +413,9 @@ class xmltree(MatlabClassWrapper):
             The tree parameter must be in input AND in output.  
            __________________________________________________________________________  
           
-        
+
         [Matlab code]( https://github.com/spm/spm/blob/main/@xmltree/move.m )
-        
+
         Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("move", self._as_matlab_object(), *args, **kwargs)
@@ -433,9 +433,9 @@ class xmltree(MatlabClassWrapper):
             Return the uid of the parent of a node.  
            __________________________________________________________________________  
           
-        
+
         [Matlab code]( https://github.com/spm/spm/blob/main/@xmltree/parent.m )
-        
+
         Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("parent", self._as_matlab_object(), *args, **kwargs)
@@ -452,9 +452,9 @@ class xmltree(MatlabClassWrapper):
             Return the uid of the root element of the tree.  
            __________________________________________________________________________  
           
-        
+
         [Matlab code]( https://github.com/spm/spm/blob/main/@xmltree/root.m )
-        
+
         Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("root", self._as_matlab_object(), *args, **kwargs)
@@ -473,9 +473,9 @@ class xmltree(MatlabClassWrapper):
             a file or return it as a string if no filename is provided.  
            __________________________________________________________________________  
           
-        
+
         [Matlab code]( https://github.com/spm/spm/blob/main/@xmltree/save.m )
-        
+
         Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("save", self._as_matlab_object(), *args, **kwargs)
@@ -495,9 +495,9 @@ class xmltree(MatlabClassWrapper):
             The tree parameter must be in input AND in output  
            __________________________________________________________________________  
           
-        
+
         [Matlab code]( https://github.com/spm/spm/blob/main/@xmltree/set.m )
-        
+
         Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("set", self._as_matlab_object(), *args, **kwargs)
@@ -514,9 +514,9 @@ class xmltree(MatlabClassWrapper):
             Set the filename linked to the XML tree as filename.  
            __________________________________________________________________________  
           
-        
+
         [Matlab code]( https://github.com/spm/spm/blob/main/@xmltree/setfilename.m )
-        
+
         Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("setfilename", self._as_matlab_object(), *args, **kwargs)
@@ -534,9 +534,9 @@ class xmltree(MatlabClassWrapper):
             This function is DEPRECATED: use EDITOR instead.  
            __________________________________________________________________________  
           
-        
+
         [Matlab code]( https://github.com/spm/spm/blob/main/@xmltree/view.m )
-        
+
         Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("view", self._as_matlab_object(), *args, **kwargs, nargout=0)
@@ -559,9 +559,9 @@ class xmltree(MatlabClassWrapper):
             See also XMLTREE.  
            __________________________________________________________________________  
           
-        
+
         [Matlab code]( https://github.com/spm/spm/blob/main/@xmltree/private/struct2xml.m )
-        
+
         Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("struct2xml", self._as_matlab_object(), *args, **kwargs)
@@ -590,9 +590,9 @@ class xmltree(MatlabClassWrapper):
               See also STRFIND, FINDSTR  
            __________________________________________________________________________  
           
-        
+
         [Matlab code]( https://github.com/spm/spm/blob/main/@xmltree/private/xml_findstr.m )
-        
+
         Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("xml_findstr", self._as_matlab_object(), *args, **kwargs)
@@ -614,9 +614,9 @@ class xmltree(MatlabClassWrapper):
             the header of this m-file.  
            __________________________________________________________________________  
           
-        
+
         [Matlab code]( https://github.com/spm/spm/blob/main/@xmltree/private/xml_parser.m )
-        
+
         Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("xml_parser", self._as_matlab_object(), *args, **kwargs)

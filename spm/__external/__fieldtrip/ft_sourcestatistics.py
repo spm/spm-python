@@ -29,9 +29,9 @@ def ft_sourcestatistics(*args, **kwargs):
         See also FT_SOURCEANALYSIS, FT_SOURCEDESCRIPTIVES, FT_SOURCEGRANDAVERAGE, FT_MATH,  
         FT_STATISTICS_MONTECARLO, FT_STATISTICS_ANALYTIC, FT_STATISTICS_CROSSVALIDATE, FT_STATISTICS_STATS  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/ft_sourcestatistics.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("ft_sourcestatistics", *args, **kwargs)

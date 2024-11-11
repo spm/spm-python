@@ -85,9 +85,9 @@ def _np_readfileinfo(*args, **kwargs):
         Germany  
         02.02.2005  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/np_readfileinfo.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("np_readfileinfo", *args, **kwargs)

@@ -21,9 +21,9 @@ def _read_biff(*args, **kwargs):
           pati    : information on patient    (struct)  
           evnt    : event markers         (struct)  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/read_biff.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("read_biff", *args, **kwargs)

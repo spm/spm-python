@@ -12,9 +12,9 @@ def ft_write_tsv(*args, **kwargs):
          
         See also FT_READ_TSV, FT_READ_JSON, FT_WRITE_JSON, READTABLE, WRITETABLE, TBLWRITE  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/ft_write_tsv.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("ft_write_tsv", *args, **kwargs, nargout=0)

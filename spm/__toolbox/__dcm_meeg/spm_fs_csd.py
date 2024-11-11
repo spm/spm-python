@@ -13,9 +13,9 @@ def spm_fs_csd(*args, **kwargs):
         neuronal dynamics. NeuroImage 20: 1743-1755  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/dcm_meeg/spm_fs_csd.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_fs_csd", *args, **kwargs)
