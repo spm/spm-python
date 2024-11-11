@@ -2,7 +2,7 @@ from spm.__wrapper__ import Runtime, MatlabClassWrapper
 
 
 class meeg(MatlabClassWrapper):
-    def __init__(self, *args, _objdict=None, **kwargs):
+    def __init__(self, *args, **kwargs):
         """
           Function for creating meeg objects.  
             FORMAT   
@@ -125,15 +125,12 @@ class meeg(MatlabClassWrapper):
                  doc meeg  
             
           
-
+        
         [Matlab code]( https://github.com/spm/spm/blob/main/@meeg/meeg.m )
-
+        
         Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
-        if _objdict is None:
-            _objdict = Runtime.call("meeg", *args, **kwargs)
-            
-        super().__init__(_objdict)
+        super().__init__()
 
     def badchannels(self, *args, **kwargs):
         """
@@ -141,9 +138,9 @@ class meeg(MatlabClassWrapper):
             FORMAT res = badchannels(this)  
            __________________________________________________________________________  
           
-
+        
         [Matlab code]( https://github.com/spm/spm/blob/main/@meeg/badchannels.m )
-
+        
         Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("badchannels", self._as_matlab_object(), *args, **kwargs)
@@ -154,9 +151,9 @@ class meeg(MatlabClassWrapper):
             FORMAT res = badsamples(this, chanind, sampind, trialind)  
            __________________________________________________________________________  
           
-
+        
         [Matlab code]( https://github.com/spm/spm/blob/main/@meeg/badsamples.m )
-
+        
         Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("badsamples", self._as_matlab_object(), *args, **kwargs)
@@ -167,9 +164,9 @@ class meeg(MatlabClassWrapper):
             FORMAT res = badtrials(this)  
            __________________________________________________________________________  
           
-
+        
         [Matlab code]( https://github.com/spm/spm/blob/main/@meeg/badtrials.m )
-
+        
         Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("badtrials", self._as_matlab_object(), *args, **kwargs)
@@ -184,9 +181,9 @@ class meeg(MatlabClassWrapper):
               Will create the datafile using the provided name and path  
            __________________________________________________________________________  
           
-
+        
         [Matlab code]( https://github.com/spm/spm/blob/main/@meeg/blank.m )
-
+        
         Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("blank", self._as_matlab_object(), *args, **kwargs)
@@ -197,9 +194,9 @@ class meeg(MatlabClassWrapper):
             FORMAT res = chanlabels(this, ind, label)  
            __________________________________________________________________________  
           
-
+        
         [Matlab code]( https://github.com/spm/spm/blob/main/@meeg/chanlabels.m )
-
+        
         Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("chanlabels", self._as_matlab_object(), *args, **kwargs)
@@ -215,9 +212,9 @@ class meeg(MatlabClassWrapper):
             Sets channel types to default using Fieldtrip channelselection  
            __________________________________________________________________________  
           
-
+        
         [Matlab code]( https://github.com/spm/spm/blob/main/@meeg/chantype.m )
-
+        
         Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("chantype", self._as_matlab_object(), *args, **kwargs)
@@ -236,9 +233,9 @@ class meeg(MatlabClassWrapper):
             ok - 1 - OK, 0- failed  
            __________________________________________________________________________  
           
-
+        
         [Matlab code]( https://github.com/spm/spm/blob/main/@meeg/check.m )
-
+        
         Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("check", self._as_matlab_object(), *args, **kwargs)
@@ -258,9 +255,9 @@ class meeg(MatlabClassWrapper):
             cloned.  
            __________________________________________________________________________  
           
-
+        
         [Matlab code]( https://github.com/spm/spm/blob/main/@meeg/clone.m )
-
+        
         Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("clone", self._as_matlab_object(), *args, **kwargs)
@@ -271,9 +268,9 @@ class meeg(MatlabClassWrapper):
             FORMAT res = conditions(this, ind, conditionlabels)  
            __________________________________________________________________________  
           
-
+        
         [Matlab code]( https://github.com/spm/spm/blob/main/@meeg/conditions.m )
-
+        
         Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("conditions", self._as_matlab_object(), *args, **kwargs)
@@ -285,9 +282,9 @@ class meeg(MatlabClassWrapper):
             FORMAT res = condlist(this)  
            __________________________________________________________________________  
           
-
+        
         [Matlab code]( https://github.com/spm/spm/blob/main/@meeg/condlist.m )
-
+        
         Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("condlist", self._as_matlab_object(), *args, **kwargs)
@@ -298,9 +295,9 @@ class meeg(MatlabClassWrapper):
             FORMAT coor2D(this)  
            __________________________________________________________________________  
           
-
+        
         [Matlab code]( https://github.com/spm/spm/blob/main/@meeg/coor2D.m )
-
+        
         Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("coor2D", self._as_matlab_object(), *args, **kwargs)
@@ -315,9 +312,9 @@ class meeg(MatlabClassWrapper):
             - path          -> data copied only  
            __________________________________________________________________________  
           
-
+        
         [Matlab code]( https://github.com/spm/spm/blob/main/@meeg/copy.m )
-
+        
         Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("copy", self._as_matlab_object(), *args, **kwargs)
@@ -328,9 +325,9 @@ class meeg(MatlabClassWrapper):
             FORMAT this = delete(this)  
            __________________________________________________________________________  
           
-
+        
         [Matlab code]( https://github.com/spm/spm/blob/main/@meeg/delete.m )
-
+        
         Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("delete", self._as_matlab_object(), *args, **kwargs)
@@ -341,9 +338,9 @@ class meeg(MatlabClassWrapper):
             FORMAT display(this)  
            __________________________________________________________________________  
           
-
+        
         [Matlab code]( https://github.com/spm/spm/blob/main/@meeg/display.m )
-
+        
         Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("display", self._as_matlab_object(), *args, **kwargs)
@@ -353,9 +350,9 @@ class meeg(MatlabClassWrapper):
           Overloaded end function for meeg objects.  
            __________________________________________________________________________  
           
-
+        
         [Matlab code]( https://github.com/spm/spm/blob/main/@meeg/end.m )
-
+        
         Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("end", self._as_matlab_object(), *args, **kwargs)
@@ -367,9 +364,9 @@ class meeg(MatlabClassWrapper):
               ind = indices of trials  
            __________________________________________________________________________  
           
-
+        
         [Matlab code]( https://github.com/spm/spm/blob/main/@meeg/events.m )
-
+        
         Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("events", self._as_matlab_object(), *args, **kwargs)
@@ -380,9 +377,9 @@ class meeg(MatlabClassWrapper):
             FORMAT res = fiducials(this, fiducials)  
            __________________________________________________________________________  
           
-
+        
         [Matlab code]( https://github.com/spm/spm/blob/main/@meeg/fiducials.m )
-
+        
         Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("fiducials", self._as_matlab_object(), *args, **kwargs)
@@ -395,9 +392,9 @@ class meeg(MatlabClassWrapper):
             An overloaded function...  
            __________________________________________________________________________  
           
-
+        
         [Matlab code]( https://github.com/spm/spm/blob/main/@meeg/fieldnames.m )
-
+        
         Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("fieldnames", self._as_matlab_object(), *args, **kwargs)
@@ -408,9 +405,9 @@ class meeg(MatlabClassWrapper):
             FORMAT res = fname(this, name)  
            __________________________________________________________________________  
           
-
+        
         [Matlab code]( https://github.com/spm/spm/blob/main/@meeg/fname.m )
-
+        
         Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("fname", self._as_matlab_object(), *args, **kwargs)
@@ -421,9 +418,9 @@ class meeg(MatlabClassWrapper):
             FORMAT res = fnamedat(this)  
            __________________________________________________________________________  
           
-
+        
         [Matlab code]( https://github.com/spm/spm/blob/main/@meeg/fnamedat.m )
-
+        
         Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("fnamedat", self._as_matlab_object(), *args, **kwargs)
@@ -434,9 +431,9 @@ class meeg(MatlabClassWrapper):
             FORMAT res = frequencies(this, ind, values)  
            __________________________________________________________________________  
           
-
+        
         [Matlab code]( https://github.com/spm/spm/blob/main/@meeg/frequencies.m )
-
+        
         Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("frequencies", self._as_matlab_object(), *args, **kwargs)
@@ -447,9 +444,9 @@ class meeg(MatlabClassWrapper):
             FORMAT res = fsample(this)  
            __________________________________________________________________________  
           
-
+        
         [Matlab code]( https://github.com/spm/spm/blob/main/@meeg/fsample.m )
-
+        
         Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("fsample", self._as_matlab_object(), *args, **kwargs)
@@ -460,9 +457,9 @@ class meeg(MatlabClassWrapper):
             FORMAT raw  =  ftraw(this, chanind, timeind, trialind)  
            __________________________________________________________________________  
           
-
+        
         [Matlab code]( https://github.com/spm/spm/blob/main/@meeg/ftraw.m )
-
+        
         Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("ftraw", self._as_matlab_object(), *args, **kwargs)
@@ -477,9 +474,9 @@ class meeg(MatlabClassWrapper):
             data dimensions.  
            __________________________________________________________________________  
           
-
+        
         [Matlab code]( https://github.com/spm/spm/blob/main/@meeg/fttimelock.m )
-
+        
         Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("fttimelock", self._as_matlab_object(), *args, **kwargs)
@@ -490,9 +487,9 @@ class meeg(MatlabClassWrapper):
             FORMAT p = fullfile(this)  
            __________________________________________________________________________  
           
-
+        
         [Matlab code]( https://github.com/spm/spm/blob/main/@meeg/fullfile.m )
-
+        
         Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("fullfile", self._as_matlab_object(), *args, **kwargs)
@@ -505,9 +502,9 @@ class meeg(MatlabClassWrapper):
             An overloaded function...  
            __________________________________________________________________________  
           
-
+        
         [Matlab code]( https://github.com/spm/spm/blob/main/@meeg/getfield.m )
-
+        
         Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("getfield", self._as_matlab_object(), *args, **kwargs)
@@ -519,9 +516,9 @@ class meeg(MatlabClassWrapper):
             FORMAT res = history(this, varargin)  
            __________________________________________________________________________  
           
-
+        
         [Matlab code]( https://github.com/spm/spm/blob/main/@meeg/history.m )
-
+        
         Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("history", self._as_matlab_object(), *args, **kwargs)
@@ -536,9 +533,9 @@ class meeg(MatlabClassWrapper):
             res        - vector of channel indices matching labels  
            __________________________________________________________________________  
           
-
+        
         [Matlab code]( https://github.com/spm/spm/blob/main/@meeg/indchannel.m )
-
+        
         Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("indchannel", self._as_matlab_object(), *args, **kwargs)
@@ -556,9 +553,9 @@ class meeg(MatlabClassWrapper):
             ind        - vector of channel indices matching labels  
            __________________________________________________________________________  
           
-
+        
         [Matlab code]( https://github.com/spm/spm/blob/main/@meeg/indchantype.m )
-
+        
         Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("indchantype", self._as_matlab_object(), *args, **kwargs)
@@ -573,9 +570,9 @@ class meeg(MatlabClassWrapper):
             res        - vector of sample indices matching indices  
            __________________________________________________________________________  
           
-
+        
         [Matlab code]( https://github.com/spm/spm/blob/main/@meeg/indfrequency.m )
-
+        
         Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("indfrequency", self._as_matlab_object(), *args, **kwargs)
@@ -590,9 +587,9 @@ class meeg(MatlabClassWrapper):
             res        - vector of sample indices matching time points  
            __________________________________________________________________________  
           
-
+        
         [Matlab code]( https://github.com/spm/spm/blob/main/@meeg/indsample.m )
-
+        
         Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("indsample", self._as_matlab_object(), *args, **kwargs)
@@ -611,9 +608,9 @@ class meeg(MatlabClassWrapper):
             res        - vector of trial indices matching condition labels  
            __________________________________________________________________________  
           
-
+        
         [Matlab code]( https://github.com/spm/spm/blob/main/@meeg/indtrial.m )
-
+        
         Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("indtrial", self._as_matlab_object(), *args, **kwargs)
@@ -624,9 +621,9 @@ class meeg(MatlabClassWrapper):
             FORMAT out = isempty(this)  
            __________________________________________________________________________  
           
-
+        
         [Matlab code]( https://github.com/spm/spm/blob/main/@meeg/isempty.m )
-
+        
         Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("isempty", self._as_matlab_object(), *args, **kwargs)
@@ -637,9 +634,9 @@ class meeg(MatlabClassWrapper):
             FORMAT res = isequal(this, that)  
            __________________________________________________________________________  
           
-
+        
         [Matlab code]( https://github.com/spm/spm/blob/main/@meeg/isequal.m )
-
+        
         Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("isequal", self._as_matlab_object(), *args, **kwargs)
@@ -653,9 +650,9 @@ class meeg(MatlabClassWrapper):
             An overloaded function...  
            __________________________________________________________________________  
           
-
+        
         [Matlab code]( https://github.com/spm/spm/blob/main/@meeg/isfield.m )
-
+        
         Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("isfield", self._as_matlab_object(), *args, **kwargs)
@@ -666,9 +663,9 @@ class meeg(MatlabClassWrapper):
             FORMAT out = islinked(this)  
            __________________________________________________________________________  
           
-
+        
         [Matlab code]( https://github.com/spm/spm/blob/main/@meeg/islinked.m )
-
+        
         Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("islinked", self._as_matlab_object(), *args, **kwargs)
@@ -684,9 +681,9 @@ class meeg(MatlabClassWrapper):
               Additional parameters for non-float data files  
            __________________________________________________________________________  
           
-
+        
         [Matlab code]( https://github.com/spm/spm/blob/main/@meeg/link.m )
-
+        
         Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("link", self._as_matlab_object(), *args, **kwargs)
@@ -704,9 +701,9 @@ class meeg(MatlabClassWrapper):
             in res and a cell array of modalities in list.  
            __________________________________________________________________________  
           
-
+        
         [Matlab code]( https://github.com/spm/spm/blob/main/@meeg/modality.m )
-
+        
         Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("modality", self._as_matlab_object(), *args, **kwargs)
@@ -735,9 +732,9 @@ class meeg(MatlabClassWrapper):
                             no list passed).  
            __________________________________________________________________________  
           
-
+        
         [Matlab code]( https://github.com/spm/spm/blob/main/@meeg/montage.m )
-
+        
         Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("montage", self._as_matlab_object(), *args, **kwargs)
@@ -753,9 +750,9 @@ class meeg(MatlabClassWrapper):
             - filename      -> data renamed only  
            __________________________________________________________________________  
           
-
+        
         [Matlab code]( https://github.com/spm/spm/blob/main/@meeg/move.m )
-
+        
         Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("move", self._as_matlab_object(), *args, **kwargs)
@@ -766,9 +763,9 @@ class meeg(MatlabClassWrapper):
             FORMAT res = nchannels(this)  
            __________________________________________________________________________  
           
-
+        
         [Matlab code]( https://github.com/spm/spm/blob/main/@meeg/nchannels.m )
-
+        
         Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("nchannels", self._as_matlab_object(), *args, **kwargs)
@@ -779,9 +776,9 @@ class meeg(MatlabClassWrapper):
             FORMAT res = nconditions(obj)  
            __________________________________________________________________________  
           
-
+        
         [Matlab code]( https://github.com/spm/spm/blob/main/@meeg/nconditions.m )
-
+        
         Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("nconditions", self._as_matlab_object(), *args, **kwargs)
@@ -792,9 +789,9 @@ class meeg(MatlabClassWrapper):
             FORMAT res = nsamples(this)  
            __________________________________________________________________________  
           
-
+        
         [Matlab code]( https://github.com/spm/spm/blob/main/@meeg/nfrequencies.m )
-
+        
         Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("nfrequencies", self._as_matlab_object(), *args, **kwargs)
@@ -805,9 +802,9 @@ class meeg(MatlabClassWrapper):
             FORMAT res = nsamples(this)  
            __________________________________________________________________________  
           
-
+        
         [Matlab code]( https://github.com/spm/spm/blob/main/@meeg/nsamples.m )
-
+        
         Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("nsamples", self._as_matlab_object(), *args, **kwargs)
@@ -818,9 +815,9 @@ class meeg(MatlabClassWrapper):
             FORMAT res = ntrials(this)  
            __________________________________________________________________________  
           
-
+        
         [Matlab code]( https://github.com/spm/spm/blob/main/@meeg/ntrials.m )
-
+        
         Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("ntrials", self._as_matlab_object(), *args, **kwargs)
@@ -831,9 +828,9 @@ class meeg(MatlabClassWrapper):
             FORMAT res = path(this, newpath)  
            __________________________________________________________________________  
           
-
+        
         [Matlab code]( https://github.com/spm/spm/blob/main/@meeg/path.m )
-
+        
         Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("path", self._as_matlab_object(), *args, **kwargs)
@@ -846,9 +843,9 @@ class meeg(MatlabClassWrapper):
             Useful to update the object e.g. after running a batch.  
            __________________________________________________________________________  
           
-
+        
         [Matlab code]( https://github.com/spm/spm/blob/main/@meeg/reload.m )
-
+        
         Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("reload", self._as_matlab_object(), *args, **kwargs)
@@ -859,9 +856,9 @@ class meeg(MatlabClassWrapper):
             FORMAT res = repl(this, index, nrepl)  
            __________________________________________________________________________  
           
-
+        
         [Matlab code]( https://github.com/spm/spm/blob/main/@meeg/repl.m )
-
+        
         Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("repl", self._as_matlab_object(), *args, **kwargs)
@@ -872,9 +869,9 @@ class meeg(MatlabClassWrapper):
             FORMAT this = rmdata(this)  
            __________________________________________________________________________  
           
-
+        
         [Matlab code]( https://github.com/spm/spm/blob/main/@meeg/rmdata.m )
-
+        
         Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("rmdata", self._as_matlab_object(), *args, **kwargs)
@@ -885,9 +882,9 @@ class meeg(MatlabClassWrapper):
             FORMAT this = rmfield(this, fields)  
            __________________________________________________________________________  
           
-
+        
         [Matlab code]( https://github.com/spm/spm/blob/main/@meeg/rmfield.m )
-
+        
         Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("rmfield", self._as_matlab_object(), *args, **kwargs)
@@ -900,9 +897,9 @@ class meeg(MatlabClassWrapper):
             Converts an meeg object to struct and saves it.  
            __________________________________________________________________________  
           
-
+        
         [Matlab code]( https://github.com/spm/spm/blob/main/@meeg/save.m )
-
+        
         Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("save", self._as_matlab_object(), *args, **kwargs)
@@ -913,9 +910,9 @@ class meeg(MatlabClassWrapper):
             FORMAT res = sconfounds(this, newsconfounds)  
            __________________________________________________________________________  
           
-
+        
         [Matlab code]( https://github.com/spm/spm/blob/main/@meeg/sconfounds.m )
-
+        
         Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("sconfounds", self._as_matlab_object(), *args, **kwargs)
@@ -931,9 +928,9 @@ class meeg(MatlabClassWrapper):
             res        - vector of channel indices matching labels  
            __________________________________________________________________________  
           
-
+        
         [Matlab code]( https://github.com/spm/spm/blob/main/@meeg/selectchannels.m )
-
+        
         Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("selectchannels", self._as_matlab_object(), *args, **kwargs)
@@ -951,9 +948,9 @@ class meeg(MatlabClassWrapper):
              condition   - condition label, cell array of labels or [] (for all conditions)  
            __________________________________________________________________________  
           
-
+        
         [Matlab code]( https://github.com/spm/spm/blob/main/@meeg/selectdata.m )
-
+        
         Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("selectdata", self._as_matlab_object(), *args, **kwargs)
@@ -966,9 +963,9 @@ class meeg(MatlabClassWrapper):
               type - 'EEG' or 'MEG'  
            __________________________________________________________________________  
           
-
+        
         [Matlab code]( https://github.com/spm/spm/blob/main/@meeg/sensors.m )
-
+        
         Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("sensors", self._as_matlab_object(), *args, **kwargs)
@@ -979,9 +976,9 @@ class meeg(MatlabClassWrapper):
             FORMAT res = size(this, dim))  
            __________________________________________________________________________  
           
-
+        
         [Matlab code]( https://github.com/spm/spm/blob/main/@meeg/size.m )
-
+        
         Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("size", self._as_matlab_object(), *args, **kwargs)
@@ -991,9 +988,9 @@ class meeg(MatlabClassWrapper):
           Overloaded subsasgn function for meeg objects.  
            __________________________________________________________________________  
           
-
+        
         [Matlab code]( https://github.com/spm/spm/blob/main/@meeg/subsasgn.m )
-
+        
         Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("subsasgn", self._as_matlab_object(), *args, **kwargs)
@@ -1004,9 +1001,9 @@ class meeg(MatlabClassWrapper):
             An overloaded function...  
            __________________________________________________________________________  
           
-
+        
         [Matlab code]( https://github.com/spm/spm/blob/main/@meeg/subsref.m )
-
+        
         Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("subsref", self._as_matlab_object(), *args, **kwargs)
@@ -1017,9 +1014,9 @@ class meeg(MatlabClassWrapper):
             FORMAT res = time(this, ind, format)  
            __________________________________________________________________________  
           
-
+        
         [Matlab code]( https://github.com/spm/spm/blob/main/@meeg/time.m )
-
+        
         Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("time", self._as_matlab_object(), *args, **kwargs)
@@ -1031,9 +1028,9 @@ class meeg(MatlabClassWrapper):
                    res = timeonset(this, newonset)  
            __________________________________________________________________________  
           
-
+        
         [Matlab code]( https://github.com/spm/spm/blob/main/@meeg/timeonset.m )
-
+        
         Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("timeonset", self._as_matlab_object(), *args, **kwargs)
@@ -1044,9 +1041,9 @@ class meeg(MatlabClassWrapper):
             FORMAT res = transformtype(this, name)  
            __________________________________________________________________________  
           
-
+        
         [Matlab code]( https://github.com/spm/spm/blob/main/@meeg/transformtype.m )
-
+        
         Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("transformtype", self._as_matlab_object(), *args, **kwargs)
@@ -1058,9 +1055,9 @@ class meeg(MatlabClassWrapper):
               ind = indices of trials  
            __________________________________________________________________________  
           
-
+        
         [Matlab code]( https://github.com/spm/spm/blob/main/@meeg/trialonset.m )
-
+        
         Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("trialonset", self._as_matlab_object(), *args, **kwargs)
@@ -1076,9 +1073,9 @@ class meeg(MatlabClassWrapper):
             removing bad trials or merging files.  
            __________________________________________________________________________  
           
-
+        
         [Matlab code]( https://github.com/spm/spm/blob/main/@meeg/trialtag.m )
-
+        
         Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("trialtag", self._as_matlab_object(), *args, **kwargs)
@@ -1089,9 +1086,9 @@ class meeg(MatlabClassWrapper):
             FORMAT res = type(this, value)  
            __________________________________________________________________________  
           
-
+        
         [Matlab code]( https://github.com/spm/spm/blob/main/@meeg/type.m )
-
+        
         Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("type", self._as_matlab_object(), *args, **kwargs)
@@ -1102,9 +1099,9 @@ class meeg(MatlabClassWrapper):
             FORMAT res = units(this, ind)  
            __________________________________________________________________________  
           
-
+        
         [Matlab code]( https://github.com/spm/spm/blob/main/@meeg/units.m )
-
+        
         Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("units", self._as_matlab_object(), *args, **kwargs)
@@ -1115,9 +1112,9 @@ class meeg(MatlabClassWrapper):
             FORMAT this = unlink(this)     
            __________________________________________________________________________  
           
-
+        
         [Matlab code]( https://github.com/spm/spm/blob/main/@meeg/unlink.m )
-
+        
         Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("unlink", self._as_matlab_object(), *args, **kwargs)
@@ -1129,9 +1126,9 @@ class meeg(MatlabClassWrapper):
             this  - the struct to check (is returned modified if necessary)  
            __________________________________________________________________________  
           
-
+        
         [Matlab code]( https://github.com/spm/spm/blob/main/@meeg/private/checkmeeg.m )
-
+        
         Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("checkmeeg", self._as_matlab_object(), *args, **kwargs)
@@ -1142,9 +1139,9 @@ class meeg(MatlabClassWrapper):
             FORMAT data = fixpnt(data, recurse)  
            __________________________________________________________________________  
           
-
+        
         [Matlab code]( https://github.com/spm/spm/blob/main/@meeg/private/fixpnt.m )
-
+        
         Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("fixpnt", self._as_matlab_object(), *args, **kwargs)
@@ -1155,9 +1152,9 @@ class meeg(MatlabClassWrapper):
             FORMAT res = getset(this, parent, fieldname, ind, values)  
            __________________________________________________________________________  
           
-
+        
         [Matlab code]( https://github.com/spm/spm/blob/main/@meeg/private/getset.m )
-
+        
         Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("getset", self._as_matlab_object(), *args, **kwargs)
@@ -1180,9 +1177,9 @@ class meeg(MatlabClassWrapper):
             in the output, in this case. This can be convenient in rare cases if the  
             size of the input lists is meaningful.  
           
-
+        
         [Matlab code]( https://github.com/spm/spm/blob/main/@meeg/private/match_str.m )
-
+        
         Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("match_str", self._as_matlab_object(), *args, **kwargs)
@@ -1193,9 +1190,9 @@ class meeg(MatlabClassWrapper):
             that might not be necessary at some point  
            __________________________________________________________________________  
           
-
+        
         [Matlab code]( https://github.com/spm/spm/blob/main/@meeg/private/warning_flexible.m )
-
+        
         Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("warning_flexible", self._as_matlab_object(), *args, **kwargs, nargout=0)
