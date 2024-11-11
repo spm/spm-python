@@ -11,26 +11,29 @@ except ImportError as e:
 	print("Failed to import, install Matlab Runtime and setup library path. ")
 	print(f"Matlab Runtime installer can be found in: {installer_path}")
 	raise e
+import warnings
 
 
 class MatlabClassWrapper:
 	_subclasses = dict()
 
-	def __init__(self, _objdict):
-		self._objdict = _objdict
-
-	@classmethod
-	def _from_matlab_object(cls, res):
-		return cls(_objdict=res)
-
-	def _as_matlab_object(self): 
+	def _as_matlab_object(self):
 		return self._objdict
 
 	def __init_subclass__(cls):
 		super().__init_subclass__()
 		MatlabClassWrapper._subclasses[cls.__name__] = cls
-		if hasattr(cls, 'display'):
-			cls.__repr__ = cls.display
+
+	def __new__(cls, *args, _objdict=None, **kwargs):
+		if _objdict is None:
+			if cls.__name__ in MatlabClassWrapper._subclasses.keys():
+				obj = Runtime.call(cls.__name__, *args, **kwargs)
+			else:
+				obj = super().__new__(cls)
+		else:
+			obj = super().__new__(cls)
+			obj._objdict = _objdict
+		return obj
 
 
 class Runtime:
@@ -54,8 +57,8 @@ class Runtime:
 	@staticmethod
 	def _cast_argin(arg):
 		if isinstance(arg, MatlabClassWrapper): 
-				arg = arg._as_matlab_object()
-		elif isinstance(arg, dict):
+			arg = arg._as_matlab_object()
+		if isinstance(arg, dict):
 			_, arg = Runtime._process_argin(**arg)
 		elif isinstance(arg, (tuple, dict, list, set)):
 			arg, _ = Runtime._process_argin(*arg)
@@ -66,22 +69,30 @@ class Runtime:
 		args = tuple(map(Runtime._cast_argin, args))
 		kwargs = dict(zip(
 			kwargs.keys(), 
-			map(Runtime._cast_argin, kwargs.values()
-				))) 
+			map(Runtime._cast_argin, kwargs.values())))
 
 		return args, kwargs
 
 	@staticmethod
 	def _process_argout(res):
 		out = res
-		if isinstance(res, tuple): 
+		if isinstance(res, tuple):
 			out = tuple(Runtime._process_argout(r) for r in res)
-		else:
-			if isinstance(res, dict): 
-				if 'type__' in res.keys(): 
-					if res['type__'] == 'object' and res['class__'] in MatlabClassWrapper._subclasses.keys(): 
-						out = MatlabClassWrapper._subclasses[res['class__']]._from_matlab_object(res)
-
+		elif isinstance(res, list):
+			out = list(Runtime._process_argout(r) for r in res)
+		elif isinstance(res, dict):
+			res = dict(zip(res.keys(), map(Runtime._process_argout, res.values())))
+			if 'type__' in res.keys():
+				if res['type__'] == 'object':
+					if res['class__'] in MatlabClassWrapper._subclasses.keys():
+						out = MatlabClassWrapper._subclasses[res['class__']](_objdict=res)
+					else:
+						warnings.warn(f'Unknown Matlab class type: {res["type__"]}')
+						out = MatlabClassWrapper(_objdict=res)
+				else:
+					out = res
+			else:
+				out = Struct(**res)
 		return out
 
 
