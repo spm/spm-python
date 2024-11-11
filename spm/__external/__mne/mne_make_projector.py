@@ -16,9 +16,9 @@ def mne_make_projector(*args, **kwargs):
         ch_names - A cell array of channel names  
         bads     - Bad channels to exclude  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/mne/mne_make_projector.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("mne_make_projector", *args, **kwargs)

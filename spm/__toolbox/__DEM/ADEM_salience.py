@@ -22,9 +22,9 @@ def ADEM_salience(*args, **kwargs):
         active inference.  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DEM/ADEM_salience.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("ADEM_salience", *args, **kwargs, nargout=0)

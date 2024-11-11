@@ -19,9 +19,9 @@ def _rotate(*args, **kwargs):
          
         See also TRANSLATE, SCALE, RIGIDBODY, QUATERNION, HOMOGENOUS2TRADITIONAL  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/inverse/private/rotate.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("rotate", *args, **kwargs)

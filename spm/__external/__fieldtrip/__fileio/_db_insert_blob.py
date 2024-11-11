@@ -10,9 +10,9 @@ def _db_insert_blob(*args, **kwargs):
         Use as  
           db_insert_blob(tablename, fieldname, s)  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/db_insert_blob.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("db_insert_blob", *args, **kwargs, nargout=0)

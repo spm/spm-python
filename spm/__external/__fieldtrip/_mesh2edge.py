@@ -13,9 +13,9 @@ def _mesh2edge(*args, **kwargs):
          
         See also POLY2TRI  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/mesh2edge.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("mesh2edge", *args, **kwargs)

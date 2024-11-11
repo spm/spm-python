@@ -13,9 +13,9 @@ def mne_read_bem_surfaces(*args, **kwargs):
         tree        - Required if source is an open file id, search for the  
                       BEM surfaces here  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/mne/mne_read_bem_surfaces.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("mne_read_bem_surfaces", *args, **kwargs)

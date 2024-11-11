@@ -16,9 +16,9 @@ def mci_linear_deriv(*args, **kwargs):
         L         log joint  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/mci/models/linear/mci_linear_deriv.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("mci_linear_deriv", *args, **kwargs)

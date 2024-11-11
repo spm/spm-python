@@ -53,9 +53,9 @@ def ft_channelselection(*args, **kwargs):
         See also FT_PREPROCESSING, FT_SENSLABEL, FT_MULTIPLOTER, FT_MULTIPLOTTFR,  
         FT_SINGLEPLOTER, FT_SINGLEPLOTTFR  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/utilities/ft_channelselection.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("ft_channelselection", *args, **kwargs)

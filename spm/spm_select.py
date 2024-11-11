@@ -63,9 +63,9 @@ def spm_select(*args, **kwargs):
         Return directory names matching filter 'filt' within 'direc'  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_select.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_select", *args, **kwargs)

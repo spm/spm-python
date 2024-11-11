@@ -10,9 +10,9 @@ def spm_run_con(*args, **kwargs):
         out    - struct containing contrast and SPM{.} images filename  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/config/spm_run_con.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_run_con", *args, **kwargs)

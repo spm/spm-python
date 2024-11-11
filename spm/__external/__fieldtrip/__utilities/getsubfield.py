@@ -14,9 +14,9 @@ def getsubfield(*args, **kwargs):
          
         See also GETFIELD, ISSUBFIELD, SETSUBFIELD  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/utilities/getsubfield.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("getsubfield", *args, **kwargs)

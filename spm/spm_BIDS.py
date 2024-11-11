@@ -21,9 +21,9 @@ def spm_BIDS(*args, **kwargs):
           K. J. Gorgolewski et al, Scientific Data, 2016.  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_BIDS.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_BIDS", *args, **kwargs)

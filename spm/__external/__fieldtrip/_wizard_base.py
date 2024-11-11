@@ -9,9 +9,9 @@ def _wizard_base(*args, **kwargs):
         wrapper function. The wrapper function whoudl pause execution untill the  
         wizard figure is deleted.  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/wizard_base.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("wizard_base", *args, **kwargs)

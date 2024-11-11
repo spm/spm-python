@@ -14,9 +14,9 @@ def mci_rphase_dfdp(*args, **kwargs):
         dfdp   Jacobian wrt. parameters, df/dp  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/mci/models/phase/mci_rphase_dfdp.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("mci_rphase_dfdp", *args, **kwargs)

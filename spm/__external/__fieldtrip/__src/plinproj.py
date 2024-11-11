@@ -14,9 +14,9 @@ def plinproj(*args, **kwargs):
           0 (default)  project the point anywhere on the complete line  
           1            project the point within or on the edge of the linepiece  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/src/plinproj.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("plinproj", *args, **kwargs)

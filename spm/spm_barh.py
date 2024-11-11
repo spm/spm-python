@@ -10,9 +10,9 @@ def spm_barh(*args, **kwargs):
         P   - (n x 1) priors  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_barh.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_barh", *args, **kwargs, nargout=0)

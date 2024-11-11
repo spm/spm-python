@@ -11,9 +11,9 @@ def _mni2tal(*args, **kwargs):
         outpoints is the coordinate matrix with Talairach points  
         Matthew Brett 10/8/99  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/mni2tal.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("mni2tal", *args, **kwargs)

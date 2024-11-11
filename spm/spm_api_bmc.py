@@ -17,9 +17,9 @@ def spm_api_bmc(*args, **kwargs):
         out    - conditional probability of DCMs (when using fixed effect method)  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_api_bmc.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_api_bmc", *args, **kwargs)

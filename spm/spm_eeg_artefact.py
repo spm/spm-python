@@ -42,9 +42,9 @@ def spm_eeg_artefact(*args, **kwargs):
         (spm_eeg_artefact_flat)  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_eeg_artefact.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_eeg_artefact", *args, **kwargs)

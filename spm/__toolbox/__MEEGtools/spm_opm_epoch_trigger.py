@@ -23,9 +23,9 @@ def spm_opm_epoch_trigger(*args, **kwargs):
         trl          - the trial matrix used to epoch the data  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/MEEGtools/spm_opm_epoch_trigger.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_opm_epoch_trigger", *args, **kwargs)

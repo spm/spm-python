@@ -30,9 +30,9 @@ def _splint(*args, **kwargs):
           Corrigenda: EEG 02274, Electroencephalography and Clinical  
           Neurophysiology 76:565.  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/splint.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("splint", *args, **kwargs)

@@ -7,9 +7,9 @@ def DEM_demo_Lagrangian(*args, **kwargs):
         Lagrangian and antisymmetric matrices. This example uses a double well   
         potential and Newtonian dynamics.  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DEM/DEM_demo_Lagrangian.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("DEM_demo_Lagrangian", *args, **kwargs, nargout=0)

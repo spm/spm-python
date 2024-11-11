@@ -33,9 +33,9 @@ def spm_mesh_inside(*args, **kwargs):
         plot3(P(~T,1), P(~T,2), P(~T,3), '.r','Parent',H.axis)  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_mesh_inside.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_mesh_inside", *args, **kwargs)

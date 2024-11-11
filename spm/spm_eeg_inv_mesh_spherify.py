@@ -20,9 +20,9 @@ def spm_eeg_inv_mesh_spherify(*args, **kwargs):
           smooth = number (default = 20)  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_eeg_inv_mesh_spherify.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_eeg_inv_mesh_spherify", *args, **kwargs)

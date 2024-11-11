@@ -27,9 +27,9 @@ def spm_eeg_invert_prepro(*args, **kwargs):
                              'IID' minimum norm  
                              'EBB' for empirical bayes beamformer  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_eeg_invert_prepro.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_eeg_invert_prepro", *args, **kwargs)

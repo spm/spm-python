@@ -25,9 +25,9 @@ def spm_opm_read_lvm(*args, **kwargs):
           lbv.pinout             - pinout of lbv file(coming soon)  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/MEEGtools/spm_opm_read_lvm.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_opm_read_lvm", *args, **kwargs)

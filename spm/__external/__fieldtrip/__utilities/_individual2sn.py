@@ -20,9 +20,9 @@ def _individual2sn(*args, **kwargs):
                   file, or the representation of the parameters as of SPM12  
           input = Nx3 array containing the input positions  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/utilities/private/individual2sn.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("individual2sn", *args, **kwargs)

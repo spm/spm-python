@@ -31,9 +31,9 @@ def spm_opm_sim(*args, **kwargs):
          L           - Lead field (also written on disk)  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/MEEGtools/spm_opm_sim.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_opm_sim", *args, **kwargs)

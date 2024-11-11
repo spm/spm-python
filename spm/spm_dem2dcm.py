@@ -21,9 +21,9 @@ def spm_dem2dcm(*args, **kwargs):
         variance on the parameters will be extracted.  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_dem2dcm.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_dem2dcm", *args, **kwargs)

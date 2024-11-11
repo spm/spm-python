@@ -82,9 +82,9 @@ def ft_scalpcurrentdensity(*args, **kwargs):
          
         See also FT_PREPROCESSING, FT_TIMELOCKANALYSIS, FT_FREQNALYSIS, FT_TOPOPLOTER.  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/ft_scalpcurrentdensity.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("ft_scalpcurrentdensity", *args, **kwargs)

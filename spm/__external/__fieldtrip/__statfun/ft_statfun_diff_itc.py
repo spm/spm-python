@@ -38,9 +38,9 @@ def ft_statfun_diff_itc(*args, **kwargs):
          
         See also FT_FREQSTATISTICS and FT_STATISTICS_MONTECARLO  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/statfun/ft_statfun_diff_itc.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("ft_statfun_diff_itc", *args, **kwargs)

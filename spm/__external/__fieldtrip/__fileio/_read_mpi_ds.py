@@ -15,9 +15,9 @@ def _read_mpi_ds(*args, **kwargs):
          
         See also READ_MPI_DAP  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/read_mpi_ds.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("read_mpi_ds", *args, **kwargs)

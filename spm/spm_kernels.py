@@ -36,9 +36,9 @@ def spm_kernels(*args, **kwargs):
         where q = [1 x(t)] are the states augmented with a constant term  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_kernels.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_kernels", *args, **kwargs)

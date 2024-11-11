@@ -10,9 +10,9 @@ def _ama2headmodel(*args, **kwargs):
         Use as  
           headmodel = ama2headmodel(ama)  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/forward/private/ama2headmodel.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("ama2headmodel", *args, **kwargs)

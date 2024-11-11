@@ -20,9 +20,9 @@ def spm_shoot_scalmom(*args, **kwargs):
         2012 (2012): 132-140.  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/Shoot/spm_shoot_scalmom.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_shoot_scalmom", *args, **kwargs)

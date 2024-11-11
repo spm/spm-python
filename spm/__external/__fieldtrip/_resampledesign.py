@@ -49,9 +49,9 @@ def _resampledesign(*args, **kwargs):
          
         See also FT_STATISTICS_MONTECARLO  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/resampledesign.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("resampledesign", *args, **kwargs)

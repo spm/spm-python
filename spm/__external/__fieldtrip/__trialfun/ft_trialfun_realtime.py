@@ -16,9 +16,9 @@ def ft_trialfun_realtime(*args, **kwargs):
           cfg.bufferdata = {'first' 'last'}. If 'last' then only the last block of  
                            interest is read. Otherwise, all well-defined blocks are read (default = 'first')  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/trialfun/ft_trialfun_realtime.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("ft_trialfun_realtime", *args, **kwargs)

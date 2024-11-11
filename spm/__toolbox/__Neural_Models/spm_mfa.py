@@ -25,9 +25,9 @@ def spm_mfa(*args, **kwargs):
         q0   - stable mode M0*q0 = 0  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/Neural_Models/spm_mfa.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_mfa", *args, **kwargs)

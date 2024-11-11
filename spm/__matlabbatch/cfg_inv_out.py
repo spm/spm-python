@@ -2,7 +2,7 @@ from spm.__wrapper__ import Runtime, MatlabClassWrapper
 
 
 class cfg_inv_out(MatlabClassWrapper):
-    def __init__(self, *args, _objdict=None, **kwargs):
+    def __init__(self, *args, **kwargs):
         """
           function obj = cfg_inv_out(varargin)  
             Auxiliary class to mark invalid (i.e. not yet available) outputs of  
@@ -20,12 +20,9 @@ class cfg_inv_out(MatlabClassWrapper):
                  doc cfg_inv_out  
             
           
-
+        
         [Matlab code]( https://github.com/spm/spm/blob/main/matlabbatch/@cfg_inv_out/cfg_inv_out.m )
-
+        
         Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
-        if _objdict is None:
-            _objdict = Runtime.call("cfg_inv_out", *args, **kwargs)
-            
-        super().__init__(_objdict)
+        super().__init__()

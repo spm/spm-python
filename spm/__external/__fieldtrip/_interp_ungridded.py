@@ -21,9 +21,9 @@ def _interp_ungridded(*args, **kwargs):
            sphereradius = scalar  
            power        = scalar, power parameter as in the Inverse Distance Weighting function proposed by Shepard (default = 1).  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/interp_ungridded.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("interp_ungridded", *args, **kwargs)

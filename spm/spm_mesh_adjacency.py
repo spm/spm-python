@@ -10,9 +10,9 @@ def spm_mesh_adjacency(*args, **kwargs):
         A        - adjacency matrix as a sparse [vxv] array  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_mesh_adjacency.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_mesh_adjacency", *args, **kwargs)

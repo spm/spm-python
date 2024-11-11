@@ -16,9 +16,9 @@ def spm_kl_normald(*args, **kwargs):
         be computed more efficiently. Both must be full or both must be diagonal.  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_kl_normald.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_kl_normald", *args, **kwargs)

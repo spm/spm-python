@@ -22,9 +22,9 @@ def _warp_dykstra2012(*args, **kwargs):
          
         See also FT_ELECTRODEREALIGN, FT_PREPARE_MESH, WARP_HERMES2010  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/warp_dykstra2012.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("warp_dykstra2012", *args, **kwargs)

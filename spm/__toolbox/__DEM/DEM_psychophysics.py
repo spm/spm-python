@@ -37,9 +37,9 @@ def DEM_psychophysics(*args, **kwargs):
         softmax function of the ensuing variational free energy).  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DEM/DEM_psychophysics.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("DEM_psychophysics", *args, **kwargs)

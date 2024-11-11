@@ -36,9 +36,9 @@ def _bids_sidecar(*args, **kwargs):
          
         See also BIDS_DATAFILE, BIDS_TSV, EVENTS_TSV, FT_READ_HEADER, FT_READ_EVENT  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/bids_sidecar.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("bids_sidecar", *args, **kwargs)

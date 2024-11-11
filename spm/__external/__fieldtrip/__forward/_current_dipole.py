@@ -17,9 +17,9 @@ def _current_dipole(*args, **kwargs):
          
         See also MAGNETIC_DIPOLE  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/forward/private/current_dipole.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("current_dipole", *args, **kwargs)

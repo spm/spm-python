@@ -25,9 +25,9 @@ def _traditional(*args, **kwargs):
         The order in which the transformations are done is exactly opposite as  
         the list above, i.e. first z-rescale, ... and finally x-shift.  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/traditional.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("traditional", *args, **kwargs)

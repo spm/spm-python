@@ -7,9 +7,9 @@ def _rv(*args, **kwargs):
          
         rv = rv(measured, simulated)  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/rv.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("rv", *args, **kwargs)

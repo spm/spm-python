@@ -128,9 +128,9 @@ def spm_field(*args, **kwargs):
         This function computes efficiently a lot of matrix-vector products.  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_field.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_field", *args, **kwargs)

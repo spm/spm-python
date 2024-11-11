@@ -42,9 +42,9 @@ def spm_dcm_erp(*args, **kwargs):
         called upon - because prior constraints are specified by DCM.A, DCM.B,...  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/dcm_meeg/spm_dcm_erp.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_dcm_erp", *args, **kwargs)

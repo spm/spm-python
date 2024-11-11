@@ -32,9 +32,9 @@ def spm_gen_fmri(*args, **kwargs):
         model. The associated weights are free parameters.  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_gen_fmri.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_gen_fmri", *args, **kwargs)

@@ -60,9 +60,9 @@ def ft_crossfrequencyanalysis(*args, **kwargs):
          
         See also FT_FREQANALYSIS, FT_CONNECTIVITYANALYSIS  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/ft_crossfrequencyanalysis.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("ft_crossfrequencyanalysis", *args, **kwargs)

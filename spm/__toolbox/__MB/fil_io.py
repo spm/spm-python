@@ -29,9 +29,9 @@ def fil_io(*args, **kwargs):
         dat      - data structure  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/MB/fil_io.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("fil_io", *args, **kwargs)

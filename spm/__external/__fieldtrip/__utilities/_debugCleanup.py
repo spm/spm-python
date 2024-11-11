@@ -8,9 +8,9 @@ def _debugCleanup(*args, **kwargs):
          
         See also FT_PREAMBLE_DEBUG, FT_POSTAMBLE_DEBUG  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/utilities/private/debugCleanup.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("debugCleanup", *args, **kwargs, nargout=0)

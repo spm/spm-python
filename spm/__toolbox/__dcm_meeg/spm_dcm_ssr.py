@@ -26,9 +26,9 @@ def spm_dcm_ssr(*args, **kwargs):
           options.model        - 'ECD', 'SEP', 'CMC', 'NMM' or 'MFM'  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/dcm_meeg/spm_dcm_ssr.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_dcm_ssr", *args, **kwargs)

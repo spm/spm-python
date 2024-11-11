@@ -29,9 +29,9 @@ def _triangulate_seg(*args, **kwargs):
          
         See also MESH_SPHERE  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/triangulate_seg.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("triangulate_seg", *args, **kwargs)

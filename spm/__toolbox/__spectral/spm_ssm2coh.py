@@ -16,9 +16,9 @@ def spm_ssm2coh(*args, **kwargs):
                        - phase-delay/radial frequency  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/spectral/spm_ssm2coh.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_ssm2coh", *args, **kwargs)

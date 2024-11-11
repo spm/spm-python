@@ -9,9 +9,9 @@ def spm_affine_priors(*args, **kwargs):
         scans, that were matched to the ICBM space.  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_affine_priors.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_affine_priors", *args, **kwargs)

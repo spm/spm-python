@@ -26,9 +26,9 @@ def spm_cva_compare(*args, **kwargs):
         See spm_cva_prob.m for more details  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/mlm/spm_cva_compare.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_cva_compare", *args, **kwargs)

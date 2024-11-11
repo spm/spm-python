@@ -18,9 +18,9 @@ def spm_gn_fmin(*args, **kwargs):
         method and successive line searches.  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_gn_fmin.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_gn_fmin", *args, **kwargs)

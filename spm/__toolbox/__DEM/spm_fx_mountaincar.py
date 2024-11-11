@@ -28,9 +28,9 @@ def spm_fx_mountaincar(*args, **kwargs):
         {carl,malte.kuss}@tuebingen.mpg.de  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DEM/spm_fx_mountaincar.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_fx_mountaincar", *args, **kwargs)

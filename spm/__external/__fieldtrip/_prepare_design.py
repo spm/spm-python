@@ -46,9 +46,9 @@ def _prepare_design(*args, **kwargs):
           comparing all within-units conditions with each other can be overruled by   
           specifying 'ivar' and 'cvar'.  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/prepare_design.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("prepare_design", *args, **kwargs)

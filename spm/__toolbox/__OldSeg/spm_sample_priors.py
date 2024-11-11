@@ -14,9 +14,9 @@ def spm_sample_priors(*args, **kwargs):
         ds1,ds2,ds3 - spatial derivatives of sampled values  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/OldSeg/spm_sample_priors.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_sample_priors", *args, **kwargs)

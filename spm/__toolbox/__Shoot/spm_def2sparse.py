@@ -9,9 +9,9 @@ def spm_def2sparse(*args, **kwargs):
         PI - Filename of image defining field of view etc  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/Shoot/spm_def2sparse.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_def2sparse", *args, **kwargs)

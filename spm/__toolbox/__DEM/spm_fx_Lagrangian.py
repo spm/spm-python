@@ -7,9 +7,9 @@ def spm_fx_Lagrangian(*args, **kwargs):
          
         flow subfunction for Langrangian demo  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DEM/spm_fx_Lagrangian.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_fx_Lagrangian", *args, **kwargs)

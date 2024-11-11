@@ -13,9 +13,9 @@ def spm2fieldtrip(*args, **kwargs):
          
         See also FT_PREPROCESSING, SPM_EEG_LOAD  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/spm2fieldtrip.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm2fieldtrip", *args, **kwargs)

@@ -22,9 +22,9 @@ def _eeg_leadfieldb(*args, **kwargs):
           vol.bnd(i).pos  
           vol.bnd(i).pos  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/forward/private/eeg_leadfieldb.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("eeg_leadfieldb", *args, **kwargs)

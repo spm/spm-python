@@ -54,9 +54,9 @@ def spm_eeg_montage(*args, **kwargs):
         consistent (which is ensured by spm_eeg_prep_ui).  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_eeg_montage.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_eeg_montage", *args, **kwargs)

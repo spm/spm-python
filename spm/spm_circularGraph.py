@@ -15,9 +15,9 @@ def spm_circularGraph(*args, **kwargs):
         connections. The nodes are laid out along a circle, and the connections  
         are drawn within the circle.  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_circularGraph.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_circularGraph", *args, **kwargs, nargout=0)

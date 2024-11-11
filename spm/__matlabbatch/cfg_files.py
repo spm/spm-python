@@ -2,7 +2,7 @@ from spm.__wrapper__ import Runtime, MatlabClassWrapper
 
 
 class cfg_files(MatlabClassWrapper):
-    def __init__(self, *args, _objdict=None, **kwargs):
+    def __init__(self, *args, **kwargs):
         """
           This is the file configuration item class  
              
@@ -76,15 +76,12 @@ class cfg_files(MatlabClassWrapper):
                  doc cfg_files  
             
           
-
+        
         [Matlab code]( https://github.com/spm/spm/blob/main/matlabbatch/@cfg_files/cfg_files.m )
-
+        
         Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
-        if _objdict is None:
-            _objdict = Runtime.call("cfg_files", *args, **kwargs)
-            
-        super().__init__(_objdict)
+        super().__init__()
 
     def cfg2struct(self, *args, **kwargs):
         """
@@ -98,9 +95,9 @@ class cfg_files(MatlabClassWrapper):
            _______________________________________________________________________  
             Copyright (C) 2007 Freiburg Brain Imaging  
           
-
+        
         [Matlab code]( https://github.com/spm/spm/blob/main/matlabbatch/@cfg_files/cfg2struct.m )
-
+        
         Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("cfg2struct", self._as_matlab_object(), *args, **kwargs)
@@ -116,9 +113,9 @@ class cfg_files(MatlabClassWrapper):
            _______________________________________________________________________  
             Copyright (C) 2007 Freiburg Brain Imaging  
           
-
+        
         [Matlab code]( https://github.com/spm/spm/blob/main/matlabbatch/@cfg_files/fieldnames.m )
-
+        
         Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("fieldnames", self._as_matlab_object(), *args, **kwargs)
@@ -146,9 +143,9 @@ class cfg_files(MatlabClassWrapper):
            _______________________________________________________________________  
             Copyright (C) 2007 Freiburg Brain Imaging  
           
-
+        
         [Matlab code]( https://github.com/spm/spm/blob/main/matlabbatch/@cfg_files/gencode_item.m )
-
+        
         Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("gencode_item", self._as_matlab_object(), *args, **kwargs)
@@ -185,9 +182,9 @@ class cfg_files(MatlabClassWrapper):
            _______________________________________________________________________  
             Copyright (C) 2007 Freiburg Brain Imaging  
           
-
+        
         [Matlab code]( https://github.com/spm/spm/blob/main/matlabbatch/@cfg_files/match.m )
-
+        
         Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("match", self._as_matlab_object(), *args, **kwargs)
@@ -203,9 +200,9 @@ class cfg_files(MatlabClassWrapper):
            _______________________________________________________________________  
             Copyright (C) 2007 Freiburg Brain Imaging  
           
-
+        
         [Matlab code]( https://github.com/spm/spm/blob/main/matlabbatch/@cfg_files/showdetail.m )
-
+        
         Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("showdetail", self._as_matlab_object(), *args, **kwargs)
@@ -225,9 +222,9 @@ class cfg_files(MatlabClassWrapper):
            _______________________________________________________________________  
             Copyright (C) 2007 Freiburg Brain Imaging  
           
-
+        
         [Matlab code]( https://github.com/spm/spm/blob/main/matlabbatch/@cfg_files/subs_fields.m )
-
+        
         Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("subs_fields", self._as_matlab_object(), *args, **kwargs)
@@ -265,9 +262,9 @@ class cfg_files(MatlabClassWrapper):
            _______________________________________________________________________  
             Copyright (C) 2007 Freiburg Brain Imaging  
           
-
+        
         [Matlab code]( https://github.com/spm/spm/blob/main/matlabbatch/@cfg_files/subsasgn.m )
-
+        
         Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("subsasgn", self._as_matlab_object(), *args, **kwargs)
@@ -285,9 +282,9 @@ class cfg_files(MatlabClassWrapper):
            _______________________________________________________________________  
             Copyright (C) 2007 Freiburg Brain Imaging  
           
-
+        
         [Matlab code]( https://github.com/spm/spm/blob/main/matlabbatch/@cfg_files/subsasgn_check.m )
-
+        
         Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("subsasgn_check", self._as_matlab_object(), *args, **kwargs)
@@ -316,9 +313,9 @@ class cfg_files(MatlabClassWrapper):
            _______________________________________________________________________  
             Copyright (C) 2007 Freiburg Brain Imaging  
           
-
+        
         [Matlab code]( https://github.com/spm/spm/blob/main/matlabbatch/@cfg_files/subsref.m )
-
+        
         Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("subsref", self._as_matlab_object(), *args, **kwargs)
@@ -335,9 +332,9 @@ class cfg_files(MatlabClassWrapper):
            _______________________________________________________________________  
             Copyright (C) 2007 Freiburg Brain Imaging  
           
-
+        
         [Matlab code]( https://github.com/spm/spm/blob/main/matlabbatch/@cfg_files/private/mysubs_fields.m )
-
+        
         Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("mysubs_fields", self._as_matlab_object(), *args, **kwargs)

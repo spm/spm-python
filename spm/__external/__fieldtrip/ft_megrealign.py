@@ -80,9 +80,9 @@ def ft_megrealign(*args, **kwargs):
          
         See also FT_PREPARE_LOCALSPHERES, FT_PREPARE_SINGLESHELL  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/ft_megrealign.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("ft_megrealign", *args, **kwargs)

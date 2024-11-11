@@ -21,9 +21,9 @@ def ft_estimate_units(*args, **kwargs):
          
         See also FT_CONVERT_UNITS  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/forward/ft_estimate_units.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("ft_estimate_units", *args, **kwargs)

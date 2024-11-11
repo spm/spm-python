@@ -11,9 +11,9 @@ def _readmarkerfile(*args, **kwargs):
         Creates a marker structure which contains number_markers,  
         number_samples, marker_names, and trial_times.  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/readmarkerfile.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("readmarkerfile", *args, **kwargs)

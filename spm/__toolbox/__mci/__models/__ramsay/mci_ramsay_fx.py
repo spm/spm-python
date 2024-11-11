@@ -24,9 +24,9 @@ def mci_ramsay_fx(*args, **kwargs):
         Monte Carlo methods. J Roy Stat Soc B,73(2):123-214.  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/mci/models/ramsay/mci_ramsay_fx.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("mci_ramsay_fx", *args, **kwargs)

@@ -66,9 +66,9 @@ def ft_compute_leadfield(*args, **kwargs):
         FT_HEADMODEL_SINGLESHELL, FT_HEADMODEL_SINGLESPHERE,  
         FT_HEADMODEL_HALFSPACE, FT_HEADMODEL_DUNEURO  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/forward/ft_compute_leadfield.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("ft_compute_leadfield", *args, **kwargs)

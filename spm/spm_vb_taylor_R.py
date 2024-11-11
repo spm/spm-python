@@ -12,9 +12,9 @@ def spm_vb_taylor_R(*args, **kwargs):
         See paper VB3.  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_vb_taylor_R.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_vb_taylor_R", *args, **kwargs)

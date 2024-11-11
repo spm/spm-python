@@ -2,7 +2,7 @@ from spm.__wrapper__ import Runtime, MatlabClassWrapper
 
 
 class cfg_intree(MatlabClassWrapper):
-    def __init__(self, *args, _objdict=None, **kwargs):
+    def __init__(self, *args, **kwargs):
         """
           This is currently only a "marker" class that should be inherited by all  
             within-tree classes. It does not add fields and does not have methods.  
@@ -17,15 +17,12 @@ class cfg_intree(MatlabClassWrapper):
                  doc cfg_intree  
             
           
-
+        
         [Matlab code]( https://github.com/spm/spm/blob/main/matlabbatch/@cfg_intree/cfg_intree.m )
-
+        
         Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
-        if _objdict is None:
-            _objdict = Runtime.call("cfg_intree", *args, **kwargs)
-            
-        super().__init__(_objdict)
+        super().__init__()
 
     def disp(self, *args, **kwargs):
         """
@@ -38,9 +35,9 @@ class cfg_intree(MatlabClassWrapper):
            _______________________________________________________________________  
             Copyright (C) 2007 Freiburg Brain Imaging  
           
-
+        
         [Matlab code]( https://github.com/spm/spm/blob/main/matlabbatch/@cfg_intree/disp.m )
-
+        
         Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("disp", self._as_matlab_object(), *args, **kwargs, nargout=0)
@@ -56,9 +53,9 @@ class cfg_intree(MatlabClassWrapper):
            _______________________________________________________________________  
             Copyright (C) 2007 Freiburg Brain Imaging  
           
-
+        
         [Matlab code]( https://github.com/spm/spm/blob/main/matlabbatch/@cfg_intree/display.m )
-
+        
         Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("display", self._as_matlab_object(), *args, **kwargs, nargout=0)

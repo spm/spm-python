@@ -19,9 +19,9 @@ def _read_neuromag_eve(*args, **kwargs):
         offset needs to be taken into acocunt when combining it with the data from the  
         file on disk.  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/read_neuromag_eve.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("read_neuromag_eve", *args, **kwargs)

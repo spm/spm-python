@@ -47,9 +47,9 @@ def spm_run_bms_map(*args, **kwargs):
         [3] Penny et al., 2004, Comparing Dynamic Causal Models, NeuroImage.  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/config/spm_run_bms_map.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_run_bms_map", *args, **kwargs)

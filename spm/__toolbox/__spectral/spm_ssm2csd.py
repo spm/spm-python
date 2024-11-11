@@ -14,9 +14,9 @@ def spm_ssm2csd(*args, **kwargs):
         csd  - cross spectral density  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/spectral/spm_ssm2csd.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_ssm2csd", *args, **kwargs)

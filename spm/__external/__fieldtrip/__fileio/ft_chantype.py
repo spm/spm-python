@@ -32,9 +32,9 @@ def ft_chantype(*args, **kwargs):
          
         See also FT_READ_HEADER, FT_SENSTYPE, FT_CHANUNIT  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/ft_chantype.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("ft_chantype", *args, **kwargs)

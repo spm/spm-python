@@ -32,9 +32,9 @@ def ft_channelnormalise(*args, **kwargs):
          
         Copyright (C) 2010, Jan-Mathijs Schoffelen  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/ft_channelnormalise.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("ft_channelnormalise", *args, **kwargs)

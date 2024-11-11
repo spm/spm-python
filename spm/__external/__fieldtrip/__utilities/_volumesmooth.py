@@ -7,9 +7,9 @@ def _volumesmooth(*args, **kwargs):
          
         See also VOLUMETHRESHOLD, VOLUMEFILLHOLES  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/utilities/private/volumesmooth.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("volumesmooth", *args, **kwargs)

@@ -35,9 +35,9 @@ def spm_dcm_csd_Q(*args, **kwargs):
         doi: 10.1111/j.1467-9892.2005.00389.x  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_dcm_csd_Q.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_dcm_csd_Q", *args, **kwargs)

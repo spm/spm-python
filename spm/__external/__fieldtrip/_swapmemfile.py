@@ -8,9 +8,9 @@ def _swapmemfile(*args, **kwargs):
          
         Use with extreme caution!  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/swapmemfile.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("swapmemfile", *args, **kwargs)

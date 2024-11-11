@@ -12,9 +12,9 @@ def _eeg_halfspace_dipole(*args, **kwargs):
          
         See also EEG_INFINITE_DIPOLE, EEG_INFINITE_MONOPOLE, EEG_HALFSPACE_MONOPOLE  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/forward/private/eeg_halfspace_dipole.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("eeg_halfspace_dipole", *args, **kwargs)

@@ -16,9 +16,9 @@ def spm_global(*args, **kwargs):
         a criteria of greater than > (global mean)/8.  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_global.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_global", *args, **kwargs)

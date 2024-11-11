@@ -13,9 +13,9 @@ def spm_dcm_graph_functional(*args, **kwargs):
         metric MDS to define the functional space.  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_dcm_graph_functional.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_dcm_graph_functional", *args, **kwargs, nargout=0)

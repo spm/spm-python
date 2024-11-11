@@ -26,9 +26,9 @@ def spm_write_filtered(*args, **kwargs):
         of SPM, but can be used freestanding.  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_write_filtered.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_write_filtered", *args, **kwargs)

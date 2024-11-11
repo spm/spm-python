@@ -24,9 +24,9 @@ def _eeg_leadfield4_prepare(*args, **kwargs):
          
         See also EEG_LEADFIELD4  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/forward/private/eeg_leadfield4_prepare.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("eeg_leadfield4_prepare", *args, **kwargs)

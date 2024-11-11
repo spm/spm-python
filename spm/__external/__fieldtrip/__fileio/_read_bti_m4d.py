@@ -8,9 +8,9 @@ def _read_bti_m4d(*args, **kwargs):
         Use as  
           msi = read_bti_m4d(filename)  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/read_bti_m4d.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("read_bti_m4d", *args, **kwargs)

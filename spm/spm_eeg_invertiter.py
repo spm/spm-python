@@ -15,9 +15,9 @@ def spm_eeg_invertiter(*args, **kwargs):
         distributions, else replaces posterior with best of the iterations.  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_eeg_invertiter.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_eeg_invertiter", *args, **kwargs)

@@ -19,9 +19,9 @@ def spm_kron(*args, **kwargs):
         recursively.  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_kron.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_kron", *args, **kwargs)

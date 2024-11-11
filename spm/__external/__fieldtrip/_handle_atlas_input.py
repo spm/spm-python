@@ -12,9 +12,9 @@ def _handle_atlas_input(*args, **kwargs):
         This code was taken from ft_sourceplot to avoid duplication upon adding similar functionality  
         to ft_sourceplot_interactive.  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/handle_atlas_input.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("handle_atlas_input", *args, **kwargs)

@@ -17,9 +17,9 @@ def spm_fp_fun(*args, **kwargs):
         y   - prediction  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_fp_fun.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_fp_fun", *args, **kwargs)

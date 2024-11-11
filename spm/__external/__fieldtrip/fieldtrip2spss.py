@@ -27,9 +27,9 @@ def fieldtrip2spss(*args, **kwargs):
         After importing to SPSS, click the Missing cell in the Variable View  
         window and enter 9999 as the missing value definition.  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fieldtrip2spss.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("fieldtrip2spss", *args, **kwargs, nargout=0)

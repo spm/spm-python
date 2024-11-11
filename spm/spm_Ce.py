@@ -26,9 +26,9 @@ def spm_Ce(*args, **kwargs):
         See also: spm_Q.m  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_Ce.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_Ce", *args, **kwargs)

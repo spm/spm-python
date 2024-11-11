@@ -7,9 +7,9 @@ def spm_cat_struct(*args, **kwargs):
         FORMAT s = spm_cat_struct(s1, s2, ...)  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_cat_struct.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_cat_struct", *args, **kwargs)

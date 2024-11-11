@@ -18,9 +18,9 @@ def mci_compare_gradients(*args, **kwargs):
         Note: 4. AdjSun may not work for nmm2-r2p2.  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/mci/demo-gradients/mci_compare_gradients.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("mci_compare_gradients", *args, **kwargs)

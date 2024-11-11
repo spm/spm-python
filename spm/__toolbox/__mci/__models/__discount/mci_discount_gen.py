@@ -14,9 +14,9 @@ def mci_discount_gen(*args, **kwargs):
         y         binary decisions based on g  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/mci/models/discount/mci_discount_gen.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("mci_discount_gen", *args, **kwargs)

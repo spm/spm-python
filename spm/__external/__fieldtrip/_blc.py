@@ -11,9 +11,9 @@ def _blc(*args, **kwargs):
         If no begin and end are specified, the whole timeinterval is  
         used for baseline correction.  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/blc.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("blc", *args, **kwargs)

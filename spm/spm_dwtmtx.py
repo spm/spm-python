@@ -16,9 +16,9 @@ def spm_dwtmtx(*args, **kwargs):
         dimensional Haar Discrete Wavelet transform.  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_dwtmtx.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_dwtmtx", *args, **kwargs)

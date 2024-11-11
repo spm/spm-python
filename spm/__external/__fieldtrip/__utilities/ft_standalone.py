@@ -26,9 +26,9 @@ def ft_standalone(*args, **kwargs):
          
         See also FT_COMPILE_STANDALONE  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/utilities/ft_standalone.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("ft_standalone", *args, **kwargs, nargout=0)

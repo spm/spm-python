@@ -13,9 +13,9 @@ def subsasgn_check_funhandle(*args, **kwargs):
        _______________________________________________________________________  
         Copyright (C) 2007 Freiburg Brain Imaging  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/matlabbatch/subsasgn_check_funhandle.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("subsasgn_check_funhandle", *args, **kwargs)

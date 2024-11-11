@@ -13,9 +13,9 @@ def spm_funfun(*args, **kwargs):
         which is cos(2.1)^2  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_funfun.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_funfun", *args, **kwargs)

@@ -25,9 +25,9 @@ def spm_eeg_artefact_saccade(*args, **kwargs):
         the United States of America, 103: 7192-7197.   
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_eeg_artefact_saccade.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_eeg_artefact_saccade", *args, **kwargs)

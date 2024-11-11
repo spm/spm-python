@@ -9,9 +9,9 @@ def _timelock2freq(*args, **kwargs):
          
         This is needed after source reconstruction using FREQ2TIMELOCK.  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/timelock2freq.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("timelock2freq", *args, **kwargs)

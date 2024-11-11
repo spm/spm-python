@@ -56,9 +56,9 @@ def spm_file(*args, **kwargs):
         See also: spm_fileparts, spm_select, spm_file_ext, spm_existfile  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_file.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_file", *args, **kwargs)

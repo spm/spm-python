@@ -25,9 +25,9 @@ def mne_ex_read_raw(*args, **kwargs):
           fiff_read_raw_segment_times or fiff_read_raw_segment  
           between open and close  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/mne/mne_ex_read_raw.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("mne_ex_read_raw", *args, **kwargs)

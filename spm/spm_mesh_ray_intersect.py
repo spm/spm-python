@@ -32,9 +32,9 @@ def spm_mesh_ray_intersect(*args, **kwargs):
         plot3(P(:,1),P(:,2),P(:,3),'*g','LineWidth',4);  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_mesh_ray_intersect.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_mesh_ray_intersect", *args, **kwargs)

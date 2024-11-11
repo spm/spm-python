@@ -23,9 +23,9 @@ def spm_maff(*args, **kwargs):
         ff      - a fudge factor (derived from the one above)  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/OldSeg/spm_maff.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_maff", *args, **kwargs)

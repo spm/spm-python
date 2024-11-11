@@ -63,9 +63,9 @@ def ft_megplanar(*args, **kwargs):
          
         See also FT_COMBINEPLANAR, FT_PREPARE_NEIGHBOURS  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/ft_megplanar.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("ft_megplanar", *args, **kwargs)

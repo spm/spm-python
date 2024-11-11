@@ -24,9 +24,9 @@ def _randstatprob(*args, **kwargs):
         creating a reference distribution based on the minimum or maximum  
         of all voxels for each randomization.  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/randstatprob.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("randstatprob", *args, **kwargs)

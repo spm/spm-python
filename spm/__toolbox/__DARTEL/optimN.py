@@ -63,9 +63,9 @@ def optimN(*args, **kwargs):
         boundary conditions (zero gradients at the boundaries) use optimNn.  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DARTEL/optimN.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("optimN", *args, **kwargs)

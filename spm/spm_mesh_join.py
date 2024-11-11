@@ -13,9 +13,9 @@ def spm_mesh_join(*args, **kwargs):
         See also spm_mesh_split  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_mesh_join.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_mesh_join", *args, **kwargs)

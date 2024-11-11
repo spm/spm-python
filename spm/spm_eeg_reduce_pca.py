@@ -18,9 +18,9 @@ def spm_eeg_reduce_pca(*args, **kwargs):
              montage struct implementing projection to PCA subspace  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_eeg_reduce_pca.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_eeg_reduce_pca", *args, **kwargs)

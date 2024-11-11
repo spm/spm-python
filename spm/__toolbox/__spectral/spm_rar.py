@@ -44,9 +44,9 @@ def spm_rar(*args, **kwargs):
         models. IEEE Transactions on Signal Processing, 50(9):2245-2257, 2002  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/spectral/spm_rar.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_rar", *args, **kwargs)

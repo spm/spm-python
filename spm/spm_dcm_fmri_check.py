@@ -49,9 +49,9 @@ def spm_dcm_fmri_check(*args, **kwargs):
         This routine is compatible with DCM8, DCM10 and DCM12 files.  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_dcm_fmri_check.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_dcm_fmri_check", *args, **kwargs)

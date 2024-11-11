@@ -23,9 +23,9 @@ def spm_MDP_VB_trial(*args, **kwargs):
         please see spm_MDP_VB. For multiple trials please see spm_MDP_VB_game  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DEM/spm_MDP_VB_trial.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_MDP_VB_trial", *args, **kwargs, nargout=0)

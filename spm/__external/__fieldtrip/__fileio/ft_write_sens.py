@@ -22,9 +22,9 @@ def ft_write_sens(*args, **kwargs):
          
         See also FT_READ_SENS, FT_DATATYPE_SENS, FT_WRITE_DATA, FT_WRITE_MRI, FT_WRITE_SENS  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/ft_write_sens.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("ft_write_sens", *args, **kwargs, nargout=0)

@@ -70,9 +70,9 @@ def spm_eeg_invert_classic_volumetric(*args, **kwargs):
         used in this implementation (just single patches) There is an option for  
         a Beamforming prior : inversion type 'EBB'.  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_eeg_invert_classic_volumetric.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_eeg_invert_classic_volumetric", *args, **kwargs)

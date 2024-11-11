@@ -21,9 +21,9 @@ def spm_mvb_U(*args, **kwargs):
         U      - pattern or mode weights  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_mvb_U.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_mvb_U", *args, **kwargs)

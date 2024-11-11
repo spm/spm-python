@@ -139,9 +139,9 @@ def ft_componentanalysis(*args, **kwargs):
         See also FT_TOPOPLOTIC, FT_REJECTCOMPONENT, FASTICA, RUNICA, BINICA, SVD,  
         JADER, VARIMAX, DSS, CCA, SOBI, ICASSO  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/ft_componentanalysis.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("ft_componentanalysis", *args, **kwargs)

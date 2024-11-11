@@ -27,9 +27,9 @@ def _ft_getopt(*args, **kwargs):
          
         See also FT_SETOPT, FT_CHECKOPT, INPUTPARSER  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/connectivity/private/ft_getopt.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("ft_getopt", *args, **kwargs)

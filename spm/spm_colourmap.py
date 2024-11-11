@@ -38,9 +38,9 @@ def spm_colourmap(*args, **kwargs):
           https://github.com/CPernet/brain_colours  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_colourmap.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_colourmap", *args, **kwargs)

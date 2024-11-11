@@ -20,9 +20,9 @@ def _read_ricoh_header(*args, **kwargs):
          
         See also READ_RICOH_DATA, READ_RICOH_EVENT  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/read_ricoh_header.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("read_ricoh_header", *args, **kwargs)

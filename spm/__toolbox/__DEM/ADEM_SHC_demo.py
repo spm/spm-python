@@ -9,9 +9,9 @@ def ADEM_SHC_demo(*args, **kwargs):
         points on the circumference of a circle.  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DEM/ADEM_SHC_demo.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("ADEM_SHC_demo", *args, **kwargs, nargout=0)

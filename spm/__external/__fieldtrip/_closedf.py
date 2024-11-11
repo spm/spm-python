@@ -9,9 +9,9 @@ def _closedf(*args, **kwargs):
          
         EDF   struct of EDF-Header of a EDF-File  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/closedf.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("closedf", *args, **kwargs)

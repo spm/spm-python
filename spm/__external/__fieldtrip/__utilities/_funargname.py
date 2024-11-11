@@ -11,9 +11,9 @@ def _funargname(*args, **kwargs):
         where the input and output function arguments will be returned  
         as cell-arrays containing strings.  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/utilities/private/funargname.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("funargname", *args, **kwargs)

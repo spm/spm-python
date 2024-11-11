@@ -42,9 +42,9 @@ def spm_dcm_peb_bmc_fam(*args, **kwargs):
                   .famdef       - Input vector of family assignments  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_dcm_peb_bmc_fam.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_dcm_peb_bmc_fam", *args, **kwargs)

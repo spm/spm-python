@@ -21,9 +21,9 @@ def spm_mmtspec(*args, **kwargs):
         Plot spectrogram using imagesc(t,f,p); axis xy  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/spectral/spm_mmtspec.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_mmtspec", *args, **kwargs)

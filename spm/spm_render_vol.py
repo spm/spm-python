@@ -31,9 +31,9 @@ def spm_render_vol(*args, **kwargs):
         Illumination is assumed to be from the viewplane.  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_render_vol.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_render_vol", *args, **kwargs)

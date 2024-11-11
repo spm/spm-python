@@ -38,9 +38,9 @@ def ft_freqanalysis_mvar(*args, **kwargs):
          
         See also FT_MVARANALYSIS, FT_DATATYPE_MVAR, FT_PROGRESS  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/ft_freqanalysis_mvar.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("ft_freqanalysis_mvar", *args, **kwargs)

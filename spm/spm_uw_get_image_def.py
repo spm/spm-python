@@ -38,9 +38,9 @@ def spm_uw_get_image_def(*args, **kwargs):
                      x, y... are original coordinates.  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_uw_get_image_def.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_uw_get_image_def", *args, **kwargs)

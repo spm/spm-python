@@ -17,9 +17,9 @@ def mne_load_coil_def(*args, **kwargs):
           This routine is modified from the original BrainStorm routine  
           created by John C. Mosher  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/mne/mne_load_coil_def.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("mne_load_coil_def", *args, **kwargs)

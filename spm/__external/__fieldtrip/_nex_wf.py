@@ -18,9 +18,9 @@ def _nex_wf(*args, **kwargs):
           nf - number of data points in each waveform  
           w - matrix of waveform a/d values [n nf] (in millivolts)  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/nex_wf.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("nex_wf", *args, **kwargs)

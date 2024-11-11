@@ -22,9 +22,9 @@ def _hasyokogawa(*args, **kwargs):
         See also READ_YOKOGAWA_HEADER, READ_YOKOGAWA_DATA, READ_YOKOGAWA_EVENT,  
         YOKOGAWA2GRAD  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/inverse/private/hasyokogawa.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("hasyokogawa", *args, **kwargs)

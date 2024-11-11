@@ -28,9 +28,9 @@ def spm_DEM_generate(*args, **kwargs):
         not specified in M(i).V and M(i).W  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_DEM_generate.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_DEM_generate", *args, **kwargs)

@@ -10,9 +10,9 @@ def _mesh_tetrahedron(*args, **kwargs):
          
         See also MESH_ICOSAHEDRON, MESH_OCTAHEDRON, MESH_SPHERE  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/forward/private/mesh_tetrahedron.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("mesh_tetrahedron", *args, **kwargs)

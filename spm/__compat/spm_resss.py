@@ -78,9 +78,9 @@ def spm_resss(*args, **kwargs):
        __________________________________________________________________________  
         Copyright (C) 1999-2012 Wellcome Trust Centre for Neuroimaging  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/compat/spm_resss.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_resss", *args, **kwargs)

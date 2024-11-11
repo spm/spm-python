@@ -23,9 +23,9 @@ def spm_resels_vol(*args, **kwargs):
         Reference : Worsley KJ et al 1996, Hum Brain Mapp. 4:58-73  
        _______________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_resels_vol.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_resels_vol", *args, **kwargs)

@@ -61,9 +61,9 @@ def ft_math(*args, **kwargs):
          
         See also FT_DATATYPE  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/ft_math.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("ft_math", *args, **kwargs)

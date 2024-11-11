@@ -30,9 +30,9 @@ def _avw_hdr_read(*args, **kwargs):
          
         See also avw_hdr_write, avw_hdr_make, avw_view_hdr, avw_view  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/avw_hdr_read.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("avw_hdr_read", *args, **kwargs)

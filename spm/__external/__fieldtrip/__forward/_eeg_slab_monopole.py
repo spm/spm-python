@@ -13,9 +13,9 @@ def _eeg_slab_monopole(*args, **kwargs):
         Implemented from Malmivuo J, Plonsey R, Bioelectromagnetism (1993)  
         http://www.bem.fi/book/index.htm  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/forward/private/eeg_slab_monopole.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("eeg_slab_monopole", *args, **kwargs)

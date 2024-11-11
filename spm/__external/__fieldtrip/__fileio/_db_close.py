@@ -8,9 +8,9 @@ def _db_close(*args, **kwargs):
         Use as  
           db_close  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/db_close.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("db_close", *args, **kwargs, nargout=0)

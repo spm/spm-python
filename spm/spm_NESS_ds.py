@@ -27,9 +27,9 @@ def spm_NESS_ds(*args, **kwargs):
         of the log density at the specified points in state space are returned.  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_NESS_ds.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_NESS_ds", *args, **kwargs)

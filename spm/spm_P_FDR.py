@@ -79,9 +79,9 @@ def spm_P_FDR(*args, **kwargs):
         statistics".  J of Statistical Planning and Inference, 82:171-196.  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_P_FDR.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_P_FDR", *args, **kwargs)

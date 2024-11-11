@@ -13,9 +13,9 @@ def _find_outermost_boundary(*args, **kwargs):
           bnd(i).pnt  vertices of boundary i (matrix of size Nx3)  
           bnd(i).tri  triangles of boundary i (matrix of size Mx3)  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/find_outermost_boundary.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("find_outermost_boundary", *args, **kwargs)

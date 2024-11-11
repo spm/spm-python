@@ -12,9 +12,9 @@ def spm_slice2vol_reslice(*args, **kwargs):
         fwhm - Smoothing FWHM (mm)  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/Spatial/spm_slice2vol_reslice.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_slice2vol_reslice", *args, **kwargs, nargout=0)

@@ -11,9 +11,9 @@ def spm_vol_nifti(*args, **kwargs):
         V   - a structure containing the image volume information  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_vol_nifti.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_vol_nifti", *args, **kwargs)

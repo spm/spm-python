@@ -32,9 +32,9 @@ def spm_dilate(*args, **kwargs):
         spm_dilate.m and spm_erode.m  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_dilate.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_dilate", *args, **kwargs)

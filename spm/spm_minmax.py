@@ -15,9 +15,9 @@ def spm_minmax(*args, **kwargs):
         upper value is one that encompases 99.5% of the values.  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_minmax.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_minmax", *args, **kwargs)

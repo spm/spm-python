@@ -11,9 +11,9 @@ def mne_find_source_space_hemi(*args, **kwargs):
         src      - The source space to investigate  
         hemi     - Deduced hemisphere id  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/mne/mne_find_source_space_hemi.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("mne_find_source_space_hemi", *args, **kwargs)

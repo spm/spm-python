@@ -13,9 +13,9 @@ def _read_polhemus_pos(*args, **kwargs):
           elec.label     cell-array with electrode labels (strings)  
           elec.pnt       position of each electrode  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/read_polhemus_pos.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("read_polhemus_pos", *args, **kwargs)

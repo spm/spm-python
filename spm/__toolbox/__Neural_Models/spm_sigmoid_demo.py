@@ -30,9 +30,9 @@ def spm_sigmoid_demo(*args, **kwargs):
         EEG measurement of sensory evoked responses.  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/Neural_Models/spm_sigmoid_demo.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_sigmoid_demo", *args, **kwargs, nargout=0)

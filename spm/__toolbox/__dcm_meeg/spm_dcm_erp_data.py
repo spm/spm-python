@@ -34,9 +34,9 @@ def spm_dcm_erp_data(*args, **kwargs):
            DCM.options.h  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/dcm_meeg/spm_dcm_erp_data.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_dcm_erp_data", *args, **kwargs)

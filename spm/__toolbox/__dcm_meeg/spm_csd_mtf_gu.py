@@ -26,9 +26,9 @@ def spm_csd_mtf_gu(*args, **kwargs):
          
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/dcm_meeg/spm_csd_mtf_gu.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_csd_mtf_gu", *args, **kwargs)

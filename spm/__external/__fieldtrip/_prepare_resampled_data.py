@@ -39,9 +39,9 @@ def _prepare_resampled_data(*args, **kwargs):
         for multiple data objects in three conditions  
           [cfg, r11..., r21 ..., r31 ...] = prepare_resampled_data(cfg, o11 ..., o21 ..., o31 ...);  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/prepare_resampled_data.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("prepare_resampled_data", *args, **kwargs)

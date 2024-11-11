@@ -16,9 +16,9 @@ def spm_sections(*args, **kwargs):
         Regional foci from the selected xSPM are rendered on this image.  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_sections.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_sections", *args, **kwargs, nargout=0)

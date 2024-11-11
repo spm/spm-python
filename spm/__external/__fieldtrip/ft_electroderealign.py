@@ -142,9 +142,9 @@ def ft_electroderealign(*args, **kwargs):
         See also FT_READ_SENS, FT_VOLUMEREALIGN, FT_INTERACTIVEREALIGN,  
         FT_DETERMINE_COORDSYS, FT_PREPARE_MESH  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/ft_electroderealign.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("ft_electroderealign", *args, **kwargs)

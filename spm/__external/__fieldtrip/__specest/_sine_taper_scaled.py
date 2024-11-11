@@ -11,9 +11,9 @@ def _sine_taper_scaled(*args, **kwargs):
         april 29, 2011. Before april 29, 2011, equivalent scaling was applied to  
         the powerspectra of the tapered data segments, prior to averaging.  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/specest/private/sine_taper_scaled.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("sine_taper_scaled", *args, **kwargs)

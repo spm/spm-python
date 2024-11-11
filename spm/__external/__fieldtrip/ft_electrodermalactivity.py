@@ -25,9 +25,9 @@ def ft_electrodermalactivity(*args, **kwargs):
          
         See also FT_HEARTRATE, FT_HEADMOVEMENT, FT_REGRESSCONFOUND  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/ft_electrodermalactivity.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("ft_electrodermalactivity", *args, **kwargs)

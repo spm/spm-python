@@ -17,9 +17,9 @@ def spm_mvtpdf(*args, **kwargs):
         Bayesian Theory, Wiley (page 435)  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/mci/inference/spm_mvtpdf.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_mvtpdf", *args, **kwargs)

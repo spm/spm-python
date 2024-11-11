@@ -19,9 +19,9 @@ def spm_opm_psd(*args, **kwargs):
        	S.interact		- allow inspection of channels			- Default: 0  
        	S.select		- enable selection of channels			- Default: 0  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/MEEGtools/spm_opm_psd.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_opm_psd", *args, **kwargs)

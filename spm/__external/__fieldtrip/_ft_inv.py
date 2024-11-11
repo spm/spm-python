@@ -57,9 +57,9 @@ def _ft_inv(*args, **kwargs):
          
         See also INV, PINV, CONDEST, RANK  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/ft_inv.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("ft_inv", *args, **kwargs)

@@ -16,9 +16,9 @@ def spm_mb_classes(*args, **kwargs):
         FORMAT mu      = spm_mb_classes('template_k1',mu,delta)  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/MB/spm_mb_classes.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_mb_classes", *args, **kwargs)

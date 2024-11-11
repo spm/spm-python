@@ -23,9 +23,9 @@ def spm_mask(*args, **kwargs):
         to the routine.  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_mask.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_mask", *args, **kwargs, nargout=0)

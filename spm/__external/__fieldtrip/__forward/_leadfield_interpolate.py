@@ -10,9 +10,9 @@ def _leadfield_interpolate(*args, **kwargs):
         Use as  
           lf = leadfield_interpolate(pos, vol)  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/forward/private/leadfield_interpolate.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("leadfield_interpolate", *args, **kwargs)

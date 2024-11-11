@@ -25,9 +25,9 @@ def _eeg_leadfield4(*args, **kwargs):
         See also EEG_LEADFIELD4_PREPARE for precomputing the constant factors,  
         which can save time when multiple leadfield computations are done.  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/forward/private/eeg_leadfield4.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("eeg_leadfield4", *args, **kwargs)

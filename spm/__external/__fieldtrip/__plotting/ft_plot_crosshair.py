@@ -25,9 +25,9 @@ def ft_plot_crosshair(*args, **kwargs):
          
         See also FT_PLOT_BOX, FT_PLOT_LINE, TEXT, LINE  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/plotting/ft_plot_crosshair.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("ft_plot_crosshair", *args, **kwargs)

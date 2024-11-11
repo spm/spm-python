@@ -15,9 +15,9 @@ def _prepare_mesh_headshape(*args, **kwargs):
          
         See also PREPARE_MESH_MANUAL, PREPARE_MESH_SEGMENTATION  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/prepare_mesh_headshape.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("prepare_mesh_headshape", *args, **kwargs)

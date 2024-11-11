@@ -14,9 +14,9 @@ def mne_write_inverse_sol_stc(*args, **kwargs):
         tmin      - Time of the first data point in seconds  
         tstep     - Time between data points in seconds  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/mne/mne_write_inverse_sol_stc.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("mne_write_inverse_sol_stc", *args, **kwargs, nargout=0)

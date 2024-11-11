@@ -24,9 +24,9 @@ def ft_plot_topo3d(*args, **kwargs):
         See also FT_PLOT_TOPO, FT_PLOT_SENS, FT_PLOT_MESH, FT_PLOT_HEADSHAPE,  
         FT_TOPOPLOTER, FT_TOPOPLOTTFR  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/plotting/ft_plot_topo3d.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("ft_plot_topo3d", *args, **kwargs, nargout=0)

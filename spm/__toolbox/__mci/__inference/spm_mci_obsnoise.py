@@ -16,9 +16,9 @@ def spm_mci_obsnoise(*args, **kwargs):
         Y         data structures  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/mci/inference/spm_mci_obsnoise.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_mci_obsnoise", *args, **kwargs)

@@ -16,9 +16,9 @@ def _notchfilter(*args, **kwargs):
         if Fline is specified as 50, a band of 48-52 is filtered out  
         if Fline is specified as [low high], that band is filtered out  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/notchfilter.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("notchfilter", *args, **kwargs)

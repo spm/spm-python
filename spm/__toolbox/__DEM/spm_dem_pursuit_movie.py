@@ -27,9 +27,9 @@ def spm_dem_pursuit_movie(*args, **kwargs):
           g(4) - target location (visual) - intrinsic coordinates (polar)  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DEM/spm_dem_pursuit_movie.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_dem_pursuit_movie", *args, **kwargs, nargout=0)

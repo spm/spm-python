@@ -126,9 +126,9 @@ def ft_databrowser(*args, **kwargs):
         FT_ARTIFACT_JUMP, FT_ARTIFACT_MANUAL, FT_ARTIFACT_THRESHOLD, FT_ARTIFACT_CLIP,  
         FT_ARTIFACT_ECG, FT_COMPONENTANALYSIS  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/ft_databrowser.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("ft_databrowser", *args, **kwargs)

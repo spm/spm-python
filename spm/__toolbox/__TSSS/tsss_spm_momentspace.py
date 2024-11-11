@@ -19,9 +19,9 @@ def tsss_spm_momentspace(*args, **kwargs):
         beamformer. Brain Topogr. 2010 Jun;23(2):128-33.  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/TSSS/tsss_spm_momentspace.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("tsss_spm_momentspace", *args, **kwargs)

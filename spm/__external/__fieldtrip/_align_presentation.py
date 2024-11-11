@@ -22,9 +22,9 @@ def _align_presentation(*args, **kwargs):
          
         See also DATA2BIDS, FT_READ_EVENT, FT_DEFINETRIAL  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/align_presentation.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("align_presentation", *args, **kwargs)

@@ -14,9 +14,9 @@ def _parameterselection(*args, **kwargs):
           data     structure with anatomical or functional data  
           select   returns the selected parameters as a cell-array  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/parameterselection.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("parameterselection", *args, **kwargs)

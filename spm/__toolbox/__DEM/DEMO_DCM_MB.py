@@ -51,9 +51,9 @@ def DEMO_DCM_MB(*args, **kwargs):
           
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DEM/DEMO_DCM_MB.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("DEMO_DCM_MB", *args, **kwargs)

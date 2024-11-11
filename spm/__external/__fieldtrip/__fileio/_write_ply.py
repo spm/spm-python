@@ -14,9 +14,9 @@ def _write_ply(*args, **kwargs):
          
         See also READ_PLY, READ_VTK, WRITE_VTK  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/write_ply.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("write_ply", *args, **kwargs, nargout=0)

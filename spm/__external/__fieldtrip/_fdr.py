@@ -21,9 +21,9 @@ def _fdr(*args, **kwargs):
         There are two types of FDR correction (Benjamini-Hochberg & Benjamini-Yekutieli), of  
         which the second is currently implemented.  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/fdr.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("fdr", *args, **kwargs)

@@ -18,9 +18,9 @@ def pp_settings(*args, **kwargs):
         ext - extrapolation flag 0/1  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/Spatial/pp_settings.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("pp_settings", *args, **kwargs)

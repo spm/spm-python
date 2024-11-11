@@ -13,9 +13,9 @@ def _remove_unused_vertices(*args, **kwargs):
          
         See also REMOVE_VERTICES, REMOVE_DOUBLE_VERTICES  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/forward/private/remove_unused_vertices.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("remove_unused_vertices", *args, **kwargs)

@@ -9,9 +9,9 @@ def _find_triangle_neighbours(*args, **kwargs):
           
         [nb] = find_triangle_neighbours(pnt, tri)  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/plotting/private/find_triangle_neighbours.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("find_triangle_neighbours", *args, **kwargs)

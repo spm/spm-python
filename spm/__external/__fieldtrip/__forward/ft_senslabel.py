@@ -59,9 +59,9 @@ def ft_senslabel(*args, **kwargs):
          
         See also FT_SENSTYPE, FT_CHANNELSELECTION  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/forward/ft_senslabel.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("ft_senslabel", *args, **kwargs)

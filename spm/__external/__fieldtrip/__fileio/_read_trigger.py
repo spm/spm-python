@@ -17,9 +17,9 @@ def _read_trigger(*args, **kwargs):
          
         See also FT_READ_EVENT  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/read_trigger.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("read_trigger", *args, **kwargs)

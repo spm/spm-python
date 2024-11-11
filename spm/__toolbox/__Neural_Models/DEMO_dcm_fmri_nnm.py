@@ -38,9 +38,9 @@ def DEMO_dcm_fmri_nnm(*args, **kwargs):
         DCM.options.hidden                 % indices of hidden regions  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/Neural_Models/DEMO_dcm_fmri_nnm.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("DEMO_dcm_fmri_nnm", *args, **kwargs)

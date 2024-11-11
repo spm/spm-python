@@ -28,9 +28,9 @@ def _elproj(*args, **kwargs):
          
         See also PROJECTTRI  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/elproj.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("elproj", *args, **kwargs)

@@ -11,9 +11,9 @@ def ndstest(*args, **kwargs):
        mode for inspection if any one of the tests exhibits an error greater than  
        TOL.  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DEM/ndstest.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("ndstest", *args, **kwargs)

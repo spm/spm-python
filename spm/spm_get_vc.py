@@ -29,9 +29,9 @@ def spm_get_vc(*args, **kwargs):
         observations under different levels of a factor.  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_get_vc.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_get_vc", *args, **kwargs)

@@ -84,9 +84,9 @@ def spm_cva_ui(*args, **kwargs):
         3(3):167-174.  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_cva_ui.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_cva_ui", *args, **kwargs)

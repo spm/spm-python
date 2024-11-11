@@ -24,9 +24,9 @@ def FEP_lorenz_surprise(*args, **kwargs):
         a reasonable approximation in the setting of random fluctuations.  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DEM/FEP_lorenz_surprise.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("FEP_lorenz_surprise", *args, **kwargs, nargout=0)

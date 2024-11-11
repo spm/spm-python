@@ -13,9 +13,9 @@ def spm_deface(*args, **kwargs):
         so individuals are more difficult to identify from surface renderings.  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_deface.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_deface", *args, **kwargs)

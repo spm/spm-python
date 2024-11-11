@@ -17,9 +17,9 @@ def spm_copy(*args, **kwargs):
                     mode: copy mode (see copyfile's help)  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_copy.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_copy", *args, **kwargs, nargout=0)

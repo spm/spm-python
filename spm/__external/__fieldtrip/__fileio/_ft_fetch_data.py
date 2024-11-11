@@ -11,9 +11,9 @@ def _ft_fetch_data(*args, **kwargs):
          
         See also FT_READ_DATA, FT_FETCH_HEADER, FT_FETCH_EVENT  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/ft_fetch_data.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("ft_fetch_data", *args, **kwargs)

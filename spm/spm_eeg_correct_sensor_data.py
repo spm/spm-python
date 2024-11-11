@@ -20,9 +20,9 @@ def spm_eeg_correct_sensor_data(*args, **kwargs):
           Electroencephalogr Clin Neurophysiol. 1994 Mar;90(3):229-41.  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_eeg_correct_sensor_data.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_eeg_correct_sensor_data", *args, **kwargs)

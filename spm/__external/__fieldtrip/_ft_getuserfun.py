@@ -18,9 +18,9 @@ def _ft_getuserfun(*args, **kwargs):
          
         If no appropriate function is found, the empty array [] will be returned.  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/ft_getuserfun.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("ft_getuserfun", *args, **kwargs)

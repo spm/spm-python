@@ -15,9 +15,9 @@ def spm_fx_dem_cue(*args, **kwargs):
         P.x  - target locations (visual) - extrinsic coordinates (Cartesian)  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DEM/spm_fx_dem_cue.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_fx_dem_cue", *args, **kwargs)

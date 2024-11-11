@@ -173,9 +173,9 @@ def spm_input(*args, **kwargs):
                  : spm_input.m (Input wrapper function - handles batch mode)  
        _______________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_input.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_input", *args, **kwargs)

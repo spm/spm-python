@@ -44,9 +44,9 @@ def estimate_greens_mmclab(*args, **kwargs):
         1-scalp, 2-CSF, 3-gray matter, 4-white matter   
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/dcm_fnirs/mmclab/estimate_greens_mmclab.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("estimate_greens_mmclab", *args, **kwargs)

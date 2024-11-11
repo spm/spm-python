@@ -33,9 +33,9 @@ def spm_vpca(*args, **kwargs):
               Prior precision of Mean: mean_beta  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/mlm/spm_vpca.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_vpca", *args, **kwargs)

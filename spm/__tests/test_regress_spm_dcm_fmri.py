@@ -11,9 +11,9 @@ def test_regress_spm_dcm_fmri(*args, **kwargs):
           https://www.fil.ion.ucl.ac.uk/spm/docs/tutorials/dcm/dcm_fmri_first_level_gui/  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/tests/test_regress_spm_dcm_fmri.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("test_regress_spm_dcm_fmri", *args, **kwargs)

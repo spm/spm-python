@@ -34,9 +34,9 @@ def spm_soreduce(*args, **kwargs):
                y(i) = L(i,:)*q + ...  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_soreduce.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_soreduce", *args, **kwargs)

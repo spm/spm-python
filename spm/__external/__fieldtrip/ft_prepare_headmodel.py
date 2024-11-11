@@ -128,9 +128,9 @@ def ft_prepare_headmodel(*args, **kwargs):
         FT_HEADMODEL_CONCENTRICSPHERES, FT_HEADMODEL_LOCALSPHERES,  
         FT_HEADMODEL_SINGLESHELL, FT_HEADMODEL_INTERPOLATE, FT_HEADMODEL_DUNEURO  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/ft_prepare_headmodel.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("ft_prepare_headmodel", *args, **kwargs)

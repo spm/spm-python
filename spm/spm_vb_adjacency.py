@@ -14,9 +14,9 @@ def spm_vb_adjacency(*args, **kwargs):
         Wij      edge weight between nodes i and j if they are neighbors, otherwise 0  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_vb_adjacency.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_vb_adjacency", *args, **kwargs)

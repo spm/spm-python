@@ -32,9 +32,9 @@ def DEM_demo_MDP_search(*args, **kwargs):
         see also: DEM_demo_MDP_habits.m and spm_MPD_VB_X.m  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DEM/DEM_demo_MDP_search.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("DEM_demo_MDP_search", *args, **kwargs)

@@ -25,9 +25,9 @@ def spm_x_nmm(*args, **kwargs):
         see also: spm_x_mfm  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/dcm_meeg/spm_x_nmm.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_x_nmm", *args, **kwargs)

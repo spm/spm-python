@@ -19,9 +19,9 @@ def edf2fieldtrip(*args, **kwargs):
         See also FT_PREPROCESSING, FT_DEFINETRIAL, FT_REDEFINETRIAL,  
         FT_READ_EVENT  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/edf2fieldtrip.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("edf2fieldtrip", *args, **kwargs)

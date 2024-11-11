@@ -33,9 +33,9 @@ def spm_MDP_VB_ERP(*args, **kwargs):
         see also: spm_MDP_VB_LFP (for single level belief updating)  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DEM/spm_MDP_VB_ERP.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_MDP_VB_ERP", *args, **kwargs)

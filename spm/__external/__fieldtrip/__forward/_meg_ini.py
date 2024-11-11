@@ -32,9 +32,9 @@ def _meg_ini(*args, **kwargs):
          
         note: it is assumed that locations are in cm.  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/forward/private/meg_ini.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("meg_ini", *args, **kwargs)

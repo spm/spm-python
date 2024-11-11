@@ -14,9 +14,9 @@ def _fitsphere(*args, **kwargs):
           center  = the center of the fitted sphere  
           radius  = the radius of the fitted sphere  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/forward/private/fitsphere.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("fitsphere", *args, **kwargs)

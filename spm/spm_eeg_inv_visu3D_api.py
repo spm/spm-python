@@ -12,9 +12,9 @@ def spm_eeg_inv_visu3D_api(*args, **kwargs):
         Last Modified by GUIDE v2.5 18-Feb-2011 14:23:27  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_eeg_inv_visu3D_api.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_eeg_inv_visu3D_api", *args, **kwargs)

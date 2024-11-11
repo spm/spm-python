@@ -45,9 +45,9 @@ def _meg_forward(*args, **kwargs):
          
         $Id$  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/forward/private/meg_forward.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("meg_forward", *args, **kwargs)

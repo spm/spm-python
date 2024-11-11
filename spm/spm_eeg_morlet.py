@@ -28,9 +28,9 @@ def spm_eeg_morlet(*args, **kwargs):
         memory Task in Humans. The Journal of Neuroscience (18): 4244-4254.  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_eeg_morlet.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_eeg_morlet", *args, **kwargs)

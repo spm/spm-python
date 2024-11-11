@@ -18,9 +18,9 @@ def _pos2dim3d(*args, **kwargs):
          
         See also POS2DIM, POS2TRANSFORM  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/pos2dim3d.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("pos2dim3d", *args, **kwargs)

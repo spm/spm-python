@@ -54,9 +54,9 @@ def ft_datatype_raw(*args, **kwargs):
         See also FT_DATATYPE, FT_DATATYPE_COMP, FT_DATATYPE_TIMELOCK, FT_DATATYPE_FREQ,  
         FT_DATATYPE_SPIKE, FT_DATATYPE_SENS  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/utilities/ft_datatype_raw.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("ft_datatype_raw", *args, **kwargs)

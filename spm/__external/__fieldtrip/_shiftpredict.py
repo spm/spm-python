@@ -18,9 +18,9 @@ def _shiftpredict(*args, **kwargs):
         cfg.correctm  
         cfg.tail  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/shiftpredict.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("shiftpredict", *args, **kwargs)

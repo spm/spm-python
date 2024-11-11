@@ -46,9 +46,9 @@ def ft_appenddata(*args, **kwargs):
         See also FT_PREPROCESSING, FT_DATAYPE_RAW, FT_APPENDTIMELOCK, FT_APPENDFREQ,  
         FT_APPENDSOURCE, FT_APPENDSENS  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/ft_appenddata.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("ft_appenddata", *args, **kwargs)

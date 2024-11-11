@@ -13,9 +13,9 @@ def spm_extrapolate_def(*args, **kwargs):
         as these may contain missing locations.  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_extrapolate_def.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_extrapolate_def", *args, **kwargs)

@@ -14,9 +14,9 @@ def mne_ex_rt(*args, **kwargs):
          
           Returns the measurement info  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/mne/mne_ex_rt.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("mne_ex_rt", *args, **kwargs)

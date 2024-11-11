@@ -27,9 +27,9 @@ def _read_neuroshare(*args, **kwargs):
          
         Note that this is a test version, WINDOWS only  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/read_neuroshare.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("read_neuroshare", *args, **kwargs)

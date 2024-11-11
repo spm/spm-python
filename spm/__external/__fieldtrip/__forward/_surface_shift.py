@@ -13,9 +13,9 @@ def _surface_shift(*args, **kwargs):
         See also SURFACE_NORMALS, SURFACE_ORIENTATION, SURFACE_INSIDE,  
         SURFACE_NESTING  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/forward/private/surface_shift.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("surface_shift", *args, **kwargs)

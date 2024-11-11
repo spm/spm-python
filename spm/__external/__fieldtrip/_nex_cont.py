@@ -21,9 +21,9 @@ def _nex_cont(*args, **kwargs):
           fn - number of data points in each fragment  
           d - array of a/d values (in millivolts)  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/nex_cont.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("nex_cont", *args, **kwargs)

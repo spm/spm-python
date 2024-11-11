@@ -12,9 +12,9 @@ def _keyvalcheck(*args, **kwargs):
          
         See also KEYVAL  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/specest/private/keyvalcheck.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("keyvalcheck", *args, **kwargs, nargout=0)

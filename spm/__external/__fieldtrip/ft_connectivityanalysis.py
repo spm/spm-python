@@ -54,9 +54,9 @@ def ft_connectivityanalysis(*args, **kwargs):
                            used for the subsequent computations. This only has an effect  
                            when the input data is univariate. See FT_CHANNELSELECTION  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/ft_connectivityanalysis.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("ft_connectivityanalysis", *args, **kwargs)

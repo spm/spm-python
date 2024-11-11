@@ -10,9 +10,9 @@ def pull(*args, **kwargs):
         sett - Settings  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/Spatial/pull.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("pull", *args, **kwargs)

@@ -17,9 +17,9 @@ def spm_hdm_ui(*args, **kwargs):
                  (see main body of routine for details of model specification)  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_hdm_ui.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_hdm_ui", *args, **kwargs)

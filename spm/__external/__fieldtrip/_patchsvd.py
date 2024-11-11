@@ -29,9 +29,9 @@ def _patchsvd(*args, **kwargs):
          
         See also FT_VIRTUALCHANNEL  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/patchsvd.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("patchsvd", *args, **kwargs)

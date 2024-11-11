@@ -13,9 +13,9 @@ def spm_mb_appearance(*args, **kwargs):
         FORMAT            = spm_mb_appearance('debug_show',img,img_is,modality,fig_title,do)  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/MB/spm_mb_appearance.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_mb_appearance", *args, **kwargs)

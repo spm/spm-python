@@ -17,9 +17,9 @@ def spm_gx_fmri(*args, **kwargs):
         Comparing hemodynamic models with DCM. NeuroImage 38: 387-401.  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_gx_fmri.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_gx_fmri", *args, **kwargs)

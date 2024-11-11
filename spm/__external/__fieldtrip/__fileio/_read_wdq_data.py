@@ -10,9 +10,9 @@ def _read_wdq_data(*args, **kwargs):
         or  
          [dat] = read_wdq_data(filename, hdr, 'lowbits')  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/read_wdq_data.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("read_wdq_data", *args, **kwargs)

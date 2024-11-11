@@ -10,9 +10,9 @@ def _smartinput(*args, **kwargs):
          
         See also INPUT, PAUSE  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/utilities/private/smartinput.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("smartinput", *args, **kwargs)

@@ -15,9 +15,9 @@ def spm_diff_dx(*args, **kwargs):
         dx     - 'best' step size  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_diff_dx.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_diff_dx", *args, **kwargs)

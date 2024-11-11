@@ -12,9 +12,9 @@ def fiff_pick_channels_evoked(*args, **kwargs):
         include   - Channels to include (if empty, include all available)  
         exclude   - Channels to exclude (if empty, do not exclude any)  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/mne/fiff_pick_channels_evoked.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("fiff_pick_channels_evoked", *args, **kwargs)

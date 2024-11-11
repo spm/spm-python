@@ -18,9 +18,9 @@ def spm_gx_state_fmri(*args, **kwargs):
         See spm_fx_fmri.m and spm_dcm_generate.m  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_gx_state_fmri.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_gx_state_fmri", *args, **kwargs)

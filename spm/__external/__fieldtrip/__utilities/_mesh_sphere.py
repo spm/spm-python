@@ -22,9 +22,9 @@ def _mesh_sphere(*args, **kwargs):
          
         See also MESH_TETRAHEDRON, MESH_OCTAHEDRON, MESH_ICOSAHEDRON  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/utilities/private/mesh_sphere.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("mesh_sphere", *args, **kwargs)

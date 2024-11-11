@@ -13,9 +13,9 @@ def spm_run_fmri_data(*args, **kwargs):
         out    - computation results, usually a struct variable.  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/config/spm_run_fmri_data.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_run_fmri_data", *args, **kwargs)

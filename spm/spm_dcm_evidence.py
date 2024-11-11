@@ -18,9 +18,9 @@ def spm_dcm_evidence(*args, **kwargs):
         All of the above are in units of NATS (not bits).  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_dcm_evidence.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_dcm_evidence", *args, **kwargs)

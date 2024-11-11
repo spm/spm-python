@@ -17,9 +17,9 @@ def _read_spmeeg_header(*args, **kwargs):
         Copyright (C) 2008 Wellcome Trust Centre for Neuroimaging  
         Vladimir Litvak  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/read_spmeeg_header.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("read_spmeeg_header", *args, **kwargs)

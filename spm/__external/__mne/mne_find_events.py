@@ -33,9 +33,9 @@ def mne_find_events(*args, **kwargs):
           Version 1.0 2017/9/17  
           License: BSD (3-clause)  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/mne/mne_find_events.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("mne_find_events", *args, **kwargs)

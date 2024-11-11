@@ -87,9 +87,9 @@ def ft_definetrial(*args, **kwargs):
         FT_TRIALFUN_GUI, FT_TRIALFUN_SHOW, FT_TRIALFUN_BIDS, FT_TRIALFUN_EXAMPLE1,  
         FT_TRIALFUN_EXAMPLE2  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/ft_definetrial.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("ft_definetrial", *args, **kwargs)

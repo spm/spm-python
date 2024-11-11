@@ -14,9 +14,9 @@ def spm_print(*args, **kwargs):
         Run a batch print job (see spm_cfg_print)  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_print.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_print", *args, **kwargs)

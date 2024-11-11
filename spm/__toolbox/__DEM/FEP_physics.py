@@ -15,9 +15,9 @@ def FEP_physics(*args, **kwargs):
         summarised with a figure.  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DEM/FEP_physics.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("FEP_physics", *args, **kwargs, nargout=0)

@@ -16,9 +16,9 @@ def spm_gx_hdm_sck(*args, **kwargs):
         Comparing hemodynamic models with DCM. NeuroImage 38: 387-401.  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DEM/spm_gx_hdm_sck.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_gx_hdm_sck", *args, **kwargs)

@@ -29,9 +29,9 @@ def ft_examplefunction(*args, **kwargs):
          
         See also <<give a list of function names, all in capitals>>  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/ft_examplefunction.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("ft_examplefunction", *args, **kwargs)

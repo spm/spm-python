@@ -12,9 +12,9 @@ def spm_logdet(*args, **kwargs):
         is considered to be the product of the positive singular values.  
        __________________________________________________________________________  
       
-
+    
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_logdet.m )
-
+    
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_logdet", *args, **kwargs)
