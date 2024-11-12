@@ -1,3 +1,5 @@
+import numpy as np
+
 try:
     from spm._spm import initialize
 except ImportError as e:
@@ -12,36 +14,22 @@ except ImportError as e:
     print(f"Matlab Runtime installer can be found in: {installer_path}")
     raise e
 import warnings
+import numpy as np
+import matlab
 
-
-def _process_index(s):
-    try:
-        return [*map(_process_index, s)]
-    except TypeError:
-        pass
-
-    if not isinstance(s, slice):
-        return s
-
-    if s.start is None and s.stop is None and s.step is None:
-        return ':'
-    else:
-        if s.start is None:
-            start = f'1'
-        else:
-            assert (s.start >= 0)
-            start = f'{s.start + 1}'
-        if s.stop is None:
-            stop = 'end'
-        elif s.stop >= 0:
-            stop = f'{s.stop + 1}'
-        elif s.stop < 0:
-            stop = f'end-{abs(s.stop)}'
-        if s.step is None or s.step == 1:
-            step = ':'
-        else:
-            step = f':{s.step}:'
-    return start + step + stop
+_matlab_numpy_types = {
+    matlab.double: np.float64,
+    matlab.single: np.float32,
+    matlab.logical: np.bool,
+    matlab.uint64: np.uint64,
+    matlab.uint32: np.uint32,
+    matlab.uint16: np.uint16,
+    matlab.uint8 : np.uint8,
+    matlab.int64: np.int64,
+    matlab.int32: np.int32,
+    matlab.int16: np.int16,
+    matlab.int8 : np.int8,
+}
 
 
 class MatlabClassWrapper:
@@ -82,37 +70,88 @@ class MatlabClassWrapper:
         except:
             raise AttributeError(key)
 
-    def __getitem(self, index):
-        index = _process_index(index)
+    def __getitem(self, ind):
+        index = self._process_index(ind)
 
         try:
             return self.subsref({'type': '()', 'subs': index})
         except:
-            pass
-        try:
-            return self.subsref({'type': '{}', 'subs': index})
-        except:
-            raise IndexError(index)
+            try:
+                return self.subsref({'type': '{}', 'subs': index})
+            except:
+                raise IndexError(index)
 
-    def __setitem(self, index, value):
-        index = _process_index(index)
+    def __setitem(self, ind, value):
+        index = self._process_index(ind)
 
         try:
             return self.subsasgn({'type': '()', 'subs': index}, value)
         except:
-            pass
-        try:
-            return self.subsasgn({'type': '{}', 'subs': index}, value)
-        except:
-            raise IndexError(index)
+            try:
+                return self.subsasgn({'type': '{}', 'subs': index}, value)
+            except:
+                raise IndexError(index)
 
     def __call(self, *index):
-        index = _process_index(index)
+        index = self._process_index(index)
         try:
             return self.subsref({'type': '{}', 'subs': index})
         except:
             raise IndexError(index)
 
+    def _process_index(self, ind, k=1, n=1):
+        try:
+            return [self._process_index(i, k+1, len(ind))
+                    for k, i in enumerate(ind)]
+        except TypeError:
+            pass
+
+        if not hasattr(self, '__endfn'):
+            self.__endfn = Runtime.call('str2func', 'end')
+
+        end = lambda: Runtime.call(self.__endfn, self._as_matlab_object(), k, n)
+
+        if isinstance(ind, int):
+            if ind >= 0:
+                index = ind + 1
+            elif ind == -1:
+                index = end()
+            else:
+                index = end() + ind - 1
+        elif isinstance(ind, slice):
+            if ind.start is None and ind.stop is None and ind.step is None:
+                index = ':'
+            else:
+                if ind.start is None:
+                    start = 1
+                elif ind.start < 0:
+                    start = end() + ind.start
+                else:
+                    start = ind.start + 1
+
+                if ind.stop is None:
+                    stop = end()
+                elif ind.stop < 0:
+                    stop = end() + ind.stop
+                else:
+                    stop = ind.stop + 1
+
+                if ind.step is None:
+                    step = 1
+                else:
+                    step = ind.step
+
+                min_ = min(start, stop)
+                max_ = max(start, stop)
+                if step > 0:
+                    index = np.arange(min_, max_, step)
+                else:
+                    index = np.arange(max_, min_, step)
+        else:
+            index = ind
+
+
+        return index
 
 
 class Runtime:
@@ -155,7 +194,12 @@ class Runtime:
     @staticmethod
     def _process_argout(res):
         out = res
-        if isinstance(res, tuple):
+        if type(res) in _matlab_numpy_types.keys():
+            try:
+                out = np.asarray(res, dtype=_matlab_numpy_types[type(res)])
+            except:
+                pass
+        elif isinstance(res, tuple):
             out = tuple(Runtime._process_argout(r) for r in res)
         elif isinstance(res, list):
             out = list(Runtime._process_argout(r) for r in res)
