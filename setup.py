@@ -24,5 +24,9 @@ setup(
         'License :: OSI Approved :: GPL2', 
         'Operating System :: OS Independent',
     ],
+    install_requires=[
+        'numpy',
+        'scipy'
+    ],
     python_requires='>=3.6',  
 )
