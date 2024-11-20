@@ -12,7 +12,7 @@ Copyright (C) 1991,1994-2024 Wellcome Centre for Human Neuroimaging
 # Python bindings for _SPM_
 
 ## Installation instructions: 
-Assuming an existing setup with Python and Pip, 
+0. Install Python and Pip. Python installation made from Microsoft Store on Windows will not work (raises DeclarativeService.dll not found), intall it from Python website. 
 1. Install [Matlab Runtime 2024b](https://uk.mathworks.com/products/compiler/matlab-runtime.html) 
 2. Install SPM:
    ```python

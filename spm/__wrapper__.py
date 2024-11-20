@@ -1,19 +1,35 @@
+import numpy as np
+
 try:
-	from spm._spm import initialize
+    from spm._spm import initialize
 except ImportError as e:
-	import os
-	installer_path = os.path.join(
-        os.path.dirname(os.path.abspath(__file__)), 
-        '_spm', 
+    import os
+    installer_path = os.path.join(
+        os.path.dirname(os.path.abspath(__file__)),
+        '_spm',
         'resources',
         'RuntimeInstaller.install')
 
-	print("Failed to import, install Matlab Runtime and setup library path. ")
-	print(f"Matlab Runtime installer can be found in: {installer_path}")
-	raise e
+    print("Failed to import, install Matlab Runtime and setup library path. ")
+    print(f"Matlab Runtime installer can be found in: {installer_path}")
+    raise e
 import warnings
-import itertools
 import numpy as np
+import matlab
+
+_matlab_numpy_types = {
+    matlab.double: np.float64,
+    matlab.single: np.float32,
+    matlab.logical: np.bool,
+    matlab.uint64: np.uint64,
+    matlab.uint32: np.uint32,
+    matlab.uint16: np.uint16,
+    matlab.uint8 : np.uint8,
+    matlab.int64: np.int64,
+    matlab.int32: np.int32,
+    matlab.int16: np.int16,
+    matlab.int8 : np.int8,
+}
 
 
 class MatlabClassWrapper:
@@ -21,19 +37,6 @@ class MatlabClassWrapper:
 
     def _as_matlab_object(self):
         return self._objdict
-
-    @staticmethod
-    def _from_matlab_object(objdict):
-        if objdict['type__'] != 'object':
-            raise TypeError('objdict does not contain an object')
-
-        if objdict['class__'] in MatlabClassWrapper._subclasses.keys():
-            obj = MatlabClassWrapper\
-                ._subclasses[objdict['class__']](_objdict=objdict)
-        else:
-            warnings.warn(f'Unknown Matlab class: {objdict["class__"]}')
-            obj = MatlabClassWrapper(_objdict=objdict)
-        return obj
 
     def __init_subclass__(cls):
         super().__init_subclass__()
@@ -49,6 +52,106 @@ class MatlabClassWrapper:
             obj = super().__new__(cls)
             obj._objdict = _objdict
         return obj
+
+    def __init_subclass__(cls):
+        super().__init_subclass__()
+        if hasattr(cls, 'subsref'):
+            cls.__getitem__ = MatlabClassWrapper.__getitem
+            cls.__call__    = MatlabClassWrapper.__call
+
+        if hasattr(cls, 'subsasgn'):
+            cls.__setitem__ = MatlabClassWrapper.__setitem
+
+        MatlabClassWrapper._subclasses[cls.__name__] = cls
+
+    def __getattr(self, key):
+        try:
+            return self.subsref({'type': '.', 'subs': key})
+        except:
+            raise AttributeError(key)
+
+    def __getitem(self, ind):
+        index = self._process_index(ind)
+
+        try:
+            return self.subsref({'type': '()', 'subs': index})
+        except:
+            try:
+                return self.subsref({'type': '{}', 'subs': index})
+            except:
+                raise IndexError(index)
+
+    def __setitem(self, ind, value):
+        index = self._process_index(ind)
+
+        try:
+            return self.subsasgn({'type': '()', 'subs': index}, value)
+        except:
+            try:
+                return self.subsasgn({'type': '{}', 'subs': index}, value)
+            except:
+                raise IndexError(index)
+
+    def __call(self, *index):
+        index = self._process_index(index)
+        try:
+            return self.subsref({'type': '{}', 'subs': index})
+        except:
+            raise IndexError(index)
+
+    def _process_index(self, ind, k=1, n=1):
+        try:
+            return [self._process_index(i, k+1, len(ind))
+                    for k, i in enumerate(ind)]
+        except TypeError:
+            pass
+
+        if not hasattr(self, '__endfn'):
+            self.__endfn = Runtime.call('str2func', 'end')
+
+        end = lambda: Runtime.call(self.__endfn, self._as_matlab_object(), k, n)
+
+        if isinstance(ind, int):
+            if ind >= 0:
+                index = ind + 1
+            elif ind == -1:
+                index = end()
+            else:
+                index = end() + ind - 1
+        elif isinstance(ind, slice):
+            if ind.start is None and ind.stop is None and ind.step is None:
+                index = ':'
+            else:
+                if ind.start is None:
+                    start = 1
+                elif ind.start < 0:
+                    start = end() + ind.start
+                else:
+                    start = ind.start + 1
+
+                if ind.stop is None:
+                    stop = end()
+                elif ind.stop < 0:
+                    stop = end() + ind.stop
+                else:
+                    stop = ind.stop + 1
+
+                if ind.step is None:
+                    step = 1
+                else:
+                    step = ind.step
+
+                min_ = min(start, stop)
+                max_ = max(start, stop)
+                if step > 0:
+                    index = np.arange(min_, max_, step)
+                else:
+                    index = np.arange(max_, min_, step)
+        else:
+            index = ind
+
+
+        return index
 
 
 class Runtime:
@@ -71,7 +174,7 @@ class Runtime:
 
     @staticmethod
     def _cast_argin(arg):
-        if isinstance(arg, (MatlabClassWrapper, StructArray)):
+        if isinstance(arg, MatlabClassWrapper):
             arg = arg._as_matlab_object()
         if isinstance(arg, dict):
             _, arg = Runtime._process_argin(**arg)
@@ -84,15 +187,19 @@ class Runtime:
         args = tuple(map(Runtime._cast_argin, args))
         kwargs = dict(zip(
             kwargs.keys(),
-            map(Runtime._cast_argin, kwargs.values()
-                )))
+            map(Runtime._cast_argin, kwargs.values())))
 
         return args, kwargs
 
     @staticmethod
     def _process_argout(res):
         out = res
-        if isinstance(res, tuple):
+        if type(res) in _matlab_numpy_types.keys():
+            try:
+                out = np.asarray(res, dtype=_matlab_numpy_types[type(res)])
+            except:
+                pass
+        elif isinstance(res, tuple):
             out = tuple(Runtime._process_argout(r) for r in res)
         elif isinstance(res, list):
             out = list(Runtime._process_argout(r) for r in res)
@@ -100,10 +207,11 @@ class Runtime:
             res = dict(zip(res.keys(), map(Runtime._process_argout, res.values())))
             if 'type__' in res.keys():
                 if res['type__'] == 'object':
-                    out = MatlabClassWrapper._from_matlab_object(res)
-                elif res['type__'] == 'structarray':
-                    print()
-                    out = StructArray._from_matlab_object(res)
+                    if res['class__'] in MatlabClassWrapper._subclasses.keys():
+                        out = MatlabClassWrapper._subclasses[res['class__']](_objdict=res)
+                    else:
+                        warnings.warn(f'Unknown Matlab class type: {res["type__"]}')
+                        out = MatlabClassWrapper(_objdict=res)
                 else:
                     out = res
             else:
@@ -138,87 +246,3 @@ class Cell(list):
             self[i] = xi
         else:
             super().__setitem__(index, value)
-
-
-
-class StructArray:
-    def __init__(self, *structs):
-        if len(structs) == 1:
-            if isinstance(structs[0], Struct):
-                structs = [structs[0]]
-            else:
-                if all(map(isinstance, structs[0],itertools.repeat(int))):
-                    size = structs[0]
-                    structs = np.fromiter(
-                        map(
-                            lambda i: dict(), range(np.prod(size))),
-                        dtype=object).reshape(size)
-                elif all(map(isinstance, structs[0], itertools.repeat(dict))):
-                    structs = structs[0]
-                elif isinstance(structs[0], np.ndarray) \
-                        and all(map(isinstance, structs[0].flat, itertools.repeat(dict))):
-                    structs = structs[0]
-                else:
-                    raise TypeError(f'arguments not understood: {structs}')
-
-        if isinstance(structs, np.ndarray):
-            structs = np.fromiter(
-                map(dict, structs.flat),
-                dtype=object).reshape(structs.shape)
-        else:
-            structs = np.fromiter(
-                map(dict, structs),
-                dtype=object)
-
-        if len(structs.shape) == 1:
-            structs = structs[:, None]
-
-        self._structs = structs
-        self._objdict = dict(
-            type__='structarray',
-            size__=np.array(structs.shape),
-            data__=[]
-        )
-
-    def __getitem__(self, index):
-        item = self._structs[index]
-        return Struct(item)
-
-    def keys(self):
-        return set(
-            itertools.chain.from_iterable(
-                map(dict.keys, self._structs.flat)))
-
-    def _as_matlab_object(self):
-        _ = [*map(
-            lambda arg: arg[0].__setitem__(arg[1], np.array([])),
-            filter(
-                lambda arg: arg[1] not in arg[0].keys(),
-                itertools.product(self._structs.flat, self.keys())
-            )
-        )]
-        objdict = self._objdict
-        objdict['data__'] = self._structs.tolist()
-        return objdict
-
-    def __repr__(self):
-        return self._structs \
-            .__repr__() \
-            .replace('array([], dtype=float64)', 'empty') \
-            .replace('matlab.double([])', 'empty') \
-            .replace('array(', 'StructArray(\n  data=') \
-            .replace(', dtype=object', f',\n  keys={self.keys()}')
-
-    @staticmethod
-    def _from_matlab_object(objdict):
-        if objdict['type__'] != 'structarray':
-            raise TypeError('objdict is not a structarray')
-        size = tuple(map(int, objdict['size__'][0]))
-        data = np.fromiter(objdict['data__'], dtype=object)
-        data = data.reshape(size)
-        try:
-            obj = StructArray(data)
-        except Exception as e:
-            raise RuntimeError(f'Failed to construct StructArray data:\n  data={data}\n  objdict={objdict}')
-
-        return obj
