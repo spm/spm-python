@@ -60,9 +60,9 @@ def spm_eeg_merge(*args, **kwargs):
         information that has been measured in multiple sessions.  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_eeg_merge.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_eeg_merge", *args, **kwargs)

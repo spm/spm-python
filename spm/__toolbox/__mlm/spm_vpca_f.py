@@ -12,9 +12,9 @@ def spm_vpca_f(*args, **kwargs):
         Fm    negative free energy of model  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/mlm/spm_vpca_f.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_vpca_f", *args, **kwargs)

@@ -14,9 +14,9 @@ def MDP_DEM_Oculomotion_Pharma_demo(*args, **kwargs):
         implement these decisions. See also DEM_demo_MDP_DEM.m,  
         MDP_DEM_Oculomotion_demo.m  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DEM/MDP_DEM_Oculomotion_Pharma_demo.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("MDP_DEM_Oculomotion_Pharma_demo", *args, **kwargs)

@@ -22,9 +22,9 @@ def _leadfield_fns(*args, **kwargs):
            or  
           vol.bnd        positions of the external surface vertices  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/forward/private/leadfield_fns.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("leadfield_fns", *args, **kwargs)

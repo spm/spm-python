@@ -15,9 +15,9 @@ def spm_ssm2ccf(*args, **kwargs):
         pst  - vector of lags for evaluation (seconds)  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/spectral/spm_ssm2ccf.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_ssm2ccf", *args, **kwargs)

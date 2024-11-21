@@ -31,9 +31,9 @@ def spm_invdef(*args, **kwargs):
             Human Brain Mapping 9:212-225(2000)  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/OldSeg/spm_invdef.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_invdef", *args, **kwargs)

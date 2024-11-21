@@ -21,9 +21,9 @@ def DEM_demo_Posner(*args, **kwargs):
         competition is simulated by presenting both valid and invalid targets   
         simultaneously.  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DEM/DEM_demo_Posner.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("DEM_demo_Posner", *args, **kwargs, nargout=0)

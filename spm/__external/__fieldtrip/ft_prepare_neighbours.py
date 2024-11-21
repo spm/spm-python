@@ -57,9 +57,9 @@ def ft_prepare_neighbours(*args, **kwargs):
         See also FT_NEIGHBOURPLOT, FT_PREPARE_LAYOUT, FT_DATATYPE_SENS,  
         FT_READ_SENS, FT_READ_ATLAS  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/ft_prepare_neighbours.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("ft_prepare_neighbours", *args, **kwargs)

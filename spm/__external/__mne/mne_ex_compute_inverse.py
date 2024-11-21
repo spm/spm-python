@@ -21,9 +21,9 @@ def mne_ex_compute_inverse(*args, **kwargs):
         dSPM        - do dSPM?  
         sLORETA     - do sLORETA?  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/mne/mne_ex_compute_inverse.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("mne_ex_compute_inverse", *args, **kwargs)

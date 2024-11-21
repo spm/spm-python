@@ -13,9 +13,9 @@ def spm_dcm_fnirs_params(*args, **kwargs):
         C - Influence of input on regional activity   
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/dcm_fnirs/spm_dcm_fnirs_params.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_dcm_fnirs_params", *args, **kwargs)

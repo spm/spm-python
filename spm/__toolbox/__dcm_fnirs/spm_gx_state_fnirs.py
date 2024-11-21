@@ -18,9 +18,9 @@ def spm_gx_state_fnirs(*args, **kwargs):
         can be plotted.   
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/dcm_fnirs/spm_gx_state_fnirs.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_gx_state_fnirs", *args, **kwargs)

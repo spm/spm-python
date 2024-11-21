@@ -70,9 +70,9 @@ def spm_graph_ui(*args, **kwargs):
         is assigned in base workspace for plots of contrasts and their error.  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_graph_ui.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_graph_ui", *args, **kwargs)

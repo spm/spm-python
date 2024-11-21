@@ -32,9 +32,9 @@ def _spm_pca_order(*args, **kwargs):
        ___________________________________________________________________________  
         Copyright (C) 2008 Wellcome Department of Imaging Neuroscience  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DAiSS/private/spm_pca_order.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_pca_order", *args, **kwargs)

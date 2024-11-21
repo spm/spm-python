@@ -10,9 +10,9 @@ def spm_MDP_da(*args, **kwargs):
         beliefs about KL control with minimisation of expected free energy.  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_MDP_da.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_MDP_da", *args, **kwargs, nargout=0)

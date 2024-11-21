@@ -27,9 +27,9 @@ def besa2fieldtrip(*args, **kwargs):
          
         See also EEGLAB2FIELDTRIP, SPM2FIELDTRIP  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/besa2fieldtrip.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("besa2fieldtrip", *args, **kwargs)

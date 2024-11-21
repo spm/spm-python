@@ -21,9 +21,9 @@ def _triangle2distance(*args, **kwargs):
         Output argument:  
           d   = Nxnumel(s) distance matrix  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/triangle2distance.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("triangle2distance", *args, **kwargs)

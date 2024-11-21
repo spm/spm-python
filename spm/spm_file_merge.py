@@ -20,9 +20,9 @@ def spm_file_merge(*args, **kwargs):
         differences between the input and output images values.  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_file_merge.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_file_merge", *args, **kwargs)

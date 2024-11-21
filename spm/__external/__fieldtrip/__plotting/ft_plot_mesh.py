@@ -55,9 +55,9 @@ def ft_plot_mesh(*args, **kwargs):
         See also FT_PREPARE_MESH, FT_PLOT_SENS, FT_PLOT_HEADSHAPE, FT_PLOT_HEADMODEL,  
         FT_PLOT_DIPOLE, TRIMESH, PATCH  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/plotting/ft_plot_mesh.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("ft_plot_mesh", *args, **kwargs)

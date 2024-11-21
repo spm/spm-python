@@ -49,9 +49,9 @@ def spm_krutil(*args, **kwargs):
         when using it like this.  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_krutil.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_krutil", *args, **kwargs)

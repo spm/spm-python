@@ -29,9 +29,9 @@ def spm_groupwise_ls(*args, **kwargs):
         with an "Out of memory" error, then do not be too surprised.  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/Longitudinal/spm_groupwise_ls.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_groupwise_ls", *args, **kwargs)

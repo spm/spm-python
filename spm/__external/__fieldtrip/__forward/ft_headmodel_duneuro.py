@@ -47,9 +47,9 @@ def ft_headmodel_duneuro(*args, **kwargs):
           meg_type        = string, e.g. 'physical' (default)  
           meg_eneablecache= logical, e.g. 'false (default)  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/forward/ft_headmodel_duneuro.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("ft_headmodel_duneuro", *args, **kwargs)

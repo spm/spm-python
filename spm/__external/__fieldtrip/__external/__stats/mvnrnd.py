@@ -22,9 +22,9 @@ def mvnrnd(*args, **kwargs):
           containing just the diagonal. If MU is a 1-by-D vector, MVNRND  
           replicates it to match the trailing dimension of SIGMA.  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/external/stats/mvnrnd.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("mvnrnd", *args, **kwargs)

@@ -25,9 +25,9 @@ def spm_results_nidm(*args, **kwargs):
           http://www.w3.org/TR/prov-dm/  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_results_nidm.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_results_nidm", *args, **kwargs)

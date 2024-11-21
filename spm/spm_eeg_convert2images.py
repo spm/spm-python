@@ -35,9 +35,9 @@ def spm_eeg_convert2images(*args, **kwargs):
           images     - list of generated image files or objects  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_eeg_convert2images.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_eeg_convert2images", *args, **kwargs)

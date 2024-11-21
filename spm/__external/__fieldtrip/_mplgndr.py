@@ -12,9 +12,9 @@ def _mplgndr(*args, **kwargs):
         The i-th column is the associated Legendre function of order K and  
         degree i-1.  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/mplgndr.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("mplgndr", *args, **kwargs)

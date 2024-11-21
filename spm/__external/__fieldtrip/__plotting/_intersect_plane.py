@@ -14,9 +14,9 @@ def _intersect_plane(*args, **kwargs):
         values are the X, Y and Z coordinates of the begin- and endpoints for all line  
         segments.  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/plotting/private/intersect_plane.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("intersect_plane", *args, **kwargs)

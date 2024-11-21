@@ -20,9 +20,9 @@ def spm_lotka_volterra(*args, **kwargs):
         using v. If x is a scalar a matrix of size x (P) is returned (with v = 1).  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_lotka_volterra.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_lotka_volterra", *args, **kwargs)

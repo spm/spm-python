@@ -12,9 +12,9 @@ def spm_run_preproc(*args, **kwargs):
         out    - computation results, usually a struct variable.  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/OldSeg/spm_run_preproc.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_run_preproc", *args, **kwargs)

@@ -53,9 +53,9 @@ def ft_warp_apply(*args, **kwargs):
         See also FT_AFFINECOORDINATES, FT_HEADCOORDINATES, FT_WARP_OPTIM, FT_WARP_ERROR,   
         MAKETFORM, AFFINE2D, AFFINE3D  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/utilities/ft_warp_apply.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("ft_warp_apply", *args, **kwargs)

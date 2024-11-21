@@ -16,9 +16,9 @@ def ROBOT_DCM_fMRI(*args, **kwargs):
         DCM.options.P                      % starting estimates for parameters  
         DCM.options.hidden                 % indices of hidden regions  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/tests/ROBOT_DCM_fMRI.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("ROBOT_DCM_fMRI", *args, **kwargs)

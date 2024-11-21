@@ -32,9 +32,9 @@ def nutmeg2fieldtrip(*args, **kwargs):
         See alo FT_DATATYPE_RAW, FT_DATATYPE_SOURCE, LORETA2FIELDTRIP, SPASS2FIELDTRIP,  
         FIELDTRIP2SPSS  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/nutmeg2fieldtrip.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("nutmeg2fieldtrip", *args, **kwargs)

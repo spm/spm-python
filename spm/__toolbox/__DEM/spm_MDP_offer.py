@@ -28,9 +28,9 @@ def spm_MDP_offer(*args, **kwargs):
         behaviour to identify the parameters used by a subject.  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DEM/spm_MDP_offer.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_MDP_offer", *args, **kwargs, nargout=0)

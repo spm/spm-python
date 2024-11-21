@@ -17,9 +17,9 @@ def pm_get_defaults(*args, **kwargs):
         persistent changes, edit spm_defaults.m.  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/FieldMap/pm_get_defaults.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("pm_get_defaults", *args, **kwargs)

@@ -45,9 +45,9 @@ def _xml2struct(*args, **kwargs):
         2012/04/04 roboos: added the original license clause, see also http://bugzilla.fieldtriptoolbox.org/show_bug.cgi?id=645#c11  
         2012/04/04 roboos: don't print the filename that is being read  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/xml2struct.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("xml2struct", *args, **kwargs)

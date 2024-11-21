@@ -21,9 +21,9 @@ def spm_design_contrasts(*args, **kwargs):
         interactions.  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_design_contrasts.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_design_contrasts", *args, **kwargs)

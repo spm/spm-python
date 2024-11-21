@@ -24,9 +24,9 @@ def _align_neuromag2acpc(*args, **kwargs):
          
         See also ALIGN_CTF2ACPC, ALIGN_FSAVERAGE2MNI  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/utilities/private/align_neuromag2acpc.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("align_neuromag2acpc", *args, **kwargs)

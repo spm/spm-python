@@ -14,9 +14,9 @@ def mci_interp_init(*args, **kwargs):
               where d is number of states  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/mci/models/lds/mci_interp_init.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("mci_interp_init", *args, **kwargs)

@@ -30,9 +30,9 @@ def _refine(*args, **kwargs):
         http://www.cs.rpi.edu/~flaherje/pdf/fea8.pdf, which also contains the original  
         reference.  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/plotting/private/refine.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("refine", *args, **kwargs)

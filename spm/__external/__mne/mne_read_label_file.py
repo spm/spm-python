@@ -13,9 +13,9 @@ def mne_read_label_file(*args, **kwargs):
             pos            locations in meters (columns 2 - 4 divided by 1000)  
             values         values at the vertices (column 5)  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/mne/mne_read_label_file.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("mne_read_label_file", *args, **kwargs)

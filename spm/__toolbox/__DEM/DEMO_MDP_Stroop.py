@@ -15,9 +15,9 @@ def DEMO_MDP_Stroop(*args, **kwargs):
         see also: spm_MDP_VB_X.m, DEM_demo_MDP_reading.m, DEMO_MDP_questions.m  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DEM/DEMO_MDP_Stroop.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("DEMO_MDP_Stroop", *args, **kwargs)

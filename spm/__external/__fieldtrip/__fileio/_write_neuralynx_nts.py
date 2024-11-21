@@ -10,9 +10,9 @@ def _write_neuralynx_nts(*args, **kwargs):
          
         See also READ_NEURALYNX_NTS  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/write_neuralynx_nts.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("write_neuralynx_nts", *args, **kwargs, nargout=0)

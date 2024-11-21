@@ -16,9 +16,9 @@ def _reorderdim(*args, **kwargs):
         runtime and not at 'code'-time (i.e. when A can have arbitrary  
         dimensions).  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/reorderdim.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("reorderdim", *args, **kwargs)

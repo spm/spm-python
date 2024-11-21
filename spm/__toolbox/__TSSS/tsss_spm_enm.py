@@ -18,9 +18,9 @@ def tsss_spm_enm(*args, **kwargs):
         should contain cross-talk compensated data, which can be done by the  
         MaxFilter software.  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/TSSS/tsss_spm_enm.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("tsss_spm_enm", *args, **kwargs)

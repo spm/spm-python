@@ -48,9 +48,9 @@ def ft_sourceplot_interactive(*args, **kwargs):
          
         See also FT_SOURCEPLOT, FT_SOURCEMOVIE  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/ft_sourceplot_interactive.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("ft_sourceplot_interactive", *args, **kwargs)

@@ -28,9 +28,9 @@ def _read_neuralynx_bin(*args, **kwargs):
         the number of bits to shift. The channel label is contained in the  
         filename as dataset.chanlabel.bin.  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/read_neuralynx_bin.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("read_neuralynx_bin", *args, **kwargs)

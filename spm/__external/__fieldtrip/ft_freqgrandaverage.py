@@ -33,9 +33,9 @@ def ft_freqgrandaverage(*args, **kwargs):
         See also FT_TIMELOCKGRANDAVERAGE, FT_FREQANALYSIS, FT_FREQDESCRIPTIVES,  
         FT_FREQBASELINE  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/ft_freqgrandaverage.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("ft_freqgrandaverage", *args, **kwargs)

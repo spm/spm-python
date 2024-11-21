@@ -11,9 +11,9 @@ def range_(*args, **kwargs):
         or you can also specify the dimension along which to look by  
           r = range(x, dim)  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/external/stats/range.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("range", *args, **kwargs)

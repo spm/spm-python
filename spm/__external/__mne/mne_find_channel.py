@@ -15,9 +15,9 @@ def mne_find_channel(*args, **kwargs):
         Returns index of the channel in the data  
         If the channel is not found, returns -1  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/mne/mne_find_channel.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("mne_find_channel", *args, **kwargs)

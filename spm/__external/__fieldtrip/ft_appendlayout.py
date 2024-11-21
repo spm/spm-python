@@ -18,9 +18,9 @@ def ft_appendlayout(*args, **kwargs):
          
         See also FT_PREPARE_LAYOUT, FT_LAYOUTPLOT, FT_APPENDSENS  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/ft_appendlayout.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("ft_appendlayout", *args, **kwargs)

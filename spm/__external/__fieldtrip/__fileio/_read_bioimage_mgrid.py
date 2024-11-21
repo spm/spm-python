@@ -13,9 +13,9 @@ def _read_bioimage_mgrid(*args, **kwargs):
          
         See also FT_READ_SENS, FT_DATATYPE_SENS  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/read_bioimage_mgrid.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("read_bioimage_mgrid", *args, **kwargs)

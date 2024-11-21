@@ -21,9 +21,9 @@ def spm_eeg_artefact_heartbeat(*args, **kwargs):
         See http://fsl.fmrib.ox.ac.uk/eeglab/fmribplugin/  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_eeg_artefact_heartbeat.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_eeg_artefact_heartbeat", *args, **kwargs)

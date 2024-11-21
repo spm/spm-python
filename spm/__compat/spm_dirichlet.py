@@ -15,9 +15,9 @@ def spm_dirichlet(*args, **kwargs):
         Will Penny  
         $Id: spm_dirichlet.m 4418 2011-08-03 12:00:13Z guillaume $  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/compat/spm_dirichlet.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_dirichlet", *args, **kwargs)

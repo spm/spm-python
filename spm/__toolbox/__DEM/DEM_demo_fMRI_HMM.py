@@ -42,9 +42,9 @@ def DEM_demo_fMRI_HMM(*args, **kwargs):
          (i.e., subjects) and therefore expected to infer no group effect.  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DEM/DEM_demo_fMRI_HMM.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("DEM_demo_fMRI_HMM", *args, **kwargs, nargout=0)

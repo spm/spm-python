@@ -15,9 +15,9 @@ def spm_KL_cat(*args, **kwargs):
         See also: spm_kl_dirichlet.m (for row vectors)  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_KL_cat.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_KL_cat", *args, **kwargs)

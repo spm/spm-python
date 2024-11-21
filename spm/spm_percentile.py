@@ -18,9 +18,9 @@ def spm_percentile(*args, **kwargs):
          spm_summarise(vols, 'all', @spm_percentile) % quartiles of images  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_percentile.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_percentile", *args, **kwargs)

@@ -9,9 +9,9 @@ def spm_diag_array(*args, **kwargs):
         X(:,i,i) -> D(:,i);  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_diag_array.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_diag_array", *args, **kwargs)

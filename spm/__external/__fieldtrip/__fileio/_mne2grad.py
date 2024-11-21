@@ -16,9 +16,9 @@ def _mne2grad(*args, **kwargs):
          
         See also CTF2GRAD, BTI2GRAD  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/mne2grad.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("mne2grad", *args, **kwargs)

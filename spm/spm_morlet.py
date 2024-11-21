@@ -17,9 +17,9 @@ def spm_morlet(*args, **kwargs):
         window, as opposed to a Gaussian window.  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_morlet.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_morlet", *args, **kwargs)

@@ -50,9 +50,9 @@ def spm_str_manip(*args, **kwargs):
         This function is now deprecated, use spm_file when possible instead.  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_str_manip.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_str_manip", *args, **kwargs)

@@ -26,9 +26,9 @@ def _read_plexon_nex(*args, **kwargs):
          
         See also READ_PLEXON_PLX, READ_PLEXON_DDT  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/read_plexon_nex.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("read_plexon_nex", *args, **kwargs)

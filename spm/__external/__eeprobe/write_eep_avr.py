@@ -24,9 +24,9 @@ def write_eep_avr(*args, **kwargs):
          
         See also READ_EEP_TRG, READ_EEP_REJ, READ_EEP_AVR  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/eeprobe/write_eep_avr.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("write_eep_avr", *args, **kwargs)

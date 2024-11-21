@@ -17,9 +17,9 @@ def spm_clusters(*args, **kwargs):
         belongs to cluster A(i) (using an 18 connectivity scheme).  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_clusters.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_clusters", *args, **kwargs)

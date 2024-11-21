@@ -19,9 +19,9 @@ def spm_shp_warps(*args, **kwargs):
         Returns the help file of the selected function.  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_shp_warps.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_shp_warps", *args, **kwargs)

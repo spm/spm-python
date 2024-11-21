@@ -22,9 +22,9 @@ def spm_get_matdim(*args, **kwargs):
               will keep the orientation of the reference image.  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_get_matdim.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_get_matdim", *args, **kwargs)

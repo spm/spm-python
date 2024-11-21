@@ -21,9 +21,9 @@ def _fourier2crsspctrm(*args, **kwargs):
                            interest. By default the whole frequency range of the   
                            input is taken.  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/fourier2crsspctrm.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("fourier2crsspctrm", *args, **kwargs)

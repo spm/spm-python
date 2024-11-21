@@ -13,9 +13,9 @@ def _fif2grad(*args, **kwargs):
         See also CTF2GRAD, BTI2GRAD, MNE2GRAD, ITAB2GRAD, YOKOGAWA2GRAD,  
         FT_READ_SENS, FT_READ_HEADER  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/fif2grad.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("fif2grad", *args, **kwargs)

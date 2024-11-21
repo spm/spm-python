@@ -10,9 +10,9 @@ def spm_mg_switch(*args, **kwargs):
         blockade parameters as per Durstewitz, Seamans & Sejnowski 2000.  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/dcm_meeg/spm_mg_switch.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_mg_switch", *args, **kwargs)

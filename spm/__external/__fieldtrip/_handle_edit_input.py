@@ -18,9 +18,9 @@ def _handle_edit_input(*args, **kwargs):
           all  
           {'MEG', '-MR*'}  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/handle_edit_input.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("handle_edit_input", *args, **kwargs)

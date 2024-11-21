@@ -23,9 +23,9 @@ def spm_bms_ttest(*args, **kwargs):
         and an inverse chi^2 over sig_d^2.  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_bms_ttest.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_bms_ttest", *args, **kwargs)

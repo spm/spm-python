@@ -19,9 +19,9 @@ def spm_opm_plotScalpData(*args, **kwargs):
         interpolation of the sensor data on the scalp (as an image).  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/MEEGtools/spm_opm_plotScalpData.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_opm_plotScalpData", *args, **kwargs)

@@ -8,9 +8,9 @@ def _lbex(*args, **kwargs):
         The subspace projection is based on the LBEX (local basis expansion)  
         method.  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/lbex.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("lbex", *args, **kwargs)

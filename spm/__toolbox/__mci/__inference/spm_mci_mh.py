@@ -21,9 +21,9 @@ def spm_mci_mh(*args, **kwargs):
         D         Diagnostics (D.accept_rate, D.els)  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/mci/inference/spm_mci_mh.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_mci_mh", *args, **kwargs)

@@ -9,9 +9,9 @@ def spm_unlink(*args, **kwargs):
         Remove the specified file(s) using a system call to unlink().  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_unlink.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_unlink", *args, **kwargs, nargout=0)

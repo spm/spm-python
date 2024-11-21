@@ -29,9 +29,9 @@ def _sphsplint(*args, **kwargs):
           Corrigenda: EEG 02274, Electroencephalography and Clinical  
           Neurophysiology 76:565.  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/sphsplint.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("sphsplint", *args, **kwargs)

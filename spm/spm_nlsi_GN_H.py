@@ -61,9 +61,9 @@ def spm_nlsi_GN_H(*args, **kwargs):
         from conditional expectations to free energy explicitly.  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_nlsi_GN_H.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_nlsi_GN_H", *args, **kwargs)

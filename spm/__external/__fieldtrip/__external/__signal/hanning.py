@@ -21,9 +21,9 @@ def hanning(*args, **kwargs):
             
           This is a drop-in replacement to bypass the signal processing toolbox  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/external/signal/hanning.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("hanning", *args, **kwargs)

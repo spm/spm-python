@@ -57,9 +57,9 @@ def pm_create_connectogram(*args, **kwargs):
         and remove any duplicate connections in there.  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/FieldMap/pm_create_connectogram.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("pm_create_connectogram", *args, **kwargs)

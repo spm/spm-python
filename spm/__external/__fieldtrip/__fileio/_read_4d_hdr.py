@@ -9,9 +9,9 @@ def _read_4d_hdr(*args, **kwargs):
          
         Adapted from the MSI>>Matlab code written by Eugene Kronberg  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/read_4d_hdr.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("read_4d_hdr", *args, **kwargs)

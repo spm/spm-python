@@ -15,9 +15,9 @@ def mci_linear_struct(*args, **kwargs):
         Xfull     Design matrix for data points [1:T]  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/mci/models/linear/mci_linear_struct.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("mci_linear_struct", *args, **kwargs)

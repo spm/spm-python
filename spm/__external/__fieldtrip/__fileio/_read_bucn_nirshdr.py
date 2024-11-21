@@ -14,9 +14,9 @@ def _read_bucn_nirshdr(*args, **kwargs):
          
         See also READ_BUCN_NIRSDATA, READ_BUCN_NIRSEVENT  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/read_bucn_nirshdr.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("read_bucn_nirshdr", *args, **kwargs)

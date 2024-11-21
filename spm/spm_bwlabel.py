@@ -22,9 +22,9 @@ def spm_bwlabel(*args, **kwargs):
         capability. CVGIP: Graphical Models and Image Processing 54(4):357-364.  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_bwlabel.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_bwlabel", *args, **kwargs)

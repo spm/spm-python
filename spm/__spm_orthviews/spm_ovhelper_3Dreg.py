@@ -26,9 +26,9 @@ def spm_ovhelper_3Dreg(*args, **kwargs):
         h - a graphics handle or a tag of graphics handle   
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_orthviews/spm_ovhelper_3Dreg.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_ovhelper_3Dreg", *args, **kwargs, nargout=0)

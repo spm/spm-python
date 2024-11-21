@@ -19,9 +19,9 @@ def spm_clf(*args, **kwargs):
         This is just a gateway to spm_figure('Clear',F).  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_clf.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_clf", *args, **kwargs, nargout=0)

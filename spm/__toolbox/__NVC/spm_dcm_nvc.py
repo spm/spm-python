@@ -109,9 +109,9 @@ def spm_dcm_nvc(*args, **kwargs):
         and Zeidman, P., 2017. Dynamic causal modelling revisited. Neuroimage.  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/NVC/spm_dcm_nvc.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_dcm_nvc", *args, **kwargs)

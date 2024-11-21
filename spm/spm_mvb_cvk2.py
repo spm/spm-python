@@ -19,9 +19,9 @@ def spm_mvb_cvk2(*args, **kwargs):
         This version uses the optimised covariance model from spm_mvb.  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_mvb_cvk2.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_mvb_cvk2", *args, **kwargs)

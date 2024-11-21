@@ -76,9 +76,9 @@ def ft_steadystatesimulation(*args, **kwargs):
         See also FT_DIPOLESIMULATION, FT_TIMELOCKSIMULATION, FT_FREQSIMULATION,  
         FT_CONNECTIVITYSIMULATION, FT_APPENDDATA  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/ft_steadystatesimulation.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("ft_steadystatesimulation", *args, **kwargs)

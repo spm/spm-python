@@ -34,9 +34,9 @@ def spm_hrf(*args, **kwargs):
         5 seconds.  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_hrf.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_hrf", *args, **kwargs)

@@ -31,9 +31,9 @@ def _read_nwb_spike(*args, **kwargs):
         -----  
         Latest change: 01/06/2020  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/read_nwb_spike.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("read_nwb_spike", *args, **kwargs)

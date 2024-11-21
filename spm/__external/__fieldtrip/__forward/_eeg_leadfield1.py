@@ -23,9 +23,9 @@ def _eeg_leadfield1(*args, **kwargs):
           for three-dimensional localization of electric sources in the human brain. IEEE  
           Trans Biomed Eng, 25:421-429, 1978.  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/forward/private/eeg_leadfield1.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("eeg_leadfield1", *args, **kwargs)

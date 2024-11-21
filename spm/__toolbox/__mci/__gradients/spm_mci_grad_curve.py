@@ -17,9 +17,9 @@ def spm_mci_grad_curve(*args, **kwargs):
         st        -1 for integration problem  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/mci/gradients/spm_mci_grad_curve.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_mci_grad_curve", *args, **kwargs)

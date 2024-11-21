@@ -17,9 +17,9 @@ def spm_mvb_p(*args, **kwargs):
         field (p_value) to MVB.  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_mvb_p.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_mvb_p", *args, **kwargs)

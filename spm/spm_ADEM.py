@@ -49,9 +49,9 @@ def spm_ADEM(*args, **kwargs):
           M(i).l  = number of output v(i)  
           M(i).k  = number of action a(i)  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_ADEM.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_ADEM", *args, **kwargs)

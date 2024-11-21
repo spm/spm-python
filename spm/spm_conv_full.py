@@ -16,9 +16,9 @@ def spm_conv_full(*args, **kwargs):
         one-dimensional convolutions.  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_conv_full.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_conv_full", *args, **kwargs)

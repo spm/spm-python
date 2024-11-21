@@ -23,9 +23,9 @@ def spm_Q(*args, **kwargs):
         the precision (inverse covariance) matrix; i.e., a = a(1)  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_Q.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_Q", *args, **kwargs)

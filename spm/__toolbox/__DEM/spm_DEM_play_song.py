@@ -15,9 +15,9 @@ def spm_DEM_play_song(*args, **kwargs):
         A button press on the spectrogram will play the song  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DEM/spm_DEM_play_song.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_DEM_play_song", *args, **kwargs)

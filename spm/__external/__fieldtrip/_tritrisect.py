@@ -8,9 +8,9 @@ def _tritrisect(*args, **kwargs):
          
         [l1, l2] = tritrisect(v1, v2, v3, t1, t2, t3)  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/tritrisect.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("tritrisect", *args, **kwargs)

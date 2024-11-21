@@ -41,9 +41,9 @@ def rfbevent(*args, **kwargs):
         Olivetti Research Ltd / AT&T Labs Cambridge) Version 3.8 (Last updated 8  
         June 2007), http://www.realvnc.com/docs/rfbproto.pdf  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/src/rfbevent.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("rfbevent", *args, **kwargs)

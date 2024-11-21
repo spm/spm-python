@@ -17,9 +17,9 @@ def spm_vb_F(*args, **kwargs):
         This function implements equation 18 in paper VB4.  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_vb_F.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_vb_F", *args, **kwargs)

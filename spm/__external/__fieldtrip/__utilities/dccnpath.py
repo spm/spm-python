@@ -54,9 +54,9 @@ def dccnpath(*args, **kwargs):
          
         $Id$  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/utilities/dccnpath.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("dccnpath", *args, **kwargs)

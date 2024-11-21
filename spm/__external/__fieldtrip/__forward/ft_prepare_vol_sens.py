@@ -39,9 +39,9 @@ def ft_prepare_vol_sens(*args, **kwargs):
          
         See also FT_COMPUTE_LEADFIELD, FT_READ_HEADMODEL, FT_READ_SENS  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/forward/ft_prepare_vol_sens.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("ft_prepare_vol_sens", *args, **kwargs)

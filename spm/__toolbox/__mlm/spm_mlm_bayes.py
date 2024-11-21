@@ -42,9 +42,9 @@ def spm_mlm_bayes(*args, **kwargs):
                     For 'output' prior this is jth column of W.  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/mlm/spm_mlm_bayes.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_mlm_bayes", *args, **kwargs)

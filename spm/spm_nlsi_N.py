@@ -86,9 +86,9 @@ def spm_nlsi_N(*args, **kwargs):
         An optional feature selection can be specified with parameters M.FS  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_nlsi_N.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_nlsi_N", *args, **kwargs)

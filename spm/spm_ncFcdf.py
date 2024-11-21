@@ -14,9 +14,9 @@ def spm_ncFcdf(*args, **kwargs):
         https://en.wikipedia.org/wiki/Noncentral_F-distribution  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_ncFcdf.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_ncFcdf", *args, **kwargs)

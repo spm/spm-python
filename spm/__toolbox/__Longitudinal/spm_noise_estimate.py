@@ -16,9 +16,9 @@ def spm_noise_estimate(*args, **kwargs):
                           info.x(:),info.lse,'r');  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/Longitudinal/spm_noise_estimate.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_noise_estimate", *args, **kwargs)

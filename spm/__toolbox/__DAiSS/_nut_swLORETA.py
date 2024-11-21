@@ -11,9 +11,9 @@ def _nut_swLORETA(*args, **kwargs):
                 [probably should be set lower for best compromise between stability and blurriness]  
         [2] flags.gamma = regularization constant [optional]  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DAiSS/private/nut_swLORETA.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("nut_swLORETA", *args, **kwargs)

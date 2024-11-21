@@ -12,9 +12,9 @@ def mne_write_cov(*args, **kwargs):
           fid     - an open file id  
           cov     - the covariance matrix to write  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/mne/mne_write_cov.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("mne_write_cov", *args, **kwargs, nargout=0)

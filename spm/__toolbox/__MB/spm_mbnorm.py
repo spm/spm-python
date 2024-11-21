@@ -10,9 +10,9 @@ def spm_mbnorm(*args, **kwargs):
         This is intended to show how Multi_brain can be used for  
         spatially normalising images.  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/MB/spm_mbnorm.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_mbnorm", *args, **kwargs)

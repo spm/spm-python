@@ -9,9 +9,9 @@ def _fixcoordsys(*args, **kwargs):
          
         See also FT_DETERMINE_COORDSYS  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/fixcoordsys.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("fixcoordsys", *args, **kwargs)

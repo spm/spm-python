@@ -103,7 +103,7 @@ toolboxes = {
 opath = fullfile(cpath, '..');
 
 
-mpython_compile(spmpath, opath, 'spm', toolboxes)
+% mpython_compile(spmpath, opath, 'spm', toolboxes)
 
 
 mpython_wrap(spmpath, opath, 'spm', true, fullfile(cpath, 'templates'))

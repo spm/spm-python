@@ -13,9 +13,9 @@ def _ftcolors(*args, **kwargs):
          
         Without input arguments, N will be set to 64  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/plotting/private/ftcolors.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("ftcolors", *args, **kwargs)

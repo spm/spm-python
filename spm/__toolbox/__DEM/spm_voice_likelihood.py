@@ -34,9 +34,9 @@ def spm_voice_likelihood(*args, **kwargs):
         noise with an additional variable: VOX.noise (see main body of script).  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DEM/spm_voice_likelihood.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_voice_likelihood", *args, **kwargs)

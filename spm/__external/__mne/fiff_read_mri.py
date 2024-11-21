@@ -11,9 +11,9 @@ def fiff_read_mri(*args, **kwargs):
          
         Read a fif format MRI description file  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/mne/fiff_read_mri.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("fiff_read_mri", *args, **kwargs)

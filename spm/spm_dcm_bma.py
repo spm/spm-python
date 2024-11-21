@@ -90,9 +90,9 @@ def spm_dcm_bma(*args, **kwargs):
         PLoS Computational Biology, Mar 2010, 6(3), e1000709.  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_dcm_bma.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_dcm_bma", *args, **kwargs)

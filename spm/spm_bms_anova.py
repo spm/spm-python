@@ -23,9 +23,9 @@ def spm_bms_anova(*args, **kwargs):
         For a single group this function calls spm_bms_ttest.m  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_bms_anova.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_bms_anova", *args, **kwargs)

@@ -24,9 +24,9 @@ def spm_uc_RF(*args, **kwargs):
         statistic is returned.  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_uc_RF.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_uc_RF", *args, **kwargs)

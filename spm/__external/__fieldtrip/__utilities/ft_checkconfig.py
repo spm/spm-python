@@ -42,9 +42,9 @@ def ft_checkconfig(*args, **kwargs):
          
         See also FT_CHECKDATA, FT_CHECKOPT, FT_DEFAULTS  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/utilities/ft_checkconfig.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("ft_checkconfig", *args, **kwargs)

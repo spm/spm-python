@@ -38,9 +38,9 @@ def mne_ex_read_epochs(*args, **kwargs):
          
           to create the fif-format event file (or open the file in mne_browse_raw).  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/mne/mne_ex_read_epochs.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("mne_ex_read_epochs", *args, **kwargs)

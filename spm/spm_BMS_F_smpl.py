@@ -13,9 +13,9 @@ def spm_BMS_F_smpl(*args, **kwargs):
         Bayesian Model Selection for Group Studies. Neuroimage 2009 46(4):1004-17  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_BMS_F_smpl.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_BMS_F_smpl", *args, **kwargs)

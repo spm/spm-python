@@ -22,9 +22,9 @@ def _read_ns_eeg(*args, **kwargs):
           eeg.xmax        - poststimulus epoch end (e.g., 900 msec)  
           eeg.nsweeps     - number of accepted trials/sweeps  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/read_ns_eeg.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("read_ns_eeg", *args, **kwargs)

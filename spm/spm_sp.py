@@ -181,9 +181,9 @@ def spm_sp(*args, **kwargs):
         b - true if the basic fields are non-empty  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_sp.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_sp", *args, **kwargs)

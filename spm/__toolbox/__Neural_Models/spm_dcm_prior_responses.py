@@ -19,9 +19,9 @@ def spm_dcm_prior_responses(*args, **kwargs):
         scaling of U in the equations of motion for each model.  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/Neural_Models/spm_dcm_prior_responses.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_dcm_prior_responses", *args, **kwargs, nargout=0)

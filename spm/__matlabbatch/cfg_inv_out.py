@@ -20,9 +20,9 @@ class cfg_inv_out(MatlabClassWrapper):
                  doc cfg_inv_out  
             
           
-        
+
         [Matlab code]( https://github.com/spm/spm/blob/main/matlabbatch/@cfg_inv_out/cfg_inv_out.m )
-        
+
         Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         super().__init__()

@@ -54,9 +54,9 @@ def pm_segment(*args, **kwargs):
         toolbox where it is still used.  
        _______________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/FieldMap/pm_segment.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("pm_segment", *args, **kwargs)

@@ -70,9 +70,9 @@ def ft_sourceinterpolate(*args, **kwargs):
         See also FT_READ_MRI, FT_READ_HEADSHAPE, FT_SOURCEPLOT, FT_SOURCEANALYSIS,  
         FT_SOURCEWRITE  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/ft_sourceinterpolate.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("ft_sourceinterpolate", *args, **kwargs)

@@ -9,9 +9,9 @@ def _open_figure(*args, **kwargs):
          
         See also GCA, GCF, GROOT,  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/open_figure.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("open_figure", *args, **kwargs)

@@ -34,9 +34,9 @@ def ft_read_cifti(*args, **kwargs):
          
         See also FT_WRITE_CIFTI, FT_READ_MRI, FT_WRITE_MRI  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/ft_read_cifti.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("ft_read_cifti", *args, **kwargs)

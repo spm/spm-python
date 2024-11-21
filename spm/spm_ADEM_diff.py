@@ -19,9 +19,9 @@ def spm_ADEM_diff(*args, **kwargs):
         The system is evaluated at the prior expectation of the parameters.  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_ADEM_diff.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_ADEM_diff", *args, **kwargs)

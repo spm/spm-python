@@ -15,9 +15,9 @@ def ft_preproc_online_filter_init(*args, **kwargs):
          
         See also PREPROC, FT_PREPROC_ONLINE_FILTER_APPLY  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/preproc/ft_preproc_online_filter_init.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("ft_preproc_online_filter_init", *args, **kwargs)

@@ -9,9 +9,9 @@ def spm_hist_smooth(*args, **kwargs):
         s   - smoothing  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_hist_smooth.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_hist_smooth", *args, **kwargs)

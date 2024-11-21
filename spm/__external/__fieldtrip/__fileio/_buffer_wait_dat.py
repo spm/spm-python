@@ -14,9 +14,9 @@ def _buffer_wait_dat(*args, **kwargs):
          
         It returns a structure with the available nsamples and nevents.  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/buffer_wait_dat.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("buffer_wait_dat", *args, **kwargs)

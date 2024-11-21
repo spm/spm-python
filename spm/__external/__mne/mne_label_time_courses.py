@@ -16,9 +16,9 @@ def mne_label_time_courses(*args, **kwargs):
         times     - The time points  
         vertices  - The vertices corresponding to the time points  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/mne/mne_label_time_courses.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("mne_label_time_courses", *args, **kwargs)

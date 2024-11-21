@@ -24,9 +24,9 @@ def _read_nex_event(*args, **kwargs):
          
         See also READ_NEX_HEADER, READ_NEX_DATA  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/read_nex_event.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("read_nex_event", *args, **kwargs)

@@ -13,9 +13,9 @@ def tinv(*args, **kwargs):
         This is an open source function that was assembled by Eric Maris using  
         open source subfunctions found on the web.  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/external/stats/tinv.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("tinv", *args, **kwargs)

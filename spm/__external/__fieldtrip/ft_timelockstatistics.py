@@ -41,9 +41,9 @@ def ft_timelockstatistics(*args, **kwargs):
          
         See also FT_TIMELOCKANALYSIS, FT_TIMELOCKGRANDAVERAGE  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/ft_timelockstatistics.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("ft_timelockstatistics", *args, **kwargs)

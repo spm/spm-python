@@ -18,9 +18,9 @@ def spm_mesh_dist(*args, **kwargs):
         Copyright (c) 2021 Jose Antonio Fernandez Fernandez, MIT license  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_mesh_dist.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_mesh_dist", *args, **kwargs)

@@ -10,9 +10,9 @@ def _avgref(*args, **kwargs):
         average over the selected channels  
           [data] = avgref(data, sel)  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/inverse/private/avgref.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("avgref", *args, **kwargs)

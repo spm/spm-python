@@ -28,9 +28,9 @@ def DEM_FEP_Lorenz(*args, **kwargs):
         when the initial (particular) state is known.  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DEM/DEM_FEP_Lorenz.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("DEM_FEP_Lorenz", *args, **kwargs, nargout=0)
