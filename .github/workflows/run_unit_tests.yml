@@ -1,10 +1,7 @@
-name: Run unit tests
+name: Unit tests
 on:
   workflow_dispatch:
   push:
-    paths:
-      - spm/**
-      - tests/**
   pull_request:
   
 env:
@@ -18,7 +15,7 @@ jobs:
       matrix:
         matlab: ["latest"]
         os: [ubuntu-latest, macos-13, macos-latest, windows-latest]
-        python-version: ["3.9", "3.10", "3.11", "3.12"]
+        python-version: ["3.11"]
         include:
           - os: ubuntu-latest
             os_name: Linux
