@@ -1,0 +1,121 @@
+name: Unit tests
+on:
+  workflow_dispatch:
+  push:
+  pull_request:
+  
+env:
+  MLM_LICENSE_TOKEN: ${{ secrets.MATLAB_BATCH_TOKEN }}
+  
+jobs:
+  unit-tests:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: False
+      matrix:
+        matlab: ["latest"]
+        os: [ubuntu-latest, macos-13, macos-latest, windows-latest]
+        python-version: ["3.9", "3.10", "3.11", "3.12"]
+        include:
+          - os: ubuntu-latest
+            os_name: Linux
+            platform: Linux
+          - os: macos-13
+            os_name: macOS_Intel
+            platform: Mac
+          - os: macos-latest
+            os_name: macOS_Apple_Silicon
+            platform: Mac
+          - os: windows-latest
+            os_name: Windows
+            platform: Windows
+
+    steps:
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+          
+      - name: Check out SPM Python
+        uses: actions/checkout@v4
+
+      - name: Install SPM Python
+        run: python -m pip install -e .
+        
+      # Setup MATLAB and Runtime 
+      - name: Set up MATLAB
+        uses: matlab-actions/setup-matlab@v2
+        with:
+          release: ${{matrix.matlab}}
+          cache: True
+          products: |
+            MATLAB_Compiler
+            MATLAB_Compiler_SDK
+
+      - name: Extract MATLAB path to file
+        uses: matlab-actions/run-command@v2
+        with:
+          command: |
+            fileID = fopen('matlab_path.txt', 'w');
+            matlabpath = matlabroot;
+            matlabpath = strrep(matlabpath, filesep, '/');
+            matlabpath = strrep(matlabpath, '\', '\\');
+            matlabpath = strrep(matlabpath, 'C:', '/c/');
+            matlabpath = strrep(matlabpath, 'D:', '/d/');
+            fprintf(fileID, matlabpath);
+            fclose(fileID);
+        # sometimes this step hangs when closing matlab, automatically terminating after 2 minutes solves the issue
+        timeout-minutes: 2
+        continue-on-error: true
+        
+      - name: Set environment variable with MATLAB path
+        shell: bash # Works on Windows as well because of shell: bash
+        run: |
+          matlab_path=$(cat matlab_path.txt)
+          echo "MATLAB_PATH=$matlab_path" >> $GITHUB_ENV
+
+      - name: Run tests (Mac Apple Silicon)
+        if: matrix.os_name == 'macOS_Apple_Silicon'
+        run: |
+          export DYLD_LIBRARY_PATH="${DYLD_LIBRARY_PATH:+${DYLD_LIBRARY_PATH}:}\
+          ${{ env.MATLAB_PATH }}/runtime/maca64:\
+          ${{ env.MATLAB_PATH }}/bin/maca64:\
+          ${{ env.MATLAB_PATH }}/sys/os/maca64:\
+          ${{ env.MATLAB_PATH }}/extern/bin/maca64"
+          export PYTHONHOME=${{ env.pythonLocation }}
+          mwpython -m unittest discover tests -v
+      
+      - name: Run tests (Mac Intel)
+        if: matrix.os_name == 'macOS_Intel'
+        run: |
+          export DYLD_LIBRARY_PATH="${DYLD_LIBRARY_PATH:+${DYLD_LIBRARY_PATH}:}\
+          ${{ env.MATLAB_PATH }}/runtime/maci64:\
+          ${{ env.MATLAB_PATH }}/bin/maci64:\
+          ${{ env.MATLAB_PATH }}/sys/os/maci64:\
+          ${{ env.MATLAB_PATH }}/extern/bin/maci64"
+          export PYTHONHOME=${{ env.pythonLocation }}
+          mwpython -m unittest discover tests -v
+        
+      - name: Run tests (Windows)
+        if: matrix.os_name == 'Windows'
+        shell: bash
+        run: |
+          export PATH="${{ env.MATLAB_PATH }}/runtime/win64:\
+          ${{ env.MATLAB_PATH }}/bin/win64:\
+          ${{ env.MATLAB_PATH }}/sys/os/win64:\
+          ${{ env.MATLAB_PATH }}/extern/bin/win64\
+          ${{ env.MATLAB_PATH }}/runtime/win32:\
+          ${{ env.MATLAB_PATH }}/bin/win32:\
+          ${{ env.MATLAB_PATH }}/sys/os/win32:\
+          ${{ env.MATLAB_PATH }}/extern/bin/win32:${PATH}"
+          python -m unittest discover tests -v
+
+      - name: Run tests (Linux)
+        if: runner.os == 'Linux'
+        run: |
+          export LD_LIBRARY_PATH="${LD_LIBRARY_PATH:+${LD_LIBRARY_PATH}:}\
+          ${{ env.MATLAB_PATH }}/runtime/glnxa64:\
+          ${{ env.MATLAB_PATH }}/bin/glnxa64:\
+          ${{ env.MATLAB_PATH }}/sys/os/glnxa64:\
+          ${{ env.MATLAB_PATH }}/extern/bin/glnxa64"
+          python -m unittest discover tests -v

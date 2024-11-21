@@ -10,6 +10,7 @@ Copyright (C) 1991,1994-2024 Wellcome Centre for Human Neuroimaging
 ```
 
 # Python bindings for _SPM_
+[![Unit tests](https://github.com/spm/spm-python/actions/workflows/run_unit_tests.yml/badge.svg)](https://github.com/spm/spm-python/actions/workflows/run_unit_tests.yml)
 
 ## Installation instructions: 
 0. Install Python and Pip. Python installation made from Microsoft Store on Windows will not work (raises DeclarativeService.dll not found), intall it from Python website. 
