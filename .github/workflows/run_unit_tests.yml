@@ -1,4 +1,4 @@
-name: Run unit tests for SPM Python
+name: Run unit tests
 on:
   workflow_dispatch:
   push:
@@ -47,5 +47,5 @@ jobs:
 
       - name: Run tests on Linux or Windows
         shell: bash
-        if: runner.os == 'Mac'
-        run: mwpython -m unittest discover tests -v
+        if: runner.os != 'Mac'
+        run: python -m unittest discover tests -v
