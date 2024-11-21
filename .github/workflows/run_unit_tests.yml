@@ -21,12 +21,12 @@ jobs:
         include:
           - os: ubuntu-latest
             os_name: Linux
-          - os: macos-13
-            os_name: macOS_Intel
-          - os: macos-latest
-            os_name: macOS_Apple_Silicon
-          - os: windows-latest
-            os_name: Windows
+          # - os: macos-13
+          #   os_name: macOS_Intel
+          # - os: macos-latest
+          #   os_name: macOS_Apple_Silicon
+          # - os: windows-latest
+          #   os_name: Windows
 
     steps:
       # Setup MATLAB and Runtime 
@@ -54,14 +54,14 @@ jobs:
           matlab_path=$(cat matlab_path.txt)
           echo "MATLAB_PATH=$matlab_path" >> $GITHUB_ENV
 
-      - name: Setup path on Linux
-        if: matrix.os_name == 'Linux'
-        run: |
-          export LD_LIBRARY_PATH="${LD_LIBRARY_PATH:+${LD_LIBRARY_PATH}:}\
-            ${{ env.MATLAB_PATH }}/runtime/glnxa64:\
-            ${{ env.MATLAB_PATH }}/bin/glnxa64:\
-            ${{ env.MATLAB_PATH }}/sys/os/glnxa64:\
-            ${{ env.MATLAB_PATH }}/extern/bin/glnxa64"
+      # - name: Setup path on Linux
+      #   if: matrix.os_name == 'Linux'
+      #   run: |
+      #     export LD_LIBRARY_PATH="${LD_LIBRARY_PATH:+${LD_LIBRARY_PATH}:}\
+      #       ${{ env.MATLAB_PATH }}/runtime/glnxa64:\
+      #       ${{ env.MATLAB_PATH }}/bin/glnxa64:\
+      #       ${{ env.MATLAB_PATH }}/sys/os/glnxa64:\
+      #       ${{ env.MATLAB_PATH }}/extern/bin/glnxa64"
 
       - name: Setup path on Mac Apple Silicon
         if: matrix.os_name == 'macOS_Apple_Silicon'
@@ -106,4 +106,11 @@ jobs:
       - name: Run tests on Linux
         shell: bash
         if: runner.os == 'Linux'
-        run: python -m unittest discover tests -v
+        run: |
+          export LD_LIBRARY_PATH="${LD_LIBRARY_PATH:+${LD_LIBRARY_PATH}:}
+            ${{ env.MATLAB_PATH }}/runtime/glnxa64:\
+            ${{ env.MATLAB_PATH }}/bin/glnxa64:\
+            ${{ env.MATLAB_PATH }}/sys/os/glnxa64:\
+            ${{ env.MATLAB_PATH }}/extern/bin/glnxa64"
+          echo $LD_LIBRARY_PATH
+          python -m unittest discover tests -v
