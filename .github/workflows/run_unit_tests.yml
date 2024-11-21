@@ -19,12 +19,16 @@ jobs:
         include:
           - os: ubuntu-latest
             os_name: Linux
+            platform: Linux
           - os: macos-13
             os_name: macOS_Intel
+            platform: Mac
           - os: macos-latest
             os_name: macOS_Apple_Silicon
+            platform: Mac
           - os: windows-latest
             os_name: Windows
+            platform: Windows
 
     steps:
       # Setup MATLAB and Runtime 
@@ -64,11 +68,11 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Install SPM Python (Mac)
-        if: runner.os == 'Mac'
+        if: matrix.platform == 'Mac'
         run: mwpython -m pip install -e .
         
       - name: Install SPM Python (Windows, Linux)
-        if: runner.os != 'Mac'
+        if:  matrix.platform != 'Mac'
         run: python -m pip install -e .
         
       - name: Run tests (Mac Apple Silicon)
@@ -96,7 +100,7 @@ jobs:
         if: matrix.os_name == 'Windows'
         run: |
           echo ${{ env.MATLAB_PATH }}
-          export PATH=${PATH];${{ env.MATLAB_PATH }}/runtime/win32;${{ env.MATLAB_PATH }}/runtime/win64
+          export PATH=${PATH};${{ env.MATLAB_PATH }}/runtime/win32;${{ env.MATLAB_PATH }}/runtime/win64
           python -m unittest discover tests -v
 
       - name: Run tests (Linux)
