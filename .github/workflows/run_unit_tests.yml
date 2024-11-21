@@ -31,6 +31,20 @@ jobs:
             platform: Windows
 
     steps:
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+          
+      - name: Check out SPM Python
+        uses: actions/checkout@v4
+
+      - name: Install Numpy and Scipy
+        run: python -m pip install numpy scipy 
+
+      - name: Install SPM Python
+        run: pip install -e .
+        
       # Setup MATLAB and Runtime 
       - name: Set up MATLAB
         uses: matlab-actions/setup-matlab@v2
@@ -58,22 +72,6 @@ jobs:
         run: |
           matlab_path=$(cat matlab_path.txt)
           echo "MATLAB_PATH=$matlab_path" >> $GITHUB_ENV
-          
-      - name: Set up Python ${{ matrix.python-version }}
-        uses: actions/setup-python@v5
-        with:
-          python-version: ${{ matrix.python-version }}
-          
-      - name: Check out SPM Python
-        uses: actions/checkout@v4
-
-      - name: Install SPM Python (Mac)
-        if: matrix.platform == 'Mac'
-        run: mwpython -m pip install -e .
-        
-      - name: Install SPM Python (Windows, Linux)
-        if:  matrix.platform != 'Mac'
-        run: python -m pip install -e .
         
       - name: Run tests (Mac Apple Silicon)
         if: matrix.os_name == 'macOS_Apple_Silicon'
@@ -99,8 +97,7 @@ jobs:
         shell: bash
         if: matrix.os_name == 'Windows'
         run: |
-          echo ${{ env.MATLAB_PATH }}
-          export PATH=${PATH};${{ env.MATLAB_PATH }}/runtime/win32;${{ env.MATLAB_PATH }}/runtime/win64
+          export PATH=%PATH%;D:\hostedtoolcache\windows\MATLAB\2024.2.999\x64\runtime\win64;D:\hostedtoolcache\windows\MATLAB\2024.2.999\x64\runtime\win32
           python -m unittest discover tests -v
 
       - name: Run tests (Linux)
