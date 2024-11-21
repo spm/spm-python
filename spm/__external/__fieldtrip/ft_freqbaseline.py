@@ -20,9 +20,9 @@ def ft_freqbaseline(*args, **kwargs):
         See also FT_FREQANALYSIS, FT_TIMELOCKBASELINE, FT_FREQCOMPARISON,  
         FT_FREQGRANDAVERAGE  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/ft_freqbaseline.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("ft_freqbaseline", *args, **kwargs)

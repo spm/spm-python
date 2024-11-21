@@ -12,9 +12,9 @@ def _transfer_elec(*args, **kwargs):
          
         See also PROJECT_ELEC  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/forward/private/transfer_elec.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("transfer_elec", *args, **kwargs)

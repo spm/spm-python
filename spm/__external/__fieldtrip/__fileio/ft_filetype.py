@@ -77,9 +77,9 @@ def ft_filetype(*args, **kwargs):
          - NIRx *.tpl, *.wl1 and *.wl2  
          - York Instruments *.meghdf5  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/ft_filetype.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("ft_filetype", *args, **kwargs)

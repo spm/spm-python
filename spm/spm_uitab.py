@@ -27,9 +27,9 @@ def spm_uitab(*args, **kwargs):
           handles    - a structure of handles for the different tab objects.  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_uitab.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_uitab", *args, **kwargs)

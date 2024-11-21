@@ -63,9 +63,9 @@ def _CalcMD5(*args, **kwargs):
         Michael Kleder has published a Java call to compute the MD5 (and further  
         check sums): http://www.mathworks.com/matlabcentral/fileexchange/8944  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/utilities/private/CalcMD5.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("CalcMD5", *args, **kwargs)

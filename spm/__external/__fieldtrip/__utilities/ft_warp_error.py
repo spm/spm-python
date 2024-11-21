@@ -15,9 +15,9 @@ def ft_warp_error(*args, **kwargs):
          
         See also FT_WARP_OPTIM, FT_WARP_APPLY  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/utilities/ft_warp_error.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("ft_warp_error", *args, **kwargs)

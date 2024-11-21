@@ -12,9 +12,9 @@ def spm_s2csd(*args, **kwargs):
         csd  (n,m)          - spectral density (of modes)  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_s2csd.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_s2csd", *args, **kwargs)

@@ -16,9 +16,9 @@ def _nex_info(*args, **kwargs):
                   Interpretation of type values: 0-neuron, 1-event, 2-interval, 3-waveform,   
                                4-population vector, 5-continuous variable, 6 - marker  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/nex_info.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("nex_info", *args, **kwargs)

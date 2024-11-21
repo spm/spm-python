@@ -32,9 +32,9 @@ def ADEM_occlusion(*args, **kwargs):
         attracted to the same point responsible for target motion.  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DEM/ADEM_occlusion.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("ADEM_occlusion", *args, **kwargs, nargout=0)

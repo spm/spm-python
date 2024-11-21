@@ -17,9 +17,9 @@ def spm_mldivide(*args, **kwargs):
         See also: spm_mrdivide  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_mldivide.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_mldivide", *args, **kwargs)

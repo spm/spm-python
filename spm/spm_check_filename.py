@@ -9,9 +9,9 @@ def spm_check_filename(*args, **kwargs):
         V - struct array of file handles  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_check_filename.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_check_filename", *args, **kwargs)

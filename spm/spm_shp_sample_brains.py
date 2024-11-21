@@ -35,9 +35,9 @@ def spm_shp_sample_brains(*args, **kwargs):
         different trajectories where 2nd component moves in opposite direction.  
        ______________________________  ____________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_shp_sample_brains.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_shp_sample_brains", *args, **kwargs)

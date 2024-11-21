@@ -100,9 +100,9 @@ def spm_MDP_game_optimism(*args, **kwargs):
         over hidden states and those specified by preferences or prior beliefs.  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DEM/spm_MDP_game_optimism.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_MDP_game_optimism", *args, **kwargs)

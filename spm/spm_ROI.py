@@ -22,9 +22,9 @@ def spm_ROI(*args, **kwargs):
         j      - [1xn] indices of input locations XYZmm within VOI xY  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_ROI.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_ROI", *args, **kwargs)

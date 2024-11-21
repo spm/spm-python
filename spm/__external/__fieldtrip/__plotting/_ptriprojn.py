@@ -17,9 +17,9 @@ def _ptriprojn(*args, **kwargs):
           0 (default)  project the point anywhere on the complete plane  
           1            project the point within or on the edge of the triangle  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/plotting/private/ptriprojn.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("ptriprojn", *args, **kwargs)

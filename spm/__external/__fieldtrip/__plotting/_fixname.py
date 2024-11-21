@@ -17,9 +17,9 @@ def _fixname(*args, **kwargs):
          
         See also DEBLANK, STRIP, PAD  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/plotting/private/fixname.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("fixname", *args, **kwargs)

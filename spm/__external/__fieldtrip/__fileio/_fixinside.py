@@ -12,9 +12,9 @@ def _fixinside(*args, **kwargs):
         or  
           [source] = fixinside(source, 'index');  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/fixinside.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("fixinside", *args, **kwargs)

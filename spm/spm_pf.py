@@ -29,9 +29,9 @@ def spm_pf(*args, **kwargs):
         unscented particle filter.  Technical Report CUED/F-INFENG/TR 380  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_pf.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_pf", *args, **kwargs)

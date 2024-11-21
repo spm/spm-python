@@ -17,9 +17,9 @@ def spm_mci_ess(*args, **kwargs):
         Statistical Science, 7(4):473-511.  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/mci/inference/spm_mci_ess.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_mci_ess", *args, **kwargs)

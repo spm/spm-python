@@ -13,9 +13,9 @@ def ADEM_motor(*args, **kwargs):
         dynamics and other exogenous perturbations, late in movement execution  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DEM/ADEM_motor.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("ADEM_motor", *args, **kwargs, nargout=0)

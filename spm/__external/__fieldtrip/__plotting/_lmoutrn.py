@@ -15,9 +15,9 @@ def _lmoutrn(*args, **kwargs):
         distance to the triangles. The sign of the distance is negative if the point  
         lies closer to the average across all vertices and the triangle under consideration.  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/plotting/private/lmoutrn.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("lmoutrn", *args, **kwargs)

@@ -49,9 +49,9 @@ def spm_peb_ppi(*args, **kwargs):
         PPIs. See help text within function for more details.  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_peb_ppi.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_peb_ppi", *args, **kwargs)

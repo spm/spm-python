@@ -7,13 +7,15 @@ except ImportError as e:
         '_spm',
         'resources',
         'RuntimeInstaller.install')
-
     print("Failed to import, install Matlab Runtime and setup library path. ")
     print(f"Matlab Runtime installer can be found in: {installer_path}")
+
     raise e
+    
 import warnings
 import numpy as np
 import matlab
+import itertools
 
 _matlab_numpy_types = {
     matlab.double: np.float64,
@@ -36,10 +38,6 @@ class MatlabClassWrapper:
     def _as_matlab_object(self):
         return self._objdict
 
-    def __init_subclass__(cls):
-        super().__init_subclass__()
-        MatlabClassWrapper._subclasses[cls.__name__] = cls
-
     def __new__(cls, *args, _objdict=None, **kwargs):
         if _objdict is None:
             if cls.__name__ in MatlabClassWrapper._subclasses.keys():
@@ -61,6 +59,15 @@ class MatlabClassWrapper:
             cls.__setitem__ = MatlabClassWrapper.__setitem
 
         MatlabClassWrapper._subclasses[cls.__name__] = cls
+
+    @staticmethod
+    def _from_matlab_object(objdict):
+        if objdict['class__'] in MatlabClassWrapper._subclasses.keys():
+            obj = MatlabClassWrapper._subclasses[objdict['class__']](_objdict=objdict)
+        else:
+            warnings.warn(f'Unknown Matlab class type: {objdict["class__"]}')
+            obj = MatlabClassWrapper(_objdict=objdict)
+        return obj
 
     def __getattr(self, key):
         try:
@@ -99,8 +106,8 @@ class MatlabClassWrapper:
 
     def _process_index(self, ind, k=1, n=1):
         try:
-            return [self._process_index(i, k+1, len(ind))
-                    for k, i in enumerate(ind)]
+            return tuple(self._process_index(i, k+1, len(ind))
+                    for k, i in enumerate(ind))
         except TypeError:
             pass
 
@@ -207,8 +214,9 @@ class Runtime:
                 if res['type__'] == 'object':
                     out = MatlabClassWrapper._from_matlab_object(res)
                 elif res['type__'] == 'structarray':
-                    print()
                     out = StructArray._from_matlab_object(res)
+                elif res['type__'] == 'sparse':
+                    out = np.asarray(res['data__'], dtype=np.double)
                 else:
                     out = res
             else:
@@ -245,7 +253,6 @@ class Cell(list):
             super().__setitem__(index, value)
 
 
-
 class StructArray:
     def __init__(self, *structs):
         if len(structs) == 1:
@@ -256,7 +263,7 @@ class StructArray:
                     size = structs[0]
                     structs = np.fromiter(
                         map(
-                            lambda i: dict(), range(np.prod(size))),
+                            lambda i: dict(), range(int(np.prod(size)))),
                         dtype=object).reshape(size)
                 elif all(map(isinstance, structs[0], itertools.repeat(dict))):
                     structs = structs[0]
@@ -325,8 +332,8 @@ class StructArray:
     def _from_matlab_object(objdict):
         if objdict['type__'] != 'structarray':
             raise TypeError('objdict is not a structarray')
-        size = tuple(map(int, objdict['size__'][0]))
-        data = np.fromiter(objdict['data__'], dtype=object)
+        size = np.asarray(objdict['size__'], dtype=np.uint32).ravel()
+        data = np.asarray(objdict['data__'], dtype=object)
         data = data.reshape(size)
         try:
             obj = StructArray(data)

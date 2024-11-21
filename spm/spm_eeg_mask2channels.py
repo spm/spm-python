@@ -14,9 +14,9 @@ def spm_eeg_mask2channels(*args, **kwargs):
         chanind - indices of channels in D which correspond to blobs in the mask  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_eeg_mask2channels.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_eeg_mask2channels", *args, **kwargs)

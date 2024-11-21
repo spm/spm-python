@@ -11,9 +11,9 @@ def setCTFDataBalance(*args, **kwargs):
                       setCTFDataBalance would balance and unbalance reference gradiometers.  
          Version 1.0   27 October 2006  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/ctf/setCTFDataBalance.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("setCTFDataBalance", *args, **kwargs)

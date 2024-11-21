@@ -11,9 +11,9 @@ def spm_file_split(*args, **kwargs):
         Vo        - spm_vol struct array of output files  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_file_split.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_file_split", *args, **kwargs)

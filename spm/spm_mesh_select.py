@@ -12,9 +12,9 @@ def spm_mesh_select(*args, **kwargs):
         P        - array of selected vertices coordinates [3xN]  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_mesh_select.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_mesh_select", *args, **kwargs)

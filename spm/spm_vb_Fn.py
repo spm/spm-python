@@ -19,9 +19,9 @@ def spm_vb_Fn(*args, **kwargs):
         KL.beta    - Scalar  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_vb_Fn.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_vb_Fn", *args, **kwargs)

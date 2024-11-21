@@ -7,9 +7,9 @@ def _cstructdecode(*args, **kwargs):
          
         See READ_NEURALYNX_NEV for an example  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/cstructdecode.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("cstructdecode", *args, **kwargs)

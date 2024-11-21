@@ -26,9 +26,9 @@ def spm_dcm_spem(*args, **kwargs):
         See also: spm_SEM_gen; spm_dcm_spem_data; spm_dcm_spem_results  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/SPEM_and_DCM/spm_dcm_spem.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_dcm_spem", *args, **kwargs)

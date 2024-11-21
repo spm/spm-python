@@ -17,9 +17,9 @@ def _read_ns_hdr(*args, **kwargs):
           hdr.nsweeps     - number of accepted trials/sweeps  
           hdr.domain      - time (0) or frequency (1) domain  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/read_ns_hdr.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("read_ns_hdr", *args, **kwargs)

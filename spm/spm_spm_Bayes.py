@@ -67,9 +67,9 @@ def spm_spm_Bayes(*args, **kwargs):
         using the VB framework. This is implemented using spm_spm_vb.m.  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_spm_Bayes.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_spm_Bayes", *args, **kwargs)

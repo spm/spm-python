@@ -31,9 +31,9 @@ def spm_eeg_bst_fooof(*args, **kwargs):
         D         - MEEG data struct with FOOOF-corrected spectra  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/MEEGtools/spm_eeg_bst_fooof.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_eeg_bst_fooof", *args, **kwargs)

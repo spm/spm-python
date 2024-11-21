@@ -29,9 +29,9 @@ def _labelcmb2indx(*args, **kwargs):
          
         This is a helper function to FT_CONNECTIVITYANALYSIS  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/utilities/private/labelcmb2indx.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("labelcmb2indx", *args, **kwargs)

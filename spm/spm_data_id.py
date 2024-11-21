@@ -9,9 +9,9 @@ def spm_data_id(*args, **kwargs):
         ID - specific ID  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_data_id.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_data_id", *args, **kwargs)

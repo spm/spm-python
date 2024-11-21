@@ -19,9 +19,9 @@ def _quaternion(*args, **kwargs):
          
         See also TRANSLATE, ROTATE, SCALE, HOMOGENOUS2QUATERNION  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/utilities/private/quaternion.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("quaternion", *args, **kwargs)

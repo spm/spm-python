@@ -29,9 +29,9 @@ def spm_mb_shape(*args, **kwargs):
         FORMAT psi       = spm_mb_shape('get_def',dat,sett.ms.Mmu)  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/MB/spm_mb_shape.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_mb_shape", *args, **kwargs)

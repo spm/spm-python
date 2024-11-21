@@ -28,9 +28,9 @@ def _chanscale_common(*args, **kwargs):
           cfg.mychanscale             = number, scaling to apply to the channels specified in cfg.mychan  
           cfg.mychan                  = Nx1 cell-array with selection of channels  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/chanscale_common.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("chanscale_common", *args, **kwargs)

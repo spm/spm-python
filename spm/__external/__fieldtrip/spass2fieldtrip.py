@@ -37,9 +37,9 @@ def spass2fieldtrip(*args, **kwargs):
          
         See also NUTMEG2FIELDTRIP, LORETA2FIELDTRIP, FIELDTRIP2SPSS  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/spass2fieldtrip.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spass2fieldtrip", *args, **kwargs)

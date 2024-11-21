@@ -8,9 +8,9 @@ def _decode_fif(*args, **kwargs):
          
         See also DECODE_RES4, DECODE_NIFTI1, SAP2MATLAB  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/decode_fif.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("decode_fif", *args, **kwargs)

@@ -16,9 +16,9 @@ def spm_Menu(*args, **kwargs):
         Close the SPM Menu window  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_Menu.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_Menu", *args, **kwargs)

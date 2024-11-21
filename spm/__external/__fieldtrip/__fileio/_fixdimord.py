@@ -29,9 +29,9 @@ def _fixdimord(*args, **kwargs):
          'comp'  
          'voxel'  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/fixdimord.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("fixdimord", *args, **kwargs)

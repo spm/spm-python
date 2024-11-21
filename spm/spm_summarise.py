@@ -27,9 +27,9 @@ def spm_summarise(*args, **kwargs):
                       @mean)  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_summarise.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_summarise", *args, **kwargs)

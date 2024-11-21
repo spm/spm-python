@@ -28,9 +28,9 @@ def flattopwin(*args, **kwargs):
         [1] Gade, S; Herlufsen, H; (1987) 'Use of weighting functions in DFT/FFT  
         analysis (Part I)', Bruel & Kjaer Technical Review No.3.  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/external/signal/flattopwin.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("flattopwin", *args, **kwargs)

@@ -84,9 +84,9 @@ def spm_imcalc(*args, **kwargs):
         additional variable (you'll be prompted to select the n images).  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_imcalc.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_imcalc", *args, **kwargs)

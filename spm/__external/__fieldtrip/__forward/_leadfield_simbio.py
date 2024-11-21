@@ -14,9 +14,9 @@ def _leadfield_simbio(*args, **kwargs):
          
         the output lf is the leadfield matrix of dimensions m (rows) x n*3 (cols)  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/forward/private/leadfield_simbio.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("leadfield_simbio", *args, **kwargs)

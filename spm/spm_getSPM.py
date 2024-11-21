@@ -184,9 +184,9 @@ def spm_getSPM(*args, **kwargs):
         see also spm_contrasts.m  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_getSPM.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_getSPM", *args, **kwargs)

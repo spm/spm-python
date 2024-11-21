@@ -24,9 +24,9 @@ def spm_Laplace(*args, **kwargs):
         https://ece.uwaterloo.ca/~ne217/Laboratories/05/5.LaplacesEquation.pptx  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_Laplace.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_Laplace", *args, **kwargs)

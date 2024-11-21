@@ -98,9 +98,9 @@ def spm_nlsi_GN(*args, **kwargs):
         J. Phys. D. Appl. Phys 1970 3:1759-1764.  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_nlsi_GN.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_nlsi_GN", *args, **kwargs)

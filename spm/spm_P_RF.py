@@ -51,9 +51,9 @@ def spm_P_RF(*args, **kwargs):
         Human Brain Mapping 4:58-73  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_P_RF.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_P_RF", *args, **kwargs)

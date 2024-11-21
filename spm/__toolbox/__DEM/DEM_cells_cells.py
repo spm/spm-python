@@ -28,9 +28,9 @@ def DEM_cells_cells(*args, **kwargs):
         different form from their constituent cellular ensembles.  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DEM/DEM_cells_cells.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("DEM_cells_cells", *args, **kwargs)

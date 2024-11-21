@@ -8,9 +8,9 @@ def _clusterstat(*args, **kwargs):
          
         See also TFCESTAT, FINDCLUSTER  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/clusterstat.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("clusterstat", *args, **kwargs)

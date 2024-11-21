@@ -31,9 +31,9 @@ def ft_interpolatenan(*args, **kwargs):
          
         See also FT_REJECTARTIFACT, FT_REDEFINETRIAL, FT_CHANNELREPAIR  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/ft_interpolatenan.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("ft_interpolatenan", *args, **kwargs)

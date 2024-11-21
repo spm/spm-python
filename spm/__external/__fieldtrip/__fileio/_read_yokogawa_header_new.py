@@ -22,9 +22,9 @@ def _read_yokogawa_header_new(*args, **kwargs):
         See also CTF2GRAD, BTI2GRAD, FIF2GRAD, MNE2GRAD, ITAB2GRAD, FT_READ_SENS,  
         FT_READ_HEADER, READ_YOKOGAWA_DATA_NEW, READ_YOKOGAWA_EVENT  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/read_yokogawa_header_new.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("read_yokogawa_header_new", *args, **kwargs)

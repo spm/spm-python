@@ -32,9 +32,9 @@ def _skin_medium(*args, **kwargs):
         This corresponds with that of one of the developers who approximated his own skin  
         color more than 15 years ago upon the first implementation of this function.  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/plotting/private/skin_medium.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("skin_medium", *args, **kwargs)

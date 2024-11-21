@@ -13,9 +13,9 @@ def mci_logistic_act(*args, **kwargs):
         a         activations of logistic model  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/mci/models/logistic/mci_logistic_act.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("mci_logistic_act", *args, **kwargs)

@@ -21,9 +21,9 @@ def _headsurface(*args, **kwargs):
           inwardshift    = number (default = 0)  
           headshape      = string, file containing the head shape  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/inverse/private/headsurface.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("headsurface", *args, **kwargs)

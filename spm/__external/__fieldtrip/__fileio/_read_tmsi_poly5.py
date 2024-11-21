@@ -26,9 +26,9 @@ def _read_tmsi_poly5(*args, **kwargs):
         but WITHOUT ANY WARRANTY; without even the implied warranty of  
         MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/read_tmsi_poly5.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("read_tmsi_poly5", *args, **kwargs)

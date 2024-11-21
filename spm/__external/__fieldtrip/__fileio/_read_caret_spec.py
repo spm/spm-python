@@ -14,9 +14,9 @@ def _read_caret_spec(*args, **kwargs):
          
         The file can be an xml-file or an ascii formatted file  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/read_caret_spec.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("read_caret_spec", *args, **kwargs)

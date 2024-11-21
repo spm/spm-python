@@ -20,9 +20,9 @@ def FieldMap_create(*args, **kwargs):
         the toolbox, see FieldMap_principles.md.  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/FieldMap/FieldMap_create.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("FieldMap_create", *args, **kwargs)

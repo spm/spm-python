@@ -24,9 +24,9 @@ def spm_Ncdf_jdw(*args, **kwargs):
          
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_Ncdf_jdw.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_Ncdf_jdw", *args, **kwargs)

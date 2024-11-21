@@ -37,9 +37,9 @@ def spm_dcm_bmc(*args, **kwargs):
         NeuroImage 84:971-85. doi: 10.1016/j.neuroimage.2013.08.065  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_dcm_bmc.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_dcm_bmc", *args, **kwargs)

@@ -13,9 +13,9 @@ def _remove_double_vertices(*args, **kwargs):
          
         See also REMOVE_VERTICES  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/remove_double_vertices.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("remove_double_vertices", *args, **kwargs)

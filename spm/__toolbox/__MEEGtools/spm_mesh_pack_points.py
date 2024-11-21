@@ -20,9 +20,9 @@ def spm_mesh_pack_points(*args, **kwargs):
           n           - number of sensors at each iteration  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/MEEGtools/spm_mesh_pack_points.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_mesh_pack_points", *args, **kwargs)

@@ -14,9 +14,9 @@ def fiff_write_id(*args, **kwargs):
          
         If the id argument is missing it will be generated here  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/mne/fiff_write_id.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("fiff_write_id", *args, **kwargs, nargout=0)

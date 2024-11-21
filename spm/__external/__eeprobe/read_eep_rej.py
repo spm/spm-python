@@ -21,9 +21,9 @@ def read_eep_rej(*args, **kwargs):
          
         See also READ_EEP_CNT, READ_EEP_TRG, READ_EEP_AVR  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/eeprobe/read_eep_rej.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("read_eep_rej", *args, **kwargs)

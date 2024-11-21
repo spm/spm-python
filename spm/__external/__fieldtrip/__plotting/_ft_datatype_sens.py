@@ -95,9 +95,9 @@ def _ft_datatype_sens(*args, **kwargs):
         See also FT_READ_SENS, FT_SENSTYPE, FT_CHANTYPE, FT_APPLY_MONTAGE, CTF2GRAD, FIF2GRAD,  
         BTI2GRAD, YOKOGAWA2GRAD, ITAB2GRAD  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/plotting/private/ft_datatype_sens.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("ft_datatype_sens", *args, **kwargs)

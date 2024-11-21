@@ -19,9 +19,9 @@ def ft_appendspike(*args, **kwargs):
          
         See also FT_APPENDDATA, FT_PREPROCESSING  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/ft_appendspike.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("ft_appendspike", *args, **kwargs)

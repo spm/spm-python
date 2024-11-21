@@ -15,9 +15,9 @@ class gifti(MatlabClassWrapper):
                  doc gifti  
             
           
-        
+
         [Matlab code]( https://github.com/spm/spm/blob/main/@gifti/gifti.m )
-        
+
         Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         super().__init__()
@@ -29,9 +29,9 @@ class gifti(MatlabClassWrapper):
             this   -  GIfTI object  
            __________________________________________________________________________  
           
-        
+
         [Matlab code]( https://github.com/spm/spm/blob/main/@gifti/display.m )
-        
+
         Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("display", self._as_matlab_object(), *args, **kwargs, nargout=0)
@@ -45,9 +45,9 @@ class gifti(MatlabClassWrapper):
             s      - a structure containing public fields of the object  
            __________________________________________________________________________  
           
-        
+
         [Matlab code]( https://github.com/spm/spm/blob/main/@gifti/export.m )
-        
+
         Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("export", self._as_matlab_object(), *args, **kwargs)
@@ -60,9 +60,9 @@ class gifti(MatlabClassWrapper):
             names  -  field names  
            __________________________________________________________________________  
           
-        
+
         [Matlab code]( https://github.com/spm/spm/blob/main/@gifti/fieldnames.m )
-        
+
         Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("fieldnames", self._as_matlab_object(), *args, **kwargs)
@@ -76,9 +76,9 @@ class gifti(MatlabClassWrapper):
             tf     -  logical array  
            __________________________________________________________________________  
           
-        
+
         [Matlab code]( https://github.com/spm/spm/blob/main/@gifti/isfield.m )
-        
+
         Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("isfield", self._as_matlab_object(), *args, **kwargs)
@@ -88,9 +88,9 @@ class gifti(MatlabClassWrapper):
           plot method for GIfTI objects  
            __________________________________________________________________________  
           
-        
+
         [Matlab code]( https://github.com/spm/spm/blob/main/@gifti/plot.m )
-        
+
         Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("plot", self._as_matlab_object(), *args, **kwargs)
@@ -109,9 +109,9 @@ class gifti(MatlabClassWrapper):
                         [Default: 'ColumnMajorOrder']  
            __________________________________________________________________________  
           
-        
+
         [Matlab code]( https://github.com/spm/spm/blob/main/@gifti/save.m )
-        
+
         Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("save", self._as_matlab_object(), *args, **kwargs, nargout=0)
@@ -128,9 +128,9 @@ class gifti(MatlabClassWrapper):
                         (.surf,.curv), MZ3 (.mz3) [Default: VTK]  
            __________________________________________________________________________  
           
-        
+
         [Matlab code]( https://github.com/spm/spm/blob/main/@gifti/saveas.m )
-        
+
         Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("saveas", self._as_matlab_object(), *args, **kwargs, nargout=0)
@@ -143,9 +143,9 @@ class gifti(MatlabClassWrapper):
             s      -  a structure containing public fields of the object  
            __________________________________________________________________________  
           
-        
+
         [Matlab code]( https://github.com/spm/spm/blob/main/@gifti/struct.m )
-        
+
         Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("struct", self._as_matlab_object(), *args, **kwargs)
@@ -155,9 +155,9 @@ class gifti(MatlabClassWrapper):
           Subscript assignment for GIfTI objects  
            __________________________________________________________________________  
           
-        
+
         [Matlab code]( https://github.com/spm/spm/blob/main/@gifti/subsasgn.m )
-        
+
         Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("subsasgn", self._as_matlab_object(), *args, **kwargs)
@@ -167,9 +167,9 @@ class gifti(MatlabClassWrapper):
           Subscript referencing for GIfTI objects  
            __________________________________________________________________________  
           
-        
+
         [Matlab code]( https://github.com/spm/spm/blob/main/@gifti/subsref.m )
-        
+
         Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("subsref", self._as_matlab_object(), *args, **kwargs)
@@ -192,9 +192,9 @@ class gifti(MatlabClassWrapper):
             >> char(base64('decode',base64('encode',uint8('Base64'))))  
            __________________________________________________________________________  
           
-        
+
         [Matlab code]( https://github.com/spm/spm/blob/main/@gifti/private/base64.m )
-        
+
         Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("base64", self._as_matlab_object(), *args, **kwargs)
@@ -217,9 +217,9 @@ class gifti(MatlabClassWrapper):
              
               See also BASE64ENCODE.  
           
-        
+
         [Matlab code]( https://github.com/spm/spm/blob/main/@gifti/private/base64decode.m )
-        
+
         Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("base64decode", self._as_matlab_object(), *args, **kwargs)
@@ -265,9 +265,9 @@ class gifti(MatlabClassWrapper):
              
               See also BASE64DECODE.  
           
-        
+
         [Matlab code]( https://github.com/spm/spm/blob/main/@gifti/private/base64encode.m )
-        
+
         Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("base64encode", self._as_matlab_object(), *args, **kwargs)
@@ -282,9 +282,9 @@ class gifti(MatlabClassWrapper):
             See https://surfer.nmr.mgh.harvard.edu/fswiki/FileFormats  
            __________________________________________________________________________  
           
-        
+
         [Matlab code]( https://github.com/spm/spm/blob/main/@gifti/private/freesurfer_read.m )
-        
+
         Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("freesurfer_read", self._as_matlab_object(), *args, **kwargs)
@@ -294,9 +294,9 @@ class gifti(MatlabClassWrapper):
           Dictionary of GIfTI/NIfTI stuff  
            __________________________________________________________________________  
           
-        
+
         [Matlab code]( https://github.com/spm/spm/blob/main/@gifti/private/getdict.m )
-        
+
         Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("getdict", self._as_matlab_object(), *args, **kwargs)
@@ -309,9 +309,9 @@ class gifti(MatlabClassWrapper):
             this        - structure with fields 'metaData', 'label' and 'data'.  
            __________________________________________________________________________  
           
-        
+
         [Matlab code]( https://github.com/spm/spm/blob/main/@gifti/private/gifti_read.m )
-        
+
         Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("gifti_read", self._as_matlab_object(), *args, **kwargs)
@@ -326,9 +326,9 @@ class gifti(MatlabClassWrapper):
             b       -  indices of dataarrays of found intent(s)  
            __________________________________________________________________________  
           
-        
+
         [Matlab code]( https://github.com/spm/spm/blob/main/@gifti/private/isintent.m )
-        
+
         Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("isintent", self._as_matlab_object(), *args, **kwargs)
@@ -348,9 +348,9 @@ class gifti(MatlabClassWrapper):
             Requirements: zstream, base64decode  
            __________________________________________________________________________  
           
-        
+
         [Matlab code]( https://github.com/spm/spm/blob/main/@gifti/private/mvtk_read.m )
-        
+
         Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("mvtk_read", self._as_matlab_object(), *args, **kwargs)
@@ -372,9 +372,9 @@ class gifti(MatlabClassWrapper):
             Requirements: zstream, base64encode  
            __________________________________________________________________________  
           
-        
+
         [Matlab code]( https://github.com/spm/spm/blob/main/@gifti/private/mvtk_write.m )
-        
+
         Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("mvtk_write", self._as_matlab_object(), *args, **kwargs, nargout=0)
@@ -392,9 +392,9 @@ class gifti(MatlabClassWrapper):
             https://github.com/neurolabusc/surf-ice/tree/master/mz3  
            __________________________________________________________________________  
           
-        
+
         [Matlab code]( https://github.com/spm/spm/blob/main/@gifti/private/mz3_read.m )
-        
+
         Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("mz3_read", self._as_matlab_object(), *args, **kwargs)
@@ -413,9 +413,9 @@ class gifti(MatlabClassWrapper):
             https://github.com/neurolabusc/surf-ice/tree/master/mz3  
            __________________________________________________________________________  
           
-        
+
         [Matlab code]( https://github.com/spm/spm/blob/main/@gifti/private/mz3_write.m )
-        
+
         Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("mz3_write", self._as_matlab_object(), *args, **kwargs, nargout=0)
@@ -433,9 +433,9 @@ class gifti(MatlabClassWrapper):
             https://en.wikipedia.org/wiki/Wavefront_.obj_file  
            __________________________________________________________________________  
           
-        
+
         [Matlab code]( https://github.com/spm/spm/blob/main/@gifti/private/obj_read.m )
-        
+
         Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("obj_read", self._as_matlab_object(), *args, **kwargs)
@@ -453,9 +453,9 @@ class gifti(MatlabClassWrapper):
             https://en.wikipedia.org/wiki/OFF_(file_format)  
            __________________________________________________________________________  
           
-        
+
         [Matlab code]( https://github.com/spm/spm/blob/main/@gifti/private/off_read.m )
-        
+
         Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("off_read", self._as_matlab_object(), *args, **kwargs)
@@ -473,9 +473,9 @@ class gifti(MatlabClassWrapper):
             https://en.wikipedia.org/wiki/PLY_%28file_format%29  
            __________________________________________________________________________  
           
-        
+
         [Matlab code]( https://github.com/spm/spm/blob/main/@gifti/private/ply_read.m )
-        
+
         Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("ply_read", self._as_matlab_object(), *args, **kwargs)
@@ -493,9 +493,9 @@ class gifti(MatlabClassWrapper):
             https://en.wikipedia.org/wiki/STL_%28file_format%29  
            __________________________________________________________________________  
           
-        
+
         [Matlab code]( https://github.com/spm/spm/blob/main/@gifti/private/stl_read.m )
-        
+
         Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("stl_read", self._as_matlab_object(), *args, **kwargs)
@@ -532,9 +532,9 @@ class gifti(MatlabClassWrapper):
             Processing instructions and comments are not reported.  
            __________________________________________________________________________  
           
-        
+
         [Matlab code]( https://github.com/spm/spm/blob/main/@gifti/private/xml_parser.m )
-        
+
         Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("xml_parser", self._as_matlab_object(), *args, **kwargs)
@@ -562,9 +562,9 @@ class gifti(MatlabClassWrapper):
               https://www.mathworks.com/matlabcentral/fileexchange/8899  
            __________________________________________________________________________  
           
-        
+
         [Matlab code]( https://github.com/spm/spm/blob/main/@gifti/private/zstream.m )
-        
+
         Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("zstream", self._as_matlab_object(), *args, **kwargs)

@@ -27,9 +27,9 @@ def spm_vb_graphcut(*args, **kwargs):
         IEEE Trans Pattern Anal Mach Intell, 28(3),pp469-75  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_vb_graphcut.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_vb_graphcut", *args, **kwargs)

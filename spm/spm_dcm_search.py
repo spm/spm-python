@@ -36,9 +36,9 @@ def spm_dcm_search(*args, **kwargs):
         See also: spm_dcm_post_hoc.m  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_dcm_search.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_dcm_search", *args, **kwargs, nargout=0)

@@ -15,9 +15,9 @@ def _nex_int(*args, **kwargs):
           ts_left - array of left ends of the intervals (in seconds)  
           ts_right - array of right ends of the intervals (in seconds)  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/nex_int.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("nex_int", *args, **kwargs)

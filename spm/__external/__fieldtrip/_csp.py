@@ -38,9 +38,9 @@ def _csp(*args, **kwargs):
         [2] Jason Farquhar. A linear feature space for simultaneous learning of  
             spatio-spectral filters in BCI. Neural Networks, 22:1278--1285, 2009.  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/csp.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("csp", *args, **kwargs)

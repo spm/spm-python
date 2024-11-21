@@ -63,9 +63,9 @@ def optimNn(*args, **kwargs):
         boundaries) throughout. For circulant boundary conditions, use optimN.  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DARTEL/optimNn.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("optimNn", *args, **kwargs)

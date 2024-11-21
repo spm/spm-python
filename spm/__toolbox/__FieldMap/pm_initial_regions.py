@@ -34,9 +34,9 @@ def pm_initial_regions(*args, **kwargs):
         angle(-1) returns pi (rather than -pi).  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/FieldMap/pm_initial_regions.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("pm_initial_regions", *args, **kwargs)

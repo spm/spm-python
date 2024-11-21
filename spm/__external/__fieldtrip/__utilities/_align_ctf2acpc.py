@@ -24,9 +24,9 @@ def _align_ctf2acpc(*args, **kwargs):
          
         See also ALIGN_NEUROMAG2ACPC, ALIGN_FSAVERAGE2MNI  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/utilities/private/align_ctf2acpc.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("align_ctf2acpc", *args, **kwargs)

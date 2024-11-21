@@ -7,9 +7,9 @@ def _ismatch(*args, **kwargs):
         of x and y, if y is a string, or a cell-array of strings, it can contain  
         the wildcard '*'  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/ismatch.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("ismatch", *args, **kwargs)

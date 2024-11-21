@@ -21,9 +21,9 @@ def spm_eeg_reref_eeg(*args, **kwargs):
         calling spm_eeg_montage with appropriate montage, excluding bad channels  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/MEEGtools/spm_eeg_reref_eeg.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_eeg_reref_eeg", *args, **kwargs)

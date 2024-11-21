@@ -17,9 +17,9 @@ def spm_eeg_fuse(*args, **kwargs):
         Vladimir Litvak  
         Copyright (C) 2008-2022 Wellcome Centre for Human Neuroimaging  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_eeg_fuse.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_eeg_fuse", *args, **kwargs)

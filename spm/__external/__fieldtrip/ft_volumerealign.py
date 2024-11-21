@@ -191,9 +191,9 @@ def ft_volumerealign(*args, **kwargs):
         See also FT_READ_MRI, FT_VOLUMERESLICE, FT_INTERACTIVEREALIGN, FT_ELECTRODEREALIGN,  
         FT_DETERMINE_COORDSYS, SPM_AFFREG, SPM_NORMALISE, SPM_COREG  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/ft_volumerealign.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("ft_volumerealign", *args, **kwargs)

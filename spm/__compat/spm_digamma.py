@@ -13,9 +13,9 @@ def spm_digamma(*args, **kwargs):
        _______________________________________________________________________  
         Copyright (C) 2008 Wellcome Trust Centre for Neuroimaging  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/compat/spm_digamma.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_digamma", *args, **kwargs)

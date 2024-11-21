@@ -14,9 +14,9 @@ def spm_eeg_inv_datareg_ui(*args, **kwargs):
         D            - same data struct including the new required files and variables  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_eeg_inv_datareg_ui.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_eeg_inv_datareg_ui", *args, **kwargs)

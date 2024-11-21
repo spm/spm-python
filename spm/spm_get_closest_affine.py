@@ -26,9 +26,9 @@ def spm_get_closest_affine(*args, **kwargs):
         If W is empty or not passed, then it is assumed to be all ones.  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_get_closest_affine.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_get_closest_affine", *args, **kwargs)

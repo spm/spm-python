@@ -35,9 +35,9 @@ def spm_dcm_loo(*args, **kwargs):
         See also: spm_dcm_peb.m and spm_dcm_ppd.m  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_dcm_loo.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_dcm_loo", *args, **kwargs)

@@ -18,9 +18,9 @@ def _dimassign(*args, **kwargs):
          
         See also the function DIMINDEX  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/dimassign.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("dimassign", *args, **kwargs)

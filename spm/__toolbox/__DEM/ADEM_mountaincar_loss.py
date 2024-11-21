@@ -13,9 +13,9 @@ def ADEM_mountaincar_loss(*args, **kwargs):
         low cost states and (apparent) attractiveness of those states.  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DEM/ADEM_mountaincar_loss.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("ADEM_mountaincar_loss", *args, **kwargs, nargout=0)

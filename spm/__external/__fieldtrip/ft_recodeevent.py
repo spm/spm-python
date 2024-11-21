@@ -52,9 +52,9 @@ def ft_recodeevent(*args, **kwargs):
          
         See also FT_DEFINETRIAL, FT_REDEFINETRIAL, FT_PREPROCESSING  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/ft_recodeevent.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("ft_recodeevent", *args, **kwargs)

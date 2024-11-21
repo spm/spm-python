@@ -55,9 +55,9 @@ def spm_surf(*args, **kwargs):
         e.g., MRIcron.  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_surf.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_surf", *args, **kwargs)

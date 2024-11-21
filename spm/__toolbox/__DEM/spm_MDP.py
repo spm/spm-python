@@ -65,9 +65,9 @@ def spm_MDP(*args, **kwargs):
         See also spm_MDP_game  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DEM/spm_MDP.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_MDP", *args, **kwargs)

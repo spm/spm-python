@@ -13,9 +13,9 @@ def spm_ker2ccf(*args, **kwargs):
         pst  - time samples  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/spectral/spm_ker2ccf.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_ker2ccf", *args, **kwargs)

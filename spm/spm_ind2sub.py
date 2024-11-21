@@ -23,9 +23,9 @@ def spm_ind2sub(*args, **kwargs):
          
           See also SUB2IND, FIND.  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_ind2sub.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_ind2sub", *args, **kwargs)

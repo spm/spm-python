@@ -21,9 +21,9 @@ def fiff_write_dig_file(*args, **kwargs):
         eegref        EEG reference electrode location (optional)  
         extra         Additional head surface points   (optional)  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/mne/fiff_write_dig_file.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("fiff_write_dig_file", *args, **kwargs, nargout=0)

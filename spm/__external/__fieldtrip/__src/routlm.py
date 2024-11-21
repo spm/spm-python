@@ -10,9 +10,9 @@ def routlm(*args, **kwargs):
           [proj] = routlm(v1, v2, v3, la, mu)  
         where v1, v2 and v3 are three vertices of the triangle  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/src/routlm.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("routlm", *args, **kwargs)

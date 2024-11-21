@@ -9,9 +9,9 @@ def _grid2transform(*args, **kwargs):
          
         See also TRANSFORM2GRID  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/grid2transform.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("grid2transform", *args, **kwargs)

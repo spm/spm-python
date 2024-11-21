@@ -31,9 +31,9 @@ def spm_MDP_VB_game(*args, **kwargs):
         please see spm_MDP_VB  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DEM/spm_MDP_VB_game.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_MDP_VB_game", *args, **kwargs)

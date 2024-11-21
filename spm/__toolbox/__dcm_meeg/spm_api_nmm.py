@@ -24,9 +24,9 @@ def spm_api_nmm(*args, **kwargs):
          
         See also: GUIDE, GUIDATA, GUIHANDLES  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/dcm_meeg/spm_api_nmm.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_api_nmm", *args, **kwargs)

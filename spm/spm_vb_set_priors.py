@@ -33,9 +33,9 @@ def spm_vb_set_priors(*args, **kwargs):
         vxyz    - locations of voxels   
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_vb_set_priors.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_vb_set_priors", *args, **kwargs)

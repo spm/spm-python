@@ -20,9 +20,9 @@ def spm_eeg_invert_classic_mix(*args, **kwargs):
         Output D will have a solution which is optimal REML mixture of Qpriors  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_eeg_invert_classic_mix.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_eeg_invert_classic_mix", *args, **kwargs)

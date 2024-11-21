@@ -14,9 +14,9 @@ def spm_get_omega(*args, **kwargs):
         Omega     Expected error  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/spectral/spm_get_omega.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_get_omega", *args, **kwargs)

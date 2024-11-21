@@ -15,9 +15,9 @@ def spm_spm_Bayes_CY(*args, **kwargs):
         interest. The resulting matrix is used in spm_spm_Bayes.m.  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_spm_Bayes_CY.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_spm_Bayes_CY", *args, **kwargs)

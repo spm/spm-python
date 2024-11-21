@@ -13,9 +13,9 @@ def _int2str(*args, **kwargs):
          
           See also NUM2STR, SPRINTF, FPRINTF, MAT2STR.  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/matlabbatch/private/int2str.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("int2str", *args, **kwargs)

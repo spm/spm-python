@@ -19,9 +19,9 @@ def spm_kmeans(*args, **kwargs):
         post          [N x k] matrix of class labels  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/mixture/spm_kmeans.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_kmeans", *args, **kwargs)

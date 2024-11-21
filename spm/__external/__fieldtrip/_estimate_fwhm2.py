@@ -11,9 +11,9 @@ def _estimate_fwhm2(*args, **kwargs):
           
         This function can only deal with scalar filters.  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/estimate_fwhm2.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("estimate_fwhm2", *args, **kwargs)

@@ -16,9 +16,9 @@ def spm_eeg_ft_megplanar(*args, **kwargs):
           D - dataset converted to planar gradient  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/MEEGtools/spm_eeg_ft_megplanar.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_eeg_ft_megplanar", *args, **kwargs)

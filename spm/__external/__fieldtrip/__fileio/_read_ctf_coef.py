@@ -12,9 +12,9 @@ def _read_ctf_coef(*args, **kwargs):
         The original location of the coefficients included in this file is  
         odin:/opt/ctf/hardware/M016/M017_1706.coef  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/read_ctf_coef.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("read_ctf_coef", *args, **kwargs)

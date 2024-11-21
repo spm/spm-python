@@ -19,9 +19,9 @@ def spm_rmpath(*args, **kwargs):
           See also PATH, ADDPATH, RMPATH, GENPATH, PATHTOOL, SAVEPATH.  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_rmpath.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_rmpath", *args, **kwargs)

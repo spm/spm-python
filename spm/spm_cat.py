@@ -23,9 +23,9 @@ def spm_cat(*args, **kwargs):
         If called with a dimension argument, a cell array is returned.  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_cat.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_cat", *args, **kwargs)

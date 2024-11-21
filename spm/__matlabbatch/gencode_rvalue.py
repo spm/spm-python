@@ -30,9 +30,9 @@ def gencode_rvalue(*args, **kwargs):
        _______________________________________________________________________  
         Copyright (C) 2007 Freiburg Brain Imaging  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/matlabbatch/gencode_rvalue.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("gencode_rvalue", *args, **kwargs)

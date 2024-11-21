@@ -12,9 +12,9 @@ def _read_neuralynx_ttl(*args, **kwargs):
         F.C. Donders Centre we use it in conjunction with Neuralynx and  
         SPIKEDOWNSAMPLE.  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/read_neuralynx_ttl.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("read_neuralynx_ttl", *args, **kwargs)

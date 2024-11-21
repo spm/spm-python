@@ -9,9 +9,9 @@ def spm_lfp_sqrt(*args, **kwargs):
         Y -> log(y) (including cells)  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/Neural_Models/spm_lfp_sqrt.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_lfp_sqrt", *args, **kwargs)

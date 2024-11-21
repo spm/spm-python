@@ -31,9 +31,9 @@ def pm_invert_phasemap(*args, **kwargs):
         the basic book-keeping regarding format and file creation.  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/FieldMap/pm_invert_phasemap.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("pm_invert_phasemap", *args, **kwargs)

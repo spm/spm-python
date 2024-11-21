@@ -43,9 +43,9 @@ def spm_mix(*args, **kwargs):
         m_0,beta_0       Prior means, p(mu)=N(m_0,beta_0 Gamma_s)  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/mixture/spm_mix.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_mix", *args, **kwargs)

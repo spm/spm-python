@@ -18,9 +18,9 @@ def spm_eeg_avgtime(*args, **kwargs):
          
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_eeg_avgtime.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_eeg_avgtime", *args, **kwargs)

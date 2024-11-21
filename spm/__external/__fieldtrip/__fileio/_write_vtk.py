@@ -18,9 +18,9 @@ def _write_vtk(*args, **kwargs):
          
         See also READ_VTK, WRITE_PLY  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/write_vtk.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("write_vtk", *args, **kwargs, nargout=0)

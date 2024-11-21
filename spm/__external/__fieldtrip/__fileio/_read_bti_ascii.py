@@ -12,9 +12,9 @@ def _read_bti_ascii(*args, **kwargs):
              item3 : value3a value3b value3c  
              item4 : value4a value4b value4c  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/read_bti_ascii.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("read_bti_ascii", *args, **kwargs)

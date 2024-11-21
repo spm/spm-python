@@ -21,9 +21,9 @@ def _blockindx2cmbindx(*args, **kwargs):
         specifies in each row of cells two ordered lists of blocks that are  
         needed to compute a conditioned Granger spectrum.  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/blockindx2cmbindx.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("blockindx2cmbindx", *args, **kwargs)

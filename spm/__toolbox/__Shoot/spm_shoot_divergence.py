@@ -8,9 +8,9 @@ def spm_shoot_divergence(*args, **kwargs):
         job.velocities - Filenames of initial velocity fields  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/Shoot/spm_shoot_divergence.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_shoot_divergence", *args, **kwargs)

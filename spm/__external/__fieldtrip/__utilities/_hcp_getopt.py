@@ -18,9 +18,9 @@ def _hcp_getopt(*args, **kwargs):
          
         See also FT_GETOPT  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/utilities/private/hcp_getopt.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("hcp_getopt", *args, **kwargs)

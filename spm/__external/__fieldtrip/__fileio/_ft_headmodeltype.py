@@ -37,9 +37,9 @@ def _ft_headmodeltype(*args, **kwargs):
         FT_HEADMODEL_CONCENTRICSPHERES, FT_HEADMODEL_LOCALSPHERES,  
         FT_HEADMODEL_SINGLESHELL, FT_HEADMODEL_INTERPOLATE  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/ft_headmodeltype.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("ft_headmodeltype", *args, **kwargs)

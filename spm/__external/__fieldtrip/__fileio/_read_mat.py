@@ -14,9 +14,9 @@ def _read_mat(*args, **kwargs):
            
          See also WRITE_MAT  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/read_mat.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("read_mat", *args, **kwargs)

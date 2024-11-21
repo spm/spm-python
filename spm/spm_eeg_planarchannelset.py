@@ -10,9 +10,9 @@ def spm_eeg_planarchannelset(*args, **kwargs):
         the label after combining the two.  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_eeg_planarchannelset.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_eeg_planarchannelset", *args, **kwargs)

@@ -16,9 +16,9 @@ def _mat2ades(*args, **kwargs):
         Sophie Chen - January 2014  
         Modified by Robert Oostenveld - February 2019  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/mat2ades.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("mat2ades", *args, **kwargs, nargout=0)

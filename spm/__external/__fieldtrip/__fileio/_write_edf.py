@@ -15,9 +15,9 @@ def _write_edf(*args, **kwargs):
         same time, there is an upper limit of how big (in bytes) a record should be,  
         which we could easily violate if we write the whole data as *one* record.  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/write_edf.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("write_edf", *args, **kwargs, nargout=0)

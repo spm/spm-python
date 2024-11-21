@@ -23,9 +23,9 @@ def spm_gx_hh(*args, **kwargs):
         x(6) = t                  % time since last spike (peri-spike time)  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/Neural_Models/spm_gx_hh.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_gx_hh", *args, **kwargs)

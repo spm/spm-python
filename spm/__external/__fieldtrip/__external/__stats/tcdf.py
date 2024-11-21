@@ -30,9 +30,9 @@ def tcdf(*args, **kwargs):
         added support for upper tail, see http://bugzilla.fieldtriptoolbox.org/show_bug.cgi?id=3045  
         13 Jan 2016, Robert Oostenveld  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/external/stats/tcdf.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("tcdf", *args, **kwargs)

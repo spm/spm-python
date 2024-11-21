@@ -18,9 +18,9 @@ def _atlas_lookup(*args, **kwargs):
         the input positions are transformed betweem MNI and Talairach-Tournoux coordinates.  
         See http://www.mrc-cbu.cam.ac.uk/Imaging/Common/mnispace.shtml for more details.  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/atlas_lookup.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("atlas_lookup", *args, **kwargs)

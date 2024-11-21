@@ -17,9 +17,9 @@ def ft_reproducescript(*args, **kwargs):
          
         See also FT_ANALYSISPIPELINE, FT_DEFAULTS  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/ft_reproducescript.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("ft_reproducescript", *args, **kwargs, nargout=0)

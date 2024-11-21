@@ -40,9 +40,9 @@ def DEM_dSprites(*args, **kwargs):
        _________________________________________________________________________  
         Copyright (C) 2019 Wellcome Trust Centre for Neuroimaging  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DEM/DEM_dSprites.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("DEM_dSprites", *args, **kwargs)

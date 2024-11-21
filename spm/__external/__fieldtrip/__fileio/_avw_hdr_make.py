@@ -15,9 +15,9 @@ def _avw_hdr_make(*args, **kwargs):
         See also, AVW_HDR_READ AVW_HDR_WRITE  
                   AVW_IMG_READ AVW_IMG_WRITE  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/avw_hdr_make.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("avw_hdr_make", *args, **kwargs)

@@ -19,9 +19,9 @@ def spm_large_dcm_reduce(*args, **kwargs):
         NeuroImage, 68:181-191, 2013.  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_large_dcm_reduce.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_large_dcm_reduce", *args, **kwargs)

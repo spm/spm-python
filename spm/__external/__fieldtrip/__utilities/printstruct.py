@@ -27,9 +27,9 @@ def printstruct(*args, **kwargs):
          
         See also DISP, NUM2STR, INT2STR, MAT2STR  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/utilities/printstruct.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("printstruct", *args, **kwargs)

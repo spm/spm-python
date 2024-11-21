@@ -46,9 +46,9 @@ def spm_mrf(*args, **kwargs):
         (divided by 6). The contribution of each neighbour is scaled by w.  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_mrf.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_mrf", *args, **kwargs)

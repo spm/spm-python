@@ -16,9 +16,9 @@ def spm_epharm(*args, **kwargs):
        __________________________________________________________________________  
         Copyright (C) 2023 Tim Tierney  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_epharm.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_epharm", *args, **kwargs)

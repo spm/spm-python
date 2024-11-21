@@ -16,9 +16,9 @@ def mne_write_stc_file(*args, **kwargs):
             vertices      Vertex indices (0 based)  
             data          The data matrix nvert * ntime  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/mne/mne_write_stc_file.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("mne_write_stc_file", *args, **kwargs, nargout=0)

@@ -32,9 +32,9 @@ def _expand_orthogonal(*args, **kwargs):
          
         See also: SVD  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/expand_orthogonal.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("expand_orthogonal", *args, **kwargs)

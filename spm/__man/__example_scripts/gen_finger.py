@@ -23,9 +23,9 @@ def gen_finger(*args, **kwargs):
         U         input structure  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/man/example_scripts/gen_finger.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("gen_finger", *args, **kwargs)

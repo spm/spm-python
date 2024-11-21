@@ -13,9 +13,9 @@ def mne_add_coil_defs(*args, **kwargs):
         templates  - coil definition templates  
                      (defaults to $MNE_ROOT/setup/mne/coil_def.dat or $MNE_ROOT/share/mne/coil_def.dat)  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/mne/mne_add_coil_defs.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("mne_add_coil_defs", *args, **kwargs)

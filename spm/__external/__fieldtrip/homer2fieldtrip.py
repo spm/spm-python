@@ -18,9 +18,9 @@ def homer2fieldtrip(*args, **kwargs):
          
         See also FIELDTRIP2HOMER, FT_PREPROCESSING, FT_DATATYPE_RAW  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/homer2fieldtrip.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("homer2fieldtrip", *args, **kwargs)

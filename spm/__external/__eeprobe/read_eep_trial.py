@@ -20,9 +20,9 @@ def read_eep_trial(*args, **kwargs):
          
         See also READ_EEP_TRG, READ_EEP_REJ, READ_EEP_AVR  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/eeprobe/read_eep_trial.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("read_eep_trial", *args, **kwargs)

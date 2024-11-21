@@ -10,9 +10,9 @@ def _halfspace_medium_leadfield(*args, **kwargs):
                 
         [lf] = halfspace_medium_leadfield(rd, elc, cond)  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/forward/private/halfspace_medium_leadfield.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("halfspace_medium_leadfield", *args, **kwargs)

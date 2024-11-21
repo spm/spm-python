@@ -25,9 +25,9 @@ def _ft_singletrialanalysis_aseo(*args, **kwargs):
                      the 9th trial is rejected.  
         corr_est    : Correlation between the original data and the recovered signal  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/ft_singletrialanalysis_aseo.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("ft_singletrialanalysis_aseo", *args, **kwargs)

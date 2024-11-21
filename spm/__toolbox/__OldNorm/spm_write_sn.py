@@ -64,9 +64,9 @@ def spm_write_sn(*args, **kwargs):
          
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/OldNorm/spm_write_sn.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_write_sn", *args, **kwargs)

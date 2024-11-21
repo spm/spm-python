@@ -15,9 +15,9 @@ def DEM_path_integrals(*args, **kwargs):
         surprisal (cyan dots) upper bound the action (blue dots).  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DEM/DEM_path_integrals.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("DEM_path_integrals", *args, **kwargs, nargout=0)

@@ -35,9 +35,9 @@ def spm_eeg_render(*args, **kwargs):
         NB: The texture and the clusters cannot be visualised at the same time.  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_eeg_render.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_eeg_render", *args, **kwargs)

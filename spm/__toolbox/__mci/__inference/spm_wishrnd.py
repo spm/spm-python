@@ -19,9 +19,9 @@ def spm_wishrnd(*args, **kwargs):
         have W(S;n,V). They are related by n=2a, V=B^{-1}/2. We have E[S]=nV  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/mci/inference/spm_wishrnd.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_wishrnd", *args, **kwargs)

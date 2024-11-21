@@ -17,9 +17,9 @@ def ft_sourcedepth(*args, **kwargs):
          
         See also FT_INSIDE_HEADMODEL  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/forward/ft_sourcedepth.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("ft_sourcedepth", *args, **kwargs)

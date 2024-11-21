@@ -10,9 +10,9 @@ def spm_save(*args, **kwargs):
         opts  - optional inputs to be passed on to lower level function  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_save.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_save", *args, **kwargs, nargout=0)

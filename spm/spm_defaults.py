@@ -25,9 +25,9 @@ def spm_defaults(*args, **kwargs):
                         ** This file should not be edited **  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_defaults.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_defaults", *args, **kwargs, nargout=0)

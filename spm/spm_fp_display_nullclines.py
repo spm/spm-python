@@ -12,9 +12,9 @@ def spm_fp_display_nullclines(*args, **kwargs):
         f   - derivative of x(2)  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_fp_display_nullclines.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_fp_display_nullclines", *args, **kwargs)

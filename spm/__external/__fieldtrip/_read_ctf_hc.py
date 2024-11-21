@@ -35,9 +35,9 @@ def _read_ctf_hc(*args, **kwargs):
         homogeneous transformation matrix, or using the affine parameters and  
         the warp3d function from the WARPING toolbox  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/read_ctf_hc.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("read_ctf_hc", *args, **kwargs)

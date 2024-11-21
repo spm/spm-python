@@ -11,9 +11,9 @@ def spm_eeg_assemble_priors(*args, **kwargs):
         h       - optional hyperparameters that scale the variance components in  
                   Qe and Qp (assume sensor followed by source level parameters)  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_eeg_assemble_priors.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_eeg_assemble_priors", *args, **kwargs)

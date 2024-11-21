@@ -25,9 +25,9 @@ def spm_fx_mfm_ensemble(*args, **kwargs):
         Marreiros et al (2008) Population dynamics under the Laplac assumption   
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/Neural_Models/spm_fx_mfm_ensemble.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_fx_mfm_ensemble", *args, **kwargs)

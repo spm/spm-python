@@ -77,9 +77,9 @@ def spm_vb_glmar(*args, **kwargs):
                  There are other fields that are used internally  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_vb_glmar.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_vb_glmar", *args, **kwargs)

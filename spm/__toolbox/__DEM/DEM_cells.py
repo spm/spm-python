@@ -27,9 +27,9 @@ def DEM_cells(*args, **kwargs):
         of their time at the global level.  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DEM/DEM_cells.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("DEM_cells", *args, **kwargs)

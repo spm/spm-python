@@ -20,9 +20,9 @@ def mne_block_diag(*args, **kwargs):
          
           Routine uses NO for-loops for speed considerations.  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/mne/mne_block_diag.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("mne_block_diag", *args, **kwargs)

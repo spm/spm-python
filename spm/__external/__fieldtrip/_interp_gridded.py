@@ -22,9 +22,9 @@ def _interp_gridded(*args, **kwargs):
            distmat      = NxM matrix with precomputed distances  
            inside       = indices for inside voxels (or logical array)  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/interp_gridded.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("interp_gridded", *args, **kwargs)

@@ -16,9 +16,9 @@ def _read_asa_mri(*args, **kwargs):
           PointOnNegativeYAxis -> RPA  
           PointOnPositiveXAxis -> nasion  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/read_asa_mri.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("read_asa_mri", *args, **kwargs)

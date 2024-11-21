@@ -13,9 +13,9 @@ def spm_MNpdf(*args, **kwargs):
         y     [n x 1] density at n points  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/mixture/spm_MNpdf.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_MNpdf", *args, **kwargs)

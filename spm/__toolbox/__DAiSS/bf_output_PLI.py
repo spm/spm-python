@@ -14,9 +14,9 @@ def bf_output_PLI(*args, **kwargs):
         with a method based on Stam CJ, Nolte G, Daffertshofer A (Hum Brain Mapp 2007)  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DAiSS/bf_output_PLI.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("bf_output_PLI", *args, **kwargs)

@@ -7,9 +7,9 @@ def _loadvar(*args, **kwargs):
          
         See also SAVEVAR  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/loadvar.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("loadvar", *args, **kwargs)

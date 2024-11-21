@@ -16,9 +16,9 @@ def ft_select_box(*args, **kwargs):
         See also FT_SELECT_CHANNEL, FT_SELECT_POINT, FT_SELECT_POINT3D, FT_SELECT_RANGE,  
         FT_SELECT_VOXEL, GINPUT, RBBOX  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/plotting/ft_select_box.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("ft_select_box", *args, **kwargs)

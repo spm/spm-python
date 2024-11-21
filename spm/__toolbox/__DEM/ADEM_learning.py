@@ -19,9 +19,9 @@ def ADEM_learning(*args, **kwargs):
         Critically, at no point do we need to invoke the notion of reward, value  
         or utility.  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DEM/ADEM_learning.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("ADEM_learning", *args, **kwargs, nargout=0)

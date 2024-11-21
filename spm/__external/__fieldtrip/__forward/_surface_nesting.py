@@ -15,9 +15,9 @@ def _surface_nesting(*args, **kwargs):
          
         See also SURFACE_ORIENTATION, SURFACE_NORMALS, SURFACE_INSIDE  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/forward/private/surface_nesting.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("surface_nesting", *args, **kwargs)

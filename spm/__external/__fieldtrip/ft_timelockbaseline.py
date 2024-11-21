@@ -25,9 +25,9 @@ def ft_timelockbaseline(*args, **kwargs):
          
         See also FT_TIMELOCKANALYSIS, FT_FREQBASELINE, FT_TIMELOCKGRANDAVERAGE, FT_DATATYPE_TIMELOCK  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/ft_timelockbaseline.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("ft_timelockbaseline", *args, **kwargs)

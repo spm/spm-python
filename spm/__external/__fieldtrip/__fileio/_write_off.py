@@ -11,9 +11,9 @@ def _write_off(*args, **kwargs):
          
         See also READ_OFF  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/write_off.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("write_off", *args, **kwargs, nargout=0)

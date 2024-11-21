@@ -18,9 +18,9 @@ def _univariate2bivariate(*args, **kwargs):
           keeprpt     =   
           sqrtflag    =  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/univariate2bivariate.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("univariate2bivariate", *args, **kwargs)

@@ -17,9 +17,9 @@ def spm_csd2coh(*args, **kwargs):
             ??? = {'ccf','csd','gew','mar','coh','mtf','ker','ssm','dcm'}  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/spectral/spm_csd2coh.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_csd2coh", *args, **kwargs)

@@ -9,9 +9,9 @@ def _db_insert(*args, **kwargs):
         Use as  
           db_insert(tablename, s)  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/db_insert.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("db_insert", *args, **kwargs, nargout=0)

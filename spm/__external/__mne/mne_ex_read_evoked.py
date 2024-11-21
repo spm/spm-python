@@ -16,9 +16,9 @@ def mne_ex_read_evoked(*args, **kwargs):
           use_ctf_head    - Use the CTF/4D head coordinate system instead of the  
                             Neuromag one if available  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/external/mne/mne_ex_read_evoked.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("mne_ex_read_evoked", *args, **kwargs)

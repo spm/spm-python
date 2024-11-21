@@ -29,9 +29,9 @@ def spm_fx_hdm_sck(*args, **kwargs):
         changes during brain activation: The Balloon model. MRM 39:855-864 (1998)  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DEM/spm_fx_hdm_sck.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_fx_hdm_sck", *args, **kwargs)

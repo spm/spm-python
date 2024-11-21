@@ -16,9 +16,9 @@ def spm_swarp(*args, **kwargs):
         that - the warped gifti object  
        __________________________________________________________________________  
       
-    
+
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_swarp.m )
-    
+
     Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_swarp", *args, **kwargs)
