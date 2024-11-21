@@ -98,7 +98,7 @@ jobs:
         if: matrix.os_name == 'Windows'
         shell: bash
         run: |
-          export PATH=$PATH;${{ env.MATLAB_PATH }}/runtime/win64;${{ env.MATLAB_PATH }}/runtime/win32
+          export PATH=${PATH};${{ env.MATLAB_PATH }}/runtime/win64;${{ env.MATLAB_PATH }}/runtime/win32
           python -m unittest discover tests -v
 
       - name: Run tests (Linux)
