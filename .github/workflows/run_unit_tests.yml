@@ -44,6 +44,14 @@ jobs:
 
       - name: Install SPM Python
         run: pip install -e .
+
+      - name: Try to import SPM Python (Mac)
+        if: matrix.platform == 'Mac' 
+        run: mwpython -c "import spm;"
+        
+      - name: Try to import SPM Python (Windows, Linux)
+        if: matrix.platform != 'Mac' 
+        run: python -c "import spm;"
         
       # Setup MATLAB and Runtime 
       - name: Set up MATLAB
