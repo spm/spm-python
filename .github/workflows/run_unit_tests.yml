@@ -42,8 +42,8 @@ jobs:
           command: |
             fileID = fopen('matlab_path.txt', 'w')
             matlabpath = matlabroot;
-            fprintf(fileID, matlabpath)
-            fclose(fileID)
+            fprintf(fileID, matlabpath);
+            fclose(fileID);
         # sometimes this step hangs when closing matlab, automatically terminating after 2 minutes solves the issue
         timeout-minutes: 2
         continue-on-error: true
@@ -113,4 +113,6 @@ jobs:
             ${{ env.MATLAB_PATH }}/sys/os/glnxa64:\
             ${{ env.MATLAB_PATH }}/extern/bin/glnxa64"
           echo $LD_LIBRARY_PATH
+          ls ${{ env.MATLAB_PATH }}
+          find ${{ env.MATLAB_PATH }} -name 'runtime'
           python -m unittest discover tests -v
