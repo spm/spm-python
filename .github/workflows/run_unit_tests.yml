@@ -14,19 +14,17 @@ jobs:
       fail-fast: False
       matrix:
         matlab: ["latest"]
-        os: [ubuntu-latest]
-        python-version: ["3.11"]
-        # os: [ubuntu-latest, macos-13, macos-latest, windows-latest]
-        # python-version: ["3.9", "3.10", "3.11", "3.12"]
+        os: [ubuntu-latest, macos-13, macos-latest, windows-latest]
+        python-version: ["3.9", "3.10", "3.11", "3.12"]
         include:
           - os: ubuntu-latest
             os_name: Linux
-          # - os: macos-13
-          #   os_name: macOS_Intel
-          # - os: macos-latest
-          #   os_name: macOS_Apple_Silicon
-          # - os: windows-latest
-          #   os_name: Windows
+          - os: macos-13
+            os_name: macOS_Intel
+          - os: macos-latest
+            os_name: macOS_Apple_Silicon
+          - os: windows-latest
+            os_name: Windows
 
     steps:
       # Setup MATLAB and Runtime 
@@ -56,26 +54,29 @@ jobs:
         run: |
           matlab_path=$(cat matlab_path.txt)
           echo "MATLAB_PATH=$matlab_path" >> $GITHUB_ENV
+          
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+          
+      - name: Check out SPM Python
+        uses: actions/checkout@v4
 
-      # - name: Setup path on Linux
-      #   if: matrix.os_name == 'Linux'
-      #   run: |
-      #     export LD_LIBRARY_PATH="${LD_LIBRARY_PATH:+${LD_LIBRARY_PATH}:}\
-      #       ${{ env.MATLAB_PATH }}/runtime/glnxa64:\
-      #       ${{ env.MATLAB_PATH }}/bin/glnxa64:\
-      #       ${{ env.MATLAB_PATH }}/sys/os/glnxa64:\
-      #       ${{ env.MATLAB_PATH }}/extern/bin/glnxa64"
-
-      - name: Setup path on Mac Apple Silicon
+      - name: Install SPM Python  
+        run: pip install -e .
+        
+      - name: Run tests (Mac Apple Silicon)
         if: matrix.os_name == 'macOS_Apple_Silicon'
         run: |
           export DYLD_LIBRARY_PATH="${DYLD_LIBRARY_PATH:+${DYLD_LIBRARY_PATH}:}\
-             ${{ env.MATLAB_PATH }}/runtime/maca64:\
-             ${{ env.MATLAB_PATH }}/bin/maca64:\
-             ${{ env.MATLAB_PATH }}/sys/os/maca64:\
-             ${{ env.MATLAB_PATH }}/extern/bin/maca64"
+          ${{ env.MATLAB_PATH }}/runtime/maca64:\
+          ${{ env.MATLAB_PATH }}/bin/maca64:\
+          ${{ env.MATLAB_PATH }}/sys/os/maca64:\
+          ${{ env.MATLAB_PATH }}/extern/bin/maca64"
+          mwpython -m unittest discover tests -v
       
-      - name: Setup path on Mac Intel
+      - name: Run tests (Mac Intel)
         if: matrix.os_name == 'macOS_Intel'
         run: |
           export DYLD_LIBRARY_PATH="${DYLD_LIBRARY_PATH:+${DYLD_LIBRARY_PATH}:}\
@@ -83,31 +84,15 @@ jobs:
           ${{ env.MATLAB_PATH }}/bin/maci64:\
           ${{ env.MATLAB_PATH }}/sys/os/maci64:\
           ${{ env.MATLAB_PATH }}/extern/bin/maci64"
+          mwpython -m unittest discover tests -v
         
-      - name: Setup path on Windows
+      - name: Run tests (Windows)
         if: matrix.os_name == 'Windows'
         run: |
           set PATH=%PATH%;$env:MATLAB_PATH\runtime\win32;$env:MATLAB_PATH\runtime\win64
-          
-      - name: Set up Python ${{ matrix.python-version }}
-        uses: actions/setup-python@v5
-        with:
-          python-version: ${{ matrix.python-version }}
-          # cache: 'pip' # caching pip dependencies
-          
-      - name: Check out SPM Python
-        uses: actions/checkout@v4
+          python -m unittest discover tests -v
 
-      - name: Install SPM Python  
-        run: pip install -e .
-
-      - name: Run tests on Mac
-        shell: bash
-        if: runner.os == 'Mac'
-        run: mwpython -m unittest discover tests -v
-
-      - name: Run tests on Linux
-        shell: bash
+      - name: Run tests (Linux)
         if: runner.os == 'Linux'
         run: |
           export LD_LIBRARY_PATH="${LD_LIBRARY_PATH:+${LD_LIBRARY_PATH}:}\
@@ -115,7 +100,4 @@ jobs:
           ${{ env.MATLAB_PATH }}/bin/glnxa64:\
           ${{ env.MATLAB_PATH }}/sys/os/glnxa64:\
           ${{ env.MATLAB_PATH }}/extern/bin/glnxa64"
-          echo $LD_LIBRARY_PATH
-          ls ${{ env.MATLAB_PATH }}
-          find ${{ env.MATLAB_PATH }} -name 'pysdk_py'
           python -m unittest discover tests -v
