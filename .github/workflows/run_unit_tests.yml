@@ -39,19 +39,8 @@ jobs:
       - name: Check out SPM Python
         uses: actions/checkout@v4
 
-      - name: Install Numpy and Scipy
-        run: python -m pip install numpy scipy 
-
       - name: Install SPM Python
-        run: pip install -e .
-
-      - name: Try to import SPM Python (Mac)
-        if: matrix.platform == 'Mac' 
-        run: mwpython -c "import spm;"
-        
-      - name: Try to import SPM Python (Windows, Linux)
-        if: matrix.platform != 'Mac' 
-        run: python -c "import spm;"
+        run: python -m pip install -e .
         
       # Setup MATLAB and Runtime 
       - name: Set up MATLAB
@@ -74,12 +63,20 @@ jobs:
         # sometimes this step hangs when closing matlab, automatically terminating after 2 minutes solves the issue
         timeout-minutes: 2
         continue-on-error: true
-
+        
       - name: Set environment variable with MATLAB path
         shell: bash # Works on Windows as well because of shell: bash
         run: |
           matlab_path=$(cat matlab_path.txt)
           echo "MATLAB_PATH=$matlab_path" >> $GITHUB_ENV
+
+      - name: Try to import SPM Python (Mac)
+        if: matrix.platform == 'Mac' 
+        run: mwpython -c "import spm;"
+        
+      - name: Try to import SPM Python (Windows, Linux)
+        if: matrix.platform != 'Mac' 
+        run: python -c "import spm;"
         
       - name: Run tests (Mac Apple Silicon)
         if: matrix.os_name == 'macOS_Apple_Silicon'
