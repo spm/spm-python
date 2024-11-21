@@ -108,11 +108,11 @@ jobs:
         shell: bash
         if: runner.os == 'Linux'
         run: |
-          export LD_LIBRARY_PATH="${LD_LIBRARY_PATH:+${LD_LIBRARY_PATH}:}
-            ${{ env.MATLAB_PATH }}/runtime/glnxa64:\
-            ${{ env.MATLAB_PATH }}/bin/glnxa64:\
-            ${{ env.MATLAB_PATH }}/sys/os/glnxa64:\
-            ${{ env.MATLAB_PATH }}/extern/bin/glnxa64"
+          export LD_LIBRARY_PATH="${LD_LIBRARY_PATH:+${LD_LIBRARY_PATH}:}\
+          ${{ env.MATLAB_PATH }}/runtime/glnxa64:\
+          ${{ env.MATLAB_PATH }}/bin/glnxa64:\
+          ${{ env.MATLAB_PATH }}/sys/os/glnxa64:\
+          ${{ env.MATLAB_PATH }}/extern/bin/glnxa64"
           echo $LD_LIBRARY_PATH
           ls ${{ env.MATLAB_PATH }}
           find ${{ env.MATLAB_PATH }} -name 'runtime'
