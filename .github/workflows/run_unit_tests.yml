@@ -58,6 +58,8 @@ jobs:
           command: |
             fileID = fopen('matlab_path.txt', 'w');
             matlabpath = matlabroot;
+            matlabpath = strrep(matlabpath, filesep, '/');
+            matlabpath = strrep(matlabpath, '\', '\\');
             fprintf(fileID, matlabpath);
             fclose(fileID);
         # sometimes this step hangs when closing matlab, automatically terminating after 2 minutes solves the issue
@@ -70,14 +72,6 @@ jobs:
           matlab_path=$(cat matlab_path.txt)
           echo "MATLAB_PATH=$matlab_path" >> $GITHUB_ENV
 
-      - name: Try to import SPM Python (Mac)
-        if: matrix.platform == 'Mac' 
-        run: mwpython -c "import spm;"
-        
-      - name: Try to import SPM Python (Windows, Linux)
-        if: matrix.platform != 'Mac' 
-        run: python -c "import spm;"
-        
       - name: Run tests (Mac Apple Silicon)
         if: matrix.os_name == 'macOS_Apple_Silicon'
         run: |
@@ -86,6 +80,7 @@ jobs:
           ${{ env.MATLAB_PATH }}/bin/maca64:\
           ${{ env.MATLAB_PATH }}/sys/os/maca64:\
           ${{ env.MATLAB_PATH }}/extern/bin/maca64"
+          export PYTHONHOME=${{ env.pythonLocation }}
           mwpython -m unittest discover tests -v
       
       - name: Run tests (Mac Intel)
@@ -96,13 +91,14 @@ jobs:
           ${{ env.MATLAB_PATH }}/bin/maci64:\
           ${{ env.MATLAB_PATH }}/sys/os/maci64:\
           ${{ env.MATLAB_PATH }}/extern/bin/maci64"
+          export PYTHONHOME=${{ env.pythonLocation }}
           mwpython -m unittest discover tests -v
         
       - name: Run tests (Windows)
-        shell: bash
         if: matrix.os_name == 'Windows'
+        shell: bash
         run: |
-          export PATH=%PATH%;D:\hostedtoolcache\windows\MATLAB\2024.2.999\x64\runtime\win64;D:\hostedtoolcache\windows\MATLAB\2024.2.999\x64\runtime\win32
+          export PATH=$PATH;${{ env.MATLAB_PATH }}/runtime/win64;${{ env.MATLAB_PATH }}/runtime/win32
           python -m unittest discover tests -v
 
       - name: Run tests (Linux)
