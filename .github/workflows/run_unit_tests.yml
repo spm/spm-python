@@ -8,21 +8,27 @@ jobs:
   unit-tests:
     runs-on: ${{ matrix.os }}
     strategy:
+      fail-fast: False
       matrix:
         matlab: ["latest"]
         os: [ubuntu-latest, macos-13, macos-latest, windows-latest]
         python-version: ["3.9", "3.10", "3.11", "3.12"]
         include:
           - os: ubuntu-latest
+            os-name: Linux
           - os: macos-13
+            os-name: Mac
           - os: macos-latest
+            os-name: Mac
           - os: windows-latest
+            os-name: Windows
 
     steps:
       - name: Set up MATLAB
         uses: matlab-actions/setup-matlab@v2
         with:
           release: ${{matrix.matlab}}
+          cache: True
           
       - name: Set up Python ${{ matrix.python-version }}
         uses: actions/setup-python@v5
@@ -33,7 +39,13 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Install repository 
-        run: python -m pip install -e .
+        run: pip install -e .
 
-      - name: Run tests
-        run: python -m unittest discover tests -v
+      - name: Run tests on Mac
+        if: runner.os == 'Mac'
+        run: mwpython -m unittest discover tests -v
+
+      - name: Run tests on Linux or Windows
+        shell: bash
+        if: runner.os == 'Mac'
+        run: mwpython -m unittest discover tests -v
