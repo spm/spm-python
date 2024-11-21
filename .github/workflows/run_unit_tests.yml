@@ -35,7 +35,9 @@ jobs:
         with:
           release: ${{matrix.matlab}}
           cache: True
-          products: MATLAB_Compiler
+          products: |
+            MATLAB_Compiler
+            MATLAB_Compiler_SDK
 
       - name: Extract MATLAB path to file
         uses: matlab-actions/run-command@v2
@@ -77,10 +79,10 @@ jobs:
         if: matrix.os_name == 'macOS_Intel'
         run: |
           export DYLD_LIBRARY_PATH="${DYLD_LIBRARY_PATH:+${DYLD_LIBRARY_PATH}:}\
-             ${{ env.MATLAB_PATH }}/runtime/maci64:\
-             ${{ env.MATLAB_PATH }}/bin/maci64:\
-             ${{ env.MATLAB_PATH }}/sys/os/maci64:\
-             ${{ env.MATLAB_PATH }}/extern/bin/maci64"
+          ${{ env.MATLAB_PATH }}/runtime/maci64:\
+          ${{ env.MATLAB_PATH }}/bin/maci64:\
+          ${{ env.MATLAB_PATH }}/sys/os/maci64:\
+          ${{ env.MATLAB_PATH }}/extern/bin/maci64"
         
       - name: Setup path on Windows
         if: matrix.os_name == 'Windows'
@@ -93,10 +95,10 @@ jobs:
           python-version: ${{ matrix.python-version }}
           # cache: 'pip' # caching pip dependencies
           
-      - name: Check out repository
+      - name: Check out SPM Python
         uses: actions/checkout@v4
 
-      - name: Install repository 
+      - name: Install SPM Python  
         run: pip install -e .
 
       - name: Run tests on Mac
@@ -115,5 +117,5 @@ jobs:
           ${{ env.MATLAB_PATH }}/extern/bin/glnxa64"
           echo $LD_LIBRARY_PATH
           ls ${{ env.MATLAB_PATH }}
-          find ${{ env.MATLAB_PATH }} -name 'runtime'
+          find ${{ env.MATLAB_PATH }} -name 'pysdk_py'
           python -m unittest discover tests -v
