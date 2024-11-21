@@ -60,8 +60,8 @@ jobs:
             matlabpath = matlabroot;
             matlabpath = strrep(matlabpath, filesep, '/');
             matlabpath = strrep(matlabpath, '\', '\\');
-            matlabpath = strrep(matlabpath, 'C:', '/c/);
-            matlabpath = strrep(matlabpath, 'D:', '/d/);
+            matlabpath = strrep(matlabpath, 'C:', '/c/');
+            matlabpath = strrep(matlabpath, 'D:', '/d/');
             fprintf(fileID, matlabpath);
             fclose(fileID);
         # sometimes this step hangs when closing matlab, automatically terminating after 2 minutes solves the issue
