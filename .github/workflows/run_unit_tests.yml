@@ -35,6 +35,7 @@ jobs:
         with:
           release: ${{matrix.matlab}}
           cache: True
+          products: MATLAB_Compiler
 
       - name: Extract MATLAB path to file
         uses: matlab-actions/run-command@v2
