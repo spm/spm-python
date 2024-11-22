@@ -6,8 +6,8 @@ with open("README.md", "r") as fh:
 
 # Setup configuration
 setup(
-    name='spm',
-    version='0.1.0', 
+    name='spm-python',
+    version='25.01-alpha2', 
     author='Johan Medrano',
     author_email='johan.medrano@ucl.ac.uk', 
     description='Python bindings for the SPM software.',
@@ -28,5 +28,5 @@ setup(
         'numpy',
         'scipy'
     ],
-    python_requires='>=3.6',  
+    python_requires='>=3.9,<=3.12',  
 )
