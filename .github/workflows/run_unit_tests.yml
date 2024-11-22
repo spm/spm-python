@@ -2,6 +2,10 @@ name: Unit tests
 on:
   workflow_dispatch:
   push:
+    paths: 
+      - tests/**
+      - spm/**
+      - .github/workflows/**
   pull_request:
   
 env:
