@@ -5,6 +5,8 @@ on:
     paths: 
       - tests/**
       - spm/**
+      - setup.py 
+      - pyproject.toml
   pull_request:
   
 env:
