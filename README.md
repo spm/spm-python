@@ -17,7 +17,7 @@ Copyright (C) 1991,1994-2024 Wellcome Centre for Human Neuroimaging
 
 
 > [!WARNING]
-> This project is **currently under construction** and might contain bugs. **If you experience any issues, please let us know!**
+> This project is **currently under construction** and might contain bugs. **If you experience any issues, please [let us know](https://github.com/spm/spm-python/issues)!**
 
 
 ## Installation instructions: 
