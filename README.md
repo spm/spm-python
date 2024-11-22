@@ -13,8 +13,8 @@ Copyright (C) 1991,1994-2024 Wellcome Centre for Human Neuroimaging
 ![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/spm/spm-python/.github%2Fworkflows%2Frun_unit_tests.yml)
 ![GitHub Release](https://img.shields.io/github/v/release/spm/spm-python?include_prereleases)
 
-
-> :warning: This project is **currently under construction** and might contain bugs. **If you experience any issues, please let us know!**
+> [!WARNING]
+> This project is **currently under construction** and might contain bugs. **If you experience any issues, please let us know!**
 
 
 ## Installation instructions: 
