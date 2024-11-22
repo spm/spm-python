@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "spm-python"
+version = "25.01-alpha2"
+description = "Python bindings for the SPM software."
+readme = "README.md"
+license = {file = "LICENSE"}
+authors = [{name = "Johan Medrano", email = "johan.medrano@ucl.ac.uk"}]
+requires-python = ">=3.9,<=3.12"
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "License :: OSI Approved :: GPL2",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+]
+dependencies = [
+    "numpy"
+]
+
+[project.urls]
+Repository = "https://github.com/spm/spm-python"
+
+[tool.setuptools.packages.find]
+include = ["spm"]
+
+[tool.setuptools.package-data]
+spm = ["_spm/_spm.ctf"]
