@@ -12,7 +12,7 @@ Copyright (C) 1991,1994-2024 Wellcome Centre for Human Neuroimaging
 # Python bindings for _SPM_
 [![Unit tests](https://github.com/spm/spm-python/actions/workflows/run_unit_tests.yml/badge.svg)](https://github.com/spm/spm-python/actions/workflows/run_unit_tests.yml)
 
-> :warning: This project is **currently under construction** and might contain bugs. **If you experience any issue, please let us know!**
+> :warning: This project is **currently under construction** and might contain bugs. **If you experience any issues, please let us know!**
 
 
 ## Installation instructions: 
