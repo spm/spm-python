@@ -10,8 +10,11 @@ Copyright (C) 1991,1994-2024 Wellcome Centre for Human Neuroimaging
 ```
 
 # Python bindings for _SPM_
+![PyPI - Python Version](https://img.shields.io/pypi/pyversions/spm-python)
+![PyPI - License](https://img.shields.io/pypi/l/spm-python)
+![PyPI - Version](https://img.shields.io/pypi/v/spm-python)
 ![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/spm/spm-python/.github%2Fworkflows%2Frun_unit_tests.yml)
-![GitHub Release](https://img.shields.io/github/v/release/spm/spm-python?include_prereleases)
+
 
 > [!WARNING]
 > This project is **currently under construction** and might contain bugs. **If you experience any issues, please let us know!**
@@ -22,7 +25,7 @@ Copyright (C) 1991,1994-2024 Wellcome Centre for Human Neuroimaging
 1. Install [Matlab Runtime 2024b](https://uk.mathworks.com/products/compiler/matlab-runtime.html) 
 2. Install SPM:
    ```python
-   pip install git+https://github.com/spm/spm-python.git
+   pip install spm-python
    ```
 3. That's all!
 
