@@ -9,7 +9,7 @@ description = "Python bindings for the SPM software."
 readme = "README.md"
 license = {file = "LICENSE"}
 authors = [{name = "Johan Medrano", email = "johan.medrano@ucl.ac.uk"}]
-requires-python = ">=3.9,<=3.12"
+requires-python = ">=3.9,<3.13"
 classifiers = [
   "Development Status :: 3 - Alpha",
   "License :: OSI Approved :: GNU General Public License v2 (GPLv2)",
