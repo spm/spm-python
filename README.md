@@ -12,6 +12,9 @@ Copyright (C) 1991,1994-2024 Wellcome Centre for Human Neuroimaging
 # Python bindings for _SPM_
 [![Unit tests](https://github.com/spm/spm-python/actions/workflows/run_unit_tests.yml/badge.svg)](https://github.com/spm/spm-python/actions/workflows/run_unit_tests.yml)
 
+> :warning: This project is **currently under construction** and might contain bugs. **If you experience any issue, please let us know!**
+
+
 ## Installation instructions: 
 0. Install Python and Pip. Python installation made from Microsoft Store on Windows will not work (raises DeclarativeService.dll not found), intall it from Python website. 
 1. Install [Matlab Runtime 2024b](https://uk.mathworks.com/products/compiler/matlab-runtime.html) 
