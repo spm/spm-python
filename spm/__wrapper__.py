@@ -7,8 +7,11 @@ except ImportError as e:
         '_spm',
         'resources',
         'RuntimeInstaller.install')
-    print("Failed to import, install Matlab Runtime and setup library path. ")
-    print(f"Matlab Runtime installer can be found in: {installer_path}")
+    print("Failed to import spm._spm. This can be due to a failure to find Matlab Runtime. "
+          "Please verify that Matlab Runtime is installed and its path is set. "
+          "See https://www.mathworks.com/help/compiler/mcr-path-settings-for-run-time-deployment.html for instructions"
+          " on how to setup the path. If the issue persists, please open an issue with the entire error message at "
+          "https://github.com/spm/spm-python/issues.")
 
     raise e
     
