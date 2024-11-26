@@ -1,6 +1,8 @@
 import unittest
+import numpy as np
 
 from spm import Struct
+
 
 class TestStruct(unittest.TestCase):
     def setUp(self):
@@ -24,6 +26,10 @@ class TestStruct(unittest.TestCase):
         del self.struct["key"]
         with self.assertRaises(KeyError):
             _ = self.struct["key"]
+
+    def test_as_array(self):
+        a = np.asarray(self.struct) 
+        b = np.asarray(self.struct, dtype=object) 
 
 if __name__ == "__main__":
     unittest.main()
