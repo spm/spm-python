@@ -152,9 +152,6 @@ def download_and_install_matlab_runtime():
             print(f'Command {command} raised:\n')
             print(e)
 
-        finally:
-            zip_file_path.unlink()  # Clean up
-
     return success
 
 def setup_matlab_environment(download):
