@@ -107,8 +107,8 @@ def download_matlab_runtime(system):
     dest_folder = tempfile.mkdtemp()
 
     zip_file_path = op.join(dest_folder, zip_name)
-    print(f"Downloading MATLAB Runtime from {runtime}...")
-    urllib.request.urlretrieve(runtime, zip_file_path)
+    print(f"Downloading MATLAB Runtime from {runtime_url}...")
+    urllib.request.urlretrieve(runtime_url, zip_file_path)
 
     print("Extracting MATLAB Runtime...")
     with zipfile.ZipFile(zip_file_path, 'r') as zip_ref:
