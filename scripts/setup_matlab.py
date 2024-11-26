@@ -127,30 +127,20 @@ def download_and_install_matlab_runtime():
 
     installer_file = os.listdir(installer_path)[0]
 
-    if system == "windows":
-        commands = [['setup', '-agreeToLicense', 'yes']]
-    elif system == "darwin":
-        commands = [
-            ['open', f'./{installer_file}', '--args', '-agreeToLicense', 'yes'], 
-            ['open', f'./{installer_file}']
-        ]
-
-    elif system == "linux":
-        commands = [['sudo', f'./{installer_file}', '-agreeToLicense', 'yes']]
-
+    command = [op.join('.', installer_file), '-agreeToLicense', 'yes']
+    
     success = False
-    for command in commands:
-        try:
-            subprocess.check_call(command, cwd=installer_path)
-            success = True
-            break
+    try:
+        subprocess.check_call(command, cwd=installer_path)
+        success = True
+        break
 
-        except PermissionError as e:
-            print(f"Permission error during installation: {e}")
+    except PermissionError as e:
+        print(f"Permission error during installation: {e}")
 
-        except Exception as e:
-            print(f'Command {command} raised:\n')
-            print(e)
+    except Exception as e:
+        print(f'Command {command} raised:\n')
+        print(e)
 
     return success
 
