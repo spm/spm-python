@@ -9,7 +9,6 @@ from itertools import product
 import tempfile
 import argparse
 
-
 def add_matlab_to_path(matlab_version) -> bool:
     """Detect default MATLAB installation path based on the platform."""
     system = platform.system().lower()
@@ -57,7 +56,7 @@ def add_matlab_to_path(matlab_version) -> bool:
         # Check path existence
         check_path = op.join(base, path)
         if op.exists(check_path):
-            print(f"Found MATLAB Runtime at {check_path}.")
+            print(f"{check_path}")
             found = True
         else: 
             continue
@@ -183,10 +182,15 @@ def setup_matlab_environment(download):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(prog='setup_matlab')
     parser.add_argument('-d', '--download-if-not-found', dest='download', action='store_true')
+    parser.add_argument('-p', '--print', dest='print', action='store_true')
     args = parser.parse_args()
 
-    result = setup_matlab_environment(args.download)
-    if result:
+    if args.print: 
+        add_matlab_to_path("R2024b")
         exit(0)
-    else:
-        exit(-1)
+    else:    
+        result = setup_matlab_environment(args.download)
+        if result:
+            exit(0)
+        else:
+            exit(-1)
