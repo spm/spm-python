@@ -141,7 +141,7 @@ def download_and_install_matlab_runtime():
     success = False
     for command in commands:
         try:
-            subprocess.check_call(command)
+            subprocess.check_call(command, cwd=installer_path)
             success = True
             break
 
