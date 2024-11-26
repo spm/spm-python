@@ -211,6 +211,8 @@ class Runtime:
             out = tuple(Runtime._process_argout(r) for r in res)
         elif isinstance(res, list):
             out = list(Runtime._process_argout(r) for r in res)
+        elif isinstance(res, StructArray):
+            out = StructArray(Runtime._process_argout(r) for r in res)
         elif isinstance(res, dict):
             res = dict(zip(res.keys(), map(Runtime._process_argout, res.values())))
             if 'type__' in res.keys():
@@ -229,9 +231,14 @@ class Runtime:
 
 class Struct(dict):
     """emulates struct with a dot.notation access to dictionary attributes"""
-    __getattr__ = dict.__getitem__
     __setattr__ = dict.__setitem__
     __delattr__ = dict.__delitem__
+    
+    def __getattr__(self, item):
+        if item.startswith('__'):
+            raise AttributeError
+        else:
+            return dict.__getitem__(self, item)
 
 
 class Cell(list):
@@ -335,8 +342,8 @@ class StructArray:
     def _from_matlab_object(objdict):
         if objdict['type__'] != 'structarray':
             raise TypeError('objdict is not a structarray')
-        size = np.asarray(objdict['size__'], dtype=np.uint32).ravel()
-        data = np.asarray(objdict['data__'], dtype=object)
+        size = np.array(objdict['size__'], dtype=np.uint32).ravel()
+        data = np.array(objdict['data__'], dtype=object)
         data = data.reshape(size)
         try:
             obj = StructArray(data)
