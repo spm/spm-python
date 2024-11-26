@@ -87,7 +87,7 @@ def try_import(module_name):
         return False
 
 def download_matlab_runtime(system):
-    base_url = "https://github.com/spm/spm/releases/latest/download"
+    base_url = "https://github.com/spm/spm/releases/download/25.01.alpha42/"
 
     if system == "windows":
         zip_name = 'spm_standalone_25.01.alpha42_Windows_matlab_runtime_installer.zip'
