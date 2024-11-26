@@ -127,6 +127,9 @@ def download_and_install_matlab_runtime():
 
     installer_file = os.listdir(installer_path)[0]
 
+    if system == 'linux' or system == 'darwin':
+        subprocess.check_call(['chmod', 'u+x', installer_file], cwd=installer_path)
+
     command = [op.join('.', installer_file), '-agreeToLicense', 'yes']
     
     success = False
