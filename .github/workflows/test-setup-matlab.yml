@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  unit-tests:
+  setup-matlab:
     runs-on: ${{ matrix.os }}
     strategy:
       fail-fast: False
@@ -41,3 +41,11 @@ jobs:
         run: |
           cd scripts
           python -m setup_matlab -d
+      
+      - name: Run tests (Mac Intel)
+        if: matrix.platform == 'Mac' 
+        run: mwpython -m unittest discover tests -v
+
+      - name: Run tests (Linux)
+        if: matrix.os_name != 'Mac' 
+        run: python -m unittest discover tests -v
