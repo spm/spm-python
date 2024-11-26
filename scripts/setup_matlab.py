@@ -125,10 +125,11 @@ def download_and_install_matlab_runtime():
 
     installer_path, dest_folder = download_matlab_runtime(system)
 
+    os.chdir(installer_path)
     installer_file = os.listdir(installer_path)[0]
 
     if system == 'linux' or system == 'darwin':
-        subprocess.check_call(['chmod', 'u+x', installer_file], cwd=installer_path)
+        subprocess.check_call(['chmod', 'u+x', installer_file])
 
         installer_file = op.join('.', installer_file)
 
@@ -136,7 +137,7 @@ def download_and_install_matlab_runtime():
     
     success = False
     try:
-        subprocess.check_call(command, cwd=installer_path)
+        subprocess.check_call(command)
         success = True
 
     except PermissionError as e:
