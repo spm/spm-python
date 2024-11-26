@@ -2,7 +2,7 @@ import unittest
 import numpy as np
 import itertools
 
-from spm import StructArray
+from spm import StructArray, Struct
 
 class StructArrayTestCase(unittest.TestCase):
     def setUp(self):
@@ -44,6 +44,11 @@ class StructArrayTestCase(unittest.TestCase):
         reconstructed_sa = StructArray._from_matlab_object(objdict)
         self.assertEqual(reconstructed_sa._structs.shape, sa._structs.shape)
         self.assertEqual(reconstructed_sa.keys(), sa.keys())
+
+    def test_with_struct(self):
+        sa = StructArray(list(map(Struct, self.array1d)))
+        objdict = sa._as_matlab_object()
+        reconstructed_sa = StructArray._from_matlab_object(objdict)
 
     def test_repr(self):
         sa = StructArray(self.array1d)
