@@ -131,12 +131,12 @@ def download_and_install_matlab_runtime():
         commands = [['setup', '-agreeToLicense', 'yes']]
     elif system == "darwin":
         commands = [
-            [f'open ./{installer_file}', '--args', '-agreeToLicense', 'yes'], 
-            [f'open ./{installer_file}']
+            ['open', f'./{installer_file}', '--args', '-agreeToLicense', 'yes'], 
+            ['open', f'./{installer_file}']
         ]
 
     elif system == "linux":
-        commands = [[f'sudo', './{installer_file}', '-agreeToLicense', 'yes']]
+        commands = [['sudo', f'./{installer_file}', '-agreeToLicense', 'yes']]
 
     success = False
     for command in commands:
