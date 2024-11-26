@@ -133,7 +133,6 @@ def download_and_install_matlab_runtime():
     try:
         subprocess.check_call(command, cwd=installer_path)
         success = True
-        break
 
     except PermissionError as e:
         print(f"Permission error during installation: {e}")
