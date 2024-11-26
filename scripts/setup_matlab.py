@@ -83,7 +83,7 @@ def try_import(module_name):
     try:
         __import__(module_name)
         return True
-    except ImportError:
+    except:
         return False
 
 def download_matlab_runtime(system):
