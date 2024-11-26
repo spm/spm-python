@@ -81,7 +81,7 @@ def add_matlab_to_path(matlab_version) -> bool:
 def try_import(module_name):
     """Try importing a module and return success status."""
     try:
-        __import__(module_name)
+        subprocess.check_call(['python', '-c', '"import spm;exit(0)"')
         return True
     except:
         return False
