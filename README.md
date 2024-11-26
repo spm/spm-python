@@ -9,7 +9,7 @@
 Copyright (C) 1991,1994-2024 Wellcome Centre for Human Neuroimaging
 ```
 
-# Python bindings for _SPM_
+# The Python interface to _[SPM](https://www.fil.ion.ucl.ac.uk/spm/docs/)_
 ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/spm-python)
 ![PyPI - License](https://img.shields.io/pypi/l/spm-python)
 ![PyPI - Version](https://img.shields.io/pypi/v/spm-python)
