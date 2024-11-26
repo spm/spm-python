@@ -118,7 +118,7 @@ def download_matlab_runtime(system):
 
     return installer_path, dest_folder
 
-def download_and_install_matlab_runtime(url, dest_folder):
+def download_and_install_matlab_runtime():
     """Download and install MATLAB Runtime."""
 
     system = platform.system().lower()
