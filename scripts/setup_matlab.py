@@ -130,7 +130,9 @@ def download_and_install_matlab_runtime():
     if system == 'linux' or system == 'darwin':
         subprocess.check_call(['chmod', 'u+x', installer_file], cwd=installer_path)
 
-    command = [op.join('.', installer_file), '-agreeToLicense', 'yes']
+        installer_file = op.join('.', installer_file)
+
+    command = [installer_file, '-agreeToLicense', 'yes']
     
     success = False
     try:
@@ -170,7 +172,7 @@ def setup_matlab_environment(download):
     if not runtime_installed:
         raise SystemError(f'Failed to install Matlab Runtime. Please try manually.')
 
-    runtime_found = add_matlab_to_path()
+    runtime_found = add_matlab_to_path('R2024b')
 
     if runtime_found and try_import(module_name):
         return True 
