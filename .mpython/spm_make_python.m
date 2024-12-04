@@ -1,5 +1,14 @@
-
-function spm_make_python
+function spm_make_python(compile, wrap)
+try
+    compile = logical(compile); 
+catch
+    compile = true;
+end
+try 
+    wrap = logical(wrap); 
+catch 
+    wrap = true; 
+end
 
 [cpath, ~, ~] = fileparts(mfilename('fullpath'));
 cd(cpath);
@@ -102,10 +111,12 @@ toolboxes = {
 
 opath = fullfile(cpath, '..');
 
+if compile
+    mpython_compile(spmpath, opath, 'spm', toolboxes)
+end
 
-% mpython_compile(spmpath, opath, 'spm', toolboxes)
-
-
-mpython_wrap(spmpath, opath, 'spm', true, fullfile(cpath, 'templates'))
+if wrap
+    mpython_wrap(spmpath, opath, 'spm', true, fullfile(cpath, 'templates'))
+end
 
 disp('Done!');
