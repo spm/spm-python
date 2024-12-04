@@ -16,7 +16,8 @@ jobs:
     steps:
       - name: Set up MATLAB
         uses: matlab-actions/setup-matlab@v2
-        with:
+        with:          
+          cache: True
           release: ${{ matrix.version }}
           products: MATLAB_Compiler
           
