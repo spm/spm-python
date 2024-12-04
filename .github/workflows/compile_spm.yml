@@ -28,6 +28,7 @@ jobs:
         with:
           command: |
             addpath(genpath('.mpython')); 
+            cd('.mpython'); 
             spm_make_python(true, false); 
       
       - name: Upload Artifact
