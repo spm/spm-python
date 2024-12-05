@@ -135,7 +135,7 @@ jobs:
           FROM=${{ matrix.py3from }}
           TO=${{ matrix.py3to }}
           sed -i 's/^python-requires = .*/python-requires = "$FROM>=,<$TO"/' pyproject.toml
-          tags=$(for i in $(seq ${FROM//./} $(( ${TO//./}  - 1)) ); do echo -n "py$i."; done | sed 's/\.$//')
+          tags=$(for i in $(seq ${FROM//3./} $(( ${TO//3./}  - 1)) ); do echo -n "py3$i."; done | sed 's/\.$//')
           echo "[tool.distutils.bdist_wheel]" >> pyproject.toml
           echo "python-tag = \"$tags\"" >> pyproject.toml    
           echo pyproject.toml
