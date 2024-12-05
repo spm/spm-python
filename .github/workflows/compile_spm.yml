@@ -1,6 +1,7 @@
 name: Compile SPM
 on:
   workflow_dispatch:
+  workflow_call:
 
 env:
   MLM_LICENSE_TOKEN: ${{ secrets.MATLAB_BATCH_TOKEN }}
@@ -34,7 +35,5 @@ jobs:
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
         with:
-          name: spm-archive-${{ matrix.version }}
+          name: spm-ctf-${{ matrix.version }}
           path: ./spm/_spm/_spm.ctf
-          retention-days: 1
-          
