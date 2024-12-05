@@ -113,7 +113,7 @@ jobs:
           pip install numpy
 
       - name: Add Matlab version specifier
-        if: ${{ matrix.main != "true" }}
+        if: ${{ !matrix.main }}
         run: | 
           sed -i 's/\(version = "[^"]*\)"/\1+${{ matrix.matlab }}"/' pyproject.toml
           cat pyproject.toml
