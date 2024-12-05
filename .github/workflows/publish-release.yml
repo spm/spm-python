@@ -132,10 +132,13 @@ jobs:
       - name: Setup Python version (3+)
         if: ${{ matrix.py3from }}
         run: |
-          sed -i 's/^python-requires = .*/python-requires = ">=${{ matrix.py3from }},<${{ matrix.py3to }}"/' pyproject.toml
-          tags=$(for i in $(seq ${${{ matrix.py3from }}//./} $(( ${${{ matrix.py3to }}//./}  - 1)) ); do echo -n "py$i."; done | sed 's/\.$//')
+          FROM=${{ matrix.py3from }}
+          TO=${{ matrix.py3to }}
+          sed -i 's/^python-requires = .*/python-requires = "$FROM>=,<$TO"/' pyproject.toml
+          tags=$(for i in $(seq ${FROM//./} $(( ${TO//./}  - 1)) ); do echo -n "py$i."; done | sed 's/\.$//')
           echo "[tool.distutils.bdist_wheel]" >> pyproject.toml
           echo "python-tag = \"$tags\"" >> pyproject.toml    
+          echo pyproject.toml
         
       - name: Build package
         run: python -m build
