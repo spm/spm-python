@@ -1,4 +1,9 @@
-function spm_make_python(compile, wrap)
+function spm_make_python(workpath, compile, wrap)
+try 
+    cpath = workpath; 
+catch
+    [cpath, ~, ~] = fileparts(mfilename('fullpath'));
+end
 try
     compile = logical(compile); 
 catch
@@ -10,7 +15,6 @@ catch
     wrap = true; 
 end
 
-[cpath, ~, ~] = fileparts(mfilename('fullpath'));
 cd(cpath);
 
 try 
