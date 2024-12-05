@@ -32,9 +32,3 @@ jobs:
             cd('.mpython'); 
             addpath(genpath('.')); 
             spm_make_python('.', true, false); 
-      
-      - name: Upload Artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: spm-ctf-${{ inputs.matlab-version }}
-          path: ./spm/_spm/_spm.ctf
