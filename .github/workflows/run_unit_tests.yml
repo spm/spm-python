@@ -1,6 +1,7 @@
 name: Unit tests
 on:
   workflow_dispatch:
+  workflow_call:
   push:
     paths: 
       - tests/**
@@ -13,7 +14,7 @@ env:
   MLM_LICENSE_TOKEN: ${{ secrets.MATLAB_BATCH_TOKEN }}
   
 jobs:
-  unit-tests:
+  run-unit-tests:
     runs-on: ${{ matrix.os }}
     strategy:
       fail-fast: False
