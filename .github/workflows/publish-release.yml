@@ -5,6 +5,9 @@ on:
     types: [published]
   workflow_dispatch:
 
+env:
+  MLM_LICENSE_TOKEN: ${{ secrets.MATLAB_BATCH_TOKEN }}
+  
 permissions:
   contents: read
 
@@ -12,6 +15,7 @@ jobs:
   compile-and-deploy:
     runs-on: ubuntu-latest
     strategy:
+      fail-fast: false
       matrix:
         include: 
           - matlab: "R2020b"
