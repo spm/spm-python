@@ -19,7 +19,9 @@ jobs:
         with:          
           cache: True
           release: ${{ matrix.version }}
-          products: MATLAB_Compiler
+          products:  |
+            MATLAB_Compiler
+            MATLAB_Compiler_SDK
           
       - name: Check out repository
         uses: actions/checkout@v4
