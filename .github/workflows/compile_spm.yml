@@ -1,24 +1,23 @@
 name: Compile SPM
 on:
-  workflow_dispatch:
   workflow_call:
+    inputs:
+      matlab-version:
+        required: true
+        type: string
 
 env:
   MLM_LICENSE_TOKEN: ${{ secrets.MATLAB_BATCH_TOKEN }}
+  
 jobs:
   compile:
     runs-on: "ubuntu-latest"
-    strategy:
-      fail-fast: false
-      matrix:
-        version: ["R2020b", "R2021a", "R2021b", "R2022a", "R2022b", "R2023a", "R2023b", "R2024a", "R2024b"]
-
     steps:
       - name: Set up MATLAB
         uses: matlab-actions/setup-matlab@v2
         with:          
           cache: True
-          release: ${{ matrix.version }}
+          release: ${{ inputs.matlab-version }}
           products:  |
             MATLAB_Compiler
             MATLAB_Compiler_SDK
@@ -37,5 +36,5 @@ jobs:
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
         with:
-          name: spm-ctf-${{ matrix.version }}
+          name: spm-ctf-${{ inputs.matlab-version }}
           path: ./spm/_spm/_spm.ctf
