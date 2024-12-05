@@ -9,24 +9,114 @@ permissions:
   contents: read
 
 jobs:
-  deploy:
-
+  compile-and-deploy:
     runs-on: ubuntu-latest
-
-    steps:
-      - uses: actions/checkout@v4
+    strategy:
+      matrix:
+        include: 
+          - matlab: "R2020b"
+            python: "2.7"
+            
+          - matlab: "R2020b"
+            python: "3.8"
+            py3from: "3.6"
+            py3to:   "3.9"
+            
+          - matlab: "R2021a"
+            python: "2.7"
+            
+          - matlab: "R2021a"
+            python: "3.8"
+            py3from: "3.7"
+            py3to:   "3.9"
+            
+          - matlab: "R2021b"
+            python: "2.7"
+            
+          - matlab: "R2021b"
+            python:  "3.9"
+            py3from: "3.7"
+            py3to:   "3.10"
+            
+          - matlab: "R2022a"
+            python: "2.7"
+            
+          - matlab: "R2022a"
+            python:  "3.9"
+            py3from: "3.8"
+            py3to:   "3.10"
+            
+          - matlab: "R2022b"
+            python: "2.7"
+            
+          - matlab: "R2022b"
+            python: "3.10"
+            py3from: "3.8"
+            py3to:   "3.11"
+            
+          - matlab: "R2023a"
+            python: "3.10"
+            py3from: "3.8"
+            py3to:   "3.11"
+            
+          - matlab: "R2023b"
+            python: "3.11"
+            py3from: "3.9"
+            py3to:   "3.12"
+            
+          - matlab: "R2024a"
+            python: "3.11"
+            py3from: "3.9"
+            py3to:   "3.12"
+           
+          - matlab: "R2024b"
+            python: "3.12"
+            py3from: "3.9"
+            py3to:   "3.13"
+            
+          - matlab: "R2024b"
+            main: "true"
+            python: "3.12"
+            py3from: "3.9"
+            py3to:   "3.13"
+            
+    steps: 
+      - uses: spm/spm-python/.github/workflows/compile_spm.yml@main
+        with: 
+          matlab-version: ${{ matrix.matlab }}
       
       - name: Set up Python 
         uses: actions/setup-python@v5
         with:
-          python-version: "3.12"
-            
+          python-version: ${{ matrix.python }}
+          
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
           pip install build
-          pip install numpy scipy
-          
+          pip install numpy
+
+      - name: Add Matlab version specifier
+        if: ${{ matrix.main != "true" }}
+        run: | 
+          sed -i 's/\(version = "[^"]*\)"/\1+${{ matrix.matlab }}"/' pyproject.toml
+          cat pyproject.toml
+
+      - name: Setup Python version (2.7) 
+        if: matrix.python == "2.7"
+        run: |
+          sed -i 's/^python-requires = .*/python-requires = ">=2.7,<3.1"/' pyproject.toml
+          echo "[tool.distutils.bdist_wheel]" >> pyproject.toml
+          echo "python-tag = \"2.7\"" >> pyproject.toml
+        
+      - name: Setup Python version (3+)
+        if: ${{ matrix.py3from }}
+        run: |
+          sed -i 's/^python-requires = .*/python-requires = ">=${{ matrix.py3from }},<${{ matrix.py3to }}"/' pyproject.toml
+          tags=$(for i in $(seq ${${{ matrix.py3from }}//./} $(( ${${{ matrix.py3to }}//./}  - 1)) ); do echo -n "py$i."; done | sed 's/\.$//')
+          echo "[tool.distutils.bdist_wheel]" >> pyproject.toml
+          echo "python-tag = \"$tags\"" >> pyproject.toml    
+        
       - name: Build package
         run: python -m build
         
@@ -35,3 +125,4 @@ jobs:
         with:
           user: __token__
           password: ${{ secrets.PYPI_API_TOKEN }}
+          
