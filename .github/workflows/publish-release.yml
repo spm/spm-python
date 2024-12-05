@@ -1,9 +1,9 @@
 name: Upload Python Package
 
 on:
-  release:
-    types: [published]
-  workflow_dispatch:
+  push:
+    tags:
+      - "[0-9][0-9].[0-9][0-9]*"
 
 env:
   MLM_LICENSE_TOKEN: ${{ secrets.MATLAB_BATCH_TOKEN }}
@@ -141,7 +141,12 @@ jobs:
           echo pyproject.toml
         
       - name: Build package
-        run: python -m build
+        run: python -m build --sdist --wheel
+        
+      - name: Release package
+        uses: softprops/action-gh-release@v2
+        with:
+          files: ./dist/spm_python*.whl
         
       - name: Publish package
         uses: pypa/gh-action-pypi-publish@27b31702a0e7fc50959f5ad993c78deac1bdfc29
