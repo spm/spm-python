@@ -20,21 +20,21 @@ jobs:
           release: ${{ matrix.version }}
           products: MATLAB_Compiler
           
-      - name: Check out repository
-        uses: actions/checkout@v4
+      # - name: Check out repository
+      #   uses: actions/checkout@v4
         
-      - name: Run MPython
-        uses: matlab-actions/run-command@v2
-        with:
-          command: |
-            addpath(genpath('.mpython')); 
-            cd('.mpython'); 
-            spm_make_python('./mpython', true, false); 
+      # - name: Run MPython
+      #   uses: matlab-actions/run-command@v2
+      #   with:
+      #     command: |
+      #       addpath(genpath('.mpython')); 
+      #       cd('.mpython'); 
+      #       spm_make_python('./mpython', true, false); 
       
-      - name: Upload Artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: spm-archive-${{ matrix.version }}
-          path: ./spm/_spm/_spm.ctf
-          retention-days: 1
+      # - name: Upload Artifact
+      #   uses: actions/upload-artifact@v4
+      #   with:
+      #     name: spm-archive-${{ matrix.version }}
+      #     path: ./spm/_spm/_spm.ctf
+      #     retention-days: 1
           
