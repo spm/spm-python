@@ -19,6 +19,7 @@ jobs:
       fail-fast: false
       matrix:
         os: ['ubuntu-latest']
+        matlab: ['R2024b']
         include: 
           - matlab: "R2020b"
             python: "2.7"
