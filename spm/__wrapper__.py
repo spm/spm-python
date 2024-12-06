@@ -186,7 +186,7 @@ class Runtime:
             arg = arg._as_matlab_object()
         if isinstance(arg, dict):
             _, arg = Runtime._process_argin(**arg)
-        elif isinstance(arg, (tuple, dict, list, set)):
+        elif isinstance(arg, (tuple, list, set)):
             arg, _ = Runtime._process_argin(*arg)
         return arg
 
@@ -298,7 +298,7 @@ class StructArray:
         self._structs = structs
         self._objdict = dict(
             type__='structarray',
-            size__=np.array(structs.shape),
+            size__=np.array([[*structs.shape]]),
             data__=[]
         )
 
@@ -327,7 +327,7 @@ class StructArray:
             )
         )]
         objdict = self._objdict
-        objdict['data__'] = self._structs.tolist()
+        objdict['data__'] = np.reshape(self._structs, (-1,), order='F').tolist()
         return objdict
 
     def __repr__(self):
