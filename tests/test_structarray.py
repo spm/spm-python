@@ -8,9 +8,11 @@ class StructArrayTestCase(unittest.TestCase):
     def setUp(self):
         # Prepare some example data for testing
         self.struct1 = {'a': 1, 'b': 2}
-        self.struct2 = {'a': 3, 'c': 4}
+        self.struct2 = {'a': 2, 'c': 4}
+        self.struct3 = {'a': 3, 'c': 5}
+        self.struct4 = {'a': 4, 'b': 1}
         self.array1d = [self.struct1, self.struct2]
-        self.array2d = np.array([[self.struct1, self.struct2]])
+        self.array2d = np.array([[self.struct1, self.struct2], [self.struct3, self.struct4]])
 
     def test_initialization_with_structs(self):
         sa = StructArray(self.array1d)
@@ -35,8 +37,8 @@ class StructArrayTestCase(unittest.TestCase):
         sa = StructArray(self.array2d)
         objdict = sa._as_matlab_object()
         self.assertEqual(objdict['type__'], 'structarray')
-        self.assertEqual(objdict['size__'].tolist(), list(self.array2d.shape))
-        self.assertEqual(np.asarray(objdict['data__']).shape, self.array2d.shape)
+        self.assertEqual(objdict['size__'].reshape(-1).tolist(), list(self.array2d.shape))
+        self.assertEqual(len(objdict['data__']), self.array2d.size)
 
     def test_from_matlab_object(self):
         sa = StructArray(self.array2d)
@@ -49,6 +51,15 @@ class StructArrayTestCase(unittest.TestCase):
         sa = StructArray(list(map(Struct, self.array1d)))
         objdict = sa._as_matlab_object()
         reconstructed_sa = StructArray._from_matlab_object(objdict)
+
+    def test_flat_shape(self):
+        sa = StructArray(self.array2d)
+        objdict = sa._as_matlab_object()
+        self.assertEqual(len(objdict['data__']), 4)
+        self.assertEqual(objdict['data__'][0]['a'], self.struct1['a'])
+        self.assertEqual(objdict['data__'][1]['a'], self.struct3['a'])
+        self.assertEqual(objdict['data__'][2]['a'], self.struct2['a'])
+        self.assertEqual(objdict['data__'][3]['a'], self.struct4['a'])
 
     def test_repr(self):
         sa = StructArray(self.array1d)
