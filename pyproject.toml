@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "spm-python"
-version = "25.01-alpha1.dev11"
+version = "25.01-alpha1.dev12"
 description = "Python bindings for the SPM software."
 readme = "README.md"
 license = {file = "LICENSE"}
