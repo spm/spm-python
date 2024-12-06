@@ -14,13 +14,15 @@ permissions:
 
 jobs:
   compile-and-deploy:
-    runs-on: ubuntu-latest
+    runs-on: ${{ matrix.os }}
     strategy:
       fail-fast: false
       matrix:
+        os: ['ubuntu-latest']
         include: 
           - matlab: "R2020b"
             python: "2.7"
+            os: 'ubuntu-20.04'
             
           - matlab: "R2020b"
             python: "3.8"
@@ -29,6 +31,7 @@ jobs:
             
           - matlab: "R2021a"
             python: "2.7"
+            os: 'ubuntu-20.04'
             
           - matlab: "R2021a"
             python: "3.8"
@@ -37,6 +40,7 @@ jobs:
             
           - matlab: "R2021b"
             python: "2.7"
+            os: 'ubuntu-20.04'
             
           - matlab: "R2021b"
             python:  "3.9"
@@ -45,6 +49,7 @@ jobs:
             
           - matlab: "R2022a"
             python: "2.7"
+            os: 'ubuntu-20.04'
             
           - matlab: "R2022a"
             python:  "3.9"
@@ -53,6 +58,7 @@ jobs:
             
           - matlab: "R2022b"
             python: "2.7"
+            os: 'ubuntu-20.04'
             
           - matlab: "R2022b"
             python: "3.10"
@@ -149,7 +155,42 @@ jobs:
       - name: Build package
         run: python -m build --sdist --wheel
 
-      - name: Detect Pre-release
+      - name: Extract MATLAB path to file
+        uses: matlab-actions/run-command@v2
+        with:
+          command: |
+            fileID = fopen('matlab_path.txt', 'w');
+            matlabpath = matlabroot;
+            matlabpath = strrep(matlabpath, filesep, '/');
+            matlabpath = strrep(matlabpath, '\', '\\');
+            matlabpath = strrep(matlabpath, 'C:', '/c/');
+            matlabpath = strrep(matlabpath, 'D:', '/d/');
+            fprintf(fileID, matlabpath);
+            fclose(fileID);
+        # sometimes this step hangs when closing matlab, automatically terminating after 2 minutes solves the issue
+        timeout-minutes: 2
+        continue-on-error: true
+        
+      - name: Set environment variable with MATLAB path
+        shell: bash # Works on Windows as well because of shell: bash
+        run: |
+          matlab_path=$(cat matlab_path.txt)
+          echo "MATLAB_PATH=$matlab_path" >> $GITHUB_ENV
+          
+      - name: Install package
+        run: |
+          python -m pip install $(find ./dist -name "*.whl")
+          
+      - name: Run unit tests
+        run: |
+          export LD_LIBRARY_PATH="${LD_LIBRARY_PATH:+${LD_LIBRARY_PATH}:}\
+          ${{ env.MATLAB_PATH }}/runtime/glnxa64:\
+          ${{ env.MATLAB_PATH }}/bin/glnxa64:\
+          ${{ env.MATLAB_PATH }}/sys/os/glnxa64:\
+          ${{ env.MATLAB_PATH }}/extern/bin/glnxa64"
+          python -m unittest discover tests -v
+
+      - name: Detect pre-release
         shell: bash
         run: |
           if echo "${{ github.ref_name }}" | grep -q '^[0-9][0-9]\.[0-9][0-9]\.[A-Za-z]'; then
@@ -158,12 +199,13 @@ jobs:
             echo "PRERELEASE=false" >> $GITHUB_ENV
           fi
           echo PRERELEASE=${{ env.PRERELEASE }}
-
+          
       - name: Release package
         uses: softprops/action-gh-release@v2
         with:
           prerelease: ${{ env.PRERELEASE }}
           files: ./dist/spm_python*.whl
+        continue-on-error: true
         
       - name: Publish package
         uses: pypa/gh-action-pypi-publish@27b31702a0e7fc50959f5ad993c78deac1bdfc29
