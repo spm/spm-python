@@ -148,10 +148,21 @@ jobs:
         
       - name: Build package
         run: python -m build --sdist --wheel
-        
+
+      - name: Detect Pre-release
+        shell: bash
+        run: |
+          if echo "${{ github.ref_name }}" | grep -q '^[0-9][0-9]\.[0-9][0-9]\.[A-Za-z]'; then
+            echo "PRERELEASE=true" >> $GITHUB_ENV
+          else
+            echo "PRERELEASE=false" >> $GITHUB_ENV
+          fi
+          echo PRERELEASE=${{ env.PRERELEASE }}
+
       - name: Release package
         uses: softprops/action-gh-release@v2
         with:
+          prerelease: ${{ env.PRERELEASE }}
           files: ./dist/spm_python*.whl
         
       - name: Publish package
