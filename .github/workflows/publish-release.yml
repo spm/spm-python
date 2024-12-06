@@ -117,6 +117,11 @@ jobs:
           pip install build
           pip install numpy
 
+      - name: Setup python version
+        if: ${{ matrix.main }}
+        run: |
+          sed -i 's/\(version = "[^"]*\)"/${{ github.ref_name }}"/' pyproject.toml
+
       - name: Add Matlab version specifier
         if: ${{ !matrix.main }}
         run: | 
