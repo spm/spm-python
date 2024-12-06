@@ -1,9 +1,11 @@
 name: Create tag from new version
 
 on:
+  workflow_dispatch:
+  workflow_call:
   push:
     paths: 
-      ./pyproject.toml
+      - pyproject.toml
       
 permissions: 
   contents: write
