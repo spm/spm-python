@@ -1,0 +1,25 @@
+name: Create tag from new version
+
+on:
+  push:
+    paths: 
+      ./pyproject.toml
+      
+permissions: 
+  contents: write
+  
+jobs:
+  setup-tag:
+    runs-on: "ubuntu-latest"
+    steps: 
+      - name: Check out SPM Python
+        uses: actions/checkout@v4
+        
+      - name: Get package version
+        run: |
+           VERSION=$(sed -n 's/^version = "\(.*\)"/\1/p' pyproject.toml)
+           MSG=$(git log $(git describe --tags --abbrev=0)..HEAD --oneline)
+           git tag -a "$VERSION" -m "$MSG"
+           
+      - name: Publish tags
+        run: git push --tags 
