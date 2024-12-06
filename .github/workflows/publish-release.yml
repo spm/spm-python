@@ -120,7 +120,7 @@ jobs:
       - name: Setup python version
         if: ${{ matrix.main }}
         run: |
-          sed -i 's/\(version = "[^"]*\)"/${{ github.ref_name }}"/' pyproject.toml
+          sed -i 's/\(version = "[^"]*\)"/version = "${{ github.ref_name }}"/' pyproject.toml
 
       - name: Add Matlab version specifier
         if: ${{ !matrix.main }}
