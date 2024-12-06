@@ -20,7 +20,12 @@ jobs:
       - name: Get package version
         run: |
            VERSION=$(sed -n 's/^version = "\(.*\)"/\1/p' pyproject.toml)
+           echo "pyproject.toml version: $VERSION" 
+           git config user.name github-actions
+           git config user.email github-actions@github.com
            MSG=$(git log $(git describe --tags --abbrev=0)..HEAD --oneline)
+           echo "Creating tag $VERSION with message:"
+           echo "$MSG"
            git tag -a "$VERSION" -m "$MSG"
            
       - name: Publish tags
