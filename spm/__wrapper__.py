@@ -115,7 +115,7 @@ class Runtime:
 
 def cell(*iterable):
     """
-    Return a 1D `CellArray` that contains the input elements.
+    Return a 1D `Cell` that contains the input elements.
     """
     obj = Cell(len(iterable))
     for i, elem in enumerate(iterable):
@@ -125,7 +125,7 @@ def cell(*iterable):
 
 def num2cell(array):
     """
-    Convert a `NumArray` to a `CellArray`.
+    Convert an `Array` to a `Cell`.
     """
     obj = np.asanyarray(array, dtype=object)
     return np.ndarray.view(obj, Cell)
@@ -133,7 +133,7 @@ def num2cell(array):
 
 def cell2num(cell, dtype=None):
     """
-    Convert a `CellArray` to a `NumArray`.
+    Convert a `Cell` to an `Array`.
     """
     obj = np.asanyarray(cell.tolist(), dtype=dtype)
     return np.ndarray.view(obj, Array)
@@ -141,7 +141,7 @@ def cell2num(cell, dtype=None):
 
 def struct2cell(struct):
     """
-    Convert a `StructArray` to a `CellArray`.
+    Convert a `Struct` to a `Cell`.
     The output cell contains the struct's values (not the keys).
     """
     obj = np.stack([struct[key] for key in struct.keys()])
@@ -150,7 +150,7 @@ def struct2cell(struct):
 
 def cell2struct(cell):
     """
-    Convert a `CellArray` of `StructArray` into a `StructArray`.
+    Convert a `Cell` of `Struct` into a `Struct`.
     """
     obj = np.empty(cell.shape, dtype=dict)
     for i, x in cell._iterall():
@@ -179,6 +179,7 @@ def asnum(other):
 def asstruct(other):
     """
     Convert (nested) dict-like objects to struct.
+    Convert (array of) dict-like objects to struct array.
     """
     if isinstance(other, np.ndarray) and other.dtype in (object, dict):
         return asmatlab(np.ndarray.view(other, Struct))
@@ -264,19 +265,19 @@ class unpack(np.ndarray):
     Helper class to assign values into a specific field of a non-scalar Struct.
 
     ```python
-    s = StructArray(2)
+    s = Struct(2)
     s.field = cell(1, 2)
     print(s)
     # [{"field": [1, 2]}, {"field": [1, 2]}]
 
-    s = StructArray(2)
+    s = Struct(2)
     s.field = unpack(1, 2)
     print(s)
     # [{"field": 1}, {"field": 2}]
     ```
     """
     # TODO:
-    #   The idea is to have a type that tells StructArray.__setattr__
+    #   The idea is to have a type that tells Struct.__setattr__
     #   that we want to broadcast the object before assigning it to the field.
     #   I am not sure about the exact syntax yet, so I keep it simple for now.
     def __new__(cls, *args, **kwargs):
@@ -309,7 +310,7 @@ class _DelayedArray(_MatlabArray):
     This is an object that we return when we don't know how an indexed element
     will be used yet.
 
-    It decides whether it is a StructArray, CellArray or NumArray based on the
+    It decides whether it is a Struct, Cell or Array based on the
     type of indexing that is used.
 
     In Matlab:
@@ -340,10 +341,10 @@ class _DelayedArray(_MatlabArray):
 
     Instead, the use of brackets automatically transforms the object into
     either:
-        * a `StructArray` (in all "get" cases, and in the "set" context
-          `a[x] = y`, when `y` is either a `dict` or a `StructArray`); or
-        * a `NumArray` (in the "set" context `a[x] = y`, when `y` is neither a
-          `dict` nor a `StructArray`).
+        * a `Struct` (in all "get" cases, and in the "set" context
+          `a[x] = y`, when `y` is either a `dict` or a `Struct`); or
+        * a `Array` (in the "set" context `a[x] = y`, when `y` is neither a
+          `dict` nor a `Struct`).
 
     Alternatively, if the user wishes to specify which type the object should
     take, we implement the properties `as_cell`, `as_struct` and `as_num`.
@@ -437,7 +438,7 @@ class _DelayedArray(_MatlabArray):
 
 class _WrappedArray(np.ndarray, _MatlabArray):
     """
-    Base class for "arrays of things" (NumArray, CellArray, StructArray.)
+    Base class for "arrays of things" (Array, Cell, Struct.)
     """
 
     # Value used for delayed arrays whose type cannot be guessed
@@ -599,7 +600,7 @@ class Array(_WrappedArray):
                 other = shape
                 other = np.asanyarray(other)
                 if not issubclass(other.dtype.type, np.number):
-                    raise TypeError("NumArray data type must be numeric")
+                    raise TypeError("Array data type must be numeric")
                 return np.ndarray.view(other, Array)
         return super().__new__(cls, shape)
 
@@ -677,7 +678,7 @@ class Cell(_WrappedArray):
         # implictely created cell. In that context, we can just defer to
         # square bracket indexing. The point of using round brackets is
         # simply to instruct a DelayedArray that it should transform itself
-        # into a CellArray.
+        # into a Cell.
         #
         # NOTES:
         #
@@ -685,8 +686,8 @@ class Cell(_WrappedArray):
         #      but I like the symmetry of having them in CellArrays too.
         #      It enables things like
         #      ```python
-        #      a.b(0).c = 'd'  # Instructs that b is a CellArray
-        #      a.b(1).c = 'e'  # At this point b is already a CellArray,
+        #      a.b(0).c = 'd'  # Instructs that b is a Cell
+        #      a.b(1).c = 'e'  # At this point b is already a Cell,
         #                      # but it's nicer to use the same syntax as above
         #      ```
         #
@@ -709,22 +710,22 @@ class Struct(_WrappedArray):
 
     ```python
     # Instantiate from size
-    StructArray(N, M, ...)
-    StructArray([N, M, ...])
+    Struct(N, M, ...)
+    Struct([N, M, ...])
 
     # Instantiate from existing struct array
-    StructArray(other_struct)
+    Struct(other_struct)
 
     # Instantiate from dictionary
-    StructArray({"a": x, "b": y})
-    StructArray(a=x, b=y)
+    Struct({"a": x, "b": y})
+    Struct(a=x, b=y)
     ```
     """
     # Same point as for cells (see comment)
     _DEFAULT = classmethod(lambda cls: asnum([]))
 
     # List of public attributes and methods from the ndarray class that we
-    # keep in StructArray.
+    # keep in Struct.
     # Most of these have "external" version (e.g. `np.ndim(x)`), so could
     # also be hidden if we suggest people use external functions.
     _NDARRAY_ATTRS = (
@@ -754,7 +755,7 @@ class Struct(_WrappedArray):
 
     def __new__(cls, *args, **kwargs):
         if not args or isinstance(args[0], int):
-            # StructArray(M, N, ...)
+            # Struct(M, N, ...)
             obj = super().__new__(cls, args, dtype=dict)
             for index, _ in obj._iterall():
                 np.ndarray.__setitem__(obj, index, dict(**kwargs))
@@ -766,7 +767,7 @@ class Struct(_WrappedArray):
             )
 
         if len(args) == 0:
-            # StructArray(a=x, b=2) -> StructArray(dict(a=x, b=2))
+            # Struct(a=x, b=2) -> Struct(dict(a=x, b=2))
             return cls(kwargs)
 
         arg = args[0]
@@ -778,10 +779,10 @@ class Struct(_WrappedArray):
             hasattr(arg, "__len__") and not isinstance(arg, (dict, Struct)) and
             (len(arg) == 0 or isinstance(arg[0], int))
         ):
-            # StructArray([M, N, ...]) -> StructArray(M, N, ...)
+            # Struct([M, N, ...]) -> Struct(M, N, ...)
             return cls(*arg, **kwargs)
 
-        # StructArray([array_like of] dict or struct)
+        # Struct([array_like of] dict or struct)
         obj = np.asanyarray(arg, dtype=dict)
         obj = np.ndarray.view(obj, Struct)
         arr = np.ndarray.view(obj, np.ndarray)
@@ -812,7 +813,7 @@ class Struct(_WrappedArray):
         return self
 
     def _elem(self):
-        # In a StructArray, single-element indexing returns a scalar array of
+        # In a Struct, single-element indexing returns a scalar array of
         # dict (i.e., it's shape is an empty list []). This allows us to never
         # expose the dictionary itself. However, we do sometimes need to access
         # the dictionary, in which case we use this helper.
@@ -984,7 +985,7 @@ class Struct(_WrappedArray):
             obj = data.view(Struct)
         except Exception:
             raise RuntimeError(
-                f'Failed to construct StructArray data:\n'
+                f'Failed to construct Struct data:\n'
                 f'  data={data}\n'
                 f'  objdict={objdict}'
             )
@@ -1223,7 +1224,7 @@ class OldStructArray:
             .__repr__() \
             .replace('array([], dtype=float64)', 'empty') \
             .replace('matlab.double([])', 'empty') \
-            .replace('array(', 'StructArray(\n  data=') \
+            .replace('array(', 'Struct(\n  data=') \
             .replace(', dtype=object', f',\n  keys={self.keys()}')
 
     @staticmethod
@@ -1236,6 +1237,6 @@ class OldStructArray:
         try:
             obj = OldStructArray(data)
         except Exception as e:
-            raise RuntimeError(f'Failed to construct StructArray data:\n  data={data}\n  objdict={objdict}')
+            raise RuntimeError(f'Failed to construct Struct data:\n  data={data}\n  objdict={objdict}')
 
         return obj
