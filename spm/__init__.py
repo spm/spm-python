@@ -1,4 +1,4 @@
-from .__wrapper__ import Struct, Cell, StructArray, Runtime
+from .__wrapper__ import Struct, Cell, Array, Runtime
 from .file_array import file_array
 from .gifti import gifti
 from .meeg import meeg
@@ -825,4 +825,3 @@ from .spm_z2p import spm_z2p
 from .spm_zeros import spm_zeros
 from .__tests import *
 from .__toolbox import *
-

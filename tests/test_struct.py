@@ -24,12 +24,15 @@ class TestStruct(unittest.TestCase):
     def test_delete_item(self):
         self.struct["key"] = "value"
         del self.struct["key"]
-        with self.assertRaises(KeyError):
-            _ = self.struct["key"]
+
+        # # Not an error anymore with matlab-like smart indexing
+        # with self.assertRaises(KeyError):
+        #     _ = self.struct["key"]
 
     def test_as_array(self):
-        a = np.asarray(self.struct) 
-        b = np.asarray(self.struct, dtype=object) 
+        _ = np.asarray(self.struct)
+        _ = np.asarray(self.struct, dtype=object)
+
 
 if __name__ == "__main__":
     unittest.main()
