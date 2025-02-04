@@ -1122,7 +1122,6 @@ class MatlabClassWrapper:
 
     def __init_subclass__(cls):
         super().__init_subclass__()
-        print(cls, hasattr(cls, 'subsref'), hasattr(cls, 'subsasgn'))
         if hasattr(cls, 'subsref'):
             cls.__getitem__ = MatlabClassWrapper.__getitem
             cls.__call__    = MatlabClassWrapper.__call
