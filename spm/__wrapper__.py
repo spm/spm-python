@@ -53,19 +53,20 @@ class Runtime:
 
     @staticmethod
     def call(fn, *args, **kwargs):
-        [args, kwargs] = Runtime._process_argin(*args, **kwargs)
+        (args, kwargs) = Runtime._process_argin(*args, **kwargs)
         res = Runtime.instance().mpython_endpoint(fn, *args, **kwargs)
         return Runtime._process_argout(res)
 
-    @staticmethod
-    def _cast_argin(arg):
-        if isinstance(arg, (MatlabClassWrapper, OldStructArray)):
-            arg = arg._as_matlab_object()
-        if isinstance(arg, dict):
-            _, arg = Runtime._process_argin(**arg)
-        elif isinstance(arg, (tuple, list, set)):
-            arg, _ = Runtime._process_argin(*arg)
-        return arg
+    # FIXME: this method is not used anymore -- delete it later
+    # @staticmethod
+    # def _cast_argin(arg):
+    #     if isinstance(arg, (MatlabClassWrapper, OldStructArray)):
+    #         arg = arg._as_matlab_object()
+    #     if isinstance(arg, dict):
+    #         _, arg = Runtime._process_argin(**arg)
+    #     elif isinstance(arg, (tuple, list, set)):
+    #         arg, _ = Runtime._process_argin(*arg)
+    #     return arg
 
     @staticmethod
     def _process_argin(*args, **kwargs):
@@ -80,6 +81,9 @@ class Runtime:
     def _process_argout(res):
         return asmatlab(res)
 
+        # FIXME: old version kept for discussion,
+        #        now deferred to `asmatlab` -- delete it later
+        #
         # out = res
         # if type(res) in _matlab_numpy_types.keys():
         #     try:
@@ -117,6 +121,12 @@ def cell(*iterable):
     """
     Return a 1D `Cell` that contains the input elements.
     """
+    # `Cell(tuple[cells])` may combine its input into a cell array.
+    # This helper ensures that we only create a cell at the first level,
+    # i.e., `cell(x, y, z)` is equivalent to matlab's `{x y z}`.
+    #
+    # We could also simply name is `c`, which matches R's `c(x, y, z)`,
+    # and avoids confusion between `Cell` and `cell`.
     obj = Cell(len(iterable))
     for i, elem in enumerate(iterable):
         obj[i] = elem
@@ -127,6 +137,8 @@ def num2cell(array):
     """
     Convert an `Array` to a `Cell`.
     """
+    # TODO: expose matlab's `num2cell` in the spm bindings and check
+    #       that the python and matlab's versions have equivalent bhv?
     obj = np.asanyarray(array, dtype=object)
     return np.ndarray.view(obj, Cell)
 
@@ -135,6 +147,8 @@ def cell2num(cell, dtype=None):
     """
     Convert a `Cell` to an `Array`.
     """
+    # TODO: expose matlab's `cell2num` in the spm bindings and check
+    #       that the python and matlab's versions have equivalent bhv?
     obj = np.asanyarray(cell.tolist(), dtype=dtype)
     return np.ndarray.view(obj, Array)
 
@@ -144,6 +158,8 @@ def struct2cell(struct):
     Convert a `Struct` to a `Cell`.
     The output cell contains the struct's values (not the keys).
     """
+    # TODO: expose matlab's `struct2cell` in the spm bindings and check
+    #       that the python and matlab's versions have equivalent bhv?
     obj = np.stack([struct[key] for key in struct.keys()])
     return np.ndarray.view(obj, Cell)
 
@@ -152,6 +168,8 @@ def cell2struct(cell):
     """
     Convert a `Cell` of `Struct` into a `Struct`.
     """
+    # TODO: expose matlab's `cell2struct` in the spm bindings and check
+    #       that the python and matlab's versions have equivalent bhv?
     obj = np.empty(cell.shape, dtype=dict)
     for i, x in cell._iterall():
         obj[i] = x
@@ -173,7 +191,7 @@ def asnum(other):
     other = np.asanyarray(other)
     if not issubclass(other.dtype.type, np.number):
         other = np.asanyarray(other, dtype=np.float64)
-    return asmatlab(np.ndarray.view(other, Array))
+    return np.ndarray.view(other, Array)
 
 
 def asstruct(other):
@@ -188,10 +206,20 @@ def asstruct(other):
 
 def asmatlab(other):
     """
-    Convert python objects to matlab-compatible objects.
+    Convert python objects to matlab-like objects (`Cell`, `Struct`, `Array`).
 
     !!! warning "Conversion is performed in-place when possible."
     """
+    # NOTE: `asmatlab` might be a misleading name:
+    #   - we do not convert to matlab's own array types (`matlab.double`, etc);
+    #   - we do not convert to types that can be passed directly to matlab's
+    #     bindings;
+    #   - instead, we convert to python types that mimic matlab types.
+    #
+    # Can we find another (less misleading) name?
+    #   - `asspm` or `as_spm` ?
+    #   - `asspmarray` or `as_spm_array` ?
+    #   - `assmartarray` or `as_smart_array` ?
     if isinstance(other, Array):
         return other
 
@@ -208,10 +236,15 @@ def asmatlab(other):
 
     if isinstance(other, dict):
         if "type__" in other:
-            if other["type__"] == "structarray":
+            type__ = other["type__"]
+            if type__ == "structarray":
                 return Struct._from_matlab_object(other)
+            elif type__ == 'object':
+                return MatlabClassWrapper._from_matlab_object(other)
+            elif type__ == 'sparse':
+                return np.asarray(other['data__'], dtype=np.double).view(Array)
             else:
-                return MatlabClassWrapper(_objdict=other)
+                raise ValueError("Don't know what to do with type", type__)
         else:
             return asstruct(other)
 
@@ -231,6 +264,10 @@ def asmatlab(other):
             return other
 
     if isinstance(other, str):
+        return other
+
+    if other is None:
+        # NOTE: This can happen when matlab code is called without `nargout`
         return other
 
     raise TypeError(
@@ -256,7 +293,17 @@ def _as_matlab_object(obj):
             obj = obj.reshape(shape)
             return obj.tolist()
         return obj
+        # TODO: what about sparse numpy arrays? Does matlab understand them?
     else:
+        # TODO: do we want to raise if the type is not supported by matlab?
+        #
+        # Valid types for matlab bindings:
+        #   - bool, int, float, complex, str, bytes, bytearray
+        #
+        # Valid matlab types that we have already dealt with:
+        #   - list, tuple, set, dict, ndarray
+        #
+        # All other values/types are invalid (including `None`!)
         return obj
 
 
@@ -297,6 +344,7 @@ class _MatlabType(object):
 
 class _MatlabClass(_MatlabType):
     """Base class for user-defined matlab classes."""
+    # TODO: Can we use this name instead of `MatlabClassWrapper`?
     pass
 
 
@@ -447,6 +495,39 @@ class _WrappedArray(np.ndarray, _MatlabArray):
     def _EMPTY(self, n):
         raise NotImplementedError
 
+    @classmethod
+    def _parse_args(cls, *args, **kwargs):
+        # split size / input / keyword arguments
+        args, shape, obj = list(args), [], None
+        while args and isinstance(args[0], int):
+            shape.append(args.pop(0))
+        if not shape:
+            if args and not isinstance(args[0], (str, np.dtype, type)):
+                obj = args.pop(0)
+        if args:
+            if "dtype" in kwargs:
+                raise TypeError(
+                    f"{cls.__name__}() got multiple values for "
+                    f"argument 'dtype'"
+                )
+            kwargs["dtype"] = args.pop(0)
+        if args:
+            if "order" in kwargs:
+                raise TypeError(
+                    f"{cls.__name__}() got multiple values for "
+                    f"argument 'order'"
+                )
+            kwargs["order"] = args.pop(0)
+        if args:
+            raise TypeError(
+                f"{cls.__name__}() takes from 1 to 3 positional "
+                "arguments but more were given"
+            )
+        if hasattr(obj, "__iter__") and not hasattr(obj, "__len__"):
+            # save iterator values in a list
+            obj = list(obj)
+        return shape, obj, kwargs
+
     @property
     def as_num(self):
         raise TypeError(f"Cannot interpret a {type(self).__name__} as a numeric array")
@@ -578,31 +659,38 @@ class Array(_WrappedArray):
 
     # Instantiate from existing numeric array
     Array(other_array)
+
+    # Other options
+    Array(..., dtype=None, order=None, *, device=None, copy=None, like=None)
     ```
     """
     def _EMPTY(self, n):
         # Zero-fill when resizing
         return 0
 
-    def __new__(cls, *shape):
-        if len(shape) == 1 and not isinstance(shape[0], int):
-            shape = shape[0]
-            if (
-                hasattr(shape, "__iter__") and
-                len(shape) > 0 and not
-                all(isinstance(x, int) for x in shape)
-            ):
-                # FIXME:
-                #   This will fail if the input is an iterator
-                #   (no __len__ and content diseappears after first iteration).
-                #   I should store it in a list, but only if the input
-                #   is not a ndarray.
-                other = shape
-                other = np.asanyarray(other)
-                if not issubclass(other.dtype.type, np.number):
-                    raise TypeError("Array data type must be numeric")
-                return np.ndarray.view(other, Array)
-        return super().__new__(cls, shape)
+    def __new__(cls, *args, **kwargs):
+        # split size / input / keyword arguments
+        shape, obj, kwargs = cls._parse_args(*args, **kwargs)
+
+        if obj is None:
+            # Array(M, N, ...)
+            obj = super().__new__(cls, shape, **kwargs)
+            if not issubclass(obj.dtype.type, np.number):
+                raise TypeError("Array data type must be numeric")
+            return obj
+
+        if (
+            hasattr(obj, "__len__") and
+            (len(obj) == 0 or all(isinstance(x, int) for x in obj))
+        ):
+            # Array([M, N, ...]) -> Array(M, N, ...)
+            return cls(*obj, **kwargs)
+
+        # Array(array_like)
+        obj = np.asanyarray(obj, **kwargs)
+        if not issubclass(np.asarray(obj).dtype.type, np.number):
+            raise TypeError("Array data type must be numeric")
+        return np.ndarray.view(obj, Array)
 
     @property
     def as_num(self):
@@ -625,10 +713,29 @@ class Cell(_WrappedArray):
     # Instantiate from existing cell array
     Cell(other_cell)
 
+    # Other options
+    Cell(..., dtype=None, order=None, *, device=None, copy=None, like=None)
+
     # Instantiate from elements
     cell(x, y, z)
     ```
     """
+
+    # TODO:
+    #   I am thinking that cells should behave more like
+    #   "multidimensional tuples/lists" than "ndarray".
+    #   This means that:
+    #       * we should hide all math functions.
+    #       * `__add__`, `__iadd__`, `__radd__` should fallback to `extend()`,
+    #         as in tuples, rather than `np.add` as in arrays.
+    #       * "scalar" cells should be forbidden (already the case at
+    #         construction, but we should also check that reshape/view do
+    #         not return scalar cells).
+    #       * maybe we should inherit from `tuple` (or `list`?).
+    #         I think that most of the list methods make sense if
+    #         we treat multidimensional cells as "lists of lists".
+    #         The only treaky ones to implement are `insert/pop/remote`
+    #         because they require "moving" data around.
 
     # Which value should we use as default in cell?
     #   * `None` is the most pythonic value
@@ -643,31 +750,33 @@ class Cell(_WrappedArray):
             data[i] = _DelayedArray(self)
         return data
 
-    def __new__(cls, *shape):
-        if len(shape) == 1 and not isinstance(shape[0], int):
-            shape = shape[0]
-            if (
-                hasattr(shape, "__iter__") and
-                len(shape) > 0 and not
-                all(isinstance(x, int) for x in shape)
-            ):
-                # FIXME:
-                #   This will fail if the input is an iterator
-                #   (no __len__ and content diseappears after first iteration).
-                #   I should store it in a list, but only if the input
-                #   is not a ndarray.
-                other = shape
-                other = np.asanyarray(other, dtype=object)
-                return np.ndarray.view(other, Cell)
-        if len(shape) == 0:
-            # Scalar cells are forbidden
-            # (also, default cells must be 0-sized vectors)
-            shape = [0]
-        obj = super().__new__(cls, shape, dtype=object)
-        if cls._DEFAULT() is not None:
-            for i in obj._iterindex():
-                obj[i] = cls._DEFAULT()
-        return obj
+    def __new__(cls, *args, **kwargs):
+        # split size / input / keyword arguments
+        shape, obj, kwargs = cls._parse_args(*args, **kwargs)
+        kwargs["dtype"] = object
+
+        if obj is None:
+            # Cell(M, N, ...)
+            if len(shape) == 0:
+                # Scalar cells are forbidden
+                # (also, default cells must be 0-sized vectors)
+                shape = [0]
+            obj = super().__new__(cls, shape, **kwargs)
+            if cls._DEFAULT() is not None:
+                for i in obj._iterindex():
+                    obj[i] = cls._DEFAULT()
+            return obj
+
+        if (
+            hasattr(obj, "__len__") and
+            (len(obj) == 0 or all(isinstance(x, int) for x in obj))
+        ):
+            # Cell([M, N, ...]) -> Array(M, N, ...)
+            return cls(*obj, **kwargs)
+
+        # Cell(cell_like)
+        obj = np.asanyarray(obj, **kwargs)
+        return np.ndarray.view(obj, Cell)
 
     @property
     def as_cell(self):
@@ -753,37 +862,42 @@ class Struct(_WrappedArray):
             data[i] = {}
         return data
 
+    @classmethod
+    def _parse_args(cls, *args, **kwargs):
+        # split size / input / keyword arguments
+        args, shape, obj = list(args), [], None
+        while args and isinstance(args[0], int):
+            shape.append(args.pop(0))
+        if args and not shape:
+            obj = args.pop(0)
+        if args:
+            raise TypeError(
+                "Struct() takes 1 positional arguments but more were given"
+            )
+        if hasattr(obj, "__iter__") and not hasattr(obj, "__len__"):
+            # save iterator values in a list
+            obj = list(obj)
+        return shape, obj, kwargs
+
     def __new__(cls, *args, **kwargs):
-        if not args or isinstance(args[0], int):
+        shape, obj, kwargs = cls._parse_args(*args, **kwargs)
+
+        if obj is None:
             # Struct(M, N, ...)
-            obj = super().__new__(cls, args, dtype=dict)
+            obj = super().__new__(cls, shape, dtype=dict)
             for index, _ in obj._iterall():
                 np.ndarray.__setitem__(obj, index, dict(**kwargs))
             return obj
 
-        if len(args) > 1:
-            raise ValueError(
-                "Multiple arguments only allowed if all integers."
-            )
-
-        if len(args) == 0:
-            # Struct(a=x, b=2) -> Struct(dict(a=x, b=2))
-            return cls(kwargs)
-
-        arg = args[0]
-        if hasattr(arg, "__iter__") and not hasattr(args, "__len__"):
-            # save iterator values in a list
-            arg = list(arg)
-
         if (
-            hasattr(arg, "__len__") and not isinstance(arg, (dict, Struct)) and
-            (len(arg) == 0 or isinstance(arg[0], int))
+            hasattr(obj, "__len__") and not isinstance(obj, (dict, Struct))
+            and (len(obj) == 0 or all(isinstance(x, int) for x in obj))
         ):
             # Struct([M, N, ...]) -> Struct(M, N, ...)
-            return cls(*arg, **kwargs)
+            return cls(*obj, **kwargs)
 
         # Struct([array_like of] dict or struct)
-        obj = np.asanyarray(arg, dtype=dict)
+        obj = np.asanyarray(obj, dtype=dict)
         obj = np.ndarray.view(obj, Struct)
         arr = np.ndarray.view(obj, np.ndarray)
 
@@ -802,7 +916,7 @@ class Struct(_WrappedArray):
 
         for i in itertools.product(*(range(x) for x in arr.shape)):
             if not isinstance(arr[i], dict):
-                raise TypeError("Cannot convert", arg, "to Struct.")
+                raise TypeError("Cannot convert", obj, "to Struct.")
 
         if kwargs:
             obj.update(kwargs)
@@ -831,9 +945,6 @@ class Struct(_WrappedArray):
     def _asdict(self):
         # scalar struct -> return the underlying dictionary
         # otherwise     -> reverse array/dict order -> dict of cells of values
-        #
-        # NOTE: default value for unset fields is `None`
-        #       (in matlab, it is an empty num array)
         if len(self.shape) == 0:
             return self._elem()
         return {
@@ -1011,6 +1122,7 @@ class MatlabClassWrapper:
 
     def __init_subclass__(cls):
         super().__init_subclass__()
+        print(cls, hasattr(cls, 'subsref'), hasattr(cls, 'subsasgn'))
         if hasattr(cls, 'subsref'):
             cls.__getitem__ = MatlabClassWrapper.__getitem
             cls.__call__    = MatlabClassWrapper.__call

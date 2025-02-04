@@ -30,7 +30,6 @@ class StructArrayTestCase(unittest.TestCase):
         self.assertEqual(dict(struct), self.struct2)
 
     def test_keys(self):
-        print(self.array2d)
         sa = Struct(self.array2d)
         keys = sa.keys()
         self.assertEqual(keys, {'a', 'b', 'c'})
