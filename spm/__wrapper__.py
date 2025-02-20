@@ -121,7 +121,7 @@ class _MatlabTypeHelpers(object):
         Convert (nested) list-like objects to cells.
         """
         other = np.asanyarray(other, dtype=object)
-        return _MatlabType._from_any(np.ndarray.view(other, Cell))
+        return _MatlabTypeHelpers._from_any(np.ndarray.view(other, Cell))
 
     @staticmethod
     def _to_num(other) -> "Array":
@@ -140,8 +140,8 @@ class _MatlabTypeHelpers(object):
         Convert (array of) dict-like objects to struct array.
         """
         if isinstance(other, np.ndarray) and other.dtype in (object, dict):
-            return _MatlabType._from_any(np.ndarray.view(other, Struct))
-        return _MatlabType._from_any(Struct(other))
+            return _MatlabTypeHelpers._from_any(np.ndarray.view(other, Struct))
+        return _MatlabTypeHelpers._from_any(Struct(other))
 
     @classmethod
     def _from_any(cls, other):
@@ -413,7 +413,7 @@ class _WrappedArray(np.ndarray, _MatlabArray):
         raise NotImplementedError
 
     @classmethod
-    def _parse_args(cls, *args, __has_dtype=True, __has_order=True, **kwargs):
+    def _parse_args(cls, *args, **kwargs):
         """
         This function is used in the __new__ constructor of Array/Cell/Struct.
 
@@ -431,7 +431,8 @@ class _WrappedArray(np.ndarray, _MatlabArray):
         obj : array-like | None
         kwargs : dict
         """
-        # split size / input / keyword arguments
+        __has_dtype = kwargs.pop("__has_dtype", True)
+        __has_order = kwargs.pop("__has_order", True)
 
         # Detect integer arguments
         args, shape, obj = list(args), [], None
@@ -478,8 +479,9 @@ class _WrappedArray(np.ndarray, _MatlabArray):
 
         # If obj is a list[int] -> it is a shape
         if (
-            not shape and hasattr(obj, "__len__") and
-            (len(obj) == 0 or all(isinstance(x, int) for x in obj))
+            not shape and
+            isinstance(obj, (list, tuple)) and
+            all(isinstance(x, int) for x in obj)
         ):
             shape, obj = obj, None
 
@@ -518,11 +520,13 @@ class _WrappedArray(np.ndarray, _MatlabArray):
         Iterator across all elements. Yields (index, element).
         If object has an empty shape, return (Ellipsis, item()).
         """
+        asarray = np.ndarray.view(self, np.ndarray)
         if np.ndim(self) == 0:
-            yield (Ellipsis, np.ndarray.item(self))
+            # yield (Ellipsis, np.ndarray.item(self))
+            yield (Ellipsis, asarray.item())
             return
         for index in self._iterindex():
-            yield index, self[index]
+            yield index, asarray[index]
 
     def __getitem__(self, index):
         """Resize array if needed, then fallback to np.ndarray indexing."""
@@ -776,7 +780,8 @@ class Array(_WrappedArray, _ListishMixin):
 
         # Array(array_like)
         obj = np.asanyarray(obj, **kwargs)
-        if not issubclass(np.asarray(obj).dtype.type, np.number):
+        dtype = np.ndarray.view(obj, np.ndarray).dtype
+        if not issubclass(dtype.type, np.number):
             raise TypeError("Array data type must be numeric")
         return np.ndarray.view(obj, Array)
 
@@ -930,6 +935,34 @@ class Struct(_WrappedArray):
     # Same point as for cells (see comment)
     _DEFAULT = classmethod(lambda cls: _MatlabTypeHelpers._to_num([]))
 
+    # List of public attributes and methods from the ndarray class that we
+    # keep in Struct. I've tried to find the minimal set of attributes
+    # required to not break the numpy api.
+    _NDARRAY_ATTRS = (
+        # --------------------------------------------------------------
+        # these attributes cannot be hidden, or numpy breaks
+        "ndim",
+        "shape",
+        "size",
+        "reshape",
+        # --------------------------------------------------------------
+        # # these do not seem needed, so let's hide them
+        # PROPERTIES
+        # "dtype",    # !! does not have `np.dtype`
+        # "strides",  # !! does not have `np.strides`
+        # "flat",     # !! does not have `np.flat`
+        # "T",        # !! does not have `np.T`
+        # METHODS
+        # "resize",   # !! does not have `np.resize` -> `np.ndarray.resize`
+        # "squeeze",  # has `np.squeeze`
+        # "copy",     # has `np.copy`
+        # "tolist",   # !! does not have `np.tolist` -> `np.ndarray.tolist`
+        # "flatten",  # !! does not have `np.flatten` -> `np.ndarray.flatten`
+        # "ravel",    # has `np.ravel`
+        # AND ALSO
+        # view, item, itemset, swapaxes, transpose, data
+    )
+
     def _EMPTY(self, n):
         data = np.empty([n], dtype=dict)
         for i in range(n):
@@ -955,23 +988,31 @@ class Struct(_WrappedArray):
         obj = np.ndarray.view(obj, Struct)
         arr = np.ndarray.view(obj, np.ndarray)
 
+        # Ths logic here is that we may end up with an array of arrays
+        # of dict, because np.asarray([array, array]) returns an
+        # array([array, array]) rather than a single deep array.
+        # To circumvent this, we find elements that are arrays, convert
+        # them to lists, and call asarray again.
         rebuild = False
         for i, _ in obj._iterall():
             # NOTE: we use _iterall (not _iterindex) to cover
             # the case of scalar (empty-shaped) struct.
-            if isinstance(arr[i], np.ndarray):
-                tmp = np.ndarray.view(arr[i], dict, np.ndarray)
-                if len(arr[i].shape) == 0:
+            elem = arr.item() if i is Ellipsis else arr[i]
+            if isinstance(elem, np.ndarray):
+                tmp = np.ndarray.view(elem, dict, np.ndarray)
+                if elem.ndim == 0:
                     tmp = tmp.item()
                 else:
                     tmp = tmp.tolist()
                 arr[i] = tmp
                 rebuild = True
         if rebuild:
+            # Recurse (we may have arrays of arrays of arrays...)
             return cls(arr, **kwargs)
 
         for i, _ in obj._iterall():
-            if not isinstance(arr[i], dict):
+            elem = arr.item() if i is Ellipsis else arr[i]
+            if not isinstance(elem, dict):
                 raise TypeError("Cannot convert", obj, "to Struct.")
 
         if kwargs:
@@ -1047,8 +1088,11 @@ class Struct(_WrappedArray):
             super().__setitem__(index, value)
 
     def __getattribute__(self, key):
-        asnumpy = np.asarray(self)
-        if hasattr(asnumpy, key) and key[:1] != "_":
+        asnumpy = np.ndarray.view(self, np.ndarray)
+        if (
+            hasattr(asnumpy, key) and key[:1] != "_" and
+            key not in type(self)._NDARRAY_ATTRS
+        ):
             raise AttributeError("")
         return super().__getattribute__(key)
 
@@ -1118,7 +1162,8 @@ class Struct(_WrappedArray):
         return self
 
     def _as_matlab_object(self):
-        array = np.reshape(np.asarray(self), [-1], order="F")
+        array = np.ndarray.view(self, np.ndarray)
+        array = np.reshape(array, [-1], order="F")
         return dict(
             type__='structarray',
             size__=np.array([[*np.shape(self)]]),

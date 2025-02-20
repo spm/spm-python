@@ -27,23 +27,23 @@ import numpy as np
 
 def dtype(array):
     """Equivalent to `array.dtype`."""
-    return np.asarray(array).dtype
+    return np.ndarray.view(array, np.ndarray).dtype
 
 
 def flat(array):
     """Equivalent to `array.flat`."""
-    return np.asarray(array).flat
+    return np.ndarray.view(array, np.ndarray).flat
 
 
 def strides(array):
     """Equivalent to `array.strides`."""
-    return np.asarray(array).strides
+    return np.ndarray.view(array, np.ndarray).strides
 
 
 def T(array):
     """Equivalent to `array.T`."""
     kls = type(array)
-    return np.asarray(array).T.view(kls)
+    return np.ndarray.view(array, np.ndarray).T.view(kls)
 
 
 # -------
