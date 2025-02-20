@@ -2,16 +2,23 @@ try:
     from spm._spm import initialize
 except ImportError as e:
     import os
+    from textwrap import dedent
     installer_path = os.path.join(
         os.path.dirname(os.path.abspath(__file__)),
         '_spm',
         'resources',
-        'RuntimeInstaller.install')
-    print("Failed to import spm._spm. This can be due to a failure to find Matlab Runtime. "
-          "Please verify that Matlab Runtime is installed and its path is set. "
-          "See https://www.mathworks.com/help/compiler/mcr-path-settings-for-run-time-deployment.html for instructions"
-          " on how to setup the path. If the issue persists, please open an issue with the entire error message at "
-          "https://github.com/spm/spm-python/issues.")
+        'RuntimeInstaller.install'
+    )
+    print(dedent(
+        """
+        Failed to import spm._spm. This can be due to a failure to find Matlab Runtime.
+        Please verify that Matlab Runtime is installed and its path is set.
+        See https://www.mathworks.com/help/compiler/mcr-path-settings-for-run-time-deployment.html
+        for instructions on how to setup the path.
+        If the issue persists, please open an issue with the entire error
+        message at https://github.com/spm/spm-python/issues.
+        """
+    ))
 
     raise e
 
@@ -57,254 +64,22 @@ class Runtime:
         res = Runtime.instance().mpython_endpoint(fn, *args, **kwargs)
         return Runtime._process_argout(res)
 
-    # FIXME: this method is not used anymore -- delete it later
-    # @staticmethod
-    # def _cast_argin(arg):
-    #     if isinstance(arg, (MatlabClassWrapper, OldStructArray)):
-    #         arg = arg._as_matlab_object()
-    #     if isinstance(arg, dict):
-    #         _, arg = Runtime._process_argin(**arg)
-    #     elif isinstance(arg, (tuple, list, set)):
-    #         arg, _ = Runtime._process_argin(*arg)
-    #     return arg
-
     @staticmethod
     def _process_argin(*args, **kwargs):
-        args = tuple(map(_as_matlab_object, args))
-        kwargs = dict(zip(
-            kwargs.keys(),
-            map(_as_matlab_object, kwargs.values())))
-
+        to_runtime = _MatlabTypeHelpers._to_runtime
+        args = tuple(map(to_runtime, args))
+        kwargs = dict(zip(kwargs.keys(), map(to_runtime, kwargs.values())))
         return args, kwargs
 
     @staticmethod
     def _process_argout(res):
-        return asmatlab(res)
-
-        # FIXME: old version kept for discussion,
-        #        now deferred to `asmatlab` -- delete it later
-        #
-        # out = res
-        # if type(res) in _matlab_numpy_types.keys():
-        #     try:
-        #         out = np.asarray(res, dtype=_matlab_numpy_types[type(res)])
-        #     except:
-        #         pass
-        # elif isinstance(res, tuple):
-        #     out = tuple(Runtime._process_argout(r) for r in res)
-        # elif isinstance(res, list):
-        #     out = list(Runtime._process_argout(r) for r in res)
-        # elif isinstance(res, OldStructArray):
-        #     out = OldStructArray(Runtime._process_argout(r) for r in res)
-        # elif isinstance(res, dict):
-        #     res = dict(zip(res.keys(), map(Runtime._process_argout, res.values())))
-        #     if 'type__' in res.keys():
-        #         if res['type__'] == 'object':
-        #             out = MatlabClassWrapper._from_matlab_object(res)
-        #         elif res['type__'] == 'structarray':
-        #             out = OldStructArray._from_matlab_object(res)
-        #         elif res['type__'] == 'sparse':
-        #             out = np.asarray(res['data__'], dtype=np.double)
-        #         else:
-        #             out = res
-        #     else:
-        #         out = OldStruct(**res)
-        # return out
+        from_runtime = _MatlabTypeHelpers._from_any
+        return from_runtime(res)
 
 
 # ----------------------------------------------------------------------
 # Helpers
 # ----------------------------------------------------------------------
-
-
-def cell(*iterable):
-    """
-    Return a 1D `Cell` that contains the input elements.
-    """
-    # `Cell(tuple[cells])` may combine its input into a cell array.
-    # This helper ensures that we only create a cell at the first level,
-    # i.e., `cell(x, y, z)` is equivalent to matlab's `{x y z}`.
-    #
-    # We could also simply name is `c`, which matches R's `c(x, y, z)`,
-    # and avoids confusion between `Cell` and `cell`.
-    obj = Cell(len(iterable))
-    for i, elem in enumerate(iterable):
-        obj[i] = elem
-    return obj
-
-
-def num2cell(array):
-    """
-    Convert an `Array` to a `Cell`.
-    """
-    # TODO: expose matlab's `num2cell` in the spm bindings and check
-    #       that the python and matlab's versions have equivalent bhv?
-    obj = np.asanyarray(array, dtype=object)
-    return np.ndarray.view(obj, Cell)
-
-
-def cell2num(cell, dtype=None):
-    """
-    Convert a `Cell` to an `Array`.
-    """
-    # TODO: expose matlab's `cell2num` in the spm bindings and check
-    #       that the python and matlab's versions have equivalent bhv?
-    obj = np.asanyarray(cell.tolist(), dtype=dtype)
-    return np.ndarray.view(obj, Array)
-
-
-def struct2cell(struct):
-    """
-    Convert a `Struct` to a `Cell`.
-    The output cell contains the struct's values (not the keys).
-    """
-    # TODO: expose matlab's `struct2cell` in the spm bindings and check
-    #       that the python and matlab's versions have equivalent bhv?
-    obj = np.stack([struct[key] for key in struct.keys()])
-    return np.ndarray.view(obj, Cell)
-
-
-def cell2struct(cell):
-    """
-    Convert a `Cell` of `Struct` into a `Struct`.
-    """
-    # TODO: expose matlab's `cell2struct` in the spm bindings and check
-    #       that the python and matlab's versions have equivalent bhv?
-    obj = np.empty(cell.shape, dtype=dict)
-    for i, x in cell._iterall():
-        obj[i] = x
-    return np.ndarray.view(obj, Struct)
-
-
-def ascell(other):
-    """
-    Convert (nested) list-like objects to cells.
-    """
-    other = np.asanyarray(other, dtype=object)
-    return asmatlab(np.ndarray.view(other, Cell))
-
-
-def asnum(other):
-    """
-    Convert array-like objects to numeric arrays.
-    """
-    other = np.asanyarray(other)
-    if not issubclass(other.dtype.type, np.number):
-        other = np.asanyarray(other, dtype=np.float64)
-    return np.ndarray.view(other, Array)
-
-
-def asstruct(other):
-    """
-    Convert (nested) dict-like objects to struct.
-    Convert (array of) dict-like objects to struct array.
-    """
-    if isinstance(other, np.ndarray) and other.dtype in (object, dict):
-        return asmatlab(np.ndarray.view(other, Struct))
-    return asmatlab(Struct(other))
-
-
-def asmatlab(other):
-    """
-    Convert python objects to matlab-like objects (`Cell`, `Struct`, `Array`).
-
-    !!! warning "Conversion is performed in-place when possible."
-    """
-    # NOTE: `asmatlab` might be a misleading name:
-    #   - we do not convert to matlab's own array types (`matlab.double`, etc);
-    #   - we do not convert to types that can be passed directly to matlab's
-    #     bindings;
-    #   - instead, we convert to python types that mimic matlab types.
-    #
-    # Can we find another (less misleading) name?
-    #   - `asspm` or `as_spm` ?
-    #   - `asspmarray` or `as_spm_array` ?
-    #   - `assmartarray` or `as_smart_array` ?
-    if isinstance(other, Array):
-        return other
-
-    if isinstance(other, Cell):
-        for i, x in other._iterall():
-            np.ndarray.__setitem__(other, i, asmatlab(x))
-        return other
-
-    if isinstance(other, Struct):
-        for i, x in other._iterall():
-            for k, v in x.items():
-                x[k] = asmatlab(v)
-        return other
-
-    if isinstance(other, dict):
-        if "type__" in other:
-            type__ = other["type__"]
-            if type__ == "structarray":
-                return Struct._from_matlab_object(other)
-            elif type__ == 'object':
-                return MatlabClassWrapper._from_matlab_object(other)
-            elif type__ == 'sparse':
-                return np.asarray(other['data__'], dtype=np.double).view(Array)
-            else:
-                raise ValueError("Don't know what to do with type", type__)
-        else:
-            return asstruct(other)
-
-    if isinstance(other, (tuple, set)):
-        return ascell(other)
-
-    if isinstance(other, (list, np.ndarray, int, float, complex, bool)):
-        try:
-            return asnum(other)
-        except (ValueError, TypeError):
-            return ascell(other)
-
-    if isinstance(other, _MatlabType):
-        if hasattr(other, "_finalize"):
-            return other._finalize()
-        else:
-            return other
-
-    if isinstance(other, str):
-        return other
-
-    if other is None:
-        # NOTE: This can happen when matlab code is called without `nargout`
-        return other
-
-    raise TypeError(
-        f"Cannot convert {type(other).__name__} into a matlab object."
-    )
-
-
-def _as_matlab_object(obj):
-    """
-    Convert object to representation that the matlab bindings understand.
-    """
-    if hasattr(obj, "_as_matlab_object"):
-        return obj._as_matlab_object()
-    if isinstance(obj, (list, tuple, set)):
-        return type(obj)(map(_as_matlab_object, obj))
-    elif isinstance(obj, dict):
-        return type(obj)(zip(obj.keys(), map(_as_matlab_object, obj.values())))
-    elif isinstance(obj, np.ndarray):
-        obj = np.asarray(obj)
-        if obj.dtype in (object, dict):
-            shape, dtype = obj.shape, obj.dtype
-            obj = np.fromiter(map(_as_matlab_object, obj.flat), dtype=dtype)
-            obj = obj.reshape(shape)
-            return obj.tolist()
-        return obj
-        # TODO: what about sparse numpy arrays? Does matlab understand them?
-    else:
-        # TODO: do we want to raise if the type is not supported by matlab?
-        #
-        # Valid types for matlab bindings:
-        #   - bool, int, float, complex, str, bytes, bytearray
-        #
-        # Valid matlab types that we have already dealt with:
-        #   - list, tuple, set, dict, ndarray
-        #
-        # All other values/types are invalid (including `None`!)
-        return obj
 
 
 class unpack(np.ndarray):
@@ -337,9 +112,157 @@ class unpack(np.ndarray):
 # ----------------------------------------------------------------------
 
 
+class _MatlabTypeHelpers(object):
+    """Helpers used by other classes."""
+
+    @staticmethod
+    def _to_cell(other) -> "Cell":
+        """
+        Convert (nested) list-like objects to cells.
+        """
+        other = np.asanyarray(other, dtype=object)
+        return _MatlabType._from_any(np.ndarray.view(other, Cell))
+
+    @staticmethod
+    def _to_num(other) -> "Array":
+        """
+        Convert array-like objects to numeric arrays.
+        """
+        other = np.asanyarray(other)
+        if not issubclass(other.dtype.type, np.number):
+            other = np.asanyarray(other, dtype=np.float64)
+        return np.ndarray.view(other, Array)
+
+    @staticmethod
+    def _to_struct(other) -> "Struct":
+        """
+        Convert (nested) dict-like objects to struct.
+        Convert (array of) dict-like objects to struct array.
+        """
+        if isinstance(other, np.ndarray) and other.dtype in (object, dict):
+            return _MatlabType._from_any(np.ndarray.view(other, Struct))
+        return _MatlabType._from_any(Struct(other))
+
+    @classmethod
+    def _from_any(cls, other):
+        """
+        Convert python objects to `_MatlabType` objects
+        (`Cell`, `Struct`, `Array`, `MatlabClassWrapper`).
+
+        !!! warning "Conversion is performed in-place when possible."
+        """
+        #   - we do not convert to matlab's own array types
+        #     (`matlab.double`, etc);
+        #   - we do not convert to types that can be passed directly to
+        #     the matlab bindings;
+        #   - instead, we convert to python types that mimic matlab types.
+        if isinstance(other, Array):
+            return other
+
+        if isinstance(other, Cell):
+            for i, x in other._iterall():
+                np.ndarray.__setitem__(other, i, cls._from_any(x))
+            return other
+
+        if isinstance(other, Struct):
+            for i, x in other._iterall():
+                for k, v in x.items():
+                    x[k] = cls._from_any(v)
+            return other
+
+        if isinstance(other, dict):
+            if "type__" in other:
+                type__ = other["type__"]
+
+                if type__ == "structarray":
+                    # Matlab returns a list of dictionaries in data__
+                    # and the array shape in size__.
+                    return Struct._from_matlab_object(other)
+
+                elif type__ == 'object':
+                    # Matlab returns the object's fields serialized
+                    # in a dictionary.
+                    return MatlabClassWrapper._from_matlab_object(other)
+
+                elif type__ == 'sparse':
+                    # Matlab returns a dense version of the array in data__.
+                    return np.asarray(
+                        other['data__'], dtype=np.double
+                    ).view(Array)
+
+                else:
+                    raise ValueError("Don't know what to do with type", type__)
+
+            else:
+                return cls._to_struct(other)
+
+        if isinstance(other, (tuple, set)):
+            return cls._to_cell(other)
+
+        if isinstance(other, (list, np.ndarray, int, float, complex, bool)):
+            try:
+                return cls._to_num(other)
+            except (ValueError, TypeError):
+                return cls._to_cell(other)
+
+        if isinstance(other, _MatlabType):
+            if hasattr(other, "_finalize"):
+                return other._finalize()
+            else:
+                return other
+
+        if isinstance(other, str):
+            return other
+
+        if other is None:
+            # This can happen when matlab code is called without `nargout`
+            return other
+
+        raise TypeError(
+            f"Cannot convert {type(other).__name__} into a matlab object."
+        )
+
+    @classmethod
+    def _to_runtime(cls, obj):
+        """
+        Convert object to representation that the matlab runtime understand.
+        """
+        _to_bindings = cls._to_runtime
+
+        if hasattr(obj, "_as_matlab_object"):
+            # class / structarray
+            return obj._as_matlab_object()
+
+        elif isinstance(obj, (list, tuple, set)):
+            return type(obj)(map(_to_bindings, obj))
+
+        elif isinstance(obj, dict):
+            return type(obj)(zip(obj.keys(), map(_to_bindings, obj.values())))
+
+        elif isinstance(obj, np.ndarray):
+            obj = np.asarray(obj)
+            if obj.dtype in (object, dict):
+                shape, dtype = obj.shape, obj.dtype
+                obj = np.fromiter(map(_to_bindings, obj.flat), dtype=dtype)
+                obj = obj.reshape(shape)
+                return obj.tolist()
+            return obj
+
+        else:
+            # TODO: do we want to raise if the type is not supported by matlab?
+            #
+            # Valid types for matlab bindings:
+            #   - bool, int, float, complex, str, bytes, bytearray
+            #
+            # Valid matlab types that we have already dealt with:
+            #   - list, tuple, set, dict, ndarray
+            #
+            # All other values/types are invalid (including `None`!)
+            return obj
+
+
 class _MatlabType(object):
     """Generic type for all objects that have an exact matlab equivalent."""
-    pass
 
 
 class _MatlabClass(_MatlabType):
@@ -398,17 +321,17 @@ class _DelayedArray(_MatlabArray):
     take, we implement the properties `as_cell`, `as_struct` and `as_num`.
 
     Therefore:
-        * `a[x,y]             = num`    indicates that `a` is a numeric array;
-        * `a[x,y]             = struct` indicates that `a` is a numeric array;
-        * `a[x,y].f           = any`    indicates that `a` is a struct array;
-        * `a(x,y).f           = any`    indicates that `a` is a cell array that contains a struct;
-        * `a.f                = any`    indicates that `a` is a struct.
+        * `a[x,y]             = num`    : `a` is a numeric array;
+        * `a[x,y]             = struct` : `a` is a numeric array;
+        * `a[x,y].f           = any`    : `a` is a struct array;
+        * `a(x,y).f           = any`    : `a` is a cell array that contains a struct;
+        * `a.f                = any`    : `a` is a struct.
 
     And explictly:
-        * `a.as_cell[x,y]     = any`    indicates that `a` is a cell array;
-        * `a.as_struct[x,y].f = any`    indicates that `a` is a struct array;
-        * `a.as_cell[x,y].f   = any`    indicates that `a` is a cell array that contains a struct;
-        * `a.as_num[x,y]      = num`    indicates that `a` is a numeric array.
+        * `a.as_cell[x,y]     = any`    : `a` is a cell array;
+        * `a.as_struct[x,y].f = any`    : `a` is a struct array;
+        * `a.as_cell[x,y].f   = any`    : `a` is a cell array that contains a struct;
+        * `a.as_num[x,y]      = num`    : `a` is a numeric array.
     """
 
     def __init__(self, parent=None):
@@ -422,13 +345,7 @@ class _DelayedArray(_MatlabArray):
             return obj
         if self._parent is not None:
             return self._parent._DEFAULT()
-        return asnum([])
-
-    # def __str__(self):
-    #     return self._finalize().__str__()
-
-    # def __repr__(self):
-    #     return self._finalize().__repr__()
+        return _MatlabTypeHelpers._to_num([])
 
     @property
     def as_cell(self):
@@ -473,7 +390,7 @@ class _DelayedArray(_MatlabArray):
         elif isinstance(value, (tuple, Cell)):
             array = self.as_cell
             if isinstance(value, tuple):
-                value = cell(*value)
+                value = Cell.from_iterable(value)
         else:
             array = self.as_num
         array[index] = value
@@ -490,72 +407,101 @@ class _WrappedArray(np.ndarray, _MatlabArray):
     """
 
     # Value used for delayed arrays whose type cannot be guessed
-    _DEFAULT = classmethod(lambda cls: asnum([]))
+    _DEFAULT = classmethod(lambda cls: _MatlabTypeHelpers._to_num([]))
 
     def _EMPTY(self, n):
         raise NotImplementedError
 
     @classmethod
-    def _parse_args(cls, *args, **kwargs):
+    def _parse_args(cls, *args, __has_dtype=True, __has_order=True, **kwargs):
+        """
+        This function is used in the __new__ constructor of Array/Cell/Struct.
+
+        It does some preliminary preprocesing to reduces the number of
+        cases that must be handled by __new__.
+
+        In particular:
+        - It converts multiple integer arguments to a single list[int]
+        - It extracts the shape or object to copy, if there is one.
+        - It convert positional dtype/order into keywords.
+
+        Returns
+        -------
+        shape : list[int]
+        obj : array-like | None
+        kwargs : dict
+        """
         # split size / input / keyword arguments
+
+        # Detect integer arguments
         args, shape, obj = list(args), [], None
         while args and isinstance(args[0], int):
             shape.append(args.pop(0))
+
+        # If no integer arguments, the first argument (if it exists)
+        # must be a shape or an array-like object to convert.
         if not shape:
+            # Catch case where no size/array is passed and the first
+            # argument is a data type.
             if args and not isinstance(args[0], (str, np.dtype, type)):
                 obj = args.pop(0)
-        if args:
+
+        # If there are positional arguments remaining, they are:
+        # 1. dtype
+        if args and __has_dtype:
             if "dtype" in kwargs:
                 raise TypeError(
                     f"{cls.__name__}() got multiple values for "
                     f"argument 'dtype'"
                 )
             kwargs["dtype"] = args.pop(0)
-        if args:
+        # 2. order {"C", "F"}
+        if args and __has_order:
             if "order" in kwargs:
                 raise TypeError(
                     f"{cls.__name__}() got multiple values for "
                     f"argument 'order'"
                 )
             kwargs["order"] = args.pop(0)
+        # 3. no other positionals allowed -> raise
         if args:
             raise TypeError(
                 f"{cls.__name__}() takes from 1 to 3 positional "
                 "arguments but more were given"
             )
+
+        # If we found an object and it is a generator
+        # (= an iterable that has no `len`), copy its values into a list.
         if hasattr(obj, "__iter__") and not hasattr(obj, "__len__"):
             # save iterator values in a list
             obj = list(obj)
+
+        # If obj is a list[int] -> it is a shape
+        if (
+            not shape and hasattr(obj, "__len__") and
+            (len(obj) == 0 or all(isinstance(x, int) for x in obj))
+        ):
+            shape, obj = obj, None
+
         return shape, obj, kwargs
 
     @property
     def as_num(self):
-        raise TypeError(f"Cannot interpret a {type(self).__name__} as a numeric array")
+        raise TypeError(
+            f"Cannot interpret a {type(self).__name__} as a numeric array"
+        )
 
     @property
     def as_cell(self):
-        raise TypeError(f"Cannot interpret a {type(self).__name__} as a cell")
+        raise TypeError(
+            f"Cannot interpret a {type(self).__name__} as a cell"
+        )
 
     @property
     def as_struct(self):
-        raise TypeError(f"Cannot interpret a {type(self).__name__} as a struct")
-
-    def append(self, value):
-        """List-like API."""
-        # NOTE/FIXME:
-        #   we use an array, not a list, so appending through += is not allowed.
-        self.resize([len(self)+1] + list(self.shape[1:]))
-        self[-1] = value
-
-    def extend(self, value):
-        """List-like API."""
-        # NOTE/FIXME:
-        #   we use an array, not a list, so extending through += is not allowed.
-        init_len = len(self)
-        batch = len(self) + len(value)
-        shape = np.broadcast_shape(self.shape, value.shape)
-        self.resize([batch] + list(shape))
-        self[init_len:] = value
+        raise TypeError(
+            f"Cannot interpret a {type(self).__name__} as a struct"
+        )
 
     def __str__(self):
         return np.array_str(self)
@@ -568,9 +514,12 @@ class _WrappedArray(np.ndarray, _MatlabArray):
         return itertools.product(*(range(x) for x in self.shape))
 
     def _iterall(self):
-        """Iterator across all elements. Yields (index, element)."""
+        """
+        Iterator across all elements. Yields (index, element).
+        If object has an empty shape, return (Ellipsis, item()).
+        """
         if len(self.shape) == 0:
-            yield (Ellipsis, self.reshape([-1])[0])
+            yield (Ellipsis, np.ndarray.item(self))
             return
         for index in self._iterindex():
             yield index, self[index]
@@ -585,7 +534,7 @@ class _WrappedArray(np.ndarray, _MatlabArray):
 
     def __setitem__(self, index, value):
         """Resize array if needed, then fallback to np.ndarray indexing."""
-        value = asmatlab(value)
+        value = _MatlabTypeHelpers._from_any(value)
         try:
             return super().__setitem__(index, value)
         except IndexError:
@@ -631,7 +580,7 @@ class _WrappedArray(np.ndarray, _MatlabArray):
             new_index.append(next_index)
             new_shape.append(next_shape)
         view_index = tuple(slice(x, None) for x in self.shape)
-        self.resize(new_shape, refcheck=False)
+        np.ndarray.resize(self, new_shape, refcheck=False)
         view = self[view_index]
         new_data = self._EMPTY(view.size)
         if isinstance(new_data, np.ndarray):
@@ -644,11 +593,157 @@ class _WrappedArray(np.ndarray, _MatlabArray):
             if isinstance(elem, _MatlabArray):
                 self[i] = elem._finalize()
             else:
-                self[i] = asmatlab(elem)
+                self[i] = _MatlabTypeHelpers._from_any(elem)
         return self
 
 
-class Array(_WrappedArray):
+class _ListishMixin:
+    """These methods are implemented in Cell and Array, but not Struct."""
+
+    def append(self, value):
+        """List-like API."""
+        new_shape = list(np.shape(self))
+        new_shape[0] += 1
+        np.ndarray.resize(new_shape, refcheck=False)
+        self[-1] = value
+
+    def extend(self, value):
+        """List-like API."""
+        init_len = len(self)
+        batch = len(self) + len(value)
+        shape = np.broadcast_shape(np.shape(self)[1:], np.shape(value)[1:])
+        new_shape = [batch] + list(shape)
+        np.ndarray.resize(self, new_shape, refcheck=False)
+        self[init_len:] = value
+
+    def clear(self):
+        """Remove all items by setting the first axis to have size 0."""
+        zero_shape = list(np.shape(self))
+        zero_shape[0] = 0
+        np.ndarray.resize(zero_shape, refcheck=False)
+
+
+class _ListLikeMixin:
+    """These methods are implemented in Cell, but not in Array or Struct."""
+
+    def __add__(self, other):
+        other = _MatlabTypeHelpers._to_cell(other)
+        return np.concatenate([self, other])
+
+    def __radd__(self, other):
+        other = _MatlabTypeHelpers._to_cell(other)
+        return np.concatenate([other, self])
+
+    def __iadd__(self, other):
+        return self.append(other)
+
+    def __mul__(self, value):
+        return np.concatenate([self] * value)
+
+    def __rmul__(self, value):
+        return np.concatenate([self] * value)
+
+    def __imul__(self, value):
+        length = len(self)
+        new_shape = list(np.shape(self))
+        new_shape[0] *= value
+        np.ndarray.resize(self, new_shape, refcheck=False)
+        for i in range(1, value):
+            self[i*length:(i+1)*length] = self[:length]
+
+    def count(self, value):
+        """Return number of occurrences of value."""
+        # FIXME:
+        #   This is tricky. Should a cell array behave like:
+        #   1. a list of list?
+        #   2. as if it was flattened?
+        #   3. do we use strict equality (same shape) or broacasted equality?
+        return sum([np.all(elem == value) for elem in self])
+
+    def index(self, value):
+        """Return first index of value."""
+        # FIXME:
+        #   This is also tricky for the same reasons.
+        for i, elem in enumerate(self):
+            if np.all(elem == value):
+                return i
+        raise ValueError(value, "is not in", type(self).__name__)
+
+    def insert(self, index, object):
+        """Insert object before index."""
+        if index < 0:
+            # +1 because we insert *after* the index if negative
+            index = len(self) + index + 1
+        if not isinstance(index, int):
+            raise TypeError("Only scalar elements can be inserted.")
+        new_shape = list(np.shape(self))
+        new_shape[0] += 1
+        np.ndarray.resize(self, new_shape, refcheck=False)
+        self[index+1:] = self[index:-1]
+        self[index] = object
+
+    def pop(self, index=-1):
+        """Remove and return item at index (default last)."""
+        if index < 0:
+            index = len(self) + index
+        # need to copy as its memory location will be overwritten by del
+        if not isinstance(index, int):
+            raise TypeError("Only scalar indices can be popped.")
+        value = np.copy(self[index])
+        del self[index]
+        return value
+
+    def remove(self, value):
+        """Remove first occurrence of value."""
+        new_shape = list(np.shape(self))
+        new_shape[0] -= 1
+        index = self.index(value)
+        del self[index]
+
+    def reverse(self):
+        """Reverse *IN PLACE*."""
+        self[:] = self[::-1]
+
+    def sort(self, *, key=None, reverse=False, kind="stable", axis=0):
+        """
+        Sort the list in ascending order and return None.
+
+        The sort is in-place (i.e. the list itself is modified) and stable
+        (i.e. the order of two equal elements is maintained).
+
+        If a key function is given, apply it once to each list item and sort
+        them, ascending or descending, according to their function values.
+
+        The reverse flag can be set to sort in descending order.
+
+        !!! note
+            We further expose options from `np.ndarray.sort`, which is used
+            under the hood. However, we use different defaults
+            (kind="stable" instead of "quicksort", axis=0 instead of -1).
+
+            If `key` is provided, we fallback to `list.sort`
+            (triggers a temporary copy).
+        """
+        if key:
+            aslist = list(np.moveaxis(self, axis, 0))
+            aslist.sort(key=key, reverse=reverse)
+            asarray = np.stack(aslist, axis=axis)
+            self[...] = asarray
+        else:
+            np.ndarray.sort(self, kind="stable", axis=axis)
+            if reverse:
+                self.reverse()
+
+    def __delitem__(self, index):
+        if index < 0:
+            index = len(self) + index
+        new_shape = list(np.shape(self))
+        new_shape[0] -= 1
+        self[index:-1] = self[index+1:]
+        np.ndarray.resize(self, new_shape, refcheck=False)
+
+
+class Array(_WrappedArray, _ListishMixin):
     """
     Numeric array, compatible with matlab arrays.
 
@@ -679,13 +774,6 @@ class Array(_WrappedArray):
                 raise TypeError("Array data type must be numeric")
             return obj
 
-        if (
-            hasattr(obj, "__len__") and
-            (len(obj) == 0 or all(isinstance(x, int) for x in obj))
-        ):
-            # Array([M, N, ...]) -> Array(M, N, ...)
-            return cls(*obj, **kwargs)
-
         # Array(array_like)
         obj = np.asanyarray(obj, **kwargs)
         if not issubclass(np.asarray(obj).dtype.type, np.number):
@@ -701,7 +789,7 @@ class Array(_WrappedArray):
         return self
 
 
-class Cell(_WrappedArray):
+class Cell(_WrappedArray, _ListLikeMixin):
     """
     Cell array, compatible with matlab cells.
 
@@ -742,7 +830,7 @@ class Cell(_WrappedArray):
     #   * Matlab uses an empty numeric array (`asnum([])`)
     #   * Or we could use a scalar numeric array with value zero (`asnum(0.)`)
     # I am using `asnum([])` for now to be consistent with Matlab.
-    _DEFAULT = classmethod(lambda cls: asnum([]))
+    _DEFAULT = classmethod(lambda _: _MatlabTypeHelpers._to_num([]))
 
     def _EMPTY(self, n):
         data = np.empty([n], dtype=object)
@@ -767,16 +855,25 @@ class Cell(_WrappedArray):
                     obj[i] = cls._DEFAULT()
             return obj
 
-        if (
-            hasattr(obj, "__len__") and
-            (len(obj) == 0 or all(isinstance(x, int) for x in obj))
-        ):
-            # Cell([M, N, ...]) -> Array(M, N, ...)
-            return cls(*obj, **kwargs)
-
         # Cell(cell_like)
         obj = np.asanyarray(obj, **kwargs)
         return np.ndarray.view(obj, Cell)
+
+    @classmethod
+    def from_iterable(cls, iterable):
+        """
+        Return a 1D `Cell` that contains the input elements.
+        """
+        # `Cell(tuple[cells])` may combine its input into a cell array.
+        # This helper ensures that we only create a cell at the first level,
+        # i.e., `cell(x, y, z)` is equivalent to matlab's `{x y z}`.
+        #
+        # We could also simply name is `c`, which matches R's `c(x, y, z)`,
+        # and avoids confusion between `Cell` and `cell`.
+        obj = Cell(len(iterable))
+        for i, elem in enumerate(iterable):
+            obj[i] = elem
+        return obj
 
     @property
     def as_cell(self):
@@ -831,30 +928,7 @@ class Struct(_WrappedArray):
     ```
     """
     # Same point as for cells (see comment)
-    _DEFAULT = classmethod(lambda cls: asnum([]))
-
-    # List of public attributes and methods from the ndarray class that we
-    # keep in Struct.
-    # Most of these have "external" version (e.g. `np.ndim(x)`), so could
-    # also be hidden if we suggest people use external functions.
-    _NDARRAY_ATTRS = (
-        "dtype",    # !! does not have `np.dtype`
-        "ndim",     # has `np.ndim`
-        "shape",    # has `np.shape`
-        "size",     # has `np.size`
-        "strides",  # !! does not have `np.strides`
-        "reshape",  # has `np.reshape`
-        "resize",   # !! does not have `np.resize`, can use `np.ndarray.resize`
-        "squeeze",  # has `np.squeeze`
-        "copy",     # has `np.copy`
-        "tolist",   # !! does not have `np.tolist`, can use `np.ndarray.tolist`
-        "flatten",  # !! does not have `np.flatten`, can use `np.ndarray.flatten`
-        "ravel",    # has `np.ravel`
-        "flat",     # !! does not have `np.flat`, can use `np.ndarray.flat` or `np.flatiter`
-        "T",        # !! does not have `np.T`
-        # MAYBE:
-        # view, item, itemset, swapaxes, transpose, data, dtype,
-    )
+    _DEFAULT = classmethod(lambda cls: _MatlabTypeHelpers._to_num([]))
 
     def _EMPTY(self, n):
         data = np.empty([n], dtype=dict)
@@ -862,39 +936,19 @@ class Struct(_WrappedArray):
             data[i] = {}
         return data
 
-    @classmethod
-    def _parse_args(cls, *args, **kwargs):
-        # split size / input / keyword arguments
-        args, shape, obj = list(args), [], None
-        while args and isinstance(args[0], int):
-            shape.append(args.pop(0))
-        if args and not shape:
-            obj = args.pop(0)
-        if args:
-            raise TypeError(
-                "Struct() takes 1 positional arguments but more were given"
-            )
-        if hasattr(obj, "__iter__") and not hasattr(obj, "__len__"):
-            # save iterator values in a list
-            obj = list(obj)
-        return shape, obj, kwargs
-
     def __new__(cls, *args, **kwargs):
+        kwargs["__has_dtype"] = False
+        kwargs["__has_order"] = False
         shape, obj, kwargs = cls._parse_args(*args, **kwargs)
 
         if obj is None:
             # Struct(M, N, ...)
             obj = super().__new__(cls, shape, dtype=dict)
             for index, _ in obj._iterall():
+                # NOTE: we use _iterall (not _iterindex) to cover
+                # the case of scalar (empty-shaped) struct.
                 np.ndarray.__setitem__(obj, index, dict(**kwargs))
             return obj
-
-        if (
-            hasattr(obj, "__len__") and not isinstance(obj, (dict, Struct))
-            and (len(obj) == 0 or all(isinstance(x, int) for x in obj))
-        ):
-            # Struct([M, N, ...]) -> Struct(M, N, ...)
-            return cls(*obj, **kwargs)
 
         # Struct([array_like of] dict or struct)
         obj = np.asanyarray(obj, dtype=dict)
@@ -902,7 +956,9 @@ class Struct(_WrappedArray):
         arr = np.ndarray.view(obj, np.ndarray)
 
         rebuild = False
-        for i in itertools.product(*(range(x) for x in arr.shape)):
+        for i, _ in obj._iterall():
+            # NOTE: we use _iterall (not _iterindex) to cover
+            # the case of scalar (empty-shaped) struct.
             if isinstance(arr[i], np.ndarray):
                 tmp = np.ndarray.view(arr[i], dict, np.ndarray)
                 if len(arr[i].shape) == 0:
@@ -914,7 +970,7 @@ class Struct(_WrappedArray):
         if rebuild:
             return cls(arr, **kwargs)
 
-        for i in itertools.product(*(range(x) for x in arr.shape)):
+        for i, _ in obj._iterall():
             if not isinstance(arr[i], dict):
                 raise TypeError("Cannot convert", obj, "to Struct.")
 
@@ -926,29 +982,13 @@ class Struct(_WrappedArray):
     def as_struct(self):
         return self
 
-    def _elem(self):
-        # In a Struct, single-element indexing returns a scalar array of
-        # dict (i.e., it's shape is an empty list []). This allows us to never
-        # expose the dictionary itself. However, we do sometimes need to access
-        # the dictionary, in which case we use this helper.
-        if len(self.shape) == 0:
-            flat = self.reshape([-1])
-            elem = np.ndarray.__getitem__(flat, 0)
-            return elem
-        raise ValueError("Should only be called on 'scalar struct arrays'.")
-
-    def _iterall(self):
-        # Make iterator return the underlying `dict`, not the struct wrapper.
-        for index, elem in super()._iterall():
-            yield index, elem._elem()
-
     def _asdict(self):
         # scalar struct -> return the underlying dictionary
         # otherwise     -> reverse array/dict order -> dict of cells of values
         if len(self.shape) == 0:
-            return self._elem()
+            return np.ndarray.item(self)
         return {
-            key: cell(*[
+            key: Cell.from_iterable([
                 elem.get(key, self._DEFAULT()) for _, elem in self._iterall()
             ]).reshape(self.shape)
             for key in self._allkeys()
@@ -971,16 +1011,16 @@ class Struct(_WrappedArray):
 
     def setdefault(self, key, value):
         for _, elem in self._iterall():
-            elem.setdefault(key, asmatlab(value))
+            elem.setdefault(key, _MatlabTypeHelpers._from_any(value))
 
     def update(self, other):
         if isinstance(other, Struct):
             other = np.broadcast_to(self)
             for i, elem in self._iterall():
-                elem.update(asmatlab(other[i]))
+                elem.update(_MatlabTypeHelpers._from_any(other[i]))
         else:
             for _, elem in self._iterall():
-                elem.update(asmatlab(other))
+                elem.update(_MatlabTypeHelpers._from_any(other))
 
     def __getitem__(self, index):
         if isinstance(index, str):
@@ -988,15 +1028,19 @@ class Struct(_WrappedArray):
         else:
             obj = super().__getitem__(index)
             if not isinstance(obj, Struct):
+                # We've indexed a single element, but we do not want
+                # to expose the underlying dictionary. Instead,
+                # we return an empty-sized view of the element, which
+                # is still of type `Struct`.
                 if not isinstance(index, tuple):
                     index = (index,)
                 index += (None,)
                 obj = super().__getitem__(index)
-                obj = obj.reshape([])
+                obj = np.reshape(obj, [])
             return obj
 
     def __setitem__(self, index, value):
-        value = asmatlab(value)
+        value = _MatlabTypeHelpers._from_any(value)
         if isinstance(index, str):
             setattr(self, index, value)
         else:
@@ -1004,11 +1048,7 @@ class Struct(_WrappedArray):
 
     def __getattribute__(self, key):
         asnumpy = np.asarray(self)
-        if (
-            hasattr(asnumpy, key) and
-            key[:1] != "_" and
-            key not in type(self)._NDARRAY_ATTRS
-        ):
+        if hasattr(asnumpy, key) and key[:1] != "_":
             raise AttributeError("")
         return super().__getattribute__(key)
 
@@ -1036,19 +1076,19 @@ class Struct(_WrappedArray):
                     raise ValueError("Cannot broadcast.")
                 value = np.asarray(value)
 
-            self._elem()[key] = asmatlab(value)
+            np.ndarray.item(self)[key] = _MatlabTypeHelpers._from_any(value)
 
         elif isinstance(value, unpack):
             # Each element in the struct array is matched with an element in
             # the "unpack" array.
             value = np.broadcast_to(value, self.shape)
             for i, elem in self._iterall():
-                elem[key] = asmatlab(value[i])
+                elem[key] = _MatlabTypeHelpers._from_any(value[i])
 
         else:
             # Assign the same value to all elements in the struct array.
             for _, elem in self._iterall():
-                elem[key] = asmatlab(value)
+                elem[key] = _MatlabTypeHelpers._from_any(value)
 
     def __delattr__(self, key):
         if key not in self._allkeys():
@@ -1074,7 +1114,7 @@ class Struct(_WrappedArray):
                 if isinstance(value, _MatlabArray):
                     elem[key] = value._finalize()
                 else:
-                    elem[key] = asmatlab(elem[key])
+                    elem[key] = _MatlabTypeHelpers._from_any(elem[key])
         return self
 
     def _as_matlab_object(self):
@@ -1082,7 +1122,7 @@ class Struct(_WrappedArray):
         return dict(
             type__='structarray',
             size__=np.array([[*self.shape]]),
-            data__=_as_matlab_object(array)
+            data__=_MatlabTypeHelpers._to_runtime(array)
         )
 
     @staticmethod
@@ -1100,10 +1140,10 @@ class Struct(_WrappedArray):
                 f'  data={data}\n'
                 f'  objdict={objdict}'
             )
-        return asmatlab(obj)
+        return _MatlabTypeHelpers._from_any(obj)
 
 
-class MatlabClassWrapper:
+class MatlabClassWrapper(_MatlabClass):
     _subclasses = dict()
 
     def _as_matlab_object(self):
@@ -1124,7 +1164,7 @@ class MatlabClassWrapper:
         super().__init_subclass__()
         if hasattr(cls, 'subsref'):
             cls.__getitem__ = MatlabClassWrapper.__getitem
-            cls.__call__    = MatlabClassWrapper.__call
+            cls.__call__ = MatlabClassWrapper.__call
 
         if hasattr(cls, 'subsasgn'):
             cls.__setitem__ = MatlabClassWrapper.__setitem
@@ -1134,7 +1174,9 @@ class MatlabClassWrapper:
     @staticmethod
     def _from_matlab_object(objdict):
         if objdict['class__'] in MatlabClassWrapper._subclasses.keys():
-            obj = MatlabClassWrapper._subclasses[objdict['class__']](_objdict=objdict)
+            obj = MatlabClassWrapper._subclasses[objdict['class__']](
+                _objdict=objdict
+            )
         else:
             warnings.warn(f'Unknown Matlab class type: {objdict["class__"]}')
             obj = MatlabClassWrapper(_objdict=objdict)
@@ -1143,49 +1185,52 @@ class MatlabClassWrapper:
     def __getattr(self, key):
         try:
             return self.subsref({'type': '.', 'subs': key})
-        except:
+        except Exception:
             raise AttributeError(key)
 
     def __getitem(self, ind):
         index = self._process_index(ind)
-
         try:
             return self.subsref({'type': '()', 'subs': index})
-        except:
-            try:
-                return self.subsref({'type': '{}', 'subs': index})
-            except:
-                raise IndexError(index)
+        except Exception:
+            ...
+        try:
+            return self.subsref({'type': '{}', 'subs': index})
+        except Exception:
+            raise IndexError(index)
 
     def __setitem(self, ind, value):
         index = self._process_index(ind)
-
         try:
             return self.subsasgn({'type': '()', 'subs': index}, value)
-        except:
-            try:
-                return self.subsasgn({'type': '{}', 'subs': index}, value)
-            except:
-                raise IndexError(index)
+        except Exception:
+            ...
+        try:
+            return self.subsasgn({'type': '{}', 'subs': index}, value)
+        except Exception:
+            raise IndexError(index)
 
     def __call(self, *index):
         index = self._process_index(index)
         try:
             return self.subsref({'type': '{}', 'subs': index})
-        except:
+        except Exception:
             raise IndexError(index)
 
     def _process_index(self, ind, k=1, n=1):
         try:
-            return tuple(self._process_index(i, k+1, len(ind))
-                    for k, i in enumerate(ind))
+            return tuple(
+                self._process_index(i, k+1, len(ind))
+                for k, i in enumerate(ind)
+            )
         except TypeError:
             pass
 
         if not hasattr(self, '__endfn'):
             self.__endfn = Runtime.call('str2func', 'end')
 
-        end = lambda: Runtime.call(self.__endfn, self._as_matlab_object(), k, n)
+        def end():
+            return Runtime.call(self.__endfn, self._as_matlab_object(), k, n)
 
         if isinstance(ind, int):
             if ind >= 0:
@@ -1227,127 +1272,3 @@ class MatlabClassWrapper:
             index = ind
 
         return index
-
-
-class OldStruct(dict):
-    """emulates struct with a dot.notation access to dictionary attributes"""
-    __setattr__ = dict.__setitem__
-    __delattr__ = dict.__delitem__
-
-    def __getattr__(self, item):
-        if item.startswith('__'):
-            raise AttributeError
-        else:
-            return dict.__getitem__(self, item)
-
-
-class OldCell(list):
-    """emulates matlab's cell"""
-    def __init__(self, m, n):
-        super().__init__([[] for j in range(n)] for i in range(m))
-
-    def __getitem__(self, index):
-        if isinstance(index, tuple):
-            i, j = index
-            return self[i][j]
-        else:
-            return super().__getitem__(index)
-
-    def __setitem__(self, index, value):
-        if isinstance(index, tuple):
-            i, j = index
-            xi = self[i]
-            xi[j] = value
-            self[i] = xi
-        else:
-            super().__setitem__(index, value)
-
-
-class OldStructArray:
-    def __init__(self, *structs):
-        if len(structs) == 1:
-            if isinstance(structs[0], OldStruct):
-                structs = [structs[0]]
-            else:
-                if all(map(isinstance, structs[0],itertools.repeat(int))):
-                    size = structs[0]
-                    structs = np.fromiter(
-                        map(
-                            lambda i: dict(), range(int(np.prod(size)))),
-                        dtype=object).reshape(size)
-                elif all(map(isinstance, structs[0], itertools.repeat(dict))):
-                    structs = structs[0]
-                elif isinstance(structs[0], np.ndarray) \
-                        and all(map(isinstance, structs[0].flat, itertools.repeat(dict))):
-                    structs = structs[0]
-                else:
-                    raise TypeError(f'arguments not understood: {structs}')
-
-        if isinstance(structs, np.ndarray):
-            structs = np.fromiter(
-                map(dict, structs.flat),
-                dtype=object).reshape(structs.shape)
-        else:
-            structs = np.fromiter(
-                map(dict, structs),
-                dtype=object)
-
-        if len(structs.shape) == 1:
-            structs = structs[None, :]
-
-        self._structs = structs
-        self._objdict = dict(
-            type__='structarray',
-            size__=np.array([[*structs.shape]]),
-            data__=[]
-        )
-
-    def __getitem__(self, index):
-        try:
-            len(index)
-        except TypeError:
-            index = (0, index)
-
-        item = self._structs[index]
-        if isinstance(item, dict):
-            item = OldStruct(item)
-        return item
-
-    def keys(self):
-        return set(
-            itertools.chain.from_iterable(
-                map(dict.keys, self._structs.flat)))
-
-    def _as_matlab_object(self):
-        _ = [*map(
-            lambda arg: arg[0].__setitem__(arg[1], np.array([])),
-            filter(
-                lambda arg: arg[1] not in arg[0].keys(),
-                itertools.product(self._structs.flat, self.keys())
-            )
-        )]
-        objdict = self._objdict
-        objdict['data__'] = np.reshape(self._structs, (-1,), order='F').tolist()
-        return objdict
-
-    def __repr__(self):
-        return self._structs \
-            .__repr__() \
-            .replace('array([], dtype=float64)', 'empty') \
-            .replace('matlab.double([])', 'empty') \
-            .replace('array(', 'Struct(\n  data=') \
-            .replace(', dtype=object', f',\n  keys={self.keys()}')
-
-    @staticmethod
-    def _from_matlab_object(objdict):
-        if objdict['type__'] != 'structarray':
-            raise TypeError('objdict is not a structarray')
-        size = np.array(objdict['size__'], dtype=np.uint32).ravel()
-        data = np.array(objdict['data__'], dtype=object)
-        data = data.reshape(size)
-        try:
-            obj = OldStructArray(data)
-        except Exception as e:
-            raise RuntimeError(f'Failed to construct Struct data:\n  data={data}\n  objdict={objdict}')
-
-        return obj
