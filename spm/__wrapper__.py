@@ -511,14 +511,14 @@ class _WrappedArray(np.ndarray, _MatlabArray):
 
     def _iterindex(self):
         """Iterator across all multi-dimensional indices."""
-        return itertools.product(*(range(x) for x in self.shape))
+        return itertools.product(*(range(x) for x in np.shape(self)))
 
     def _iterall(self):
         """
         Iterator across all elements. Yields (index, element).
         If object has an empty shape, return (Ellipsis, item()).
         """
-        if len(self.shape) == 0:
+        if np.ndim(self) == 0:
             yield (Ellipsis, np.ndarray.item(self))
             return
         for index in self._iterindex():
@@ -558,7 +558,7 @@ class _WrappedArray(np.ndarray, _MatlabArray):
         if not isinstance(index, tuple):
             index = (index,)
         index, new_index = list(index), []
-        shape, new_shape = list(self.shape), []
+        shape, new_shape = list(np.shape(self)), []
         axis = -1
         while index:
             next_index = index.pop(0)
@@ -579,7 +579,7 @@ class _WrappedArray(np.ndarray, _MatlabArray):
                 )
             new_index.append(next_index)
             new_shape.append(next_shape)
-        view_index = tuple(slice(x, None) for x in self.shape)
+        view_index = tuple(slice(x, None) for x in np.shape(self))
         np.ndarray.resize(self, new_shape, refcheck=False)
         view = self[view_index]
         new_data = self._EMPTY(view.size)
@@ -985,12 +985,12 @@ class Struct(_WrappedArray):
     def _asdict(self):
         # scalar struct -> return the underlying dictionary
         # otherwise     -> reverse array/dict order -> dict of cells of values
-        if len(self.shape) == 0:
+        if np.ndim(self) == 0:
             return np.ndarray.item(self)
         return {
             key: Cell.from_iterable([
                 elem.get(key, self._DEFAULT()) for _, elem in self._iterall()
-            ]).reshape(self.shape)
+            ]).reshape(np.shape(self))
             for key in self._allkeys()
         }
 
@@ -1069,7 +1069,7 @@ class Struct(_WrappedArray):
         return self._asdict()[key]
 
     def __setattr__(self, key, value):
-        if len(self.shape) == 0:
+        if np.ndim(self) == 0:
             # Scalar array: assign value to the field
             if isinstance(value, unpack):
                 if len(value.shape) > 0:
@@ -1081,7 +1081,7 @@ class Struct(_WrappedArray):
         elif isinstance(value, unpack):
             # Each element in the struct array is matched with an element in
             # the "unpack" array.
-            value = np.broadcast_to(value, self.shape)
+            value = np.broadcast_to(value, np.shape(self))
             for i, elem in self._iterall():
                 elem[key] = _MatlabTypeHelpers._from_any(value[i])
 
@@ -1121,7 +1121,7 @@ class Struct(_WrappedArray):
         array = np.reshape(np.asarray(self), [-1], order="F")
         return dict(
             type__='structarray',
-            size__=np.array([[*self.shape]]),
+            size__=np.array([[*np.shape(self)]]),
             data__=_MatlabTypeHelpers._to_runtime(array)
         )
 
