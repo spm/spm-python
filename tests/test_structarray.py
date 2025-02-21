@@ -36,26 +36,26 @@ class StructArrayTestCase(unittest.TestCase):
 
     def test_as_matlab_object(self):
         sa = Struct(self.array2d)
-        objdict = sa._as_matlab_object()
+        objdict = sa._as_runtime()
         self.assertEqual(objdict['type__'], 'structarray')
         self.assertEqual(objdict['size__'].reshape(-1).tolist(), list(self.array2d.shape))
         self.assertEqual(len(objdict['data__']), self.array2d.size)
 
     def test_from_matlab_object(self):
         sa = Struct(self.array2d)
-        objdict = sa._as_matlab_object()
-        reconstructed_sa = Struct._from_matlab_object(objdict)
+        objdict = sa._as_runtime()
+        reconstructed_sa = Struct._from_runtime(objdict)
         self.assertEqual(reconstructed_sa.shape, sa.shape)
         self.assertEqual(reconstructed_sa.keys(), sa.keys())
 
     def test_with_struct(self):
         sa = Struct(list(map(Struct, self.array1d)))
-        objdict = sa._as_matlab_object()
-        reconstructed_sa = Struct._from_matlab_object(objdict)
+        objdict = sa._as_runtime()
+        reconstructed_sa = Struct._from_runtime(objdict)
 
     def test_flat_shape(self):
         sa = Struct(self.array2d)
-        objdict = sa._as_matlab_object()
+        objdict = sa._as_runtime()
         self.assertEqual(len(objdict['data__']), 4)
         self.assertEqual(objdict['data__'][0]['a'], self.struct1['a'])
         self.assertEqual(objdict['data__'][1]['a'], self.struct3['a'])

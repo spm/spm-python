@@ -10,8 +10,8 @@ orig_runtime_call = Runtime.call
 def mock_runtime_call(f, *args, **kwargs):
     if f == 'TestClass':
         objdict = {
-            'type__': 'object', 
-            'class__': 'TestClass', 
+            'type__': 'object',
+            'class__': 'TestClass',
             'data__': kwargs
         }
         return Runtime._process_argout(objdict)
@@ -61,7 +61,7 @@ class TestMatlabClassWrapper(unittest.TestCase):
 
     def test_from_matlab_object(self):
         objdict = {'class__': 'TestClass', 'data__': {'value':[1, 2, 3]}}
-        obj = MatlabClassWrapper._from_matlab_object(objdict)
+        obj = MatlabClassWrapper._from_runtime(objdict)
         self.assertIsInstance(obj, self.TestClass)
         self.assertEqual(obj._objdict['data__']['value'], [1, 2, 3])
 
@@ -69,7 +69,7 @@ class TestMatlabClassWrapper(unittest.TestCase):
         objdict = {'class__': 'UnknownClass', 'data__': {'value': [1, 2, 3]}}
         with warnings.catch_warnings(record=True) as w:
             warnings.simplefilter("always")
-            obj = MatlabClassWrapper._from_matlab_object(objdict)
+            obj = MatlabClassWrapper._from_runtime(objdict)
             self.assertEqual(len(w), 1)
             self.assertEqual(str(w[0].message), 'Unknown Matlab class type: UnknownClass')
         self.assertIsInstance(obj, MatlabClassWrapper)
@@ -90,7 +90,7 @@ class TestMatlabClassWrapper(unittest.TestCase):
 
     def test_as_matlab_object(self):
         obj = self.TestClass(value=[1, 2, 3])
-        objdict = obj._as_matlab_object()
+        objdict = obj._as_runtime()
         self.assertEqual(objdict['class__'], 'TestClass')
         self.assertEqual(objdict['data__']['value'], [1, 2, 3])
 

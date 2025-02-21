@@ -25,9 +25,24 @@ import numpy as np
 # ----------
 
 
+def base(array):
+    """Equivalent to `array.base`."""
+    return np.ndarray.view(array, np.ndarray).base
+
+
+def data(array):
+    """Equivalent to `array.data`."""
+    return np.ndarray.view(array, np.ndarray).data
+
+
 def dtype(array):
     """Equivalent to `array.dtype`."""
     return np.ndarray.view(array, np.ndarray).dtype
+
+
+def flags(array):
+    """Equivalent to `array.flags`."""
+    return np.ndarray.view(array, np.ndarray).flags
 
 
 def flat(array):
@@ -46,9 +61,30 @@ def T(array):
     return np.ndarray.view(array, np.ndarray).T.view(kls)
 
 
+def mT(array):
+    """Equivalent to `array.mT`."""
+    kls = type(array)
+    return np.ndarray.view(array, np.ndarray).mT.view(kls)
+
+
 # -------
 # methods
 # -------
+
+
+def dump(array, file):
+    """Equivalent to `array.dump(file)`."""
+    return np.ndarray.dump(array, file)
+
+
+def dumps(array, file):
+    """Equivalent to `array.dumps(file)`."""
+    return np.ndarray.dumps(array, file)
+
+
+def fill(array, value):
+    """Equivalent to `array.fill(value)`."""
+    return np.ndarray.fill(array, value)
 
 
 def flatten(array):
