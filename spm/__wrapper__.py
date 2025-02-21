@@ -128,7 +128,6 @@ class unpack:
         return s
 
 
-
 # ----------------------------------------------------------------------
 # Types
 # ----------------------------------------------------------------------
@@ -164,7 +163,7 @@ class MatlabType(object):
                     # and the array shape in size__.
                     return Struct._from_runtime(other)
 
-                if type__ == "cell":
+                elif type__ == "cell":
                     # Matlab returns a list of dictionaries in data__
                     # and the array shape in size__.
                     return Cell._from_runtime(other)
@@ -777,7 +776,7 @@ class _ListMixin(_ListishMixin, MutableSequence):
             asarray = np.stack(aslist, axis=axis)
             self[...] = asarray
         else:
-            np.ndarray.sort(self, kind="stable", axis=axis)
+            np.ndarray.sort(self, kind=kind, axis=axis)
             if reverse:
                 self.reverse()
 
@@ -1050,13 +1049,13 @@ class _DictMixin(MutableMapping):
             self._parent = parent
 
         def __len__(self):
-            return len(self._parent._asdict().values())
+            return len(self._parent.as_dict().values())
 
         def __iter__(self):
-            return iter(self._parent._asdict().values())
+            return iter(self._parent.as_dict().values())
 
         def __contains__(self, value):
-            return value in self._parent._asdict().values()
+            return value in self._parent.as_dict().values()
 
     class ItemsView(ItemsView):
 
@@ -1064,13 +1063,13 @@ class _DictMixin(MutableMapping):
             self._parent = parent
 
         def __len__(self):
-            return len(self._parent._asdict().items())
+            return len(self._parent.as_dict().items())
 
         def __iter__(self):
-            return iter(self._parent._asdict().items())
+            return iter(self._parent.as_dict().items())
 
         def __contains__(self, item):
-            return item in self._parent._asdict().items()
+            return item in self._parent.as_dict().items()
 
     # --- magic --------------------------------------------------------
 
@@ -1316,13 +1315,11 @@ class Struct(_DictMixin, _WrappedArray):
         return MatlabType.from_any(obj)
 
     def _as_runtime(self) -> dict:
-        array = np.ndarray.view(self, np.ndarray)
-        array = np.reshape(array, [-1], order="F")
-        return dict(
-            type__='structarray',
-            size__=np.array([[*np.shape(self)]]),
-            data__=MatlabType._to_runtime(array)
-        )
+        size = np.array([[*np.shape(self)]])
+        data = np.ndarray.view(self, np.ndarray)
+        data = np.reshape(data, [-1], order="F")
+        data = MatlabType._to_runtime(data)
+        return dict(type__='structarray', size__=size, data__=data)
 
     @property
     def as_struct(self) -> "Struct":
