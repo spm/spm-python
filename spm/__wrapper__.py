@@ -116,7 +116,8 @@ if not _NP_HAS_COPY:
         if (
             out is not None and
             isinstance(inp, np.ndarray) and
-            out.data != inp.data
+            np.ndarray.view(out, np.ndarray).data !=
+            np.ndarray.view(inp, np.ndarray).data
         ):
             if copy:
                 out = np.copy(out)
