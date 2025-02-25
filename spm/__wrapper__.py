@@ -199,15 +199,12 @@ class MatlabType(object):
             else:
                 return Struct.from_any(other)
 
-        if isinstance(other, (tuple, set)):
+        if isinstance(other, (list, tuple, set)):
             # nested tuples are cells of cells, not cell arrays
             return Cell.from_any(other)
 
-        if isinstance(other, (list, np.ndarray, int, float, complex, bool)):
-            try:
-                return Array.from_any(other)
-            except (ValueError, TypeError):
-                return Cell.from_any(other)
+        if isinstance(other, (np.ndarray, int, float, complex, bool)):
+            return Array.from_any(other)
 
         if isinstance(other, str):
             return other
@@ -602,7 +599,8 @@ class WrappedArray(np.ndarray, AnyWrappedArray):
 
     def _finalize(self):
         """Transform all DelayedArrays into concrete arrays."""
-        opt = dict(flags=['refs_ok'], op_flags=['readwrite', 'no_broadcast'])
+        opt = dict(flags=['refs_ok', 'zerosize_ok'],
+                   op_flags=['readwrite', 'no_broadcast'])
         with np.nditer(self, **opt) as iter:
             for elem in iter:
                 item = elem.item()
@@ -1273,7 +1271,7 @@ class Cell(_ListMixin, WrappedArray):
             raise TypeError('objdict is not a cell')
         size = np.array(objdict['size__'], dtype=np.uint32).ravel()
         data = np.array(objdict['data__'], dtype=object)
-        data = data.reshape(size)
+        data = data.reshape(size[::-1]).transpose()
         try:
             obj = data.view(cls)
         except Exception:
@@ -1311,7 +1309,8 @@ class Cell(_ListMixin, WrappedArray):
             # Scalar cells are forbidden
             shape = [0]
         arr = np.ndarray(shape, **kwargs)
-        opt = dict(flags=['refs_ok'], op_flags=['write_only', 'no_broadcast'])
+        opt = dict(flags=['refs_ok', 'zerosize_ok'],
+                   op_flags=['writeonly', 'no_broadcast'])
         with np.nditer(arr, **opt) as iter:
             for elem in iter:
                 elem[()] = cls._DEFAULT()
@@ -1367,13 +1366,16 @@ class Cell(_ListMixin, WrappedArray):
             def asrecursive(other):
                 if isinstance(other, np.ndarray):
                     return other
+                elif isinstance(other, (str, bytes)):
+                    return other
                 elif hasattr(other, "__iter__"):
                     other = list(map(asrecursive, other))
                     tmp = np.ndarray(len(other), dtype=object)
                     for i, x in enumerate(other):
                         tmp[i] = x
                     other = tmp
-                    return np.ndarray.view(other, cls)
+                    obj = np.ndarray.view(other, cls)
+                    return obj
                 else:
                     return other
 
@@ -1394,7 +1396,8 @@ class Cell(_ListMixin, WrappedArray):
         other = np.ndarray.view(other, cls)
 
         # recurse
-        opt = dict(flags=['refs_ok'], op_flags=['readwrite', 'no_broadcast'])
+        opt = dict(flags=['refs_ok', 'zerosize_ok'],
+                   op_flags=['readwrite', 'no_broadcast'])
         with np.nditer(other, **opt) as iter:
             for elem in iter:
                 elem[()] = MatlabType.from_any(elem.item())
@@ -1412,7 +1415,8 @@ class Cell(_ListMixin, WrappedArray):
         # them to lists, and recurse.
         rebuild = False
         arr = np.asarray(arr)
-        opt = dict(flags=['refs_ok'], op_flags=['readwrite', 'no_broadcast'])
+        opt = dict(flags=['refs_ok', 'zerosize_ok'],
+                   op_flags=['readwrite', 'no_broadcast'])
         with np.nditer(arr, **opt) as iter:
             for elem in iter:
                 item = elem.item()
@@ -1593,7 +1597,7 @@ class _DictMixin(MutableMapping):
         #   Otherwise the default value is [], as per matlab.
         isnewkey = key not in self.keys()
         arr = np.ndarray.view(self, np.ndarray)
-        opt = dict(flags=['refs_ok'], op_flags=['readonly'])
+        opt = dict(flags=['refs_ok', 'zerosize_ok'], op_flags=['readonly'])
         with np.nditer(arr, **opt) as iter:
             for elem in iter:
                 elem.item().setdefault(
@@ -1617,7 +1621,8 @@ class _DictMixin(MutableMapping):
             # Each element in the struct array is matched with an element
             # in the "unpack" array.
             value = value.broadcast_to_struct(self)
-            opt = dict(flags=['refs_ok', 'multi_index'], op_flags=['readonly'])
+            opt = dict(flags=['refs_ok', 'zerosize_ok', 'multi_index'],
+                       op_flags=['readonly'])
             with np.nditer(arr, **opt) as iter:
                 for elem in iter:
                     val = value[iter.multi_index]
@@ -1627,7 +1632,7 @@ class _DictMixin(MutableMapping):
 
         else:
             # Assign the same value to all elements in the struct array.
-            opt = dict(flags=['refs_ok'], op_flags=['readonly'])
+            opt = dict(flags=['refs_ok', 'zerosize_ok'], op_flags=['readonly'])
             value = MatlabType.from_any(value)
             with np.nditer(arr, **opt) as iter:
                 for elem in iter:
@@ -1637,7 +1642,7 @@ class _DictMixin(MutableMapping):
         if key not in self._allkeys():
             raise KeyError(key)
         arr = np.ndarray.view(self, np.ndarray)
-        opt = dict(flags=['refs_ok'], op_flags=['readonly'])
+        opt = dict(flags=['refs_ok', 'zerosize_ok'], op_flags=['readonly'])
         with np.nditer(arr, **opt) as iter:
             for elem in iter:
                 del elem.item()[key]
@@ -1655,7 +1660,7 @@ class _DictMixin(MutableMapping):
 
     def setdefault(self, key, value):
         arr = np.ndarray.view(self, np.ndarray)
-        opt = dict(flags=['refs_ok'], op_flags=['readonly'])
+        opt = dict(flags=['refs_ok', 'zerosize_ok'], op_flags=['readonly'])
         with np.nditer(arr, **opt) as iter:
             for elem in iter:
                 item = elem.item()
@@ -1667,7 +1672,8 @@ class _DictMixin(MutableMapping):
         other = np.broadcast_to(other, self.shape)
 
         arr = np.ndarray.view(self, np.ndarray)
-        opt = dict(flags=['refs_ok', 'multi_index'], op_flags=['readonly'])
+        opt = dict(flags=['refs_ok', 'zerosize_ok', 'multi_index'],
+                   op_flags=['readonly'])
         with np.nditer(arr, **opt) as iter:
             for elem in iter:
                 other_elem = other[iter.multi_index]
@@ -1844,7 +1850,7 @@ class Struct(_DictMixin, WrappedArray):
         """
         kwargs["dtype"] = dict
         arr = np.ndarray(shape, **kwargs)
-        flags = dict(flags=['refs_ok'], op_flags=['readwrite'])
+        flags = dict(flags=['refs_ok', 'zerosize_ok'], op_flags=['readwrite'])
         with np.nditer(arr, **flags) as iter:
             for elem in iter:
                 elem[()] = dict()
@@ -1892,7 +1898,7 @@ class Struct(_DictMixin, WrappedArray):
         # convert to array[dict]
         other = np.asarray(other, **kwargs)
         other = cls._unroll_build(other)
-        opt = dict(flags=['refs_ok'], op_flags=['readonly'])
+        opt = dict(flags=['refs_ok', 'zerosize_ok'], op_flags=['readonly'])
         with np.nditer(other, **opt) as iter:
             if not all(isinstance(elem.item(), dict) for elem in iter):
                 raise TypeError("Not an array of dictionaries")
@@ -1902,7 +1908,7 @@ class Struct(_DictMixin, WrappedArray):
             other = _copy_if_needed(other, inp, copy)
 
         # nested from_any
-        opt = dict(flags=['refs_ok'], op_flags=['readonly'])
+        opt = dict(flags=['refs_ok', 'zerosize_ok'], op_flags=['readonly'])
         with np.nditer(other, **opt) as iter:
             for elem in iter:
                 item: dict = elem.item()
@@ -1929,7 +1935,7 @@ class Struct(_DictMixin, WrappedArray):
         # them to lists, and recurse.
         rebuild = False
         arr = np.ndarray.view(arr, np.ndarray)
-        flags = dict(flags=['refs_ok'], op_flags=['readwrite'])
+        flags = dict(flags=['refs_ok', 'zerosize_ok'], op_flags=['readwrite'])
         with np.nditer(arr, **flags) as iter:
             for elem in iter:
                 item = elem.item()
@@ -1962,7 +1968,7 @@ class Struct(_DictMixin, WrappedArray):
         if np.ndim(self) == 0:
             return np.ndarray.item(self)
         arr = np.ndarray.view(self, np.ndarray)
-        opt = dict(flags=['refs_ok'], op_flags=['readwrite'])
+        opt = dict(flags=['refs_ok', 'zerosize_ok'], op_flags=['readwrite'])
         with np.nditer(arr, **opt) as iter:
             return {
                 key: Cell.from_any([
@@ -1976,7 +1982,7 @@ class Struct(_DictMixin, WrappedArray):
         # Keys are ordered by (1) element (2) within-element order
         mock = {}
         arr = np.ndarray.view(self, np.ndarray)
-        opt = dict(flags=['refs_ok'], op_flags=['readwrite'])
+        opt = dict(flags=['refs_ok', 'zerosize_ok'], op_flags=['readwrite'])
         with np.nditer(arr, **opt) as iter:
             for elem in iter:
                 mock.update({key: None for key in elem.item().keys()})
@@ -2065,7 +2071,7 @@ class Struct(_DictMixin, WrappedArray):
 
     def _finalize(self):
         arr = np.ndarray.view(self, np.ndarray)
-        opt = dict(flags=['refs_ok'], op_flags=['readwrite'])
+        opt = dict(flags=['refs_ok', 'zerosize_ok'], op_flags=['readwrite'])
         with np.nditer(arr, **opt) as iter:
             for elem in iter:
                 item = elem.item()
