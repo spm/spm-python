@@ -365,8 +365,13 @@ class DelayedArray(AnyMatlabArray):
 
     @property
     def as_num(self) -> "Array":
+        return self.__array__()
+
+    as_default = as_num
+
+    def __array__(self, dtype=None, copy=None):
         self._check_finalized()
-        self._array = Array()
+        self._array = Array.from_any([], dtype=dtype)
         if self._parent is not None:
             self._parent._finalize()
         return self._array
@@ -499,7 +504,7 @@ class WrappedArray(np.ndarray, AnyWrappedArray):
 
     # Value used to fill-in a newly allocated array.
     # Must be implemented in Array/Cell/Struct.
-    def _EMPTY(self, n):
+    def _EMPTY(self, n: list):
         raise NotImplementedError
 
     @property
@@ -520,6 +525,10 @@ class WrappedArray(np.ndarray, AnyWrappedArray):
             f"Cannot interpret a {type(self).__name__} as a struct"
         )
 
+    @property
+    def as_default(self):
+        return self
+
     def __str__(self):
         fmt = {"all": str}  # use str instead of repr for items
         return np.array2string(self, separator=", ", formatter=fmt)
@@ -534,8 +543,18 @@ class WrappedArray(np.ndarray, AnyWrappedArray):
             suf
         )
 
+    def __iter__(self):
+        # FIXME:
+        #   ndarray.__iter__ seems to call __getattr__, which leads
+        #   to infinite resizing.
+        #   This overload seems to fix it, but may not be computationally
+        #   optimal.
+        for i in range(len(self)):
+            yield self[i]
+
     def __getitem__(self, index):
         """Resize array if needed, then fallback to np.ndarray indexing."""
+        # return super().__getitem__(index)
         try:
             return super().__getitem__(index)
         except IndexError:
@@ -550,6 +569,72 @@ class WrappedArray(np.ndarray, AnyWrappedArray):
         except IndexError:
             self._resize_for_index(index)
             return super().__setitem__(index, value)
+
+    def __delitem__(self, index):
+        if isinstance(index, tuple):
+            raise TypeError(
+                "Multidimensional indices are not supported in `del`."
+            )
+
+        # --- list: delete sequentially, from tail to head -------------
+        if hasattr(index, "__iter__"):
+            index = (len(self) + i if i < 0 else i for i in index)
+            index = sorted(index, reverse=True)
+            for i in index:
+                del self[i]
+
+        # --- slice: skip the entire slice, if possible ----------------
+        elif isinstance(index, slice):
+            start, stop, step = index.start, index.stop, index.step
+
+            # --- let's make the slice parameters a bit more useful ---
+            step = step or 1
+            # compute true start
+            if start is None:
+                if step < 0:
+                    start = len(self) - 1
+                else:
+                    start = 0
+            if start < 0:
+                start = len(self) + start
+            # compute stop in terms of "positive indices"
+            # (where -1 really means -1, and not n-1)
+            if stop is not None:
+                if stop < 0:
+                    stop = len(self) + stop
+            else:
+                stop = len(self) if step > 0 else -1
+            stop = min(stop, len(self)) if step > 0 else max(stop, -1)
+            # align stop with steps
+            stop = start + int(np.ceil(abs(stop - start) / abs(step))) * step
+            # compute true inclusive stop
+            stop_inclusive = stop - step
+            # ensure step is positive
+            if step < 0:
+                start, stop_inclusive, step = stop_inclusive, start, abs(step)
+
+            # --- if non consecutive, fallback to sequential ---
+            if step != 1:
+                index = range(start, stop+1, step)
+                del self[index]
+
+            # --- otherwise, skip the entire slice ---
+            else:
+                nb_del = 1 + stop_inclusive - start
+                new_shape = list(np.shape(self))
+                new_shape[0] -= nb_del
+                self[start:-nb_del] = self[stop_inclusive:]
+                np.ndarray.resize(self, new_shape, refcheck=False)
+
+        # --- int: skip a single element -------------------------------
+        else:
+            index = int(index)
+            if index < 0:
+                index = len(self) + index
+            new_shape = list(np.shape(self))
+            new_shape[0] -= 1
+            self[index:-1] = self[index+1:]
+            np.ndarray.resize(self, new_shape, refcheck=False)
 
     def _resize_for_index(self, index):
         """
@@ -589,13 +674,13 @@ class WrappedArray(np.ndarray, AnyWrappedArray):
                 )
             new_index.append(next_index)
             new_shape.append(next_shape)
+        new_shape = new_shape + shape
         view_index = tuple(slice(x, None) for x in np.shape(self))
         np.ndarray.resize(self, new_shape, refcheck=False)
-        view = self[view_index]
-        new_data = self._EMPTY(view.size)
-        if isinstance(new_data, np.ndarray):
-            new_data = new_data.reshape(view.shape)
-        self[view_index] = new_data
+        arr = np.ndarray.view(self, np.ndarray)
+        view_shape = arr[view_index].shape
+        new_data = self._EMPTY(view_shape)
+        arr[view_index] = new_data
 
     def _finalize(self):
         """Transform all DelayedArrays into concrete arrays."""
@@ -632,11 +717,11 @@ if sparse:
         def __new__(cls, *args, **kwargs) -> "Array":
             mode, arg, kwargs = cls._parse_args(*args, **kwargs)
             if mode == "shape":
-                return super().__new__(shape=arg, **kwargs)
+                return super().__new__(cls, shape=arg, **kwargs)
             else:
                 if not isinstance(arg, (np.ndarray, sparse.sparray)):
                     arg = np.asanyarray(arg)
-                return super().__new__(arg, **kwargs)
+                return super().__new__(cls, arg, **kwargs)
 
         def _as_runtime(self) -> dict:
             data = super().todense()
@@ -734,7 +819,7 @@ class _ListishMixin:
         """
         new_shape = list(np.shape(self))
         new_shape[0] += 1
-        np.ndarray.resize(new_shape, refcheck=False)
+        np.ndarray.resize(self, new_shape, refcheck=False)
         self[-1] = value
 
     def extend(self, value):
@@ -742,9 +827,10 @@ class _ListishMixin:
         Extend list by appending elements from the iterable
         (along the first dimension).
         """
+        value = type(self).from_any(value)
         init_len = len(self)
         batch = len(self) + len(value)
-        shape = np.broadcast_shape(np.shape(self)[1:], np.shape(value)[1:])
+        shape = np.broadcast_shapes(np.shape(self)[1:], np.shape(value)[1:])
         new_shape = [batch] + list(shape)
         np.ndarray.resize(self, new_shape, refcheck=False)
         self[init_len:] = value
@@ -773,13 +859,18 @@ class Array(_ListishMixin, WrappedArray):
     ```
     """
     # Value used to fill-in a newly allocated array -> zero
-    def _EMPTY(self, n: int) -> int:
+    def _EMPTY(self, n: list) -> int:
         return 0
 
     def __new__(cls, *args, **kwargs) -> "Array":
         mode, arg, kwargs = cls._parse_args(*args, **kwargs)
-        make_from = cls.from_shape if mode == "shape" else cls.from_any
-        return make_from(arg, **kwargs)
+        if mode == "shape":
+            obj = super().__new__(cls, arg, **kwargs)
+            if not issubclass(obj.dtype.type, np.number):
+                raise TypeError("Array data type must be numeric")
+            return obj
+        else:
+            return cls.from_any(arg, **kwargs)
 
     def _as_runtime(self) -> np.ndarray:
         return np.ndarray.view(self, np.ndarray)
@@ -812,10 +903,8 @@ class Array(_ListishMixin, WrappedArray):
         array : Array
             New array.
         """
-        obj = np.ndarray(shape, **kwargs)
-        if not issubclass(obj.dtype.type, np.number):
-            raise TypeError("Array data type must be numeric")
-        return np.ndarray.view(obj, cls)
+        # Implement in __new__ so that array owns its data
+        return cls(list(shape), **kwargs)
 
     @classmethod
     def from_any(cls, other, **kwargs) -> "Array":
@@ -843,24 +932,41 @@ class Array(_ListishMixin, WrappedArray):
             * `True` : the object is copied;
             * `None` : the the object is copied only if needed;
             * `False`: raises a `ValueError` if a copy cannot be avoided.
+        owndata : bool, default=False
+            If True, ensures that the returned Struct owns its data.
+            This may trigger an additional copy.
 
         Returns
         -------
         array : Array
             Converted array.
         """
-        if not _NP_HAS_COPY:
-            copy = kwargs.pop("copy", None)
-            inp = other
+        # prepare for copy
+        owndata = kwargs.pop("owndata", False)
+        copy = None if owndata else kwargs.pop("copy", None)
+        inp = other
+
+        # ensure array
         other = np.asanyarray(other, **kwargs)
         if not issubclass(other.dtype.type, np.number):
             if kwargs.get("dtype", None):
                 # user-specified non numeric type -> raise
                 raise TypeError("Array data type must be numeric")
             other = np.asanyarray(other, dtype=np.float64, **kwargs)
-        if not _NP_HAS_COPY:
-            other = _copy_if_needed(other, inp, copy)
-        return np.ndarray.view(other, cls)
+
+        # view as Array
+        other = np.ndarray.view(other, cls)
+
+        # copy (after view so that output owns data if copy=True)
+        other = _copy_if_needed(other, inp, copy)
+
+        # take ownership
+        if owndata:
+            tmp = other,
+            other = cls(tmp.shape, strides=tmp.strides)
+            other[...] = tmp
+
+        return other
 
     @classmethod
     def from_cell(cls, other: "Cell", **kwargs) -> "Array":
@@ -924,16 +1030,14 @@ class _ListMixin(_ListishMixin, MutableSequence):
 
     # NOTE:
     #   The only abstract methods from MutableSequence are:
-    #   * __getitem__   -> inherited from np.ndarray
-    #   * __setitem__   -> inherited from np.ndarray
+    #   * __getitem__   -> inherited from WrappedArray
+    #   * __setitem__   -> inherited from WrappedArray
     #   * __delitem__   -> implemented here
     #   * __len__       -> inherited from np.ndarray
     #   * insert        -> implemented here
     #
     #   MutableSequence implements the following non-abstract methods,
     #   but we overload them for speed:
-    #   * __iter__      -> inherited from np.ndarray
-    #   * __reversed__  -> inherited from Sequence
     #   * index         -> implemented here
     #   * count         -> implemented here
     #   * append        -> inherited from _ListishMixin
@@ -942,12 +1046,31 @@ class _ListMixin(_ListishMixin, MutableSequence):
     #   * extend        -> inherited from _ListishMixin
     #   * pop           -> implemented here
     #   * remove        -> implemented here
+    #   * __iter__      -> inherited from np.ndarray
+    #   * __reversed__  -> inherited from Sequence
     #   * __iadd__      -> implemented here
+    #   * __eq__        -> implemented here
+    #   * __ne__        -> implemented here
+    #   * __ge__        -> implemented here
+    #   * __gt__        -> implemented here
+    #   * __le__        -> implemented here
+    #   * __lt__        -> implemented here
     #
     #   Mutable implements the following non-abstract method, whose
     #   behaviour differs from that of np.ndarray.
     #   We use np.ndarray's instead.
     #   * __contains__  -> inherited from np.ndarray
+
+    # --- ndarray ------------------------------------------------------
+
+    # need to explicitely reference np.ndarray methods otherwise it
+    # goes back to MutableSequence, which raises.
+    __len__ = WrappedArray.__len__
+    __getitem__ = WrappedArray.__getitem__
+    __setitem__ = WrappedArray.__setitem__
+    __delitem__ = WrappedArray.__delitem__
+    __contains__ = WrappedArray.__contains__
+    __iter__ = WrappedArray.__iter__
 
     # --- magic --------------------------------------------------------
 
@@ -960,7 +1083,8 @@ class _ListMixin(_ListishMixin, MutableSequence):
         return np.concatenate([other, self])
 
     def __iadd__(self, other):
-        return self.append(other)
+        self.extend(other)
+        return self
 
     def __mul__(self, value):
         return np.concatenate([self] * value)
@@ -975,86 +1099,21 @@ class _ListMixin(_ListishMixin, MutableSequence):
         np.ndarray.resize(self, new_shape, refcheck=False)
         for i in range(1, value):
             self[i*length:(i+1)*length] = self[:length]
-
-    def __delitem__(self, index):
-        # --- list: delete sequentially, from tail to head -------------
-        if hasattr(index, "__iter__"):
-            index = (len(self) + i if i < 0 else i for i in index)
-            index = sorted(index, reverse=True)
-            for i in index:
-                del self[i]
-
-        # --- slice: skip the entire slice, if possible ----------------
-        elif isinstance(index, slice):
-            start, stop, step = index.start, index.stop, index.step
-
-            # --- let's make the slice parameters a bit more useful ---
-            step = step or 1
-            # compute true start
-            if start is None:
-                if step < 0:
-                    start = len(self) - 1
-                else:
-                    start = 0
-            if start < 0:
-                start = len(self) + start
-            # compute stop in terms of "positive indices"
-            # (where -1 really means -1, and not n-1)
-            if stop is not None:
-                if stop < 0:
-                    stop = len(self) + stop
-            else:
-                stop = len(self) if step > 0 else -1
-            stop = min(stop, len(self)) if step > 0 else max(stop, -1)
-            # align stop with steps
-            stop = start + int(np.ceil(abs(stop - start) / abs(step))) * step
-            # compute true inclusive stop
-            stop_inclusive = stop - step
-            # ensure step is positive
-            if step < 0:
-                start, stop_inclusive, step = stop_inclusive, start, abs(step)
-
-            # --- if non consecutive, fallback to sequential ---
-            if step != 1:
-                index = range(start, stop+1, step)
-                del self[index]
-
-            # --- otherwise, skip the entire slice ---
-            else:
-                nb_del = 1 + stop_inclusive - start
-                new_shape = list(np.shape(self))
-                new_shape[0] -= nb_del
-                self[start:-nb_del] = self[stop_inclusive:]
-                np.ndarray.resize(self, new_shape, refcheck=False)
-
-        # --- int: skip a single element -------------------------------
-        else:
-            index = int(index)
-            if index < 0:
-                index = len(self) + index
-            new_shape = list(np.shape(self))
-            new_shape[0] -= 1
-            self[index:-1] = self[index+1:]
-            np.ndarray.resize(self, new_shape, refcheck=False)
-
-    # need to explicitely reference np.ndarray methods otherwise it
-    # goes back to MutableSequence, which raises.
-    __getitem__ = np.ndarray.__getitem__
-    __setitem__ = np.ndarray.__setitem__
+        return self
 
     # In lists, __contains__ should be treated as meaning "contains this
     # element along the first dimension." I.e.,
     # `value in sequence` should be equivalent to `value in iter(sequence)`.
     #
-    # We instead use its "element-wise" meaning that comes from ndarray.
+    # In contrast, ndarray's __contains__ is used "element-wise".
     # I.e., it is equivalent to `value in sequence.flat`.
     # It is the main reason ndarray do not implement the MutableSequence
     # protocol:
     # https://github.com/numpy/numpy/issues/2776#issuecomment-652584346
-    __contains__ = np.ndarray.__contains__
+    #
+    # We use the numpy behaviour, and implement list_contains to recover
+    # the list behaviour.
 
-    # Let's also implement something that looks more like
-    # MutableSequence.__contains__
     def list_contains(self, value, broadcast=True):
         """
         Check whether a value is in the object, when iterated along its
@@ -1243,17 +1302,36 @@ class Cell(_ListMixin, WrappedArray):
     _DEFAULT = classmethod(lambda _: Array.from_any([]))
 
     # Value used to fill-in a newly allocated array -> delayed array
-    def _EMPTY(self, n: int) -> np.ndarray:
-        data = np.empty([n], dtype=object)
-        for i in range(n):
-            data[i] = DelayedArray(self)
+    def _EMPTY(self, n: list) -> np.ndarray:
+        data = np.empty(n, dtype=object)
+        opt = dict(
+            flags=['refs_ok', 'zerosize_ok'],
+            op_flags=['writeonly', 'no_broadcast']
+        )
+        with np.nditer(data, **opt) as iter:
+            for elem in iter:
+                elem[()] = DelayedArray(self)
         return data
+
+    def _fill_default(self):
+        arr = np.ndarray.view(self, np.ndarray)
+        opt = dict(flags=['refs_ok', 'zerosize_ok'],
+                   op_flags=['writeonly', 'no_broadcast'])
+        with np.nditer(arr, **opt) as iter:
+            for elem in iter:
+                elem[()] = self._DEFAULT()
+        return self
 
     def __new__(cls, *args, **kwargs) -> "Cell":
         mode, arg, kwargs = cls._parse_args(*args, **kwargs)
         kwargs["dtype"] = object
-        make_from = cls.from_shape if mode == "shape" else cls.from_any
-        return make_from(arg, **kwargs)
+        if mode == "shape":
+            if len(arg) == 0:
+                # Scalar cells are forbidden
+                arg = [0]
+            return super().__new__(cls, arg, **kwargs)._fill_default()
+        else:
+            return cls.from_any(arg, **kwargs)
 
     def _as_runtime(self) -> dict:
         if self.ndim == 1:
@@ -1305,16 +1383,8 @@ class Cell(_ListMixin, WrappedArray):
             New cell array.
 
         """
-        if len(shape) == 0:
-            # Scalar cells are forbidden
-            shape = [0]
-        arr = np.ndarray(shape, **kwargs)
-        opt = dict(flags=['refs_ok', 'zerosize_ok'],
-                   op_flags=['writeonly', 'no_broadcast'])
-        with np.nditer(arr, **opt) as iter:
-            for elem in iter:
-                elem[()] = cls._DEFAULT()
-        return np.ndarray.view(arr, cls)
+        # Implement in __new__ so that cell owns its data
+        return cls(list(shape), **kwargs)
 
     @classmethod
     def from_any(cls, other, **kwargs) -> "Cell":
@@ -1342,6 +1412,9 @@ class Cell(_ListMixin, WrappedArray):
             * `True` : the object is copied;
             * `None` : the the object is copied only if needed;
             * `False`: raises a `ValueError` if a copy cannot be avoided.
+        owndata : bool, default=False
+            If True, ensures that the returned Struct owns its data.
+            This may trigger an additional copy.
 
         Returns
         -------
@@ -1356,9 +1429,9 @@ class Cell(_ListMixin, WrappedArray):
         deepcat = kwargs.pop("deepcat", False)
 
         # prepare for copy
-        if not (_NP_HAS_COPY and deepcat):
-            copy = kwargs.pop("copy", None)
-            inp = other
+        owndata = kwargs.pop("owndata", False)
+        copy = None if owndata else kwargs.pop("copy", None)
+        inp = other
 
         # recursive shallow conversion
         if not deepcat:
@@ -1388,12 +1461,17 @@ class Cell(_ListMixin, WrappedArray):
             other = np.asanyarray(other, **kwargs)
             other = cls._unroll_build(other)
 
-        # copy
-        if not (_NP_HAS_COPY and deepcat):
-            other = _copy_if_needed(other, inp, copy)
-
         # as cell
         other = np.ndarray.view(other, cls)
+
+        # copy (after view so that output owns data if copy=True)
+        other = _copy_if_needed(other, inp, copy)
+
+        # take ownership
+        if owndata:
+            tmp = other
+            other = cls(tmp.shape, strides=tmp.strides)
+            other[...] = tmp
 
         # recurse
         opt = dict(flags=['refs_ok', 'zerosize_ok'],
@@ -1785,19 +1863,33 @@ class Struct(_DictMixin, WrappedArray):
     _DEFAULT = classmethod(lambda cls: Array.from_any([]))
 
     # Value used to fill-in a newly allocated array -> dict
-    def _EMPTY(self, n) -> np.ndarray:
-        data = np.empty([n], dtype=dict)
-        for i in range(n):
-            data[i] = {}
+    def _EMPTY(self, n: list) -> np.ndarray:
+        data = np.empty(n, dtype=dict)
+        opt = dict(
+            flags=['refs_ok', 'zerosize_ok'],
+            op_flags=['writeonly', 'no_broadcast']
+        )
+        with np.nditer(data, **opt) as iter:
+            for elem in iter:
+                elem[()] = {}
         return data
+
+    def _fill_default(self):
+        arr = np.ndarray.view(self, np.ndarray)
+        flags = dict(flags=['refs_ok', 'zerosize_ok'], op_flags=['readwrite'])
+        with np.nditer(arr, **flags) as iter:
+            for elem in iter:
+                elem[()] = dict()
+        return self
 
     def __new__(cls, *args, **kwargs) -> "Struct":
         kwargs["__has_dtype"] = False
         kwargs["__has_order"] = False
         mode, arg, kwargs = cls._parse_args(*args, **kwargs)
-
-        make_from = cls.from_shape if mode == "shape" else cls.from_any
-        obj = make_from(arg)
+        if mode == "shape":
+            obj = super().__new__(cls, arg, dtype=dict)._fill_default()
+        else:
+            obj = cls.from_any(arg)
         obj.update(kwargs)
         return obj
 
@@ -1848,13 +1940,7 @@ class Struct(_DictMixin, WrappedArray):
             New struct array.
 
         """
-        kwargs["dtype"] = dict
-        arr = np.ndarray(shape, **kwargs)
-        flags = dict(flags=['refs_ok', 'zerosize_ok'], op_flags=['readwrite'])
-        with np.nditer(arr, **flags) as iter:
-            for elem in iter:
-                elem[()] = dict()
-        return np.ndarray.view(arr, cls)
+        return cls(list(shape), **kwargs)
 
     @classmethod
     def from_any(cls, other, **kwargs) -> "Struct":
@@ -1881,6 +1967,9 @@ class Struct(_DictMixin, WrappedArray):
             * `True` : the object is copied;
             * `None` : the the object is copied only if needed;
             * `False`: raises a `ValueError` if a copy cannot be avoided.
+        owndata : bool, default=False
+            If True, ensures that the returned Struct owns its data.
+            This may trigger an additional copy.
 
         Returns
         -------
@@ -1891,21 +1980,33 @@ class Struct(_DictMixin, WrappedArray):
             # matlab object
             return cls._from_runtime(other)
 
-        if not _NP_HAS_COPY:
-            copy = kwargs.pop("copy", None)
-            inp = other
+        # prepare for copy
+        owndata = kwargs.pop("owndata", False)
+        copy = None if owndata else kwargs.pop("copy", None)
+        inp = other
 
         # convert to array[dict]
-        other = np.asarray(other, **kwargs)
+        other = np.asanyarray(other, **kwargs)
         other = cls._unroll_build(other)
+
+        # check all items are dictionaries
+        arr = np.ndarray.view(other, np.ndarray)
         opt = dict(flags=['refs_ok', 'zerosize_ok'], op_flags=['readonly'])
-        with np.nditer(other, **opt) as iter:
+        with np.nditer(arr, **opt) as iter:
             if not all(isinstance(elem.item(), dict) for elem in iter):
                 raise TypeError("Not an array of dictionaries")
 
-        # copy if needed
-        if not _NP_HAS_COPY:
-            other = _copy_if_needed(other, inp, copy)
+        # view as Struct
+        other = np.ndarray.view(other, cls)
+
+        # copy (after view so that output owns data if copy=True)
+        other = _copy_if_needed(other, inp, copy)
+
+        # take ownership
+        if owndata:
+            tmp = other
+            other = cls(tmp.shape, dtype=tmp.dtype, strides=tmp.strides)
+            other[...] = tmp
 
         # nested from_any
         opt = dict(flags=['refs_ok', 'zerosize_ok'], op_flags=['readonly'])
@@ -1915,8 +2016,6 @@ class Struct(_DictMixin, WrappedArray):
                 for k, v in item.items():
                     item[k] = MatlabType.from_any(v)
 
-        # view as Struct
-        other = np.ndarray.view(other, cls)
         return other
 
     @classmethod
@@ -1927,14 +2026,14 @@ class Struct(_DictMixin, WrappedArray):
         return cls.from_any(other, **kwargs)
 
     @classmethod
-    def _unroll_build(cls, arr):
+    def _unroll_build(cls, other):
         # The logic here is that we may sometimes end up with arrays of
         # arrays of dict rather than a single deep array[dict]
         # (for example when converting cells of cells of dict).
         # To circumvent this, we find elements that are arrays, convert
         # them to lists, and recurse.
         rebuild = False
-        arr = np.ndarray.view(arr, np.ndarray)
+        arr = np.ndarray.view(other, np.ndarray)
         flags = dict(flags=['refs_ok', 'zerosize_ok'], op_flags=['readwrite'])
         with np.nditer(arr, **flags) as iter:
             for elem in iter:
@@ -1949,8 +2048,8 @@ class Struct(_DictMixin, WrappedArray):
                     rebuild = True
         if rebuild:
             # Recurse (we may have arrays of arrays of arrays...)
-            return cls._unroll_build(arr)
-        return arr
+            return cls._unroll_build(other)
+        return other
 
     @property
     def as_struct(self) -> "Struct":
