@@ -1,6 +1,5 @@
 import warnings
 import numpy as np
-import itertools
 from collections.abc import (
     MutableSequence, MutableMapping, KeysView, ValuesView, ItemsView
 )
@@ -15,6 +14,7 @@ except (ImportError, ModuleNotFoundError):
 # ~~~ UNUSED ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # I am not using these
 # (I assume np.asarray automatically selects the correct dtype?)
+# import matlab
 # _matlab_numpy_types = {
 #     matlab.double:  np.float64,
 #     matlab.single:  np.float32,
@@ -110,20 +110,34 @@ class Runtime:
 _NP_VERSION = tuple(map(int, np.__version__.split(".")[:2]))
 _NP_HAS_COPY = not (_NP_VERSION < (2, 1))
 
-if not _NP_HAS_COPY:
-    def _copy_if_needed(out, inp, copy=None) -> np.ndarray:
-        """Fallback implementation for asarray(*, copy: bool)"""
-        if (
-            out is not None and
-            isinstance(inp, np.ndarray) and
-            np.ndarray.view(out, np.ndarray).data !=
-            np.ndarray.view(inp, np.ndarray).data
-        ):
-            if copy:
-                out = np.copy(out)
-            elif copy is False:
-                raise ValueError("Cannot avoid a copy")
-        return out
+
+def _copy_if_needed(out, inp, copy=None) -> np.ndarray:
+    """Fallback implementation for asarray(*, copy: bool)"""
+    if (
+        out is not None and
+        isinstance(inp, np.ndarray) and
+        np.ndarray.view(out, np.ndarray).data !=
+        np.ndarray.view(inp, np.ndarray).data
+    ):
+        if copy:
+            out = np.copy(out)
+        elif copy is False:
+            raise ValueError("Cannot avoid a copy")
+    return out
+
+
+def _spcopy_if_needed(out, inp, copy=None):
+    """Fallback implementation for asarray(*, copy: bool)"""
+    if (
+        out is not None and
+        isinstance(inp, sparse.sparray) and
+        out.data.data != inp.data.data
+    ):
+        if copy:
+            out = out.copy()
+        elif copy is False:
+            raise ValueError("Cannot avoid a copy")
+    return out
 
 
 # ----------------------------------------------------------------------
@@ -173,11 +187,10 @@ class MatlabType(object):
 
                 elif type__ == "sparse":
                     # Matlab returns a dense version of the array in data__.
-                    data = np.asarray(other['data__'], dtype=np.double)
                     if sparse:
-                        # TODO: Implement a SparseArray wrapper?
-                        return sparse.coo_array(data)
+                        return SparseArray._from_runtime(other)
                     else:
+                        data = np.asarray(other['data__'], dtype=np.double)
                         return data.view(Array)
 
                 else:
@@ -188,13 +201,13 @@ class MatlabType(object):
 
         if isinstance(other, (tuple, set)):
             # nested tuples are cells of cells, not cell arrays
-            return Cell.from_iterable(other)
+            return Cell.from_any(other)
 
         if isinstance(other, (list, np.ndarray, int, float, complex, bool)):
             try:
                 return Array.from_any(other)
             except (ValueError, TypeError):
-                return Cell.from_iterable(other)
+                return Cell.from_any(other)
 
         if isinstance(other, str):
             return other
@@ -251,6 +264,11 @@ class MatlabType(object):
 
 class AnyMatlabArray(MatlabType):
     """Base class for all matlab-like arrays (numeric, cell, struct)."""
+
+
+# ----------------------------------------------------------------------
+# DelayedArray
+# ----------------------------------------------------------------------
 
 
 class DelayedArray(AnyMatlabArray):
@@ -387,19 +405,13 @@ class DelayedArray(AnyMatlabArray):
         self.as_struct[key] = value
 
 
-class WrappedArray(np.ndarray, AnyMatlabArray):
-    """
-    Base class for "arrays of things" (Array, Cell, Struct.)
-    """
+# ----------------------------------------------------------------------
+# WrappedArray
+# ----------------------------------------------------------------------
 
-    # Value used for delayed arrays whose type cannot be guessed
-    # Can be overloaded in Array/Cell/Struct.
-    _DEFAULT = classmethod(lambda _: Array.from_any([]))
 
-    # Value used to fill-in a newly allocated array.
-    # Must be implemented in Array/Cell/Struct.
-    def _EMPTY(self, n):
-        raise NotImplementedError
+class AnyWrappedArray(AnyMatlabArray):
+    """Base class for wrapped numpy/scipy arrays."""
 
     @classmethod
     def _parse_args(cls, *args, **kwargs):
@@ -478,6 +490,21 @@ class WrappedArray(np.ndarray, AnyMatlabArray):
         arg = obj if obj is not None else shape
         return mode, arg, kwargs
 
+
+class WrappedArray(np.ndarray, AnyWrappedArray):
+    """
+    Base class for "arrays of things" (Array, Cell, Struct.)
+    """
+
+    # Value used for delayed arrays whose type cannot be guessed
+    # Can be overloaded in Array/Cell/Struct.
+    _DEFAULT = classmethod(lambda _: Array.from_any([]))
+
+    # Value used to fill-in a newly allocated array.
+    # Must be implemented in Array/Cell/Struct.
+    def _EMPTY(self, n):
+        raise NotImplementedError
+
     @property
     def as_num(self):
         raise TypeError(
@@ -497,26 +524,18 @@ class WrappedArray(np.ndarray, AnyMatlabArray):
         )
 
     def __str__(self):
-        return np.array_str(self)
+        fmt = {"all": str}  # use str instead of repr for items
+        return np.array2string(self, separator=", ", formatter=fmt)
 
     def __repr__(self):
-        return np.array_str(self)
-
-    def _iterindex(self):
-        """Iterator across all multi-dimensional indices."""
-        return itertools.product(*(range(x) for x in np.shape(self)))
-
-    def _iterall(self):
-        """
-        Iterator across all elements. Yields (index, element).
-        If object has an empty shape, return (Ellipsis, item()).
-        """
-        asarray = np.ndarray.view(self, np.ndarray)
-        if np.ndim(self) == 0:
-            yield (Ellipsis, asarray.item())
-            return
-        for index in self._iterindex():
-            yield index, asarray[index]
+        # close to np.array_repr, but hides dtype.
+        pre = type(self).__name__ + "("
+        suf = ")"
+        return (
+            pre +
+            np.array2string(self, prefix=pre, suffix=suf, separator=", ") +
+            suf
+        )
 
     def __getitem__(self, index):
         """Resize array if needed, then fallback to np.ndarray indexing."""
@@ -583,12 +602,117 @@ class WrappedArray(np.ndarray, AnyMatlabArray):
 
     def _finalize(self):
         """Transform all DelayedArrays into concrete arrays."""
-        for i, elem in self._iterall():
-            if isinstance(elem, AnyMatlabArray):
-                self[i] = elem._finalize()
-            else:
-                self[i] = MatlabType.from_any(elem)
+        opt = dict(flags=['refs_ok'], op_flags=['readwrite', 'no_broadcast'])
+        with np.nditer(self, **opt) as iter:
+            for elem in iter:
+                item = elem.item()
+                if isinstance(item, AnyMatlabArray):
+                    # FIXME: this is done in MatlabType.from_any
+                    # so get rid of this if/else and defer to from_any?
+                    elem[()] = item._finalize()
+                else:
+                    elem[()] = MatlabType.from_any(item)
         return self
+
+
+# ----------------------------------------------------------------------
+# SparseArray
+# ----------------------------------------------------------------------
+
+
+if sparse:
+
+    class WrappedSparseArray(sparse.sparray, AnyWrappedArray):
+        """Base class for sparse arrays."""
+
+        def to_dense(self) -> "Array":
+            return Array.from_any(super().to_dense())
+
+    class SparseArray(sparse.coo_array, WrappedSparseArray):
+        """Matlab sparse arrays."""
+
+        def __new__(cls, *args, **kwargs) -> "Array":
+            mode, arg, kwargs = cls._parse_args(*args, **kwargs)
+            if mode == "shape":
+                return super().__new__(shape=arg, **kwargs)
+            else:
+                if not isinstance(arg, (np.ndarray, sparse.sparray)):
+                    arg = np.asanyarray(arg)
+                return super().__new__(arg, **kwargs)
+
+        def _as_runtime(self) -> dict:
+            data = super().todense()
+            return dict(type__='sparse', data__=data)
+
+        @classmethod
+        def _from_runtime(cls, dictobj: dict) -> "SparseArray":
+            if dictobj['type__'] != 'sparse':
+                raise ValueError("Not a matlab sparse matrix")
+            return cls.from_any(dictobj['data__'])
+
+        @classmethod
+        def from_shape(cls, shape=tuple(), **kwargs) -> "Array":
+            """
+            Build an array if a given shape.
+
+            Parameters
+            ----------
+            shape : list[int]
+                Shape of the new array.
+
+            Other Parameters
+            ----------------
+            dtype : np.dtype | None, default='double'
+                Target data type.
+
+            Returns
+            -------
+            array : SparseArray
+                New array.
+            """
+            return cls(list(shape), **kwargs)
+
+        @classmethod
+        def from_any(cls, other, **kwargs) -> "SparseArray":
+            """
+            Convert an array-like object to a numeric array.
+
+            Parameters
+            ----------
+            other : ArrayLike
+                object to convert.
+
+            Other Parameters
+            ----------------
+            dtype : np.dtype | None, default=None
+                Target data type. Guessed if `None`.
+            copy : bool | None, default=None
+                Whether to copy the underlying data.
+                * `True` : the object is copied;
+                * `None` : the the object is copied only if needed;
+                * `False`: raises a `ValueError` if a copy cannot be avoided.
+
+            Returns
+            -------
+            array : SparseArray
+                Converted array.
+            """
+            copy = kwargs.pop("copy", None)
+            inp = other
+            if not isinstance(other, sparse.sparray):
+                other = np.asanyarray(other, **kwargs)
+            other = cls(other, **kwargs)
+            other = _spcopy_if_needed(other, inp, copy)
+            return other
+
+        def _finalize(self):
+            # Nothing to do, sparse array cannot contain python objects.
+            return self
+
+
+# ----------------------------------------------------------------------
+# Array
+# ----------------------------------------------------------------------
 
 
 class _ListishMixin:
@@ -673,20 +797,17 @@ class Array(_ListishMixin, WrappedArray):
 
         Parameters
         ----------
-        other : ArrayLike
-            object to convert.
+        shape : list[int]
+            Shape of new array.
 
         Other Parameters
         ----------------
-        dtype : np.dtype | None, default=None
-            Target data type. Guessed if `None`.
+        dtype : np.dtype | None, default='double'
+            Target data type.
         order : {"C", "F", "A", "K"} | None, default=None
             Memory layout.
             * "C" row-major (C-style);
             * "F" column-major (Fortran-style);
-            * "A" (any) means "F" if a is Fortran contiguous, "C" otherwise;
-            * "K" (keep) preserve input order;
-            * `None` preserve input order if possible, "C" otherwise.
 
         Returns
         -------
@@ -735,6 +856,9 @@ class Array(_ListishMixin, WrappedArray):
             inp = other
         other = np.asanyarray(other, **kwargs)
         if not issubclass(other.dtype.type, np.number):
+            if kwargs.get("dtype", None):
+                # user-specified non numeric type -> raise
+                raise TypeError("Array data type must be numeric")
             other = np.asanyarray(other, dtype=np.float64, **kwargs)
         if not _NP_HAS_COPY:
             other = _copy_if_needed(other, inp, copy)
@@ -781,9 +905,20 @@ class Array(_ListishMixin, WrappedArray):
     def as_num(self) -> "Array":
         return self
 
+    def __repr__(self):
+        if self.ndim == 0:
+            return np.array2string(self, separator=", ")
+        else:
+            return super().__repr__()
+
     def _finalize(self):
         # Nothing to do, numeric array cannot contain python objects.
         return self
+
+
+# ----------------------------------------------------------------------
+# Cell
+# ----------------------------------------------------------------------
 
 
 class _ListMixin(_ListishMixin, MutableSequence):
@@ -811,9 +946,10 @@ class _ListMixin(_ListishMixin, MutableSequence):
     #   * remove        -> implemented here
     #   * __iadd__      -> implemented here
     #
-    #   Mutable implements the following non-abstract methods, which
-    #   we keep
-    #   * __contains__  -> FIXME: should we implement it?
+    #   Mutable implements the following non-abstract method, whose
+    #   behaviour differs from that of np.ndarray.
+    #   We use np.ndarray's instead.
+    #   * __contains__  -> inherited from np.ndarray
 
     # --- magic --------------------------------------------------------
 
@@ -908,23 +1044,81 @@ class _ListMixin(_ListishMixin, MutableSequence):
     __getitem__ = np.ndarray.__getitem__
     __setitem__ = np.ndarray.__setitem__
 
+    # In lists, __contains__ should be treated as meaning "contains this
+    # element along the first dimension." I.e.,
+    # `value in sequence` should be equivalent to `value in iter(sequence)`.
+    #
+    # We instead use its "element-wise" meaning that comes from ndarray.
+    # I.e., it is equivalent to `value in sequence.flat`.
+    # It is the main reason ndarray do not implement the MutableSequence
+    # protocol:
+    # https://github.com/numpy/numpy/issues/2776#issuecomment-652584346
+    __contains__ = np.ndarray.__contains__
+
+    # Let's also implement something that looks more like
+    # MutableSequence.__contains__
+    def list_contains(self, value, broadcast=True):
+        """
+        Check whether a value is in the object, when iterated along its
+        first dimension.
+
+        Should be roughly equivalent to `value in iter(self)`, although
+        it also takes care of collapsing boolean arrays into a single
+        boolean by calling `all()` on them.
+
+        * If `broadcast=True` (default), equality is loose in the sense
+          that `1` matches `[1, 1, 1]`.
+        * If `broadcast=False`, array-like objects only match if they
+          have the exact same shape.
+        """
+        value = np.asarray(value)
+        for elem in self:
+            elem = np.asarray(elem)
+            if not broadcast and value.shape != elem.shape:
+                continue
+            if (elem == value).all():
+                return True
+        return False
+
     # --- sequence -----------------------------------------------------
 
-    def count(self, value):
-        """Return number of occurrences of value."""
-        # FIXME:
-        #   This is tricky. Should a cell array behave like:
-        #   1. a list of list?
-        #   2. as if it was flattened?
-        #   3. do we use strict equality (same shape) or broacasted equality?
-        return sum([np.all(elem == value) for elem in self])
+    def count(self, value, broadcast=True):
+        """
+        Return number of occurrences of value, when iterating along the
+        object's first dimension.
 
-    def index(self, value):
-        """Return first index of value."""
-        # FIXME:
-        #   This is also tricky for the same reasons.
+        * If `broadcast=True` (default), equality is loose in the sense
+          that `1` matches `[1, 1, 1]`.
+        * If `broadcast=False`, array-like objects only match if they
+          have the exact same shape.
+        """
+        value = np.asarray(value)
+
+        def iter():
+            for elem in self:
+                elem = np.asarray(elem)
+                if not broadcast and value.shape != elem.shape:
+                    yield False
+                yield bool((elem == value).all())
+
+        return sum(iter())
+
+    def index(self, value, broadcast=True):
+        """
+        Return first index of value, when iterating along the object's
+        first dimension.
+
+        * If `broadcast=True` (default), equality is loose in the sense
+          that `1` matches `[1, 1, 1]`.
+        * If `broadcast=False`, array-like objects only match if they
+          have the exact same shape.
+        """
+        value = np.asarray(value)
         for i, elem in enumerate(self):
-            if np.all(elem == value):
+            elem = np.asarray(elem)
+            if not broadcast and value.shape != elem.shape:
+                continue
+            if (elem == value).all():
                 return i
         raise ValueError(value, "is not in", type(self).__name__)
 
@@ -1009,10 +1203,7 @@ class Cell(_ListMixin, WrappedArray):
     Cell.from_any(cell_like)
 
     # Other options
-    Cell(..., order=None, *, copy=None)
-
-    # Instantiate from elements
-    Cell.from_iterable([x, y, z])
+    Cell(..., order=None, *, copy=None, deepcat=False)
     ```
 
     A cell is a `MutableSequence` and therefore (mostly) behaves like a list.
@@ -1120,17 +1311,10 @@ class Cell(_ListMixin, WrappedArray):
             # Scalar cells are forbidden
             shape = [0]
         arr = np.ndarray(shape, **kwargs)
-        # NOTE: we have to use an external_loop, because we are
-        # assigning numpy arrays into numpy arrays and `elem[...] = x`
-        # tries to broadcast (whereas `elem[i] = x` does not).
-        flags = dict(
-            flags=['refs_ok', 'external_loop'],
-            op_flags=['readwrite']
-        )
-        with np.nditer(arr, **flags) as iter:
+        opt = dict(flags=['refs_ok'], op_flags=['write_only', 'no_broadcast'])
+        with np.nditer(arr, **opt) as iter:
             for elem in iter:
-                for i in range(len(elem)):
-                    elem[i] = cls._DEFAULT()
+                elem[()] = cls._DEFAULT()
         return np.ndarray.view(arr, cls)
 
     @classmethod
@@ -1140,11 +1324,13 @@ class Cell(_ListMixin, WrappedArray):
 
         Parameters
         ----------
-        other : ArrayLike
+        other : CellLike
             object to convert.
 
         Other Parameters
         ----------------
+        deepcat : bool, default=False
+            Convert cells of cells into cell arrays.
         order : {"C", "F", "A", "K"} | None, default=None
             Memory layout.
             * "C" row-major (C-style);
@@ -1163,52 +1349,97 @@ class Cell(_ListMixin, WrappedArray):
         cell : Cell
             Converted cell.
         """
+        # matlab object
         if isinstance(other, dict) and "type__" in other:
             return cls._from_runtime(other)
-        if not _NP_HAS_COPY:
+
+        kwargs["dtype"] = object
+        deepcat = kwargs.pop("deepcat", False)
+
+        # prepare for copy
+        if not (_NP_HAS_COPY and deepcat):
             copy = kwargs.pop("copy", None)
             inp = other
-        other = np.asanyarray(other, dtype=object, **kwargs)
-        if not _NP_HAS_COPY:
+
+        # recursive shallow conversion
+        if not deepcat:
+
+            def asrecursive(other):
+                if isinstance(other, np.ndarray):
+                    return other
+                elif hasattr(other, "__iter__"):
+                    other = list(map(asrecursive, other))
+                    tmp = np.ndarray(len(other), dtype=object)
+                    for i, x in enumerate(other):
+                        tmp[i] = x
+                    other = tmp
+                    return np.ndarray.view(other, cls)
+                else:
+                    return other
+
+            other = asrecursive(other)
+            if not isinstance(other, np.ndarray):
+                other = np.asanyarray(other, **kwargs)
+
+        # deep conversion
+        else:
+            other = np.asanyarray(other, **kwargs)
+            other = cls._unroll_build(other)
+
+        # copy
+        if not (_NP_HAS_COPY and deepcat):
             other = _copy_if_needed(other, inp, copy)
+
+        # as cell
         other = np.ndarray.view(other, cls)
-        for i, x in other._iterall():
-            np.ndarray.__setitem__(other, i, MatlabType.from_any(x))
+
+        # recurse
+        opt = dict(flags=['refs_ok'], op_flags=['readwrite', 'no_broadcast'])
+        with np.nditer(other, **opt) as iter:
+            for elem in iter:
+                elem[()] = MatlabType.from_any(elem.item())
+
         return other
-
-    @classmethod
-    def from_iterable(cls, iterable) -> "Cell":
-        """
-        Return a 1D `Cell` that contains the input elements.
-
-        `Cell(tuple[cells])` may combine its input into a cell array:
-
-            `Cell([[1, 2], [3, 4]])` === Matlab's `{1 2; 3 4}`.
-
-        This method ensures that we only create a cell at the first level:
-
-            `Cell.from_iterable([[1, 2], [3, 4]])` === Matlab's `{{1 2} {3 4}}`
-
-        Parameters
-        ----------
-        iterable : Iterable
-            Sequence of values.
-
-        Returns
-        -------
-        cell : Cell
-            Converted 1D cell.
-        """
-        obj = Cell(len(iterable))
-        for i, elem in enumerate(iterable):
-            obj[i] = elem
-        return obj
 
     # aliases
     from_num = from_array = from_any
 
+    @classmethod
+    def _unroll_build(cls, arr):
+        # The logic here is that we may sometimes end up with cells of
+        # cells that must be converted to deep cell arrays.
+        # To circumvent this, we find elements that are arrays, convert
+        # them to lists, and recurse.
+        rebuild = False
+        arr = np.asarray(arr)
+        opt = dict(flags=['refs_ok'], op_flags=['readwrite', 'no_broadcast'])
+        with np.nditer(arr, **opt) as iter:
+            for elem in iter:
+                item = elem.item()
+                if isinstance(item, np.ndarray):
+                    item = np.ndarray.view(item, object, np.ndarray)
+                    if item.ndim == 0:
+                        item = item.item()
+                    else:
+                        item = item.tolist()
+                    elem[()] = item
+                    rebuild = True
+        if rebuild:
+            # Recurse (we may have arrays of arrays of arrays...)
+            return cls._unroll_build(arr.tolist())
+        return arr
+
     @property
     def as_cell(self) -> "Cell":
+        return self
+
+    def deepcat(self) -> "Cell":
+        """
+        Convert a (nested) cell of cells into a deep cell array.
+        """
+        cls = type(self)
+        self = self._unroll_build(np.copy(self))
+        self = np.ndarray.view(self, cls)
         return self
 
     def __call__(self, *index):
@@ -1240,6 +1471,11 @@ class Cell(_ListMixin, WrappedArray):
         #
         index = tuple(slice(None) if idx is slice else idx for idx in index)
         return self[index]
+
+
+# ----------------------------------------------------------------------
+# Struct
+# ----------------------------------------------------------------------
 
 
 class _DictMixin(MutableMapping):
@@ -1356,43 +1592,55 @@ class _DictMixin(MutableMapping):
         #   We only insert a DelayedArray if it is a completely new key.
         #   Otherwise the default value is [], as per matlab.
         isnewkey = key not in self.keys()
-        for _, elem in self._iterall():
-            elem.setdefault(
-                key,
-                self._DEFAULT() if isnewkey else
-                DelayedArray(self)
-            )
+        arr = np.ndarray.view(self, np.ndarray)
+        opt = dict(flags=['refs_ok'], op_flags=['readonly'])
+        with np.nditer(arr, **opt) as iter:
+            for elem in iter:
+                elem.item().setdefault(
+                    key,
+                    self._DEFAULT() if isnewkey else
+                    DelayedArray(self)
+                )
         return self.as_dict()[key]
 
     def __setitem__(self, key, value):
-        if np.ndim(self) == 0:
+        arr = np.ndarray.view(self, np.ndarray)
+
+        if np.ndim(arr) == 0:
             # Scalar array: assign value to the field
             if isinstance(value, self.unpack):
                 # unpacks are cells and cannot be 0-dim
                 raise ValueError("Cannot broadcast.")
-            np.ndarray.item(self)[key] = MatlabType.from_any(value)
+            arr.item()[key] = MatlabType.from_any(value)
 
         elif isinstance(value, self.unpack):
             # Each element in the struct array is matched with an element
             # in the "unpack" array.
             value = value.broadcast_to_struct(self)
-            for i, elem in self._iterall():
-                val = value[i]
-                if isinstance(val, self.unpack):
-                    val = val.to_cell()
-                elem[key] = MatlabType.from_any(val)
+            opt = dict(flags=['refs_ok', 'multi_index'], op_flags=['readonly'])
+            with np.nditer(arr, **opt) as iter:
+                for elem in iter:
+                    val = value[iter.multi_index]
+                    if isinstance(val, self.unpack):
+                        val = val.to_cell()
+                    elem.item()[key] = MatlabType.from_any(val)
 
         else:
             # Assign the same value to all elements in the struct array.
-            for _, elem in self._iterall():
-                elem[key] = MatlabType.from_any(value)
+            opt = dict(flags=['refs_ok'], op_flags=['readonly'])
+            value = MatlabType.from_any(value)
+            with np.nditer(arr, **opt) as iter:
+                for elem in iter:
+                    elem.item()[key] = value
 
     def __delitem__(self, key):
         if key not in self._allkeys():
             raise KeyError(key)
-        for _, elem in self._iterall():
-            if key in elem:
-                elem.__delitem__(key)
+        arr = np.ndarray.view(self, np.ndarray)
+        opt = dict(flags=['refs_ok'], op_flags=['readonly'])
+        with np.nditer(arr, **opt) as iter:
+            for elem in iter:
+                del elem.item()[key]
 
     # --- mapping ------------------------------------------------------
 
@@ -1406,18 +1654,25 @@ class _DictMixin(MutableMapping):
         return self.ValuesView(self)
 
     def setdefault(self, key, value):
-        for _, elem in self._iterall():
-            elem.setdefault(key, MatlabType.from_any(value))
+        arr = np.ndarray.view(self, np.ndarray)
+        opt = dict(flags=['refs_ok'], op_flags=['readonly'])
+        with np.nditer(arr, **opt) as iter:
+            for elem in iter:
+                item = elem.item()
+                item.setdefault(key, MatlabType.from_any(value))
 
     def update(self, other):
         other = Struct.from_any(other)
         other = np.ndarray.view(other, np.ndarray)
         other = np.broadcast_to(other, self.shape)
-        for i, elem in self._iterall():
-            other_elem = other[i]
-            if i is Ellipsis:
-                other_elem = other_elem.item()
-            elem.update(other_elem)
+
+        arr = np.ndarray.view(self, np.ndarray)
+        opt = dict(flags=['refs_ok', 'multi_index'], op_flags=['readonly'])
+        with np.nditer(arr, **opt) as iter:
+            for elem in iter:
+                other_elem = other[iter.multi_index]
+                item = elem.item()
+                item.update(other_elem)
 
     # --- helper ------------------------------------------------------
 
@@ -1592,7 +1847,7 @@ class Struct(_DictMixin, WrappedArray):
         flags = dict(flags=['refs_ok'], op_flags=['readwrite'])
         with np.nditer(arr, **flags) as iter:
             for elem in iter:
-                elem[...] = dict()
+                elem[()] = dict()
         return np.ndarray.view(arr, cls)
 
     @classmethod
@@ -1632,27 +1887,30 @@ class Struct(_DictMixin, WrappedArray):
 
         if not _NP_HAS_COPY:
             copy = kwargs.pop("copy", None)
-        inp = other
+            inp = other
 
         # convert to array[dict]
-        other = np.asanyarray(other, **kwargs)
-        arr = np.ndarray.view(other, np.ndarray)
-        arr = cls._unroll_build(arr)
-        nditer = np.nditer(arr, flags=['refs_ok'])
-        if not all(isinstance(elem.item(), dict) for elem in nditer):
-            raise TypeError("Not an array of dictionaries")
+        other = np.asarray(other, **kwargs)
+        other = cls._unroll_build(other)
+        opt = dict(flags=['refs_ok'], op_flags=['readonly'])
+        with np.nditer(other, **opt) as iter:
+            if not all(isinstance(elem.item(), dict) for elem in iter):
+                raise TypeError("Not an array of dictionaries")
 
         # copy if needed
         if not _NP_HAS_COPY:
-            arr = _copy_if_needed(arr, inp, copy)
-        other = np.ndarray.view(arr, cls)
+            other = _copy_if_needed(other, inp, copy)
 
         # nested from_any
-        arr = np.ndarray.view(other, np.ndarray)
-        for x in np.nditer(arr, flags=['refs_ok']):
-            x: dict = x.item()
-            for k, v in x.items():
-                x[k] = MatlabType.from_any(v)
+        opt = dict(flags=['refs_ok'], op_flags=['readonly'])
+        with np.nditer(other, **opt) as iter:
+            for elem in iter:
+                item: dict = elem.item()
+                for k, v in item.items():
+                    item[k] = MatlabType.from_any(v)
+
+        # view as Struct
+        other = np.ndarray.view(other, cls)
         return other
 
     @classmethod
@@ -1664,9 +1922,9 @@ class Struct(_DictMixin, WrappedArray):
 
     @classmethod
     def _unroll_build(cls, arr):
-        # The logic here is that we may end up with an array of arrays
-        # of dict, because np.asarray([Struct(), Struct()]) returns an
-        # array[Struct] rather than a single deep array[dict].
+        # The logic here is that we may sometimes end up with arrays of
+        # arrays of dict rather than a single deep array[dict]
+        # (for example when converting cells of cells of dict).
         # To circumvent this, we find elements that are arrays, convert
         # them to lists, and recurse.
         rebuild = False
@@ -1681,7 +1939,7 @@ class Struct(_DictMixin, WrappedArray):
                         item = item.item()
                     else:
                         item = item.tolist()
-                    elem[...] = item
+                    elem[()] = item
                     rebuild = True
         if rebuild:
             # Recurse (we may have arrays of arrays of arrays...)
@@ -1703,19 +1961,25 @@ class Struct(_DictMixin, WrappedArray):
         # otherwise     -> reverse array/dict order -> dict of cells of values
         if np.ndim(self) == 0:
             return np.ndarray.item(self)
-        return {
-            key: Cell.from_iterable([
-                elem.get(key, self._DEFAULT()) for _, elem in self._iterall()
-            ]).reshape(np.shape(self))
-            for key in self._allkeys()
-        }
+        arr = np.ndarray.view(self, np.ndarray)
+        opt = dict(flags=['refs_ok'], op_flags=['readwrite'])
+        with np.nditer(arr, **opt) as iter:
+            return {
+                key: Cell.from_any([
+                    elem.item().get(key, self._DEFAULT()) for elem in iter
+                ]).reshape(np.shape(self))
+                for key in self._allkeys()
+            }
 
     def _allkeys(self):
         # Return all keys present across all elements.
         # Keys are ordered by (1) element (2) within-element order
         mock = {}
-        for _, elem in self._iterall():
-            mock.update({key: None for key in elem.keys()})
+        arr = np.ndarray.view(self, np.ndarray)
+        opt = dict(flags=['refs_ok'], op_flags=['readwrite'])
+        with np.nditer(arr, **opt) as iter:
+            for elem in iter:
+                mock.update({key: None for key in elem.item().keys()})
         return mock.keys()
 
     # --------------
@@ -1800,15 +2064,21 @@ class Struct(_DictMixin, WrappedArray):
     # -------
 
     def _finalize(self):
-        for i, elem in self._iterall():
-            if not isinstance(elem, dict):
-                np.ndarray.__setitem__(self, i, {})
-                continue
-            for key, value in elem.items():
-                if isinstance(value, AnyMatlabArray):
-                    elem[key] = value._finalize()
-                else:
-                    elem[key] = MatlabType.from_any(elem[key])
+        arr = np.ndarray.view(self, np.ndarray)
+        opt = dict(flags=['refs_ok'], op_flags=['readwrite'])
+        with np.nditer(arr, **opt) as iter:
+            for elem in iter:
+                item = elem.item()
+                if not isinstance(item, dict):
+                    elem[()] = {}
+                    continue
+                for key, value in item.items():
+                    if isinstance(value, AnyMatlabArray):
+                        # FIXME: this is done in MatlabType.from_any
+                        # so get rid of this if/else and defer to from_any?
+                        item[key] = value._finalize()
+                    else:
+                        item[key] = MatlabType.from_any(item[key])
         return self
 
 
