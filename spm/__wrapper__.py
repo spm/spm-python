@@ -24,25 +24,20 @@ def _import_matlab():
             ...
 
 
-# ~~~ UNUSED ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-# I am not using these
-# (I assume np.asarray automatically selects the correct dtype?)
-# import matlab
-# _matlab_numpy_types = {
-#     matlab.double:  np.float64,
-#     matlab.single:  np.float32,
-#     matlab.logical: np.bool,
-#     matlab.uint64:  np.uint64,
-#     matlab.uint32:  np.uint32,
-#     matlab.uint16:  np.uint16,
-#     matlab.uint8:   np.uint8,
-#     matlab.int64:   np.int64,
-#     matlab.int32:   np.int32,
-#     matlab.int16:   np.int16,
-#     matlab.int8:    np.int8,
-# }
-# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# ----------------------------------------------------------------------
+# Questions
+# ----------------------------------------------------------------------
 
+"""
+* MATLAB does not have 1D arrays (they are always 2D).
+  A 1D python array is interpreted as a row arrays, so the round trip
+  goes [1, 2, 3] -> [[1, 2, 3]].
+  Are we happy with that? I think it works in the sense that
+  when a numpy operation takes a matrix and a vector, the vector is
+  broadcasted to its left, and is therefore interpreted as a row vector.
+
+  !! We should clearly document this behaviour.
+"""
 
 # ----------------------------------------------------------------------
 # Runtime
@@ -155,6 +150,27 @@ def _spcopy_if_needed(out, inp, copy=None):
     return out
 
 
+def _matlab_array_types():
+    _import_matlab()
+    global matlab
+    if matlab:
+        return {
+            matlab.double:  np.float64,
+            matlab.single:  np.float32,
+            matlab.logical: np.bool,
+            matlab.uint64:  np.uint64,
+            matlab.uint32:  np.uint32,
+            matlab.uint16:  np.uint16,
+            matlab.uint8:   np.uint8,
+            matlab.int64:   np.int64,
+            matlab.int32:   np.int32,
+            matlab.int16:   np.int16,
+            matlab.int8:    np.int8,
+        }
+    else:
+        return {}
+
+
 # ----------------------------------------------------------------------
 # Types
 # ----------------------------------------------------------------------
@@ -230,8 +246,13 @@ class MatlabType(object):
 
         if not matlab:
             _import_matlab()
+
         if matlab and isinstance(other, matlab.object):
             return MatlabFunction.from_any(other)
+
+        if type(other) in _matlab_array_types():
+            dtype = _matlab_array_types()[type(other)]
+            return Array.from_any(other, dtype=dtype)
 
         raise TypeError(
             f"Cannot convert {type(other).__name__} into a matlab object."
@@ -918,6 +939,7 @@ class Array(_ListishMixin, WrappedArray):
         mode, arg, kwargs = cls._parse_args(*args, **kwargs)
         if mode == "shape":
             obj = super().__new__(cls, arg, **kwargs)
+            obj[...] = cls._DEFAULT()
             if not issubclass(obj.dtype.type, np.number):
                 raise TypeError("Array data type must be numeric")
             return obj
@@ -1014,7 +1036,7 @@ class Array(_ListishMixin, WrappedArray):
 
         # take ownership
         if owndata:
-            tmp = other,
+            tmp = other
             other = cls(tmp.shape, strides=tmp.strides)
             other[...] = tmp
 
@@ -1063,6 +1085,7 @@ class Array(_ListishMixin, WrappedArray):
 
     def __repr__(self):
         if self.ndim == 0:
+            # Scalar -> display as python scalar
             return np.array2string(self, separator=", ")
         else:
             return super().__repr__()
@@ -2043,6 +2066,8 @@ class Struct(_DictMixin, WrappedArray):
             # matlab object
             return cls._from_runtime(other)
 
+        kwargs["dtype"] = dict
+
         # prepare for copy
         owndata = kwargs.pop("owndata", False)
         copy = None if owndata else kwargs.pop("copy", None)
@@ -2117,6 +2142,13 @@ class Struct(_DictMixin, WrappedArray):
     @property
     def as_struct(self) -> "Struct":
         return self
+
+    def __repr__(self):
+        if self.ndim == 0:
+            # Scalar struct -> display as a dict
+            return repr(np.ndarray.view(self, np.ndarray).item())
+        else:
+            return super().__repr__()
 
     def as_dict(self) -> dict:
         """

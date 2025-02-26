@@ -62,11 +62,11 @@ class StructArrayTestCase(unittest.TestCase):
         self.assertEqual(objdict['data__'][2]['a'], self.struct2['a'])
         self.assertEqual(objdict['data__'][3]['a'], self.struct4['a'])
 
-    # def test_repr(self):
-    #     sa = Struct(self.array1d)
-    #     repr_str = repr(sa)
-    #     self.assertIn('StructArray', repr_str)
-    #     self.assertIn('keys', repr_str)
+    def test_repr(self):
+        sa = Struct(self.array1d)
+        repr_str = repr(sa)
+        repr_expected = "Struct([{'a': 1, 'b': 2}, {'a': 2, 'c': 4}])"
+        self.assertEqual(repr_expected, repr_str)
 
     def test_invalid_initialization(self):
         # with self.assertRaises(TypeError):
@@ -75,10 +75,10 @@ class StructArrayTestCase(unittest.TestCase):
         with self.assertRaises(TypeError):
             Struct(['not', 'a', 'dict'])
 
-    # def test_empty_structarray(self):
-    #     sa = Struct()
-    #     self.assertEqual(sa._structs.size, 0)
-    #     self.assertEqual(len(sa.keys()), 0)
+    def test_empty_structarray(self):
+        sa = Struct.from_any([])
+        self.assertEqual(np.shape(sa), (0,))
+        self.assertEqual(len(sa.keys()), 0)
 
 
 if __name__ == '__main__':

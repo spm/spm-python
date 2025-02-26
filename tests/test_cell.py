@@ -209,6 +209,14 @@ class CellTestCase(unittest.TestCase):
         self.assertTrue(isinstance(c[4], Array) and c[4].shape == (0,))
         self.assertTrue(c[5] == 11)
 
+        # __delitem__
+        del c[4]
+        self.assertEqual(c.tolist(), [7, 2, 8, 9, 11])
+        del c[-2:]
+        self.assertEqual(c.tolist(), [7, 2, 8])
+        del c[[0, 2]]
+        self.assertEqual(c.tolist(), [2])
+
     def test_roundtrip_1d(self):
         identity = Runtime.call('eval',  '@(x) x')
         c = Cell.from_any([1, 2, 3])

@@ -6,15 +6,23 @@ from spm import Struct
 
 class TestStruct(unittest.TestCase):
     def setUp(self):
-        self.struct = Struct(bar='foo')
+        self.struct = Struct()
 
     def test_set_and_get_attribute(self):
         self.struct.foo = "bar"
         self.assertEqual(self.struct.foo, "bar")
         self.assertEqual(self.struct["foo"], "bar")
+        self.assertListEqual(list(self.struct.keys()), ["foo"])
+        self.assertListEqual(list(self.struct.values()), ["bar"])
+        self.assertListEqual(list(self.struct.items()), [("foo", "bar")])
 
+        self.struct.bar = "foo"
         self.assertEqual(self.struct.bar, 'foo')
         self.assertEqual(self.struct['bar'], 'foo')
+        self.assertListEqual(list(self.struct.keys()), ["foo", "bar"])
+        self.assertListEqual(list(self.struct.values()), ["bar", "foo"])
+        self.assertListEqual(list(self.struct.items()),
+                             [("foo", "bar"), ("bar", "foo")])
 
     def test_set_and_get_item(self):
         self.struct["baz"] = 42
@@ -23,15 +31,16 @@ class TestStruct(unittest.TestCase):
 
     def test_delete_item(self):
         self.struct["key"] = "value"
+        self.assertTrue("key" in self.struct.keys())
         del self.struct["key"]
-
-        # # Not an error anymore with matlab-like smart indexing
-        # with self.assertRaises(KeyError):
-        #     _ = self.struct["key"]
+        self.assertTrue("key" not in self.struct.keys())
 
     def test_as_array(self):
-        _ = np.asarray(self.struct)
-        _ = np.asarray(self.struct, dtype=object)
+        self.struct.foo = "bar"
+        a = np.asarray(self.struct)
+        self.assertEqual(a.item(), dict(self.struct))
+        a = np.asarray(self.struct, dtype=object)
+        self.assertEqual(a.item(), dict(self.struct))
 
 
 if __name__ == "__main__":
