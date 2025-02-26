@@ -2232,7 +2232,7 @@ class Struct(_DictMixin, WrappedArray):
             except AttributeError as e:
                 raise KeyError(str(e))
         else:
-            obj = np.ndarray.__getitem__(self, index)
+            obj = WrappedArray.__getitem__(self, index)
             if not isinstance(obj, Struct):
                 # We've indexed a single element, but we do not want
                 # to expose the underlying dictionary. Instead,
@@ -2250,7 +2250,7 @@ class Struct(_DictMixin, WrappedArray):
         if isinstance(index, str):
             setattr(self, index, value)
         else:
-            np.ndarray.__setitem__(self, index, value)
+            WrappedArray.__setitem__(self, index, value)
 
     def __delitem__(self, key):
         if isinstance(key, str):
@@ -2258,7 +2258,7 @@ class Struct(_DictMixin, WrappedArray):
                 return delattr(self, key)
             except AttributeError as e:
                 raise KeyError(str(e))
-        return np.ndarray.__delitem__(self, key)
+        return WrappedArray.__delitem__(self, key)
 
     # ----------
     # Dot syntax
