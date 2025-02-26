@@ -11,6 +11,19 @@ try:
 except (ImportError, ModuleNotFoundError):
     sparse = None
 
+# We'll complain later if the runtime is not instantiated
+matlab = None
+
+
+def _import_matlab():
+    global matlab
+    if matlab is None:
+        try:
+            import matlab
+        except (ImportError, ModuleNotFoundError):
+            ...
+
+
 # ~~~ UNUSED ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # I am not using these
 # (I assume np.asarray automatically selects the correct dtype?)
@@ -91,6 +104,8 @@ class Runtime:
             # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
             print(Runtime._help)
             raise e
+        # Make sure matlab is imported
+        _import_matlab()
 
     _help = """
     Failed to import spm._spm. This can be due to a failure to find Matlab
@@ -213,6 +228,11 @@ class MatlabType(object):
             # This can happen when matlab code is called without `nargout`
             return other
 
+        if not matlab:
+            _import_matlab()
+        if matlab and isinstance(other, matlab.object):
+            return MatlabFunction.from_any(other)
+
         raise TypeError(
             f"Cannot convert {type(other).__name__} into a matlab object."
         )
@@ -259,8 +279,56 @@ class MatlabType(object):
             return obj
 
 
+class MatlabFunction(MatlabType):
+    """Wrapper for matlab function handles."""
+
+    def __init__(self, matlab_object):
+        super().__init__()
+        if not isinstance(matlab_object, matlab.object):
+            raise TypeError("Expected a matlab.object")
+        self._matlab_object = matlab_object
+
+    def _as_runtime(self):
+        return self._matlab_object
+
+    @classmethod
+    def _from_runtime(cls, other):
+        return cls(other)
+
+    @classmethod
+    def from_any(cls, other):
+        if isinstance(other, MatlabFunction):
+            return other
+        return cls._from_runtime(other)
+
+    def __call__(self, *args, **kwargs):
+        return Runtime.call(self._matlab_object, *args, **kwargs)
+
+
 class AnyMatlabArray(MatlabType):
     """Base class for all matlab-like arrays (numeric, cell, struct)."""
+
+    @property
+    def as_num(self):
+        raise TypeError(
+            f"Cannot interpret a {type(self).__name__} as a numeric array"
+        )
+
+    @property
+    def as_cell(self):
+        raise TypeError(
+            f"Cannot interpret a {type(self).__name__} as a cell"
+        )
+
+    @property
+    def as_struct(self):
+        raise TypeError(
+            f"Cannot interpret a {type(self).__name__} as a struct"
+        )
+
+    @property
+    def as_default(self):
+        return self
 
 
 # ----------------------------------------------------------------------
@@ -499,35 +567,15 @@ class WrappedArray(np.ndarray, AnyWrappedArray):
     """
 
     # Value used for delayed arrays whose type cannot be guessed
-    # Can be overloaded in Array/Cell/Struct.
-    _DEFAULT = classmethod(lambda _: Array.from_any([]))
+    # Must be implemented in Array/Cell/Struct.
+    @classmethod
+    def _DEFAULT(cls, n: list = ()):
+        raise NotImplementedError
 
     # Value used to fill-in a newly allocated array.
     # Must be implemented in Array/Cell/Struct.
-    def _EMPTY(self, n: list):
+    def _DELAYED(self, n: list = ()):
         raise NotImplementedError
-
-    @property
-    def as_num(self):
-        raise TypeError(
-            f"Cannot interpret a {type(self).__name__} as a numeric array"
-        )
-
-    @property
-    def as_cell(self):
-        raise TypeError(
-            f"Cannot interpret a {type(self).__name__} as a cell"
-        )
-
-    @property
-    def as_struct(self):
-        raise TypeError(
-            f"Cannot interpret a {type(self).__name__} as a struct"
-        )
-
-    @property
-    def as_default(self):
-        return self
 
     def __str__(self):
         fmt = {"all": str}  # use str instead of repr for items
@@ -554,11 +602,10 @@ class WrappedArray(np.ndarray, AnyWrappedArray):
 
     def __getitem__(self, index):
         """Resize array if needed, then fallback to np.ndarray indexing."""
-        # return super().__getitem__(index)
         try:
             return super().__getitem__(index)
         except IndexError:
-            self._resize_for_index(index)
+            self._resize_for_index(index, mode="delayed")
             return super().__getitem__(index)
 
     def __setitem__(self, index, value):
@@ -567,7 +614,7 @@ class WrappedArray(np.ndarray, AnyWrappedArray):
         try:
             return super().__setitem__(index, value)
         except IndexError:
-            self._resize_for_index(index)
+            self._resize_for_index(index, mode="default")
             return super().__setitem__(index, value)
 
     def __delitem__(self, index):
@@ -636,7 +683,7 @@ class WrappedArray(np.ndarray, AnyWrappedArray):
             self[index:-1] = self[index+1:]
             np.ndarray.resize(self, new_shape, refcheck=False)
 
-    def _resize_for_index(self, index):
+    def _resize_for_index(self, index, mode="delayed"):
         """
         Resize the array so that the (multidimensional) index is not OOB.
 
@@ -679,7 +726,8 @@ class WrappedArray(np.ndarray, AnyWrappedArray):
         np.ndarray.resize(self, new_shape, refcheck=False)
         arr = np.ndarray.view(self, np.ndarray)
         view_shape = arr[view_index].shape
-        new_data = self._EMPTY(view_shape)
+        FILLER = self._DELAYED if mode == "delayed" else self._DEFAULT
+        new_data = FILLER(view_shape)
         arr[view_index] = new_data
 
     def _finalize(self):
@@ -810,7 +858,6 @@ class _ListishMixin:
     #   * reverse
     #   * pop
     #   * remove
-    #   * __delitem__
 
     def append(self, value):
         """
@@ -850,16 +897,21 @@ class Array(_ListishMixin, WrappedArray):
     # Instantiate from size
     Array(N, M, ...)
     Array([N, M, ...])
+    Array.from_shape([N, M, ...])
 
     # Instantiate from existing numeric array
     Array(other_array)
+    Array.from_any(other_array)
 
     # Other options
     Array(..., dtype=None, order=None, *, copy=None)
     ```
     """
-    # Value used to fill-in a newly allocated array -> zero
-    def _EMPTY(self, n: list) -> int:
+    @classmethod
+    def _DEFAULT(cls, n: list = ()) -> int:
+        return 0
+
+    def _DELAYED(self, n: list = ()) -> int:
         return 0
 
     def __new__(cls, *args, **kwargs) -> "Array":
@@ -893,7 +945,7 @@ class Array(_ListishMixin, WrappedArray):
         ----------------
         dtype : np.dtype | None, default='double'
             Target data type.
-        order : {"C", "F", "A", "K"} | None, default=None
+        order : {"C", "F"} | None, default=None
             Memory layout.
             * "C" row-major (C-style);
             * "F" column-major (Fortran-style);
@@ -1294,15 +1346,25 @@ class Cell(_ListMixin, WrappedArray):
     #   method overload those from np.ndarray. This is why the
     #   inheritence order is (_ListMixin, _WrappedArray).
 
-    # FIXME: Which value should we use as default in cell?
-    #   * `None` is the most pythonic value
-    #   * Matlab uses an empty numeric array (`asnum([])`)
-    #   * Or we could use a scalar numeric array with value zero (`asnum(0.)`)
-    # I am using `asnum([])` for now to be consistent with Matlab.
-    _DEFAULT = classmethod(lambda _: Array.from_any([]))
+    @classmethod
+    def _DEFAULT(cls, n: list = ()) -> np.ndarray:
+        if len(n) == 0:
+            return Array.from_any([])
 
-    # Value used to fill-in a newly allocated array -> delayed array
-    def _EMPTY(self, n: list) -> np.ndarray:
+        data = np.empty(n, dtype=object)
+        opt = dict(
+            flags=['refs_ok', 'zerosize_ok'],
+            op_flags=['writeonly', 'no_broadcast']
+        )
+        with np.nditer(data, **opt) as iter:
+            for elem in iter:
+                elem[()] = Array.from_any([])
+        return data
+
+    def _DELAYED(self, n: list = ()) -> np.ndarray:
+        if len(n) == 0:
+            return DelayedArray(self)
+
         data = np.empty(n, dtype=object)
         opt = dict(
             flags=['refs_ok', 'zerosize_ok'],
@@ -1680,8 +1742,7 @@ class _DictMixin(MutableMapping):
             for elem in iter:
                 elem.item().setdefault(
                     key,
-                    self._DEFAULT() if isnewkey else
-                    DelayedArray(self)
+                    DelayedArray(self) if isnewkey else Array.from_any([])
                 )
         return self.as_dict()[key]
 
@@ -1859,11 +1920,11 @@ class Struct(_DictMixin, WrappedArray):
     # required to not break the numpy api.
     _NDARRAY_ATTRS = ("ndim", "shape", "size", "reshape")
 
-    # Same point as for cells (see comment)
-    _DEFAULT = classmethod(lambda cls: Array.from_any([]))
+    @classmethod
+    def _DEFAULT(self, n: list = ()) -> np.ndarray:
+        if len(n) == 0:
+            return dict()
 
-    # Value used to fill-in a newly allocated array -> dict
-    def _EMPTY(self, n: list) -> np.ndarray:
         data = np.empty(n, dtype=dict)
         opt = dict(
             flags=['refs_ok', 'zerosize_ok'],
@@ -1871,8 +1932,10 @@ class Struct(_DictMixin, WrappedArray):
         )
         with np.nditer(data, **opt) as iter:
             for elem in iter:
-                elem[()] = {}
+                elem[()] = dict()
         return data
+
+    _DELAYED = _DEFAULT
 
     def _fill_default(self):
         arr = np.ndarray.view(self, np.ndarray)

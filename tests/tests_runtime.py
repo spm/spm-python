@@ -36,7 +36,7 @@ class TestRuntime(unittest.TestCase):
         result = True
         try:
             from spm import Runtime
-            result = Runtime.call('disp', '"test"', nargout=0)
+            result = Runtime.call('magic', 0, nargout=0)
         except Exception:
             self.fail('Calling Matlab without argout failed.')
 

@@ -1,7 +1,7 @@
 import unittest
 import numpy as np
 
-from spm import Cell, Runtime
+from spm import Cell, Runtime, Array
 
 
 class CellTestCase(unittest.TestCase):
@@ -174,7 +174,11 @@ class CellTestCase(unittest.TestCase):
         self.assertListEqual(c.tolist(), [[7, 8, 9]])
         self.assertEqual(b.tolist(), [1, 2, 3])
 
-        c = Cell.from_any([[1, 9, 5], [4, 2, 6], [3, 7, 8]], owndata=True, deepcat=True)
+        c = Cell.from_any(
+            [[1, 9, 5],
+             [4, 2, 6],
+             [3, 7, 8]],
+            owndata=True, deepcat=True)
         self.assertListEqual(c.tolist(), [[1, 9, 5], [4, 2, 6], [3, 7, 8]])
         c.reverse()
         self.assertListEqual(c.tolist(), [[3, 7, 8], [4, 2, 6], [1, 9, 5]])
@@ -199,8 +203,23 @@ class CellTestCase(unittest.TestCase):
         self.assertEqual(c.tolist(), [1, 2, 3])
         c[[0, 2]] = [7, 8]
         self.assertEqual(c.tolist(), [7, 2, 8])
-        c[3] = 9  # insert
+        c[3] = 9  # insert new element
         self.assertEqual(c.tolist(), [7, 2, 8, 9])
+        c[5] = 11  # insert new element
+        self.assertTrue(isinstance(c[4], Array) and c[4].shape == (0,))
+        self.assertTrue(c[5] == 11)
+
+    def test_roundtrip_1d(self):
+        identity = Runtime.call('eval',  '@(x) x')
+        c = Cell.from_any([1, 2, 3])
+        d = identity(c)
+        self.assertListEqual(c.tolist(), d.tolist())
+
+    def test_roundtrip_2d(self):
+        identity = Runtime.call('eval',  '@(x) x')
+        c = Cell.from_any([[1, 2, 3], [3, 4, 5]], deepcat=True)
+        d = identity(c)
+        self.assertListEqual(c.tolist(), d.tolist())
 
 
 if __name__ == '__main__':
