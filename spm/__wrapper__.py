@@ -37,6 +37,27 @@ def _import_matlab():
   broadcasted to its left, and is therefore interpreted as a row vector.
 
   !! We should clearly document this behaviour.
+
+* The creation of numeric vectors on the python side is currently
+  quite verbose (`Array.from_any([0, 0])`, because `Array([0, 0])`
+  is interpreted as "create an empty array with shape [0, 0]).
+  We could either
+  - introduce a concise helper (e.g., `num`) to make this less verbose:
+    `Array.from_any([0, 0])` -> `num([0, 0])`
+  - Interpret lists of numbers as Arrays rather than Cells. But this is
+    problematic when parsing the output of a mpython_endpoint call, since
+    lists of numbers do mean "cell" in this context.
+
+* I've added support for "structure objects" (such as nifti or cfg_dep)
+  in DelayedArray:
+  > `a.b[0] = nifti("path")` means that `a.b` contains a 1x1 nifti object.
+  but I only support 1x1 object, and the index must be 0 or -1.
+  There might be a way to make this more generic, but it needs more thinking.
+  The 1x1 case is all we need for batch jobs (it's required when building
+  jobs with dependencies).
+
+* We should probably implement a helper to convert matlab batches into
+  python batches.
 """
 
 # ----------------------------------------------------------------------
