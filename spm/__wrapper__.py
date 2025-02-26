@@ -453,6 +453,11 @@ class DelayedArray(AnyMatlabArray):
         return self._array
 
     @property
+    def as_object(self) -> "Struct":
+        self._check_finalized()
+        raise ValueError("as_object called on unfinalized delayed array")
+
+    @property
     def as_num(self) -> "Array":
         return self.__array__()
 
@@ -482,10 +487,18 @@ class DelayedArray(AnyMatlabArray):
         self._check_finalized()
         if isinstance(value, (dict, Struct)):
             array = self.as_struct
-        elif isinstance(value, (tuple, Cell)):
+        elif isinstance(value, (tuple, list, set, Cell)):
             array = self.as_cell
-            if isinstance(value, tuple):
-                value = Cell.from_iterable(value)
+        elif isinstance(value, MatlabClassWrapper):
+            if index not in (0, -1):
+                raise NotImplementedError(
+                    "Implicit advanced indexing not implemented for",
+                    type(value)
+                )
+            self._array = value
+            if self._parent is not None:
+                self._parent._finalize()
+            return
         else:
             array = self.as_num
         array[index] = value
@@ -1980,6 +1993,11 @@ class Struct(_DictMixin, WrappedArray):
         return obj
 
     def _as_runtime(self) -> dict:
+        if self.ndim == 0:
+            data = np.ndarray.view(self, np.ndarray).item()
+            data = MatlabType._to_runtime(data)
+            return data
+
         size = np.array([[*np.shape(self)]])
         data = np.ndarray.view(self, np.ndarray)
         data = np.reshape(data, [-1], order="F")

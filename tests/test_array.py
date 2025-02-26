@@ -4,7 +4,7 @@ import numpy as np
 from spm import Runtime, Array
 
 
-class CellTestCase(unittest.TestCase):
+class ArrayTestCase(unittest.TestCase):
 
     def test_instantiate_empty(self):
         a = Array()
