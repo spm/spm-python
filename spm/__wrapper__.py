@@ -320,6 +320,14 @@ class MatlabType(object):
             # All other values/types are invalid (including `None`!)
             return obj
 
+    def _as_runtime(self):
+        raise NotImplementedError
+
+    def _as_matlab_object(self):
+        # Backward compatibility
+        # FIXME: Or just keep `_as_matlab_object` and remove `_as_runtime`?
+        return self._as_runtime()
+
 
 class MatlabFunction(MatlabType):
     """Wrapper for matlab function handles."""
