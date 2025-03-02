@@ -521,7 +521,7 @@ class AnyDelayedArray(AnyMatlabArray):
 
     # Kill all operators
     __str__ = __repr__ = _error_is_not_finalized
-    __true__ = __bool__ = __float__ = __int__ = _error_is_not_finalized
+    __bool__ = __float__ = __int__ = _error_is_not_finalized
     __ceil__ = __floor__ = __round__ = __trunc__ = _error_is_not_finalized
     __add__ = __iadd__ = __radd__ = _error_is_not_finalized
     __sub__ = __isub__ = __rsub__ = _error_is_not_finalized
@@ -652,11 +652,13 @@ class WrappedDelayedArray(AnyDelayedArray):
 
     def __setitem__(self, index, value):
         self._future.__setitem__(index, value)
+        self._finalize()
 
     def __setattr__(self, key, value):
         if key in ("_parent", "_index", "_future", "_finalized"):
             return super().__setattr__(key, value)
         self._future.__setattr__(key, value)
+        self._finalize()
 
 
 class DelayedStruct(WrappedDelayedArray):
@@ -802,6 +804,11 @@ class WrappedArray(np.ndarray, AnyWrappedArray):
             np.array2string(self, prefix=pre, suffix=suf, separator=", ") +
             suf
         )
+
+    def __bool__(self):
+        # NumPy arrays do not lower to True/False in a boolean context.
+        # We do lower our matlab equivalent using all()
+        return np.ndarray.view(np.all(self), np.ndarray).item()
 
     def __iter__(self):
         # FIXME:
