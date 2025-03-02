@@ -599,11 +599,6 @@ class AnyDelayedArray(AnyMatlabArray):
         return self.as_struct[index]
 
     def __getattr__(self, key):
-        if key in ("_parent", "_index", "_future", "_finalized"):
-            assert False, "BOOOO"
-            # FIXME: this case should have been caught by __getattribute__
-            # -> check if it is, or why it isn't.
-            return super().__getattr__(key)
         return self.as_struct[key]
 
     def __setitem__(self, index, value):
