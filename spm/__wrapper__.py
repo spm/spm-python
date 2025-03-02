@@ -1,3 +1,5 @@
+from inspect import currentframe, getframeinfo
+
 import warnings
 import numpy as np
 from collections.abc import (
@@ -172,6 +174,7 @@ def _spcopy_if_needed(out, inp, copy=None):
 
 
 def _matlab_array_types():
+    """Return a mapping from matlab array type to numpy data dtype."""
     _import_matlab()
     global matlab
     if matlab:
@@ -203,7 +206,7 @@ class MatlabType(object):
     @classmethod
     def from_any(cls, other):
         """
-        Convert python objects to `MatlabType` objects
+        Convert python/matlab objects to `MatlabType` objects
         (`Cell`, `Struct`, `Array`, `MatlabClassWrapper`).
 
         !!! warning "Conversion is performed in-place when possible."
@@ -214,9 +217,9 @@ class MatlabType(object):
         #   the matlab runtime;
         # - instead, we convert to python types that mimic matlab types.
         if isinstance(other, MatlabType):
-            if hasattr(other, "_finalize"):
-                other = other._finalize()
-            return other.from_any(other)  # nested call
+            if isinstance(other, AnyDelayedArray):
+                other._error_is_not_finalized()
+            return other
 
         if isinstance(other, dict):
             if "type__" in other:
@@ -330,7 +333,16 @@ class MatlabType(object):
 
 
 class MatlabFunction(MatlabType):
-    """Wrapper for matlab function handles."""
+    """
+    Wrapper for matlab function handles.
+
+    Example
+    -------
+    ```python
+    times2 = Runtime.call("eval", "@(x) 2.*x")
+    assert(time2(1) == 2)
+    ```
+    """
 
     def __init__(self, matlab_object):
         super().__init__()
@@ -376,17 +388,20 @@ class AnyMatlabArray(MatlabType):
             f"Cannot interpret a {type(self).__name__} as a struct"
         )
 
-    @property
-    def as_default(self):
-        return self
-
 
 # ----------------------------------------------------------------------
 # DelayedArray
 # ----------------------------------------------------------------------
 
 
-class DelayedArray(AnyMatlabArray):
+class IndexOrKeyOrAttributeError(IndexError, KeyError, AttributeError):
+    """
+    Error raised when a non-indexing operation is performed on a
+    non-finalized delayed array.
+    """
+
+
+class AnyDelayedArray(AnyMatlabArray):
     """
     This is an object that we return when we don't know how an indexed
     element will be used yet.
@@ -444,60 +459,140 @@ class DelayedArray(AnyMatlabArray):
     * `a.as_num[x,y]      = num`    : `a` is a numeric array.
     """
 
-    def __init__(self, parent=None):
+    def __init__(self, parent, *index):
+        """
+        Parameters
+        ----------
+        parent : ndarray | dict
+            Reference to the object that will eventually contain
+            this element.
+            * If the containing array is a Cell, `parent` should be a
+              `ndarray` view of that cell, and `index` should be a
+              [tuple of] int.
+            * If the containing array is a Struct, `parent` should be a
+              `dict`, and `index` should be a string.
+        index : str | [tuple of] int
+            Index into the parent where this element will be inserted.
+        """
         super().__init__()
-        self._parent = parent
-        self._array = None
+        self._parent = parent       # reference to parent container
+        self._index = index         # index into parent container
+        self._future = None         # future array
+        self._finalized = False     # whether this array has been finalized
+
+    @property
+    def _final(self):
+        self._finalize()
+        return self._future
 
     def _finalize(self):
-        if self._array is None:
-            if self._parent is not None:
-                self._array = self._parent._DEFAULT()
-            else:
-                self._array = Array.from_any([])
-        return self._array
+        if self._finalized:
+            return
 
-    def _check_finalized(self):
-        if self._array is not None:
-            raise ValueError(
-                f"This DelayedArray has been finalized and should not "
-                f"be used anymore. Instead, use "
-                f"{type(self._array)} object @ {hex(id(self._array))}"
+        if self._future is None:
+            # FIXME: I am not entirely sure this should ever happen
+            self._future = Array.from_any([])
+
+        # if future array is wrapped, unwrap it
+        if isinstance(self._future, WrappedDelayedArray):
+            self._future = self._future._future
+            if hasattr(self._future, "_delayed_wrapper"):
+                del self._future._delayed_wrapper
+
+        # set value in parent
+        parent = self._parent
+        for index in self._index[:-1]:
+            parent = parent[index]
+        parent[self._index[-1]] = self._future
+
+        # finalize parent if needed
+        if hasattr(self._parent, "_final"):
+            self._parent = self._parent._final
+
+        self._finalized = True
+
+    def _error_is_not_finalized(self, *args, **kwargs):
+        raise IndexOrKeyOrAttributeError(
+            "This DelayedArray has not been finalized, and you are "
+            "attempting to use it in a way that may break its finalization "
+            "cycle.\nIt most likely means that you are indexing out-of-bounds "
+            "without *setting* the out-of-bound value.\n"
+            "* Correct usage:   a.b(i).c = x\n"
+            "* Incorrect usage: x = a.b(i).c\n"
+        )
+
+    # Kill all operators
+    __str__ = __repr__ = _error_is_not_finalized
+    __true__ = __bool__ = __float__ = __int__ = _error_is_not_finalized
+    __ceil__ = __floor__ = __round__ = __trunc__ = _error_is_not_finalized
+    __add__ = __iadd__ = __radd__ = _error_is_not_finalized
+    __sub__ = __isub__ = __rsub__ = _error_is_not_finalized
+    __mul__ = __imul__ = __rmul__ = _error_is_not_finalized
+    __truediv___ = __itruediv___ = __rtruediv___ = _error_is_not_finalized
+    __floordiv___ = __ifloordiv___ = __rfloordiv___ = _error_is_not_finalized
+    __eq__ = __ne__ = _error_is_not_finalized
+    __gt__ = __ge__ = __lt__ = __le__ = _error_is_not_finalized
+    __abs__ = __neg__ = __pos__ = _error_is_not_finalized
+    __pow__ = __ipow__ = __rpow__ = _error_is_not_finalized
+    __mod__ = __imod__ = __rmod__ = _error_is_not_finalized
+    __divmod__ = __idivmod__ = __rdivmod__ = _error_is_not_finalized
+    __contains__ = _error_is_not_finalized
+
+    def __getattribute__(self, name):
+        # Do not allow any attribute to be accessed except for those
+        # explicitly allowed by the AnyDelayedArray class.
+        # This is so no "computation" is peformed on DelayedCell,
+        # DelayedStruct, etc.
+        if name.startswith("_"):
+            return super().__getattribute__(name)
+        if name not in self.__dict__ and name not in AnyDelayedArray.__dict__:
+            return self._error_is_not_finalized()
+        return super().__getattribute__(name)
+
+    # --- Promise type -------------------------------------------------
+
+    @property
+    def as_cell(self) -> "DelayedCell":
+        if self._future is None:
+            self._future = DelayedCell((), self._parent, *self._index)
+        if not isinstance(self._future, DelayedCell):
+            raise TypeError(
+                f"{type(self._future)} cannot be interpreted as a {Cell}"
             )
+        return self._future
 
     @property
-    def as_cell(self) -> "Cell":
-        self._check_finalized()
-        self._array = Cell()
-        if self._parent is not None:
-            self._parent._finalize()
-        return self._array
+    def as_struct(self) -> "DelayedStruct":
+        if self._future is None:
+            self._future = DelayedStruct((), self._parent, *self._index)
+        if not isinstance(self._future, DelayedStruct):
+            raise TypeError(
+                f"{type(self._future)} cannot be interpreted as a {Struct}"
+            )
+        return self._future
 
     @property
-    def as_struct(self) -> "Struct":
-        self._check_finalized()
-        self._array = Struct()
-        if self._parent is not None:
-            self._parent._finalize()
-        return self._array
+    def as_num(self) -> "DelayedArray":
+        if self._future is None:
+            self._future = DelayedArray([0], self._parent, *self._index)
+        if not isinstance(self._future, DelayedArray):
+            raise TypeError(
+                f"{type(self._future)} cannot be interpreted as a {Array}"
+            )
+        return self._future
 
-    @property
-    def as_object(self) -> "Struct":
-        self._check_finalized()
-        raise ValueError("as_object called on unfinalized delayed array")
+    def as_obj(self, obj):
+        if (
+            self._future is not None and
+            not isinstance(self._future, MatlabClassWrapper)
+        ):
+            raise TypeError(
+                f"{type(self._future)} cannot be interpreted as a {type(obj)}"
+            )
+        self._future = obj
+        return self._future
 
-    @property
-    def as_num(self) -> "Array":
-        return self.__array__()
-
-    as_default = as_num
-
-    def __array__(self, dtype=None, copy=None):
-        self._check_finalized()
-        self._array = Array.from_any([], dtype=dtype)
-        if self._parent is not None:
-            self._parent._finalize()
-        return self._array
+    # --- Guess promised type ------------------------------------------
 
     def __call__(self, *index):
         return self.as_cell(*index)
@@ -506,36 +601,103 @@ class DelayedArray(AnyMatlabArray):
         return self.as_struct[index]
 
     def __getattr__(self, key):
-        if key in ("_array", "_parent"):
+        if key in ("_parent", "_index", "_future", "_finalized"):
+            assert False, "BOOOO"
             # FIXME: this case should have been caught by __getattribute__
             # -> check if it is, or why it isn't.
             return super().__getattr__(key)
         return self.as_struct[key]
 
     def __setitem__(self, index, value):
-        self._check_finalized()
-        if isinstance(value, (dict, Struct)):
-            array = self.as_struct
-        elif isinstance(value, (tuple, list, set, Cell)):
-            array = self.as_cell
-        elif isinstance(value, MatlabClassWrapper):
+        if isinstance(value, MatlabClassWrapper):
             if index not in (0, -1):
                 raise NotImplementedError(
                     "Implicit advanced indexing not implemented for",
                     type(value)
                 )
-            self._array = value
-            if self._parent is not None:
-                self._parent._finalize()
-            return
+            self.as_obj(value)
+            return self._finalize()
+
+        if isinstance(value, (dict, Struct)):
+            arr = self.as_struct
+        elif isinstance(value, (tuple, list, set, Cell)):
+            arr = self.as_cell
+        elif isinstance(value, (int, float, np.number, Array)):
+            arr = self.as_num
+        elif isinstance(value, np.ndarray):
+            if issubclass(value.dtype.type, np.number):
+                arr = self.as_num
+            else:
+                arr = self.as_cell
         else:
-            array = self.as_num
-        array[index] = value
+            arr = self.as_cell
+
+        arr[index] = value
+        return self._finalize()  # Setter -> we can trigger finalize
 
     def __setattr__(self, key, value):
-        if key in ("_array", "_parent"):
+        if key in ("_parent", "_index", "_future", "_finalized"):
             return super().__setattr__(key, value)
         self.as_struct[key] = value
+        return self._finalize()  # Setter -> we can trigger finalize
+
+
+class WrappedDelayedArray(AnyDelayedArray):
+
+    def __init__(self, future, parent, *index):
+        super().__init__(parent, *index)
+        self._future = future
+
+    def __call__(self, *index):
+        return self._future.__call__(*index)
+
+    def __getitem__(self, index):
+        return self._future.__getitem__(index)
+
+    def __getattr__(self, key):
+        return self._future.__getattr__(key)
+
+    def __setitem__(self, index, value):
+        self._future.__setitem__(index, value)
+
+    def __setattr__(self, key, value):
+        if key in ("_parent", "_index", "_future", "_finalized"):
+            return super().__setattr__(key, value)
+        self._future.__setattr__(key, value)
+
+
+class DelayedStruct(WrappedDelayedArray):
+
+    def __init__(self, shape, parent, *index):
+        future = Struct.from_shape(shape)
+        future._delayed_wrapper = self
+        super().__init__(future, parent, *index)
+
+
+class DelayedCell(WrappedDelayedArray):
+
+    def __init__(self, shape, parent, *index):
+        future = Cell.from_shape(shape)
+        future._delayed_wrapper = self
+        super().__init__(future, parent, *index)
+
+        # Insert delayed arrays instead of the usual defaults
+        opt = dict(
+            flags=['refs_ok', 'zerosize_ok', 'multi_index'],
+            op_flags=['writeonly', 'no_broadcast']
+        )
+        arr = np.ndarray.view(self._future, np.ndarray)
+        with np.nditer(arr, **opt) as iter:
+            for elem in iter:
+                elem[()] = AnyDelayedArray(self, iter.multi_index)
+
+
+class DelayedArray(WrappedDelayedArray):
+
+    def __init__(self, shape, parent, *index):
+        future = Array.from_shape(shape)
+        future._delayed_wrapper = self
+        super().__init__(future, parent, *index)
 
 
 # ----------------------------------------------------------------------
@@ -629,15 +791,9 @@ class WrappedArray(np.ndarray, AnyWrappedArray):
     Base class for "arrays of things" (Array, Cell, Struct.)
     """
 
-    # Value used for delayed arrays whose type cannot be guessed
-    # Must be implemented in Array/Cell/Struct.
+    # Value used to initalize empty arrays
     @classmethod
-    def _DEFAULT(cls, n: list = ()):
-        raise NotImplementedError
-
-    # Value used to fill-in a newly allocated array.
-    # Must be implemented in Array/Cell/Struct.
-    def _DELAYED(self, n: list = ()):
+    def _DEFAULT(cls, shape: list = ()):
         raise NotImplementedError
 
     def __str__(self):
@@ -668,16 +824,20 @@ class WrappedArray(np.ndarray, AnyWrappedArray):
         try:
             return super().__getitem__(index)
         except IndexError:
-            self._resize_for_index(index, mode="delayed")
-            return super().__getitem__(index)
+            # We return a delayed version of the current type, with the
+            # same shape as the requested view. Its elements will only
+            # be inserted into the original object (self) is the view
+            # is properly finalized by an eventual call to __setitem__
+            # or __setattr__.
+            return self._return_delayed(index)
 
     def __setitem__(self, index, value):
         """Resize array if needed, then fallback to np.ndarray indexing."""
         value = MatlabType.from_any(value)
         try:
             return super().__setitem__(index, value)
-        except IndexError:
-            self._resize_for_index(index, mode="default")
+        except (IndexError, ValueError):
+            self._resize_for_index(index)
             return super().__setitem__(index, value)
 
     def __delitem__(self, index):
@@ -746,7 +906,7 @@ class WrappedArray(np.ndarray, AnyWrappedArray):
             self[index:-1] = self[index+1:]
             np.ndarray.resize(self, new_shape, refcheck=False)
 
-    def _resize_for_index(self, index, mode="delayed"):
+    def _resize_for_index(self, index):
         """
         Resize the array so that the (multidimensional) index is not OOB.
 
@@ -777,6 +937,21 @@ class WrappedArray(np.ndarray, AnyWrappedArray):
                     next_index = next_shape + next_index
                 if next_index >= next_shape:
                     next_shape = next_index + 1
+            elif isinstance(next_index, slice):
+                # FIXME: this is not exactly right when abs(step) != 1
+                step = next_index.step or 1
+                start = next_index.start
+                stop = next_index.stop
+                start = next_shape + start if start < 0 else start
+                stop = next_shape + stop if stop < 0 else stop
+                if step < 0:
+                    max_index = start
+                else:
+                    max_index = stop
+                if max_index is None:
+                    max_index = next_shape
+                if max_index > next_shape:
+                    next_shape = max_index
             elif not isinstance(next_index, slice):
                 raise TypeError(
                     "Can only automatically resize cell if simple "
@@ -786,27 +961,62 @@ class WrappedArray(np.ndarray, AnyWrappedArray):
             new_shape.append(next_shape)
         new_shape = new_shape + shape
         view_index = tuple(slice(x, None) for x in np.shape(self))
-        np.ndarray.resize(self, new_shape, refcheck=False)
+        try:
+            np.ndarray.resize(self, new_shape, refcheck=False)
+        except ValueError as e:
+            raise ValueError(type(self).__name__, self, str(e))
         arr = np.ndarray.view(self, np.ndarray)
         view_shape = arr[view_index].shape
-        FILLER = self._DELAYED if mode == "delayed" else self._DEFAULT
-        new_data = FILLER(view_shape)
+        new_data = self._DEFAULT(view_shape)
         arr[view_index] = new_data
 
-    def _finalize(self):
-        """Transform all DelayedArrays into concrete arrays."""
-        opt = dict(flags=['refs_ok', 'zerosize_ok'],
-                   op_flags=['readwrite', 'no_broadcast'])
-        with np.nditer(self, **opt) as iter:
-            for elem in iter:
-                item = elem.item()
-                if isinstance(item, AnyMatlabArray):
-                    # FIXME: this is done in MatlabType.from_any
-                    # so get rid of this if/else and defer to from_any?
-                    elem[()] = item._finalize()
-                else:
-                    elem[()] = MatlabType.from_any(item)
-        return self
+    def _return_delayed(self, index):
+        if not isinstance(index, tuple):
+            index = (index,)
+
+        # NOTE
+        #   Resize as if we were already performing a valid __setitem__.
+        #   This helps us guess the shape of the view.
+        #   Also, we'll hopefully be able to use the allocated space
+        #   later if the caller did not mess up their syntax, so there's
+        #   not much wasted performance.
+        shape = self.shape
+        self._resize_for_index(index)
+
+        # NOTE
+        #   Ensure that the indexed view is an array, not a single item.
+        index_for_view = index
+        if ... not in index_for_view:
+            index_for_view = index_for_view + (...,)
+
+        sub_shape = np.ndarray.view(self, np.ndarray)[index_for_view].shape
+
+        # NOTE
+        #   Now, undo resize so that if the caller's syntax is wrong and
+        #   an exception is raised (and caught), it's as if nothing ever
+        #   happened.
+        np.ndarray.resize(self, shape, refcheck=False)
+
+        # NOTE
+        #   If self is wrapped in a DelayedCell/DelayedStruct,
+        #   reference wrapper instead of self.
+        parent = getattr(self, "_delayed_wrapper", self)
+
+        if isinstance(self, Cell):
+            if sub_shape == ():
+                return AnyDelayedArray(parent, index)
+            else:
+                return DelayedCell(sub_shape, parent, index)
+
+        elif isinstance(self, Struct):
+            return DelayedStruct(sub_shape, parent, index)
+
+        else:
+            # NOTE
+            #   In numeric arrays, only seeting OOB items is allowed.
+            #   Getting OOB items should raise an error.
+            #   This is why we overload this function.
+            return super().__getitem__(index)  # will raise
 
 
 # ----------------------------------------------------------------------
@@ -899,10 +1109,6 @@ if sparse:
             other = _spcopy_if_needed(other, inp, copy)
             return other
 
-        def _finalize(self):
-            # Nothing to do, sparse array cannot contain python objects.
-            return self
-
 
 # ----------------------------------------------------------------------
 # Array
@@ -974,13 +1180,10 @@ class Array(_ListishMixin, WrappedArray):
     def _DEFAULT(cls, n: list = ()) -> int:
         return 0
 
-    def _DELAYED(self, n: list = ()) -> int:
-        return 0
-
     def __new__(cls, *args, **kwargs) -> "Array":
         mode, arg, kwargs = cls._parse_args(*args, **kwargs)
         if mode == "shape":
-            obj = super().__new__(cls, arg, **kwargs)
+            obj = super().__new__(cls, shape=arg, **kwargs)
             obj[...] = cls._DEFAULT()
             if not issubclass(obj.dtype.type, np.number):
                 raise TypeError("Array data type must be numeric")
@@ -1132,10 +1335,6 @@ class Array(_ListishMixin, WrappedArray):
         else:
             return super().__repr__()
 
-    def _finalize(self):
-        # Nothing to do, numeric array cannot contain python objects.
-        return self
-
 
 # ----------------------------------------------------------------------
 # Cell
@@ -1192,11 +1391,11 @@ class _ListMixin(_ListishMixin, MutableSequence):
     # --- magic --------------------------------------------------------
 
     def __add__(self, other):
-        other = Cell.from_any(other)
+        other = type(self).from_any(other)
         return np.concatenate([self, other])
 
     def __radd__(self, other):
-        other = Cell.from_any(other)
+        other = type(self).from_any(other)
         return np.concatenate([other, self])
 
     def __iadd__(self, other):
@@ -1296,7 +1495,7 @@ class _ListMixin(_ListishMixin, MutableSequence):
                 return i
         raise ValueError(value, "is not in", type(self).__name__)
 
-    def insert(self, index, object):
+    def insert(self, index, obj):
         """Insert object before index."""
         if index < 0:
             # +1 because we insert *after* the index if negative
@@ -1307,7 +1506,7 @@ class _ListMixin(_ListishMixin, MutableSequence):
         new_shape[0] += 1
         np.ndarray.resize(self, new_shape, refcheck=False)
         self[index+1:] = self[index:-1]
-        self[index] = object
+        self[index] = obj
 
     def pop(self, index=-1):
         """Remove and return item at index (default last)."""
@@ -1411,6 +1610,8 @@ class Cell(_ListMixin, WrappedArray):
     #   method overload those from np.ndarray. This is why the
     #   inheritence order is (_ListMixin, _WrappedArray).
 
+    _DelayedType = DelayedCell
+
     @classmethod
     def _DEFAULT(cls, n: list = ()) -> np.ndarray:
         if len(n) == 0:
@@ -1424,20 +1625,6 @@ class Cell(_ListMixin, WrappedArray):
         with np.nditer(data, **opt) as iter:
             for elem in iter:
                 elem[()] = Array.from_any([])
-        return data
-
-    def _DELAYED(self, n: list = ()) -> np.ndarray:
-        if len(n) == 0:
-            return DelayedArray(self)
-
-        data = np.empty(n, dtype=object)
-        opt = dict(
-            flags=['refs_ok', 'zerosize_ok'],
-            op_flags=['writeonly', 'no_broadcast']
-        )
-        with np.nditer(data, **opt) as iter:
-            for elem in iter:
-                elem[()] = DelayedArray(self)
         return data
 
     def _fill_default(self):
@@ -1456,7 +1643,7 @@ class Cell(_ListMixin, WrappedArray):
             if len(arg) == 0:
                 # Scalar cells are forbidden
                 arg = [0]
-            return super().__new__(cls, arg, **kwargs)._fill_default()
+            return super().__new__(cls, shape=arg, **kwargs)._fill_default()
         else:
             return cls.from_any(arg, **kwargs)
 
@@ -1797,40 +1984,71 @@ class _DictMixin(MutableMapping):
             return iter(self.keys())
 
     def __getitem__(self, key):
-        # NOTE
-        #   We only insert a DelayedArray if it is a completely new key.
-        #   Otherwise the default value is [], as per matlab.
-        isnewkey = key not in self.keys()
-        arr = np.ndarray.view(self, np.ndarray)
-        opt = dict(flags=['refs_ok', 'zerosize_ok'], op_flags=['readonly'])
-        with np.nditer(arr, **opt) as iter:
-            for elem in iter:
-                elem.item().setdefault(
-                    key,
-                    DelayedArray(self) if isnewkey else Array.from_any([])
-                )
-        return self.as_dict()[key]
+        if key in self.keys():
+
+            # NOTE
+            #   If some of the dictionaries in the array do not have
+            #   their field `key` properly set, we assign an empty
+            #   numeric array (same default value as in matlab).
+
+            arr = np.ndarray.view(self, np.ndarray)
+            opt = dict(flags=['refs_ok', 'zerosize_ok'], op_flags=['readonly'])
+            with np.nditer(arr, **opt) as iter:
+                for elem in iter:
+                    elem.item().setdefault(key, Array.from_any([]))
+
+            # NOTE
+            #   We then defer to `as_dict`
+
+            return self.as_dict(keys=[key])[key]
+
+        else:
+
+            # NOTE
+            #   We return a new (delayed) struct, whose elements under
+            #  `key` are delayed arrays that point to `self` (and *not*
+            #   to the delayed struct). This way, when the objects
+            #   implicitely assigned to `key` get finalized, they are
+            #   inserted into the orginal struct (`self`), not into
+            #   the delayed struct (`delayed`).
+            #
+            #   We do not need to use a `DelayedStruct` here.
+
+            parent = getattr(self, "_delayed_wrapper", self)
+
+            delayed = Struct(self.shape)
+            opt = dict(
+                flags=['refs_ok', 'zerosize_ok', 'multi_index'],
+                op_flags=['writeonly', 'no_broadcast']
+            )
+            arr = np.ndarray.view(delayed, np.ndarray)
+            with np.nditer(arr, **opt) as iter:
+                for elem in iter:
+                    item = elem.item()
+                    item[key] = AnyDelayedArray(parent, iter.multi_index, key)
+
+            return delayed.as_dict(keys=[key])[key]
 
     def __setitem__(self, key, value):
         arr = np.ndarray.view(self, np.ndarray)
 
         if np.ndim(arr) == 0:
             # Scalar array: assign value to the field
-            if isinstance(value, self.unpack):
-                # unpacks are cells and cannot be 0-dim
+            if isinstance(value, self.deal):
+                # `deal` objects are cells and cannot be 0-dim
                 raise ValueError("Cannot broadcast.")
             arr.item()[key] = MatlabType.from_any(value)
 
-        elif isinstance(value, self.unpack):
+        elif isinstance(value, self.deal):
             # Each element in the struct array is matched with an element
-            # in the "unpack" array.
+            # in the "deal" array.
             value = value.broadcast_to_struct(self)
             opt = dict(flags=['refs_ok', 'zerosize_ok', 'multi_index'],
                        op_flags=['readonly'])
             with np.nditer(arr, **opt) as iter:
                 for elem in iter:
                     val = value[iter.multi_index]
-                    if isinstance(val, self.unpack):
+                    if isinstance(val, self.deal):
                         val = val.to_cell()
                     elem.item()[key] = MatlabType.from_any(val)
 
@@ -1862,13 +2080,17 @@ class _DictMixin(MutableMapping):
     def values(self):
         return self.ValuesView(self)
 
-    def setdefault(self, key, value):
+    def setdefault(self, key, value=None):
         arr = np.ndarray.view(self, np.ndarray)
         opt = dict(flags=['refs_ok', 'zerosize_ok'], op_flags=['readonly'])
         with np.nditer(arr, **opt) as iter:
             for elem in iter:
                 item = elem.item()
-                item.setdefault(key, MatlabType.from_any(value))
+                if value is None:
+                    value = Array.from_any([])
+                else:
+                    value = MatlabType.from_any(value)
+                item.setdefault(key, value)
 
     def update(self, other):
         other = Struct.from_any(other)
@@ -1886,7 +2108,7 @@ class _DictMixin(MutableMapping):
 
     # --- helper ------------------------------------------------------
 
-    class unpack(Cell):
+    class deal(Cell):
         """
         Helper class to assign values into a specific field of a Struct array.
 
@@ -1897,7 +2119,7 @@ class _DictMixin(MutableMapping):
         # [{"field": [1, 2]}, {"field": [1, 2]}]
 
         s = Struct(2)
-        s.field = Struct.unpack([1, 2])
+        s.field = Struct.deal([1, 2])
         print(s)
         # [{"field": 1}, {"field": 2}]
         ```
@@ -1912,7 +2134,7 @@ class _DictMixin(MutableMapping):
         def __new__(cls, arg, **kwargs):
             return cls.from_any(arg, **kwargs)
 
-        def broadcast_to_struct(self, struct: "Struct") -> "Struct.unpack":
+        def broadcast_to_struct(self, struct: "Struct") -> "Struct.deal":
             shape = struct.shape + self.shape[len(struct.shape):]
             return np.broadcast_to(self, shape)
 
@@ -1985,6 +2207,8 @@ class Struct(_DictMixin, WrappedArray):
     # required to not break the numpy api.
     _NDARRAY_ATTRS = ("ndim", "shape", "size", "reshape")
 
+    _DelayedType = DelayedStruct
+
     @classmethod
     def _DEFAULT(self, n: list = ()) -> np.ndarray:
         if len(n) == 0:
@@ -2000,8 +2224,6 @@ class Struct(_DictMixin, WrappedArray):
                 elem[()] = dict()
         return data
 
-    _DELAYED = _DEFAULT
-
     def _fill_default(self):
         arr = np.ndarray.view(self, np.ndarray)
         flags = dict(flags=['refs_ok', 'zerosize_ok'], op_flags=['readwrite'])
@@ -2015,7 +2237,7 @@ class Struct(_DictMixin, WrappedArray):
         kwargs["__has_order"] = False
         mode, arg, kwargs = cls._parse_args(*args, **kwargs)
         if mode == "shape":
-            obj = super().__new__(cls, arg, dtype=dict)._fill_default()
+            obj = super().__new__(cls, shape=arg, dtype=dict)._fill_default()
         else:
             obj = cls.from_any(arg)
         obj.update(kwargs)
@@ -2197,17 +2419,32 @@ class Struct(_DictMixin, WrappedArray):
         else:
             return super().__repr__()
 
-    def as_dict(self) -> dict:
+    def as_dict(self, keys=None) -> dict:
         """
         Convert the object into a plain dict.
 
         * If a struct, return the underlying dict (no copy, is a view)
         * If a struct array, return a dict of Cell (copy, not a view)
         """
+
+        # NOTE
+        #   The `keys` argument is only used in `__getattr__` to avoid
+        #   building the entire dictionary, when the content os a single
+        #   key is eventually used.
+
         # scalar struct -> return the underlying dictionary
-        # otherwise     -> reverse array/dict order -> dict of cells of values
+
         if np.ndim(self) == 0:
-            return np.ndarray.item(self)
+            asdict = np.ndarray.item(self)
+            if keys is not None:
+                asdict = {key: asdict[key] for key in keys}
+            return asdict
+
+        # otherwise     -> reverse array/dict order -> dict of cells of values
+
+        if keys is None:
+            keys = self._allkeys()
+
         arr = np.ndarray.view(self, np.ndarray)
         opt = dict(flags=['refs_ok', 'zerosize_ok'], op_flags=['readwrite'])
         with np.nditer(arr, **opt) as iter:
@@ -2215,7 +2452,7 @@ class Struct(_DictMixin, WrappedArray):
                 key: Cell.from_any([
                     elem.item().get(key, self._DEFAULT()) for elem in iter
                 ]).reshape(np.shape(self))
-                for key in self._allkeys()
+                for key in keys
             }
 
     def _allkeys(self):
@@ -2223,11 +2460,28 @@ class Struct(_DictMixin, WrappedArray):
         # Keys are ordered by (1) element (2) within-element order
         mock = {}
         arr = np.ndarray.view(self, np.ndarray)
-        opt = dict(flags=['refs_ok', 'zerosize_ok'], op_flags=['readwrite'])
+        opt = dict(flags=['refs_ok', 'zerosize_ok'], op_flags=['readonly'])
         with np.nditer(arr, **opt) as iter:
             for elem in iter:
                 mock.update({key: None for key in elem.item().keys()})
         return mock.keys()
+
+    def _ensure_defaults_are_set(self, keys=None):
+
+        if np.ndim(self) == 0:
+            if keys:
+                for key in keys:
+                    self.setdefault(key, Array.from_any([]))
+
+        if keys is None:
+            keys = self._allkeys()
+
+        arr = np.ndarray.view(self, np.ndarray)
+        opt = dict(flags=['refs_ok', 'zerosize_ok'], op_flags=['readonly'])
+        with np.nditer(arr, **opt) as iter:
+            for elem in iter:
+                for key in keys:
+                    elem.item().setdefault(key, Array.from_any([]))
 
     # --------------
     # Bracket syntax
@@ -2241,7 +2495,7 @@ class Struct(_DictMixin, WrappedArray):
                 raise KeyError(str(e))
         else:
             obj = WrappedArray.__getitem__(self, index)
-            if not isinstance(obj, Struct):
+            if not isinstance(obj, (Struct, DelayedStruct)):
                 # We've indexed a single element, but we do not want
                 # to expose the underlying dictionary. Instead,
                 # we return an empty-sized view of the element, which
@@ -2259,14 +2513,15 @@ class Struct(_DictMixin, WrappedArray):
             setattr(self, index, value)
         else:
             WrappedArray.__setitem__(self, index, value)
+        self._ensure_defaults_are_set()
 
-    def __delitem__(self, key):
-        if isinstance(key, str):
+    def __delitem__(self, index):
+        if isinstance(index, str):
             try:
-                return delattr(self, key)
+                return delattr(self, index)
             except AttributeError as e:
                 raise KeyError(str(e))
-        return WrappedArray.__delitem__(self, key)
+        return WrappedArray.__delitem__(self, index)
 
     # ----------
     # Dot syntax
@@ -2284,7 +2539,9 @@ class Struct(_DictMixin, WrappedArray):
 
     def __getattr__(self, key):
         if key[:1] == "_":
-            raise AttributeError(f"Struct object has no attribute '{key}'")
+            raise AttributeError(
+                f"{type(self).__name__} object has no attribute '{key}'"
+            )
         try:
             return _DictMixin.__getitem__(self, key)
         except KeyError as e:
@@ -2292,9 +2549,13 @@ class Struct(_DictMixin, WrappedArray):
 
     def __setattr__(self, key, value):
         if key[:1] == "_":
-            return super().__setattr__(key, value)
+            super().__setattr__(key, value)
+            self._ensure_defaults_are_set()
+            return
         try:
-            return _DictMixin.__setitem__(self, key, value)
+            _DictMixin.__setitem__(self, key, value)
+            self._ensure_defaults_are_set()
+            return
         except KeyError as e:
             raise AttributeError(str(e))
 
@@ -2305,28 +2566,6 @@ class Struct(_DictMixin, WrappedArray):
             return _DictMixin.__delitem__(self, key)
         except KeyError as e:
             raise AttributeError(str(e))
-
-    # -------
-    # Delayed
-    # -------
-
-    def _finalize(self):
-        arr = np.ndarray.view(self, np.ndarray)
-        opt = dict(flags=['refs_ok', 'zerosize_ok'], op_flags=['readwrite'])
-        with np.nditer(arr, **opt) as iter:
-            for elem in iter:
-                item = elem.item()
-                if not isinstance(item, dict):
-                    elem[()] = {}
-                    continue
-                for key, value in item.items():
-                    if isinstance(value, AnyMatlabArray):
-                        # FIXME: this is done in MatlabType.from_any
-                        # so get rid of this if/else and defer to from_any?
-                        item[key] = value._finalize()
-                    else:
-                        item[key] = MatlabType.from_any(item[key])
-        return self
 
 
 # ----------------------------------------------------------------------
