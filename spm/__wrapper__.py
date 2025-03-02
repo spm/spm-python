@@ -899,7 +899,7 @@ class WrappedArray(np.ndarray, AnyWrappedArray):
             self[index:-1] = self[index+1:]
             np.ndarray.resize(self, new_shape, refcheck=False)
 
-    def _resize_for_index(self, index):
+    def _resize_for_index(self, index, set_default=True):
         """
         Resize the array so that the (multidimensional) index is not OOB.
 
@@ -954,14 +954,12 @@ class WrappedArray(np.ndarray, AnyWrappedArray):
             new_shape.append(next_shape)
         new_shape = new_shape + shape
         view_index = tuple(slice(x, None) for x in np.shape(self))
-        try:
-            np.ndarray.resize(self, new_shape, refcheck=False)
-        except ValueError as e:
-            raise ValueError(type(self).__name__, self, str(e))
-        arr = np.ndarray.view(self, np.ndarray)
-        view_shape = arr[view_index].shape
-        new_data = self._DEFAULT(view_shape)
-        arr[view_index] = new_data
+        np.ndarray.resize(self, new_shape, refcheck=False)
+        if set_default:
+            arr = np.ndarray.view(self, np.ndarray)
+            view_shape = arr[view_index].shape
+            new_data = self._DEFAULT(view_shape)
+            arr[view_index] = new_data
 
     def _return_delayed(self, index):
         if not isinstance(index, tuple):
@@ -974,7 +972,7 @@ class WrappedArray(np.ndarray, AnyWrappedArray):
         #   later if the caller did not mess up their syntax, so there's
         #   not much wasted performance.
         shape = self.shape
-        self._resize_for_index(index)
+        self._resize_for_index(index, set_default=False)
 
         # NOTE
         #   Ensure that the indexed view is an array, not a single item.
