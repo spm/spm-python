@@ -1091,14 +1091,14 @@ if sparse:
             interpreted as dense arrays to copy, use `SparseArray.from_any`.
         """
 
-        def __new__(cls, *args, **kwargs) -> "Array":
-            mode, arg, kwargs = cls._parse_args(*args, **kwargs)
+        def __init__(self, *args, **kwargs) -> "SparseArray":
+            mode, arg, kwargs = self._parse_args(*args, **kwargs)
             if mode == "shape":
-                return super().__new__(cls, shape=arg, **kwargs)
+                return super().__init__(shape=arg, **kwargs)
             else:
                 if not isinstance(arg, (np.ndarray, sparse.sparray)):
                     arg = np.asanyarray(arg)
-                return super().__new__(cls, arg, **kwargs)
+                return super().__init__(arg, **kwargs)
 
         def _as_runtime(self) -> dict:
             data = super().todense()
