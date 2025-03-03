@@ -265,6 +265,18 @@ class MatlabType(object):
                         data = np.asarray(other['data__'], dtype=np.double)
                         return data.view(Array)
 
+                elif type__ == "char":
+                    # Character array that is not a row vector
+                    # (row vector are converted to str automatically)
+                    # Matlab returns all rows in a (F-ordered) cell in data__
+                    # Let's use the cell constructor to return a cellstr.
+                    # -> A cellstr is a column vector, not a row vector
+                    size = np.asarray(other["size__"]).tolist()[0]
+                    size = size[:-1] + [1]
+                    other["type__"] = "cell"
+                    other["size__"] = np.asarray([size])
+                    return Cell._from_runtime(other)
+
                 else:
                     raise ValueError("Don't know what to do with type", type__)
 
@@ -276,6 +288,7 @@ class MatlabType(object):
             return Cell.from_any(other)
 
         if isinstance(other, (np.ndarray, int, float, complex, bool)):
+            # [array of] numbers -> Array
             return Array.from_any(other)
 
         if isinstance(other, str):
@@ -296,7 +309,7 @@ class MatlabType(object):
             return Array.from_any(other, dtype=dtype)
 
         raise TypeError(
-            f"Cannot convert {type(other).__name__} into a matlab object."
+            f"Cannot convert {type(other)} into a matlab object."
         )
 
     @classmethod
@@ -314,6 +327,8 @@ class MatlabType(object):
             return type(obj)(map(to_runtime, obj))
 
         elif isinstance(obj, dict):
+            if "type__" in obj:
+                return obj
             return type(obj)(zip(obj.keys(), map(to_runtime, obj.values())))
 
         elif isinstance(obj, np.ndarray):
@@ -625,7 +640,10 @@ class AnyDelayedArray(AnyMatlabArray):
         return self.as_struct[key]
 
     def __setitem__(self, index, value):
-        if isinstance(value, MatlabClassWrapper):
+        if isinstance(index, str):
+            arr = self.as_struct
+
+        elif isinstance(value, MatlabClassWrapper):
             if index not in (0, -1):
                 raise NotImplementedError(
                     "Implicit advanced indexing not implemented for",
@@ -634,7 +652,7 @@ class AnyDelayedArray(AnyMatlabArray):
             self.as_obj(value)
             return self._finalize()
 
-        if isinstance(value, (dict, Struct)):
+        elif isinstance(value, (dict, Struct)):
             arr = self.as_struct
         elif isinstance(value, (tuple, list, set, Cell)):
             arr = self.as_cell
@@ -1725,7 +1743,15 @@ class Cell(_ListMixin, WrappedArray):
                 f'  data={data}\n'
                 f'  objdict={objdict}'
             )
-        return MatlabType.from_any(obj)
+
+        # recurse
+        opt = dict(flags=['refs_ok', 'zerosize_ok'],
+                   op_flags=['readwrite', 'no_broadcast'])
+        with np.nditer(data, **opt) as iter:
+            for elem in iter:
+                elem[()] = MatlabType.from_any(elem.item())
+
+        return obj
 
     @classmethod
     def from_shape(cls, shape=tuple(), **kwargs) -> "Cell":
