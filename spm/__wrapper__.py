@@ -40,7 +40,7 @@ def _import_matlab():
 
 * The creation of numeric vectors on the python side is currently
   quite verbose (`Array.from_any([0, 0])`, because `Array([0, 0])`
-  is interpreted as "create an empty array with shape [0, 0]).
+  is interpreted as "create an empty array with shape [0, 0]").
   We could either
   - introduce a concise helper (e.g., `num`) to make this less verbose:
     `Array.from_any([0, 0])` -> `num([0, 0])`
@@ -48,13 +48,32 @@ def _import_matlab():
     problematic when parsing the output of a mpython_endpoint call, since
     lists of numbers do mean "cell" in this context.
 
-* I've added support for "structure objects" (such as nifti or cfg_dep)
+* I've added support for "object arrays" (such as nifti or cfg_dep)
   in DelayedArray:
   > `a.b[0] = nifti("path")` means that `a.b` contains a 1x1 nifti object.
-  but I only support 1x1 object, and the index must be 0 or -1.
+  However, I only support 1x1 object, and the index must be 0 or -1.
   There might be a way to make this more generic, but it needs more thinking.
   The 1x1 case is all we need for batch jobs (it's required when building
   jobs with dependencies).
+
+  It might be useful to have a `ObjectArray` type (with `MatlabClassWrapper`
+  as a base class?) for such objects -- It'll help with the logic in
+  delayed arrays. It should be detectable by looking for `class(struct(...))`
+  in the constructor when parsing the matlab code, although there are
+  cases where the struct is created beforehand, e.g.:
+  https://github.com/spm/spm/blob/main/%40nifti/nifti.m#L12
+
+  Maybe there's a programmatic way in matlab to detect if a class is
+  a pure object or an object array? It seems that old-school classes
+  that use the class(struct) constructor are always object arrays.
+  With new-style classes, object arrays can be constructed after the
+  fact:
+  https://uk.mathworks.com/help/matlab/matlab_oop/creating-object-arrays.html
+
+  After more thinking, it also means that we have again a difference in bhv
+  between `x{1} = object` and `x(1) = object`. In the former case, x is
+  a cell that contains an object, whereas in the latter x is a 1x1 object
+  array.
 
 * We should probably implement a helper to convert matlab batches into
   python batches.
@@ -283,7 +302,7 @@ class MatlabType(object):
     @classmethod
     def _to_runtime(cls, obj):
         """
-        Convert object to representation that the matlab runtime understand.
+        Convert object to representation that the matlab runtime understands.
         """
         to_runtime = cls._to_runtime
 
@@ -386,6 +405,8 @@ class AnyMatlabArray(MatlabType):
             f"Cannot interpret a {type(self).__name__} as a struct"
         )
 
+    # TODO: `as_obj` for object arrays?
+
 
 # ----------------------------------------------------------------------
 # DelayedArray
@@ -456,6 +477,8 @@ class AnyDelayedArray(AnyMatlabArray):
     * `a.as_cell[x,y].f   = any`    : `a` is a cell array containing a struct;
     * `a.as_num[x,y]      = num`    : `a` is a numeric array.
     """
+
+    _ATTRIBUTES = ("_parent", "_index", "_future", "_finalized")
 
     def __init__(self, parent, *index):
         """
@@ -629,7 +652,7 @@ class AnyDelayedArray(AnyMatlabArray):
         return self._finalize()  # Setter -> we can trigger finalize
 
     def __setattr__(self, key, value):
-        if key in ("_parent", "_index", "_future", "_finalized"):
+        if key in type(self)._ATTRIBUTES:
             return super().__setattr__(key, value)
         self.as_struct[key] = value
         return self._finalize()  # Setter -> we can trigger finalize
@@ -655,7 +678,7 @@ class WrappedDelayedArray(AnyDelayedArray):
         self._finalize()
 
     def __setattr__(self, key, value):
-        if key in ("_parent", "_index", "_future", "_finalized"):
+        if key in type(self)._ATTRIBUTES:
             return super().__setattr__(key, value)
         self._future.__setattr__(key, value)
         self._finalize()
@@ -972,7 +995,6 @@ class WrappedArray(np.ndarray, AnyWrappedArray):
         if not isinstance(index, tuple):
             index = (index,)
 
-        # NOTE
         #   Resize as if we were already performing a valid __setitem__.
         #   This helps us guess the shape of the view.
         #   Also, we'll hopefully be able to use the allocated space
@@ -981,7 +1003,6 @@ class WrappedArray(np.ndarray, AnyWrappedArray):
         shape = self.shape
         self._resize_for_index(index, set_default=False)
 
-        # NOTE
         #   Ensure that the indexed view is an array, not a single item.
         index_for_view = index
         if ... not in index_for_view:
@@ -989,13 +1010,11 @@ class WrappedArray(np.ndarray, AnyWrappedArray):
 
         sub_shape = np.ndarray.view(self, np.ndarray)[index_for_view].shape
 
-        # NOTE
         #   Now, undo resize so that if the caller's syntax is wrong and
         #   an exception is raised (and caught), it's as if nothing ever
         #   happened.
         np.ndarray.resize(self, shape, refcheck=False)
 
-        # NOTE
         #   If self is wrapped in a DelayedCell/DelayedStruct,
         #   reference wrapper instead of self.
         parent = getattr(self, "_delayed_wrapper", self)
@@ -1010,11 +1029,10 @@ class WrappedArray(np.ndarray, AnyWrappedArray):
             return DelayedStruct(sub_shape, parent, index)
 
         else:
-            # NOTE
             #   In numeric arrays, only seeting OOB items is allowed.
-            #   Getting OOB items should raise an error.
-            #   This is why we overload this function.
-            return super().__getitem__(index)  # will raise
+            #   Getting OOB items should raise an error, which this
+            #   call to the ndarray accessor will do.
+            return super().__getitem__(index)
 
 
 # ----------------------------------------------------------------------
@@ -1031,7 +1049,29 @@ if sparse:
             return Array.from_any(super().to_dense())
 
     class SparseArray(sparse.coo_array, WrappedSparseArray):
-        """Matlab sparse arrays."""
+        """
+        Matlab sparse arrays.
+
+        ```python
+        # Instantiate from size
+        SparseArray(N, M, ...)
+        SparseArray([N, M, ...])
+        SparseArray.from_shape([N, M, ...])
+
+        # Instantiate from existing sparse or dense array
+        SparseArray(other_array)
+        SparseArray.from_any(other_array)
+
+        # Other options
+        SparseArray(..., dtype=None, *, copy=None)
+        ```
+
+        !!! warning
+            Lists or vectors of integers can be interpreted as shapes
+            or as dense arrays to copy. They are interpreted as shapes
+            by the `SparseArray` constructor. To ensure that they are
+            interpreted as dense arrays to copy, use `SparseArray.from_any`.
+        """
 
         def __new__(cls, *args, **kwargs) -> "Array":
             mode, arg, kwargs = cls._parse_args(*args, **kwargs)
@@ -1055,7 +1095,7 @@ if sparse:
         @classmethod
         def from_shape(cls, shape=tuple(), **kwargs) -> "Array":
             """
-            Build an array if a given shape.
+            Build an array of a given shape.
 
             Parameters
             ----------
@@ -1171,8 +1211,14 @@ class Array(_ListishMixin, WrappedArray):
     Array.from_any(other_array)
 
     # Other options
-    Array(..., dtype=None, order=None, *, copy=None)
+    Array(..., dtype=None, order=None, *, copy=None, owndata=None)
     ```
+
+    !!! warning
+        Lists or vectors of integers can be interpreted as shapes or as
+        numeric arrays to copy. They are interpreted as shapes by the
+        `Array` constructor. To ensure that they are interpreted as
+        arrays to copy, use `Array.from_any`.
     """
     @classmethod
     def _DEFAULT(cls, n: list = ()) -> int:
@@ -1199,7 +1245,7 @@ class Array(_ListishMixin, WrappedArray):
     @classmethod
     def from_shape(cls, shape=tuple(), **kwargs) -> "Array":
         """
-        Build an array if a given shape.
+        Build an array of a given shape.
 
         Parameters
         ----------
@@ -1249,8 +1295,8 @@ class Array(_ListishMixin, WrappedArray):
             * `True` : the object is copied;
             * `None` : the the object is copied only if needed;
             * `False`: raises a `ValueError` if a copy cannot be avoided.
-        owndata : bool, default=False
-            If True, ensures that the returned Struct owns its data.
+        owndata : bool, default=None
+            If True, ensures that the returned Array owns its data.
             This may trigger an additional copy.
 
         Returns
@@ -1288,7 +1334,7 @@ class Array(_ListishMixin, WrappedArray):
     @classmethod
     def from_cell(cls, other: "Cell", **kwargs) -> "Array":
         """
-        Convert a `Cell` ot a numeric `Array`.
+        Convert a `Cell` to a numeric `Array`.
 
         Parameters
         ----------
@@ -1305,6 +1351,9 @@ class Array(_ListishMixin, WrappedArray):
             * "F" column-major (Fortran-style);
             * "A" (any) means "F" if a is Fortran contiguous, "C" otherwise;
             * "K" (keep) preserve input order.
+        owndata : bool, default=None
+            If True, ensures that the returned Array owns its data.
+            This may trigger an additional copy.
 
         Returns
         -------
@@ -1574,7 +1623,7 @@ class Cell(_ListMixin, WrappedArray):
     Cell.from_any(cell_like)
 
     # Other options
-    Cell(..., order=None, *, copy=None, deepcat=False)
+    Cell(..., order=None, *, copy=None, owndata=None, deepcat=False)
     ```
 
     A cell is a `MutableSequence` and therefore (mostly) behaves like a list.
@@ -1601,6 +1650,12 @@ class Cell(_ListMixin, WrappedArray):
 
     Finally, elements (along the first dimension) can be deleted using
     `del cell[index]`.
+
+    !!! warning
+        Lists or vectors of integers can be interpreted as shapes or as
+        cell-like objects to copy. They are interpreted as shapes by the
+        `Cell` constructor. To ensure that they are interpreted as
+        arrays to copy, use `Cell.from_any`.
     """
 
     # NOTE
@@ -1631,7 +1686,7 @@ class Cell(_ListMixin, WrappedArray):
                    op_flags=['writeonly', 'no_broadcast'])
         with np.nditer(arr, **opt) as iter:
             for elem in iter:
-                elem[()] = self._DEFAULT()
+                elem[()] = Array.from_any([])
         return self
 
     def __new__(cls, *args, **kwargs) -> "Cell":
@@ -1725,7 +1780,7 @@ class Cell(_ListMixin, WrappedArray):
             * `None` : the the object is copied only if needed;
             * `False`: raises a `ValueError` if a copy cannot be avoided.
         owndata : bool, default=False
-            If True, ensures that the returned Struct owns its data.
+            If True, ensures that the returned Cell owns its data.
             This may trigger an additional copy.
 
         Returns
@@ -1827,14 +1882,21 @@ class Cell(_ListMixin, WrappedArray):
     def as_cell(self) -> "Cell":
         return self
 
-    def deepcat(self) -> "Cell":
+    def deepcat(self, owndata=None) -> "Cell":
         """
         Convert a (nested) cell of cells into a deep cell array.
         """
         cls = type(self)
-        self = self._unroll_build(np.copy(self))
-        self = np.ndarray.view(self, cls)
-        return self
+        copy = self._unroll_build(np.copy(self))
+        copy = np.ndarray.view(copy, cls)
+
+        # take ownership
+        if owndata:
+            tmp = copy
+            copy = cls(tmp.shape, strides=tmp.strides)
+            copy[...] = tmp
+
+        return copy
 
     def __call__(self, *index):
         # We should only use this syntax when accessing elements into an
@@ -2031,6 +2093,7 @@ class _DictMixin(MutableMapping):
         arr = np.ndarray.view(self, np.ndarray)
 
         if np.ndim(arr) == 0:
+
             # Scalar array: assign value to the field
             if isinstance(value, self.deal):
                 # `deal` objects are cells and cannot be 0-dim
@@ -2038,6 +2101,7 @@ class _DictMixin(MutableMapping):
             arr.item()[key] = MatlabType.from_any(value)
 
         elif isinstance(value, self.deal):
+
             # Each element in the struct array is matched with an element
             # in the "deal" array.
             value = value.broadcast_to_struct(self)
@@ -2051,6 +2115,7 @@ class _DictMixin(MutableMapping):
                     elem.item()[key] = MatlabType.from_any(val)
 
         else:
+
             # Assign the same value to all elements in the struct array.
             opt = dict(flags=['refs_ok', 'zerosize_ok'], op_flags=['readonly'])
             value = MatlabType.from_any(value)
@@ -2320,7 +2385,7 @@ class Struct(_DictMixin, WrappedArray):
             * `True` : the object is copied;
             * `None` : the the object is copied only if needed;
             * `False`: raises a `ValueError` if a copy cannot be avoided.
-        owndata : bool, default=False
+        owndata : bool, default=None
             If True, ensures that the returned Struct owns its data.
             This may trigger an additional copy.
 
@@ -2427,7 +2492,7 @@ class Struct(_DictMixin, WrappedArray):
 
         # NOTE
         #   The `keys` argument is only used in `__getattr__` to avoid
-        #   building the entire dictionary, when the content os a single
+        #   building the entire dictionary, when the content of a single
         #   key is eventually used.
 
         # scalar struct -> return the underlying dictionary
@@ -2465,6 +2530,10 @@ class Struct(_DictMixin, WrappedArray):
         return mock.keys()
 
     def _ensure_defaults_are_set(self, keys=None):
+        """
+        If a new key is set in an array element, this function ensures
+        that all other elements are assigned a default value in the new key.
+        """
 
         if np.ndim(self) == 0:
             if keys:
