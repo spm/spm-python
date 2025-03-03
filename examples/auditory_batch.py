@@ -1,3 +1,16 @@
+"""
+This batch script analyses the Auditory fMRI dataset available from the
+SPM website:
+  http://www.fil.ion.ucl.ac.uk/spm/data/auditory/
+as described in the SPM manual:
+  http://www.fil.ion.ucl.ac.uk/spm/doc/manual.pdf#Chap:data:auditory
+________________________________________________________________________
+Copyright (C) 2014 Wellcome Trust Centre for Neuroimaging
+
+Matlab: Guillaume Flandin
+Python: Yael Balbastre
+"""
+
 import zipfile
 import os.path as op
 import spm
