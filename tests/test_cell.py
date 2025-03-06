@@ -18,23 +18,48 @@ class CellTestCase(unittest.TestCase):
 
         # Check proper construction
         self.assertIsInstance(c, Cell)
-        self.assertTupleEqual(c.shape, (0, 0))
+        self.assertEqual(c.size, 0)
+        self.assertEqual(c.shape, (0,))
 
-    # def test_instantiate_shape_1d(self):
-    #     c = Cell([3])
-    #     self.assertIsInstance(c, Cell)
-    #     self.assertEqual(c.shape, (3,))
-    #     self.assertTrue(all(x.shape == (0,) for x in c))
+    def test_empty_cell_to_matlab(self):
+        # Construct an empty cell array
+        c = Cell()
+        
+        # Get properties in Matlab
+        try: 
+            size = Runtime.call('size', c)
+            type = Runtime.call('class', c)
+        except Exception:
+            self.fail('Empty cell to Matlab failed.')
 
-    # def test_instantiate_empty_1d_shape_cell(self):
-    #     # Construct a 3x3 cell array ?
-    #     c = Cell(3)
+        # Check properties in Matlab
+        self.assertEqual(size.tolist(), [[1, 0]])
+        self.assertEqual(type, 'cell')
+    
+    def test_instantiate_empty_1d_shape_cell(self):
+        # Construct a 1x3 cell array
+        c = Cell(3)
 
-    #     # Check proper construction
-    #     self.assertIsInstance(c, Cell)
-    #     self.assertTupleEqual(c.shape, (1, 3))
-    #     self.assertTrue(all(isinstance(x, Array) for x in c.flat))
-    #     self.assertTrue(all(x.shape == (0,) for x in c.flat))
+        # Check proper construction
+        self.assertIsInstance(c, Cell)
+        self.assertTupleEqual(c.shape, (3,))
+        self.assertTrue(all(isinstance(x, Array) for x in c.flat))
+        self.assertTrue(all(x.size == 0 for x in c.flat))
+
+    def test_empty_1d_shape_cell_to_matlab(self):
+        # Construct a 1x3 cell array
+        c = Cell(3)
+
+        # Get properties in Matlab
+        try:
+            size = Runtime.call('size', c)
+            type = Runtime.call('class', c)
+        except Exception:
+            self.fail('1D shape cell to Matlab failed.')
+
+        # Check properties in Matlab
+        self.assertEqual(size.tolist(), [[1, 3]])
+        self.assertEqual(type, 'cell')
     
     def test_instantiate_empty_1d_row_cell(self):
         # Construct a 1x3 cell array
@@ -44,7 +69,22 @@ class CellTestCase(unittest.TestCase):
         self.assertIsInstance(c, Cell)
         self.assertTupleEqual(c.shape, (1, 3))
         self.assertTrue(all(isinstance(x, Array) for x in c.flat))
-        self.assertTrue(all(x.shape == (0,) for x in c.flat))
+        self.assertTrue(all(x.size == 0 for x in c.flat))
+
+    def test_empty_1d_row_cell_to_matlab(self):
+        # Construct a 1x3 cell array
+        c = Cell(1, 3)
+
+        # Get properties in Matlab
+        try:
+            size = Runtime.call('size', c)
+            type = Runtime.call('class', c)
+        except Exception:
+            self.fail('1D row cell to Matlab failed.')
+
+        # Check properties in Matlab
+        self.assertEqual(size.tolist(), [[1, 3]])
+        self.assertEqual(type, 'cell')
 
     def test_instantiate_empty_1d_col_cell(self):
         # Construct a 3x1 cell array
@@ -54,7 +94,22 @@ class CellTestCase(unittest.TestCase):
         self.assertIsInstance(c, Cell)
         self.assertTupleEqual(c.shape, (3, 1))
         self.assertTrue(all(isinstance(x, Array) for x in c.flat))
-        self.assertTrue(all(x.shape == (0,) for x in c.flat))
+        self.assertTrue(all(x.size == 0 for x in c.flat))
+
+    def test_empty_1d_col_cell_to_matlab(self):
+        # Construct a 3x1 cell array
+        c = Cell(3, 1)
+
+        # Get properties in Matlab
+        try:
+            size = Runtime.call('size', c)
+            type = Runtime.call('class', c)
+        except Exception:
+            self.fail('1D col cell to Matlab failed.')
+
+        # Check properties in Matlab
+        self.assertEqual(size.tolist(), [[3, 1]])
+        self.assertEqual(type, 'cell')
 
     def test_instantiate_empty_2d_cell(self):
         # Construct a 3x2 cell array
@@ -64,39 +119,53 @@ class CellTestCase(unittest.TestCase):
         self.assertIsInstance(c, Cell)
         self.assertTupleEqual(c.shape, (3, 2))
         self.assertTrue(all(isinstance(x, Array) for x in c.flat))
-        self.assertTrue(all(x.shape == (0,) for x in c.flat))
+        self.assertTrue(all(x.size == 0 for x in c.flat))
 
-    # def test_instantiate_shape_2d(self):
-    #     c = Cell([3, 2])
-    #     self.assertIsInstance(c, Cell)
-    #     self.assertEqual(c.shape, (3, 2))
-    #     self.assertTrue(all(x.shape == (0,) for x in c.flat))
+    def test_empty_2d_cell_to_matlab(self):
+        # Construct a 3x2 cell array
+        c = Cell(3, 2)
+
+        # Get properties in Matlab
+        try:
+            size = Runtime.call('size', c)
+            type = Runtime.call('class', c)
+        except Exception:
+            self.fail('2D cell to Matlab failed.')
+
+        # Check properties in Matlab
+        self.assertEqual(size.tolist(), [[3, 2]])
+        self.assertEqual(type, 'cell')
 
     def test_instantiate_shape_order(self):
         c = Cell([3, 2], order="C")
+
         self.assertIsInstance(c, Cell)
         self.assertEqual(c.shape, (3, 2))
         self.assertEqual(c.strides, (2*8, 8))
 
         c = Cell([3, 2], order="F")
+
         self.assertIsInstance(c, Cell)
         self.assertEqual(c.shape, (3, 2))
         self.assertEqual(c.strides, (8, 8*3))
 
     def test_instantiate_list(self):
         c = Cell.from_any(['a', 'b', 'c'])
+
         self.assertEqual(c.shape, (3,))
         self.assertEqual(repr(c), "Cell(['a', 'b', 'c'])")
         self.assertListEqual(c.tolist(), ['a', 'b', 'c'])
 
     def test_instantiate_nested_list(self):
         c = Cell.from_any([['a', 'b'], ['c', 'd']])
+
         self.assertEqual(c.shape, (2,))
         self.assertEqual(repr(c), "Cell([Cell(['a', 'b']), Cell(['c', 'd'])])")
         self.assertTrue(all(isinstance(x, Cell) for x in c.tolist()))
 
     def test_instantiate_nested_list_deepcat(self):
         c = Cell.from_any([['a', 'b'], ['c', 'd']], deepcat=True)
+
         self.assertEqual(c.shape, (2, 2))
         self.assertEqual(repr(c), "Cell([['a', 'b'],\n      ['c', 'd']])")
         self.assertTrue(all(isinstance(x, list) for x in c.tolist()))
