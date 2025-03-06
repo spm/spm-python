@@ -63,6 +63,21 @@ class CellTestCase(unittest.TestCase):
         c = Cell()
         self.assertTrue(c.as_cell is c)
 
+    def test_empty1d_row_from_matlab(self):
+        c_matlab = Runtime.call("cell", 1, 3)
+        c_python = Cell.from_shape([3])
+        self.assertListEqual(c_matlab.tolist(), c_python.tolist())
+
+    def test_empty1d_col_from_matlab(self):
+        c_matlab = Runtime.call("cell", 3, 1)
+        c_python = Cell.from_shape([3, 1])
+        self.assertListEqual(c_matlab.tolist(), c_python.tolist())
+
+    def test_empty2d_from_matlab(self):
+        c_matlab = Runtime.call("cell", 3, 2)
+        c_python = Cell.from_shape([3, 2])
+        self.assertListEqual(c_matlab.tolist(), c_python.tolist())
+
     def test_cell1d_from_matlab(self):
         c_matlab = Runtime.call("eval", "{1, 2, 3}")
         c_python = Cell.from_any([1, 2, 3])

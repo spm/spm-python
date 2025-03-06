@@ -294,6 +294,9 @@ class MatlabType(object):
         if isinstance(other, str):
             return other
 
+        if isinstance(other, bytes):
+            return other.decode()
+
         if other is None:
             # This can happen when matlab code is called without `nargout`
             return other
@@ -307,6 +310,10 @@ class MatlabType(object):
         if type(other) in _matlab_array_types():
             dtype = _matlab_array_types()[type(other)]
             return Array.from_any(other, dtype=dtype)
+
+        if hasattr(other, "__iter__"):
+            # Iterable -> let's try to make it a cell
+            return cls.from_any(list(other))
 
         raise TypeError(
             f"Cannot convert {type(other)} into a matlab object."
@@ -1736,26 +1743,23 @@ class Cell(_ListMixin, WrappedArray):
     def _from_runtime(cls, objdict: dict) -> "Cell":
         if objdict['type__'] != 'cell':
             raise TypeError('objdict is not a cell')
-        size = np.array(objdict['size__'], dtype=np.uint32).ravel()
-        data = np.array(objdict['data__'], dtype=object)
-        data = data.reshape(size[::-1]).transpose()
         try:
-            obj = data.view(cls)
+            size = np.array(objdict['size__'], dtype=np.uint32).ravel()
+            data = objdict['data__']
+            obj = Cell.from_shape([len(data)])
+            opt = dict(flags=['refs_ok', 'zerosize_ok', 'multi_index'],
+                       op_flags=['writeonly', 'no_broadcast'])
+            with np.nditer(obj, **opt) as iter:
+                for elem in iter:
+                    elem[()] = MatlabType.from_any(data[iter.multi_index[0]])
+            obj = obj.reshape(size[::-1]).transpose()
+            return obj
         except Exception:
             raise RuntimeError(
                 f'Failed to construct Cell data:\n'
                 f'  data={data}\n'
                 f'  objdict={objdict}'
             )
-
-        # recurse
-        opt = dict(flags=['refs_ok', 'zerosize_ok'],
-                   op_flags=['readwrite', 'no_broadcast'])
-        with np.nditer(data, **opt) as iter:
-            for elem in iter:
-                elem[()] = MatlabType.from_any(elem.item())
-
-        return obj
 
     @classmethod
     def from_shape(cls, shape=tuple(), **kwargs) -> "Cell":
@@ -1833,6 +1837,8 @@ class Cell(_ListMixin, WrappedArray):
         # recursive shallow conversion
         if not deepcat:
 
+            # This is so list[list] are converted to Cell[Cell] and
+            # not to a 2D Cell array.
             def asrecursive(other):
                 if isinstance(other, np.ndarray):
                     return other
@@ -1850,6 +1856,7 @@ class Cell(_ListMixin, WrappedArray):
                     return other
 
             other = asrecursive(other)
+
             if not isinstance(other, np.ndarray):
                 other = np.asanyarray(other, **kwargs)
 
