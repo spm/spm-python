@@ -36,6 +36,6 @@ def mci_nmm_fx_delay(*args, **kwargs):
 
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/mci/models/nmm/mci_nmm_fx_delay.m )
 
-    Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("mci_nmm_fx_delay", *args, **kwargs)

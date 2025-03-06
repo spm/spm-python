@@ -26,6 +26,6 @@ def DEMO_model_reduction_ERP(*args, **kwargs):
 
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/Neural_Models/DEMO_model_reduction_ERP.m )
 
-    Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("DEMO_model_reduction_ERP", *args, **kwargs, nargout=0)

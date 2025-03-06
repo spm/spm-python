@@ -13,6 +13,6 @@ def _nut_dSPM(*args, **kwargs):
 
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DAiSS/private/nut_dSPM.m )
 
-    Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("nut_dSPM", *args, **kwargs)

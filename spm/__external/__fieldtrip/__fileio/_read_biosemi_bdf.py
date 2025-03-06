@@ -33,6 +33,6 @@ def _read_biosemi_bdf(*args, **kwargs):
 
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/read_biosemi_bdf.m )
 
-    Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("read_biosemi_bdf", *args, **kwargs)

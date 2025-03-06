@@ -23,6 +23,6 @@ def spm_eeg_invert_classic_mix(*args, **kwargs):
 
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_eeg_invert_classic_mix.m )
 
-    Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_eeg_invert_classic_mix", *args, **kwargs)

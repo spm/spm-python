@@ -19,6 +19,6 @@ def mci_discount_deriv(*args, **kwargs):
 
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/mci/models/discount/mci_discount_deriv.m )
 
-    Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("mci_discount_deriv", *args, **kwargs)

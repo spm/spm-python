@@ -26,6 +26,6 @@ def gen_finger(*args, **kwargs):
 
     [Matlab code]( https://github.com/spm/spm/blob/main/man/example_scripts/gen_finger.m )
 
-    Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("gen_finger", *args, **kwargs)

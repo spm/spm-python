@@ -54,13 +54,10 @@ def FieldMap(*args, **kwargs):
         .bmask  
          
         IP.mflags         : Struct containing parameters for brain maskin  
-        .template         : Name of template for segmentation.  
         .fwhm             : fwhm of smoothing kernel for generating mask.  
         .nerode           : number of erosions  
         .ndilate          : number of dilations  
         .thresh           : threshold for smoothed mask.  
-        .reg              : bias field regularisation  
-        .graphics         : display or not  
          
         IP.fm             : Struct containing field map information  
         IP.fm.upm         : Phase-unwrapped field map (Hz).  
@@ -111,6 +108,6 @@ def FieldMap(*args, **kwargs):
 
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/FieldMap/FieldMap.m )
 
-    Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("FieldMap", *args, **kwargs)

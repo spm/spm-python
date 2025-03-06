@@ -56,7 +56,7 @@ def _import_matlab():
   The 1x1 case is all we need for batch jobs (it's required when building
   jobs with dependencies).
 
-  It might be useful to have a `ObjectArray` type (with `MatlabClassWrapper`
+  It might be useful to have a `ObjectArray` type (with `MatlabClass`
   as a base class?) for such objects -- It'll help with the logic in
   delayed arrays. It should be detectable by looking for `class(struct(...))`
   in the constructor when parsing the matlab code, although there are
@@ -224,7 +224,7 @@ class MatlabType(object):
     def from_any(cls, other):
         """
         Convert python/matlab objects to `MatlabType` objects
-        (`Cell`, `Struct`, `Array`, `MatlabClassWrapper`).
+        (`Cell`, `Struct`, `Array`, `MatlabClass`).
 
         !!! warning "Conversion is performed in-place when possible."
         """
@@ -255,7 +255,7 @@ class MatlabType(object):
                 elif type__ == "object":
                     # Matlab returns the object's fields serialized
                     # in a dictionary.
-                    return MatlabClassWrapper._from_runtime(other)
+                    return MatlabClass._from_runtime(other)
 
                 elif type__ == "sparse":
                     # Matlab returns a dense version of the array in data__.
@@ -620,7 +620,7 @@ class AnyDelayedArray(AnyMatlabArray):
     def as_obj(self, obj):
         if (
             self._future is not None and
-            not isinstance(self._future, MatlabClassWrapper)
+            not isinstance(self._future, MatlabClass)
         ):
             raise TypeError(
                 f"{type(self._future)} cannot be interpreted as a {type(obj)}"
@@ -643,7 +643,7 @@ class AnyDelayedArray(AnyMatlabArray):
         if isinstance(index, str):
             arr = self.as_struct
 
-        elif isinstance(value, MatlabClassWrapper):
+        elif isinstance(value, MatlabClass):
             if index not in (0, -1):
                 raise NotImplementedError(
                     "Implicit advanced indexing not implemented for",
@@ -2670,14 +2670,14 @@ class Struct(_DictMixin, WrappedArray):
 # ----------------------------------------------------------------------
 
 
-class MatlabClassWrapper(MatlabType):
+class MatlabClass(MatlabType):
     # FIXME: Can we rename this to `MatlabClass`?
 
     _subclasses = dict()
 
     def __new__(cls, *args, _objdict=None, **kwargs):
         if _objdict is None:
-            if cls.__name__ in MatlabClassWrapper._subclasses.keys():
+            if cls.__name__ in MatlabClass._subclasses.keys():
                 obj = Runtime.call(cls.__name__, *args, **kwargs)
             else:
                 obj = super().__new__(cls)
@@ -2689,13 +2689,13 @@ class MatlabClassWrapper(MatlabType):
     def __init_subclass__(cls):
         super().__init_subclass__()
         if hasattr(cls, 'subsref'):
-            cls.__getitem__ = MatlabClassWrapper.__getitem
-            cls.__call__ = MatlabClassWrapper.__call
+            cls.__getitem__ = MatlabClass.__getitem
+            cls.__call__ = MatlabClass.__call
 
         if hasattr(cls, 'subsasgn'):
-            cls.__setitem__ = MatlabClassWrapper.__setitem
+            cls.__setitem__ = MatlabClass.__setitem
 
-        MatlabClassWrapper._subclasses[cls.__name__] = cls
+        MatlabClass._subclasses[cls.__name__] = cls
 
     @classmethod
     def from_any(cls, other) -> "Array":
@@ -2707,13 +2707,13 @@ class MatlabClassWrapper(MatlabType):
 
     @classmethod
     def _from_runtime(cls, objdict):
-        if objdict['class__'] in MatlabClassWrapper._subclasses.keys():
-            obj = MatlabClassWrapper._subclasses[objdict['class__']](
+        if objdict['class__'] in MatlabClass._subclasses.keys():
+            obj = MatlabClass._subclasses[objdict['class__']](
                 _objdict=objdict
             )
         else:
             warnings.warn(f'Unknown Matlab class type: {objdict["class__"]}')
-            obj = MatlabClassWrapper(_objdict=objdict)
+            obj = MatlabClass(_objdict=objdict)
         return obj
 
     def _as_runtime(self):

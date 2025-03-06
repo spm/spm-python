@@ -27,6 +27,6 @@ def spm_rice_mixture(*args, **kwargs):
 
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/Longitudinal/spm_rice_mixture.m )
 
-    Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_rice_mixture", *args, **kwargs)

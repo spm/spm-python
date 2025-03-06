@@ -9,6 +9,6 @@ def DFP_demo_hdm(*args, **kwargs):
 
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DEM/DFP_demo_hdm.m )
 
-    Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("DFP_demo_hdm", *args, **kwargs, nargout=0)

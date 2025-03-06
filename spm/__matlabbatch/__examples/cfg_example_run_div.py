@@ -15,6 +15,6 @@ def cfg_example_run_div(*args, **kwargs):
 
     [Matlab code]( https://github.com/spm/spm/blob/main/matlabbatch/examples/cfg_example_run_div.m )
 
-    Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("cfg_example_run_div", *args, **kwargs)

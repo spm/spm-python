@@ -43,6 +43,6 @@ def spm_SARS_priors_B(*args, **kwargs):
 
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DEM/spm_SARS_priors_B.m )
 
-    Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_SARS_priors_B", *args, **kwargs)
