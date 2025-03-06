@@ -1688,11 +1688,11 @@ class Cell(_ListMixin, WrappedArray):
     _DelayedType = DelayedCell
 
     @classmethod
-    def _DEFAULT(cls, n: list = ()) -> np.ndarray:
-        if len(n) == 0:
+    def _DEFAULT(cls, shape: list = ()) -> np.ndarray:
+        if len(shape) == 0:
             return Array.from_any([])
 
-        data = np.empty(n, dtype=object)
+        data = np.empty(shape, dtype=object)
         opt = dict(
             flags=['refs_ok', 'zerosize_ok'],
             op_flags=['writeonly', 'no_broadcast']
@@ -1737,9 +1737,9 @@ class Cell(_ListMixin, WrappedArray):
         if objdict['type__'] != 'cell':
             raise TypeError('objdict is not a cell')
         size = np.array(objdict['size__'], dtype=np.uint32).ravel()
-        data = np.array(objdict['data__'], dtype=object)
+        data = np.fromiter(objdict['data__'], dtype=object)
         data = data.reshape(size[::-1]).transpose()
-        try:
+        try:     
             obj = data.view(cls)
         except Exception:
             raise RuntimeError(
