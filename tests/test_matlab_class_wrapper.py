@@ -3,7 +3,7 @@ import warnings
 import numpy as np
 from unittest.mock import patch, MagicMock
 
-from spm.__wrapper__ import MatlabClassWrapper, Runtime
+from spm.__wrapper__ import MatlabClass, Runtime
 
 
 orig_runtime_call = Runtime.call
@@ -22,11 +22,11 @@ def mock_runtime_call(f, *args, **kwargs):
 
 
 @patch('spm.__wrapper__.Runtime.call', mock_runtime_call)
-class TestMatlabClassWrapper(unittest.TestCase):
+class TestMatlabClass(unittest.TestCase):
     def setUp(self):
 
         # Example subclass for testing
-        class TestClass(MatlabClassWrapper):
+        class TestClass(MatlabClass):
             def __init__(self, *args, **kwargs):
                 super().__init__()
 
@@ -51,8 +51,8 @@ class TestMatlabClassWrapper(unittest.TestCase):
         self.TestClass = TestClass
 
     def test_subclass_registration(self):
-        self.assertIn('TestClass', MatlabClassWrapper._subclasses)
-        self.assertIs(MatlabClassWrapper._subclasses['TestClass'], self.TestClass)
+        self.assertIn('TestClass', MatlabClass._subclasses)
+        self.assertIs(MatlabClass._subclasses['TestClass'], self.TestClass)
 
     def test_object_creation(self):
         obj = self.TestClass(value=[1, 2, 3])
@@ -61,7 +61,7 @@ class TestMatlabClassWrapper(unittest.TestCase):
 
     def test_from_matlab_object(self):
         objdict = {'class__': 'TestClass', 'data__': {'value':[1, 2, 3]}}
-        obj = MatlabClassWrapper._from_runtime(objdict)
+        obj = MatlabClass._from_runtime(objdict)
         self.assertIsInstance(obj, self.TestClass)
         self.assertEqual(obj._objdict['data__']['value'], [1, 2, 3])
 
@@ -69,10 +69,10 @@ class TestMatlabClassWrapper(unittest.TestCase):
         objdict = {'class__': 'UnknownClass', 'data__': {'value': [1, 2, 3]}}
         with warnings.catch_warnings(record=True) as w:
             warnings.simplefilter("always")
-            obj = MatlabClassWrapper._from_runtime(objdict)
+            obj = MatlabClass._from_runtime(objdict)
             self.assertEqual(len(w), 1)
             self.assertEqual(str(w[0].message), 'Unknown Matlab class type: UnknownClass')
-        self.assertIsInstance(obj, MatlabClassWrapper)
+        self.assertIsInstance(obj, MatlabClass)
 
     def test_attribute_access(self):
         obj = self.TestClass(value=[1, 2, 3])
