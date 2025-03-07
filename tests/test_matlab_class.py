@@ -50,22 +50,22 @@ class TestMatlabClass(unittest.TestCase):
 
         self.TestClass = TestClass
 
-    def test_subclass_registration(self):
+    def test_matlabclass_register_subclass(self):
         self.assertIn('TestClass', MatlabClass._subclasses)
         self.assertIs(MatlabClass._subclasses['TestClass'], self.TestClass)
 
-    def test_object_creation(self):
+    def test_matlabclass_instantiate_object(self):
         obj = self.TestClass(value=[1, 2, 3])
         self.assertEqual(obj._objdict['class__'], 'TestClass')
         self.assertEqual(obj._objdict['data__']['value'], [1, 2, 3])
 
-    def test_from_matlab_object(self):
+    def test_matlabclass_from_matlab_object(self):
         objdict = {'class__': 'TestClass', 'data__': {'value':[1, 2, 3]}}
         obj = MatlabClass._from_runtime(objdict)
         self.assertIsInstance(obj, self.TestClass)
         self.assertEqual(obj._objdict['data__']['value'], [1, 2, 3])
 
-    def test_unknown_class_warning(self):
+    def test_matlabclass_unknown_class_warning(self):
         objdict = {'class__': 'UnknownClass', 'data__': {'value': [1, 2, 3]}}
         with warnings.catch_warnings(record=True) as w:
             warnings.simplefilter("always")
@@ -74,32 +74,32 @@ class TestMatlabClass(unittest.TestCase):
             self.assertEqual(str(w[0].message), 'Unknown Matlab class type: UnknownClass')
         self.assertIsInstance(obj, MatlabClass)
 
-    def test_attribute_access(self):
+    def test_matlabclass_attribute_access(self):
         obj = self.TestClass(value=[1, 2, 3])
         self.assertEqual(obj._objdict['data__']['value'], [1, 2, 3])
 
-    def test_item_get_and_set(self):
+    def test_matlabclass_item_get_and_set(self):
         obj = self.TestClass(value=[1, 2, 3])
         self.assertEqual(obj[1], 2)  # Testing __getitem__
         obj[1] = 5                  # Testing __setitem__
         self.assertEqual(obj[1], 5)
 
-    def test_call_behavior(self):
+    def test_matlabclass_call_behavior(self):
         obj = self.TestClass(value=[1, 2, 3])
         self.assertEqual(obj(0), 1)  # Testing __call__
 
-    def test_as_matlab_object(self):
+    def test_matlabclass_as_matlab_object(self):
         obj = self.TestClass(value=[1, 2, 3])
         objdict = obj._as_runtime()
         self.assertEqual(objdict['class__'], 'TestClass')
         self.assertEqual(objdict['data__']['value'], [1, 2, 3])
 
-    def test_index_processing(self):
+    def test_matlabclass_index_processing(self):
         obj = self.TestClass(value=np.arange(10))
         index = obj._process_index(slice(1, 5))
         self.assertTrue(np.array_equal(index, np.array([2, 3, 4, 5])))
 
-    def test_invalid_index(self):
+    def test_matlabclass_invalid_index(self):
         obj = self.TestClass(value=np.arange(10))
         with self.assertRaises(IndexError):
             obj[15]
