@@ -190,16 +190,16 @@ class TestStruct(unittest.TestCase):
         self.assertIsInstance(s_matlab[0], Struct)
         self.assertEqual(s_matlab[0].field1, 1)
         self.assertEqual(s_matlab[0].field2, 2)
-        # self.assertListEqual(list(s_matlab[0].keys()), ["field1", "field2"])
-        # self.assertListEqual(list(s_matlab[0].values()), [1, 2])
-        self.assertListEqual(list(s_matlab[0].items()), [("field1", 1), ("field2", 2)])
+        self.assertListEqual(list(s_matlab[0, 0].keys()), ["field1", "field2"])
+        self.assertListEqual(list(s_matlab[0, 0].values()), [1, 2])
+        self.assertListEqual(list(s_matlab[0, 0].items()), [("field1", 1), ("field2", 2)])
 
         self.assertIsInstance(s_matlab[1], Struct)
         self.assertEqual(s_matlab[1].field1, 1)
         self.assertEqual(s_matlab[1].field2, 2)
-        self.assertListEqual(list(s_matlab[1].keys()), ["field1", "field2"])
-        self.assertListEqual(list(s_matlab[1].values()), [1, 2])
-        self.assertListEqual(list(s_matlab[1].items()), [("field1", 1), ("field2", 2)])
+        self.assertListEqual(list(s_matlab[1, 0].keys()), ["field1", "field2"])
+        self.assertListEqual(list(s_matlab[1, 0].values()), [1, 2])
+        self.assertListEqual(list(s_matlab[1, 0].items()), [("field1", 1), ("field2", 2)])
 
     def test_struct_to_matlab_empty(self):
         # Construct an empty struct
