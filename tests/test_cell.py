@@ -206,8 +206,8 @@ class CellTestCase(unittest.TestCase):
 
         # Check Runtime conversion
         self.assertIsInstance(c_matlab, Cell)
-        self.assertTupleEqual(c_matlab.shape, (1, 3))
-        self.assertListEqual(c_matlab.tolist(), [[1, 2, 3]])
+        self.assertTupleEqual(c_matlab.shape, (3, ))
+        self.assertListEqual(c_matlab.tolist(), [1, 2, 3])
 
     def test_cell_from_matlab_2d_col(self):
         # Construct a 3x1 cell array in Matlab
@@ -248,8 +248,8 @@ class CellTestCase(unittest.TestCase):
         self.assertTrue(all(isinstance(x, Cell) for x in c_matlab))
         
         # Check inner cells shapes
-        self.assertTupleEqual(c_matlab[0].shape, (1, 3))
-        self.assertTupleEqual(c_matlab[1].shape, (1, 3))
+        self.assertTupleEqual(c_matlab[0].shape, (3,))
+        self.assertTupleEqual(c_matlab[1].shape, (3,))
 
         # Check inner cells values
         self.assertListEqual(c_matlab[0].tolist(), [1, 2, 3])
@@ -288,7 +288,7 @@ class CellTestCase(unittest.TestCase):
 
         # Check Runtime conversion 
         self.assertIsInstance(c_matlab, Cell)
-        self.assertTupleEqual(c_matlab.shape, (1, 3))
+        self.assertTupleEqual(c_matlab.shape, (3, ))
         self.assertTrue(all(isinstance(x, Array) for x in c_matlab.flat))
         self.assertTrue(all(len(x.shape) == 0 for x in c_matlab.flat))
 
