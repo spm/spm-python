@@ -22,6 +22,6 @@ def spm_mci_ais_single(*args, **kwargs):
 
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/mci/inference/spm_mci_ais_single.m )
 
-    Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_mci_ais_single", *args, **kwargs)

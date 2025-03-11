@@ -56,7 +56,7 @@ def _import_matlab():
   The 1x1 case is all we need for batch jobs (it's required when building
   jobs with dependencies).
 
-  It might be useful to have a `ObjectArray` type (with `MatlabClassWrapper`
+  It might be useful to have a `ObjectArray` type (with `MatlabClass`
   as a base class?) for such objects -- It'll help with the logic in
   delayed arrays. It should be detectable by looking for `class(struct(...))`
   in the constructor when parsing the matlab code, although there are
@@ -224,7 +224,7 @@ class MatlabType(object):
     def from_any(cls, other):
         """
         Convert python/matlab objects to `MatlabType` objects
-        (`Cell`, `Struct`, `Array`, `MatlabClassWrapper`).
+        (`Cell`, `Struct`, `Array`, `MatlabClass`).
 
         !!! warning "Conversion is performed in-place when possible."
         """
@@ -255,7 +255,7 @@ class MatlabType(object):
                 elif type__ == "object":
                     # Matlab returns the object's fields serialized
                     # in a dictionary.
-                    return MatlabClassWrapper._from_runtime(other)
+                    return MatlabClass._from_runtime(other)
 
                 elif type__ == "sparse":
                     # Matlab returns a dense version of the array in data__.
@@ -558,10 +558,9 @@ class AnyDelayedArray(AnyMatlabArray):
         raise IndexOrKeyOrAttributeError(
             "This DelayedArray has not been finalized, and you are "
             "attempting to use it in a way that may break its finalization "
-            "cycle.\nIt most likely means that you are indexing out-of-bounds "
-            "without *setting* the out-of-bound value.\n"
-            "* Correct usage:   a.b(i).c = x\n"
-            "* Incorrect usage: x = a.b(i).c\n"
+            "cycle. It most likely means that you are indexing out-of-bounds "
+            "without *setting* the out-of-bound value. "
+            "Correct usage: `a.b(i).c = x` | Incorrect usage: `x = a.b(i).c`."
         )
 
     # Kill all operators
@@ -627,7 +626,7 @@ class AnyDelayedArray(AnyMatlabArray):
     def as_obj(self, obj):
         if (
             self._future is not None and
-            not isinstance(self._future, MatlabClassWrapper)
+            not isinstance(self._future, MatlabClass)
         ):
             raise TypeError(
                 f"{type(self._future)} cannot be interpreted as a {type(obj)}"
@@ -650,7 +649,7 @@ class AnyDelayedArray(AnyMatlabArray):
         if isinstance(index, str):
             arr = self.as_struct
 
-        elif isinstance(value, MatlabClassWrapper):
+        elif isinstance(value, MatlabClass):
             if index not in (0, -1):
                 raise NotImplementedError(
                     "Implicit advanced indexing not implemented for",
@@ -968,6 +967,7 @@ class WrappedArray(np.ndarray, AnyWrappedArray):
 
         Other cases could be handled but require much more complicated logic.
         """
+        input_shape = self.shape
         if not isinstance(index, tuple):
             index = (index,)
         index, new_index = list(index), []
@@ -1008,13 +1008,21 @@ class WrappedArray(np.ndarray, AnyWrappedArray):
             new_index.append(next_index)
             new_shape.append(next_shape)
         new_shape = new_shape + shape
-        view_index = tuple(slice(x, None) for x in np.shape(self))
+        if not input_shape:
+            # We risk erasing the original scalar whn setting the
+            # defaults, so we save it and reinsert it at the end.
+            scalar = np.ndarray.view(self, np.ndarray).item()
         np.ndarray.resize(self, new_shape, refcheck=False)
         if set_default:
             arr = np.ndarray.view(self, np.ndarray)
+            view_index = tuple(slice(x, None) for x in input_shape)
             view_shape = arr[view_index].shape
             new_data = self._DEFAULT(view_shape)
             arr[view_index] = new_data
+            if not input_shape:
+                # Insert back scalar in the first position.
+                scalar_index = (0,) * arr.ndim
+                arr[scalar_index] = scalar
 
     def _return_delayed(self, index):
         if not isinstance(index, tuple):
@@ -1696,8 +1704,10 @@ class Cell(_ListMixin, WrappedArray):
 
     @classmethod
     def _DEFAULT(cls, shape: list = ()) -> np.ndarray:
-        if len(shape) == 0:
-            return Array.from_any([])
+        # if len(shape) == 0:
+        #     out = np.array(None)
+        #     out[()] = Array.from_any([])
+        #     return out
 
         data = np.empty(shape, dtype=object)
         opt = dict(
@@ -1839,11 +1849,17 @@ class Cell(_ListMixin, WrappedArray):
 
         # recursive shallow conversion
         if not deepcat:
+            # make sure matlab is imported so that we can detect
+            # matlab arrays.
+            _import_matlab()
 
             # This is so list[list] are converted to Cell[Cell] and
             # not to a 2D Cell array.
             def asrecursive(other):
-                if isinstance(other, np.ndarray):
+                if isinstance(other, tuple(_matlab_array_types())):
+                    dtype = _matlab_array_types()[type(other)]
+                    other = np.asarray(other, dtype=dtype)
+                if isinstance(other, (np.ndarray, AnyDelayedArray)):
                     return other
                 elif isinstance(other, (str, bytes)):
                     return other
@@ -2313,11 +2329,13 @@ class Struct(_DictMixin, WrappedArray):
     _DelayedType = DelayedStruct
 
     @classmethod
-    def _DEFAULT(self, n: list = ()) -> np.ndarray:
-        if len(n) == 0:
-            return dict()
+    def _DEFAULT(self, shape: list = ()) -> np.ndarray:
+        # if len(shape) == 0:
+        #     out = np.array(None)
+        #     out[()] = dict()
+        #     return out
 
-        data = np.empty(n, dtype=dict)
+        data = np.empty(shape, dtype=dict)
         opt = dict(
             flags=['refs_ok', 'zerosize_ok'],
             op_flags=['writeonly', 'no_broadcast']
@@ -2529,6 +2547,7 @@ class Struct(_DictMixin, WrappedArray):
         * If a struct, return the underlying dict (no copy, is a view)
         * If a struct array, return a dict of Cell (copy, not a view)
         """
+        self._ensure_defaults_are_set(keys)
 
         # NOTE
         #   The `keys` argument is only used in `__getattr__` to avoid
@@ -2536,9 +2555,10 @@ class Struct(_DictMixin, WrappedArray):
         #   key is eventually used.
 
         # scalar struct -> return the underlying dictionary
+        arr = np.ndarray.view(self, np.ndarray)
 
-        if np.ndim(self) == 0:
-            asdict = np.ndarray.item(self)
+        if arr.ndim == 0:
+            asdict = arr.item()
             if keys is not None:
                 asdict = {key: asdict[key] for key in keys}
             return asdict
@@ -2547,16 +2567,20 @@ class Struct(_DictMixin, WrappedArray):
 
         if keys is None:
             keys = self._allkeys()
+        elif isinstance(keys, str):
+            keys = [keys]
 
-        arr = np.ndarray.view(self, np.ndarray)
         opt = dict(flags=['refs_ok', 'zerosize_ok'], op_flags=['readwrite'])
+        asdict = {key: [] for key in keys}
         with np.nditer(arr, **opt) as iter:
-            return {
-                key: Cell.from_any([
-                    elem.item().get(key, self._DEFAULT()) for elem in iter
-                ]).reshape(np.shape(self))
-                for key in keys
-            }
+            for elem in iter:
+                item = elem.item()
+                for key in keys:
+                    asdict[key].append(item[key])
+        for key in keys:
+            asdict[key] = Cell.from_any(asdict[key])
+        raise ValueError(keys)
+        return asdict
 
     def _allkeys(self):
         # Return all keys present across all elements.
@@ -2574,21 +2598,25 @@ class Struct(_DictMixin, WrappedArray):
         If a new key is set in an array element, this function ensures
         that all other elements are assigned a default value in the new key.
         """
+        arr = np.ndarray.view(self, np.ndarray)
 
-        if np.ndim(self) == 0:
+        if arr.ndim == 0:
             if keys:
+                item: dict = arr.item()
                 for key in keys:
-                    self.setdefault(key, Array.from_any([]))
+                    item.setdefault(key, Array.from_any([]))
 
         if keys is None:
             keys = self._allkeys()
+        elif isinstance(keys, str):
+            keys = [keys]
 
-        arr = np.ndarray.view(self, np.ndarray)
         opt = dict(flags=['refs_ok', 'zerosize_ok'], op_flags=['readonly'])
         with np.nditer(arr, **opt) as iter:
             for elem in iter:
+                item: dict = elem.item()
                 for key in keys:
-                    elem.item().setdefault(key, Array.from_any([]))
+                    item.setdefault(key, Array.from_any([]))
 
     # --------------
     # Bracket syntax
@@ -2680,14 +2708,14 @@ class Struct(_DictMixin, WrappedArray):
 # ----------------------------------------------------------------------
 
 
-class MatlabClassWrapper(MatlabType):
+class MatlabClass(MatlabType):
     # FIXME: Can we rename this to `MatlabClass`?
 
     _subclasses = dict()
 
     def __new__(cls, *args, _objdict=None, **kwargs):
         if _objdict is None:
-            if cls.__name__ in MatlabClassWrapper._subclasses.keys():
+            if cls.__name__ in MatlabClass._subclasses.keys():
                 obj = Runtime.call(cls.__name__, *args, **kwargs)
             else:
                 obj = super().__new__(cls)
@@ -2699,13 +2727,13 @@ class MatlabClassWrapper(MatlabType):
     def __init_subclass__(cls):
         super().__init_subclass__()
         if hasattr(cls, 'subsref'):
-            cls.__getitem__ = MatlabClassWrapper.__getitem
-            cls.__call__ = MatlabClassWrapper.__call
+            cls.__getitem__ = MatlabClass.__getitem
+            cls.__call__ = MatlabClass.__call
 
         if hasattr(cls, 'subsasgn'):
-            cls.__setitem__ = MatlabClassWrapper.__setitem
+            cls.__setitem__ = MatlabClass.__setitem
 
-        MatlabClassWrapper._subclasses[cls.__name__] = cls
+        MatlabClass._subclasses[cls.__name__] = cls
 
     @classmethod
     def from_any(cls, other) -> "Array":
@@ -2717,13 +2745,13 @@ class MatlabClassWrapper(MatlabType):
 
     @classmethod
     def _from_runtime(cls, objdict):
-        if objdict['class__'] in MatlabClassWrapper._subclasses.keys():
-            obj = MatlabClassWrapper._subclasses[objdict['class__']](
+        if objdict['class__'] in MatlabClass._subclasses.keys():
+            obj = MatlabClass._subclasses[objdict['class__']](
                 _objdict=objdict
             )
         else:
             warnings.warn(f'Unknown Matlab class type: {objdict["class__"]}')
-            obj = MatlabClassWrapper(_objdict=objdict)
+            obj = MatlabClass(_objdict=objdict)
         return obj
 
     def _as_runtime(self):

@@ -17,6 +17,6 @@ def _origheader_getpos(*args, **kwargs):
 
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/TSSS/private/origheader_getpos.m )
 
-    Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("origheader_getpos", *args, **kwargs)

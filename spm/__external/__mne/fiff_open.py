@@ -15,6 +15,6 @@ def fiff_open(*args, **kwargs):
 
     [Matlab code]( https://github.com/spm/spm/blob/main/external/mne/fiff_open.m )
 
-    Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("fiff_open", *args, **kwargs)

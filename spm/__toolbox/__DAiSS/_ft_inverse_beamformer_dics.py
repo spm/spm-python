@@ -37,6 +37,6 @@ def _ft_inverse_beamformer_dics(*args, **kwargs):
 
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DAiSS/private/ft_inverse_beamformer_dics.m )
 
-    Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("ft_inverse_beamformer_dics", *args, **kwargs)

@@ -12,6 +12,6 @@ def fiff_define_constants(*args, **kwargs):
 
     [Matlab code]( https://github.com/spm/spm/blob/main/external/mne/fiff_define_constants.m )
 
-    Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("fiff_define_constants", *args, **kwargs)

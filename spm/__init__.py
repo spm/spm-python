@@ -20,6 +20,7 @@ from .spm_ADEM_update import spm_ADEM_update
 from .spm_ALAP import spm_ALAP
 from .spm_A_reduce import spm_A_reduce
 from .spm_BIDS import spm_BIDS
+from .spm_BIDS_file import spm_BIDS_file
 from .spm_BMS import spm_BMS
 from .spm_BMS_F import spm_BMS_F
 from .spm_BMS_F_smpl import spm_BMS_F_smpl
@@ -826,3 +827,4 @@ from .spm_z2p import spm_z2p
 from .spm_zeros import spm_zeros
 from .__tests import *
 from .__toolbox import *
+

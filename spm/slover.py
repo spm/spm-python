@@ -1,7 +1,7 @@
-from spm.__wrapper__ import Runtime, MatlabClassWrapper
+from spm.__wrapper__ import Runtime, MatlabClass
 
 
-class slover(MatlabClassWrapper):
+class slover(MatlabClass):
     def __init__(self, *args, **kwargs):
         """
           class constructor for slice overlay (slover) object  
@@ -158,7 +158,7 @@ class slover(MatlabClassWrapper):
 
         [Matlab code]( https://github.com/spm/spm/blob/main/@slover/slover.m )
 
-        Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         super().__init__()
 
@@ -180,7 +180,7 @@ class slover(MatlabClassWrapper):
 
         [Matlab code]( https://github.com/spm/spm/blob/main/@slover/add_blobs.m )
 
-        Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("add_blobs", self._as_matlab_object(), *args, **kwargs)
 
@@ -202,7 +202,7 @@ class slover(MatlabClassWrapper):
 
         [Matlab code]( https://github.com/spm/spm/blob/main/@slover/add_matrix.m )
 
-        Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("add_matrix", self._as_matlab_object(), *args, **kwargs)
 
@@ -217,7 +217,7 @@ class slover(MatlabClassWrapper):
 
         [Matlab code]( https://github.com/spm/spm/blob/main/@slover/add_spm.m )
 
-        Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("add_spm", self._as_matlab_object(), *args, **kwargs)
 
@@ -229,7 +229,7 @@ class slover(MatlabClassWrapper):
 
         [Matlab code]( https://github.com/spm/spm/blob/main/@slover/display.m )
 
-        Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("display", self._as_matlab_object(), *args, **kwargs, nargout=0)
 
@@ -248,7 +248,7 @@ class slover(MatlabClassWrapper):
 
         [Matlab code]( https://github.com/spm/spm/blob/main/@slover/fill_defaults.m )
 
-        Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("fill_defaults", self._as_matlab_object(), *args, **kwargs)
 
@@ -260,7 +260,7 @@ class slover(MatlabClassWrapper):
 
         [Matlab code]( https://github.com/spm/spm/blob/main/@slover/get_pos.m )
 
-        Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("get_pos", self._as_matlab_object(), *args, **kwargs)
 
@@ -287,7 +287,7 @@ class slover(MatlabClassWrapper):
 
         [Matlab code]( https://github.com/spm/spm/blob/main/@slover/paint.m )
 
-        Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("paint", self._as_matlab_object(), *args, **kwargs)
 
@@ -310,7 +310,7 @@ class slover(MatlabClassWrapper):
 
         [Matlab code]( https://github.com/spm/spm/blob/main/@slover/point_vals.m )
 
-        Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("point_vals", self._as_matlab_object(), *args, **kwargs)
 
@@ -331,7 +331,7 @@ class slover(MatlabClassWrapper):
 
         [Matlab code]( https://github.com/spm/spm/blob/main/@slover/print_fig.m )
 
-        Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("print_fig", self._as_matlab_object(), *args, **kwargs, nargout=0)
 
@@ -344,7 +344,7 @@ class slover(MatlabClassWrapper):
 
         [Matlab code]( https://github.com/spm/spm/blob/main/@slover/subsasgn.m )
 
-        Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("subsasgn", self._as_matlab_object(), *args, **kwargs)
 
@@ -357,7 +357,7 @@ class slover(MatlabClassWrapper):
 
         [Matlab code]( https://github.com/spm/spm/blob/main/@slover/subsref.m )
 
-        Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("subsref", self._as_matlab_object(), *args, **kwargs)
 
@@ -438,7 +438,7 @@ class slover(MatlabClassWrapper):
 
         [Matlab code]( https://github.com/spm/spm/blob/main/@slover/private/mars_struct.m )
 
-        Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("mars_struct", self._as_matlab_object(), *args, **kwargs)
 
@@ -457,7 +457,7 @@ class slover(MatlabClassWrapper):
 
         [Matlab code]( https://github.com/spm/spm/blob/main/@slover/private/pr_basic_ui.m )
 
-        Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("pr_basic_ui", self._as_matlab_object(), *args, **kwargs)
 
@@ -478,7 +478,7 @@ class slover(MatlabClassWrapper):
 
         [Matlab code]( https://github.com/spm/spm/blob/main/@slover/private/pr_blobs2vol.m )
 
-        Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("pr_blobs2vol", self._as_matlab_object(), *args, **kwargs)
 
@@ -496,7 +496,7 @@ class slover(MatlabClassWrapper):
 
         [Matlab code]( https://github.com/spm/spm/blob/main/@slover/private/pr_get_spm_results.m )
 
-        Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("pr_get_spm_results", self._as_matlab_object(), *args, **kwargs)
 
@@ -522,7 +522,7 @@ class slover(MatlabClassWrapper):
 
         [Matlab code]( https://github.com/spm/spm/blob/main/@slover/private/pr_getcmap.m )
 
-        Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("pr_getcmap", self._as_matlab_object(), *args, **kwargs)
 
@@ -542,7 +542,7 @@ class slover(MatlabClassWrapper):
 
         [Matlab code]( https://github.com/spm/spm/blob/main/@slover/private/pr_matrix2vol.m )
 
-        Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("pr_matrix2vol", self._as_matlab_object(), *args, **kwargs)
 
@@ -572,7 +572,7 @@ class slover(MatlabClassWrapper):
 
         [Matlab code]( https://github.com/spm/spm/blob/main/@slover/private/pr_scaletocmap.m )
 
-        Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("pr_scaletocmap", self._as_matlab_object(), *args, **kwargs)
 
@@ -592,6 +592,6 @@ class slover(MatlabClassWrapper):
 
         [Matlab code]( https://github.com/spm/spm/blob/main/@slover/private/pr_volmaxmin.m )
 
-        Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("pr_volmaxmin", self._as_matlab_object(), *args, **kwargs)

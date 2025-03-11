@@ -47,6 +47,6 @@ def estimate_greens_mmclab(*args, **kwargs):
 
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/dcm_fnirs/mmclab/estimate_greens_mmclab.m )
 
-    Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("estimate_greens_mmclab", *args, **kwargs)

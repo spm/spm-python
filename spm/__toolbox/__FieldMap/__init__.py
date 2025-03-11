@@ -19,7 +19,6 @@ from .pm_merge_regions_m import pm_merge_regions_m
 from .pm_pad import pm_pad
 from .pm_restore_ramp import pm_restore_ramp
 from .pm_seed import pm_seed
-from .pm_segment import pm_segment
 from .pm_smooth_phasemap import pm_smooth_phasemap
 from .pm_unwrap import pm_unwrap
 from .tbx_cfg_fieldmap import tbx_cfg_fieldmap

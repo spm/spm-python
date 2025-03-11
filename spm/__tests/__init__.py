@@ -8,6 +8,7 @@ from .test_checkcode import test_checkcode
 from .test_gifti import test_gifti
 from .test_regress_fmri_group import test_regress_fmri_group
 from .test_regress_spm_dcm_fmri import test_regress_spm_dcm_fmri
+from .test_regress_spm_distort_mesh import test_regress_spm_distort_mesh
 from .test_regress_spm_opm import test_regress_spm_opm
 from .test_spm import test_spm
 from .test_spm_BMS_gibbs import test_spm_BMS_gibbs
@@ -92,5 +93,6 @@ from .test_spm_plot_ci import test_spm_plot_ci
 from .test_spm_run_dcm_bms import test_spm_run_dcm_bms
 from .test_spm_sum import test_spm_sum
 from .test_spm_trace import test_spm_trace
+from .test_spm_update import test_spm_update
 from .test_spm_z2p import test_spm_z2p
 
