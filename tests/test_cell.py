@@ -6,23 +6,71 @@ from spm import Cell, Runtime, Array
 
 class CellTestCase(unittest.TestCase):
 
+    # def test_instantiate_empty(self):
+    #     c = Cell()
+    #     a = np.asarray([])
+    #     self.assertIsInstance(c, Cell)
+    #     self.assertListEqual(c.tolist(), a.tolist())
+
     def test_instantiate_empty(self):
+        # Construct an empty cell array
         c = Cell()
-        a = np.asarray([])
-        self.assertIsInstance(c, Cell)
-        self.assertListEqual(c.tolist(), a.tolist())
 
-    def test_instantiate_shape_1d(self):
-        c = Cell([3])
+        # Check proper construction
         self.assertIsInstance(c, Cell)
-        self.assertEqual(c.shape, (3,))
-        self.assertTrue(all(x.shape == (0,) for x in c))
+        self.assertTupleEqual(c.shape, (0, 0))
 
-    def test_instantiate_shape_2d(self):
-        c = Cell([3, 2])
+    # def test_instantiate_shape_1d(self):
+    #     c = Cell([3])
+    #     self.assertIsInstance(c, Cell)
+    #     self.assertEqual(c.shape, (3,))
+    #     self.assertTrue(all(x.shape == (0,) for x in c))
+
+    # def test_instantiate_empty_1d_shape_cell(self):
+    #     # Construct a 3x3 cell array ?
+    #     c = Cell(3)
+
+    #     # Check proper construction
+    #     self.assertIsInstance(c, Cell)
+    #     self.assertTupleEqual(c.shape, (1, 3))
+    #     self.assertTrue(all(isinstance(x, Array) for x in c.flat))
+    #     self.assertTrue(all(x.shape == (0,) for x in c.flat))
+
+    def test_instantiate_empty_1d_row_cell(self):
+        # Construct a 1x3 cell array
+        c = Cell(1, 3)
+
+        # Check proper construction
         self.assertIsInstance(c, Cell)
-        self.assertEqual(c.shape, (3, 2))
+        self.assertTupleEqual(c.shape, (1, 3))
+        self.assertTrue(all(isinstance(x, Array) for x in c.flat))
         self.assertTrue(all(x.shape == (0,) for x in c.flat))
+
+    def test_instantiate_empty_1d_col_cell(self):
+        # Construct a 3x1 cell array
+        c = Cell(3, 1)
+
+        # Check proper construction
+        self.assertIsInstance(c, Cell)
+        self.assertTupleEqual(c.shape, (3, 1))
+        self.assertTrue(all(isinstance(x, Array) for x in c.flat))
+        self.assertTrue(all(x.shape == (0,) for x in c.flat))
+
+    def test_instantiate_empty_2d_cell(self):
+        # Construct a 3x2 cell array
+        c = Cell(3, 2)
+
+        # Check proper construction
+        self.assertIsInstance(c, Cell)
+        self.assertTupleEqual(c.shape, (3, 2))
+        self.assertTrue(all(isinstance(x, Array) for x in c.flat))
+        self.assertTrue(all(x.shape == (0,) for x in c.flat))
+
+    # def test_instantiate_shape_2d(self):
+    #     c = Cell([3, 2])
+    #     self.assertIsInstance(c, Cell)
+    #     self.assertEqual(c.shape, (3, 2))
+    #     self.assertTrue(all(x.shape == (0,) for x in c.flat))
 
     def test_instantiate_shape_order(self):
         c = Cell([3, 2], order="C")
@@ -83,17 +131,106 @@ class CellTestCase(unittest.TestCase):
         c_python = Cell.from_any([1, 2, 3])
         self.assertListEqual(c_matlab.tolist(), c_python.tolist())
 
-    def test_cell2d_from_matlab(self):
-        c_matlab = Runtime.call("eval", "{1, 2, 3; 4, 5, 6}")
-        c_python = Cell.from_any([[1, 2, 3], [4, 5, 6]], deepcat=True)
-        self.assertTrue(c_matlab.tolist() == c_python.tolist())
+    def test_instantiate_1d_row_cell_from_matlab(self):
+        # Construct a 1x3 cell array in Matlab
+        try:
+            c_matlab = Runtime.call("eval", "{1, 2, 3}")
+        except Exception:
+            self.fail('1D row cell from Matlab failed.')
 
-    def test_nested_cell_from_matlab(self):
-        c_matlab = Runtime.call("eval", "{{1, 2, 3}, {4, 5, 6}}")
-        c_python = Cell.from_any([[1, 2, 3], [4, 5, 6]])
-        c_matlab = [x.tolist() for x in c_matlab.tolist()]
-        c_python = [x.tolist() for x in c_python.tolist()]
-        self.assertListEqual(c_matlab, c_python)
+        # Check Runtime conversion
+        self.assertIsInstance(c_matlab, Cell)
+        self.assertTupleEqual(c_matlab.shape, (1, 3))
+        self.assertListEqual(c_matlab.tolist(), [[1, 2, 3]])
+
+    def test_instantiate_1d_col_cell_from_matlab(self):
+        # Construct a 3x1 cell array in Matlab
+        try:
+            c_matlab = Runtime.call("eval", "{1; 2; 3}")
+        except Exception:
+            self.fail('1D col cell from Matlab failed.')
+
+        # Check Runtime conversion
+        self.assertIsInstance(c_matlab, Cell)
+        self.assertTupleEqual(c_matlab.shape, (3, 1))
+        self.assertListEqual(c_matlab.tolist(), [[1], [2], [3]])
+
+    def test_instantiate_2d_cell_from_matlab(self):
+        # Construct a 2x3 cell array in Matlab
+        try:
+            c_matlab = Runtime.call("eval", "{1, 2, 3; 4, 5, 6}")
+        except Exception:
+            self.fail('2D cell from Matlab failed.')
+
+        # Check Runtime conversion
+        self.assertIsInstance(c_matlab, Cell)
+        self.assertTupleEqual(c_matlab.shape, (2, 3))
+        self.assertListEqual(c_matlab.tolist(), [[1, 2, 3], [4, 5, 6]])
+
+    def test_instantiate_nested_cell_from_matlab(self):
+        # Construct a nested cell array
+        try:
+            c_matlab = Runtime.call("eval", "{{1, 2, 3}, {4, 5, 6}}")
+        except Exception:
+            self.fail('Nested cell from Matlab failed.')
+
+        # Check Runtime conversion
+        self.assertIsInstance(c_matlab, Cell)
+        self.assertTupleEqual(c_matlab.shape, (2,))
+        self.assertTrue(all(isinstance(x, Cell) for x in c_matlab))
+        self.assertTrue(all(len(x.shape) == 1 for x in c_matlab))
+        self.assertListEqual(c_matlab[0].tolist(), [[1, 2, 3]])
+        self.assertListEqual(c_matlab[1].tolist(), [[4, 5, 6]])
+
+    def test_instantiate_empty_cell_from_matlab(self):
+        # Construct an empty cell array in Matlab
+        try:
+            c_matlab = Runtime.call("eval", "{}")
+        except Exception:
+            self.fail('Empty cell from Matlab failed.')
+
+        # Check Runtime conversion
+        self.assertIsInstance(c_matlab, Cell)
+        self.assertTupleEqual(c_matlab.shape, (0,))
+
+    def test_instantiate_empty_1d_row_cell_from_matlab(self):
+        # Construct a 1x3 cell array in Matlab
+        try:
+            c_matlab = Runtime.call('cell', 3, 1)
+        except Exception:
+            self.fail('1D empty row cell from Matlab failed.')
+
+        # Check Runtime conversion
+        self.assertIsInstance(c_matlab, Cell)
+        self.assertTupleEqual(c_matlab.shape, (3, 1))
+        self.assertTrue(all(isinstance(x, Array) for x in c_matlab))
+        self.assertTrue(all(len(x.shape) == 0 for x in c_matlab))
+
+    def test_instantiate_empty_1d_col_cell_from_matlab(self):
+        # Construct a 1x3 cell array in Matlab
+        try:
+            c_matlab = Runtime.call('cell', 1, 3)
+        except Exception:
+            self.fail('1D empty col cell from Matlab failed.')
+
+        # Check Runtime conversion
+        self.assertIsInstance(c_matlab, Cell)
+        self.assertTupleEqual(c_matlab.shape, (1, 3))
+        self.assertTrue(all(isinstance(x, Array) for x in c_matlab.flat))
+        self.assertTrue(all(len(x.shape) == 0 for x in c_matlab.flat))
+
+    def test_instantiate_empty_2d_cell_from_matlab(self):
+        # Construct a 3x2 cell array in Matlab
+        try:
+            c_matlab = Runtime.call('cell', 3, 2)
+        except Exception:
+            self.fail('2D empty cell from Matlab failed.')
+
+        # Check Runtime conversion
+        self.assertIsInstance(c_matlab, Cell)
+        self.assertTupleEqual(c_matlab.shape, (3, 2))
+        self.assertTrue(all(isinstance(x, Array) for x in c_matlab.flat))
+        self.assertTrue(all(len(x.shape) == 0 for x in c_matlab.flat))
 
     def test_append_1d(self):
         c = Cell.from_any([1, 2, 3], owndata=True)

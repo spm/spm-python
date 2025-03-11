@@ -1,7 +1,7 @@
 import unittest
 import numpy as np
 
-from spm import Struct
+from spm import Struct, Array
 
 
 class TestStruct(unittest.TestCase):
@@ -42,6 +42,34 @@ class TestStruct(unittest.TestCase):
         a = np.asarray(self.struct, dtype=object)
         self.assertEqual(a.item(), dict(self.struct))
 
+    def test_struct_as_array_after_initialization(self):
+        self.struct.foo = "bar"
+        self.struct.bar = "baz"
+        self.struct[1].baz = 42
+
+        keys = set(('foo', 'bar', 'baz'))
+
+        # All fields exist in struct array
+        self.assertSetEqual(keys, set(self.struct.keys()))
+
+        # All fields exist in first slice
+        self.assertSetEqual(keys, set(self.struct[0].keys()))
+
+        # All fields exist in second slice
+        self.assertSetEqual(keys, set(self.struct[1].keys()))
+
+        # Specified elements are correct
+        self.assertEqual(self.struct[0].foo, "bar")
+        self.assertEqual(self.struct[0].bar, "baz")
+        self.assertEqual(self.struct[1].baz, 42)
+
+        # Unspecified elements are empty arrays
+        self.assertIsInstance(self.struct[0].baz, Array)
+        self.assertTupleEqual(self.struct[0].baz.shape, tuple())
+        self.assertIsInstance(self.struct[1].foo, Array)
+        self.assertTupleEqual(self.struct[1].foo.shape, tuple())
+        self.assertIsInstance(self.struct[1].bar, Array)
+        self.assertTupleEqual(self.struct[1].bar.shape, tuple())
 
 if __name__ == "__main__":
     unittest.main()
