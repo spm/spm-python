@@ -108,7 +108,7 @@ class CellTestCase(unittest.TestCase):
             self.fail('Empty cell to Matlab failed.')
 
         # Check properties in Matlab
-        self.assertEqual(size.tolist(), [[1, 0]])
+        self.assertEqual(size.tolist(), [1, 0])
         self.assertEqual(type, 'cell')
 
     def test_cell_to_matlab_empty_1d(self):
@@ -123,7 +123,7 @@ class CellTestCase(unittest.TestCase):
             self.fail('1D shape cell to Matlab failed.')
 
         # Check properties in Matlab
-        self.assertEqual(size.tolist(), [[1, 3]])
+        self.assertEqual(size.tolist(), [1, 3])
         self.assertEqual(type, 'cell')
 
     def test_cell_to_matlab_empty_2d_row(self):
@@ -138,7 +138,7 @@ class CellTestCase(unittest.TestCase):
             self.fail('1D row cell to Matlab failed.')
 
         # Check properties in Matlab
-        self.assertEqual(size.tolist(), [[1, 3]])
+        self.assertEqual(size.tolist(), [1, 3])
         self.assertEqual(type, 'cell')
 
     def test_cell_to_matlab_empty_2d_col(self):
@@ -153,7 +153,7 @@ class CellTestCase(unittest.TestCase):
             self.fail('1D col cell to Matlab failed.')
 
         # Check properties in Matlab
-        self.assertEqual(size.tolist(), [[3, 1]])
+        self.assertEqual(size.tolist(), [3, 1])
         self.assertEqual(type, 'cell')
 
     def test_cell_to_matlab_empty_2d(self):
@@ -168,7 +168,7 @@ class CellTestCase(unittest.TestCase):
             self.fail('2D cell to Matlab failed.')
 
         # Check properties in Matlab
-        self.assertEqual(size.tolist(), [[3, 2]])
+        self.assertEqual(size.tolist(), [3, 2])
         self.assertEqual(type, 'cell')
 
     def test_cell_to_matlab_empty_nd(self):
@@ -183,7 +183,7 @@ class CellTestCase(unittest.TestCase):
             self.fail('N-D cell to Matlab failed.')
 
         # Check properties in Matlab
-        self.assertEqual(size.tolist(), [[2, 3, 4, 5]])
+        self.assertEqual(size.tolist(), [2, 3, 4, 5])
         self.assertEqual(type, 'cell')
 
     def test_cell_as_struct(self):

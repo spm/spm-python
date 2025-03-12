@@ -1,5 +1,6 @@
 import warnings
 import numpy as np
+from functools import partial
 from collections.abc import (
     MutableSequence, MutableMapping, KeysView, ValuesView, ItemsView
 )
@@ -222,7 +223,7 @@ class MatlabType(object):
     """Generic type for objects that have an exact matlab equivalent."""
 
     @classmethod
-    def from_any(cls, other):
+    def from_any(cls, other, **kwargs):
         """
         Convert python/matlab objects to `MatlabType` objects
         (`Cell`, `Struct`, `Array`, `MatlabClass`).
@@ -234,6 +235,9 @@ class MatlabType(object):
         # - we do not convert to types that can be passed directly to
         #   the matlab runtime;
         # - instead, we convert to python types that mimic matlab types.
+        _from_any = partial(cls.from_any, **kwargs)
+        _from_runtime = kwargs.pop("_from_runtime", False)
+
         if isinstance(other, MatlabType):
             if isinstance(other, AnyDelayedArray):
                 other._error_is_not_finalized()
@@ -278,15 +282,25 @@ class MatlabType(object):
                     raise ValueError("Don't know what to do with type", type__)
 
             else:
+                other = type(other)(
+                    zip(other.keys(),
+                        map(_from_any, other.values()))
+                )
                 return Struct.from_any(other)
 
         if isinstance(other, (list, tuple, set)):
             # nested tuples are cells of cells, not cell arrays
-            return Cell.from_any(other)
+            if _from_runtime:
+                return Cell._from_runtime(other)
+            else:
+                return Cell.from_any(other)
 
         if isinstance(other, (np.ndarray, int, float, complex, bool)):
             # [array of] numbers -> Array
-            return Array.from_any(other)
+            if _from_runtime:
+                return Array._from_runtime(other)
+            else:
+                return Array.from_any(other)
 
         if isinstance(other, str):
             return other
@@ -305,16 +319,19 @@ class MatlabType(object):
             return MatlabFunction.from_any(other)
 
         if type(other) in _matlab_array_types():
-            dtype = _matlab_array_types()[type(other)]
-            return Array.from_any(other, dtype=dtype)
+            return Array._from_runtime(other)
 
         if hasattr(other, "__iter__"):
             # Iterable -> let's try to make it a cell
-            return cls.from_any(list(other))
+            return cls.from_any(list(other), _from_runtime=_from_runtime)
 
         raise TypeError(
             f"Cannot convert {type(other)} into a matlab object."
         )
+
+    @classmethod
+    def _from_runtime(cls, obj):
+        return cls.from_any(obj, _from_runtime=True)
 
     @classmethod
     def _to_runtime(cls, obj):
@@ -1157,7 +1174,10 @@ class Array(_ListishMixin, WrappedArray):
 
     @classmethod
     def _from_runtime(cls, other) -> "Array":
-        return cls.from_any(other)
+        other = np.asarray(other)
+        if len(other.shape) == 2 and other.shape[0] == 1:
+            other = other.squeeze(0)
+        return np.ndarray.view(other, cls)
 
     @classmethod
     def from_shape(cls, shape=tuple(), **kwargs) -> "Array":
@@ -1855,9 +1875,19 @@ class Cell(_ListMixin, WrappedArray):
 
     @classmethod
     def _from_runtime(cls, objdict: dict) -> "Cell":
+        if isinstance(objdict, (list, tuple, set)):
+            shape = [len(objdict)]
+            objdict = dict(type__='cell', size__=shape, data__=objdict)
+
         if objdict['type__'] != 'cell':
             raise TypeError('objdict is not a cell')
+
         size = np.array(objdict['size__'], dtype=np.uint64).ravel()
+        if len(size) == 2 and size[0] == 1:
+            # NOTE: should not be needed for Cell, as this should
+            # have been taken care of by MPython, but I am keeping it
+            # here for symmetry with Array and Struct.
+            size = size[1:]
         data = np.fromiter(objdict['data__'], dtype=object)
         data = data.reshape(size[::-1]).transpose()
         try:
@@ -1874,7 +1904,7 @@ class Cell(_ListMixin, WrappedArray):
                    op_flags=['readwrite', 'no_broadcast'])
         with np.nditer(data, **opt) as iter:
             for elem in iter:
-                elem[()] = MatlabType.from_any(elem.item())
+                elem[()] = MatlabType._from_runtime(elem.item())
 
         return obj
 
@@ -2485,6 +2515,11 @@ class Struct(_DictMixin, WrappedArray):
         if objdict['type__'] != 'structarray':
             raise TypeError('objdict is not a structarray')
         size = np.array(objdict['size__'], dtype=np.uint64).ravel()
+        if len(size) == 2 and size[0] == 1:
+            # NOTE: should not be needed for Cell, as this should
+            # have been taken care of by MPython, but I am keeping it
+            # here for symmetry with Array and Struct.
+            size = size[1:]
         data = np.array(objdict['data__'], dtype=object)
         data = data.reshape(size)
         try:
@@ -2495,7 +2530,17 @@ class Struct(_DictMixin, WrappedArray):
                 f'  data={data}\n'
                 f'  objdict={objdict}'
             )
-        return MatlabType.from_any(obj)
+
+        # recurse
+        opt = dict(flags=['refs_ok', 'zerosize_ok'],
+                   op_flags=['readonly', 'no_broadcast'])
+        with np.nditer(data, **opt) as iter:
+            for elem in iter:
+                item = elem.item()
+                for key, val in item.items():
+                    item[key] = MatlabType._from_runtime(val)
+
+        return obj
 
     @classmethod
     def from_shape(cls, shape=tuple(), **kwargs) -> "Struct":

@@ -172,7 +172,7 @@ class TestStruct(unittest.TestCase):
         # Check Runtime conversion
         self.assertIsInstance(s_matlab, Struct)
         self.assertIsInstance(s_matlab.field1, Array)
-        self.assertListEqual(s_matlab.field1.tolist(), [[1, 2, 3]])
+        self.assertListEqual(s_matlab.field1.tolist(), [1, 2, 3])
         self.assertEqual(s_matlab.field2, 2)
         self.assertListEqual(list(s_matlab.keys()), ["field1", "field2"])
         self.assertListEqual(list(s_matlab.values()), [s_matlab.field1, 2])
@@ -215,7 +215,7 @@ class TestStruct(unittest.TestCase):
             self.fail('Empty struct to Matlab failed.')
 
         # Check properties in Matlab
-        self.assertEqual(size.tolist(), [[1, 1]])
+        self.assertEqual(size.tolist(), [1, 1])
         self.assertEqual(type, 'struct')
         self.assertListEqual(fieldnames.tolist(), [])
 
@@ -232,7 +232,7 @@ class TestStruct(unittest.TestCase):
             self.fail('1D shape struct to Matlab failed.')
 
         # Check properties in Matlab
-        self.assertEqual(size.tolist(), [[1, 3]])
+        self.assertEqual(size.tolist(), [1, 3])
         self.assertEqual(type, 'struct')
         self.assertListEqual(fieldnames.tolist(), [])
 
@@ -249,7 +249,7 @@ class TestStruct(unittest.TestCase):
             self.fail('1D row struct to Matlab failed.')
 
         # Check properties in Matlab
-        self.assertEqual(size.tolist(), [[1, 3]])
+        self.assertEqual(size.tolist(), [1, 3])
         self.assertEqual(type, 'struct')
         self.assertListEqual(fieldnames.tolist(), [])
 
@@ -266,7 +266,7 @@ class TestStruct(unittest.TestCase):
             self.fail('1D col struct to Matlab failed.')
 
         # Check properties in Matlab
-        self.assertEqual(size.tolist(), [[3, 1]])
+        self.assertEqual(size.tolist(), [3, 1])
         self.assertEqual(type, 'struct')
         self.assertListEqual(fieldnames.tolist(), [])
 
@@ -283,7 +283,7 @@ class TestStruct(unittest.TestCase):
             self.fail('2D struct to Matlab failed.')
 
         # Check properties in Matlab
-        self.assertEqual(size.tolist(), [[3, 2]])
+        self.assertEqual(size.tolist(), [3, 2])
         self.assertEqual(type, 'struct')
         self.assertListEqual(fieldnames.tolist(), [])
 

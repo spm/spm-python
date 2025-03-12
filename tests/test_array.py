@@ -44,7 +44,7 @@ class ArrayTestCase(unittest.TestCase):
         self.assertEqual(a.shape, (3, 1))
         self.assertEqual(a.dtype, np.float64)
         self.assertTrue((a == 0).all())
-    
+
     def test_array_instantiate_shape_2d(self):
         a = Array(2, 3, 4, 5)
 
@@ -91,9 +91,9 @@ class ArrayTestCase(unittest.TestCase):
             self.fail('2D row array to Matlab failed.')
 
         self.assertIsInstance(a, Array)
-        self.assertEqual(a.shape, (1, 3))
+        self.assertEqual(a.shape, (3,))
         self.assertEqual(a.dtype, np.float64)
-        self.assertEqual(a.tolist(), [[1, 2, 3]])
+        self.assertEqual(a.tolist(), [1, 2, 3])
 
     def test_array_from_matlab_2d_col(self):
         try:
@@ -116,20 +116,20 @@ class ArrayTestCase(unittest.TestCase):
         self.assertEqual(a.shape, (2, 3))
         self.assertEqual(a.dtype, np.float64)
         self.assertEqual(a.tolist(), [[1, 2, 3], [4, 5, 6]])
-    
+
     def test_array_to_matlab_empty(self):
         # Construct an empty array
         a = Array()
-        
+
         # Get properties in Matlab
-        try: 
+        try:
             size = Runtime.call('size', a)
             type = Runtime.call('class', a)
         except Exception:
             self.fail('Empty array to Matlab failed.')
 
         # Check properties in Matlab
-        self.assertEqual(size.tolist(), [[1, 1]])
+        self.assertEqual(size.tolist(), [1, 1])
         self.assertEqual(type, 'double')
 
     def test_array_to_matlab_empty_1d(self):
@@ -144,7 +144,7 @@ class ArrayTestCase(unittest.TestCase):
             self.fail('1D shape array to Matlab failed.')
 
         # Check properties in Matlab
-        self.assertEqual(size.tolist(), [[1, 3]])
+        self.assertEqual(size.tolist(), [1, 3])
         self.assertEqual(type, 'double')
 
     def test_array_to_matlab_empty_2d_row(self):
@@ -159,7 +159,7 @@ class ArrayTestCase(unittest.TestCase):
             self.fail('1D row array to Matlab failed.')
 
         # Check properties in Matlab
-        self.assertEqual(size.tolist(), [[1, 3]])
+        self.assertEqual(size.tolist(), [1, 3])
         self.assertEqual(type, 'double')
 
     def test_array_to_matlab_empty_2d_col(self):
@@ -174,7 +174,7 @@ class ArrayTestCase(unittest.TestCase):
             self.fail('1D col array to Matlab failed.')
 
         # Check properties in Matlab
-        self.assertEqual(size.tolist(), [[3, 1]])
+        self.assertEqual(size.tolist(), [3, 1])
         self.assertEqual(type, 'double')
 
     def test_array_to_matlab_empty_2d(self):
@@ -189,9 +189,9 @@ class ArrayTestCase(unittest.TestCase):
             self.fail('2D array to Matlab failed.')
 
         # Check properties in Matlab
-        self.assertEqual(size.tolist(), [[3, 2]])
+        self.assertEqual(size.tolist(), [3, 2])
         self.assertEqual(type, 'double')
-    
+
     def test_array_to_matlab_empty_nd(self):
         # Construct a 2x3x4x5 array
         a = Array(2, 3, 4, 5)
@@ -204,7 +204,7 @@ class ArrayTestCase(unittest.TestCase):
             self.fail('N-D array to Matlab failed.')
 
         # Check properties in Matlab
-        self.assertEqual(size.tolist(), [[2, 3, 4, 5]])
+        self.assertEqual(size.tolist(), [2, 3, 4, 5])
         self.assertEqual(type, 'double')
 
     def test_array_append_1d(self):
@@ -258,9 +258,8 @@ class ArrayTestCase(unittest.TestCase):
         self.assertEqual(a.tolist(), [2])
 
     def test_array_roundtrip_1d(self):
-        a = Array.from_any([1, 2, 3])
         identity = Runtime.call('eval',  '@(x) x')
-        a = Array.from_any([[1, 2, 3]])
+        a = Array.from_any([1, 2, 3])
         d = identity(a)
         self.assertListEqual(a.tolist(), d.tolist())
 
