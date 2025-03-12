@@ -9,6 +9,6 @@ def _make_or_fetch_inputfile(*args, **kwargs):
 
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/utilities/private/make_or_fetch_inputfile.m )
 
-    Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("make_or_fetch_inputfile", *args, **kwargs)

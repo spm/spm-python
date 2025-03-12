@@ -1,4 +1,5 @@
-from .__wrapper__ import Struct, Cell, StructArray, Runtime
+from .__wrapper__ import Struct, Cell, Array, SparseArray, Runtime
+from . import cheats
 from .file_array import file_array
 from .gifti import gifti
 from .meeg import meeg
@@ -19,6 +20,7 @@ from .spm_ADEM_update import spm_ADEM_update
 from .spm_ALAP import spm_ALAP
 from .spm_A_reduce import spm_A_reduce
 from .spm_BIDS import spm_BIDS
+from .spm_BIDS_file import spm_BIDS_file
 from .spm_BMS import spm_BMS
 from .spm_BMS_F import spm_BMS_F
 from .spm_BMS_F_smpl import spm_BMS_F_smpl

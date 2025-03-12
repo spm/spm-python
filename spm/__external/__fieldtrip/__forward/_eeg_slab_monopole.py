@@ -16,6 +16,6 @@ def _eeg_slab_monopole(*args, **kwargs):
 
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/forward/private/eeg_slab_monopole.m )
 
-    Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("eeg_slab_monopole", *args, **kwargs)

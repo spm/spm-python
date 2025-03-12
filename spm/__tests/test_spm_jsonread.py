@@ -9,6 +9,6 @@ def test_spm_jsonread(*args, **kwargs):
 
     [Matlab code]( https://github.com/spm/spm/blob/main/tests/test_spm_jsonread.m )
 
-    Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("test_spm_jsonread", *args, **kwargs)

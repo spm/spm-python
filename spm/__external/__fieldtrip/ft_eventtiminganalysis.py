@@ -79,6 +79,6 @@ def ft_eventtiminganalysis(*args, **kwargs):
 
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/ft_eventtiminganalysis.m )
 
-    Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("ft_eventtiminganalysis", *args, **kwargs)

@@ -40,6 +40,6 @@ def DEMO_SLR(*args, **kwargs):
 
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DEM/DEMO_SLR.m )
 
-    Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("DEMO_SLR", *args, **kwargs, nargout=0)

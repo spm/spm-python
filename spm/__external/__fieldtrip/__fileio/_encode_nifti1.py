@@ -13,6 +13,6 @@ def _encode_nifti1(*args, **kwargs):
 
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/encode_nifti1.m )
 
-    Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("encode_nifti1", *args, **kwargs)

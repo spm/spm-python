@@ -9,6 +9,6 @@ def test_spm_mesh_sphere(*args, **kwargs):
 
     [Matlab code]( https://github.com/spm/spm/blob/main/tests/test_spm_mesh_sphere.m )
 
-    Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("test_spm_mesh_sphere", *args, **kwargs)

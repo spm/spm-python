@@ -1,7 +1,7 @@
-from spm.__wrapper__ import Runtime, MatlabClassWrapper
+from spm.__wrapper__ import Runtime, MatlabClass
 
 
-class cfg_inv_out(MatlabClassWrapper):
+class cfg_inv_out(MatlabClass):
     def __init__(self, *args, **kwargs):
         """
           function obj = cfg_inv_out(varargin)  
@@ -23,6 +23,6 @@ class cfg_inv_out(MatlabClassWrapper):
 
         [Matlab code]( https://github.com/spm/spm/blob/main/matlabbatch/@cfg_inv_out/cfg_inv_out.m )
 
-        Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         super().__init__()

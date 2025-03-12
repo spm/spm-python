@@ -1,7 +1,7 @@
-from spm.__wrapper__ import Runtime, MatlabClassWrapper
+from spm.__wrapper__ import Runtime, MatlabClass
 
 
-class file_array(MatlabClassWrapper):
+class file_array(MatlabClass):
     def __init__(self, *args, **kwargs):
         """
           Function for creating file_array objects.  
@@ -23,7 +23,7 @@ class file_array(MatlabClassWrapper):
 
         [Matlab code]( https://github.com/spm/spm/blob/main/@file_array/file_array.m )
 
-        Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         super().__init__()
 
@@ -36,7 +36,7 @@ class file_array(MatlabClassWrapper):
 
         [Matlab code]( https://github.com/spm/spm/blob/main/@file_array/cat.m )
 
-        Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("cat", self._as_matlab_object(), *args, **kwargs)
 
@@ -48,7 +48,7 @@ class file_array(MatlabClassWrapper):
 
         [Matlab code]( https://github.com/spm/spm/blob/main/@file_array/ctranspose.m )
 
-        Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("ctranspose", self._as_matlab_object(), *args, **kwargs)
 
@@ -60,7 +60,7 @@ class file_array(MatlabClassWrapper):
 
         [Matlab code]( https://github.com/spm/spm/blob/main/@file_array/disp.m )
 
-        Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("disp", self._as_matlab_object(), *args, **kwargs, nargout=0)
 
@@ -72,7 +72,7 @@ class file_array(MatlabClassWrapper):
 
         [Matlab code]( https://github.com/spm/spm/blob/main/@file_array/display.m )
 
-        Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("display", self._as_matlab_object(), *args, **kwargs, nargout=0)
 
@@ -86,7 +86,7 @@ class file_array(MatlabClassWrapper):
 
         [Matlab code]( https://github.com/spm/spm/blob/main/@file_array/double.m )
 
-        Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("double", self._as_matlab_object(), *args, **kwargs)
 
@@ -98,7 +98,7 @@ class file_array(MatlabClassWrapper):
 
         [Matlab code]( https://github.com/spm/spm/blob/main/@file_array/end.m )
 
-        Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("end", self._as_matlab_object(), *args, **kwargs)
 
@@ -110,7 +110,7 @@ class file_array(MatlabClassWrapper):
 
         [Matlab code]( https://github.com/spm/spm/blob/main/@file_array/fieldnames.m )
 
-        Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("fieldnames", self._as_matlab_object(), *args, **kwargs)
 
@@ -124,7 +124,7 @@ class file_array(MatlabClassWrapper):
 
         [Matlab code]( https://github.com/spm/spm/blob/main/@file_array/full.m )
 
-        Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("full", self._as_matlab_object(), *args, **kwargs)
 
@@ -136,7 +136,7 @@ class file_array(MatlabClassWrapper):
 
         [Matlab code]( https://github.com/spm/spm/blob/main/@file_array/horzcat.m )
 
-        Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("horzcat", self._as_matlab_object(), *args, **kwargs)
 
@@ -151,7 +151,7 @@ class file_array(MatlabClassWrapper):
 
         [Matlab code]( https://github.com/spm/spm/blob/main/@file_array/initialise.m )
 
-        Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("initialise", self._as_matlab_object(), *args, **kwargs, nargout=0)
 
@@ -165,7 +165,7 @@ class file_array(MatlabClassWrapper):
 
         [Matlab code]( https://github.com/spm/spm/blob/main/@file_array/isnan.m )
 
-        Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("isnan", self._as_matlab_object(), *args, **kwargs)
 
@@ -177,7 +177,7 @@ class file_array(MatlabClassWrapper):
 
         [Matlab code]( https://github.com/spm/spm/blob/main/@file_array/length.m )
 
-        Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("length", self._as_matlab_object(), *args, **kwargs)
 
@@ -189,7 +189,7 @@ class file_array(MatlabClassWrapper):
 
         [Matlab code]( https://github.com/spm/spm/blob/main/@file_array/loadobj.m )
 
-        Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("loadobj", self._as_matlab_object(), *args, **kwargs)
 
@@ -201,7 +201,7 @@ class file_array(MatlabClassWrapper):
 
         [Matlab code]( https://github.com/spm/spm/blob/main/@file_array/ndims.m )
 
-        Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("ndims", self._as_matlab_object(), *args, **kwargs)
 
@@ -213,7 +213,7 @@ class file_array(MatlabClassWrapper):
 
         [Matlab code]( https://github.com/spm/spm/blob/main/@file_array/numel.m )
 
-        Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("numel", self._as_matlab_object(), *args, **kwargs)
 
@@ -227,7 +227,7 @@ class file_array(MatlabClassWrapper):
 
         [Matlab code]( https://github.com/spm/spm/blob/main/@file_array/numeric.m )
 
-        Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("numeric", self._as_matlab_object(), *args, **kwargs)
 
@@ -239,7 +239,7 @@ class file_array(MatlabClassWrapper):
 
         [Matlab code]( https://github.com/spm/spm/blob/main/@file_array/permute.m )
 
-        Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("permute", self._as_matlab_object(), *args, **kwargs)
 
@@ -251,7 +251,7 @@ class file_array(MatlabClassWrapper):
 
         [Matlab code]( https://github.com/spm/spm/blob/main/@file_array/reshape.m )
 
-        Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("reshape", self._as_matlab_object(), *args, **kwargs)
 
@@ -263,7 +263,7 @@ class file_array(MatlabClassWrapper):
 
         [Matlab code]( https://github.com/spm/spm/blob/main/@file_array/size.m )
 
-        Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("size", self._as_matlab_object(), *args, **kwargs)
 
@@ -275,7 +275,7 @@ class file_array(MatlabClassWrapper):
 
         [Matlab code]( https://github.com/spm/spm/blob/main/@file_array/subsasgn.m )
 
-        Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("subsasgn", self._as_matlab_object(), *args, **kwargs)
 
@@ -288,7 +288,7 @@ class file_array(MatlabClassWrapper):
 
         [Matlab code]( https://github.com/spm/spm/blob/main/@file_array/subsref.m )
 
-        Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("subsref", self._as_matlab_object(), *args, **kwargs)
 
@@ -300,7 +300,7 @@ class file_array(MatlabClassWrapper):
 
         [Matlab code]( https://github.com/spm/spm/blob/main/@file_array/transpose.m )
 
-        Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("transpose", self._as_matlab_object(), *args, **kwargs)
 
@@ -312,7 +312,7 @@ class file_array(MatlabClassWrapper):
 
         [Matlab code]( https://github.com/spm/spm/blob/main/@file_array/vertcat.m )
 
-        Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("vertcat", self._as_matlab_object(), *args, **kwargs)
 
@@ -324,7 +324,7 @@ class file_array(MatlabClassWrapper):
 
         [Matlab code]( https://github.com/spm/spm/blob/main/@file_array/private/datatypes.m )
 
-        Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("datatypes", self._as_matlab_object(), *args, **kwargs)
 
@@ -341,7 +341,7 @@ class file_array(MatlabClassWrapper):
 
         [Matlab code]( https://github.com/spm/spm/blob/main/@file_array/private/dim.m )
 
-        Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("dim", self._as_matlab_object(), *args, **kwargs)
 
@@ -359,7 +359,7 @@ class file_array(MatlabClassWrapper):
 
         [Matlab code]( https://github.com/spm/spm/blob/main/@file_array/private/dtype.m )
 
-        Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("dtype", self._as_matlab_object(), *args, **kwargs)
 
@@ -377,7 +377,7 @@ class file_array(MatlabClassWrapper):
 
         [Matlab code]( https://github.com/spm/spm/blob/main/@file_array/private/file2mat.m )
 
-        Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("file2mat", self._as_matlab_object(), *args, **kwargs)
 
@@ -394,7 +394,7 @@ class file_array(MatlabClassWrapper):
 
         [Matlab code]( https://github.com/spm/spm/blob/main/@file_array/private/fname.m )
 
-        Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("fname", self._as_matlab_object(), *args, **kwargs)
 
@@ -415,7 +415,7 @@ class file_array(MatlabClassWrapper):
 
         [Matlab code]( https://github.com/spm/spm/blob/main/@file_array/private/init.m )
 
-        Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("init", self._as_matlab_object(), *args, **kwargs, nargout=0)
 
@@ -433,7 +433,7 @@ class file_array(MatlabClassWrapper):
 
         [Matlab code]( https://github.com/spm/spm/blob/main/@file_array/private/mat2file.m )
 
-        Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("mat2file", self._as_matlab_object(), *args, **kwargs, nargout=0)
 
@@ -444,7 +444,7 @@ class file_array(MatlabClassWrapper):
 
         [Matlab code]( https://github.com/spm/spm/blob/main/@file_array/private/mystruct.m )
 
-        Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("mystruct", self._as_matlab_object(), *args, **kwargs)
 
@@ -461,7 +461,7 @@ class file_array(MatlabClassWrapper):
 
         [Matlab code]( https://github.com/spm/spm/blob/main/@file_array/private/offset.m )
 
-        Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("offset", self._as_matlab_object(), *args, **kwargs)
 
@@ -478,7 +478,7 @@ class file_array(MatlabClassWrapper):
 
         [Matlab code]( https://github.com/spm/spm/blob/main/@file_array/private/permission.m )
 
-        Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("permission", self._as_matlab_object(), *args, **kwargs)
 
@@ -490,7 +490,7 @@ class file_array(MatlabClassWrapper):
 
         [Matlab code]( https://github.com/spm/spm/blob/main/@file_array/private/resize_scales.m )
 
-        Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("resize_scales", self._as_matlab_object(), *args, **kwargs)
 
@@ -507,7 +507,7 @@ class file_array(MatlabClassWrapper):
 
         [Matlab code]( https://github.com/spm/spm/blob/main/@file_array/private/scl_inter.m )
 
-        Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("scl_inter", self._as_matlab_object(), *args, **kwargs)
 
@@ -524,6 +524,6 @@ class file_array(MatlabClassWrapper):
 
         [Matlab code]( https://github.com/spm/spm/blob/main/@file_array/private/scl_slope.m )
 
-        Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
         return Runtime.call("scl_slope", self._as_matlab_object(), *args, **kwargs)

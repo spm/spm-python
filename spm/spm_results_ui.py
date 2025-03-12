@@ -129,6 +129,6 @@ def spm_results_ui(*args, **kwargs):
 
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_results_ui.m )
 
-    Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_results_ui", *args, **kwargs)

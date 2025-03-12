@@ -23,7 +23,8 @@ def spm_shp_sample_brains(*args, **kwargs):
         r2n    - Subject's import to native transform [default: identity]  
         can    - If true:  center samples about canonical brain (z=0)  
                  If false: center samples about subject's brain (z=z0)  
-         
+        RandSeed - the random seed used to make this brain (used only to neaten directory structure)  
+        WriteClean - removes random seed directory if it exists  
         Returns  
         -------  
         z       - (M x K) Sampled latent codes  
@@ -38,6 +39,6 @@ def spm_shp_sample_brains(*args, **kwargs):
 
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_shp_sample_brains.m )
 
-    Copyright (C) 2024-2024 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
     return Runtime.call("spm_shp_sample_brains", *args, **kwargs)
