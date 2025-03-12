@@ -344,7 +344,7 @@ class MatlabType(object):
                 return obj.tolist()
             return obj
 
-        elif sparse and isinstance(obj, sparse.coo_array):
+        elif sparse and isinstance(obj, sparse.sparray):
             return SparseArray.from_any(obj)._as_runtime()
 
         else:
@@ -1328,11 +1328,9 @@ class _SparseMixin:
         size = np.array(dictobj['size__'], dtype=np.uint64).ravel()
         size = size.tolist()
         dtype = _matlab_array_types()[type(dictobj['values__'])]
-        obj = cls.from_shape(size, dtype=dtype)
         indices = np.asarray(dictobj['indices__'], dtype=np.long) - 1
         values = np.asarray(dictobj['values__'], dtype=dtype).ravel()
-        obj[tuple(indices.T)] = values
-        return obj
+        return cls.from_coo(values, indices.T, size)
 
 
 if sparse:
@@ -1341,9 +1339,9 @@ if sparse:
         """Base class for sparse arrays."""
 
         def to_dense(self) -> "Array":
-            return Array.from_any(super().to_dense())
+            return Array.from_any(self.todense())
 
-    class SparseArray(sparse.coo_array, _SparseMixin, WrappedSparseArray):
+    class SparseArray(sparse.csc_array, _SparseMixin, WrappedSparseArray):
         """
         Matlab sparse arrays (scipy.sparse backend).
 
@@ -1371,14 +1369,40 @@ if sparse:
         def __init__(self, *args, **kwargs) -> None:
             mode, arg, kwargs = self._parse_args(*args, **kwargs)
             if mode == "shape":
-                return super().__init__(shape=arg, **kwargs)
+                ndim = len(arg)
+                return super().__init__(([], [[]]*ndim), shape=arg, **kwargs)
             else:
                 if not isinstance(arg, (np.ndarray, sparse.sparray)):
                     arg = np.asanyarray(arg)
                 return super().__init__(arg, **kwargs)
 
         @classmethod
-        def from_shape(cls, shape=tuple(), **kwargs) -> "Array":
+        def from_coo(cls, values, indices, shape=None, **kw) -> "SparseArray":
+            """
+            Build a sparse array from indices and values.
+
+            Parameters
+            ----------
+            values : (N,) ArrayLike
+                Values to set at each index.
+            indices : (D, N) ArrayLike
+                Indices of nonzero elements.
+            shape : list[int] | None
+                Shape of the array.
+            dtype : np.dtype | None
+                Target data type. Same as `values` by default.
+
+            Returns
+            -------
+            array : SparseArray
+                New array.
+            """
+            indices = np.asarray(indices)
+            coo = sparse.coo_array((values, indices), shape=shape, **kw)
+            return cls.from_any(coo)
+
+        @classmethod
+        def from_shape(cls, shape=tuple(), **kwargs) -> "SparseArray":
             """
             Build an array of a given shape.
 
@@ -1471,6 +1495,38 @@ else:
 
         def to_dense(self) -> "Array":
             return np.ndarray.view(self, Array)
+
+        @classmethod
+        def from_coo(cls, values, indices, shape=None, **kw) -> "SparseArray":
+            """
+            Build a sparse array from indices and values.
+
+            Parameters
+            ----------
+            values : (N,) ArrayLike
+                Values to set at each index.
+            indices : (D, N) ArrayLike
+                Indices of nonzero elements.
+            shape : list[int] | None
+                Shape of the array.
+            dtype : np.dtype | None
+                Target data type. Same as `values` by default.
+
+            Returns
+            -------
+            array : SparseArray
+                New array.
+            """
+            dtype = kw.get("dtype", None)
+            indices = np.asarray(indices)
+            values = np.asarray(values, dtype=dtype)
+            if shape is None:
+                shape = (1 + indices.max(-1)).astype(np.uint64).tolist()
+            if dtype is None:
+                dtype = values.dtype
+            obj = cls.from_shape(shape, dtype=dtype)
+            obj[tuple(indices)] = values
+            return obj
 
 
 # ----------------------------------------------------------------------
