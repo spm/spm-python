@@ -19,13 +19,13 @@ class ImplicitTestCase(unittest.TestCase):
     def test_cell(self):
         x = Cell()
         x[2] = 3
-        self.assertEqual(x[0].shape, (0,))
-        self.assertEqual(x[1].shape, (0,))
+        self.assertEqual(x[0].shape, (0, 0))
+        self.assertEqual(x[1].shape, (0, 0))
         self.assertEqual(x[2], 3)
 
         x = Cell()
         x[1:3] = [2, 3]
-        self.assertEqual(x[0].shape, (0,))
+        self.assertEqual(x[0].shape, (0, 0))
         self.assertListEqual(x[1:3].tolist(), [2, 3])
 
         self.assertRaises(IndexError, lambda: Cell()[2] * 2)
@@ -39,7 +39,7 @@ class ImplicitTestCase(unittest.TestCase):
         x[1] = {"a": 3}
         self.assertTrue(x.shape == (2,))
         self.assertEqual(x[1].a, 3)
-        self.assertTrue(x[0].a.shape == (0,))
+        self.assertTrue(x[0].a.shape == (0, 0))
 
         self.assertRaises(AttributeError, lambda: Struct().a * 2)
         self.assertRaises(KeyError, lambda: Struct()["a"] * 2)

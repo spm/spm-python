@@ -157,10 +157,6 @@ class Runtime:
 # ----------------------------------------------------------------------
 
 
-_NP_VERSION = tuple(map(int, np.__version__.split(".")[:2]))
-_NP_HAS_COPY = not (_NP_VERSION < (2, 1))
-
-
 def _copy_if_needed(out, inp, copy=None) -> np.ndarray:
     """Fallback implementation for asarray(*, copy: bool)"""
     if (
@@ -210,6 +206,11 @@ def _matlab_array_types():
         }
     else:
         return {}
+
+
+def _empty_array() -> "Array":
+    """Matlab's default cell/struct elements are 0x0 arrays."""
+    return Array.from_shape([0, 0])
 
 
 # ----------------------------------------------------------------------
@@ -534,7 +535,7 @@ class AnyDelayedArray(AnyMatlabArray):
 
         if self._future is None:
             # FIXME: I am not entirely sure this should ever happen
-            self._future = Array.from_any([])
+            self._future = _empty_array()
 
         # if future array is wrapped, unwrap it
         if isinstance(self._future, WrappedDelayedArray):
@@ -1704,11 +1705,6 @@ class Cell(_ListMixin, WrappedArray):
 
     @classmethod
     def _DEFAULT(cls, shape: list = ()) -> np.ndarray:
-        # if len(shape) == 0:
-        #     out = np.array(None)
-        #     out[()] = Array.from_any([])
-        #     return out
-
         data = np.empty(shape, dtype=object)
         opt = dict(
             flags=['refs_ok', 'zerosize_ok'],
@@ -1716,7 +1712,7 @@ class Cell(_ListMixin, WrappedArray):
         )
         with np.nditer(data, **opt) as iter:
             for elem in iter:
-                elem[()] = Array.from_any([])
+                elem[()] = _empty_array()
         return data
 
     def _fill_default(self):
@@ -1725,7 +1721,7 @@ class Cell(_ListMixin, WrappedArray):
                    op_flags=['writeonly', 'no_broadcast'])
         with np.nditer(arr, **opt) as iter:
             for elem in iter:
-                elem[()] = Array.from_any([])
+                elem[()] = _empty_array()
         return self
 
     def __new__(cls, *args, **kwargs) -> "Cell":
@@ -2111,7 +2107,7 @@ class _DictMixin(MutableMapping):
             opt = dict(flags=['refs_ok', 'zerosize_ok'], op_flags=['readonly'])
             with np.nditer(arr, **opt) as iter:
                 for elem in iter:
-                    elem.item().setdefault(key, Array.from_any([]))
+                    elem.item().setdefault(key, _empty_array())
 
             # NOTE
             #   We then defer to `as_dict`
@@ -2206,7 +2202,7 @@ class _DictMixin(MutableMapping):
             for elem in iter:
                 item = elem.item()
                 if value is None:
-                    value = Array.from_any([])
+                    value = _empty_array()
                 else:
                     value = MatlabType.from_any(value)
                 item.setdefault(key, value)
@@ -2604,7 +2600,7 @@ class Struct(_DictMixin, WrappedArray):
             if keys:
                 item: dict = arr.item()
                 for key in keys:
-                    item.setdefault(key, Array.from_any([]))
+                    item.setdefault(key, _empty_array())
 
         if keys is None:
             keys = self._allkeys()
@@ -2616,7 +2612,7 @@ class Struct(_DictMixin, WrappedArray):
             for elem in iter:
                 item: dict = elem.item()
                 for key in keys:
-                    item.setdefault(key, Array.from_any([]))
+                    item.setdefault(key, _empty_array())
 
     # --------------
     # Bracket syntax

@@ -463,7 +463,7 @@ class CellTestCase(unittest.TestCase):
         c[3] = 9  # insert new element
         self.assertEqual(c.tolist(), [7, 2, 8, 9])
         c[5] = 11  # insert new element
-        self.assertTrue(isinstance(c[4], Array) and c[4].shape == (0,))
+        self.assertTrue(isinstance(c[4], Array) and c[4].size == 0)
         self.assertTrue(c[5] == 11)
 
         # __delitem__

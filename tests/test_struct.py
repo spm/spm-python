@@ -124,11 +124,11 @@ class TestStruct(unittest.TestCase):
 
         # Unspecified elements are empty arrays
         self.assertIsInstance(self.struct[0].baz, Array)
-        self.assertTupleEqual(self.struct[0].baz.shape, (0,))
+        self.assertTupleEqual(self.struct[0].baz.shape, (0, 0))
         self.assertIsInstance(self.struct[1].foo, Array)
-        self.assertTupleEqual(self.struct[1].foo.shape, (0,))
+        self.assertTupleEqual(self.struct[1].foo.shape, (0, 0))
         self.assertIsInstance(self.struct[1].bar, Array)
-        self.assertTupleEqual(self.struct[1].bar.shape, (0,))
+        self.assertTupleEqual(self.struct[1].bar.shape, (0, 0))
 
     def test_struct_from_matlab(self):
         # Construct a struct in Matlab
