@@ -196,7 +196,7 @@ def _matlab_array_types():
             matlab.single:  np.float32,
             matlab.logical: np.bool,
             matlab.uint64:  np.uint64,
-            matlab.uint32:  np.uint32,
+            matlab.uint32:  np.uint64,
             matlab.uint16:  np.uint16,
             matlab.uint8:   np.uint8,
             matlab.int64:   np.int64,
@@ -244,32 +244,28 @@ class MatlabType(object):
                 type__ = other["type__"]
 
                 if type__ == "structarray":
-                    # Matlab returns a list of dictionaries in data__
+                    # MPython returns a list of dictionaries in data__
                     # and the array shape in size__.
                     return Struct._from_runtime(other)
 
                 elif type__ == "cell":
-                    # Matlab returns a list of dictionaries in data__
+                    # MPython returns a list of dictionaries in data__
                     # and the array shape in size__.
                     return Cell._from_runtime(other)
 
                 elif type__ == "object":
-                    # Matlab returns the object's fields serialized
+                    # MPython returns the object's fields serialized
                     # in a dictionary.
                     return MatlabClass._from_runtime(other)
 
                 elif type__ == "sparse":
-                    # Matlab returns a dense version of the array in data__.
-                    if sparse:
-                        return SparseArray._from_runtime(other)
-                    else:
-                        data = np.asarray(other['data__'], dtype=np.double)
-                        return data.view(Array)
+                    # MPython returns the coordinates and values in a dict.
+                    return SparseArray._from_runtime(other)
 
                 elif type__ == "char":
                     # Character array that is not a row vector
                     # (row vector are converted to str automatically)
-                    # Matlab returns all rows in a (F-ordered) cell in data__
+                    # MPython returns all rows in a (F-ordered) cell in data__
                     # Let's use the cell constructor to return a cellstr.
                     # -> A cellstr is a column vector, not a row vector
                     size = np.asarray(other["size__"]).tolist()[0]
@@ -349,7 +345,7 @@ class MatlabType(object):
             return obj
 
         elif sparse and isinstance(obj, sparse.coo_array):
-            return dict(type__='sparse', data__=obj.todense())
+            return SparseArray.from_any(obj)._as_runtime()
 
         else:
             # TODO: do we want to raise if the type is not supported by matlab?
@@ -1070,123 +1066,6 @@ class WrappedArray(np.ndarray, AnyWrappedArray):
 
 
 # ----------------------------------------------------------------------
-# SparseArray
-# ----------------------------------------------------------------------
-
-
-if sparse:
-
-    class WrappedSparseArray(sparse.sparray, AnyWrappedArray):
-        """Base class for sparse arrays."""
-
-        def to_dense(self) -> "Array":
-            return Array.from_any(super().to_dense())
-
-    class SparseArray(sparse.coo_array, WrappedSparseArray):
-        """
-        Matlab sparse arrays.
-
-        ```python
-        # Instantiate from size
-        SparseArray(N, M, ...)
-        SparseArray([N, M, ...])
-        SparseArray.from_shape([N, M, ...])
-
-        # Instantiate from existing sparse or dense array
-        SparseArray(other_array)
-        SparseArray.from_any(other_array)
-
-        # Other options
-        SparseArray(..., dtype=None, *, copy=None)
-        ```
-
-        !!! warning
-            Lists or vectors of integers can be interpreted as shapes
-            or as dense arrays to copy. They are interpreted as shapes
-            by the `SparseArray` constructor. To ensure that they are
-            interpreted as dense arrays to copy, use `SparseArray.from_any`.
-        """
-
-        def __init__(self, *args, **kwargs) -> "SparseArray":
-            mode, arg, kwargs = self._parse_args(*args, **kwargs)
-            if mode == "shape":
-                return super().__init__(shape=arg, **kwargs)
-            else:
-                if not isinstance(arg, (np.ndarray, sparse.sparray)):
-                    arg = np.asanyarray(arg)
-                return super().__init__(arg, **kwargs)
-
-        def _as_runtime(self) -> dict:
-            data = super().todense()
-            return dict(type__='sparse', data__=data)
-
-        @classmethod
-        def _from_runtime(cls, dictobj: dict) -> "SparseArray":
-            if dictobj['type__'] != 'sparse':
-                raise ValueError("Not a matlab sparse matrix")
-            return cls.from_any(dictobj['data__'])
-
-        @classmethod
-        def from_shape(cls, shape=tuple(), **kwargs) -> "Array":
-            """
-            Build an array of a given shape.
-
-            Parameters
-            ----------
-            shape : list[int]
-                Shape of the new array.
-
-            Other Parameters
-            ----------------
-            dtype : np.dtype | None, default='double'
-                Target data type.
-
-            Returns
-            -------
-            array : SparseArray
-                New array.
-            """
-            return cls(list(shape), **kwargs)
-
-        @classmethod
-        def from_any(cls, other, **kwargs) -> "SparseArray":
-            """
-            Convert an array-like object to a numeric array.
-
-            Parameters
-            ----------
-            other : ArrayLike
-                object to convert.
-
-            Other Parameters
-            ----------------
-            dtype : np.dtype | None, default=None
-                Target data type. Guessed if `None`.
-            copy : bool | None, default=None
-                Whether to copy the underlying data.
-                * `True` : the object is copied;
-                * `None` : the the object is copied only if needed;
-                * `False`: raises a `ValueError` if a copy cannot be avoided.
-
-            Returns
-            -------
-            array : SparseArray
-                Converted array.
-            """
-            copy = kwargs.pop("copy", None)
-            inp = other
-            if not isinstance(other, sparse.sparray):
-                other = np.asanyarray(other, **kwargs)
-            other = cls(other, **kwargs)
-            other = _spcopy_if_needed(other, inp, copy)
-            return other
-
-
-else:
-    WrappedSparseArray = SparseArray = None
-
-
-# ----------------------------------------------------------------------
 # Array
 # ----------------------------------------------------------------------
 
@@ -1419,6 +1298,179 @@ class Array(_ListishMixin, WrappedArray):
             return np.array2string(self, separator=", ")
         else:
             return super().__repr__()
+
+
+# ----------------------------------------------------------------------
+# SparseArray
+# ----------------------------------------------------------------------
+
+
+class _SparseMixin:
+    """Methods common to the scipy.sparse and dense backends."""
+
+    def _as_runtime(self) -> dict:
+        indices = self.nonzero()
+        values = self[indices].reshape([-1, 1])
+        indices = np.stack(indices, -1)
+        indices += 1
+        size = np.array([[*np.shape(self)]])
+        return dict(
+            type__='sparse',
+            size__=size,
+            indices__=indices,
+            values__=values,
+        )
+
+    @classmethod
+    def _from_runtime(cls, dictobj: dict) -> "SparseArray":
+        if dictobj['type__'] != 'sparse':
+            raise ValueError("Not a matlab sparse matrix")
+        size = np.array(dictobj['size__'], dtype=np.uint64).ravel()
+        size = size.tolist()
+        dtype = _matlab_array_types()[type(dictobj['values__'])]
+        obj = cls.from_shape(size, dtype=dtype)
+        indices = np.asarray(dictobj['indices__'], dtype=np.long) - 1
+        values = np.asarray(dictobj['values__'], dtype=dtype).ravel()
+        obj[tuple(indices.T)] = values
+        return obj
+
+
+if sparse:
+
+    class WrappedSparseArray(sparse.sparray, AnyWrappedArray):
+        """Base class for sparse arrays."""
+
+        def to_dense(self) -> "Array":
+            return Array.from_any(super().to_dense())
+
+    class SparseArray(sparse.coo_array, _SparseMixin, WrappedSparseArray):
+        """
+        Matlab sparse arrays (scipy.sparse backend).
+
+        ```python
+        # Instantiate from size
+        SparseArray(N, M, ...)
+        SparseArray([N, M, ...])
+        SparseArray.from_shape([N, M, ...])
+
+        # Instantiate from existing sparse or dense array
+        SparseArray(other_array)
+        SparseArray.from_any(other_array)
+
+        # Other options
+        SparseArray(..., dtype=None, *, copy=None)
+        ```
+
+        !!! warning
+            Lists or vectors of integers can be interpreted as shapes
+            or as dense arrays to copy. They are interpreted as shapes
+            by the `SparseArray` constructor. To ensure that they are
+            interpreted as dense arrays to copy, usse `SparseArray.from_any`.
+        """
+
+        def __init__(self, *args, **kwargs) -> None:
+            mode, arg, kwargs = self._parse_args(*args, **kwargs)
+            if mode == "shape":
+                return super().__init__(shape=arg, **kwargs)
+            else:
+                if not isinstance(arg, (np.ndarray, sparse.sparray)):
+                    arg = np.asanyarray(arg)
+                return super().__init__(arg, **kwargs)
+
+        @classmethod
+        def from_shape(cls, shape=tuple(), **kwargs) -> "Array":
+            """
+            Build an array of a given shape.
+
+            Parameters
+            ----------
+            shape : list[int]
+                Shape of the new array.
+
+            Other Parameters
+            ----------------
+            dtype : np.dtype | None, default='double'
+                Target data type.
+
+            Returns
+            -------
+            array : SparseArray
+                New array.
+            """
+            return cls(list(shape), **kwargs)
+
+        @classmethod
+        def from_any(cls, other, **kwargs) -> "SparseArray":
+            """
+            Convert an array-like object to a numeric array.
+
+            Parameters
+            ----------
+            other : ArrayLike
+                object to convert.
+
+            Other Parameters
+            ----------------
+            dtype : np.dtype | None, default=None
+                Target data type. Guessed if `None`.
+            copy : bool | None, default=None
+                Whether to copy the underlying data.
+                * `True` : the object is copied;
+                * `None` : the the object is copied only if needed;
+                * `False`: raises a `ValueError` if a copy cannot be avoided.
+
+            Returns
+            -------
+            array : SparseArray
+                Converted array.
+            """
+            copy = kwargs.pop("copy", None)
+            inp = other
+            if not isinstance(other, sparse.sparray):
+                other = np.asanyarray(other, **kwargs)
+            other = cls(other, **kwargs)
+            other = _spcopy_if_needed(other, inp, copy)
+            return other
+
+else:
+    warnings.warn(
+        "Since scipy.sparse is not available, sparse matrices "
+        "will be implemented as dense matrices, which can lead to "
+        "unsubstainable memory usage. If this is an issue, install "
+        "scipy in your python environment."
+    )
+
+    class SparseArray(_SparseMixin, Array):
+        """
+        Matlab sparse arrays (dense backend).
+
+        ```python
+        # Instantiate from size
+        SparseArray(N, M, ...)
+        SparseArray([N, M, ...])
+        SparseArray.from_shape([N, M, ...])
+
+        # Instantiate from existing sparse or dense array
+        SparseArray(other_array)
+        SparseArray.from_any(other_array)
+
+        # Other options
+        SparseArray(..., dtype=None, *, copy=None)
+        ```
+
+        !!! warning
+            Lists or vectors of integers can be interpreted as shapes
+            or as dense arrays to copy. They are interpreted as shapes
+            by the `SparseArray` constructor. To ensure that they are
+            interpreted as dense arrays to copy, usse `SparseArray.from_any`.
+
+        !!! note
+            This is not really a sparse array, but a dense array that gets
+            converted to a sparse array when passed to matlab.
+        """
+
+        def to_dense(self) -> "Array":
+            return np.ndarray.view(self, Array)
 
 
 # ----------------------------------------------------------------------
@@ -1749,7 +1801,7 @@ class Cell(_ListMixin, WrappedArray):
     def _from_runtime(cls, objdict: dict) -> "Cell":
         if objdict['type__'] != 'cell':
             raise TypeError('objdict is not a cell')
-        size = np.array(objdict['size__'], dtype=np.uint32).ravel()
+        size = np.array(objdict['size__'], dtype=np.uint64).ravel()
         data = np.fromiter(objdict['data__'], dtype=object)
         data = data.reshape(size[::-1]).transpose()
         try:
@@ -2376,7 +2428,7 @@ class Struct(_DictMixin, WrappedArray):
     def _from_runtime(cls, objdict: dict) -> "Struct":
         if objdict['type__'] != 'structarray':
             raise TypeError('objdict is not a structarray')
-        size = np.array(objdict['size__'], dtype=np.uint32).ravel()
+        size = np.array(objdict['size__'], dtype=np.uint64).ravel()
         data = np.array(objdict['data__'], dtype=object)
         data = data.reshape(size)
         try:
