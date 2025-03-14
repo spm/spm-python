@@ -558,7 +558,7 @@ class cfg_item(MatlabClass):
         """
         return Runtime.call("initialise", self._as_matlab_object(), *args, **kwargs)
 
-    def list(self, *args, **kwargs):
+    def list_(self, *args, **kwargs):
         """
           function [id, stop, val] = list(item, spec, tropts, fn)  
             This function searches the cfg tree for certain entries.  

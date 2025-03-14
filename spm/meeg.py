@@ -1080,7 +1080,7 @@ class meeg(MatlabClass):
         """
         return Runtime.call("trialtag", self._as_matlab_object(), *args, **kwargs)
 
-    def type(self, *args, **kwargs):
+    def type_(self, *args, **kwargs):
         """
           Method for and getting/setting EEG file type  
             FORMAT res = type(this, value)  

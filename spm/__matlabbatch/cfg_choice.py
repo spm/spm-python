@@ -394,7 +394,7 @@ class cfg_choice(MatlabClass):
         """
         return Runtime.call("initialise", self._as_matlab_object(), *args, **kwargs)
 
-    def list(self, *args, **kwargs):
+    def list_(self, *args, **kwargs):
         """
           function [id, stop, val] = list(item, spec, tropts, fn)  
             Find items in a cfg tree rooted at item that match a specification spec.  

@@ -477,7 +477,7 @@ class xmltree(MatlabClass):
         """
         return Runtime.call("save", self._as_matlab_object(), *args, **kwargs)
 
-    def set(self, *args, **kwargs):
+    def set_(self, *args, **kwargs):
         """
           XMLTREE/SET Method (set object properties)  
             FORMAT tree = set(tree,uid,parameter,value)  
