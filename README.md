@@ -21,7 +21,7 @@ Copyright (C) 1991,1994-2024 Wellcome Centre for Human Neuroimaging
 
 
 ## Installation instructions: 
-0. Install Python and Pip. Python installation made from Microsoft Store on Windows will not work (raises DeclarativeService.dll not found), intall it from Python website. 
+0. Install Python and Pip. Python installation made from Microsoft Store on Windows will not work (raises DeclarativeService.dll not found), install it from Python website. 
 1. Install [Matlab Runtime 2024b](https://uk.mathworks.com/products/compiler/matlab-runtime.html) 
 2. Install SPM:
    ```python
