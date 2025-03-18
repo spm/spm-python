@@ -3,19 +3,30 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
-<meta name="generator" content="pdoc3 0.11.1">
+<meta name="generator" content="pdoc3 0.11.5">
 <title>spm.spm_list API documentation</title>
 <meta name="description" content="">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/13.0.0/sanitize.min.css" integrity="sha512-y1dtMcuvtTMJc1yPgEqF0ZjQbhnc/bFhyvIyVNb9Zk5mIGtqVaAB1Ttl28su8AvFMOY0EwRbAe+HCLqj6W7/KA==" crossorigin>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/13.0.0/typography.min.css" integrity="sha512-Y1DYSb995BAfxobCkKepB1BqJJTPrOp3zPL74AWFugHHmmdcvO+C48WLrUOlhGMc0QG7AE3f7gmvvcrmX2fDoA==" crossorigin>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css" crossorigin>
-<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:1.5em;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:2em 0 .50em 0}h3{font-size:1.4em;margin:1.6em 0 .7em 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .2s ease-in-out}a:visited{color:#503}a:hover{color:#b62}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900;font-weight:bold}pre code{font-size:.8em;line-height:1.4em;padding:1em;display:block}code{background:#f3f3f3;font-family:"DejaVu Sans Mono",monospace;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em 1em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:1.5em;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:2em 0 .50em 0}h3{font-size:1.4em;margin:1.6em 0 .7em 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .2s ease-in-out}a:visited{color:#503}a:hover{color:#b62}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900;font-weight:bold}pre code{font-size:.8em;line-height:1.4em;padding:1em;display:block}code{background:#f3f3f3;font-family:"DejaVu Sans Mono",monospace;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source > summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible;min-width:max-content}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em 1em;margin:1em 0}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
 <style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul ul{padding-left:1em}.toc > ul > li{margin-top:.5em}}</style>
 <style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
 <script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js" integrity="sha512-D9gUyxqja7hBtkWpPWGt9wfbfaMGVt9gnyCvYa+jojwwPHLCzUm5i8rpk7vD7wNee9bA35eYIjobYPaQuKS1MQ==" crossorigin></script>
 <script>window.addEventListener('DOMContentLoaded', () => {
 hljs.configure({languages: ['bash', 'css', 'diff', 'graphql', 'ini', 'javascript', 'json', 'plaintext', 'python', 'python-repl', 'rust', 'shell', 'sql', 'typescript', 'xml', 'yaml']});
 hljs.highlightAll();
+/* Collapse source docstrings */
+setTimeout(() => {
+[...document.querySelectorAll('.hljs.language-python > .hljs-string')]
+.filter(el => el.innerHTML.length > 200 && ['"""', "'''"].includes(el.innerHTML.substring(0, 3)))
+.forEach(el => {
+let d = document.createElement('details');
+d.classList.add('hljs-string');
+d.innerHTML = '<summary>"""</summary>' + el.innerHTML.substring(3);
+el.replaceWith(d);
+});
+}, 100);
 })</script>
 </head>
 <body>
@@ -37,174 +48,246 @@ hljs.highlightAll();
 <span>def <span class="ident">spm_list</span></span>(<span>*args, **kwargs)</span>
 </code></dt>
 <dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def spm_list(*args, **kwargs):
+    &#34;&#34;&#34;
+      Display an analysis of SPM{.}  
+        FORMAT TabDat = spm_list(&#39;List&#39;,xSPM,hReg,[Num,Dis,Str])  
+        Summary list of local maxima for entire volume of interest  
+        FORMAT TabDat = spm_list(&#39;ListCluster&#39;,xSPM,hReg,[Num,Dis,Str])  
+        List of local maxima for a single suprathreshold cluster  
+         
+        xSPM    - structure containing SPM, distribution &amp; filtering details  
+               - required fields are:  
+        .Z     - minimum of n Statistics {filtered on u and k}  
+        .n     - number of conjoint tests  
+        .STAT  - distribution {Z, T, X or F}  
+        .df    - degrees of freedom [df{interest}, df{residual}]  
+        .u     - height threshold  
+        .k     - extent threshold {voxels}  
+        .XYZ   - location of voxels {voxel coords}  
+        .S     - search Volume {voxels}  
+        .R     - search Volume {resels}  
+        .FWHM  - smoothness {voxels}  
+        .M     - voxels - &gt; mm matrix  
+        .VOX   - voxel dimensions {mm}  
+        .DIM   - image dimensions {voxels}  
+        .units - space units  
+        .VRpv  - filehandle - Resels per voxel  
+        .Ps    - uncorrected P values in searched volume (for voxel FDR)  
+        .Pp    - uncorrected P values of peaks (for peak FDR)  
+        .Pc    - uncorrected P values of cluster extents (for cluster FDR)  
+        .uc    - 0.05 critical thresholds for FWEp, FDRp, FWEc, FDRc  
+        .thresDesc - description of height threshold (string)  
+         
+        (see spm_getSPM.m for further details of xSPM structures)  
+         
+        hReg   - Handle of results section XYZ registry (see spm_results_ui.m)  
+         
+        Num    - number of maxima per cluster [3]  
+        Dis    - distance among clusters {mm} [8]  
+        Str    - header string  
+         
+        TabDat - Structure containing table data  
+               - fields are  
+        .tit   - table title (string)  
+        .hdr   - table header (2x12 cell array)  
+        .fmt   - fprintf format strings for table data (1x12 cell array)  
+        .str   - table filtering note (string)  
+        .ftr   - table footnote information (5x2 cell array)  
+        .dat   - table data (Nx12 cell array)  
+         
+                                  ----------------  
+         
+        FORMAT spm_list(&#39;TxtList&#39;,TabDat,c)  
+        Prints a tab-delimited text version of the table  
+        TabDat - Structure containing table data (format as above)  
+        c      - Column of table data to start text table at  
+                 (E.g. c=3 doesn&#39;t print set-level results contained in columns 1 &amp; 2)  
+                                  ----------------  
+         
+        FORMAT spm_list(&#39;SetCoords&#39;,xyz,hAx,hReg)  
+        Highlighting of table coordinates (used by results section registry)  
+        xyz    - 3-vector of new coordinate  
+        hAx    - table axis (the registry object for tables)  
+        hReg   - Handle of caller (not used)  
+       __________________________________________________________________________  
+         
+        spm_list characterizes SPMs (thresholded at u and k) in terms of  
+        excursion sets (a collection of face, edge and vertex connected subsets  
+        or clusters).  The corrected significance of the results are based on  
+        set, cluster and voxel-level inferences using distributional  
+        approximations from the Theory of Gaussian Fields.  These distributions  
+        assume that the SPM is a reasonable lattice approximation of a  
+        continuous random field with known component field smoothness.  
+         
+        The p values are based on the probability of obtaining c, or more,  
+        clusters of k, or more, resels above u, in the volume S analysed =  
+        P(u,k,c).  For specified thresholds u, k, the set-level inference is  
+        based on the observed number of clusters C, = P(u,k,C).  For each  
+        cluster of size K the cluster-level inference is based on P(u,K,1)  
+        and for each voxel (or selected maxima) of height U, in that cluster,  
+        the voxel-level inference is based on P(U,0,1).  All three levels of  
+        inference are supported with a tabular presentation of the p values  
+        and the underlying statistic:  
+         
+        Set-level     - c    = number of suprathreshold clusters  
+                      - P    = prob(c or more clusters in the search volume)  
+         
+        Cluster-level - k    = number of voxels in this cluster  
+                      - Pc   = prob(k or more voxels in the search volume)  
+                      - Pu   = prob(k or more voxels in a cluster)  
+                      - Qc   = lowest FDR bound for which this cluster would be  
+                               declared positive  
+         
+        Peak-level    - T/F  = Statistic upon which the SPM is based  
+                      - Ze   = The equivalent Z score - prob(Z &gt; Ze) = prob(t &gt; T)  
+                      - Pc   = prob(Ze or higher in the search volume)  
+                      - Qp   = lowest FDR bound for which this peak would be  
+                               declared positive  
+                      - Pu   = prob(Ze or higher at that voxel)  
+         
+        Voxel-level   - Qu   = Expd(Prop of false positives among voxels &gt;= Ze)  
+         
+        x,y,z (mm)    - Coordinates of the voxel  
+         
+        The table is grouped by regions and sorted on the Ze-variate of the  
+        primary maxima.  Ze-variates (based on the uncorrected p value) are the  
+        Z score equivalent of the statistic. Volumes are expressed in voxels.  
+         
+        Clicking on values in the table returns the value to the MATLAB  
+        workspace. In addition, clicking on the coordinates jumps the  
+        results section cursor to that location. The table has a context menu  
+        (obtained by right-clicking in the background of the table),  
+        providing options to print the current table as a text table, or to  
+        extract the table data to the MATLAB workspace.  
+         
+       __________________________________________________________________________  
+      
+
+    [Matlab code]( https://github.com/spm/spm/blob/main/spm_list.m )
+
+    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    &#34;&#34;&#34;
+    return Runtime.call(&#34;spm_list&#34;, *args, **kwargs)</code></pre>
+</details>
 <div class="desc"><p>Display an analysis of SPM{.}<br>
 FORMAT TabDat = spm_list('List',xSPM,hReg,[Num,Dis,Str])<br>
 Summary list of local maxima for entire volume of interest<br>
 FORMAT TabDat = spm_list('ListCluster',xSPM,hReg,[Num,Dis,Str])<br>
 List of local maxima for a single suprathreshold cluster
 </p>
-<p>xSPM
-- structure containing SPM, distribution &amp; filtering details<br>
-- required fields are:<br>
-.Z
-- minimum of n Statistics {filtered on u and k}<br>
-.n
-- number of conjoint tests<br>
-.STAT
-- distribution {Z, T, X or F}<br>
-.df
-- degrees of freedom [df{interest}, df{residual}]<br>
-.u
-- height threshold<br>
-.k
-- extent threshold {voxels}<br>
-.XYZ
-- location of voxels {voxel coords}<br>
-.S
-- search Volume {voxels}<br>
-.R
-- search Volume {resels}<br>
-.FWHM
-- smoothness {voxels}<br>
-.M
-- voxels - &gt; mm matrix<br>
-.VOX
-- voxel dimensions {mm}<br>
-.DIM
-- image dimensions {voxels}<br>
-.units - space units<br>
-.VRpv
-- filehandle - Resels per voxel<br>
-.Ps
-- uncorrected P values in searched volume (for voxel FDR)<br>
-.Pp
-- uncorrected P values of peaks (for peak FDR)<br>
-.Pc
-- uncorrected P values of cluster extents (for cluster FDR)<br>
-.uc
-- 0.05 critical thresholds for FWEp, FDRp, FWEc, FDRc<br>
+<pre><code>xSPM    - structure containing SPM, distribution &amp; filtering details  
+       - required fields are:  
+.Z     - minimum of n Statistics {filtered on u and k}  
+.n     - number of conjoint tests  
+.STAT  - distribution {Z, T, X or F}  
+.df    - degrees of freedom [df{interest}, df{residual}]  
+.u     - height threshold  
+.k     - extent threshold {voxels}  
+.XYZ   - location of voxels {voxel coords}  
+.S     - search Volume {voxels}  
+.R     - search Volume {resels}  
+.FWHM  - smoothness {voxels}  
+.M     - voxels - &gt; mm matrix  
+.VOX   - voxel dimensions {mm}  
+.DIM   - image dimensions {voxels}  
+.units - space units  
+.VRpv  - filehandle - Resels per voxel  
+.Ps    - uncorrected P values in searched volume (for voxel FDR)  
+.Pp    - uncorrected P values of peaks (for peak FDR)  
+.Pc    - uncorrected P values of cluster extents (for cluster FDR)  
+.uc    - 0.05 critical thresholds for FWEp, FDRp, FWEc, FDRc  
 .thresDesc - description of height threshold (string)
-</p>
-<p>(see spm_getSPM.m for further details of xSPM structures)
-</p>
-<p>hReg
-- Handle of results section XYZ registry (see spm_results_ui.m)
-</p>
-<p>Num
-- number of maxima per cluster [3]<br>
-Dis
-- distance among clusters {mm} [8]<br>
-Str
-- header string
-</p>
-<p>TabDat - Structure containing table data<br>
-- fields are<br>
-.tit
-- table title (string)<br>
-.hdr
-- table header (2x12 cell array)<br>
-.fmt
-- fprintf format strings for table data (1x12 cell array)<br>
-.str
-- table filtering note (string)<br>
-.ftr
-- table footnote information (5x2 cell array)<br>
-.dat
-- table data (Nx12 cell array)
-</p>
-<pre><code>                        ----------------
+
+(see spm_getSPM.m for further details of xSPM structures)
+
+hReg   - Handle of results section XYZ registry (see spm_results_ui.m)
+
+Num    - number of maxima per cluster [3]  
+Dis    - distance among clusters {mm} [8]  
+Str    - header string
+
+TabDat - Structure containing table data  
+       - fields are  
+.tit   - table title (string)  
+.hdr   - table header (2x12 cell array)  
+.fmt   - fprintf format strings for table data (1x12 cell array)  
+.str   - table filtering note (string)  
+.ftr   - table footnote information (5x2 cell array)  
+.dat   - table data (Nx12 cell array)
+
+                          ----------------
+
+FORMAT spm_list('TxtList',TabDat,c)  
+Prints a tab-delimited text version of the table  
+TabDat - Structure containing table data (format as above)  
+c      - Column of table data to start text table at  
+         (E.g. c=3 doesn't print set-level results contained in columns 1 &amp; 2)  
+                          ----------------
+
+FORMAT spm_list('SetCoords',xyz,hAx,hReg)  
+Highlighting of table coordinates (used by results section registry)  
+xyz    - 3-vector of new coordinate  
+hAx    - table axis (the registry object for tables)  
+hReg   - Handle of caller (not used)
 </code></pre>
-<p>FORMAT spm_list('TxtList',TabDat,c)<br>
-Prints a tab-delimited text version of the table<br>
-TabDat - Structure containing table data (format as above)<br>
-c
-- Column of table data to start text table at<br>
-(E.g. c=3 doesn't print set-level results contained in columns 1 &amp; 2)<br>
-----------------
-</p>
-<p>FORMAT spm_list('SetCoords',xyz,hAx,hReg)<br>
-Highlighting of table coordinates (used by results section registry)<br>
-xyz
-- 3-vector of new coordinate<br>
-hAx
-- table axis (the registry object for tables)<br>
-hReg
-- Handle of caller (not used)
-</p>
 <hr>
-<p>spm_list characterizes SPMs (thresholded at u and k) in terms of<br>
-excursion sets (a collection of face, edge and vertex connected subsets<br>
-or clusters).
-The corrected significance of the results are based on<br>
-set, cluster and voxel-level inferences using distributional<br>
-approximations from the Theory of Gaussian Fields.
-These distributions<br>
-assume that the SPM is a reasonable lattice approximation of a<br>
+<pre><code>spm_list characterizes SPMs (thresholded at u and k) in terms of  
+excursion sets (a collection of face, edge and vertex connected subsets  
+or clusters).  The corrected significance of the results are based on  
+set, cluster and voxel-level inferences using distributional  
+approximations from the Theory of Gaussian Fields.  These distributions  
+assume that the SPM is a reasonable lattice approximation of a  
 continuous random field with known component field smoothness.
-</p>
-<p>The p values are based on the probability of obtaining c, or more,<br>
-clusters of k, or more, resels above u, in the volume S analysed =<br>
-P(u,k,c).
-For specified thresholds u, k, the set-level inference is<br>
-based on the observed number of clusters C, = P(u,k,C).
-For each<br>
-cluster of size K the cluster-level inference is based on P(u,K,1)<br>
-and for each voxel (or selected maxima) of height U, in that cluster,<br>
-the voxel-level inference is based on P(U,0,1).
-All three levels of<br>
-inference are supported with a tabular presentation of the p values<br>
+
+The p values are based on the probability of obtaining c, or more,  
+clusters of k, or more, resels above u, in the volume S analysed =  
+P(u,k,c).  For specified thresholds u, k, the set-level inference is  
+based on the observed number of clusters C, = P(u,k,C).  For each  
+cluster of size K the cluster-level inference is based on P(u,K,1)  
+and for each voxel (or selected maxima) of height U, in that cluster,  
+the voxel-level inference is based on P(U,0,1).  All three levels of  
+inference are supported with a tabular presentation of the p values  
 and the underlying statistic:
-</p>
-<p>Set-level
-- c
-= number of suprathreshold clusters<br>
-- P
-= prob(c or more clusters in the search volume)
-</p>
-<p>Cluster-level - k
-= number of voxels in this cluster<br>
-- Pc
-= prob(k or more voxels in the search volume)<br>
-- Pu
-= prob(k or more voxels in a cluster)<br>
-- Qc
-= lowest FDR bound for which this cluster would be<br>
-declared positive
-</p>
-<p>Peak-level
-- T/F
-= Statistic upon which the SPM is based<br>
-- Ze
-= The equivalent Z score - prob(Z &gt; Ze) = prob(t &gt; T)<br>
-- Pc
-= prob(Ze or higher in the search volume)<br>
-- Qp
-= lowest FDR bound for which this peak would be<br>
-declared positive<br>
-- Pu
-= prob(Ze or higher at that voxel)
-</p>
-<p>Voxel-level
-- Qu
-= Expd(Prop of false positives among voxels &gt;= Ze)
-</p>
-<p>x,y,z (mm)
-- Coordinates of the voxel
-</p>
-<p>The table is grouped by regions and sorted on the Ze-variate of the<br>
-primary maxima.
-Ze-variates (based on the uncorrected p value) are the<br>
+
+Set-level     - c    = number of suprathreshold clusters  
+              - P    = prob(c or more clusters in the search volume)
+
+Cluster-level - k    = number of voxels in this cluster  
+              - Pc   = prob(k or more voxels in the search volume)  
+              - Pu   = prob(k or more voxels in a cluster)  
+              - Qc   = lowest FDR bound for which this cluster would be  
+                       declared positive
+
+Peak-level    - T/F  = Statistic upon which the SPM is based  
+              - Ze   = The equivalent Z score - prob(Z &gt; Ze) = prob(t &gt; T)  
+              - Pc   = prob(Ze or higher in the search volume)  
+              - Qp   = lowest FDR bound for which this peak would be  
+                       declared positive  
+              - Pu   = prob(Ze or higher at that voxel)
+
+Voxel-level   - Qu   = Expd(Prop of false positives among voxels &gt;= Ze)
+
+x,y,z (mm)    - Coordinates of the voxel
+
+The table is grouped by regions and sorted on the Ze-variate of the  
+primary maxima.  Ze-variates (based on the uncorrected p value) are the  
 Z score equivalent of the statistic. Volumes are expressed in voxels.
-</p>
-<p>Clicking on values in the table returns the value to the MATLAB<br>
-workspace. In addition, clicking on the coordinates jumps the<br>
-results section cursor to that location. The table has a context menu<br>
-(obtained by right-clicking in the background of the table),<br>
-providing options to print the current table as a text table, or to<br>
+
+Clicking on values in the table returns the value to the MATLAB  
+workspace. In addition, clicking on the coordinates jumps the  
+results section cursor to that location. The table has a context menu  
+(obtained by right-clicking in the background of the table),  
+providing options to print the current table as a text table, or to  
 extract the table data to the MATLAB workspace.
-</p>
+</code></pre>
 <hr>
-<p><a href="https://github.com/spm/spm/blob/main/spm_list.m">Link to the Matlab implementation.</a></p></div>
+<p><a href="https://github.com/spm/spm/blob/main/spm_list.m">Matlab code</a></p>
+<p>Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL</p></div>
 </dd>
 </dl>
 </section>
@@ -230,7 +313,7 @@ extract the table data to the MATLAB workspace.
 </nav>
 </main>
 <footer id="footer">
-<p>Generated by <a href="https://pdoc3.github.io/pdoc" title="pdoc: Python API documentation generator"><cite>pdoc</cite> 0.11.1</a>.</p>
+<p>Generated by <a href="https://pdoc3.github.io/pdoc" title="pdoc: Python API documentation generator"><cite>pdoc</cite> 0.11.5</a>.</p>
 </footer>
 </body>
 </html>

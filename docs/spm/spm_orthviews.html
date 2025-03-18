@@ -3,19 +3,30 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
-<meta name="generator" content="pdoc3 0.11.1">
+<meta name="generator" content="pdoc3 0.11.5">
 <title>spm.spm_orthviews API documentation</title>
 <meta name="description" content="">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/13.0.0/sanitize.min.css" integrity="sha512-y1dtMcuvtTMJc1yPgEqF0ZjQbhnc/bFhyvIyVNb9Zk5mIGtqVaAB1Ttl28su8AvFMOY0EwRbAe+HCLqj6W7/KA==" crossorigin>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/13.0.0/typography.min.css" integrity="sha512-Y1DYSb995BAfxobCkKepB1BqJJTPrOp3zPL74AWFugHHmmdcvO+C48WLrUOlhGMc0QG7AE3f7gmvvcrmX2fDoA==" crossorigin>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css" crossorigin>
-<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:1.5em;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:2em 0 .50em 0}h3{font-size:1.4em;margin:1.6em 0 .7em 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .2s ease-in-out}a:visited{color:#503}a:hover{color:#b62}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900;font-weight:bold}pre code{font-size:.8em;line-height:1.4em;padding:1em;display:block}code{background:#f3f3f3;font-family:"DejaVu Sans Mono",monospace;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em 1em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:1.5em;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:2em 0 .50em 0}h3{font-size:1.4em;margin:1.6em 0 .7em 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .2s ease-in-out}a:visited{color:#503}a:hover{color:#b62}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900;font-weight:bold}pre code{font-size:.8em;line-height:1.4em;padding:1em;display:block}code{background:#f3f3f3;font-family:"DejaVu Sans Mono",monospace;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source > summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible;min-width:max-content}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em 1em;margin:1em 0}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
 <style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul ul{padding-left:1em}.toc > ul > li{margin-top:.5em}}</style>
 <style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
 <script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js" integrity="sha512-D9gUyxqja7hBtkWpPWGt9wfbfaMGVt9gnyCvYa+jojwwPHLCzUm5i8rpk7vD7wNee9bA35eYIjobYPaQuKS1MQ==" crossorigin></script>
 <script>window.addEventListener('DOMContentLoaded', () => {
 hljs.configure({languages: ['bash', 'css', 'diff', 'graphql', 'ini', 'javascript', 'json', 'plaintext', 'python', 'python-repl', 'rust', 'shell', 'sql', 'typescript', 'xml', 'yaml']});
 hljs.highlightAll();
+/* Collapse source docstrings */
+setTimeout(() => {
+[...document.querySelectorAll('.hljs.language-python > .hljs-string')]
+.filter(el => el.innerHTML.length > 200 && ['"""', "'''"].includes(el.innerHTML.substring(0, 3)))
+.forEach(el => {
+let d = document.createElement('details');
+d.classList.add('hljs-string');
+d.innerHTML = '<summary>"""</summary>' + el.innerHTML.substring(3);
+el.replaceWith(d);
+});
+}, 100);
 })</script>
 </head>
 <body>
@@ -37,6 +48,169 @@ hljs.highlightAll();
 <span>def <span class="ident">spm_orthviews</span></span>(<span>*args, **kwargs)</span>
 </code></dt>
 <dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def spm_orthviews(*args, **kwargs):
+    &#34;&#34;&#34;
+      Display orthogonal views of a set of images  
+        FORMAT H = spm_orthviews(&#39;Image&#39;,filename[,area[,F]])  
+        filename - name of image to display  
+        area     - position of image {relative}  
+                   [left, bottom, width, height]  
+        F        - figure handle  
+        H        - handle for orthogonal sections  
+         
+        FORMAT spm_orthviews(&#39;Reposition&#39;,centre)  
+        centre   - X, Y &amp; Z coordinates of centre voxel {mm}  
+         
+        FORMAT spm_orthviews(&#39;Space&#39;[,handle[,M,dim]])  
+        handle   - the view to define the space by, optionally with extra  
+                   transformation matrix and dimensions (e.g. one of the blobs  
+                   of a view)  
+        with no arguments - puts things into mm space  
+         
+        FORMAT H = spm_orthviews(&#39;Caption&#39;, handle, string, [Property, Value])  
+        handle   - the view to which a caption should be added  
+        string   - the caption text to add  
+        Property,Value - optional, e.g. &#39;FontWeight&#39;, &#39;Bold&#39;  
+        H        - the handle to the object whose String property has the caption  
+         
+        FORMAT spm_orthviews(&#39;BB&#39;,bb)  
+        bb       - bounding box  
+                   [loX loY loZ  
+                    hiX hiY hiZ]  
+         
+        FORMAT spm_orthviews(&#39;MaxBB&#39;)  
+        Set the bounding box big enough to display the whole of all images.  
+         
+        FORMAT spm_orthviews(&#39;Resolution&#39;[,res])  
+        res      - resolution (mm)  
+        Set the sampling resolution for all images. The effective resolution will  
+        be the minimum of res and the voxel sizes of all images. If no resolution  
+        is specified, the minimum of 1mm and the voxel sizes of the images is  
+        used.  
+         
+        FORMAT spm_orthviews(&#39;Zoom&#39;[,fov[,res]])  
+        fov      - half width of field of view (mm)  
+        res      - resolution (mm)  
+        Set the displayed part and sampling resolution for all images. The image  
+        display will be centered at the current crosshair position. The image  
+        region [xhairs-fov xhairs+fov] will be shown.  
+        If no argument is given or fov == Inf, the image display will be reset to  
+        &#34;Full Volume&#34;. If fov == 0, the image will be zoomed to the bounding box  
+        from spm_get_bbox for the non-zero voxels of the image. If fov is NaN,  
+        then a threshold can be entered, and spm_get_bbox will be used to derive  
+        the bounding box of the voxels above this threshold.  
+        Optionally, the display resolution can be set as well.  
+         
+        FORMAT spm_orthviews(&#39;Redraw&#39;)  
+        Redraw the images.  
+         
+        FORMAT spm_orthviews(&#39;Reload_mats&#39;)  
+        Reload the voxel-world mapping matrices from the headers stored on disk,  
+        e.g. following reorientation of some images.  
+         
+        FORMAT spm_orthviews(&#39;Delete&#39;, handle)  
+        handle   - image number to delete  
+         
+        FORMAT spm_orthviews(&#39;Reset&#39;)  
+        Clear the orthogonal views  
+         
+        FORMAT spm_orthviews(&#39;Pos&#39;)  
+        Return the coordinate of the crosshairs in millimetres in the standard  
+        space.  
+         
+        FORMAT spm_orthviews(&#39;Pos&#39;, i)  
+        Return the voxel coordinate of the crosshairs in the image in the ith  
+        orthogonal section.  
+         
+        FORMAT spm_orthviews(&#39;Xhairs&#39;,&#39;off&#39;) OR spm_orthviews(&#39;Xhairs&#39;)  
+        Disable the cross-hairs on the display.  
+         
+        FORMAT spm_orthviews(&#39;Xhairs&#39;,&#39;on&#39;)  
+        Enable the cross-hairs.  
+         
+        FORMAT spm_orthviews(&#39;Interp&#39;,hld)  
+        Set the hold value to hld (see spm_slice_vol).  
+         
+        FORMAT spm_orthviews(&#39;AddBlobs&#39;,handle,XYZ,Z,mat,name)  
+        Add blobs from a pointlist to the image specified by the handle(s).  
+        handle   - image number to add blobs to  
+        XYZ      - blob voxel locations  
+        Z        - blob voxel intensities  
+        mat      - matrix from voxels to millimetres of blob  
+        name     - a name for this blob  
+        This method only adds one set of blobs, and displays them using a split  
+        colour table.  
+         
+        FORMAT spm_orthviews(&#39;SetBlobsMax&#39;, vn, bn, mx)  
+        Set maximum value for blobs overlay number bn of view number vn to mx.  
+         
+        FORMAT spm_orthviews(&#39;AddColouredBlobs&#39;,handle,XYZ,Z,mat,colour,name)  
+        Add blobs from a pointlist to the image specified by the handle(s)  
+        handle   - image number to add blobs to  
+        XYZ      - blob voxel locations  
+        Z        - blob voxel intensities  
+        mat      - matrix from voxels to millimeters of blob.  
+        colour   - the 3 vector containing the colour that the blobs should be  
+        name     - a name for this blob  
+        Several sets of blobs can be added in this way, and it uses full colour.  
+        Although it may not be particularly attractive on the screen, the colour  
+        blobs print well.  
+         
+        FORMAT spm_orthviews(&#39;AddColourBar&#39;,handle,blobno)  
+        Add colourbar for a specified blob set.  
+        handle    - image number  
+        blobno    - blob number  
+         
+        FORMAT spm_orthviews(&#39;RemoveBlobs&#39;,handle)  
+        Remove all blobs from the image specified by the handle(s).  
+         
+        FORMAT spm_orthviews(&#39;Addtruecolourimage&#39;,handle,filename,colourmap,prop,mx,mn)  
+        Add blobs from an image in true colour.  
+        handle    - image number to add blobs to [Default: 1]  
+        filename  - image containing blob data [Default: GUI input]  
+        colourmap - colormap to display blobs in [Default: GUI input]  
+        prop      - intensity proportion of activation cf grayscale [default: 0.4]  
+        mx        - maximum intensity to scale to [maximum value in activation image]  
+        mn        - minimum intensity to scale to [minimum value in activation image]  
+         
+        FORMAT spm_orthviews(&#39;Register&#39;,hReg)  
+        hReg      - Handle of HandleGraphics object to build registry in  
+        See spm_XYZreg for more information.  
+         
+        FORMAT spm_orthviews(&#39;AddContext&#39;,handle)  
+        FORMAT spm_orthviews(&#39;RemoveContext&#39;,handle)  
+        handle    - image number to add/remove context menu to  
+         
+        FORMAT spm_orthviews(&#39;ZoomMenu&#39;,zoom,res)  
+        FORMAT [zoom, res] = spm_orthviews(&#39;ZoomMenu&#39;)  
+        zoom      - A list of predefined zoom values  
+        res       - A list of predefined resolutions  
+        This list is used by spm_image and spm_orthviews(&#39;addcontext&#39;,...) to  
+        create the &#39;Zoom&#39; menu. The values can be retrieved by calling  
+        spm_orthviews(&#39;ZoomMenu&#39;) with 2 output arguments. Values of 0, NaN and  
+        Inf are treated specially, see the help for spm_orthviews(&#39;Zoom&#39; ...).  
+       __________________________________________________________________________  
+         
+        PLUGINS  
+        The display capabilities of spm_orthviews can be extended with plugins.  
+        These are located in the spm_orthviews subdirectory of the SPM  
+        distribution.  
+        The functionality of plugins can be accessed via calls to  
+        spm_orthviews(&#39;plugin_name&#39;, plugin_arguments). For detailed descriptions  
+        of each plugin see help spm_orthviews/spm_ov_&#39;plugin_name&#39;.  
+       __________________________________________________________________________  
+      
+
+    [Matlab code]( https://github.com/spm/spm/blob/main/spm_orthviews.m )
+
+    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    &#34;&#34;&#34;
+    return Runtime.call(&#34;spm_orthviews&#34;, *args, **kwargs)</code></pre>
+</details>
 <div class="desc"><p>Display orthogonal views of a set of images<br>
 FORMAT H = spm_orthviews('Image',filename[,area[,F]])<br>
 filename - name of image to display<br>
@@ -48,181 +222,150 @@ F
 H
 - handle for orthogonal sections
 </p>
-<p>FORMAT spm_orthviews('Reposition',centre)<br>
-centre
-- X, Y &amp; Z coordinates of centre voxel {mm}
-</p>
-<p>FORMAT spm_orthviews('Space'[,handle[,M,dim]])<br>
-handle
-- the view to define the space by, optionally with extra<br>
-transformation matrix and dimensions (e.g. one of the blobs<br>
-of a view)<br>
+<pre><code>FORMAT spm_orthviews('Reposition',centre)  
+centre   - X, Y &amp; Z coordinates of centre voxel {mm}
+
+FORMAT spm_orthviews('Space'[,handle[,M,dim]])  
+handle   - the view to define the space by, optionally with extra  
+           transformation matrix and dimensions (e.g. one of the blobs  
+           of a view)  
 with no arguments - puts things into mm space
-</p>
-<p>FORMAT H = spm_orthviews('Caption', handle, string, [Property, Value])<br>
-handle
-- the view to which a caption should be added<br>
-string
-- the caption text to add<br>
-Property,Value - optional, e.g. 'FontWeight', 'Bold'<br>
-H
-- the handle to the object whose String property has the caption
-</p>
-<p>FORMAT spm_orthviews('BB',bb)<br>
-bb
-- bounding box<br>
-[loX loY loZ<br>
-hiX hiY hiZ]
-</p>
-<p>FORMAT spm_orthviews('MaxBB')<br>
+
+FORMAT H = spm_orthviews('Caption', handle, string, [Property, Value])  
+handle   - the view to which a caption should be added  
+string   - the caption text to add  
+Property,Value - optional, e.g. 'FontWeight', 'Bold'  
+H        - the handle to the object whose String property has the caption
+
+FORMAT spm_orthviews('BB',bb)  
+bb       - bounding box  
+           [loX loY loZ  
+            hiX hiY hiZ]
+
+FORMAT spm_orthviews('MaxBB')  
 Set the bounding box big enough to display the whole of all images.
-</p>
-<p>FORMAT spm_orthviews('Resolution'[,res])<br>
-res
-- resolution (mm)<br>
-Set the sampling resolution for all images. The effective resolution will<br>
-be the minimum of res and the voxel sizes of all images. If no resolution<br>
-is specified, the minimum of 1mm and the voxel sizes of the images is<br>
+
+FORMAT spm_orthviews('Resolution'[,res])  
+res      - resolution (mm)  
+Set the sampling resolution for all images. The effective resolution will  
+be the minimum of res and the voxel sizes of all images. If no resolution  
+is specified, the minimum of 1mm and the voxel sizes of the images is  
 used.
-</p>
-<p>FORMAT spm_orthviews('Zoom'[,fov[,res]])<br>
-fov
-- half width of field of view (mm)<br>
-res
-- resolution (mm)<br>
-Set the displayed part and sampling resolution for all images. The image<br>
-display will be centered at the current crosshair position. The image<br>
-region [xhairs-fov xhairs+fov] will be shown.<br>
-If no argument is given or fov == Inf, the image display will be reset to<br>
-"Full Volume". If fov == 0, the image will be zoomed to the bounding box<br>
-from spm_get_bbox for the non-zero voxels of the image. If fov is NaN,<br>
-then a threshold can be entered, and spm_get_bbox will be used to derive<br>
-the bounding box of the voxels above this threshold.<br>
+
+FORMAT spm_orthviews('Zoom'[,fov[,res]])  
+fov      - half width of field of view (mm)  
+res      - resolution (mm)  
+Set the displayed part and sampling resolution for all images. The image  
+display will be centered at the current crosshair position. The image  
+region [xhairs-fov xhairs+fov] will be shown.  
+If no argument is given or fov == Inf, the image display will be reset to  
+"Full Volume". If fov == 0, the image will be zoomed to the bounding box  
+from spm_get_bbox for the non-zero voxels of the image. If fov is NaN,  
+then a threshold can be entered, and spm_get_bbox will be used to derive  
+the bounding box of the voxels above this threshold.  
 Optionally, the display resolution can be set as well.
-</p>
-<p>FORMAT spm_orthviews('Redraw')<br>
+
+FORMAT spm_orthviews('Redraw')  
 Redraw the images.
-</p>
-<p>FORMAT spm_orthviews('Reload_mats')<br>
-Reload the voxel-world mapping matrices from the headers stored on disk,<br>
+
+FORMAT spm_orthviews('Reload_mats')  
+Reload the voxel-world mapping matrices from the headers stored on disk,  
 e.g. following reorientation of some images.
-</p>
-<p>FORMAT spm_orthviews('Delete', handle)<br>
-handle
-- image number to delete
-</p>
-<p>FORMAT spm_orthviews('Reset')<br>
+
+FORMAT spm_orthviews('Delete', handle)  
+handle   - image number to delete
+
+FORMAT spm_orthviews('Reset')  
 Clear the orthogonal views
-</p>
-<p>FORMAT spm_orthviews('Pos')<br>
-Return the coordinate of the crosshairs in millimetres in the standard<br>
+
+FORMAT spm_orthviews('Pos')  
+Return the coordinate of the crosshairs in millimetres in the standard  
 space.
-</p>
-<p>FORMAT spm_orthviews('Pos', i)<br>
-Return the voxel coordinate of the crosshairs in the image in the ith<br>
+
+FORMAT spm_orthviews('Pos', i)  
+Return the voxel coordinate of the crosshairs in the image in the ith  
 orthogonal section.
-</p>
-<p>FORMAT spm_orthviews('Xhairs','off') OR spm_orthviews('Xhairs')<br>
+
+FORMAT spm_orthviews('Xhairs','off') OR spm_orthviews('Xhairs')  
 Disable the cross-hairs on the display.
-</p>
-<p>FORMAT spm_orthviews('Xhairs','on')<br>
+
+FORMAT spm_orthviews('Xhairs','on')  
 Enable the cross-hairs.
-</p>
-<p>FORMAT spm_orthviews('Interp',hld)<br>
+
+FORMAT spm_orthviews('Interp',hld)  
 Set the hold value to hld (see spm_slice_vol).
-</p>
-<p>FORMAT spm_orthviews('AddBlobs',handle,XYZ,Z,mat,name)<br>
-Add blobs from a pointlist to the image specified by the handle(s).<br>
-handle
-- image number to add blobs to<br>
-XYZ
-- blob voxel locations<br>
-Z
-- blob voxel intensities<br>
-mat
-- matrix from voxels to millimetres of blob<br>
-name
-- a name for this blob<br>
-This method only adds one set of blobs, and displays them using a split<br>
+
+FORMAT spm_orthviews('AddBlobs',handle,XYZ,Z,mat,name)  
+Add blobs from a pointlist to the image specified by the handle(s).  
+handle   - image number to add blobs to  
+XYZ      - blob voxel locations  
+Z        - blob voxel intensities  
+mat      - matrix from voxels to millimetres of blob  
+name     - a name for this blob  
+This method only adds one set of blobs, and displays them using a split  
 colour table.
-</p>
-<p>FORMAT spm_orthviews('SetBlobsMax', vn, bn, mx)<br>
+
+FORMAT spm_orthviews('SetBlobsMax', vn, bn, mx)  
 Set maximum value for blobs overlay number bn of view number vn to mx.
-</p>
-<p>FORMAT spm_orthviews('AddColouredBlobs',handle,XYZ,Z,mat,colour,name)<br>
-Add blobs from a pointlist to the image specified by the handle(s)<br>
-handle
-- image number to add blobs to<br>
-XYZ
-- blob voxel locations<br>
-Z
-- blob voxel intensities<br>
-mat
-- matrix from voxels to millimeters of blob.<br>
-colour
-- the 3 vector containing the colour that the blobs should be<br>
-name
-- a name for this blob<br>
-Several sets of blobs can be added in this way, and it uses full colour.<br>
-Although it may not be particularly attractive on the screen, the colour<br>
+
+FORMAT spm_orthviews('AddColouredBlobs',handle,XYZ,Z,mat,colour,name)  
+Add blobs from a pointlist to the image specified by the handle(s)  
+handle   - image number to add blobs to  
+XYZ      - blob voxel locations  
+Z        - blob voxel intensities  
+mat      - matrix from voxels to millimeters of blob.  
+colour   - the 3 vector containing the colour that the blobs should be  
+name     - a name for this blob  
+Several sets of blobs can be added in this way, and it uses full colour.  
+Although it may not be particularly attractive on the screen, the colour  
 blobs print well.
-</p>
-<p>FORMAT spm_orthviews('AddColourBar',handle,blobno)<br>
-Add colourbar for a specified blob set.<br>
-handle
-- image number<br>
-blobno
-- blob number
-</p>
-<p>FORMAT spm_orthviews('RemoveBlobs',handle)<br>
+
+FORMAT spm_orthviews('AddColourBar',handle,blobno)  
+Add colourbar for a specified blob set.  
+handle    - image number  
+blobno    - blob number
+
+FORMAT spm_orthviews('RemoveBlobs',handle)  
 Remove all blobs from the image specified by the handle(s).
-</p>
-<p>FORMAT spm_orthviews('Addtruecolourimage',handle,filename,colourmap,prop,mx,mn)<br>
-Add blobs from an image in true colour.<br>
-handle
-- image number to add blobs to [Default: 1]<br>
-filename
-- image containing blob data [Default: GUI input]<br>
-colourmap - colormap to display blobs in [Default: GUI input]<br>
-prop
-- intensity proportion of activation cf grayscale [default: 0.4]<br>
-mx
-- maximum intensity to scale to [maximum value in activation image]<br>
-mn
-- minimum intensity to scale to [minimum value in activation image]
-</p>
-<p>FORMAT spm_orthviews('Register',hReg)<br>
-hReg
-- Handle of HandleGraphics object to build registry in<br>
+
+FORMAT spm_orthviews('Addtruecolourimage',handle,filename,colourmap,prop,mx,mn)  
+Add blobs from an image in true colour.  
+handle    - image number to add blobs to [Default: 1]  
+filename  - image containing blob data [Default: GUI input]  
+colourmap - colormap to display blobs in [Default: GUI input]  
+prop      - intensity proportion of activation cf grayscale [default: 0.4]  
+mx        - maximum intensity to scale to [maximum value in activation image]  
+mn        - minimum intensity to scale to [minimum value in activation image]
+
+FORMAT spm_orthviews('Register',hReg)  
+hReg      - Handle of HandleGraphics object to build registry in  
 See spm_XYZreg for more information.
-</p>
-<p>FORMAT spm_orthviews('AddContext',handle)<br>
-FORMAT spm_orthviews('RemoveContext',handle)<br>
-handle
-- image number to add/remove context menu to
-</p>
-<p>FORMAT spm_orthviews('ZoomMenu',zoom,res)<br>
-FORMAT [zoom, res] = spm_orthviews('ZoomMenu')<br>
-zoom
-- A list of predefined zoom values<br>
-res
-- A list of predefined resolutions<br>
-This list is used by spm_image and spm_orthviews('addcontext',&hellip;) to<br>
-create the 'Zoom' menu. The values can be retrieved by calling<br>
-spm_orthviews('ZoomMenu') with 2 output arguments. Values of 0, NaN and<br>
-Inf are treated specially, see the help for spm_orthviews('Zoom' &hellip;).
-</p>
+
+FORMAT spm_orthviews('AddContext',handle)  
+FORMAT spm_orthviews('RemoveContext',handle)  
+handle    - image number to add/remove context menu to
+
+FORMAT spm_orthviews('ZoomMenu',zoom,res)  
+FORMAT [zoom, res] = spm_orthviews('ZoomMenu')  
+zoom      - A list of predefined zoom values  
+res       - A list of predefined resolutions  
+This list is used by spm_image and spm_orthviews('addcontext',...) to  
+create the 'Zoom' menu. The values can be retrieved by calling  
+spm_orthviews('ZoomMenu') with 2 output arguments. Values of 0, NaN and  
+Inf are treated specially, see the help for spm_orthviews('Zoom' ...).
+</code></pre>
 <hr>
-<p>PLUGINS<br>
-The display capabilities of spm_orthviews can be extended with plugins.<br>
-These are located in the spm_orthviews subdirectory of the SPM<br>
-distribution.<br>
-The functionality of plugins can be accessed via calls to<br>
-spm_orthviews('plugin_name', plugin_arguments). For detailed descriptions<br>
+<pre><code>PLUGINS  
+The display capabilities of spm_orthviews can be extended with plugins.  
+These are located in the spm_orthviews subdirectory of the SPM  
+distribution.  
+The functionality of plugins can be accessed via calls to  
+spm_orthviews('plugin_name', plugin_arguments). For detailed descriptions  
 of each plugin see help spm_orthviews/spm_ov_'plugin_name'.
-</p>
+</code></pre>
 <hr>
-<p><a href="https://github.com/spm/spm/blob/main/spm_orthviews.m">Link to the Matlab implementation.</a></p></div>
+<p><a href="https://github.com/spm/spm/blob/main/spm_orthviews.m">Matlab code</a></p>
+<p>Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL</p></div>
 </dd>
 </dl>
 </section>
@@ -248,7 +391,7 @@ of each plugin see help spm_orthviews/spm_ov_'plugin_name'.
 </nav>
 </main>
 <footer id="footer">
-<p>Generated by <a href="https://pdoc3.github.io/pdoc" title="pdoc: Python API documentation generator"><cite>pdoc</cite> 0.11.1</a>.</p>
+<p>Generated by <a href="https://pdoc3.github.io/pdoc" title="pdoc: Python API documentation generator"><cite>pdoc</cite> 0.11.5</a>.</p>
 </footer>
 </body>
 </html>

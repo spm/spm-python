@@ -3,19 +3,30 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
-<meta name="generator" content="pdoc3 0.11.1">
+<meta name="generator" content="pdoc3 0.11.5">
 <title>spm.spm_fMRI_design API documentation</title>
 <meta name="description" content="">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/13.0.0/sanitize.min.css" integrity="sha512-y1dtMcuvtTMJc1yPgEqF0ZjQbhnc/bFhyvIyVNb9Zk5mIGtqVaAB1Ttl28su8AvFMOY0EwRbAe+HCLqj6W7/KA==" crossorigin>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/13.0.0/typography.min.css" integrity="sha512-Y1DYSb995BAfxobCkKepB1BqJJTPrOp3zPL74AWFugHHmmdcvO+C48WLrUOlhGMc0QG7AE3f7gmvvcrmX2fDoA==" crossorigin>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css" crossorigin>
-<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:1.5em;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:2em 0 .50em 0}h3{font-size:1.4em;margin:1.6em 0 .7em 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .2s ease-in-out}a:visited{color:#503}a:hover{color:#b62}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900;font-weight:bold}pre code{font-size:.8em;line-height:1.4em;padding:1em;display:block}code{background:#f3f3f3;font-family:"DejaVu Sans Mono",monospace;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em 1em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:1.5em;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:2em 0 .50em 0}h3{font-size:1.4em;margin:1.6em 0 .7em 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .2s ease-in-out}a:visited{color:#503}a:hover{color:#b62}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900;font-weight:bold}pre code{font-size:.8em;line-height:1.4em;padding:1em;display:block}code{background:#f3f3f3;font-family:"DejaVu Sans Mono",monospace;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source > summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible;min-width:max-content}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em 1em;margin:1em 0}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
 <style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul ul{padding-left:1em}.toc > ul > li{margin-top:.5em}}</style>
 <style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
 <script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js" integrity="sha512-D9gUyxqja7hBtkWpPWGt9wfbfaMGVt9gnyCvYa+jojwwPHLCzUm5i8rpk7vD7wNee9bA35eYIjobYPaQuKS1MQ==" crossorigin></script>
 <script>window.addEventListener('DOMContentLoaded', () => {
 hljs.configure({languages: ['bash', 'css', 'diff', 'graphql', 'ini', 'javascript', 'json', 'plaintext', 'python', 'python-repl', 'rust', 'shell', 'sql', 'typescript', 'xml', 'yaml']});
 hljs.highlightAll();
+/* Collapse source docstrings */
+setTimeout(() => {
+[...document.querySelectorAll('.hljs.language-python > .hljs-string')]
+.filter(el => el.innerHTML.length > 200 && ['"""', "'''"].includes(el.innerHTML.substring(0, 3)))
+.forEach(el => {
+let d = document.createElement('details');
+d.classList.add('hljs-string');
+d.innerHTML = '<summary>"""</summary>' + el.innerHTML.substring(3);
+el.replaceWith(d);
+});
+}, 100);
 })</script>
 </head>
 <body>
@@ -37,190 +48,351 @@ hljs.highlightAll();
 <span>def <span class="ident">spm_fMRI_design</span></span>(<span>*args, **kwargs)</span>
 </code></dt>
 <dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def spm_fMRI_design(*args, **kwargs):
+    &#34;&#34;&#34;
+      Assemble a design for fMRI studies  
+        FORMAT [SPM] = spm_fMRI_design(SPM)  
+         
+        1st level  
+       --------------------------------------------------------------------------  
+        SPM.  
+              xY: [1x1 struct] - data structure  
+           nscan: [1xs double] - nscan(s) = number of scans in session s  
+             xBF: [1x1 struct] - Basis function structure  
+            Sess: [1xs struct] - Session structure array  
+              xX: [1x1 struct] - Design matrix structure  
+         
+         
+           2nd level  
+           ----------------------------------------------------------------------  
+           SPM.xY  
+                  RT: - repetition time {seconds)  
+         
+           SPM.xBF  
+                   T: - microtime resolution (number of time bins per scan)  
+                  T0: - microtime onset (reference time bin, see slice timing)  
+               UNITS: - &#39;scans&#39;|&#39;secs&#39; - units in which onsets are specified  
+            Volterra: - 1|2 - order of [Volterra] convolution  
+                  dt: - length of time bin {seconds}  
+                name: - name of basis set  
+              length: - support of basis set {seconds}  
+               order: - order of basis set  
+                  bf: - basis set matrix  
+         
+           SPM.Sess(s)  
+                   U: - Input structure array  
+                   C: - User specified covariate structure  
+                 row: - scan   indices for session s  
+                 col: - effect indices for session s  
+                  Fc: - F Contrast information for input-specific effects  
+         
+           SPM.xX  
+                   X: - design matrix  
+                  iH: - vector of H partition (indicator variables) indices  
+                  iC: - vector of C partition (covariates)          indices  
+                  iB: - vector of B partition (block effects)       indices  
+                  iG: - vector of G partition (nuisance variables)  indices  
+                name: - cellstr of names for design matrix columns  
+         
+         
+               3rd level  
+               ------------------------------------------------------------------  
+               SPM.Sess(s).U  
+                      dt: - time bin length {seconds}  
+                    name: - {1 x j} cell of names for each input or cause  
+                     ons: - (q x 1) onsets for q  trials {in UNITS}  
+                     dur: - (q x 1) durations for trials {in UNITS}  
+                       P: - Parameter structure  
+                       u: - (t x j) inputs or stimulus function matrix  
+                     pst: - (1 x k) peristimulus times (seconds)  
+                    orth: - boolean: orthogonalise inputs?  
+         
+         
+               SPM.Sess(s).C  
+         
+                       C: - [kx1 double] of user specified regressors  
+                    name: - {1xk} cellstr of regressor names  
+         
+         
+               SPM.Sess(s).Fc  
+         
+                       i: - indices pertaining to each input  
+                    name: - names pertaining to each input  
+                       p: - grouping of regressors per parameter  
+         
+         
+                   4th level  
+                   --------------------------------------------------------------  
+                   SPM.Sess(s).U(i).P(p)  
+         
+                        name: - parameter name  
+                           P: - (q x 1) parameter matrix  
+                           h: - order of polynomial expansion (0 = none)  
+                           i: - sub-indices of U(i).u for plotting  
+         
+         
+        saves SPM.mat if save_SPM==1 (this is the default)  
+       __________________________________________________________________________  
+         
+        spm_fMRI_design allows you to build design matrices with separable  
+        session-specific partitions.  Each partition may be the same (in which  
+        case it is only necessary to specify it once) or different.  Responses  
+        can be either event- or epoch related, where the latter model prolonged  
+        and possibly time-varying responses to state-related changes in  
+        experimental conditions.  Event-related response are modelled in terms  
+        of responses to instantaneous events.  Mathematically they are both  
+        modelled by convolving a series of delta (stick) or box-car functions,  
+        encoding the input or stimulus function. with a set of hemodynamic  
+        basis functions.  
+         
+        spm_fMRI_design allows you to combine both event- and epoch-related  
+        responses in the same model and/or regressor. You specify the number  
+        of trial (event or epoch) types.  Epoch and event-related  
+        responses are modeled in exactly the same way by first specifying their  
+        onsets [in terms of onset times] and then their durations.  Events are  
+        specified with a duration of 0.  If you enter a single number for the  
+        durations it will be assumed that all trials conform to this duration.  
+         
+        Interactions or response modulations can enter at two levels.  Firstly  
+        the stick function itself can be modulated by some parametric variate  
+        (this can be time or some trial-specific variate like reaction time)  
+        modeling the interaction between the trial and the variate or, secondly  
+        interactions among the trials themselves can be modeled using a Volterra  
+        series formulation that accommodates interactions over time (and therefore  
+        within and between trial types).  The first sort of interaction is  
+        specified by extra (modulated) stick functions in Sess(s).u.  If  
+        a polynomial expansion of the specified variate is requested there will  
+        be more than one column.  The corresponding name of the explanatory  
+        variables in X.name is Sn(s) trial(u)xparam(p)^q*bf(i) for the qth  
+        order expansion of the parameter convolved with the ith basis function  
+        for the uth trial in the sth session.  If no parametric variate is  
+        specified the name is simply Sn(s) trial(u)*bf(i).  Interactions among  
+        and within trials enter as new trial types but do not have .pst or .ons  
+        fields.  These interactions can be characterized later, in results, in  
+        terms of the corresponding second order Volterra Kernels.  
+         
+        The design matrix is assembled on a much finer time scale (xBF.dt) than the  
+        TR and is then sub-sampled at the acquisition times.  After down-sampling  
+        the regressors for each input are othogonalised.  This ensures that  
+        components due to the canonical hrf are not explained away by other basis  
+        functions or parametric modulators.  
+         
+        Sess(s).ons(u) contains onset times in seconds or scans relative to the  
+        timing of the first scan  
+         
+        Notes on spm_get_ons, spm_get_bf and spm_Volterra are included below  
+        for convenience.  
+         
+                                  ----------------  
+         
+        spm_get_ons constructs a struct array containing sparse input  
+        functions U(i).u specifying occurrence events or epochs (or both).  
+        These are convolved with a basis set at a later stage to give  
+        regressors that enter into the design matrix. Interactions of evoked  
+        responses with some parameter (time or a specified  variate P) enter at  
+        this stage as additional columns in U(u).u with each trial multiplied  
+        by the [expansion of the] trial-specific parameter. If parametric  
+        modulation is modeled, P(p).P contains the original variate and  
+        P(p).name is its name. The 0th order expansion of this is simply the main  
+        effect in the first column of U(u).u  
+         
+                                  ----------------  
+         
+        spm_get_bf prompts for basis functions to model hemodynamic  
+        responses.  The basis functions returned are orthogonalized  
+        and defined as a function of peri-stimulus time in time-bins.  
+         
+                                  ----------------  
+         
+        For first order expansions spm_Volterra simply convolves the causes  
+        (e.g. stick functions) in U(u).u by the basis functions in Sess(s).bf  
+        to create design matrix X.  For second order expansions new entries appear  
+        in the design matrix that correspond to the hemodynamic interaction among the  
+        original causes (if the events are sufficiently close in time).  
+        The basis functions for these are two dimensional and are used to  
+        assemble the second order kernel in spm_graph.m.  Second order effects  
+        are computed for only the first column of U(u).u.  
+         
+       __________________________________________________________________________  
+      
+
+    [Matlab code]( https://github.com/spm/spm/blob/main/spm_fMRI_design.m )
+
+    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    &#34;&#34;&#34;
+    return Runtime.call(&#34;spm_fMRI_design&#34;, *args, **kwargs)</code></pre>
+</details>
 <div class="desc"><p>Assemble a design for fMRI studies<br>
 FORMAT [SPM] = spm_fMRI_design(SPM)
 </p>
-<p>1st level
-</p>
-<hr>
-<p>SPM.<br>
-xY: [1x1 struct] - data structure<br>
-nscan: [1xs double] - nscan(s) = number of scans in session s<br>
-xBF: [1x1 struct] - Basis function structure<br>
-Sess: [1xs struct] - Session structure array<br>
-xX: [1x1 struct] - Design matrix structure
-</p>
-<pre><code> 2nd level  
- ----------------------------------------------------------------------  
- SPM.xY  
-        RT: - repetition time {seconds)
-
- SPM.xBF  
-         T: - microtime resolution (number of time bins per scan)  
-        T0: - microtime onset (reference time bin, see slice timing)  
-     UNITS: - 'scans'|'secs' - units in which onsets are specified  
-  Volterra: - 1|2 - order of [Volterra] convolution  
-        dt: - length of time bin {seconds}  
-      name: - name of basis set  
-    length: - support of basis set {seconds}  
-     order: - order of basis set  
-        bf: - basis set matrix
-
- SPM.Sess(s)  
-         U: - Input structure array  
-         C: - User specified covariate structure  
-       row: - scan   indices for session s  
-       col: - effect indices for session s  
-        Fc: - F Contrast information for input-specific effects
-
- SPM.xX  
-         X: - design matrix  
-        iH: - vector of H partition (indicator variables) indices  
-        iC: - vector of C partition (covariates)          indices  
-        iB: - vector of B partition (block effects)       indices  
-        iG: - vector of G partition (nuisance variables)  indices  
-      name: - cellstr of names for design matrix columns
-
-
-     3rd level  
-     ------------------------------------------------------------------  
-     SPM.Sess(s).U  
-            dt: - time bin length {seconds}  
-          name: - {1 x j} cell of names for each input or cause  
-           ons: - (q x 1) onsets for q  trials {in UNITS}  
-           dur: - (q x 1) durations for trials {in UNITS}  
-             P: - Parameter structure  
-             u: - (t x j) inputs or stimulus function matrix  
-           pst: - (1 x k) peristimulus times (seconds)  
-          orth: - boolean: orthogonalise inputs?
-
-
-     SPM.Sess(s).C
-
-             C: - [kx1 double] of user specified regressors  
-          name: - {1xk} cellstr of regressor names
-
-
-     SPM.Sess(s).Fc
-
-             i: - indices pertaining to each input  
-          name: - names pertaining to each input  
-             p: - grouping of regressors per parameter
-
-
-         4th level  
-         --------------------------------------------------------------  
-         SPM.Sess(s).U(i).P(p)
-
-              name: - parameter name  
-                 P: - (q x 1) parameter matrix  
-                 h: - order of polynomial expansion (0 = none)  
-                 i: - sub-indices of U(i).u for plotting
+<pre><code>1st level
 </code></pre>
-<p>saves SPM.mat if save_SPM==1 (this is the default)
-</p>
 <hr>
-<p>spm_fMRI_design allows you to build design matrices with separable<br>
-session-specific partitions.
-Each partition may be the same (in which<br>
-case it is only necessary to specify it once) or different.
-Responses<br>
-can be either event- or epoch related, where the latter model prolonged<br>
-and possibly time-varying responses to state-related changes in<br>
-experimental conditions.
-Event-related response are modelled in terms<br>
-of responses to instantaneous events.
-Mathematically they are both<br>
-modelled by convolving a series of delta (stick) or box-car functions,<br>
-encoding the input or stimulus function. with a set of hemodynamic<br>
+<pre><code>SPM.  
+      xY: [1x1 struct] - data structure  
+   nscan: [1xs double] - nscan(s) = number of scans in session s  
+     xBF: [1x1 struct] - Basis function structure  
+    Sess: [1xs struct] - Session structure array  
+      xX: [1x1 struct] - Design matrix structure
+
+
+   2nd level  
+   ----------------------------------------------------------------------  
+   SPM.xY  
+          RT: - repetition time {seconds)
+
+   SPM.xBF  
+           T: - microtime resolution (number of time bins per scan)  
+          T0: - microtime onset (reference time bin, see slice timing)  
+       UNITS: - 'scans'|'secs' - units in which onsets are specified  
+    Volterra: - 1|2 - order of [Volterra] convolution  
+          dt: - length of time bin {seconds}  
+        name: - name of basis set  
+      length: - support of basis set {seconds}  
+       order: - order of basis set  
+          bf: - basis set matrix
+
+   SPM.Sess(s)  
+           U: - Input structure array  
+           C: - User specified covariate structure  
+         row: - scan   indices for session s  
+         col: - effect indices for session s  
+          Fc: - F Contrast information for input-specific effects
+
+   SPM.xX  
+           X: - design matrix  
+          iH: - vector of H partition (indicator variables) indices  
+          iC: - vector of C partition (covariates)          indices  
+          iB: - vector of B partition (block effects)       indices  
+          iG: - vector of G partition (nuisance variables)  indices  
+        name: - cellstr of names for design matrix columns
+
+
+       3rd level  
+       ------------------------------------------------------------------  
+       SPM.Sess(s).U  
+              dt: - time bin length {seconds}  
+            name: - {1 x j} cell of names for each input or cause  
+             ons: - (q x 1) onsets for q  trials {in UNITS}  
+             dur: - (q x 1) durations for trials {in UNITS}  
+               P: - Parameter structure  
+               u: - (t x j) inputs or stimulus function matrix  
+             pst: - (1 x k) peristimulus times (seconds)  
+            orth: - boolean: orthogonalise inputs?
+
+
+       SPM.Sess(s).C
+
+               C: - [kx1 double] of user specified regressors  
+            name: - {1xk} cellstr of regressor names
+
+
+       SPM.Sess(s).Fc
+
+               i: - indices pertaining to each input  
+            name: - names pertaining to each input  
+               p: - grouping of regressors per parameter
+
+
+           4th level  
+           --------------------------------------------------------------  
+           SPM.Sess(s).U(i).P(p)
+
+                name: - parameter name  
+                   P: - (q x 1) parameter matrix  
+                   h: - order of polynomial expansion (0 = none)  
+                   i: - sub-indices of U(i).u for plotting
+
+
+saves SPM.mat if save_SPM==1 (this is the default)
+</code></pre>
+<hr>
+<pre><code>spm_fMRI_design allows you to build design matrices with separable  
+session-specific partitions.  Each partition may be the same (in which  
+case it is only necessary to specify it once) or different.  Responses  
+can be either event- or epoch related, where the latter model prolonged  
+and possibly time-varying responses to state-related changes in  
+experimental conditions.  Event-related response are modelled in terms  
+of responses to instantaneous events.  Mathematically they are both  
+modelled by convolving a series of delta (stick) or box-car functions,  
+encoding the input or stimulus function. with a set of hemodynamic  
 basis functions.
-</p>
-<p>spm_fMRI_design allows you to combine both event- and epoch-related<br>
-responses in the same model and/or regressor. You specify the number<br>
-of trial (event or epoch) types.
-Epoch and event-related<br>
-responses are modeled in exactly the same way by first specifying their<br>
-onsets [in terms of onset times] and then their durations.
-Events are<br>
-specified with a duration of 0.
-If you enter a single number for the<br>
+
+spm_fMRI_design allows you to combine both event- and epoch-related  
+responses in the same model and/or regressor. You specify the number  
+of trial (event or epoch) types.  Epoch and event-related  
+responses are modeled in exactly the same way by first specifying their  
+onsets [in terms of onset times] and then their durations.  Events are  
+specified with a duration of 0.  If you enter a single number for the  
 durations it will be assumed that all trials conform to this duration.
-</p>
-<p>Interactions or response modulations can enter at two levels.
-Firstly<br>
-the stick function itself can be modulated by some parametric variate<br>
-(this can be time or some trial-specific variate like reaction time)<br>
-modeling the interaction between the trial and the variate or, secondly<br>
-interactions among the trials themselves can be modeled using a Volterra<br>
-series formulation that accommodates interactions over time (and therefore<br>
-within and between trial types).
-The first sort of interaction is<br>
-specified by extra (modulated) stick functions in Sess(s).u.
-If<br>
-a polynomial expansion of the specified variate is requested there will<br>
-be more than one column.
-The corresponding name of the explanatory<br>
-variables in X.name is Sn(s) trial(u)xparam(p)^q<em>bf(i) for the qth<br>
-order expansion of the parameter convolved with the ith basis function<br>
-for the uth trial in the sth session.
-If no parametric variate is<br>
-specified the name is simply Sn(s) trial(u)</em>bf(i).
-Interactions among<br>
-and within trials enter as new trial types but do not have .pst or .ons<br>
-fields.
-These interactions can be characterized later, in results, in<br>
+
+Interactions or response modulations can enter at two levels.  Firstly  
+the stick function itself can be modulated by some parametric variate  
+(this can be time or some trial-specific variate like reaction time)  
+modeling the interaction between the trial and the variate or, secondly  
+interactions among the trials themselves can be modeled using a Volterra  
+series formulation that accommodates interactions over time (and therefore  
+within and between trial types).  The first sort of interaction is  
+specified by extra (modulated) stick functions in Sess(s).u.  If  
+a polynomial expansion of the specified variate is requested there will  
+be more than one column.  The corresponding name of the explanatory  
+variables in X.name is Sn(s) trial(u)xparam(p)^q*bf(i) for the qth  
+order expansion of the parameter convolved with the ith basis function  
+for the uth trial in the sth session.  If no parametric variate is  
+specified the name is simply Sn(s) trial(u)*bf(i).  Interactions among  
+and within trials enter as new trial types but do not have .pst or .ons  
+fields.  These interactions can be characterized later, in results, in  
 terms of the corresponding second order Volterra Kernels.
-</p>
-<p>The design matrix is assembled on a much finer time scale (xBF.dt) than the<br>
-TR and is then sub-sampled at the acquisition times.
-After down-sampling<br>
-the regressors for each input are othogonalised.
-This ensures that<br>
-components due to the canonical hrf are not explained away by other basis<br>
+
+The design matrix is assembled on a much finer time scale (xBF.dt) than the  
+TR and is then sub-sampled at the acquisition times.  After down-sampling  
+the regressors for each input are othogonalised.  This ensures that  
+components due to the canonical hrf are not explained away by other basis  
 functions or parametric modulators.
-</p>
-<p>Sess(s).ons(u) contains onset times in seconds or scans relative to the<br>
+
+Sess(s).ons(u) contains onset times in seconds or scans relative to the  
 timing of the first scan
-</p>
-<p>Notes on spm_get_ons, spm_get_bf and spm_Volterra are included below<br>
+
+Notes on spm_get_ons, spm_get_bf and spm_Volterra are included below  
 for convenience.
-</p>
-<pre><code>                        ----------------
-</code></pre>
-<p>spm_get_ons constructs a struct array containing sparse input<br>
-functions U(i).u specifying occurrence events or epochs (or both).<br>
-These are convolved with a basis set at a later stage to give<br>
-regressors that enter into the design matrix. Interactions of evoked<br>
-responses with some parameter (time or a specified
-variate P) enter at<br>
-this stage as additional columns in U(u).u with each trial multiplied<br>
-by the [expansion of the] trial-specific parameter. If parametric<br>
-modulation is modeled, P(p).P contains the original variate and<br>
-P(p).name is its name. The 0th order expansion of this is simply the main<br>
+
+                          ----------------
+
+spm_get_ons constructs a struct array containing sparse input  
+functions U(i).u specifying occurrence events or epochs (or both).  
+These are convolved with a basis set at a later stage to give  
+regressors that enter into the design matrix. Interactions of evoked  
+responses with some parameter (time or a specified  variate P) enter at  
+this stage as additional columns in U(u).u with each trial multiplied  
+by the [expansion of the] trial-specific parameter. If parametric  
+modulation is modeled, P(p).P contains the original variate and  
+P(p).name is its name. The 0th order expansion of this is simply the main  
 effect in the first column of U(u).u
-</p>
-<pre><code>                        ----------------
-</code></pre>
-<p>spm_get_bf prompts for basis functions to model hemodynamic<br>
-responses.
-The basis functions returned are orthogonalized<br>
+
+                          ----------------
+
+spm_get_bf prompts for basis functions to model hemodynamic  
+responses.  The basis functions returned are orthogonalized  
 and defined as a function of peri-stimulus time in time-bins.
-</p>
-<pre><code>                        ----------------
-</code></pre>
-<p>For first order expansions spm_Volterra simply convolves the causes<br>
-(e.g. stick functions) in U(u).u by the basis functions in Sess(s).bf<br>
-to create design matrix X.
-For second order expansions new entries appear<br>
-in the design matrix that correspond to the hemodynamic interaction among the<br>
-original causes (if the events are sufficiently close in time).<br>
-The basis functions for these are two dimensional and are used to<br>
-assemble the second order kernel in spm_graph.m.
-Second order effects<br>
+
+                          ----------------
+
+For first order expansions spm_Volterra simply convolves the causes  
+(e.g. stick functions) in U(u).u by the basis functions in Sess(s).bf  
+to create design matrix X.  For second order expansions new entries appear  
+in the design matrix that correspond to the hemodynamic interaction among the  
+original causes (if the events are sufficiently close in time).  
+The basis functions for these are two dimensional and are used to  
+assemble the second order kernel in spm_graph.m.  Second order effects  
 are computed for only the first column of U(u).u.
-</p>
+</code></pre>
 <hr>
-<p><a href="https://github.com/spm/spm/blob/main/spm_fMRI_design.m">Link to the Matlab implementation.</a></p></div>
+<p><a href="https://github.com/spm/spm/blob/main/spm_fMRI_design.m">Matlab code</a></p>
+<p>Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL</p></div>
 </dd>
 </dl>
 </section>
@@ -246,7 +418,7 @@ are computed for only the first column of U(u).u.
 </nav>
 </main>
 <footer id="footer">
-<p>Generated by <a href="https://pdoc3.github.io/pdoc" title="pdoc: Python API documentation generator"><cite>pdoc</cite> 0.11.1</a>.</p>
+<p>Generated by <a href="https://pdoc3.github.io/pdoc" title="pdoc: Python API documentation generator"><cite>pdoc</cite> 0.11.5</a>.</p>
 </footer>
 </body>
 </html>

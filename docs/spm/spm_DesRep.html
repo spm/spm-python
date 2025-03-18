@@ -3,19 +3,30 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
-<meta name="generator" content="pdoc3 0.11.1">
+<meta name="generator" content="pdoc3 0.11.5">
 <title>spm.spm_DesRep API documentation</title>
 <meta name="description" content="">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/13.0.0/sanitize.min.css" integrity="sha512-y1dtMcuvtTMJc1yPgEqF0ZjQbhnc/bFhyvIyVNb9Zk5mIGtqVaAB1Ttl28su8AvFMOY0EwRbAe+HCLqj6W7/KA==" crossorigin>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/13.0.0/typography.min.css" integrity="sha512-Y1DYSb995BAfxobCkKepB1BqJJTPrOp3zPL74AWFugHHmmdcvO+C48WLrUOlhGMc0QG7AE3f7gmvvcrmX2fDoA==" crossorigin>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css" crossorigin>
-<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:1.5em;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:2em 0 .50em 0}h3{font-size:1.4em;margin:1.6em 0 .7em 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .2s ease-in-out}a:visited{color:#503}a:hover{color:#b62}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900;font-weight:bold}pre code{font-size:.8em;line-height:1.4em;padding:1em;display:block}code{background:#f3f3f3;font-family:"DejaVu Sans Mono",monospace;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em 1em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:1.5em;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:2em 0 .50em 0}h3{font-size:1.4em;margin:1.6em 0 .7em 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .2s ease-in-out}a:visited{color:#503}a:hover{color:#b62}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900;font-weight:bold}pre code{font-size:.8em;line-height:1.4em;padding:1em;display:block}code{background:#f3f3f3;font-family:"DejaVu Sans Mono",monospace;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source > summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible;min-width:max-content}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em 1em;margin:1em 0}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
 <style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul ul{padding-left:1em}.toc > ul > li{margin-top:.5em}}</style>
 <style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
 <script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js" integrity="sha512-D9gUyxqja7hBtkWpPWGt9wfbfaMGVt9gnyCvYa+jojwwPHLCzUm5i8rpk7vD7wNee9bA35eYIjobYPaQuKS1MQ==" crossorigin></script>
 <script>window.addEventListener('DOMContentLoaded', () => {
 hljs.configure({languages: ['bash', 'css', 'diff', 'graphql', 'ini', 'javascript', 'json', 'plaintext', 'python', 'python-repl', 'rust', 'shell', 'sql', 'typescript', 'xml', 'yaml']});
 hljs.highlightAll();
+/* Collapse source docstrings */
+setTimeout(() => {
+[...document.querySelectorAll('.hljs.language-python > .hljs-string')]
+.filter(el => el.innerHTML.length > 200 && ['"""', "'''"].includes(el.innerHTML.substring(0, 3)))
+.forEach(el => {
+let d = document.createElement('details');
+d.classList.add('hljs-string');
+d.innerHTML = '<summary>"""</summary>' + el.innerHTML.substring(3);
+el.replaceWith(d);
+});
+}, 100);
 })</script>
 </head>
 <body>
@@ -37,143 +48,255 @@ hljs.highlightAll();
 <span>def <span class="ident">spm_DesRep</span></span>(<span>*args, **kwargs)</span>
 </code></dt>
 <dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def spm_DesRep(*args, **kwargs):
+    &#34;&#34;&#34;
+      Design reporting utilities  
+        FORMAT varargout = spm_DesRep(action,varargin)  
+         
+        spm_DesRep (design reporting) is a suite of utility functions for various  
+        graphical reports on a given experimental design, embodied in the design  
+        matrix structure and other associated data structures.  
+        For detailed programmers comments, see format specifications in main body  
+        of code.  
+         
+                                  ----------------  
+         
+        By default, spm_DesRep prompts for selection of a SPM.mat file.  
+         
+        Given details of a design spm_DesRep sets up a &#34;Design&#34; menu in the  
+        SPM &#39;Interactive&#39; window.  The menu options launch various graphical  
+        summaries of the current SPM design in the SPM &#39;Graphics&#39; window.  
+         
+        * Design Matrix  - Displays graphical summary of the design matrix  
+         
+            The design is labelled with the corresponding parameter and  
+            file names, and is displayed as an image scaled (using  
+            spm_DesMtx(&#39;sca&#39;,...) such that zero is mid-grey, -1 is black, and +1  
+            is white. Covariates exceeding this randge are scaled to fit.  
+         
+            The design matrix is &#34;surfable&#34;: Clicking (and holding or dragging)  
+            around the design matrix image reports the corresponding value of the  
+            design matrix (&#39;normal&#39; click - &#34;left&#34; mouse button usually), the  
+            image filename (&#39;extend&#39; mouse click - &#34;middle&#34; mouse), or parameter  
+            name (&#39;alt&#39; click - &#34;right&#34; mouse). Double clicking the design matrix  
+            image extracts the design matrix into the base MATLAB workspace.  
+         
+            Under the design matrix the parameter estimability is displayed as a  
+            1xp matrix of grey and white squares. Parameters that are not  
+            uniquely specified by the model are shown with a grey patch. Surfing  
+            the estimability image reports the parameter names and their  
+            estimability. Double clicking extracts the estimability vector into  
+            the base MATLAB workspace.  
+         
+        * Design orthogonality - Displays orthogonality matrix for this design  
+         
+            The design matrix is displayed as in &#34;Design Matrix&#34; view above,  
+            labelled with the parameter names.  
+         
+            Under the design matrix the design orthogonality matrix is  
+            displayed. For each pair of columns of the design matrix, the  
+            orthogonality matrix depicts the magnitude of the cosine of the  
+            angle between them, with the range 0 to 1 mapped to white to  
+            black. Orthogonal vectors (shown in white), have cosine of zero.  
+            Colinear vectors (shown in black), have cosine of 1 or -1.  
+         
+            The cosine of the angle between two vectors a &amp; b is obtained by  
+            dividing the dot product of the two vectors by the product of  
+            their lengths:  
+         
+                                a&#39;*b  
+                        ------------------------  
+                        sqrt(sum(a.^2)*sum(b.^2)  
+         
+            If (and only if) both vectors have zero mean, i.e.  
+            sum(a)==sum(b)==0, then the cosine of the angle between the  
+            vectors is the same as the correlation between the two variates.  
+              
+            The design orthogonality matrix is &#34;surfable&#34;: Clicking (and  
+            holding or dragging) the cursor around the design orthogonality  
+            image reports the orthogonality of the corresponding pair of  
+            columns. Double clicking on the orthogonality matrix extracts  
+            the contrast orthogonality matrix into the base MATLAB  
+            workspace.  
+         
+        * Explore design - Sub-menu&#39;s for detailed design exploration.  
+         
+            If this is an fMRI design, then the session &amp; trial/condition  
+            structure of the design is reflected in the sub-menu structure.  
+            Selecting a given session, and then trial/condition within the  
+            session, launches a comprehensive display of the parameters of  
+            that design.  
+         
+            If not an fMRI design, then the Explore sub-menu has two options:  
+            &#34;Files and factors&#34; &amp; &#34;Covariates&#34;.  
+         
+        * Explore: Files and factors - Multi-page listing of filenames,   
+                                       factor indices and covariates.  
+         
+            The covariates printed are the raw covariates as entered into  
+            SPM, with the exception of the global value, which is printed  
+            after any grand mean scaling.  
+         
+        * Explore: Covariates - Plots of the covariates, showing how they are  
+                                included into the model.   
+                           
+            Covariates are plotted, one per page, overlaid on the design  
+            matrix. The description strings in the xC covariate structure  
+            array are displayed. The corresponding design matrix column(s)  
+            is(are) highlighted.  
+         
+        * Clear    - clears Graphics window, re-instating Results section MIP  
+                     &amp; design matrix graphics (if in the results section).  
+        * Help     - displays this text!  
+         
+                                  ----------------  
+         
+        spm_DesRep also handles &#34;surfing&#34; of contrast depictions, which are  
+        bar-graphs for T-contrasts and images for F-contrasts. Clicking  
+        (&#39;normal&#39; click - &#34;left&#34; mouse button usually) with the on the bars  
+        of the bar-graphs, or anywhere in an image, and dragging, dynamically  
+        reports the contrast weight depicted under the cursor. The format of  
+        the report string is:  
+          #{T/F}: &lt;name&gt; (ij) = &lt;weight&gt;  
+        ...where # is the contrast number, T/F indicates the type of contrast,  
+        &lt;name&gt; the name given to the contrast, ij the index into the contrast  
+        vector/matrix weight under the cursor, and &lt;weight&gt; the corresponding  
+        contrast weight.  
+         
+        Double clicking on a contrast depiction extracts the contrast weights  
+        into the base workspace.  
+       __________________________________________________________________________  
+      
+
+    [Matlab code]( https://github.com/spm/spm/blob/main/spm_DesRep.m )
+
+    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    &#34;&#34;&#34;
+    return Runtime.call(&#34;spm_DesRep&#34;, *args, **kwargs)</code></pre>
+</details>
 <div class="desc"><p>Design reporting utilities<br>
 FORMAT varargout = spm_DesRep(action,varargin)
 </p>
-<p>spm_DesRep (design reporting) is a suite of utility functions for various<br>
-graphical reports on a given experimental design, embodied in the design<br>
-matrix structure and other associated data structures.<br>
-For detailed programmers comments, see format specifications in main body<br>
+<pre><code>spm_DesRep (design reporting) is a suite of utility functions for various  
+graphical reports on a given experimental design, embodied in the design  
+matrix structure and other associated data structures.  
+For detailed programmers comments, see format specifications in main body  
 of code.
-</p>
-<pre><code>                        ----------------
-</code></pre>
-<p>By default, spm_DesRep prompts for selection of a SPM.mat file.
-</p>
-<p>Given details of a design spm_DesRep sets up a "Design" menu in the<br>
-SPM 'Interactive' window.
-The menu options launch various graphical<br>
+
+                          ----------------
+
+By default, spm_DesRep prompts for selection of a SPM.mat file.
+
+Given details of a design spm_DesRep sets up a "Design" menu in the  
+SPM 'Interactive' window.  The menu options launch various graphical  
 summaries of the current SPM design in the SPM 'Graphics' window.
-</p>
-<ul>
-<li>
-<p>Design Matrix
-- Displays graphical summary of the design matrix
-</p>
-<p>The design is labelled with the corresponding parameter and<br>
-file names, and is displayed as an image scaled (using<br>
-spm_DesMtx('sca',&hellip;) such that zero is mid-grey, -1 is black, and +1<br>
-is white. Covariates exceeding this randge are scaled to fit.
-</p>
-<p>The design matrix is "surfable": Clicking (and holding or dragging)<br>
-around the design matrix image reports the corresponding value of the<br>
-design matrix ('normal' click - "left" mouse button usually), the<br>
-image filename ('extend' mouse click - "middle" mouse), or parameter<br>
-name ('alt' click - "right" mouse). Double clicking the design matrix<br>
-image extracts the design matrix into the base MATLAB workspace.
-</p>
-<p>Under the design matrix the parameter estimability is displayed as a<br>
-1xp matrix of grey and white squares. Parameters that are not<br>
-uniquely specified by the model are shown with a grey patch. Surfing<br>
-the estimability image reports the parameter names and their<br>
-estimability. Double clicking extracts the estimability vector into<br>
-the base MATLAB workspace.
-</p>
-</li>
-<li>
-<p>Design orthogonality - Displays orthogonality matrix for this design
-</p>
-<p>The design matrix is displayed as in "Design Matrix" view above,<br>
-labelled with the parameter names.
-</p>
-<p>Under the design matrix the design orthogonality matrix is<br>
-displayed. For each pair of columns of the design matrix, the<br>
-orthogonality matrix depicts the magnitude of the cosine of the<br>
-angle between them, with the range 0 to 1 mapped to white to<br>
-black. Orthogonal vectors (shown in white), have cosine of zero.<br>
-Colinear vectors (shown in black), have cosine of 1 or -1.
-</p>
-<p>The cosine of the angle between two vectors a &amp; b is obtained by<br>
-dividing the dot product of the two vectors by the product of<br>
-their lengths:
-</p>
-<pre><code>                  a'*b  
-          ------------------------  
-          sqrt(sum(a.^2)*sum(b.^2)
-</code></pre>
-<p>If (and only if) both vectors have zero mean, i.e.<br>
-sum(a)==sum(b)==0, then the cosine of the angle between the<br>
-vectors is the same as the correlation between the two variates.
-</p>
-<p>The design orthogonality matrix is "surfable": Clicking (and<br>
-holding or dragging) the cursor around the design orthogonality<br>
-image reports the orthogonality of the corresponding pair of<br>
-columns. Double clicking on the orthogonality matrix extracts<br>
-the contrast orthogonality matrix into the base MATLAB<br>
-workspace.
-</p>
-</li>
-<li>
-<p>Explore design - Sub-menu's for detailed design exploration.
-</p>
-<p>If this is an fMRI design, then the session &amp; trial/condition<br>
-structure of the design is reflected in the sub-menu structure.<br>
-Selecting a given session, and then trial/condition within the<br>
-session, launches a comprehensive display of the parameters of<br>
-that design.
-</p>
-<p>If not an fMRI design, then the Explore sub-menu has two options:<br>
-"Files and factors" &amp; "Covariates".
-</p>
-</li>
-<li>
-<p>Explore: Files and factors - Multi-page listing of filenames, <br>
-factor indices and covariates.
-</p>
-<p>The covariates printed are the raw covariates as entered into<br>
-SPM, with the exception of the global value, which is printed<br>
-after any grand mean scaling.
-</p>
-</li>
-<li>
-<p>Explore: Covariates - Plots of the covariates, showing how they are<br>
-included into the model.
-</p>
-<p>Covariates are plotted, one per page, overlaid on the design<br>
-matrix. The description strings in the xC covariate structure<br>
-array are displayed. The corresponding design matrix column(s)<br>
-is(are) highlighted.
-</p>
-</li>
-<li>
-<p>Clear
-- clears Graphics window, re-instating Results section MIP<br>
-&amp; design matrix graphics (if in the results section).
-</p>
-</li>
-<li>Help
-- displays this text!
-<pre><code>                    ----------------
-</code></pre>
-</li>
-</ul>
-<p>spm_DesRep also handles "surfing" of contrast depictions, which are<br>
-bar-graphs for T-contrasts and images for F-contrasts. Clicking<br>
-('normal' click - "left" mouse button usually) with the on the bars<br>
-of the bar-graphs, or anywhere in an image, and dragging, dynamically<br>
-reports the contrast weight depicted under the cursor. The format of<br>
-the report string is:<br>
-#{T/F}: <name> (ij) = <weight><br>
-&hellip;where # is the contrast number, T/F indicates the type of contrast,<br>
-<name> the name given to the contrast, ij the index into the contrast<br>
-vector/matrix weight under the cursor, and <weight> the corresponding<br>
+
+* Design Matrix  - Displays graphical summary of the design matrix
+
+    The design is labelled with the corresponding parameter and  
+    file names, and is displayed as an image scaled (using  
+    spm_DesMtx('sca',...) such that zero is mid-grey, -1 is black, and +1  
+    is white. Covariates exceeding this randge are scaled to fit.
+
+    The design matrix is "surfable": Clicking (and holding or dragging)  
+    around the design matrix image reports the corresponding value of the  
+    design matrix ('normal' click - "left" mouse button usually), the  
+    image filename ('extend' mouse click - "middle" mouse), or parameter  
+    name ('alt' click - "right" mouse). Double clicking the design matrix  
+    image extracts the design matrix into the base MATLAB workspace.
+
+    Under the design matrix the parameter estimability is displayed as a  
+    1xp matrix of grey and white squares. Parameters that are not  
+    uniquely specified by the model are shown with a grey patch. Surfing  
+    the estimability image reports the parameter names and their  
+    estimability. Double clicking extracts the estimability vector into  
+    the base MATLAB workspace.
+
+* Design orthogonality - Displays orthogonality matrix for this design
+
+    The design matrix is displayed as in "Design Matrix" view above,  
+    labelled with the parameter names.
+
+    Under the design matrix the design orthogonality matrix is  
+    displayed. For each pair of columns of the design matrix, the  
+    orthogonality matrix depicts the magnitude of the cosine of the  
+    angle between them, with the range 0 to 1 mapped to white to  
+    black. Orthogonal vectors (shown in white), have cosine of zero.  
+    Colinear vectors (shown in black), have cosine of 1 or -1.
+
+    The cosine of the angle between two vectors a &amp; b is obtained by  
+    dividing the dot product of the two vectors by the product of  
+    their lengths:
+
+                        a'*b  
+                ------------------------  
+                sqrt(sum(a.^2)*sum(b.^2)
+
+    If (and only if) both vectors have zero mean, i.e.  
+    sum(a)==sum(b)==0, then the cosine of the angle between the  
+    vectors is the same as the correlation between the two variates.
+
+    The design orthogonality matrix is "surfable": Clicking (and  
+    holding or dragging) the cursor around the design orthogonality  
+    image reports the orthogonality of the corresponding pair of  
+    columns. Double clicking on the orthogonality matrix extracts  
+    the contrast orthogonality matrix into the base MATLAB  
+    workspace.
+
+* Explore design - Sub-menu's for detailed design exploration.
+
+    If this is an fMRI design, then the session &amp; trial/condition  
+    structure of the design is reflected in the sub-menu structure.  
+    Selecting a given session, and then trial/condition within the  
+    session, launches a comprehensive display of the parameters of  
+    that design.
+
+    If not an fMRI design, then the Explore sub-menu has two options:  
+    "Files and factors" &amp; "Covariates".
+
+* Explore: Files and factors - Multi-page listing of filenames,   
+                               factor indices and covariates.
+
+    The covariates printed are the raw covariates as entered into  
+    SPM, with the exception of the global value, which is printed  
+    after any grand mean scaling.
+
+* Explore: Covariates - Plots of the covariates, showing how they are  
+                        included into the model.
+
+    Covariates are plotted, one per page, overlaid on the design  
+    matrix. The description strings in the xC covariate structure  
+    array are displayed. The corresponding design matrix column(s)  
+    is(are) highlighted.
+
+* Clear    - clears Graphics window, re-instating Results section MIP  
+             &amp; design matrix graphics (if in the results section).  
+* Help     - displays this text!
+
+                          ----------------
+
+spm_DesRep also handles "surfing" of contrast depictions, which are  
+bar-graphs for T-contrasts and images for F-contrasts. Clicking  
+('normal' click - "left" mouse button usually) with the on the bars  
+of the bar-graphs, or anywhere in an image, and dragging, dynamically  
+reports the contrast weight depicted under the cursor. The format of  
+the report string is:  
+  #{T/F}: &lt;name&gt; (ij) = &lt;weight&gt;  
+...where # is the contrast number, T/F indicates the type of contrast,  
+&lt;name&gt; the name given to the contrast, ij the index into the contrast  
+vector/matrix weight under the cursor, and &lt;weight&gt; the corresponding  
 contrast weight.
-</p>
-<p>Double clicking on a contrast depiction extracts the contrast weights<br>
+
+Double clicking on a contrast depiction extracts the contrast weights  
 into the base workspace.
-</p>
+</code></pre>
 <hr>
-<p><a href="https://github.com/spm/spm/blob/main/spm_DesRep.m">Link to the Matlab implementation.</a></p></div>
+<p><a href="https://github.com/spm/spm/blob/main/spm_DesRep.m">Matlab code</a></p>
+<p>Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL</p></div>
 </dd>
 </dl>
 </section>
@@ -199,7 +322,7 @@ into the base workspace.
 </nav>
 </main>
 <footer id="footer">
-<p>Generated by <a href="https://pdoc3.github.io/pdoc" title="pdoc: Python API documentation generator"><cite>pdoc</cite> 0.11.1</a>.</p>
+<p>Generated by <a href="https://pdoc3.github.io/pdoc" title="pdoc: Python API documentation generator"><cite>pdoc</cite> 0.11.5</a>.</p>
 </footer>
 </body>
 </html>

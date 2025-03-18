@@ -3,19 +3,30 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
-<meta name="generator" content="pdoc3 0.11.1">
+<meta name="generator" content="pdoc3 0.11.5">
 <title>spm.spm_sp API documentation</title>
 <meta name="description" content="">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/13.0.0/sanitize.min.css" integrity="sha512-y1dtMcuvtTMJc1yPgEqF0ZjQbhnc/bFhyvIyVNb9Zk5mIGtqVaAB1Ttl28su8AvFMOY0EwRbAe+HCLqj6W7/KA==" crossorigin>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/13.0.0/typography.min.css" integrity="sha512-Y1DYSb995BAfxobCkKepB1BqJJTPrOp3zPL74AWFugHHmmdcvO+C48WLrUOlhGMc0QG7AE3f7gmvvcrmX2fDoA==" crossorigin>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css" crossorigin>
-<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:1.5em;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:2em 0 .50em 0}h3{font-size:1.4em;margin:1.6em 0 .7em 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .2s ease-in-out}a:visited{color:#503}a:hover{color:#b62}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900;font-weight:bold}pre code{font-size:.8em;line-height:1.4em;padding:1em;display:block}code{background:#f3f3f3;font-family:"DejaVu Sans Mono",monospace;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em 1em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:1.5em;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:2em 0 .50em 0}h3{font-size:1.4em;margin:1.6em 0 .7em 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .2s ease-in-out}a:visited{color:#503}a:hover{color:#b62}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900;font-weight:bold}pre code{font-size:.8em;line-height:1.4em;padding:1em;display:block}code{background:#f3f3f3;font-family:"DejaVu Sans Mono",monospace;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source > summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible;min-width:max-content}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em 1em;margin:1em 0}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
 <style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul ul{padding-left:1em}.toc > ul > li{margin-top:.5em}}</style>
 <style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
 <script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js" integrity="sha512-D9gUyxqja7hBtkWpPWGt9wfbfaMGVt9gnyCvYa+jojwwPHLCzUm5i8rpk7vD7wNee9bA35eYIjobYPaQuKS1MQ==" crossorigin></script>
 <script>window.addEventListener('DOMContentLoaded', () => {
 hljs.configure({languages: ['bash', 'css', 'diff', 'graphql', 'ini', 'javascript', 'json', 'plaintext', 'python', 'python-repl', 'rust', 'shell', 'sql', 'typescript', 'xml', 'yaml']});
 hljs.highlightAll();
+/* Collapse source docstrings */
+setTimeout(() => {
+[...document.querySelectorAll('.hljs.language-python > .hljs-string')]
+.filter(el => el.innerHTML.length > 200 && ['"""', "'''"].includes(el.innerHTML.substring(0, 3)))
+.forEach(el => {
+let d = document.createElement('details');
+d.classList.add('hljs-string');
+d.innerHTML = '<summary>"""</summary>' + el.innerHTML.substring(3);
+el.replaceWith(d);
+});
+}, 100);
 })</script>
 </head>
 <body>
@@ -37,223 +48,377 @@ hljs.highlightAll();
 <span>def <span class="ident">spm_sp</span></span>(<span>*args, **kwargs)</span>
 </code></dt>
 <dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def spm_sp(*args, **kwargs):
+    &#34;&#34;&#34;
+      Orthogonal (design) matrix space setting &amp; manipulation  
+        FORMAT varargout = spm_spc(action,varargin)  
+         
+        This function computes the different projectors related to the row  
+        and column spaces X. It should be used to avoid redundant computation  
+        of svd on large X matrix.  It is divided into actions that set up the  
+        space, (Create,Set,...) and actions that compute projections (pinv,  
+        pinvXpX, pinvXXp, ...) This is motivated by the problem of rounding  
+        errors that can invalidate some computation and is a tool to work  
+        with spaces.  
+         
+        The only thing that is not easily computed is the null space of  
+        the line of X (assuming size(X,1) &gt; size(X,2)).  
+        To get this space (a basis of it or a projector on it) use spm_sp on X&#39;.  
+         
+        The only restriction on the use of the space structure is when X is  
+        so big that you cannot fit X and its svd in memory at the same time.  
+        Otherwise, the use of spm_sp will generally speed up computations and  
+        optimise memory use.  
+         
+        Note that since the design matrix is stored in the space structure,  
+        there is no need to keep a separate copy of it.  
+         
+                                  ----------------  
+         
+        The structure is:  
+          x = struct(...  
+              &#39;X&#39;,    [],...      % Mtx  
+              &#39;tol&#39;,  [],...      % tolerance  
+              &#39;ds&#39;,   [],...      % vectors of singular values   
+              &#39;u&#39;,    [],...      % u as in X = u*diag(ds)*v&#39;  
+              &#39;v&#39;,    [],...      % v as in X = u*diag(ds)*v&#39;  
+              &#39;rk&#39;,   [],...      % rank  
+              &#39;oP&#39;,   [],...      % orthogonal projector on X  
+              &#39;oPp&#39;,  [],...      % orthogonal projector on X&#39;  
+              &#39;ups&#39;,  [],...      % space in which this one is embedded  
+              &#39;sus&#39;,  []);        % subspace  
+         
+        The basic required fields are X, tol, ds, u, v, rk.  
+         
+        =========================================================================  
+         
+        FORMAT x = spm_sp(&#39;Set&#39;,X)  
+        Set up space structure, storing matrix, singular values, rank &amp; tolerance  
+        X - a (design) matrix (2D)  
+        x - the corresponding space structure, with basic fields filled in  
+            The SVD is an &#34;economy size&#34; svd, using MatLab&#39;s svd(X,0)  
+         
+         
+        FORMAT r = spm_sp(&#39;oP&#39;,x[,Y])  
+        FORMAT r = spm_sp(&#39;oPp&#39;,x[,Y])  
+        Return orthogonal projectors, or orthogonal projection of data Y (if passed)  
+        x - space structure of matrix X  
+        r - (&#39;oP&#39; usage)  ortho. projection matrix projecting into column space of x.X  
+          - (&#39;oPp&#39; usage) ortho. projection matrix projecting into row space of x.X  
+        Y - data (optional)  
+          - If data are specified then the corresponding projection of data is  
+            returned. This is usually more efficient that computing and applying  
+            the projection matrix directly.  
+         
+         
+        FORMAT pX = spm_sp(&#39;pinv&#39;,x)  
+        Returns a pseudo-inverse of X - pinv(X) - computed efficiently  
+        x - space structure of matrix X  
+        pX - pseudo-inverse of X  
+        This is the same as MatLab&#39;s pinv - the Moore-Penrose pseudoinverse  
+        ( Note that because size(pinv(X)) == size(X&#39;), it is not generally  )  
+        ( useful to compute pinv(X)*Data sequentially (as is the case for   )  
+        ( &#39;res&#39; or &#39;oP&#39;)                                                    )  
+         
+         
+        FORMAT pXpX = spm_sp(&#39;pinvxpx&#39;,x)  
+        Returns a pseudo-inverse of X&#39;X - pinv(X&#39;*X) - computed efficiently  
+        x    - space structure of matrix X  
+        pXpX - pseudo-inverse of (X&#39;X)  
+        ( Note that because size(pinv(X&#39;*X)) == [size(X,2) size(X,2)],      )  
+        ( it is not useful to compute pinv(X&#39;X)*Data sequentially unless    )  
+        ( size(X,1) &lt; size(X,2)                                             )  
+         
+         
+        FORMAT XpX = spm_sp(&#39;xpx&#39;,x)  
+        Returns (X&#39;X) - computed efficiently  
+        x    - space structure of matrix X  
+        XpX  - (X&#39;X)  
+         
+         
+        FORMAT pXXp = spm_sp(&#39;pinvxxp&#39;,x)  
+        Returns a pseudo-inverse of XX&#39; - pinv(X*X&#39;) - computed efficiently  
+        x    - space structure of matrix X  
+        pXXp - pseudo-inverse of (XX&#39;)  
+         
+         
+        FORMAT XXp = spm_sp(&#39;xxp&#39;,x)  
+        Returns (XX&#39;) - computed efficiently  
+        x    - space structure of matrix X  
+        XXp  - (XX&#39;)  
+         
+         
+        FORMAT b = spm_sp(&#39;isinsp&#39;,x,c[,tol])  
+        FORMAT b = spm_sp(&#39;isinspp&#39;,x,c[,tol])  
+        Check whether vectors c are in the column/row space of X  
+        x   - space structure of matrix X  
+        c   - vector(s) (Multiple vectors passed as a matrix)  
+        tol - (optional) tolerance (for rounding error)  
+               [defaults to tolerance specified in space structure: x.tol]  
+        b   - (&#39;isinsp&#39;  usage) true if c is in the column space of X  
+            - (&#39;isinspp&#39; usage) true if c is in the column space of X  
+          
+        FORMAT b = spm_sp(&#39;eachinsp&#39;,x,c[,tol])  
+        FORMAT b = spm_sp(&#39;eachinspp&#39;,x,c[,tol])  
+        Same as &#39;isinsp&#39; and &#39;isinspp&#39; but returns a logical row vector of  
+        length size(c,2).  
+         
+        FORMAT N = spm_sp(&#39;n&#39;,x)  
+        Simply returns the null space of matrix X (same as matlab NULL)  
+        (Null space = vectors associated with zero eigenvalues)  
+        x - space structure of matrix X  
+        N - null space  
+         
+         
+        FORMAT r = spm_sp(&#39;nop&#39;,x[,Y])  
+        Orthogonal projector onto null space of X, or projection of data Y (if passed)  
+        x - space structure of matrix X  
+        Y - (optional) data  
+        r - (if no Y passed) orthogonal projection matrix  into the null space of X  
+          - (if Y passed   ) orthogonal projection of data into the null space of X  
+        ( Note that if xp = spm_sp(&#39;set&#39;,x.X&#39;), we have:                    )  
+        (       spm_sp(&#39;nop&#39;,x) == spm_sp(&#39;res&#39;,xp)                      )  
+        ( or, equivalently:                                                 )  
+        (       spm_sp(&#39;nop&#39;,x) + spm_sp(&#39;oP&#39;,xp) == eye(size(xp.X,1));  )  
+         
+         
+        FORMAT r = spm_sp(&#39;res&#39;,x[,Y])  
+        Returns residual formaing matrix wirit column space of X, or residuals (if Y)  
+        x - space structure of matrix X  
+        Y - (optional) data  
+        r - (if no Y passed) residual forming matrix for design matrix X  
+          - (if Y passed   ) residuals, i.e. residual forming matrix times data  
+                           ( This will be more efficient than  
+                           ( spm_sp(&#39;res&#39;,x)*Data, when size(X,1) &gt; size(X,2)  
+        Note that this can also be seen as the orthogonal projector onto the  
+        null space of x.X&#39; (which is not generally computed in svd, unless  
+        size(X,1) &lt; size(X,2)).  
+         
+         
+        FORMAT oX  = spm_sp(&#39;ox&#39;, x)  
+        FORMAT oXp = spm_sp(&#39;oxp&#39;,x)  
+        Returns an orthonormal basis for X (&#39;ox&#39; usage) or X&#39; (&#39;oxp&#39; usage)  
+        x   - space structure of matrix X  
+        oX  - orthonormal basis for X - same as orth(x.X)  
+        xOp - *an* orthonormal for X&#39; (but not the same as orth(x.X&#39;))  
+         
+         
+        FORMAT b = spm_sp(&#39;isspc&#39;,x)  
+        Check a variable is a structure with the right fields for a space structure  
+        x - candidate variable  
+        b - true if x is a structure with fieldnames corresponding to spm_sp(&#39;create&#39;)  
+         
+         
+        FORMAT [b,e] = spm_sp(&#39;issetspc&#39;,x)  
+        Test whether a variable is a space structure with the basic fields set  
+        x - candidate variable  
+        b - true is x is a structure with fieldnames corresponding to  
+            spm_sp(&#39;Create&#39;), which has it&#39;s basic fields filled in.  
+        e - string describing why x fails the issetspc test (if it does)  
+        This is simply a gateway function combining spm_sp(&#39;isspc&#39;,x) with  
+        the internal subfunction sf_isset, which checks that the basic fields  
+        are not empty. See sf_isset (below).  
+         
+       --------------------------------------------------------------------------  
+        SUBFUNCTIONS:  
+         
+        FORMAT b = sf_isset(x)  
+        Checks that the basic fields are non-empty (doesn&#39;t check they&#39;re right!)  
+        x - space structure  
+        b - true if the basic fields are non-empty  
+       __________________________________________________________________________  
+      
+
+    [Matlab code]( https://github.com/spm/spm/blob/main/spm_sp.m )
+
+    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    &#34;&#34;&#34;
+    return Runtime.call(&#34;spm_sp&#34;, *args, **kwargs)</code></pre>
+</details>
 <div class="desc"><p>Orthogonal (design) matrix space setting &amp; manipulation<br>
 FORMAT varargout = spm_spc(action,varargin)
 </p>
-<p>This function computes the different projectors related to the row<br>
-and column spaces X. It should be used to avoid redundant computation<br>
-of svd on large X matrix.
-It is divided into actions that set up the<br>
-space, (Create,Set,&hellip;) and actions that compute projections (pinv,<br>
-pinvXpX, pinvXXp, &hellip;) This is motivated by the problem of rounding<br>
-errors that can invalidate some computation and is a tool to work<br>
+<pre><code>This function computes the different projectors related to the row  
+and column spaces X. It should be used to avoid redundant computation  
+of svd on large X matrix.  It is divided into actions that set up the  
+space, (Create,Set,...) and actions that compute projections (pinv,  
+pinvXpX, pinvXXp, ...) This is motivated by the problem of rounding  
+errors that can invalidate some computation and is a tool to work  
 with spaces.
-</p>
-<p>The only thing that is not easily computed is the null space of<br>
-the line of X (assuming size(X,1) &gt; size(X,2)).<br>
+
+The only thing that is not easily computed is the null space of  
+the line of X (assuming size(X,1) &gt; size(X,2)).  
 To get this space (a basis of it or a projector on it) use spm_sp on X'.
-</p>
-<p>The only restriction on the use of the space structure is when X is<br>
-so big that you cannot fit X and its svd in memory at the same time.<br>
-Otherwise, the use of spm_sp will generally speed up computations and<br>
+
+The only restriction on the use of the space structure is when X is  
+so big that you cannot fit X and its svd in memory at the same time.  
+Otherwise, the use of spm_sp will generally speed up computations and  
 optimise memory use.
-</p>
-<p>Note that since the design matrix is stored in the space structure,<br>
+
+Note that since the design matrix is stored in the space structure,  
 there is no need to keep a separate copy of it.
-</p>
-<pre><code>                        ----------------
-</code></pre>
-<p>The structure is:<br>
-x = struct(&hellip;<br>
-'X',
-[],&hellip;
-% Mtx<br>
-'tol',
-[],&hellip;
-% tolerance<br>
-'ds',
-[],&hellip;
-% vectors of singular values <br>
-'u',
-[],&hellip;
-% u as in X = u<em>diag(ds)</em>v'<br>
-'v',
-[],&hellip;
-% v as in X = u<em>diag(ds)</em>v'<br>
-'rk',
-[],&hellip;
-% rank<br>
-'oP',
-[],&hellip;
-% orthogonal projector on X<br>
-'oPp',
-[],&hellip;
-% orthogonal projector on X'<br>
-'ups',
-[],&hellip;
-% space in which this one is embedded<br>
-'sus',
-[]);
-% subspace
-</p>
-<p>The basic required fields are X, tol, ds, u, v, rk.
-</p>
-<p>=========================================================================
-</p>
-<p>FORMAT x = spm_sp('Set',X)<br>
-Set up space structure, storing matrix, singular values, rank &amp; tolerance<br>
-X - a (design) matrix (2D)<br>
-x - the corresponding space structure, with basic fields filled in<br>
-The SVD is an "economy size" svd, using MatLab's svd(X,0)
-</p>
-<p>FORMAT r = spm_sp('oP',x[,Y])<br>
-FORMAT r = spm_sp('oPp',x[,Y])<br>
-Return orthogonal projectors, or orthogonal projection of data Y (if passed)<br>
-x - space structure of matrix X<br>
-r - ('oP' usage)
-ortho. projection matrix projecting into column space of x.X<br>
-- ('oPp' usage) ortho. projection matrix projecting into row space of x.X<br>
-Y - data (optional)<br>
-- If data are specified then the corresponding projection of data is<br>
-returned. This is usually more efficient that computing and applying<br>
-the projection matrix directly.
-</p>
-<p>FORMAT pX = spm_sp('pinv',x)<br>
-Returns a pseudo-inverse of X - pinv(X) - computed efficiently<br>
-x - space structure of matrix X<br>
-pX - pseudo-inverse of X<br>
-This is the same as MatLab's pinv - the Moore-Penrose pseudoinverse<br>
-( Note that because size(pinv(X)) == size(X'), it is not generally
-)<br>
-( useful to compute pinv(X)*Data sequentially (as is the case for
-)<br>
-( 'res' or 'oP')
-)
-</p>
-<p>FORMAT pXpX = spm_sp('pinvxpx',x)<br>
-Returns a pseudo-inverse of X'X - pinv(X'<em>X) - computed efficiently<br>
-x
-- space structure of matrix X<br>
-pXpX - pseudo-inverse of (X'X)<br>
-( Note that because size(pinv(X'</em>X)) == [size(X,2) size(X,2)],
-)<br>
-( it is not useful to compute pinv(X'X)*Data sequentially unless
-)<br>
-( size(X,1) &lt; size(X,2)
-)
-</p>
-<p>FORMAT XpX = spm_sp('xpx',x)<br>
-Returns (X'X) - computed efficiently<br>
-x
-- space structure of matrix X<br>
-XpX
-- (X'X)
-</p>
-<p>FORMAT pXXp = spm_sp('pinvxxp',x)<br>
-Returns a pseudo-inverse of XX' - pinv(X*X') - computed efficiently<br>
-x
-- space structure of matrix X<br>
+
+                          ----------------
+
+The structure is:  
+  x = struct(...  
+      'X',    [],...      % Mtx  
+      'tol',  [],...      % tolerance  
+      'ds',   [],...      % vectors of singular values   
+      'u',    [],...      % u as in X = u*diag(ds)*v'  
+      'v',    [],...      % v as in X = u*diag(ds)*v'  
+      'rk',   [],...      % rank  
+      'oP',   [],...      % orthogonal projector on X  
+      'oPp',  [],...      % orthogonal projector on X'  
+      'ups',  [],...      % space in which this one is embedded  
+      'sus',  []);        % subspace
+
+The basic required fields are X, tol, ds, u, v, rk.
+
+=========================================================================
+
+FORMAT x = spm_sp('Set',X)  
+Set up space structure, storing matrix, singular values, rank &amp; tolerance  
+X - a (design) matrix (2D)  
+x - the corresponding space structure, with basic fields filled in  
+    The SVD is an "economy size" svd, using MatLab's svd(X,0)
+
+
+FORMAT r = spm_sp('oP',x[,Y])  
+FORMAT r = spm_sp('oPp',x[,Y])  
+Return orthogonal projectors, or orthogonal projection of data Y (if passed)  
+x - space structure of matrix X  
+r - ('oP' usage)  ortho. projection matrix projecting into column space of x.X  
+  - ('oPp' usage) ortho. projection matrix projecting into row space of x.X  
+Y - data (optional)  
+  - If data are specified then the corresponding projection of data is  
+    returned. This is usually more efficient that computing and applying  
+    the projection matrix directly.
+
+
+FORMAT pX = spm_sp('pinv',x)  
+Returns a pseudo-inverse of X - pinv(X) - computed efficiently  
+x - space structure of matrix X  
+pX - pseudo-inverse of X  
+This is the same as MatLab's pinv - the Moore-Penrose pseudoinverse  
+( Note that because size(pinv(X)) == size(X'), it is not generally  )  
+( useful to compute pinv(X)*Data sequentially (as is the case for   )  
+( 'res' or 'oP')                                                    )
+
+
+FORMAT pXpX = spm_sp('pinvxpx',x)  
+Returns a pseudo-inverse of X'X - pinv(X'*X) - computed efficiently  
+x    - space structure of matrix X  
+pXpX - pseudo-inverse of (X'X)  
+( Note that because size(pinv(X'*X)) == [size(X,2) size(X,2)],      )  
+( it is not useful to compute pinv(X'X)*Data sequentially unless    )  
+( size(X,1) &lt; size(X,2)                                             )
+
+
+FORMAT XpX = spm_sp('xpx',x)  
+Returns (X'X) - computed efficiently  
+x    - space structure of matrix X  
+XpX  - (X'X)
+
+
+FORMAT pXXp = spm_sp('pinvxxp',x)  
+Returns a pseudo-inverse of XX' - pinv(X*X') - computed efficiently  
+x    - space structure of matrix X  
 pXXp - pseudo-inverse of (XX')
-</p>
-<p>FORMAT XXp = spm_sp('xxp',x)<br>
-Returns (XX') - computed efficiently<br>
-x
-- space structure of matrix X<br>
-XXp
-- (XX')
-</p>
-<p>FORMAT b = spm_sp('isinsp',x,c[,tol])<br>
-FORMAT b = spm_sp('isinspp',x,c[,tol])<br>
-Check whether vectors c are in the column/row space of X<br>
-x
-- space structure of matrix X<br>
-c
-- vector(s) (Multiple vectors passed as a matrix)<br>
-tol - (optional) tolerance (for rounding error)<br>
-[defaults to tolerance specified in space structure: x.tol]<br>
-b
-- ('isinsp'
-usage) true if c is in the column space of X<br>
-- ('isinspp' usage) true if c is in the column space of X
-</p>
-<p>FORMAT b = spm_sp('eachinsp',x,c[,tol])<br>
-FORMAT b = spm_sp('eachinspp',x,c[,tol])<br>
-Same as 'isinsp' and 'isinspp' but returns a logical row vector of<br>
+
+
+FORMAT XXp = spm_sp('xxp',x)  
+Returns (XX') - computed efficiently  
+x    - space structure of matrix X  
+XXp  - (XX')
+
+
+FORMAT b = spm_sp('isinsp',x,c[,tol])  
+FORMAT b = spm_sp('isinspp',x,c[,tol])  
+Check whether vectors c are in the column/row space of X  
+x   - space structure of matrix X  
+c   - vector(s) (Multiple vectors passed as a matrix)  
+tol - (optional) tolerance (for rounding error)  
+       [defaults to tolerance specified in space structure: x.tol]  
+b   - ('isinsp'  usage) true if c is in the column space of X  
+    - ('isinspp' usage) true if c is in the column space of X
+
+FORMAT b = spm_sp('eachinsp',x,c[,tol])  
+FORMAT b = spm_sp('eachinspp',x,c[,tol])  
+Same as 'isinsp' and 'isinspp' but returns a logical row vector of  
 length size(c,2).
-</p>
-<p>FORMAT N = spm_sp('n',x)<br>
-Simply returns the null space of matrix X (same as matlab NULL)<br>
-(Null space = vectors associated with zero eigenvalues)<br>
-x - space structure of matrix X<br>
+
+FORMAT N = spm_sp('n',x)  
+Simply returns the null space of matrix X (same as matlab NULL)  
+(Null space = vectors associated with zero eigenvalues)  
+x - space structure of matrix X  
 N - null space
-</p>
-<p>FORMAT r = spm_sp('nop',x[,Y])<br>
-Orthogonal projector onto null space of X, or projection of data Y (if passed)<br>
-x - space structure of matrix X<br>
-Y - (optional) data<br>
-r - (if no Y passed) orthogonal projection matrix
-into the null space of X<br>
-- (if Y passed
-) orthogonal projection of data into the null space of X<br>
-( Note that if xp = spm_sp('set',x.X'), we have:
-)<br>
-(
-spm_sp('nop',x) == spm_sp('res',xp)
-)<br>
-( or, equivalently:
-)<br>
-(
-spm_sp('nop',x) + spm_sp('oP',xp) == eye(size(xp.X,1));
-)
-</p>
-<p>FORMAT r = spm_sp('res',x[,Y])<br>
-Returns residual formaing matrix wirit column space of X, or residuals (if Y)<br>
-x - space structure of matrix X<br>
-Y - (optional) data<br>
-r - (if no Y passed) residual forming matrix for design matrix X<br>
-- (if Y passed
-) residuals, i.e. residual forming matrix times data<br>
-( This will be more efficient than<br>
-( spm_sp('res',x)*Data, when size(X,1) &gt; size(X,2)<br>
-Note that this can also be seen as the orthogonal projector onto the<br>
-null space of x.X' (which is not generally computed in svd, unless<br>
+
+
+FORMAT r = spm_sp('nop',x[,Y])  
+Orthogonal projector onto null space of X, or projection of data Y (if passed)  
+x - space structure of matrix X  
+Y - (optional) data  
+r - (if no Y passed) orthogonal projection matrix  into the null space of X  
+  - (if Y passed   ) orthogonal projection of data into the null space of X  
+( Note that if xp = spm_sp('set',x.X'), we have:                    )  
+(       spm_sp('nop',x) == spm_sp('res',xp)                      )  
+( or, equivalently:                                                 )  
+(       spm_sp('nop',x) + spm_sp('oP',xp) == eye(size(xp.X,1));  )
+
+
+FORMAT r = spm_sp('res',x[,Y])  
+Returns residual formaing matrix wirit column space of X, or residuals (if Y)  
+x - space structure of matrix X  
+Y - (optional) data  
+r - (if no Y passed) residual forming matrix for design matrix X  
+  - (if Y passed   ) residuals, i.e. residual forming matrix times data  
+                   ( This will be more efficient than  
+                   ( spm_sp('res',x)*Data, when size(X,1) &gt; size(X,2)  
+Note that this can also be seen as the orthogonal projector onto the  
+null space of x.X' (which is not generally computed in svd, unless  
 size(X,1) &lt; size(X,2)).
-</p>
-<p>FORMAT oX
-= spm_sp('ox', x)<br>
-FORMAT oXp = spm_sp('oxp',x)<br>
-Returns an orthonormal basis for X ('ox' usage) or X' ('oxp' usage)<br>
-x
-- space structure of matrix X<br>
-oX
-- orthonormal basis for X - same as orth(x.X)<br>
-xOp - <em>an</em> orthonormal for X' (but not the same as orth(x.X'))
-</p>
-<p>FORMAT b = spm_sp('isspc',x)<br>
-Check a variable is a structure with the right fields for a space structure<br>
-x - candidate variable<br>
+
+
+FORMAT oX  = spm_sp('ox', x)  
+FORMAT oXp = spm_sp('oxp',x)  
+Returns an orthonormal basis for X ('ox' usage) or X' ('oxp' usage)  
+x   - space structure of matrix X  
+oX  - orthonormal basis for X - same as orth(x.X)  
+xOp - *an* orthonormal for X' (but not the same as orth(x.X'))
+
+
+FORMAT b = spm_sp('isspc',x)  
+Check a variable is a structure with the right fields for a space structure  
+x - candidate variable  
 b - true if x is a structure with fieldnames corresponding to spm_sp('create')
-</p>
-<p>FORMAT [b,e] = spm_sp('issetspc',x)<br>
-Test whether a variable is a space structure with the basic fields set<br>
-x - candidate variable<br>
-b - true is x is a structure with fieldnames corresponding to<br>
-spm_sp('Create'), which has it's basic fields filled in.<br>
-e - string describing why x fails the issetspc test (if it does)<br>
-This is simply a gateway function combining spm_sp('isspc',x) with<br>
-the internal subfunction sf_isset, which checks that the basic fields<br>
+
+
+FORMAT [b,e] = spm_sp('issetspc',x)  
+Test whether a variable is a space structure with the basic fields set  
+x - candidate variable  
+b - true is x is a structure with fieldnames corresponding to  
+    spm_sp('Create'), which has it's basic fields filled in.  
+e - string describing why x fails the issetspc test (if it does)  
+This is simply a gateway function combining spm_sp('isspc',x) with  
+the internal subfunction sf_isset, which checks that the basic fields  
 are not empty. See sf_isset (below).
-</p>
+</code></pre>
 <hr>
-<p>SUBFUNCTIONS:
-</p>
-<p>FORMAT b = sf_isset(x)<br>
-Checks that the basic fields are non-empty (doesn't check they're right!)<br>
-x - space structure<br>
+<pre><code>SUBFUNCTIONS:
+
+FORMAT b = sf_isset(x)  
+Checks that the basic fields are non-empty (doesn't check they're right!)  
+x - space structure  
 b - true if the basic fields are non-empty
-</p>
+</code></pre>
 <hr>
-<p><a href="https://github.com/spm/spm/blob/main/spm_sp.m">Link to the Matlab implementation.</a></p></div>
+<p><a href="https://github.com/spm/spm/blob/main/spm_sp.m">Matlab code</a></p>
+<p>Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL</p></div>
 </dd>
 </dl>
 </section>
@@ -279,7 +444,7 @@ b - true if the basic fields are non-empty
 </nav>
 </main>
 <footer id="footer">
-<p>Generated by <a href="https://pdoc3.github.io/pdoc" title="pdoc: Python API documentation generator"><cite>pdoc</cite> 0.11.1</a>.</p>
+<p>Generated by <a href="https://pdoc3.github.io/pdoc" title="pdoc: Python API documentation generator"><cite>pdoc</cite> 0.11.5</a>.</p>
 </footer>
 </body>
 </html>

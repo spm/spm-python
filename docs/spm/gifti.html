@@ -3,19 +3,30 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
-<meta name="generator" content="pdoc3 0.11.1">
+<meta name="generator" content="pdoc3 0.11.5">
 <title>spm.gifti API documentation</title>
 <meta name="description" content="">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/13.0.0/sanitize.min.css" integrity="sha512-y1dtMcuvtTMJc1yPgEqF0ZjQbhnc/bFhyvIyVNb9Zk5mIGtqVaAB1Ttl28su8AvFMOY0EwRbAe+HCLqj6W7/KA==" crossorigin>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/13.0.0/typography.min.css" integrity="sha512-Y1DYSb995BAfxobCkKepB1BqJJTPrOp3zPL74AWFugHHmmdcvO+C48WLrUOlhGMc0QG7AE3f7gmvvcrmX2fDoA==" crossorigin>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css" crossorigin>
-<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:1.5em;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:2em 0 .50em 0}h3{font-size:1.4em;margin:1.6em 0 .7em 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .2s ease-in-out}a:visited{color:#503}a:hover{color:#b62}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900;font-weight:bold}pre code{font-size:.8em;line-height:1.4em;padding:1em;display:block}code{background:#f3f3f3;font-family:"DejaVu Sans Mono",monospace;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em 1em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:1.5em;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:2em 0 .50em 0}h3{font-size:1.4em;margin:1.6em 0 .7em 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .2s ease-in-out}a:visited{color:#503}a:hover{color:#b62}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900;font-weight:bold}pre code{font-size:.8em;line-height:1.4em;padding:1em;display:block}code{background:#f3f3f3;font-family:"DejaVu Sans Mono",monospace;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source > summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible;min-width:max-content}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em 1em;margin:1em 0}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
 <style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul ul{padding-left:1em}.toc > ul > li{margin-top:.5em}}</style>
 <style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
 <script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js" integrity="sha512-D9gUyxqja7hBtkWpPWGt9wfbfaMGVt9gnyCvYa+jojwwPHLCzUm5i8rpk7vD7wNee9bA35eYIjobYPaQuKS1MQ==" crossorigin></script>
 <script>window.addEventListener('DOMContentLoaded', () => {
 hljs.configure({languages: ['bash', 'css', 'diff', 'graphql', 'ini', 'javascript', 'json', 'plaintext', 'python', 'python-repl', 'rust', 'shell', 'sql', 'typescript', 'xml', 'yaml']});
 hljs.highlightAll();
+/* Collapse source docstrings */
+setTimeout(() => {
+[...document.querySelectorAll('.hljs.language-python > .hljs-string')]
+.filter(el => el.innerHTML.length > 200 && ['"""', "'''"].includes(el.innerHTML.substring(0, 3)))
+.forEach(el => {
+let d = document.createElement('details');
+d.classList.add('hljs-string');
+d.innerHTML = '<summary>"""</summary>' + el.innerHTML.substring(3);
+el.replaceWith(d);
+});
+}, 100);
 })</script>
 </head>
 <body>
@@ -40,186 +51,595 @@ hljs.highlightAll();
 <span>(</span><span>*args, **kwargs)</span>
 </code></dt>
 <dd>
-<div class="desc"><p>GIfTI Geometry file format class<br>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class gifti(MatlabClass):
+    def __init__(self, *args, **kwargs):
+        &#34;&#34;&#34;
+          GIfTI Geometry file format class  
+            Geometry format under the Neuroimaging Informatics Technology Initiative  
+            (NIfTI):  
+                            http://www.nitrc.org/projects/gifti/  
+                                 http://nifti.nimh.nih.gov/  
+           __________________________________________________________________________  
+            
+              Documentation for gifti  
+                 doc gifti  
+            
+          
+
+        [Matlab code]( https://github.com/spm/spm/blob/main/@gifti/gifti.m )
+
+        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        &#34;&#34;&#34;
+        super().__init__()
+
+    def display(self, *args, **kwargs):
+        &#34;&#34;&#34;
+          Display method for GIfTI objects  
+            FORMAT display(this)  
+            this   -  GIfTI object  
+           __________________________________________________________________________  
+          
+
+        [Matlab code]( https://github.com/spm/spm/blob/main/@gifti/display.m )
+
+        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        &#34;&#34;&#34;
+        return Runtime.call(&#34;display&#34;, self._as_matlab_object(), *args, **kwargs, nargout=0)
+
+    def export(self, *args, **kwargs):
+        &#34;&#34;&#34;
+          Export a GIfTI object into specific MATLAB struct  
+            FORMAT s = export(this,target)  
+            this   - GIfTI object  
+            target - string describing target output [default: MATLAB]  
+            s      - a structure containing public fields of the object  
+           __________________________________________________________________________  
+          
+
+        [Matlab code]( https://github.com/spm/spm/blob/main/@gifti/export.m )
+
+        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        &#34;&#34;&#34;
+        return Runtime.call(&#34;export&#34;, self._as_matlab_object(), *args, **kwargs)
+
+    def fieldnames(self, *args, **kwargs):
+        &#34;&#34;&#34;
+          Fieldnames method for GIfTI objects  
+            FORMAT names = fieldnames(this)  
+            this   -  GIfTI object  
+            names  -  field names  
+           __________________________________________________________________________  
+          
+
+        [Matlab code]( https://github.com/spm/spm/blob/main/@gifti/fieldnames.m )
+
+        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        &#34;&#34;&#34;
+        return Runtime.call(&#34;fieldnames&#34;, self._as_matlab_object(), *args, **kwargs)
+
+    def isfield(self, *args, **kwargs):
+        &#34;&#34;&#34;
+          Isfield method for GIfTI objects  
+            FORMAT tf = isfield(this,field)  
+            this   -  GIfTI object  
+            field  -  string of cell array  
+            tf     -  logical array  
+           __________________________________________________________________________  
+          
+
+        [Matlab code]( https://github.com/spm/spm/blob/main/@gifti/isfield.m )
+
+        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        &#34;&#34;&#34;
+        return Runtime.call(&#34;isfield&#34;, self._as_matlab_object(), *args, **kwargs)
+
+    def plot(self, *args, **kwargs):
+        &#34;&#34;&#34;
+          plot method for GIfTI objects  
+           __________________________________________________________________________  
+          
+
+        [Matlab code]( https://github.com/spm/spm/blob/main/@gifti/plot.m )
+
+        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        &#34;&#34;&#34;
+        return Runtime.call(&#34;plot&#34;, self._as_matlab_object(), *args, **kwargs)
+
+    def save(self, *args, **kwargs):
+        &#34;&#34;&#34;
+          Save GIfTI object in a GIfTI format file  
+            FORMAT save(this,filename,encoding)  
+            this      - GIfTI object  
+            filename  - name of GIfTI file to be created [Default: &#39;untitled.gii&#39;]  
+            encoding  - optional argument to specify encoding format, among  
+                        ASCII, Base64Binary, GZipBase64Binary, ExternalFileBinary.  
+                        [Default: &#39;GZipBase64Binary&#39;]  
+            ordering  - optional argument to specify array element ordering, among  
+                        ColumnMajorOrder, RowMajorOrder  
+                        [Default: &#39;ColumnMajorOrder&#39;]  
+           __________________________________________________________________________  
+          
+
+        [Matlab code]( https://github.com/spm/spm/blob/main/@gifti/save.m )
+
+        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        &#34;&#34;&#34;
+        return Runtime.call(&#34;save&#34;, self._as_matlab_object(), *args, **kwargs, nargout=0)
+
+    def saveas(self, *args, **kwargs):
+        &#34;&#34;&#34;
+          Save GIfTI object in external file format  
+            FORMAT saveas(this,filename,format)  
+            this      - GIfTI object  
+            filename  - name of file to be created [Default: &#39;untitled.vtk&#39;]  
+            format    - optional argument to specify encoding format, among  
+                        VTK (.vtk,.vtp), Collada (.dae), IDTF (.idtf), Wavefront OBJ  
+                        (.obj), JavaScript (.js), JSON (.json), FreeSurfer  
+                        (.surf,.curv), MZ3 (.mz3) [Default: VTK]  
+           __________________________________________________________________________  
+          
+
+        [Matlab code]( https://github.com/spm/spm/blob/main/@gifti/saveas.m )
+
+        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        &#34;&#34;&#34;
+        return Runtime.call(&#34;saveas&#34;, self._as_matlab_object(), *args, **kwargs, nargout=0)
+
+    def struct(self, *args, **kwargs):
+        &#34;&#34;&#34;
+          Struct method for GIfTI objects  
+            FORMAT s = struct(this)  
+            this   -  GIfTI object  
+            s      -  a structure containing public fields of the object  
+           __________________________________________________________________________  
+          
+
+        [Matlab code]( https://github.com/spm/spm/blob/main/@gifti/struct.m )
+
+        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        &#34;&#34;&#34;
+        return Runtime.call(&#34;struct&#34;, self._as_matlab_object(), *args, **kwargs)
+
+    def subsasgn(self, *args, **kwargs):
+        &#34;&#34;&#34;
+          Subscript assignment for GIfTI objects  
+           __________________________________________________________________________  
+          
+
+        [Matlab code]( https://github.com/spm/spm/blob/main/@gifti/subsasgn.m )
+
+        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        &#34;&#34;&#34;
+        return Runtime.call(&#34;subsasgn&#34;, self._as_matlab_object(), *args, **kwargs)
+
+    def subsref(self, *args, **kwargs):
+        &#34;&#34;&#34;
+          Subscript referencing for GIfTI objects  
+           __________________________________________________________________________  
+          
+
+        [Matlab code]( https://github.com/spm/spm/blob/main/@gifti/subsref.m )
+
+        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        &#34;&#34;&#34;
+        return Runtime.call(&#34;subsref&#34;, self._as_matlab_object(), *args, **kwargs)
+
+    def _base64(self, *args, **kwargs):
+        &#34;&#34;&#34;
+          Base64 binary-to-text encoding/decoding scheme  
+            FORMAT y = zstream(&#39;encode&#39;,x)  
+            x        - data stream to encode (uint8)  
+            y        - Base64-encoded data stream (uint8)  
+            FORMAT y = zstream(&#39;decode&#39;,x)  
+            x        - data stream to decode (uint8)  
+            y        - Base-64 decoded data stream (uint8)  
+           __________________________________________________________________________  
+             
+            This C-MEX file is a wrapper around:  
+              https://stackoverflow.com/a/37109258  
+            by polfosol: https://stackoverflow.com/users/5358284/polfosol  
+             
+            &gt;&gt; char(base64(&#39;decode&#39;,base64(&#39;encode&#39;,uint8(&#39;Base64&#39;))))  
+           __________________________________________________________________________  
+          
+
+        [Matlab code]( https://github.com/spm/spm/blob/main/@gifti/private/base64.m )
+
+        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        &#34;&#34;&#34;
+        return Runtime.call(&#34;base64&#34;, self._as_matlab_object(), *args, **kwargs)
+
+    def _base64decode(self, *args, **kwargs):
+        &#34;&#34;&#34;
+         BASE64DECODE Perform base64 decoding on a string.  
+             
+              BASE64DECODE(STR) decodes the given base64 string STR.  
+             
+              Any character not part of the 65-character base64 subset set is silently  
+              ignored.  
+             
+              This function is used to decode strings from the Base64 encoding specified  
+              in RFC 2045 - MIME (Multipurpose Internet Mail Extensions).  The Base64  
+              encoding is designed to represent arbitrary sequences of octets in a form  
+              that need not be humanly readable.  A 65-character subset ([A-Za-z0-9+/=])  
+              of US-ASCII is used, enabling 6 bits to be represented per printable  
+              character.  
+             
+              See also BASE64ENCODE.  
+          
+
+        [Matlab code]( https://github.com/spm/spm/blob/main/@gifti/private/base64decode.m )
+
+        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        &#34;&#34;&#34;
+        return Runtime.call(&#34;base64decode&#34;, self._as_matlab_object(), *args, **kwargs)
+
+    def _base64encode(self, *args, **kwargs):
+        &#34;&#34;&#34;
+         BASE64ENCODE Perform base64 encoding on a string.  
+             
+              BASE64ENCODE(STR, EOL) encode the given string STR.  EOL is the line ending  
+              sequence to use; it is optional and defaults to &#39;\n&#39; (ASCII decimal 10).  
+              The returned encoded string is broken into lines of no more than 76  
+              characters each, and each line will end with EOL unless it is empty.  Let  
+              EOL be empty if you do not want the encoded string broken into lines.  
+             
+              STR and EOL don&#39;t have to be strings (i.e., char arrays).  The only  
+              requirement is that they are vectors containing values in the range 0-255.  
+             
+              This function may be used to encode strings into the Base64 encoding  
+              specified in RFC 2045 - MIME (Multipurpose Internet Mail Extensions).  The  
+              Base64 encoding is designed to represent arbitrary sequences of octets in a  
+              form that need not be humanly readable.  A 65-character subset  
+              ([A-Za-z0-9+/=]) of US-ASCII is used, enabling 6 bits to be represented per  
+              printable character.  
+             
+              Examples  
+              --------  
+             
+              If you want to encode a large file, you should encode it in chunks that are  
+              a multiple of 57 bytes.  This ensures that the base64 lines line up and  
+              that you do not end up with padding in the middle.  57 bytes of data fills  
+              one complete base64 line (76 == 57*4/3):  
+             
+              If ifid and ofid are two file identifiers opened for reading and writing,  
+              respectively, then you can base64 encode the data with  
+             
+                 while ~feof(ifid)  
+                    fwrite(ofid, base64encode(fread(ifid, 60*57)));  
+                 end  
+             
+              or, if you have enough memory,  
+             
+                 fwrite(ofid, base64encode(fread(ifid)));  
+             
+              See also BASE64DECODE.  
+          
+
+        [Matlab code]( https://github.com/spm/spm/blob/main/@gifti/private/base64encode.m )
+
+        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        &#34;&#34;&#34;
+        return Runtime.call(&#34;base64encode&#34;, self._as_matlab_object(), *args, **kwargs)
+
+    def _freesurfer_read(self, *args, **kwargs):
+        &#34;&#34;&#34;
+          Low level reader of FreeSurfer file  
+            FORMAT this = freesurfer_read(filename)  
+            filename    - FreeSurfer file  
+             
+            Read ASCII triangle surface file and part of binary mgh file.  
+            See https://surfer.nmr.mgh.harvard.edu/fswiki/FileFormats  
+           __________________________________________________________________________  
+          
+
+        [Matlab code]( https://github.com/spm/spm/blob/main/@gifti/private/freesurfer_read.m )
+
+        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        &#34;&#34;&#34;
+        return Runtime.call(&#34;freesurfer_read&#34;, self._as_matlab_object(), *args, **kwargs)
+
+    def _getdict(self, *args, **kwargs):
+        &#34;&#34;&#34;
+          Dictionary of GIfTI/NIfTI stuff  
+           __________________________________________________________________________  
+          
+
+        [Matlab code]( https://github.com/spm/spm/blob/main/@gifti/private/getdict.m )
+
+        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        &#34;&#34;&#34;
+        return Runtime.call(&#34;getdict&#34;, self._as_matlab_object(), *args, **kwargs)
+
+    def _gifti_read(self, *args, **kwargs):
+        &#34;&#34;&#34;
+          Low level reader of GIfTI 1.0 files  
+            FORMAT this = read_gifti_file(filename, this)  
+            filename    - XML GIfTI filename  
+            this        - structure with fields &#39;metaData&#39;, &#39;label&#39; and &#39;data&#39;.  
+           __________________________________________________________________________  
+          
+
+        [Matlab code]( https://github.com/spm/spm/blob/main/@gifti/private/gifti_read.m )
+
+        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        &#34;&#34;&#34;
+        return Runtime.call(&#34;gifti_read&#34;, self._as_matlab_object(), *args, **kwargs)
+
+    def _isintent(self, *args, **kwargs):
+        &#34;&#34;&#34;
+          Correspondence between fieldnames and NIfTI intent codes  
+            FORMAT ind = isintent(this,intent)  
+            this    -  GIfTI object  
+            intent  -  fieldnames  
+            a       -  indices of found intent(s)  
+            b       -  indices of dataarrays of found intent(s)  
+           __________________________________________________________________________  
+          
+
+        [Matlab code]( https://github.com/spm/spm/blob/main/@gifti/private/isintent.m )
+
+        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        &#34;&#34;&#34;
+        return Runtime.call(&#34;isintent&#34;, self._as_matlab_object(), *args, **kwargs)
+
+    def _mvtk_read(self, *args, **kwargs):
+        &#34;&#34;&#34;
+          Read VTK formatted data from disk  
+            FORMAT M = mvtk_read(filename)  
+             
+            filename - VTK-formatted file name  
+            M        - data structure  
+           __________________________________________________________________________  
+              
+            VTK File Formats Specifications:  
+            http://www.vtk.org/VTK/img/file-formats.pdf  
+              
+            Requirements: zstream, base64decode  
+           __________________________________________________________________________  
+          
+
+        [Matlab code]( https://github.com/spm/spm/blob/main/@gifti/private/mvtk_read.m )
+
+        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        &#34;&#34;&#34;
+        return Runtime.call(&#34;mvtk_read&#34;, self._as_matlab_object(), *args, **kwargs)
+
+    def _mvtk_write(self, *args, **kwargs):
+        &#34;&#34;&#34;
+          Write geometric data on disk using VTK file format (legacy/XML,ascii/binary)  
+            FORMAT mvtk_write(M,filename,format)  
+              
+            M        - data structure  
+            filename - output filename [Default: &#39;untitled&#39;]  
+            format   - VTK file format: legacy, legacy-ascii, legacy-binary, xml,  
+                       xml-ascii, xml-binary [Default: &#39;legacy-ascii&#39;]  
+           __________________________________________________________________________  
+              
+            VTK File Formats Specifications:  
+            http://www.vtk.org/VTK/img/file-formats.pdf  
+              
+            Requirements: zstream, base64encode  
+           __________________________________________________________________________  
+          
+
+        [Matlab code]( https://github.com/spm/spm/blob/main/@gifti/private/mvtk_write.m )
+
+        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        &#34;&#34;&#34;
+        return Runtime.call(&#34;mvtk_write&#34;, self._as_matlab_object(), *args, **kwargs, nargout=0)
+
+    def _mz3_read(self, *args, **kwargs):
+        &#34;&#34;&#34;
+          Read MZ3-formatted data from disk  
+            FORMAT M = mz3_read(filename)  
+             
+            filename - MZ3-formatted file name  
+            M        - data structure  
+           __________________________________________________________________________  
+              
+            MZ3 Format Specification:  
+            https://github.com/neurolabusc/surf-ice/tree/master/mz3  
+           __________________________________________________________________________  
+          
+
+        [Matlab code]( https://github.com/spm/spm/blob/main/@gifti/private/mz3_read.m )
+
+        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        &#34;&#34;&#34;
+        return Runtime.call(&#34;mz3_read&#34;, self._as_matlab_object(), *args, **kwargs)
+
+    def _mz3_write(self, *args, **kwargs):
+        &#34;&#34;&#34;
+          Write MZ3-formatted data from disk  
+            FORMAT mz3_write(M,filename,fmt)  
+             
+            M        - data structure  
+            filename - MZ3 output filename [Default: &#39;untitled&#39;]  
+            fmt      - compress data [Default: false]  
+           __________________________________________________________________________  
+              
+            MZ3 Format Specification:  
+            https://github.com/neurolabusc/surf-ice/tree/master/mz3  
+           __________________________________________________________________________  
+          
+
+        [Matlab code]( https://github.com/spm/spm/blob/main/@gifti/private/mz3_write.m )
+
+        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        &#34;&#34;&#34;
+        return Runtime.call(&#34;mz3_write&#34;, self._as_matlab_object(), *args, **kwargs, nargout=0)
+
+    def _obj_read(self, *args, **kwargs):
+        &#34;&#34;&#34;
+          Read Wavefront OBJ-formatted data from disk  
+            FORMAT M = obj_read(filename)  
+             
+            filename - OBJ-formatted file name  
+            M        - data structure  
+           __________________________________________________________________________  
+              
+            Wavefront OBJ Format Specification:  
+            https://en.wikipedia.org/wiki/Wavefront_.obj_file  
+           __________________________________________________________________________  
+          
+
+        [Matlab code]( https://github.com/spm/spm/blob/main/@gifti/private/obj_read.m )
+
+        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        &#34;&#34;&#34;
+        return Runtime.call(&#34;obj_read&#34;, self._as_matlab_object(), *args, **kwargs)
+
+    def _off_read(self, *args, **kwargs):
+        &#34;&#34;&#34;
+          Read OFF-formatted data from disk  
+            FORMAT M = off_read(filename)  
+             
+            filename - OFF-formatted file name  
+            M        - data structure  
+           __________________________________________________________________________  
+              
+            OFF Format Specification:  
+            https://en.wikipedia.org/wiki/OFF_(file_format)  
+           __________________________________________________________________________  
+          
+
+        [Matlab code]( https://github.com/spm/spm/blob/main/@gifti/private/off_read.m )
+
+        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        &#34;&#34;&#34;
+        return Runtime.call(&#34;off_read&#34;, self._as_matlab_object(), *args, **kwargs)
+
+    def _ply_read(self, *args, **kwargs):
+        &#34;&#34;&#34;
+          Read PLY-formatted data from disk  
+            FORMAT M = ply_read(filename)  
+             
+            filename - PLY-formatted file name  
+            M        - data structure  
+           __________________________________________________________________________  
+              
+            Stanford Triangle Format Specification:  
+            https://en.wikipedia.org/wiki/PLY_%28file_format%29  
+           __________________________________________________________________________  
+          
+
+        [Matlab code]( https://github.com/spm/spm/blob/main/@gifti/private/ply_read.m )
+
+        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        &#34;&#34;&#34;
+        return Runtime.call(&#34;ply_read&#34;, self._as_matlab_object(), *args, **kwargs)
+
+    def _stl_read(self, *args, **kwargs):
+        &#34;&#34;&#34;
+          Read STL-formatted data from disk  
+            FORMAT M = stl_read(filename)  
+             
+            filename - STL-formatted file name  
+            M        - data structure  
+           __________________________________________________________________________  
+              
+            STL Format Specification:  
+            https://en.wikipedia.org/wiki/STL_%28file_format%29  
+           __________________________________________________________________________  
+          
+
+        [Matlab code]( https://github.com/spm/spm/blob/main/@gifti/private/stl_read.m )
+
+        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        &#34;&#34;&#34;
+        return Runtime.call(&#34;stl_read&#34;, self._as_matlab_object(), *args, **kwargs)
+
+    def _xml_parser(self, *args, **kwargs):
+        &#34;&#34;&#34;
+          XML Parser  
+            FORMAT tree = xml_parser(xml)  
+            xml         - XML-encoded string or filename of an XML document  
+            tree        - struct array representation of the XML document  
+           __________________________________________________________________________  
+             
+            This C-MEX file is a wrapper around yxml:  
+              https://dev.yorhel.nl/yxml  
+            by Yoran Heling:  
+              https://yorhel.nl/  
+             
+            A pure MATLAB implementation of a similar XML parser is available at:  
+              https://github.com/gllmflndn/xmltree  
+           __________________________________________________________________________  
+             
+            The tree representation of the XML document is stores as a struct array  
+            with fields:  
+             - type:       &#39;element&#39; or &#39;chardata&#39;  
+             - value:      tag name of an &#39;element&#39; or content of a &#39;chardata&#39;  
+             - attributes: key/value struct array of element&#39;s attributes  
+             - children:   array of uids of element&#39;s children  
+             - uid:        unique identifier (index in the struct array)  
+             - parent:     uid of parent ([] if root)  
+             
+            This corresponds to an XML string of the sort:  
+            &lt;value key=&#34;value&#34;&gt;value&lt;/value&gt;  
+             
+            Processing instructions and comments are not reported.  
+           __________________________________________________________________________  
+          
+
+        [Matlab code]( https://github.com/spm/spm/blob/main/@gifti/private/xml_parser.m )
+
+        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        &#34;&#34;&#34;
+        return Runtime.call(&#34;xml_parser&#34;, self._as_matlab_object(), *args, **kwargs)
+
+    def _zstream(self, *args, **kwargs):
+        &#34;&#34;&#34;
+          Compress/decompress stream of bytes using Deflate/Inflate  
+            FORMAT Z = zstream(&#39;C&#39;,D)  
+            D        - data stream to compress (converted to uint8 if needed)  
+            Z        - compressed data stream (uint8 vector)  
+            FORMAT D = zstream(&#39;D&#39;,Z)  
+            Z        - data stream to decompress (uint8 vector)  
+            D        - decompressed data stream (uint8 vector)  
+             
+            If action is upper case (&#39;C&#39;,&#39;D&#39;), a zlib stream is used (zlib header  
+            with an adler32 checksum). Otherwise, if action is lower case (&#39;c&#39;,&#39;d&#39;),  
+            a raw deflate stream is assumed.  
+           __________________________________________________________________________  
+             
+            This C-MEX file relies on:  
+            * miniz, by Rich Geldreich  
+              https://github.com/richgel999/miniz  
+            Fallback Java implementation is adapted from:  
+            * dzip/dunzip, by Michael Kleder  
+              https://www.mathworks.com/matlabcentral/fileexchange/8899  
+           __________________________________________________________________________  
+          
+
+        [Matlab code]( https://github.com/spm/spm/blob/main/@gifti/private/zstream.m )
+
+        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        &#34;&#34;&#34;
+        return Runtime.call(&#34;zstream&#34;, self._as_matlab_object(), *args, **kwargs)</code></pre>
+</details>
+<div class="desc"><p>Generic type for objects that have an exact matlab equivalent.</p>
+<p>GIfTI Geometry file format class<br>
 Geometry format under the Neuroimaging Informatics Technology Initiative<br>
 (NIfTI):<br>
 <a href="http://www.nitrc.org/projects/gifti/">http://www.nitrc.org/projects/gifti/</a><br>
 <a href="http://nifti.nimh.nih.gov/">http://nifti.nimh.nih.gov/</a>
 </p>
 <hr>
-<pre><code>Documentation for gifti  
-   doc gifti
+<pre><code>  Documentation for gifti  
+     doc gifti
 </code></pre>
-<p><a href="https://github.com/spm/spm/blob/main/@gifti/gifti.m">Link to the Matlab implementation.</a></p></div>
-<details class="source">
-<summary>
-<span>Expand source code</span>
-</summary>
-<pre><code class="python">class gifti(_MatlabClassWrapper):
-  def __init__(self, *args, _objdict=None, **kwargs):
-    &#34;&#34;&#34;  GIfTI Geometry file format class  
-    Geometry format under the Neuroimaging Informatics Technology Initiative  
-    (NIfTI):  
-                    http://www.nitrc.org/projects/gifti/  
-                         http://nifti.nimh.nih.gov/  
-   __________________________________________________________________________  
-    
-      Documentation for gifti  
-         doc gifti  
-    
-  
-
-  [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@gifti/gifti.m)
-    &#34;&#34;&#34;
-
-    if _objdict is None:
-      _objdict = _Runtime.call(&#34;gifti&#34;, *args, **kwargs)
-    super().__init__(_objdict)
-
-  def display(self, *args, **kwargs):
-    &#34;&#34;&#34;  Display method for GIfTI objects  
-    FORMAT display(this)  
-    this   -  GIfTI object  
-   __________________________________________________________________________  
-  
-
-  [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@gifti/display.m)
-    &#34;&#34;&#34;
-
-    return _Runtime.call(&#34;display&#34;, self._as_matlab_object(), *args, **kwargs)
-
-
-  def export(self, *args, **kwargs):
-    &#34;&#34;&#34;  Export a GIfTI object into specific MATLAB struct  
-    FORMAT s = export(this,target)  
-    this   - GIfTI object  
-    target - string describing target output [default: MATLAB]  
-    s      - a structure containing public fields of the object  
-   __________________________________________________________________________  
-  
-
-  [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@gifti/export.m)
-    &#34;&#34;&#34;
-
-    return _Runtime.call(&#34;export&#34;, self._as_matlab_object(), *args, **kwargs)
-
-
-  def fieldnames(self, *args, **kwargs):
-    &#34;&#34;&#34;  Fieldnames method for GIfTI objects  
-    FORMAT names = fieldnames(this)  
-    this   -  GIfTI object  
-    names  -  field names  
-   __________________________________________________________________________  
-  
-
-  [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@gifti/fieldnames.m)
-    &#34;&#34;&#34;
-
-    return _Runtime.call(&#34;fieldnames&#34;, self._as_matlab_object(), *args, **kwargs)
-
-
-  def isfield(self, *args, **kwargs):
-    &#34;&#34;&#34;  Isfield method for GIfTI objects  
-    FORMAT tf = isfield(this,field)  
-    this   -  GIfTI object  
-    field  -  string of cell array  
-    tf     -  logical array  
-   __________________________________________________________________________  
-  
-
-  [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@gifti/isfield.m)
-    &#34;&#34;&#34;
-
-    return _Runtime.call(&#34;isfield&#34;, self._as_matlab_object(), *args, **kwargs)
-
-
-  def plot(self, *args, **kwargs):
-    &#34;&#34;&#34;  plot method for GIfTI objects  
-   __________________________________________________________________________  
-  
-
-  [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@gifti/plot.m)
-    &#34;&#34;&#34;
-
-    return _Runtime.call(&#34;plot&#34;, self._as_matlab_object(), *args, **kwargs)
-
-
-  def save(self, *args, **kwargs):
-    &#34;&#34;&#34;  Save GIfTI object in a GIfTI format file  
-    FORMAT save(this,filename,encoding)  
-    this      - GIfTI object  
-    filename  - name of GIfTI file to be created [Default: &#39;untitled.gii&#39;]  
-    encoding  - optional argument to specify encoding format, among  
-                ASCII, Base64Binary, GZipBase64Binary, ExternalFileBinary.  
-                [Default: &#39;GZipBase64Binary&#39;]  
-    ordering  - optional argument to specify array element ordering, among  
-                ColumnMajorOrder, RowMajorOrder  
-                [Default: &#39;ColumnMajorOrder&#39;]  
-   __________________________________________________________________________  
-  
-
-  [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@gifti/save.m)
-    &#34;&#34;&#34;
-
-    return _Runtime.call(&#34;save&#34;, self._as_matlab_object(), *args, **kwargs)
-
-
-  def saveas(self, *args, **kwargs):
-    &#34;&#34;&#34;  Save GIfTI object in external file format  
-    FORMAT saveas(this,filename,format)  
-    this      - GIfTI object  
-    filename  - name of file to be created [Default: &#39;untitled.vtk&#39;]  
-    format    - optional argument to specify encoding format, among  
-                VTK (.vtk,.vtp), Collada (.dae), IDTF (.idtf), Wavefront OBJ  
-                (.obj), JavaScript (.js), JSON (.json), FreeSurfer  
-                (.surf,.curv), MZ3 (.mz3) [Default: VTK]  
-   __________________________________________________________________________  
-  
-
-  [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@gifti/saveas.m)
-    &#34;&#34;&#34;
-
-    return _Runtime.call(&#34;saveas&#34;, self._as_matlab_object(), *args, **kwargs)
-
-
-  def struct(self, *args, **kwargs):
-    &#34;&#34;&#34;  Struct method for GIfTI objects  
-    FORMAT s = struct(this)  
-    this   -  GIfTI object  
-    s      -  a structure containing public fields of the object  
-   __________________________________________________________________________  
-  
-
-  [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@gifti/struct.m)
-    &#34;&#34;&#34;
-
-    return _Runtime.call(&#34;struct&#34;, self._as_matlab_object(), *args, **kwargs)
-
-
-  def subsasgn(self, *args, **kwargs):
-    &#34;&#34;&#34;  Subscript assignment for GIfTI objects  
-   __________________________________________________________________________  
-  
-
-  [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@gifti/subsasgn.m)
-    &#34;&#34;&#34;
-
-    return _Runtime.call(&#34;subsasgn&#34;, self._as_matlab_object(), *args, **kwargs)
-
-
-  def subsref(self, *args, **kwargs):
-    &#34;&#34;&#34;  Subscript referencing for GIfTI objects  
-   __________________________________________________________________________  
-  
-
-  [Link to the Matlab implementation.](https://github.com/spm/spm/blob/main/@gifti/subsref.m)
-    &#34;&#34;&#34;
-
-    return _Runtime.call(&#34;subsref&#34;, self._as_matlab_object(), *args, **kwargs)</code></pre>
-</details>
+<p><a href="https://github.com/spm/spm/blob/main/@gifti/gifti.m">Matlab code</a></p>
+<p>Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL</p></div>
 <h3>Ancestors</h3>
 <ul class="hlist">
-<li>spm.__wrap__._MatlabClassWrapper</li>
+<li>spm.__wrapper__.MatlabClass</li>
+<li>spm.__wrapper__.MatlabType</li>
 </ul>
 <h3>Methods</h3>
 <dl>
@@ -227,6 +647,24 @@ Geometry format under the Neuroimaging Informatics Technology Initiative<br>
 <span>def <span class="ident">display</span></span>(<span>self, *args, **kwargs)</span>
 </code></dt>
 <dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def display(self, *args, **kwargs):
+    &#34;&#34;&#34;
+      Display method for GIfTI objects  
+        FORMAT display(this)  
+        this   -  GIfTI object  
+       __________________________________________________________________________  
+      
+
+    [Matlab code]( https://github.com/spm/spm/blob/main/@gifti/display.m )
+
+    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    &#34;&#34;&#34;
+    return Runtime.call(&#34;display&#34;, self._as_matlab_object(), *args, **kwargs, nargout=0)</code></pre>
+</details>
 <div class="desc"><p>Display method for GIfTI objects<br>
 FORMAT display(this)<br>
 this
@@ -234,12 +672,33 @@ this
 GIfTI object
 </p>
 <hr>
-<p><a href="https://github.com/spm/spm/blob/main/@gifti/display.m">Link to the Matlab implementation.</a></p></div>
+<p><a href="https://github.com/spm/spm/blob/main/@gifti/display.m">Matlab code</a></p>
+<p>Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL</p></div>
 </dd>
 <dt id="spm.gifti.gifti.export"><code class="name flex">
 <span>def <span class="ident">export</span></span>(<span>self, *args, **kwargs)</span>
 </code></dt>
 <dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def export(self, *args, **kwargs):
+    &#34;&#34;&#34;
+      Export a GIfTI object into specific MATLAB struct  
+        FORMAT s = export(this,target)  
+        this   - GIfTI object  
+        target - string describing target output [default: MATLAB]  
+        s      - a structure containing public fields of the object  
+       __________________________________________________________________________  
+      
+
+    [Matlab code]( https://github.com/spm/spm/blob/main/@gifti/export.m )
+
+    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    &#34;&#34;&#34;
+    return Runtime.call(&#34;export&#34;, self._as_matlab_object(), *args, **kwargs)</code></pre>
+</details>
 <div class="desc"><p>Export a GIfTI object into specific MATLAB struct<br>
 FORMAT s = export(this,target)<br>
 this
@@ -249,12 +708,32 @@ s
 - a structure containing public fields of the object
 </p>
 <hr>
-<p><a href="https://github.com/spm/spm/blob/main/@gifti/export.m">Link to the Matlab implementation.</a></p></div>
+<p><a href="https://github.com/spm/spm/blob/main/@gifti/export.m">Matlab code</a></p>
+<p>Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL</p></div>
 </dd>
 <dt id="spm.gifti.gifti.fieldnames"><code class="name flex">
 <span>def <span class="ident">fieldnames</span></span>(<span>self, *args, **kwargs)</span>
 </code></dt>
 <dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def fieldnames(self, *args, **kwargs):
+    &#34;&#34;&#34;
+      Fieldnames method for GIfTI objects  
+        FORMAT names = fieldnames(this)  
+        this   -  GIfTI object  
+        names  -  field names  
+       __________________________________________________________________________  
+      
+
+    [Matlab code]( https://github.com/spm/spm/blob/main/@gifti/fieldnames.m )
+
+    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    &#34;&#34;&#34;
+    return Runtime.call(&#34;fieldnames&#34;, self._as_matlab_object(), *args, **kwargs)</code></pre>
+</details>
 <div class="desc"><p>Fieldnames method for GIfTI objects<br>
 FORMAT names = fieldnames(this)<br>
 this
@@ -265,12 +744,33 @@ names
 field names
 </p>
 <hr>
-<p><a href="https://github.com/spm/spm/blob/main/@gifti/fieldnames.m">Link to the Matlab implementation.</a></p></div>
+<p><a href="https://github.com/spm/spm/blob/main/@gifti/fieldnames.m">Matlab code</a></p>
+<p>Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL</p></div>
 </dd>
 <dt id="spm.gifti.gifti.isfield"><code class="name flex">
 <span>def <span class="ident">isfield</span></span>(<span>self, *args, **kwargs)</span>
 </code></dt>
 <dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def isfield(self, *args, **kwargs):
+    &#34;&#34;&#34;
+      Isfield method for GIfTI objects  
+        FORMAT tf = isfield(this,field)  
+        this   -  GIfTI object  
+        field  -  string of cell array  
+        tf     -  logical array  
+       __________________________________________________________________________  
+      
+
+    [Matlab code]( https://github.com/spm/spm/blob/main/@gifti/isfield.m )
+
+    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    &#34;&#34;&#34;
+    return Runtime.call(&#34;isfield&#34;, self._as_matlab_object(), *args, **kwargs)</code></pre>
+</details>
 <div class="desc"><p>Isfield method for GIfTI objects<br>
 FORMAT tf = isfield(this,field)<br>
 this
@@ -284,21 +784,64 @@ tf
 logical array
 </p>
 <hr>
-<p><a href="https://github.com/spm/spm/blob/main/@gifti/isfield.m">Link to the Matlab implementation.</a></p></div>
+<p><a href="https://github.com/spm/spm/blob/main/@gifti/isfield.m">Matlab code</a></p>
+<p>Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL</p></div>
 </dd>
 <dt id="spm.gifti.gifti.plot"><code class="name flex">
 <span>def <span class="ident">plot</span></span>(<span>self, *args, **kwargs)</span>
 </code></dt>
 <dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def plot(self, *args, **kwargs):
+    &#34;&#34;&#34;
+      plot method for GIfTI objects  
+       __________________________________________________________________________  
+      
+
+    [Matlab code]( https://github.com/spm/spm/blob/main/@gifti/plot.m )
+
+    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    &#34;&#34;&#34;
+    return Runtime.call(&#34;plot&#34;, self._as_matlab_object(), *args, **kwargs)</code></pre>
+</details>
 <div class="desc"><p>plot method for GIfTI objects
 </p>
 <hr>
-<p><a href="https://github.com/spm/spm/blob/main/@gifti/plot.m">Link to the Matlab implementation.</a></p></div>
+<p><a href="https://github.com/spm/spm/blob/main/@gifti/plot.m">Matlab code</a></p>
+<p>Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL</p></div>
 </dd>
 <dt id="spm.gifti.gifti.save"><code class="name flex">
 <span>def <span class="ident">save</span></span>(<span>self, *args, **kwargs)</span>
 </code></dt>
 <dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def save(self, *args, **kwargs):
+    &#34;&#34;&#34;
+      Save GIfTI object in a GIfTI format file  
+        FORMAT save(this,filename,encoding)  
+        this      - GIfTI object  
+        filename  - name of GIfTI file to be created [Default: &#39;untitled.gii&#39;]  
+        encoding  - optional argument to specify encoding format, among  
+                    ASCII, Base64Binary, GZipBase64Binary, ExternalFileBinary.  
+                    [Default: &#39;GZipBase64Binary&#39;]  
+        ordering  - optional argument to specify array element ordering, among  
+                    ColumnMajorOrder, RowMajorOrder  
+                    [Default: &#39;ColumnMajorOrder&#39;]  
+       __________________________________________________________________________  
+      
+
+    [Matlab code]( https://github.com/spm/spm/blob/main/@gifti/save.m )
+
+    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    &#34;&#34;&#34;
+    return Runtime.call(&#34;save&#34;, self._as_matlab_object(), *args, **kwargs, nargout=0)</code></pre>
+</details>
 <div class="desc"><p>Save GIfTI object in a GIfTI format file<br>
 FORMAT save(this,filename,encoding)<br>
 this
@@ -315,12 +858,36 @@ ColumnMajorOrder, RowMajorOrder<br>
 [Default: 'ColumnMajorOrder']
 </p>
 <hr>
-<p><a href="https://github.com/spm/spm/blob/main/@gifti/save.m">Link to the Matlab implementation.</a></p></div>
+<p><a href="https://github.com/spm/spm/blob/main/@gifti/save.m">Matlab code</a></p>
+<p>Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL</p></div>
 </dd>
 <dt id="spm.gifti.gifti.saveas"><code class="name flex">
 <span>def <span class="ident">saveas</span></span>(<span>self, *args, **kwargs)</span>
 </code></dt>
 <dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def saveas(self, *args, **kwargs):
+    &#34;&#34;&#34;
+      Save GIfTI object in external file format  
+        FORMAT saveas(this,filename,format)  
+        this      - GIfTI object  
+        filename  - name of file to be created [Default: &#39;untitled.vtk&#39;]  
+        format    - optional argument to specify encoding format, among  
+                    VTK (.vtk,.vtp), Collada (.dae), IDTF (.idtf), Wavefront OBJ  
+                    (.obj), JavaScript (.js), JSON (.json), FreeSurfer  
+                    (.surf,.curv), MZ3 (.mz3) [Default: VTK]  
+       __________________________________________________________________________  
+      
+
+    [Matlab code]( https://github.com/spm/spm/blob/main/@gifti/saveas.m )
+
+    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    &#34;&#34;&#34;
+    return Runtime.call(&#34;saveas&#34;, self._as_matlab_object(), *args, **kwargs, nargout=0)</code></pre>
+</details>
 <div class="desc"><p>Save GIfTI object in external file format<br>
 FORMAT saveas(this,filename,format)<br>
 this
@@ -334,12 +901,32 @@ VTK (.vtk,.vtp), Collada (.dae), IDTF (.idtf), Wavefront OBJ<br>
 (.surf,.curv), MZ3 (.mz3) [Default: VTK]
 </p>
 <hr>
-<p><a href="https://github.com/spm/spm/blob/main/@gifti/saveas.m">Link to the Matlab implementation.</a></p></div>
+<p><a href="https://github.com/spm/spm/blob/main/@gifti/saveas.m">Matlab code</a></p>
+<p>Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL</p></div>
 </dd>
 <dt id="spm.gifti.gifti.struct"><code class="name flex">
 <span>def <span class="ident">struct</span></span>(<span>self, *args, **kwargs)</span>
 </code></dt>
 <dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def struct(self, *args, **kwargs):
+    &#34;&#34;&#34;
+      Struct method for GIfTI objects  
+        FORMAT s = struct(this)  
+        this   -  GIfTI object  
+        s      -  a structure containing public fields of the object  
+       __________________________________________________________________________  
+      
+
+    [Matlab code]( https://github.com/spm/spm/blob/main/@gifti/struct.m )
+
+    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    &#34;&#34;&#34;
+    return Runtime.call(&#34;struct&#34;, self._as_matlab_object(), *args, **kwargs)</code></pre>
+</details>
 <div class="desc"><p>Struct method for GIfTI objects<br>
 FORMAT s = struct(this)<br>
 this
@@ -350,25 +937,60 @@ s
 a structure containing public fields of the object
 </p>
 <hr>
-<p><a href="https://github.com/spm/spm/blob/main/@gifti/struct.m">Link to the Matlab implementation.</a></p></div>
+<p><a href="https://github.com/spm/spm/blob/main/@gifti/struct.m">Matlab code</a></p>
+<p>Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL</p></div>
 </dd>
 <dt id="spm.gifti.gifti.subsasgn"><code class="name flex">
 <span>def <span class="ident">subsasgn</span></span>(<span>self, *args, **kwargs)</span>
 </code></dt>
 <dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def subsasgn(self, *args, **kwargs):
+    &#34;&#34;&#34;
+      Subscript assignment for GIfTI objects  
+       __________________________________________________________________________  
+      
+
+    [Matlab code]( https://github.com/spm/spm/blob/main/@gifti/subsasgn.m )
+
+    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    &#34;&#34;&#34;
+    return Runtime.call(&#34;subsasgn&#34;, self._as_matlab_object(), *args, **kwargs)</code></pre>
+</details>
 <div class="desc"><p>Subscript assignment for GIfTI objects
 </p>
 <hr>
-<p><a href="https://github.com/spm/spm/blob/main/@gifti/subsasgn.m">Link to the Matlab implementation.</a></p></div>
+<p><a href="https://github.com/spm/spm/blob/main/@gifti/subsasgn.m">Matlab code</a></p>
+<p>Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL</p></div>
 </dd>
 <dt id="spm.gifti.gifti.subsref"><code class="name flex">
 <span>def <span class="ident">subsref</span></span>(<span>self, *args, **kwargs)</span>
 </code></dt>
 <dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def subsref(self, *args, **kwargs):
+    &#34;&#34;&#34;
+      Subscript referencing for GIfTI objects  
+       __________________________________________________________________________  
+      
+
+    [Matlab code]( https://github.com/spm/spm/blob/main/@gifti/subsref.m )
+
+    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    &#34;&#34;&#34;
+    return Runtime.call(&#34;subsref&#34;, self._as_matlab_object(), *args, **kwargs)</code></pre>
+</details>
 <div class="desc"><p>Subscript referencing for GIfTI objects
 </p>
 <hr>
-<p><a href="https://github.com/spm/spm/blob/main/@gifti/subsref.m">Link to the Matlab implementation.</a></p></div>
+<p><a href="https://github.com/spm/spm/blob/main/@gifti/subsref.m">Matlab code</a></p>
+<p>Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL</p></div>
 </dd>
 </dl>
 </dd>
@@ -408,7 +1030,7 @@ a structure containing public fields of the object
 </nav>
 </main>
 <footer id="footer">
-<p>Generated by <a href="https://pdoc3.github.io/pdoc" title="pdoc: Python API documentation generator"><cite>pdoc</cite> 0.11.1</a>.</p>
+<p>Generated by <a href="https://pdoc3.github.io/pdoc" title="pdoc: Python API documentation generator"><cite>pdoc</cite> 0.11.5</a>.</p>
 </footer>
 </body>
 </html>
