@@ -40,7 +40,7 @@ In Matlab:
 In Python: 
 ```Python
 from spm import *
-spm('defaults', 'eeg');
+spm('defaults', 'eeg')
 ```
 
 ### 2. Constructing objects
