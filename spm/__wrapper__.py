@@ -465,23 +465,25 @@ class AnyDelayedArray(AnyMatlabArray):
     type of indexing that is used.
 
     In Matlab:
-        * `a(x,y)   = num`  indicates that `a` is a numeric array;
-        * `a(x,y)   = cell` indicates that `a` is a cell array;
-        * `a{x,y}   = any`  indicates that `a` is a cell array;
-        * `a(x,y).f = any`  indicates that `a` is a struct array;
-        * `a.f      = any`  indicates that `a` is a struct.
+
+    * `a(x,y)   = num`  indicates that `a` is a numeric array;
+    * `a(x,y)   = cell` indicates that `a` is a cell array;
+    * `a{x,y}   = any`  indicates that `a` is a cell array;
+    * `a(x,y).f = any`  indicates that `a` is a struct array;
+    * `a.f      = any`  indicates that `a` is a struct.
 
     These indexing operations can be chained, so in
     `a(x).b.c{y}.d(z) = 2`:
-        * `a`    is a struct array;
-        * `b`    is a struct;
-        * `c`    is a cell;
-        * `c{y}` is a struct
-        * `d`    is a numeric array.
+
+    * `a`    is a struct array;
+    * `b`    is a struct;
+    * `c`    is a cell;
+    * `c{y}` is a struct
+    * `d`    is a numeric array.
 
     In Python, there is only one type of indexing (`[]`). This is a problem as
-    we cannot differentiate `a{x}.b = y` -- where `a` is a cell that contains
-    a struct -- from `a(x).b = y` --- where `a` is a struct array.
+    we cannot differentiate `a{x}.b = y` — where `a` is a cell that contains
+    a struct — from `a(x).b = y` — where `a` is a struct array.
 
     One solution may be to abuse the "call" operator `()`, so that it returns a
     cell. This would work in some situations (`a[x].b = y` is a struct array,
@@ -492,15 +494,17 @@ class AnyDelayedArray(AnyMatlabArray):
 
     Instead, the use of brackets automatically transforms the object into
     either:
+
     * a `Struct` (in all "get" cases, and in the "set" context `a[x] = y`,
       when `y` is either a `dict` or a `Struct`); or
-    * a `Array` (in the "set" context `a[x] = y`, when `y` is neither a
+    * an `Array` (in the "set" context `a[x] = y`, when `y` is neither a
       `dict` nor a `Struct`).
 
     Alternatively, if the user wishes to specify which type the object should
     take, we implement the properties `as_cell`, `as_struct` and `as_num`.
 
     Therefore:
+
     * `a[x,y]             = num`    : `a` is a numeric array;
     * `a[x,y]             = struct` : `a` is a numeric array;
     * `a[x,y].f           = any`    : `a` is a struct array;
@@ -508,6 +512,7 @@ class AnyDelayedArray(AnyMatlabArray):
     * `a.f                = any`    : `a` is a struct.
 
     And explictly:
+
     * `a.as_cell[x,y]     = any`    : `a` is a cell array;
     * `a.as_struct[x,y].f = any`    : `a` is a struct array;
     * `a.as_cell[x,y].f   = any`    : `a` is a cell array containing a struct;
@@ -523,10 +528,11 @@ class AnyDelayedArray(AnyMatlabArray):
         parent : ndarray | dict
             Reference to the object that will eventually contain
             this element.
-            * If the containing array is a Cell, `parent` should be a
+
+            * If the containing array is a `Cell`, `parent` should be a
               `ndarray` view of that cell, and `index` should be a
               [tuple of] int.
-            * If the containing array is a Struct, `parent` should be a
+            * If the containing array is a `Struct`, `parent` should be a
               `dict`, and `index` should be a string.
         index : str | [tuple of] int
             Index into the parent where this element will be inserted.
@@ -697,8 +703,23 @@ class AnyDelayedArray(AnyMatlabArray):
 
 
 class WrappedDelayedArray(AnyDelayedArray):
+    """
+    Base class for future objects with known type.
+
+    See `DelayedStruct`, `DelayedCell`, `DelayedArray`.
+    """
 
     def __init__(self, future, parent, *index):
+        """
+        Parameters
+        ----------
+        future : Struct | Cell | Array
+            Concrete object that will be inserted in the parent later.
+        parent : Struct | Cell | AnyDelayedArray
+            Parent object that contains the future object.
+        *index : int | str
+            Index of the future obect in its parent.
+        """
         super().__init__(parent, *index)
         self._future = future
 
@@ -723,16 +744,46 @@ class WrappedDelayedArray(AnyDelayedArray):
 
 
 class DelayedStruct(WrappedDelayedArray):
+    """
+    A `Struct` that will insert itself in its parent later.
+
+    See `AnyDelayedArray`.
+    """
 
     def __init__(self, shape, parent, *index):
+        """
+        Parameters
+        ----------
+        shape : list[int]
+            Shape of the future struct array.
+        parent : Struct | Cell | AnyDelayedArray
+            Parent object that contains the future object.
+        *index : int | str
+            Index of the future object in its parent.
+        """
         future = Struct.from_shape(shape)
         future._delayed_wrapper = self
         super().__init__(future, parent, *index)
 
 
 class DelayedCell(WrappedDelayedArray):
+    """
+    A `Cell` that will insert itself in its parent later.
+
+    See `AnyDelayedArray`.
+    """
 
     def __init__(self, shape, parent, *index):
+        """
+        Parameters
+        ----------
+        shape : list[int]
+            Shape of the future cell array.
+        parent : Struct | Cell | AnyDelayedArray
+            Parent object that contains the future object.
+        *index : int | str
+            Index of the future object in its parent.
+        """
         future = Cell.from_shape(shape)
         future._delayed_wrapper = self
         super().__init__(future, parent, *index)
@@ -749,8 +800,23 @@ class DelayedCell(WrappedDelayedArray):
 
 
 class DelayedArray(WrappedDelayedArray):
+    """
+    An `Array` that will insert itself in its parent later.
+
+    See `AnyDelayedArray`.
+    """
 
     def __init__(self, shape, parent, *index):
+        """
+        Parameters
+        ----------
+        shape : list[int]
+            Shape of the future numeric array.
+        parent : Struct | Cell | AnyDelayedArray
+            Parent object that contains the future object.
+        *index : int | str
+            Index of the future object in its parent.
+        """
         future = Array.from_shape(shape)
         future._delayed_wrapper = self
         super().__init__(future, parent, *index)
@@ -767,15 +833,17 @@ class AnyWrappedArray(AnyMatlabArray):
     @classmethod
     def _parse_args(cls, *args, **kwargs):
         """
-        This function is used in the __new__ constructor of Array/Cell/Struct.
+        This function is used in the `__new__` constructor of
+        Array/Cell/Struct.
 
         It does some preliminary preprocesing to reduces the number of
-        cases that must be handled by __new__.
+        cases that must be handled by `__new__`.
 
         In particular:
-        - It converts multiple integer arguments to a single list[int]
-        - It extracts the shape or object to copy, if there is one.
-        - It convert positional dtype/order into keywords.
+
+        * It converts multiple integer arguments to a single list[int]
+        * It extracts the shape or object to copy, if there is one.
+        * It convert positional dtype/order into keywords.
 
         Returns
         -------
@@ -844,7 +912,7 @@ class AnyWrappedArray(AnyMatlabArray):
 
 class WrappedArray(np.ndarray, AnyWrappedArray):
     """
-    Base class for "arrays of things" (Array, Cell, Struct.)
+    Base class for "arrays of things" (`Array`, `Cell`, `Struct`)
     """
 
     # Value used to initalize empty arrays
@@ -881,7 +949,7 @@ class WrappedArray(np.ndarray, AnyWrappedArray):
             yield self[i]
 
     def __getitem__(self, index):
-        """Resize array if needed, then fallback to np.ndarray indexing."""
+        """Resize array if needed, then fallback to `np.ndarray` indexing."""
         try:
             return super().__getitem__(index)
         except IndexError:
@@ -893,7 +961,7 @@ class WrappedArray(np.ndarray, AnyWrappedArray):
             return self._return_delayed(index)
 
     def __setitem__(self, index, value):
-        """Resize array if needed, then fallback to np.ndarray indexing."""
+        """Resize array if needed, then fallback to `np.ndarray` indexing."""
         value = MatlabType.from_any(value)
         try:
             return super().__setitem__(index, value)
@@ -972,12 +1040,13 @@ class WrappedArray(np.ndarray, AnyWrappedArray):
         Resize the array so that the (multidimensional) index is not OOB.
 
         We only support a restricted number of cases:
-            * Index should only contain integers and slices
-              (no smart indexing, no new axis, no ellipsis)
-            * Only integer indices are used to compute the new size.
-              This is to be consistent with numpy, where slice-indexing never
-              raises IndexError (but instead returns the overlap between
-              the array and the slice -- eventually empty).
+
+        * Index should only contain integers and slices
+          (no smart indexing, no new axis, no ellipsis)
+        * Only integer indices are used to compute the new size.
+          This is to be consistent with numpy, where slice-indexing never
+          raises `IndexError` (but instead returns the overlap between
+          the array and the slice -- eventually empty).
 
         Other cases could be handled but require much more complicated logic.
         """
@@ -1195,8 +1264,9 @@ class Array(_ListishMixin, WrappedArray):
             Target data type.
         order : {"C", "F"} | None, default=None
             Memory layout.
-            * "C" row-major (C-style);
-            * "F" column-major (Fortran-style);
+
+            * "C" : row-major (C-style);
+            * "F" : column-major (Fortran-style).
 
         Returns
         -------
@@ -1222,18 +1292,20 @@ class Array(_ListishMixin, WrappedArray):
             Target data type. Guessed if `None`.
         order : {"C", "F", "A", "K"} | None, default=None
             Memory layout.
-            * "C" row-major (C-style);
-            * "F" column-major (Fortran-style);
-            * "A" (any) means "F" if a is Fortran contiguous, "C" otherwise;
-            * "K" (keep) preserve input order;
-            * `None` preserve input order if possible, "C" otherwise.
+
+            * `"C"` : row-major (C-style);
+            * `"F"` : column-major (Fortran-style);
+            * `"A"` : (any) `"F"` if a is Fortran contiguous, `"C"` otherwise;
+            * `"K"` : (keep) preserve input order;
+            * `None`: preserve input order if possible, `"C"` otherwise.
         copy : bool | None, default=None
             Whether to copy the underlying data.
+
             * `True` : the object is copied;
             * `None` : the the object is copied only if needed;
             * `False`: raises a `ValueError` if a copy cannot be avoided.
         owndata : bool, default=None
-            If True, ensures that the returned Array owns its data.
+            If `True`, ensures that the returned `Array` owns its data.
             This may trigger an additional copy.
 
         Returns
@@ -1284,12 +1356,13 @@ class Array(_ListishMixin, WrappedArray):
             Target data type. Guessed if `None`.
         order : {"C", "F", "A", "K"} | None, default="K"
             Memory layout.
-            * "C" row-major (C-style);
-            * "F" column-major (Fortran-style);
-            * "A" (any) means "F" if a is Fortran contiguous, "C" otherwise;
-            * "K" (keep) preserve input order.
+
+            * `"C"` : row-major (C-style);
+            * `"F"` : column-major (Fortran-style);
+            * `"A"` : (any) `"F"` if a is Fortran contiguous, `"C"` otherwise;
+            * `"K"` : (keep) preserve input order.
         owndata : bool, default=None
-            If True, ensures that the returned Array owns its data.
+            If `True`, ensures that the returned `Array` owns its data.
             This may trigger an additional copy.
 
         Returns
@@ -1459,6 +1532,7 @@ if sparse:
                 Target data type. Guessed if `None`.
             copy : bool | None, default=None
                 Whether to copy the underlying data.
+
                 * `True` : the object is copied;
                 * `None` : the the object is copied only if needed;
                 * `False`: raises a `ValueError` if a copy cannot be avoided.
@@ -1922,8 +1996,9 @@ class Cell(_ListMixin, WrappedArray):
         ----------------
         order : {"C", "F"} | None, default="C"
             Memory layout.
-            * "C" row-major (C-style);
-            * "F" column-major (Fortran-style).
+
+            * `"C"` : row-major (C-style);
+            * `"F"` : column-major (Fortran-style).
 
         Returns
         -------
@@ -1950,18 +2025,20 @@ class Cell(_ListMixin, WrappedArray):
             Convert cells of cells into cell arrays.
         order : {"C", "F", "A", "K"} | None, default=None
             Memory layout.
-            * "C" row-major (C-style);
-            * "F" column-major (Fortran-style);
-            * "A" (any) means "F" if a is Fortran contiguous, "C" otherwise;
-            * "K" (keep) preserve input order;
-            * `None` preserve input order if possible, "C" otherwise.
+
+            * `"C"` : row-major (C-style);
+            * `"F"` : column-major (Fortran-style);
+            * `"A"` : (any) `"F"` if a is Fortran contiguous, `"C"` otherwise;
+            * `"K"` : (keep) preserve input order;
+            * `None`: preserve input order if possible, `"C"` otherwise.
         copy : bool | None, default=None
             Whether to copy the underlying data.
+
             * `True` : the object is copied;
             * `None` : the the object is copied only if needed;
             * `False`: raises a `ValueError` if a copy cannot be avoided.
         owndata : bool, default=False
-            If True, ensures that the returned Cell owns its data.
+            If `True`, ensures that the returned `Cell` owns its data.
             This may trigger an additional copy.
 
         Returns
@@ -2442,12 +2519,15 @@ class Struct(_DictMixin, WrappedArray):
     The following field names are protected because they have a special
     meaning in the python language. They can still be used as field names
     through the dictionary syntax:
-    `as`        `assert`    `break`     `class`     `continue`  `def`
-    `del`       `elif`      `else`      `except`    `False`     `finally`
-    `for`       `from`      `global`    `if`        `import`    `in`
-    `is`        `lambda`    `None`      `nonlocal`  `not`       `or`
-    `pass`      `raise`     `return`    `True`      `try`       `while`
-    `with`      `yield`
+
+    | | | | | | |
+    |-|-|-|-|-|-|
+    | `as`      | `assert`  | `break`   | `class`   | `continue`| `def`     |
+    | `del`     | `elif`    | `else`    | `except`  | `False`   | `finally` |
+    | `for`     | `from`    | `global`  | `if`      | `import`  | `in`      |
+    | `is`      | `lambda`  | `None`    | `nonlocal`| `not`     | `or`      |
+    | `pass`    | `raise`   | `return`  | `True`    | `try`     | `while`   |
+    | `with`    | `yield`   |
     """
 
     # NOTE
@@ -2556,8 +2636,9 @@ class Struct(_DictMixin, WrappedArray):
         ----------------
         order : {"C", "F"} | None, default="C"
             Memory layout.
-            * "C" row-major (C-style);
-            * "F" column-major (Fortran-style).
+
+            * `"C"` : row-major (C-style);
+            * `"F"` : column-major (Fortran-style).
 
         Returns
         -------
@@ -2582,18 +2663,20 @@ class Struct(_DictMixin, WrappedArray):
         ----------------
         order : {"C", "F", "A", "K"} | None, default=None
             Memory layout.
-            * "C" row-major (C-style);
-            * "F" column-major (Fortran-style);
-            * "A" (any) means "F" if a is Fortran contiguous, "C" otherwise;
-            * "K" (keep) preserve input order;
-            * `None` preserve input order if possible, "C" otherwise.
+
+            * `"C"` : row-major (C-style);
+            * `"F"` : column-major (Fortran-style);
+            * `"A"` : (any) `"F"` if a is Fortran contiguous, `"C"` otherwise;
+            * `"K"` : (keep) preserve input order;
+            * `None`: preserve input order if possible, `"C"` otherwise.
         copy : bool | None, default=None
             Whether to copy the underlying data.
+
             * `True` : the object is copied;
             * `None` : the the object is copied only if needed;
             * `False`: raises a `ValueError` if a copy cannot be avoided.
         owndata : bool, default=None
-            If True, ensures that the returned Struct owns its data.
+            If `True`, ensures that the returned `Struct` owns its data.
             This may trigger an additional copy.
 
         Returns
