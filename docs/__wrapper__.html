@@ -64,23 +64,25 @@ el.replaceWith(d);
     type of indexing that is used.
 
     In Matlab:
-        * `a(x,y)   = num`  indicates that `a` is a numeric array;
-        * `a(x,y)   = cell` indicates that `a` is a cell array;
-        * `a{x,y}   = any`  indicates that `a` is a cell array;
-        * `a(x,y).f = any`  indicates that `a` is a struct array;
-        * `a.f      = any`  indicates that `a` is a struct.
+
+    * `a(x,y)   = num`  indicates that `a` is a numeric array;
+    * `a(x,y)   = cell` indicates that `a` is a cell array;
+    * `a{x,y}   = any`  indicates that `a` is a cell array;
+    * `a(x,y).f = any`  indicates that `a` is a struct array;
+    * `a.f      = any`  indicates that `a` is a struct.
 
     These indexing operations can be chained, so in
     `a(x).b.c{y}.d(z) = 2`:
-        * `a`    is a struct array;
-        * `b`    is a struct;
-        * `c`    is a cell;
-        * `c{y}` is a struct
-        * `d`    is a numeric array.
+
+    * `a`    is a struct array;
+    * `b`    is a struct;
+    * `c`    is a cell;
+    * `c{y}` is a struct
+    * `d`    is a numeric array.
 
     In Python, there is only one type of indexing (`[]`). This is a problem as
-    we cannot differentiate `a{x}.b = y` -- where `a` is a cell that contains
-    a struct -- from `a(x).b = y` --- where `a` is a struct array.
+    we cannot differentiate `a{x}.b = y` — where `a` is a cell that contains
+    a struct — from `a(x).b = y` — where `a` is a struct array.
 
     One solution may be to abuse the &#34;call&#34; operator `()`, so that it returns a
     cell. This would work in some situations (`a[x].b = y` is a struct array,
@@ -91,15 +93,17 @@ el.replaceWith(d);
 
     Instead, the use of brackets automatically transforms the object into
     either:
+
     * a `Struct` (in all &#34;get&#34; cases, and in the &#34;set&#34; context `a[x] = y`,
       when `y` is either a `dict` or a `Struct`); or
-    * a `Array` (in the &#34;set&#34; context `a[x] = y`, when `y` is neither a
+    * an `Array` (in the &#34;set&#34; context `a[x] = y`, when `y` is neither a
       `dict` nor a `Struct`).
 
     Alternatively, if the user wishes to specify which type the object should
     take, we implement the properties `as_cell`, `as_struct` and `as_num`.
 
     Therefore:
+
     * `a[x,y]             = num`    : `a` is a numeric array;
     * `a[x,y]             = struct` : `a` is a numeric array;
     * `a[x,y].f           = any`    : `a` is a struct array;
@@ -107,6 +111,7 @@ el.replaceWith(d);
     * `a.f                = any`    : `a` is a struct.
 
     And explictly:
+
     * `a.as_cell[x,y]     = any`    : `a` is a cell array;
     * `a.as_struct[x,y].f = any`    : `a` is a struct array;
     * `a.as_cell[x,y].f   = any`    : `a` is a cell array containing a struct;
@@ -122,10 +127,11 @@ el.replaceWith(d);
         parent : ndarray | dict
             Reference to the object that will eventually contain
             this element.
-            * If the containing array is a Cell, `parent` should be a
+
+            * If the containing array is a `Cell`, `parent` should be a
               `ndarray` view of that cell, and `index` should be a
               [tuple of] int.
-            * If the containing array is a Struct, `parent` should be a
+            * If the containing array is a `Struct`, `parent` should be a
               `dict`, and `index` should be a string.
         index : str | [tuple of] int
             Index into the parent where this element will be inserted.
@@ -298,34 +304,38 @@ el.replaceWith(d);
 element will be used yet.</p>
 <p>It decides whether it is a Struct, Cell or Array based on the
 type of indexing that is used.</p>
-<p>In Matlab:
-* <code>a(x,y)
+<p>In Matlab:</p>
+<ul>
+<li><code>a(x,y)
 = num</code>
-indicates that <code>a</code> is a numeric array;
-* <code>a(x,y)
-= cell</code> indicates that <code>a</code> is a cell array;
-* <code>a{x,y}
+indicates that <code>a</code> is a numeric array;</li>
+<li><code>a(x,y)
+= cell</code> indicates that <code>a</code> is a cell array;</li>
+<li><code>a{x,y}
 = any</code>
-indicates that <code>a</code> is a cell array;
-* <code>a(x,y).f = any</code>
-indicates that <code>a</code> is a struct array;
-* <code>a.f
+indicates that <code>a</code> is a cell array;</li>
+<li><code>a(x,y).f = any</code>
+indicates that <code>a</code> is a struct array;</li>
+<li><code>a.f
 = any</code>
-indicates that <code>a</code> is a struct.</p>
+indicates that <code>a</code> is a struct.</li>
+</ul>
 <p>These indexing operations can be chained, so in
-<code>a(x).b.c{y}.d(z) = 2</code>:
-* <code>a</code>
-is a struct array;
-* <code>b</code>
-is a struct;
-* <code>c</code>
-is a cell;
-* <code>c{y}</code> is a struct
-* <code>d</code>
-is a numeric array.</p>
+<code>a(x).b.c{y}.d(z) = 2</code>:</p>
+<ul>
+<li><code>a</code>
+is a struct array;</li>
+<li><code>b</code>
+is a struct;</li>
+<li><code>c</code>
+is a cell;</li>
+<li><code>c{y}</code> is a struct</li>
+<li><code>d</code>
+is a numeric array.</li>
+</ul>
 <p>In Python, there is only one type of indexing (<code>[]</code>). This is a problem as
-we cannot differentiate <code>a{x}.b = y</code> &ndash; where <code>a</code> is a cell that contains
-a struct &ndash; from <code>a(x).b = y</code> &mdash; where <code>a</code> is a struct array.</p>
+we cannot differentiate <code>a{x}.b = y</code> — where <code>a</code> is a cell that contains
+a struct — from <code>a(x).b = y</code> — where <code>a</code> is a struct array.</p>
 <p>One solution may be to abuse the "call" operator <code>()</code>, so that it returns a
 cell. This would work in some situations (<code>a[x].b = y</code> is a struct array,
 whereas <code>a(x).b = y</code> is a cell of struct). However, the statement
@@ -333,50 +343,60 @@ whereas <code>a(x).b = y</code> is a cell of struct). However, the statement
 python syntax. Furthermore, it would induce a new problem, as cells could
 not be differentiated from function handles, in some cases.</p>
 <p>Instead, the use of brackets automatically transforms the object into
-either:
-* a <code><a title="__wrapper__.Struct" href="#__wrapper__.Struct">Struct</a></code> (in all "get" cases, and in the "set" context <code>a[x] = y</code>,
-when <code>y</code> is either a <code>dict</code> or a <code><a title="__wrapper__.Struct" href="#__wrapper__.Struct">Struct</a></code>); or
-* a <code><a title="__wrapper__.Array" href="#__wrapper__.Array">Array</a></code> (in the "set" context <code>a[x] = y</code>, when <code>y</code> is neither a
-<code>dict</code> nor a <code><a title="__wrapper__.Struct" href="#__wrapper__.Struct">Struct</a></code>).</p>
+either:</p>
+<ul>
+<li>a <code><a title="__wrapper__.Struct" href="#__wrapper__.Struct">Struct</a></code> (in all "get" cases, and in the "set" context <code>a[x] = y</code>,
+when <code>y</code> is either a <code>dict</code> or a <code><a title="__wrapper__.Struct" href="#__wrapper__.Struct">Struct</a></code>); or</li>
+<li>an <code><a title="__wrapper__.Array" href="#__wrapper__.Array">Array</a></code> (in the "set" context <code>a[x] = y</code>, when <code>y</code> is neither a
+<code>dict</code> nor a <code><a title="__wrapper__.Struct" href="#__wrapper__.Struct">Struct</a></code>).</li>
+</ul>
 <p>Alternatively, if the user wishes to specify which type the object should
 take, we implement the properties <code>as_cell</code>, <code>as_struct</code> and <code>as_num</code>.</p>
-<p>Therefore:
-* <code>a[x,y]
+<p>Therefore:</p>
+<ul>
+<li><code>a[x,y]
 = num</code>
-: <code>a</code> is a numeric array;
-* <code>a[x,y]
-= struct</code> : <code>a</code> is a numeric array;
-* <code>a[x,y].f
+: <code>a</code> is a numeric array;</li>
+<li><code>a[x,y]
+= struct</code> : <code>a</code> is a numeric array;</li>
+<li><code>a[x,y].f
 = any</code>
-: <code>a</code> is a struct array;
-* <code>a(x,y).f
+: <code>a</code> is a struct array;</li>
+<li><code>a(x,y).f
 = any</code>
-: <code>a</code> is a cell array containing a struct;
-* <code>a.f
+: <code>a</code> is a cell array containing a struct;</li>
+<li><code>a.f
 = any</code>
-: <code>a</code> is a struct.</p>
-<p>And explictly:
-* <code>a.as_cell[x,y]
+: <code>a</code> is a struct.</li>
+</ul>
+<p>And explictly:</p>
+<ul>
+<li><code>a.as_cell[x,y]
 = any</code>
-: <code>a</code> is a cell array;
-* <code>a.as_struct[x,y].f = any</code>
-: <code>a</code> is a struct array;
-* <code>a.as_cell[x,y].f
+: <code>a</code> is a cell array;</li>
+<li><code>a.as_struct[x,y].f = any</code>
+: <code>a</code> is a struct array;</li>
+<li><code>a.as_cell[x,y].f
 = any</code>
-: <code>a</code> is a cell array containing a struct;
-* <code>a.as_num[x,y]
+: <code>a</code> is a cell array containing a struct;</li>
+<li><code>a.as_num[x,y]
 = num</code>
-: <code>a</code> is a numeric array.</p>
+: <code>a</code> is a numeric array.</li>
+</ul>
 <h2 id="parameters">Parameters</h2>
 <dl>
 <dt><strong><code>parent</code></strong> :&ensp;<code>ndarray | dict</code></dt>
-<dd>Reference to the object that will eventually contain
-this element.
-* If the containing array is a Cell, <code>parent</code> should be a
+<dd>
+<p>Reference to the object that will eventually contain
+this element.</p>
+<ul>
+<li>If the containing array is a <code><a title="__wrapper__.Cell" href="#__wrapper__.Cell">Cell</a></code>, <code>parent</code> should be a
 <code>ndarray</code> view of that cell, and <code>index</code> should be a
-[tuple of] int.
-* If the containing array is a Struct, <code>parent</code> should be a
-<code>dict</code>, and <code>index</code> should be a string.</dd>
+[tuple of] int.</li>
+<li>If the containing array is a <code><a title="__wrapper__.Struct" href="#__wrapper__.Struct">Struct</a></code>, <code>parent</code> should be a
+<code>dict</code>, and <code>index</code> should be a string.</li>
+</ul>
+</dd>
 <dt><strong><code>index</code></strong> :&ensp;<code>str | [tuple of] int</code></dt>
 <dd>Index into the parent where this element will be inserted.</dd>
 </dl></div>
@@ -588,15 +608,17 @@ def as_struct(self):
     @classmethod
     def _parse_args(cls, *args, **kwargs):
         &#34;&#34;&#34;
-        This function is used in the __new__ constructor of Array/Cell/Struct.
+        This function is used in the `__new__` constructor of
+        Array/Cell/Struct.
 
         It does some preliminary preprocesing to reduces the number of
-        cases that must be handled by __new__.
+        cases that must be handled by `__new__`.
 
         In particular:
-        - It converts multiple integer arguments to a single list[int]
-        - It extracts the shape or object to copy, if there is one.
-        - It convert positional dtype/order into keywords.
+
+        * It converts multiple integer arguments to a single list[int]
+        * It extracts the shape or object to copy, if there is one.
+        * It convert positional dtype/order into keywords.
 
         Returns
         -------
@@ -756,8 +778,9 @@ def as_struct(self):
             Target data type.
         order : {&#34;C&#34;, &#34;F&#34;} | None, default=None
             Memory layout.
-            * &#34;C&#34; row-major (C-style);
-            * &#34;F&#34; column-major (Fortran-style);
+
+            * &#34;C&#34; : row-major (C-style);
+            * &#34;F&#34; : column-major (Fortran-style).
 
         Returns
         -------
@@ -783,18 +806,20 @@ def as_struct(self):
             Target data type. Guessed if `None`.
         order : {&#34;C&#34;, &#34;F&#34;, &#34;A&#34;, &#34;K&#34;} | None, default=None
             Memory layout.
-            * &#34;C&#34; row-major (C-style);
-            * &#34;F&#34; column-major (Fortran-style);
-            * &#34;A&#34; (any) means &#34;F&#34; if a is Fortran contiguous, &#34;C&#34; otherwise;
-            * &#34;K&#34; (keep) preserve input order;
-            * `None` preserve input order if possible, &#34;C&#34; otherwise.
+
+            * `&#34;C&#34;` : row-major (C-style);
+            * `&#34;F&#34;` : column-major (Fortran-style);
+            * `&#34;A&#34;` : (any) `&#34;F&#34;` if a is Fortran contiguous, `&#34;C&#34;` otherwise;
+            * `&#34;K&#34;` : (keep) preserve input order;
+            * `None`: preserve input order if possible, `&#34;C&#34;` otherwise.
         copy : bool | None, default=None
             Whether to copy the underlying data.
+
             * `True` : the object is copied;
             * `None` : the the object is copied only if needed;
             * `False`: raises a `ValueError` if a copy cannot be avoided.
         owndata : bool, default=None
-            If True, ensures that the returned Array owns its data.
+            If `True`, ensures that the returned `Array` owns its data.
             This may trigger an additional copy.
 
         Returns
@@ -845,12 +870,13 @@ def as_struct(self):
             Target data type. Guessed if `None`.
         order : {&#34;C&#34;, &#34;F&#34;, &#34;A&#34;, &#34;K&#34;} | None, default=&#34;K&#34;
             Memory layout.
-            * &#34;C&#34; row-major (C-style);
-            * &#34;F&#34; column-major (Fortran-style);
-            * &#34;A&#34; (any) means &#34;F&#34; if a is Fortran contiguous, &#34;C&#34; otherwise;
-            * &#34;K&#34; (keep) preserve input order.
+
+            * `&#34;C&#34;` : row-major (C-style);
+            * `&#34;F&#34;` : column-major (Fortran-style);
+            * `&#34;A&#34;` : (any) `&#34;F&#34;` if a is Fortran contiguous, `&#34;C&#34;` otherwise;
+            * `&#34;K&#34;` : (keep) preserve input order.
         owndata : bool, default=None
-            If True, ensures that the returned Array owns its data.
+            If `True`, ensures that the returned `Array` owns its data.
             This may trigger an additional copy.
 
         Returns
@@ -926,19 +952,27 @@ arrays to copy, use <code><a title="__wrapper__.Array.from_any" href="#__wrapper
 <dt><strong><code>dtype</code></strong> :&ensp;<code>np.dtype | None</code>, default=<code>None</code></dt>
 <dd>Target data type. Guessed if <code>None</code>.</dd>
 <dt><strong><code>order</code></strong> :&ensp;<code>{"C", "F", "A", "K"} | None</code>, default=<code>None</code></dt>
-<dd>Memory layout.
-* "C" row-major (C-style);
-* "F" column-major (Fortran-style);
-* "A" (any) means "F" if a is Fortran contiguous, "C" otherwise;
-* "K" (keep) preserve input order;
-* <code>None</code> preserve input order if possible, "C" otherwise.</dd>
+<dd>
+<p>Memory layout.</p>
+<ul>
+<li><code>"C"</code> : row-major (C-style);</li>
+<li><code>"F"</code> : column-major (Fortran-style);</li>
+<li><code>"A"</code> : (any) <code>"F"</code> if a is Fortran contiguous, <code>"C"</code> otherwise;</li>
+<li><code>"K"</code> : (keep) preserve input order;</li>
+<li><code>None</code>: preserve input order if possible, <code>"C"</code> otherwise.</li>
+</ul>
+</dd>
 <dt><strong><code>copy</code></strong> :&ensp;<code>bool | None</code>, default=<code>None</code></dt>
-<dd>Whether to copy the underlying data.
-* <code>True</code> : the object is copied;
-* <code>None</code> : the the object is copied only if needed;
-* <code>False</code>: raises a <code>ValueError</code> if a copy cannot be avoided.</dd>
+<dd>
+<p>Whether to copy the underlying data.</p>
+<ul>
+<li><code>True</code> : the object is copied;</li>
+<li><code>None</code> : the the object is copied only if needed;</li>
+<li><code>False</code>: raises a <code>ValueError</code> if a copy cannot be avoided.</li>
+</ul>
+</dd>
 <dt><strong><code>owndata</code></strong> :&ensp;<code>bool</code>, default=<code>None</code></dt>
-<dd>If True, ensures that the returned Array owns its data.
+<dd>If <code>True</code>, ensures that the returned <code><a title="__wrapper__.Array" href="#__wrapper__.Array">Array</a></code> owns its data.
 This may trigger an additional copy.</dd>
 </dl>
 <h2 id="returns">Returns</h2>
@@ -962,13 +996,17 @@ This may trigger an additional copy.</dd>
 <dt><strong><code>dtype</code></strong> :&ensp;<code>np.dtype | None</code>, default=<code>None</code></dt>
 <dd>Target data type. Guessed if <code>None</code>.</dd>
 <dt><strong><code>order</code></strong> :&ensp;<code>{"C", "F", "A", "K"} | None</code>, default=<code>"K"</code></dt>
-<dd>Memory layout.
-* "C" row-major (C-style);
-* "F" column-major (Fortran-style);
-* "A" (any) means "F" if a is Fortran contiguous, "C" otherwise;
-* "K" (keep) preserve input order.</dd>
+<dd>
+<p>Memory layout.</p>
+<ul>
+<li><code>"C"</code> : row-major (C-style);</li>
+<li><code>"F"</code> : column-major (Fortran-style);</li>
+<li><code>"A"</code> : (any) <code>"F"</code> if a is Fortran contiguous, <code>"C"</code> otherwise;</li>
+<li><code>"K"</code> : (keep) preserve input order.</li>
+</ul>
+</dd>
 <dt><strong><code>owndata</code></strong> :&ensp;<code>bool</code>, default=<code>None</code></dt>
-<dd>If True, ensures that the returned Array owns its data.
+<dd>If <code>True</code>, ensures that the returned <code><a title="__wrapper__.Array" href="#__wrapper__.Array">Array</a></code> owns its data.
 This may trigger an additional copy.</dd>
 </dl>
 <h2 id="returns">Returns</h2>
@@ -992,9 +1030,13 @@ This may trigger an additional copy.</dd>
 <dt><strong><code>dtype</code></strong> :&ensp;<code>np.dtype | None</code>, default=<code>'double'</code></dt>
 <dd>Target data type.</dd>
 <dt><strong><code>order</code></strong> :&ensp;<code>{"C", "F"} | None</code>, default=<code>None</code></dt>
-<dd>Memory layout.
-* "C" row-major (C-style);
-* "F" column-major (Fortran-style);</dd>
+<dd>
+<p>Memory layout.</p>
+<ul>
+<li>"C" : row-major (C-style);</li>
+<li>"F" : column-major (Fortran-style).</li>
+</ul>
+</dd>
 </dl>
 <h2 id="returns">Returns</h2>
 <dl>
@@ -1176,8 +1218,9 @@ def as_num(self) -&gt; &#34;Array&#34;:
         ----------------
         order : {&#34;C&#34;, &#34;F&#34;} | None, default=&#34;C&#34;
             Memory layout.
-            * &#34;C&#34; row-major (C-style);
-            * &#34;F&#34; column-major (Fortran-style).
+
+            * `&#34;C&#34;` : row-major (C-style);
+            * `&#34;F&#34;` : column-major (Fortran-style).
 
         Returns
         -------
@@ -1204,18 +1247,20 @@ def as_num(self) -&gt; &#34;Array&#34;:
             Convert cells of cells into cell arrays.
         order : {&#34;C&#34;, &#34;F&#34;, &#34;A&#34;, &#34;K&#34;} | None, default=None
             Memory layout.
-            * &#34;C&#34; row-major (C-style);
-            * &#34;F&#34; column-major (Fortran-style);
-            * &#34;A&#34; (any) means &#34;F&#34; if a is Fortran contiguous, &#34;C&#34; otherwise;
-            * &#34;K&#34; (keep) preserve input order;
-            * `None` preserve input order if possible, &#34;C&#34; otherwise.
+
+            * `&#34;C&#34;` : row-major (C-style);
+            * `&#34;F&#34;` : column-major (Fortran-style);
+            * `&#34;A&#34;` : (any) `&#34;F&#34;` if a is Fortran contiguous, `&#34;C&#34;` otherwise;
+            * `&#34;K&#34;` : (keep) preserve input order;
+            * `None`: preserve input order if possible, `&#34;C&#34;` otherwise.
         copy : bool | None, default=None
             Whether to copy the underlying data.
+
             * `True` : the object is copied;
             * `None` : the the object is copied only if needed;
             * `False`: raises a `ValueError` if a copy cannot be avoided.
         owndata : bool, default=False
-            If True, ensures that the returned Cell owns its data.
+            If `True`, ensures that the returned `Cell` owns its data.
             This may trigger an additional copy.
 
         Returns
@@ -1468,19 +1513,27 @@ arrays to copy, use <code><a title="__wrapper__.Cell.from_any" href="#__wrapper_
 <dt><strong><code>deepcat</code></strong> :&ensp;<code>bool</code>, default=<code>False</code></dt>
 <dd>Convert cells of cells into cell arrays.</dd>
 <dt><strong><code>order</code></strong> :&ensp;<code>{"C", "F", "A", "K"} | None</code>, default=<code>None</code></dt>
-<dd>Memory layout.
-* "C" row-major (C-style);
-* "F" column-major (Fortran-style);
-* "A" (any) means "F" if a is Fortran contiguous, "C" otherwise;
-* "K" (keep) preserve input order;
-* <code>None</code> preserve input order if possible, "C" otherwise.</dd>
+<dd>
+<p>Memory layout.</p>
+<ul>
+<li><code>"C"</code> : row-major (C-style);</li>
+<li><code>"F"</code> : column-major (Fortran-style);</li>
+<li><code>"A"</code> : (any) <code>"F"</code> if a is Fortran contiguous, <code>"C"</code> otherwise;</li>
+<li><code>"K"</code> : (keep) preserve input order;</li>
+<li><code>None</code>: preserve input order if possible, <code>"C"</code> otherwise.</li>
+</ul>
+</dd>
 <dt><strong><code>copy</code></strong> :&ensp;<code>bool | None</code>, default=<code>None</code></dt>
-<dd>Whether to copy the underlying data.
-* <code>True</code> : the object is copied;
-* <code>None</code> : the the object is copied only if needed;
-* <code>False</code>: raises a <code>ValueError</code> if a copy cannot be avoided.</dd>
+<dd>
+<p>Whether to copy the underlying data.</p>
+<ul>
+<li><code>True</code> : the object is copied;</li>
+<li><code>None</code> : the the object is copied only if needed;</li>
+<li><code>False</code>: raises a <code>ValueError</code> if a copy cannot be avoided.</li>
+</ul>
+</dd>
 <dt><strong><code>owndata</code></strong> :&ensp;<code>bool</code>, default=<code>False</code></dt>
-<dd>If True, ensures that the returned Cell owns its data.
+<dd>If <code>True</code>, ensures that the returned <code><a title="__wrapper__.Cell" href="#__wrapper__.Cell">Cell</a></code> owns its data.
 This may trigger an additional copy.</dd>
 </dl>
 <h2 id="returns">Returns</h2>
@@ -1504,19 +1557,27 @@ This may trigger an additional copy.</dd>
 <dt><strong><code>deepcat</code></strong> :&ensp;<code>bool</code>, default=<code>False</code></dt>
 <dd>Convert cells of cells into cell arrays.</dd>
 <dt><strong><code>order</code></strong> :&ensp;<code>{"C", "F", "A", "K"} | None</code>, default=<code>None</code></dt>
-<dd>Memory layout.
-* "C" row-major (C-style);
-* "F" column-major (Fortran-style);
-* "A" (any) means "F" if a is Fortran contiguous, "C" otherwise;
-* "K" (keep) preserve input order;
-* <code>None</code> preserve input order if possible, "C" otherwise.</dd>
+<dd>
+<p>Memory layout.</p>
+<ul>
+<li><code>"C"</code> : row-major (C-style);</li>
+<li><code>"F"</code> : column-major (Fortran-style);</li>
+<li><code>"A"</code> : (any) <code>"F"</code> if a is Fortran contiguous, <code>"C"</code> otherwise;</li>
+<li><code>"K"</code> : (keep) preserve input order;</li>
+<li><code>None</code>: preserve input order if possible, <code>"C"</code> otherwise.</li>
+</ul>
+</dd>
 <dt><strong><code>copy</code></strong> :&ensp;<code>bool | None</code>, default=<code>None</code></dt>
-<dd>Whether to copy the underlying data.
-* <code>True</code> : the object is copied;
-* <code>None</code> : the the object is copied only if needed;
-* <code>False</code>: raises a <code>ValueError</code> if a copy cannot be avoided.</dd>
+<dd>
+<p>Whether to copy the underlying data.</p>
+<ul>
+<li><code>True</code> : the object is copied;</li>
+<li><code>None</code> : the the object is copied only if needed;</li>
+<li><code>False</code>: raises a <code>ValueError</code> if a copy cannot be avoided.</li>
+</ul>
+</dd>
 <dt><strong><code>owndata</code></strong> :&ensp;<code>bool</code>, default=<code>False</code></dt>
-<dd>If True, ensures that the returned Cell owns its data.
+<dd>If <code>True</code>, ensures that the returned <code><a title="__wrapper__.Cell" href="#__wrapper__.Cell">Cell</a></code> owns its data.
 This may trigger an additional copy.</dd>
 </dl>
 <h2 id="returns">Returns</h2>
@@ -1540,19 +1601,27 @@ This may trigger an additional copy.</dd>
 <dt><strong><code>deepcat</code></strong> :&ensp;<code>bool</code>, default=<code>False</code></dt>
 <dd>Convert cells of cells into cell arrays.</dd>
 <dt><strong><code>order</code></strong> :&ensp;<code>{"C", "F", "A", "K"} | None</code>, default=<code>None</code></dt>
-<dd>Memory layout.
-* "C" row-major (C-style);
-* "F" column-major (Fortran-style);
-* "A" (any) means "F" if a is Fortran contiguous, "C" otherwise;
-* "K" (keep) preserve input order;
-* <code>None</code> preserve input order if possible, "C" otherwise.</dd>
+<dd>
+<p>Memory layout.</p>
+<ul>
+<li><code>"C"</code> : row-major (C-style);</li>
+<li><code>"F"</code> : column-major (Fortran-style);</li>
+<li><code>"A"</code> : (any) <code>"F"</code> if a is Fortran contiguous, <code>"C"</code> otherwise;</li>
+<li><code>"K"</code> : (keep) preserve input order;</li>
+<li><code>None</code>: preserve input order if possible, <code>"C"</code> otherwise.</li>
+</ul>
+</dd>
 <dt><strong><code>copy</code></strong> :&ensp;<code>bool | None</code>, default=<code>None</code></dt>
-<dd>Whether to copy the underlying data.
-* <code>True</code> : the object is copied;
-* <code>None</code> : the the object is copied only if needed;
-* <code>False</code>: raises a <code>ValueError</code> if a copy cannot be avoided.</dd>
+<dd>
+<p>Whether to copy the underlying data.</p>
+<ul>
+<li><code>True</code> : the object is copied;</li>
+<li><code>None</code> : the the object is copied only if needed;</li>
+<li><code>False</code>: raises a <code>ValueError</code> if a copy cannot be avoided.</li>
+</ul>
+</dd>
 <dt><strong><code>owndata</code></strong> :&ensp;<code>bool</code>, default=<code>False</code></dt>
-<dd>If True, ensures that the returned Cell owns its data.
+<dd>If <code>True</code>, ensures that the returned <code><a title="__wrapper__.Cell" href="#__wrapper__.Cell">Cell</a></code> owns its data.
 This may trigger an additional copy.</dd>
 </dl>
 <h2 id="returns">Returns</h2>
@@ -1574,9 +1643,13 @@ This may trigger an additional copy.</dd>
 <h2 id="other-parameters">Other Parameters</h2>
 <dl>
 <dt><strong><code>order</code></strong> :&ensp;<code>{"C", "F"} | None</code>, default=<code>"C"</code></dt>
-<dd>Memory layout.
-* "C" row-major (C-style);
-* "F" column-major (Fortran-style).</dd>
+<dd>
+<p>Memory layout.</p>
+<ul>
+<li><code>"C"</code> : row-major (C-style);</li>
+<li><code>"F"</code> : column-major (Fortran-style).</li>
+</ul>
+</dd>
 </dl>
 <h2 id="returns">Returns</h2>
 <dl>
@@ -1640,97 +1713,37 @@ def as_cell(self) -&gt; &#34;Cell&#34;:
 <span>Expand source code</span>
 </summary>
 <pre><code class="python">class DelayedArray(WrappedDelayedArray):
+    &#34;&#34;&#34;
+    An `Array` that will insert itself in its parent later.
+
+    See `AnyDelayedArray`.
+    &#34;&#34;&#34;
 
     def __init__(self, shape, parent, *index):
+        &#34;&#34;&#34;
+        Parameters
+        ----------
+        shape : list[int]
+            Shape of the future numeric array.
+        parent : Struct | Cell | AnyDelayedArray
+            Parent object that contains the future object.
+        *index : int | str
+            Index of the future object in its parent.
+        &#34;&#34;&#34;
         future = Array.from_shape(shape)
         future._delayed_wrapper = self
         super().__init__(future, parent, *index)</code></pre>
 </details>
-<div class="desc"><p>This is an object that we return when we don't know how an indexed
-element will be used yet.</p>
-<p>It decides whether it is a Struct, Cell or Array based on the
-type of indexing that is used.</p>
-<p>In Matlab:
-* <code>a(x,y)
-= num</code>
-indicates that <code>a</code> is a numeric array;
-* <code>a(x,y)
-= cell</code> indicates that <code>a</code> is a cell array;
-* <code>a{x,y}
-= any</code>
-indicates that <code>a</code> is a cell array;
-* <code>a(x,y).f = any</code>
-indicates that <code>a</code> is a struct array;
-* <code>a.f
-= any</code>
-indicates that <code>a</code> is a struct.</p>
-<p>These indexing operations can be chained, so in
-<code>a(x).b.c{y}.d(z) = 2</code>:
-* <code>a</code>
-is a struct array;
-* <code>b</code>
-is a struct;
-* <code>c</code>
-is a cell;
-* <code>c{y}</code> is a struct
-* <code>d</code>
-is a numeric array.</p>
-<p>In Python, there is only one type of indexing (<code>[]</code>). This is a problem as
-we cannot differentiate <code>a{x}.b = y</code> &ndash; where <code>a</code> is a cell that contains
-a struct &ndash; from <code>a(x).b = y</code> &mdash; where <code>a</code> is a struct array.</p>
-<p>One solution may be to abuse the "call" operator <code>()</code>, so that it returns a
-cell. This would work in some situations (<code>a[x].b = y</code> is a struct array,
-whereas <code>a(x).b = y</code> is a cell of struct). However, the statement
-<code>a(x) = y</code> (which would correspond to matlab's <code>a{x} = y</code>) is not valid
-python syntax. Furthermore, it would induce a new problem, as cells could
-not be differentiated from function handles, in some cases.</p>
-<p>Instead, the use of brackets automatically transforms the object into
-either:
-* a <code><a title="__wrapper__.Struct" href="#__wrapper__.Struct">Struct</a></code> (in all "get" cases, and in the "set" context <code>a[x] = y</code>,
-when <code>y</code> is either a <code>dict</code> or a <code><a title="__wrapper__.Struct" href="#__wrapper__.Struct">Struct</a></code>); or
-* a <code><a title="__wrapper__.Array" href="#__wrapper__.Array">Array</a></code> (in the "set" context <code>a[x] = y</code>, when <code>y</code> is neither a
-<code>dict</code> nor a <code><a title="__wrapper__.Struct" href="#__wrapper__.Struct">Struct</a></code>).</p>
-<p>Alternatively, if the user wishes to specify which type the object should
-take, we implement the properties <code>as_cell</code>, <code>as_struct</code> and <code>as_num</code>.</p>
-<p>Therefore:
-* <code>a[x,y]
-= num</code>
-: <code>a</code> is a numeric array;
-* <code>a[x,y]
-= struct</code> : <code>a</code> is a numeric array;
-* <code>a[x,y].f
-= any</code>
-: <code>a</code> is a struct array;
-* <code>a(x,y).f
-= any</code>
-: <code>a</code> is a cell array containing a struct;
-* <code>a.f
-= any</code>
-: <code>a</code> is a struct.</p>
-<p>And explictly:
-* <code>a.as_cell[x,y]
-= any</code>
-: <code>a</code> is a cell array;
-* <code>a.as_struct[x,y].f = any</code>
-: <code>a</code> is a struct array;
-* <code>a.as_cell[x,y].f
-= any</code>
-: <code>a</code> is a cell array containing a struct;
-* <code>a.as_num[x,y]
-= num</code>
-: <code>a</code> is a numeric array.</p>
+<div class="desc"><p>An <code><a title="__wrapper__.Array" href="#__wrapper__.Array">Array</a></code> that will insert itself in its parent later.</p>
+<p>See <code><a title="__wrapper__.AnyDelayedArray" href="#__wrapper__.AnyDelayedArray">AnyDelayedArray</a></code>.</p>
 <h2 id="parameters">Parameters</h2>
 <dl>
-<dt><strong><code>parent</code></strong> :&ensp;<code>ndarray | dict</code></dt>
-<dd>Reference to the object that will eventually contain
-this element.
-* If the containing array is a Cell, <code>parent</code> should be a
-<code>ndarray</code> view of that cell, and <code>index</code> should be a
-[tuple of] int.
-* If the containing array is a Struct, <code>parent</code> should be a
-<code>dict</code>, and <code>index</code> should be a string.</dd>
-<dt><strong><code>index</code></strong> :&ensp;<code>str | [tuple of] int</code></dt>
-<dd>Index into the parent where this element will be inserted.</dd>
+<dt><strong><code>shape</code></strong> :&ensp;<code>list[int]</code></dt>
+<dd>Shape of the future numeric array.</dd>
+<dt><strong><code>parent</code></strong> :&ensp;<code>Struct | Cell | AnyDelayedArray</code></dt>
+<dd>Parent object that contains the future object.</dd>
+<dt><strong><code>*index</code></strong> :&ensp;<code>int | str</code></dt>
+<dd>Index of the future object in its parent.</dd>
 </dl></div>
 <h3>Ancestors</h3>
 <ul class="hlist">
@@ -1758,8 +1771,23 @@ this element.
 <span>Expand source code</span>
 </summary>
 <pre><code class="python">class DelayedCell(WrappedDelayedArray):
+    &#34;&#34;&#34;
+    A `Cell` that will insert itself in its parent later.
+
+    See `AnyDelayedArray`.
+    &#34;&#34;&#34;
 
     def __init__(self, shape, parent, *index):
+        &#34;&#34;&#34;
+        Parameters
+        ----------
+        shape : list[int]
+            Shape of the future cell array.
+        parent : Struct | Cell | AnyDelayedArray
+            Parent object that contains the future object.
+        *index : int | str
+            Index of the future object in its parent.
+        &#34;&#34;&#34;
         future = Cell.from_shape(shape)
         future._delayed_wrapper = self
         super().__init__(future, parent, *index)
@@ -1774,91 +1802,16 @@ this element.
             for elem in iter:
                 elem[()] = AnyDelayedArray(self, iter.multi_index)</code></pre>
 </details>
-<div class="desc"><p>This is an object that we return when we don't know how an indexed
-element will be used yet.</p>
-<p>It decides whether it is a Struct, Cell or Array based on the
-type of indexing that is used.</p>
-<p>In Matlab:
-* <code>a(x,y)
-= num</code>
-indicates that <code>a</code> is a numeric array;
-* <code>a(x,y)
-= cell</code> indicates that <code>a</code> is a cell array;
-* <code>a{x,y}
-= any</code>
-indicates that <code>a</code> is a cell array;
-* <code>a(x,y).f = any</code>
-indicates that <code>a</code> is a struct array;
-* <code>a.f
-= any</code>
-indicates that <code>a</code> is a struct.</p>
-<p>These indexing operations can be chained, so in
-<code>a(x).b.c{y}.d(z) = 2</code>:
-* <code>a</code>
-is a struct array;
-* <code>b</code>
-is a struct;
-* <code>c</code>
-is a cell;
-* <code>c{y}</code> is a struct
-* <code>d</code>
-is a numeric array.</p>
-<p>In Python, there is only one type of indexing (<code>[]</code>). This is a problem as
-we cannot differentiate <code>a{x}.b = y</code> &ndash; where <code>a</code> is a cell that contains
-a struct &ndash; from <code>a(x).b = y</code> &mdash; where <code>a</code> is a struct array.</p>
-<p>One solution may be to abuse the "call" operator <code>()</code>, so that it returns a
-cell. This would work in some situations (<code>a[x].b = y</code> is a struct array,
-whereas <code>a(x).b = y</code> is a cell of struct). However, the statement
-<code>a(x) = y</code> (which would correspond to matlab's <code>a{x} = y</code>) is not valid
-python syntax. Furthermore, it would induce a new problem, as cells could
-not be differentiated from function handles, in some cases.</p>
-<p>Instead, the use of brackets automatically transforms the object into
-either:
-* a <code><a title="__wrapper__.Struct" href="#__wrapper__.Struct">Struct</a></code> (in all "get" cases, and in the "set" context <code>a[x] = y</code>,
-when <code>y</code> is either a <code>dict</code> or a <code><a title="__wrapper__.Struct" href="#__wrapper__.Struct">Struct</a></code>); or
-* a <code><a title="__wrapper__.Array" href="#__wrapper__.Array">Array</a></code> (in the "set" context <code>a[x] = y</code>, when <code>y</code> is neither a
-<code>dict</code> nor a <code><a title="__wrapper__.Struct" href="#__wrapper__.Struct">Struct</a></code>).</p>
-<p>Alternatively, if the user wishes to specify which type the object should
-take, we implement the properties <code>as_cell</code>, <code>as_struct</code> and <code>as_num</code>.</p>
-<p>Therefore:
-* <code>a[x,y]
-= num</code>
-: <code>a</code> is a numeric array;
-* <code>a[x,y]
-= struct</code> : <code>a</code> is a numeric array;
-* <code>a[x,y].f
-= any</code>
-: <code>a</code> is a struct array;
-* <code>a(x,y).f
-= any</code>
-: <code>a</code> is a cell array containing a struct;
-* <code>a.f
-= any</code>
-: <code>a</code> is a struct.</p>
-<p>And explictly:
-* <code>a.as_cell[x,y]
-= any</code>
-: <code>a</code> is a cell array;
-* <code>a.as_struct[x,y].f = any</code>
-: <code>a</code> is a struct array;
-* <code>a.as_cell[x,y].f
-= any</code>
-: <code>a</code> is a cell array containing a struct;
-* <code>a.as_num[x,y]
-= num</code>
-: <code>a</code> is a numeric array.</p>
+<div class="desc"><p>A <code><a title="__wrapper__.Cell" href="#__wrapper__.Cell">Cell</a></code> that will insert itself in its parent later.</p>
+<p>See <code><a title="__wrapper__.AnyDelayedArray" href="#__wrapper__.AnyDelayedArray">AnyDelayedArray</a></code>.</p>
 <h2 id="parameters">Parameters</h2>
 <dl>
-<dt><strong><code>parent</code></strong> :&ensp;<code>ndarray | dict</code></dt>
-<dd>Reference to the object that will eventually contain
-this element.
-* If the containing array is a Cell, <code>parent</code> should be a
-<code>ndarray</code> view of that cell, and <code>index</code> should be a
-[tuple of] int.
-* If the containing array is a Struct, <code>parent</code> should be a
-<code>dict</code>, and <code>index</code> should be a string.</dd>
-<dt><strong><code>index</code></strong> :&ensp;<code>str | [tuple of] int</code></dt>
-<dd>Index into the parent where this element will be inserted.</dd>
+<dt><strong><code>shape</code></strong> :&ensp;<code>list[int]</code></dt>
+<dd>Shape of the future cell array.</dd>
+<dt><strong><code>parent</code></strong> :&ensp;<code>Struct | Cell | AnyDelayedArray</code></dt>
+<dd>Parent object that contains the future object.</dd>
+<dt><strong><code>*index</code></strong> :&ensp;<code>int | str</code></dt>
+<dd>Index of the future object in its parent.</dd>
 </dl></div>
 <h3>Ancestors</h3>
 <ul class="hlist">
@@ -1886,97 +1839,37 @@ this element.
 <span>Expand source code</span>
 </summary>
 <pre><code class="python">class DelayedStruct(WrappedDelayedArray):
+    &#34;&#34;&#34;
+    A `Struct` that will insert itself in its parent later.
+
+    See `AnyDelayedArray`.
+    &#34;&#34;&#34;
 
     def __init__(self, shape, parent, *index):
+        &#34;&#34;&#34;
+        Parameters
+        ----------
+        shape : list[int]
+            Shape of the future struct array.
+        parent : Struct | Cell | AnyDelayedArray
+            Parent object that contains the future object.
+        *index : int | str
+            Index of the future object in its parent.
+        &#34;&#34;&#34;
         future = Struct.from_shape(shape)
         future._delayed_wrapper = self
         super().__init__(future, parent, *index)</code></pre>
 </details>
-<div class="desc"><p>This is an object that we return when we don't know how an indexed
-element will be used yet.</p>
-<p>It decides whether it is a Struct, Cell or Array based on the
-type of indexing that is used.</p>
-<p>In Matlab:
-* <code>a(x,y)
-= num</code>
-indicates that <code>a</code> is a numeric array;
-* <code>a(x,y)
-= cell</code> indicates that <code>a</code> is a cell array;
-* <code>a{x,y}
-= any</code>
-indicates that <code>a</code> is a cell array;
-* <code>a(x,y).f = any</code>
-indicates that <code>a</code> is a struct array;
-* <code>a.f
-= any</code>
-indicates that <code>a</code> is a struct.</p>
-<p>These indexing operations can be chained, so in
-<code>a(x).b.c{y}.d(z) = 2</code>:
-* <code>a</code>
-is a struct array;
-* <code>b</code>
-is a struct;
-* <code>c</code>
-is a cell;
-* <code>c{y}</code> is a struct
-* <code>d</code>
-is a numeric array.</p>
-<p>In Python, there is only one type of indexing (<code>[]</code>). This is a problem as
-we cannot differentiate <code>a{x}.b = y</code> &ndash; where <code>a</code> is a cell that contains
-a struct &ndash; from <code>a(x).b = y</code> &mdash; where <code>a</code> is a struct array.</p>
-<p>One solution may be to abuse the "call" operator <code>()</code>, so that it returns a
-cell. This would work in some situations (<code>a[x].b = y</code> is a struct array,
-whereas <code>a(x).b = y</code> is a cell of struct). However, the statement
-<code>a(x) = y</code> (which would correspond to matlab's <code>a{x} = y</code>) is not valid
-python syntax. Furthermore, it would induce a new problem, as cells could
-not be differentiated from function handles, in some cases.</p>
-<p>Instead, the use of brackets automatically transforms the object into
-either:
-* a <code><a title="__wrapper__.Struct" href="#__wrapper__.Struct">Struct</a></code> (in all "get" cases, and in the "set" context <code>a[x] = y</code>,
-when <code>y</code> is either a <code>dict</code> or a <code><a title="__wrapper__.Struct" href="#__wrapper__.Struct">Struct</a></code>); or
-* a <code><a title="__wrapper__.Array" href="#__wrapper__.Array">Array</a></code> (in the "set" context <code>a[x] = y</code>, when <code>y</code> is neither a
-<code>dict</code> nor a <code><a title="__wrapper__.Struct" href="#__wrapper__.Struct">Struct</a></code>).</p>
-<p>Alternatively, if the user wishes to specify which type the object should
-take, we implement the properties <code>as_cell</code>, <code>as_struct</code> and <code>as_num</code>.</p>
-<p>Therefore:
-* <code>a[x,y]
-= num</code>
-: <code>a</code> is a numeric array;
-* <code>a[x,y]
-= struct</code> : <code>a</code> is a numeric array;
-* <code>a[x,y].f
-= any</code>
-: <code>a</code> is a struct array;
-* <code>a(x,y).f
-= any</code>
-: <code>a</code> is a cell array containing a struct;
-* <code>a.f
-= any</code>
-: <code>a</code> is a struct.</p>
-<p>And explictly:
-* <code>a.as_cell[x,y]
-= any</code>
-: <code>a</code> is a cell array;
-* <code>a.as_struct[x,y].f = any</code>
-: <code>a</code> is a struct array;
-* <code>a.as_cell[x,y].f
-= any</code>
-: <code>a</code> is a cell array containing a struct;
-* <code>a.as_num[x,y]
-= num</code>
-: <code>a</code> is a numeric array.</p>
+<div class="desc"><p>A <code><a title="__wrapper__.Struct" href="#__wrapper__.Struct">Struct</a></code> that will insert itself in its parent later.</p>
+<p>See <code><a title="__wrapper__.AnyDelayedArray" href="#__wrapper__.AnyDelayedArray">AnyDelayedArray</a></code>.</p>
 <h2 id="parameters">Parameters</h2>
 <dl>
-<dt><strong><code>parent</code></strong> :&ensp;<code>ndarray | dict</code></dt>
-<dd>Reference to the object that will eventually contain
-this element.
-* If the containing array is a Cell, <code>parent</code> should be a
-<code>ndarray</code> view of that cell, and <code>index</code> should be a
-[tuple of] int.
-* If the containing array is a Struct, <code>parent</code> should be a
-<code>dict</code>, and <code>index</code> should be a string.</dd>
-<dt><strong><code>index</code></strong> :&ensp;<code>str | [tuple of] int</code></dt>
-<dd>Index into the parent where this element will be inserted.</dd>
+<dt><strong><code>shape</code></strong> :&ensp;<code>list[int]</code></dt>
+<dd>Shape of the future struct array.</dd>
+<dt><strong><code>parent</code></strong> :&ensp;<code>Struct | Cell | AnyDelayedArray</code></dt>
+<dd>Parent object that contains the future object.</dd>
+<dt><strong><code>*index</code></strong> :&ensp;<code>int | str</code></dt>
+<dd>Index of the future object in its parent.</dd>
 </dl></div>
 <h3>Ancestors</h3>
 <ul class="hlist">
@@ -2668,6 +2561,7 @@ def instance():
             Target data type. Guessed if `None`.
         copy : bool | None, default=None
             Whether to copy the underlying data.
+
             * `True` : the object is copied;
             * `None` : the the object is copied only if needed;
             * `False`: raises a `ValueError` if a copy cannot be avoided.
@@ -2738,10 +2632,14 @@ interpreted as dense arrays to copy, usse <code><a title="__wrapper__.SparseArra
 <dt><strong><code>dtype</code></strong> :&ensp;<code>np.dtype | None</code>, default=<code>None</code></dt>
 <dd>Target data type. Guessed if <code>None</code>.</dd>
 <dt><strong><code>copy</code></strong> :&ensp;<code>bool | None</code>, default=<code>None</code></dt>
-<dd>Whether to copy the underlying data.
-* <code>True</code> : the object is copied;
-* <code>None</code> : the the object is copied only if needed;
-* <code>False</code>: raises a <code>ValueError</code> if a copy cannot be avoided.</dd>
+<dd>
+<p>Whether to copy the underlying data.</p>
+<ul>
+<li><code>True</code> : the object is copied;</li>
+<li><code>None</code> : the the object is copied only if needed;</li>
+<li><code>False</code>: raises a <code>ValueError</code> if a copy cannot be avoided.</li>
+</ul>
+</dd>
 </dl>
 <h2 id="returns">Returns</h2>
 <dl>
@@ -2850,12 +2748,15 @@ interpreted as dense arrays to copy, usse <code><a title="__wrapper__.SparseArra
     The following field names are protected because they have a special
     meaning in the python language. They can still be used as field names
     through the dictionary syntax:
-    `as`        `assert`    `break`     `class`     `continue`  `def`
-    `del`       `elif`      `else`      `except`    `False`     `finally`
-    `for`       `from`      `global`    `if`        `import`    `in`
-    `is`        `lambda`    `None`      `nonlocal`  `not`       `or`
-    `pass`      `raise`     `return`    `True`      `try`       `while`
-    `with`      `yield`
+
+    | | | | | | |
+    |-|-|-|-|-|-|
+    | `as`      | `assert`  | `break`   | `class`   | `continue`| `def`     |
+    | `del`     | `elif`    | `else`    | `except`  | `False`   | `finally` |
+    | `for`     | `from`    | `global`  | `if`      | `import`  | `in`      |
+    | `is`      | `lambda`  | `None`    | `nonlocal`| `not`     | `or`      |
+    | `pass`    | `raise`   | `return`  | `True`    | `try`     | `while`   |
+    | `with`    | `yield`   |
     &#34;&#34;&#34;
 
     # NOTE
@@ -2964,8 +2865,9 @@ interpreted as dense arrays to copy, usse <code><a title="__wrapper__.SparseArra
         ----------------
         order : {&#34;C&#34;, &#34;F&#34;} | None, default=&#34;C&#34;
             Memory layout.
-            * &#34;C&#34; row-major (C-style);
-            * &#34;F&#34; column-major (Fortran-style).
+
+            * `&#34;C&#34;` : row-major (C-style);
+            * `&#34;F&#34;` : column-major (Fortran-style).
 
         Returns
         -------
@@ -2990,18 +2892,20 @@ interpreted as dense arrays to copy, usse <code><a title="__wrapper__.SparseArra
         ----------------
         order : {&#34;C&#34;, &#34;F&#34;, &#34;A&#34;, &#34;K&#34;} | None, default=None
             Memory layout.
-            * &#34;C&#34; row-major (C-style);
-            * &#34;F&#34; column-major (Fortran-style);
-            * &#34;A&#34; (any) means &#34;F&#34; if a is Fortran contiguous, &#34;C&#34; otherwise;
-            * &#34;K&#34; (keep) preserve input order;
-            * `None` preserve input order if possible, &#34;C&#34; otherwise.
+
+            * `&#34;C&#34;` : row-major (C-style);
+            * `&#34;F&#34;` : column-major (Fortran-style);
+            * `&#34;A&#34;` : (any) `&#34;F&#34;` if a is Fortran contiguous, `&#34;C&#34;` otherwise;
+            * `&#34;K&#34;` : (keep) preserve input order;
+            * `None`: preserve input order if possible, `&#34;C&#34;` otherwise.
         copy : bool | None, default=None
             Whether to copy the underlying data.
+
             * `True` : the object is copied;
             * `None` : the the object is copied only if needed;
             * `False`: raises a `ValueError` if a copy cannot be avoided.
         owndata : bool, default=None
-            If True, ensures that the returned Struct owns its data.
+            If `True`, ensures that the returned `Struct` owns its data.
             This may trigger an additional copy.
 
         Returns
@@ -3315,39 +3219,69 @@ still be used as field names, but only through the dictionary syntax
 </ul>
 <p>The following field names are protected because they have a special
 meaning in the python language. They can still be used as field names
-through the dictionary syntax:
-<code>as</code>
-<code>assert</code>
-<code>break</code>
-<code>class</code>
-<code>continue</code>
-<code>def</code>
-<code>del</code>
-<code>elif</code>
-<code>else</code>
-<code>except</code>
-<code>False</code>
-<code>finally</code>
-<code>for</code>
-<code>from</code>
-<code>global</code>
-<code>if</code>
-<code>import</code>
-<code>in</code>
-<code>is</code>
-<code>lambda</code>
-<code>None</code>
-<code>nonlocal</code>
-<code>not</code>
-<code>or</code>
-<code>pass</code>
-<code>raise</code>
-<code>return</code>
-<code>True</code>
-<code>try</code>
-<code>while</code>
-<code>with</code>
-<code>yield</code></p></div>
+through the dictionary syntax:</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>as</code></td>
+<td><code>assert</code></td>
+<td><code>break</code></td>
+<td><code>class</code></td>
+<td><code>continue</code></td>
+<td><code>def</code></td>
+</tr>
+<tr>
+<td><code>del</code></td>
+<td><code>elif</code></td>
+<td><code>else</code></td>
+<td><code>except</code></td>
+<td><code>False</code></td>
+<td><code>finally</code></td>
+</tr>
+<tr>
+<td><code>for</code></td>
+<td><code>from</code></td>
+<td><code>global</code></td>
+<td><code>if</code></td>
+<td><code>import</code></td>
+<td><code>in</code></td>
+</tr>
+<tr>
+<td><code>is</code></td>
+<td><code>lambda</code></td>
+<td><code>None</code></td>
+<td><code>nonlocal</code></td>
+<td><code>not</code></td>
+<td><code>or</code></td>
+</tr>
+<tr>
+<td><code>pass</code></td>
+<td><code>raise</code></td>
+<td><code>return</code></td>
+<td><code>True</code></td>
+<td><code>try</code></td>
+<td><code>while</code></td>
+</tr>
+<tr>
+<td><code>with</code></td>
+<td><code>yield</code></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
 <h3>Ancestors</h3>
 <ul class="hlist">
 <li>__wrapper__._DictMixin</li>
@@ -3381,19 +3315,27 @@ through the dictionary syntax:
 <h2 id="other-parameters">Other Parameters</h2>
 <dl>
 <dt><strong><code>order</code></strong> :&ensp;<code>{"C", "F", "A", "K"} | None</code>, default=<code>None</code></dt>
-<dd>Memory layout.
-* "C" row-major (C-style);
-* "F" column-major (Fortran-style);
-* "A" (any) means "F" if a is Fortran contiguous, "C" otherwise;
-* "K" (keep) preserve input order;
-* <code>None</code> preserve input order if possible, "C" otherwise.</dd>
+<dd>
+<p>Memory layout.</p>
+<ul>
+<li><code>"C"</code> : row-major (C-style);</li>
+<li><code>"F"</code> : column-major (Fortran-style);</li>
+<li><code>"A"</code> : (any) <code>"F"</code> if a is Fortran contiguous, <code>"C"</code> otherwise;</li>
+<li><code>"K"</code> : (keep) preserve input order;</li>
+<li><code>None</code>: preserve input order if possible, <code>"C"</code> otherwise.</li>
+</ul>
+</dd>
 <dt><strong><code>copy</code></strong> :&ensp;<code>bool | None</code>, default=<code>None</code></dt>
-<dd>Whether to copy the underlying data.
-* <code>True</code> : the object is copied;
-* <code>None</code> : the the object is copied only if needed;
-* <code>False</code>: raises a <code>ValueError</code> if a copy cannot be avoided.</dd>
+<dd>
+<p>Whether to copy the underlying data.</p>
+<ul>
+<li><code>True</code> : the object is copied;</li>
+<li><code>None</code> : the the object is copied only if needed;</li>
+<li><code>False</code>: raises a <code>ValueError</code> if a copy cannot be avoided.</li>
+</ul>
+</dd>
 <dt><strong><code>owndata</code></strong> :&ensp;<code>bool</code>, default=<code>None</code></dt>
-<dd>If True, ensures that the returned Struct owns its data.
+<dd>If <code>True</code>, ensures that the returned <code><a title="__wrapper__.Struct" href="#__wrapper__.Struct">Struct</a></code> owns its data.
 This may trigger an additional copy.</dd>
 </dl>
 <h2 id="returns">Returns</h2>
@@ -3421,9 +3363,13 @@ This may trigger an additional copy.</dd>
 <h2 id="other-parameters">Other Parameters</h2>
 <dl>
 <dt><strong><code>order</code></strong> :&ensp;<code>{"C", "F"} | None</code>, default=<code>"C"</code></dt>
-<dd>Memory layout.
-* "C" row-major (C-style);
-* "F" column-major (Fortran-style).</dd>
+<dd>
+<p>Memory layout.</p>
+<ul>
+<li><code>"C"</code> : row-major (C-style);</li>
+<li><code>"F"</code> : column-major (Fortran-style).</li>
+</ul>
+</dd>
 </dl>
 <h2 id="returns">Returns</h2>
 <dl>
@@ -3518,7 +3464,7 @@ def as_struct(self) -&gt; &#34;Struct&#34;:
 </summary>
 <pre><code class="python">class WrappedArray(np.ndarray, AnyWrappedArray):
     &#34;&#34;&#34;
-    Base class for &#34;arrays of things&#34; (Array, Cell, Struct.)
+    Base class for &#34;arrays of things&#34; (`Array`, `Cell`, `Struct`)
     &#34;&#34;&#34;
 
     # Value used to initalize empty arrays
@@ -3555,7 +3501,7 @@ def as_struct(self) -&gt; &#34;Struct&#34;:
             yield self[i]
 
     def __getitem__(self, index):
-        &#34;&#34;&#34;Resize array if needed, then fallback to np.ndarray indexing.&#34;&#34;&#34;
+        &#34;&#34;&#34;Resize array if needed, then fallback to `np.ndarray` indexing.&#34;&#34;&#34;
         try:
             return super().__getitem__(index)
         except IndexError:
@@ -3567,7 +3513,7 @@ def as_struct(self) -&gt; &#34;Struct&#34;:
             return self._return_delayed(index)
 
     def __setitem__(self, index, value):
-        &#34;&#34;&#34;Resize array if needed, then fallback to np.ndarray indexing.&#34;&#34;&#34;
+        &#34;&#34;&#34;Resize array if needed, then fallback to `np.ndarray` indexing.&#34;&#34;&#34;
         value = MatlabType.from_any(value)
         try:
             return super().__setitem__(index, value)
@@ -3646,12 +3592,13 @@ def as_struct(self) -&gt; &#34;Struct&#34;:
         Resize the array so that the (multidimensional) index is not OOB.
 
         We only support a restricted number of cases:
-            * Index should only contain integers and slices
-              (no smart indexing, no new axis, no ellipsis)
-            * Only integer indices are used to compute the new size.
-              This is to be consistent with numpy, where slice-indexing never
-              raises IndexError (but instead returns the overlap between
-              the array and the slice -- eventually empty).
+
+        * Index should only contain integers and slices
+          (no smart indexing, no new axis, no ellipsis)
+        * Only integer indices are used to compute the new size.
+          This is to be consistent with numpy, where slice-indexing never
+          raises `IndexError` (but instead returns the overlap between
+          the array and the slice -- eventually empty).
 
         Other cases could be handled but require much more complicated logic.
         &#34;&#34;&#34;
@@ -3755,7 +3702,7 @@ def as_struct(self) -&gt; &#34;Struct&#34;:
             #   call to the ndarray accessor will do.
             return super().__getitem__(index)</code></pre>
 </details>
-<div class="desc"><p>Base class for "arrays of things" (Array, Cell, Struct.)</p></div>
+<div class="desc"><p>Base class for "arrays of things" (<code><a title="__wrapper__.Array" href="#__wrapper__.Array">Array</a></code>, <code><a title="__wrapper__.Cell" href="#__wrapper__.Cell">Cell</a></code>, <code><a title="__wrapper__.Struct" href="#__wrapper__.Struct">Struct</a></code>)</p></div>
 <h3>Ancestors</h3>
 <ul class="hlist">
 <li>numpy.ndarray</li>
@@ -3788,8 +3735,23 @@ def as_struct(self) -&gt; &#34;Struct&#34;:
 <span>Expand source code</span>
 </summary>
 <pre><code class="python">class WrappedDelayedArray(AnyDelayedArray):
+    &#34;&#34;&#34;
+    Base class for future objects with known type.
+
+    See `DelayedStruct`, `DelayedCell`, `DelayedArray`.
+    &#34;&#34;&#34;
 
     def __init__(self, future, parent, *index):
+        &#34;&#34;&#34;
+        Parameters
+        ----------
+        future : Struct | Cell | Array
+            Concrete object that will be inserted in the parent later.
+        parent : Struct | Cell | AnyDelayedArray
+            Parent object that contains the future object.
+        *index : int | str
+            Index of the future obect in its parent.
+        &#34;&#34;&#34;
         super().__init__(parent, *index)
         self._future = future
 
@@ -3812,91 +3774,16 @@ def as_struct(self) -&gt; &#34;Struct&#34;:
         self._future.__setattr__(key, value)
         self._finalize()</code></pre>
 </details>
-<div class="desc"><p>This is an object that we return when we don't know how an indexed
-element will be used yet.</p>
-<p>It decides whether it is a Struct, Cell or Array based on the
-type of indexing that is used.</p>
-<p>In Matlab:
-* <code>a(x,y)
-= num</code>
-indicates that <code>a</code> is a numeric array;
-* <code>a(x,y)
-= cell</code> indicates that <code>a</code> is a cell array;
-* <code>a{x,y}
-= any</code>
-indicates that <code>a</code> is a cell array;
-* <code>a(x,y).f = any</code>
-indicates that <code>a</code> is a struct array;
-* <code>a.f
-= any</code>
-indicates that <code>a</code> is a struct.</p>
-<p>These indexing operations can be chained, so in
-<code>a(x).b.c{y}.d(z) = 2</code>:
-* <code>a</code>
-is a struct array;
-* <code>b</code>
-is a struct;
-* <code>c</code>
-is a cell;
-* <code>c{y}</code> is a struct
-* <code>d</code>
-is a numeric array.</p>
-<p>In Python, there is only one type of indexing (<code>[]</code>). This is a problem as
-we cannot differentiate <code>a{x}.b = y</code> &ndash; where <code>a</code> is a cell that contains
-a struct &ndash; from <code>a(x).b = y</code> &mdash; where <code>a</code> is a struct array.</p>
-<p>One solution may be to abuse the "call" operator <code>()</code>, so that it returns a
-cell. This would work in some situations (<code>a[x].b = y</code> is a struct array,
-whereas <code>a(x).b = y</code> is a cell of struct). However, the statement
-<code>a(x) = y</code> (which would correspond to matlab's <code>a{x} = y</code>) is not valid
-python syntax. Furthermore, it would induce a new problem, as cells could
-not be differentiated from function handles, in some cases.</p>
-<p>Instead, the use of brackets automatically transforms the object into
-either:
-* a <code><a title="__wrapper__.Struct" href="#__wrapper__.Struct">Struct</a></code> (in all "get" cases, and in the "set" context <code>a[x] = y</code>,
-when <code>y</code> is either a <code>dict</code> or a <code><a title="__wrapper__.Struct" href="#__wrapper__.Struct">Struct</a></code>); or
-* a <code><a title="__wrapper__.Array" href="#__wrapper__.Array">Array</a></code> (in the "set" context <code>a[x] = y</code>, when <code>y</code> is neither a
-<code>dict</code> nor a <code><a title="__wrapper__.Struct" href="#__wrapper__.Struct">Struct</a></code>).</p>
-<p>Alternatively, if the user wishes to specify which type the object should
-take, we implement the properties <code>as_cell</code>, <code>as_struct</code> and <code>as_num</code>.</p>
-<p>Therefore:
-* <code>a[x,y]
-= num</code>
-: <code>a</code> is a numeric array;
-* <code>a[x,y]
-= struct</code> : <code>a</code> is a numeric array;
-* <code>a[x,y].f
-= any</code>
-: <code>a</code> is a struct array;
-* <code>a(x,y).f
-= any</code>
-: <code>a</code> is a cell array containing a struct;
-* <code>a.f
-= any</code>
-: <code>a</code> is a struct.</p>
-<p>And explictly:
-* <code>a.as_cell[x,y]
-= any</code>
-: <code>a</code> is a cell array;
-* <code>a.as_struct[x,y].f = any</code>
-: <code>a</code> is a struct array;
-* <code>a.as_cell[x,y].f
-= any</code>
-: <code>a</code> is a cell array containing a struct;
-* <code>a.as_num[x,y]
-= num</code>
-: <code>a</code> is a numeric array.</p>
+<div class="desc"><p>Base class for future objects with known type.</p>
+<p>See <code><a title="__wrapper__.DelayedStruct" href="#__wrapper__.DelayedStruct">DelayedStruct</a></code>, <code><a title="__wrapper__.DelayedCell" href="#__wrapper__.DelayedCell">DelayedCell</a></code>, <code><a title="__wrapper__.DelayedArray" href="#__wrapper__.DelayedArray">DelayedArray</a></code>.</p>
 <h2 id="parameters">Parameters</h2>
 <dl>
-<dt><strong><code>parent</code></strong> :&ensp;<code>ndarray | dict</code></dt>
-<dd>Reference to the object that will eventually contain
-this element.
-* If the containing array is a Cell, <code>parent</code> should be a
-<code>ndarray</code> view of that cell, and <code>index</code> should be a
-[tuple of] int.
-* If the containing array is a Struct, <code>parent</code> should be a
-<code>dict</code>, and <code>index</code> should be a string.</dd>
-<dt><strong><code>index</code></strong> :&ensp;<code>str | [tuple of] int</code></dt>
-<dd>Index into the parent where this element will be inserted.</dd>
+<dt><strong><code>future</code></strong> :&ensp;<code>Struct | Cell | Array</code></dt>
+<dd>Concrete object that will be inserted in the parent later.</dd>
+<dt><strong><code>parent</code></strong> :&ensp;<code>Struct | Cell | AnyDelayedArray</code></dt>
+<dd>Parent object that contains the future object.</dd>
+<dt><strong><code>*index</code></strong> :&ensp;<code>int | str</code></dt>
+<dd>Index of the future obect in its parent.</dd>
 </dl></div>
 <h3>Ancestors</h3>
 <ul class="hlist">
