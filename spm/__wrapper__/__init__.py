@@ -1,10 +1,11 @@
+from .runtime import Runtime
 from .matlab_class import MatlabClass
 from .matlab_function import MatlabFunction
 from .cell import Cell
 from .struct import Struct
 from .array import Array
 from .sparse_array import SparseArray
-from .runtime import Runtime
+
 
 # ----------------------------------------------------------------------
 # Questions
