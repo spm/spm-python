@@ -1,4 +1,12 @@
-from .__wrapper__ import Struct, Cell, Array, SparseArray, Runtime
+from .__wrapper__ import (
+    Runtime, 
+    MatlabClass,
+    Struct, 
+    Cell,
+    Array, 
+    SparseArray, 
+)
+
 from . import cheats
 from .file_array import file_array
 from .gifti import gifti
