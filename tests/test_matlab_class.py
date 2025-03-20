@@ -21,7 +21,7 @@ def mock_runtime_call(f, *args, **kwargs):
         return orig_runtime_call(f, *args, **kwargs)
 
 
-@patch('spm.__wrapper__.Runtime.Runtime.call', mock_runtime_call)
+@patch('spm.__wrapper__.runtime.Runtime.call', mock_runtime_call)
 class TestMatlabClass(unittest.TestCase):
     def setUp(self):
 

@@ -178,7 +178,8 @@ class Array(_ListishMixin, WrappedArray):
         array : Array
             Converted array.
         """
-        from .Cell import Cell # FIXME: avoid circular import
+        from .. import Cell # FIXME: avoid circular import
+        
         if not isinstance(other, Cell):
             raise TypeError(f"Expected a {Cell} but got a {type(other)}")
         order = kwargs.get("order", None)

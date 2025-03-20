@@ -1,4 +1,5 @@
 from .core import MatlabType
+from .runtime import Runtime
 
 import numpy as np
 import warnings
@@ -7,7 +8,6 @@ class MatlabClass(MatlabType):
     _subclasses = dict()
 
     def __new__(cls, *args, _objdict=None, **kwargs):
-        from .Runtime import Runtime
 
         if _objdict is None:
             if cls.__name__ in MatlabClass._subclasses.keys():
@@ -88,6 +88,7 @@ class MatlabClass(MatlabType):
             raise IndexError(index)
 
     def _process_index(self, ind, k=1, n=1):
+        # FIXME: This should not need to call matlab
         try:
             return tuple(
                 self._process_index(i, k+1, len(ind))
@@ -95,8 +96,6 @@ class MatlabClass(MatlabType):
             )
         except TypeError:
             pass
-
-        from .Runtime import Runtime 
 
         if not hasattr(self, '__endfn'):
             self.__endfn = Runtime.call('str2func', 'end')

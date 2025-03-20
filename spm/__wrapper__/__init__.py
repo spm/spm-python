@@ -1,12 +1,13 @@
 from . import utils
 from . import core
-from .Runtime import Runtime
-from .MatlabClass import MatlabClass
-from .MatlabFunction import MatlabFunction
-from .Cell import Cell
-from .Struct import Struct
-from .Array import Array
-from .SparseArray import SparseArray
+from . import helpers
+from .runtime import Runtime
+from .matlab_class import MatlabClass
+from .matlab_function import MatlabFunction
+from .cell import Cell
+from .struct import Struct
+from .array import Array
+from .sparse_array import SparseArray
 
 
 # ----------------------------------------------------------------------

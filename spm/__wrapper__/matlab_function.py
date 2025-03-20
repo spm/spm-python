@@ -1,5 +1,5 @@
 from .core import MatlabType
-from .Runtime import Runtime
+from .runtime import Runtime
 from .utils import _import_matlab
 
 class MatlabFunction(MatlabType):

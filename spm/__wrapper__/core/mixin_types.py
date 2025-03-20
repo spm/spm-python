@@ -14,8 +14,7 @@ from collections.abc import (
 
 from typing import TYPE_CHECKING
 if TYPE_CHECKING:
-    from .Struct import Struct
-    from .Cell import Cell
+    from .. import Struct, Cell
 
 class _ListishMixin:
     """These methods are implemented in Cell and Array, but not Struct."""
@@ -451,7 +450,7 @@ class _DictMixin(MutableMapping):
 
             parent = getattr(self, "_delayed_wrapper", self)
 
-            from ..Struct import Struct # FIXME: circular imports
+            from ..struct import Struct # FIXME: circular imports
             delayed = Struct(self.shape)
             opt = dict(
                 flags=['refs_ok', 'zerosize_ok', 'multi_index'],
@@ -532,7 +531,7 @@ class _DictMixin(MutableMapping):
                 item.setdefault(key, value)
 
     def update(self, other):
-        from ..Struct import Struct # FIXME: circular imports
+        from ..struct import Struct # FIXME: circular imports
         other = Struct.from_any(other)
         other = np.ndarray.view(other, np.ndarray)
         other = np.broadcast_to(other, self.shape)
@@ -578,6 +577,6 @@ class _DictMixin(MutableMapping):
             return np.broadcast_to(self, shape)
 
         def to_cell(self) -> "Cell":
-            from ..Cell import Cell # FIXME: circular imports
+            from .. import Cell # FIXME: circular imports
             return np.ndarray.view(self, Cell)
 

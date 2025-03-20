@@ -60,6 +60,7 @@ class Runtime:
             # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
             print(Runtime._help)
             raise e
+        
         # Make sure matlab is imported
         _import_matlab()
 

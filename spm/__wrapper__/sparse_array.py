@@ -6,7 +6,7 @@ from .utils import (
     _spcopy_if_needed,
     sparse
 )
-from .Array import Array
+from .array import Array
 
 import numpy as np
 import warnings
