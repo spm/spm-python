@@ -20,14 +20,12 @@ class MatlabType(object):
         from .delayed_types import AnyDelayedArray
 
          # FIXME: Circular import
-        from .. import (
-            Cell,
-            Array, 
-            MatlabFunction,
-            MatlabClass,
-            Struct,
-            SparseArray,
-        )
+        from ..cell import Cell
+        from ..array import Array
+        from ..matlab_function import MatlabFunction
+        from ..matlab_class import MatlabClass
+        from ..struct import Struct
+        from ..sparse_array import SparseArray
 
         # Conversion rules:
         # - we do not convert to matlab's own array types

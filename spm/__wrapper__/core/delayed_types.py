@@ -193,7 +193,7 @@ class AnyDelayedArray(AnyMatlabArray):
         return self._future
 
     def as_obj(self, obj):
-        from .. import MatlabClass
+        from ..matlab_class import MatlabClass
         if (
             self._future is not None and
             not isinstance(self._future, MatlabClass)
@@ -216,12 +216,10 @@ class AnyDelayedArray(AnyMatlabArray):
         return self.as_struct[key]
 
     def __setitem__(self, index, value):
-        from .. import (
-            MatlabClass, 
-            Cell, 
-            Array,
-            Struct
-        )
+        from ..matlab_class import MatlabClass
+        from ..cell import Cell
+        from ..struct import Struct
+        from ..array import Array
 
         if isinstance(index, str):
             arr = self.as_struct
@@ -317,7 +315,7 @@ class DelayedStruct(WrappedDelayedArray):
         *index : int | str
             Index of the future object in its parent.
         """
-        from .. import Struct
+        from ..struct import Struct
         future = Struct.from_shape(shape)
         future._delayed_wrapper = self
         super().__init__(future, parent, *index)
@@ -341,7 +339,7 @@ class DelayedCell(WrappedDelayedArray):
         *index : int | str
             Index of the future object in its parent.
         """
-        from .. import Cell
+        from ..cell import Cell
         future = Cell.from_shape(shape)
         future._delayed_wrapper = self
         super().__init__(future, parent, *index)
@@ -375,7 +373,7 @@ class DelayedArray(WrappedDelayedArray):
         *index : int | str
             Index of the future object in its parent.
         """
-        from .. import Array
+        from ..array import Array
         future = Array.from_shape(shape)
         future._delayed_wrapper = self
         super().__init__(future, parent, *index)

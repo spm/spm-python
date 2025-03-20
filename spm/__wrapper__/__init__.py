@@ -5,10 +5,6 @@ from .struct import Struct
 from .array import Array
 from .sparse_array import SparseArray
 from .runtime import Runtime
-from . import utils
-from . import core
-from . import helpers
-
 
 # ----------------------------------------------------------------------
 # Questions

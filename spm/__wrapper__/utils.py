@@ -72,5 +72,5 @@ def _matlab_array_types():
 
 def _empty_array():
     """Matlab's default cell/struct elements are 0x0 arrays."""
-    from . import Array
+    from .array import Array
     return Array.from_shape([0, 0])

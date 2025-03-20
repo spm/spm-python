@@ -271,7 +271,7 @@ class Struct(_DictMixin, WrappedArray):
     @classmethod
     def from_cell(cls, other, **kwargs) -> "Struct":
         """See `from_any`."""
-        from . import Cell
+        from .cell import Cell
         if not isinstance(other, Cell):
             raise TypeError(f"Expected a {Cell} but got a {type(other)}.")
         return cls.from_any(other, **kwargs)
@@ -352,7 +352,7 @@ class Struct(_DictMixin, WrappedArray):
                 for key in keys:
                     asdict[key].append(item[key])
 
-        from . import Cell
+        from .cell import Cell
         for key in keys:
             asdict[key] = Cell.from_any(asdict[key])
 

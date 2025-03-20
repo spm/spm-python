@@ -2,9 +2,6 @@ from .core import MatlabType
 from .utils import _import_matlab
 
 
-# ----------------------------------------------------------------------
-# Runtime
-# ----------------------------------------------------------------------
 class Runtime:
     """Namespace that holds the matlab runtime. All methods are static."""
 

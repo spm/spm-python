@@ -1,5 +1,4 @@
 from .core import MatlabType
-from .runtime import Runtime
 from .utils import _import_matlab
 
 class MatlabFunction(MatlabType):
@@ -37,4 +36,5 @@ class MatlabFunction(MatlabType):
         return cls._from_runtime(other)
 
     def __call__(self, *args, **kwargs):
+        from .runtime import Runtime
         return Runtime.call(self._matlab_object, *args, **kwargs)

@@ -12,10 +12,6 @@ from collections.abc import (
     ItemsView
 )
 
-from typing import TYPE_CHECKING
-if TYPE_CHECKING:
-    from .. import Struct, Cell
-
 class _ListishMixin:
     """These methods are implemented in Cell and Array, but not Struct."""
 
@@ -572,11 +568,11 @@ class _DictMixin(MutableMapping):
         def __new__(cls, arg, **kwargs):
             return cls.from_any(arg, **kwargs)
 
-        def broadcast_to_struct(self, struct: "Struct") -> "Struct":
+        def broadcast_to_struct(self, struct):
             shape = struct.shape + self.shape[len(struct.shape):]
             return np.broadcast_to(self, shape)
 
-        def to_cell(self) -> "Cell":
-            from .. import Cell # FIXME: circular imports
+        def to_cell(self):
+            from ..cell import Cell # FIXME: circular imports
             return np.ndarray.view(self, Cell)
 

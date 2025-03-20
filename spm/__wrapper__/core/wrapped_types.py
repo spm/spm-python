@@ -293,7 +293,8 @@ class WrappedArray(np.ndarray, AnyWrappedArray):
                 arr[scalar_index] = scalar
 
     def _return_delayed(self, index):
-        from .. import Cell, Struct # FIXME: avoid circular import
+        from ..cell import Cell
+        from ..struct import Struct # FIXME: avoid circular import
 
         if not isinstance(index, tuple):
             index = (index,)
