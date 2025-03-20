@@ -3,7 +3,7 @@ import warnings
 import numpy as np
 from unittest.mock import patch, MagicMock
 
-from spm.__wrapper__ import MatlabClass, Runtime
+from spm.__wrapper__ import Runtime, MatlabClass 
 
 
 orig_runtime_call = Runtime.call
@@ -21,7 +21,7 @@ def mock_runtime_call(f, *args, **kwargs):
         return orig_runtime_call(f, *args, **kwargs)
 
 
-@patch('spm.__wrapper__.Runtime.call', mock_runtime_call)
+@patch('spm.__wrapper__.runtime.Runtime.call', mock_runtime_call)
 class TestMatlabClass(unittest.TestCase):
     def setUp(self):
 

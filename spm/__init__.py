@@ -1,5 +1,12 @@
-from .__wrapper__ import Struct, Cell, Array, SparseArray, Runtime
-from . import cheats
+from .__wrapper__ import (
+    Runtime, 
+    MatlabClass,
+    Struct, 
+    Cell,
+    Array, 
+    SparseArray, 
+    helpers
+)
 from .file_array import file_array
 from .gifti import gifti
 from .meeg import meeg
