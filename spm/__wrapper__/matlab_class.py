@@ -1,5 +1,4 @@
 from .core import MatlabType
-from .runtime import Runtime
 
 import numpy as np
 import warnings
@@ -8,9 +7,10 @@ class MatlabClass(MatlabType):
     _subclasses = dict()
 
     def __new__(cls, *args, _objdict=None, **kwargs):
-
         if _objdict is None:
             if cls.__name__ in MatlabClass._subclasses.keys():
+                from .runtime import Runtime
+
                 obj = Runtime.call(cls.__name__, *args, **kwargs)
             else:
                 obj = super().__new__(cls)
@@ -96,6 +96,8 @@ class MatlabClass(MatlabType):
             )
         except TypeError:
             pass
+        
+        from .runtime import Runtime
 
         if not hasattr(self, '__endfn'):
             self.__endfn = Runtime.call('str2func', 'end')
