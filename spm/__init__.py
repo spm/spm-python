@@ -5,9 +5,8 @@ from .__wrapper__ import (
     Cell,
     Array, 
     SparseArray, 
+    helpers
 )
-
-from . import cheats
 from .file_array import file_array
 from .gifti import gifti
 from .meeg import meeg
