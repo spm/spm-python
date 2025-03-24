@@ -33,7 +33,7 @@ class Runtime:
 
     @staticmethod
     def _process_argout(res):
-        return MatlabType.from_any(res)
+        return MatlabType._from_runtime(res)
 
     @staticmethod
     def _import_initialize():
@@ -57,7 +57,7 @@ class Runtime:
             # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
             print(Runtime._help)
             raise e
-        
+
         # Make sure matlab is imported
         _import_matlab()
 
@@ -69,4 +69,3 @@ class Runtime:
     If the issue persists, please open an issue with the entire error
     message at https://github.com/spm/spm-python/issues.
     """
-
