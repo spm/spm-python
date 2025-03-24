@@ -1,4 +1,4 @@
-from spm.__wrapper__ import Runtime, MatlabClass
+from mpython import Runtime, MatlabClass
 
 
 class cfg_leaf(MatlabClass):

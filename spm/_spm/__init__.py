@@ -117,14 +117,8 @@ class _PathInitializer(object):
             raise RuntimeError('Operating system {0} is not supported.'.format(self.system))
 
         path_elements = []
-        
         if self.path_var in os.environ:
             path_elements = os.environ[self.path_var].split(os.pathsep)
-        
-        # On the Mac, do an additional check on DYLD_FALLBACK_LIBRARY_PATH environment variable
-        if not path_elements and self.system == 'Darwin':
-            path_elements = os.environ['DYLD_FALLBACK_LIBRARY_PATH'].split(os.pathsep)
-
         if not path_elements:
             if self.system == 'Darwin':
                 raise RuntimeError('On the Mac, you must run mwpython rather than python ' + 

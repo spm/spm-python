@@ -6,6 +6,7 @@ from .end2end_restingfMRI import end2end_restingfMRI
 from .spm_eeg_test_coverage import spm_eeg_test_coverage
 from .test_checkcode import test_checkcode
 from .test_gifti import test_gifti
+from .test_regress_fmri_glm_dcm import test_regress_fmri_glm_dcm
 from .test_regress_fmri_group import test_regress_fmri_group
 from .test_regress_spm_dcm_fmri import test_regress_spm_dcm_fmri
 from .test_regress_spm_distort_mesh import test_regress_spm_distort_mesh

@@ -1,12 +1,4 @@
-from .__wrapper__ import (
-    Runtime, 
-    MatlabClass,
-    Struct, 
-    Cell,
-    Array, 
-    SparseArray, 
-    helpers
-)
+from mpython import Runtime, MatlabClass, MatlabFunction, Cell, Struct, Array, SparseArray
 from .file_array import file_array
 from .gifti import gifti
 from .meeg import meeg
