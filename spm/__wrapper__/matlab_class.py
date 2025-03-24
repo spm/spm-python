@@ -1,7 +1,8 @@
+import warnings
+import numpy as np
+
 from .core import MatlabType
 
-import numpy as np
-import warnings
 
 class MatlabClass(MatlabType):
     _subclasses = dict()
@@ -96,7 +97,7 @@ class MatlabClass(MatlabType):
             )
         except TypeError:
             pass
-        
+
         from .runtime import Runtime
 
         if not hasattr(self, '__endfn'):

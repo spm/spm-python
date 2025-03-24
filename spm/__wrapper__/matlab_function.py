@@ -1,6 +1,7 @@
 from .core import MatlabType
 from .utils import _import_matlab
 
+
 class MatlabFunction(MatlabType):
     """
     Wrapper for matlab function handles.
@@ -19,7 +20,7 @@ class MatlabFunction(MatlabType):
         matlab = _import_matlab()
         if not isinstance(matlab_object, matlab.object):
             raise TypeError("Expected a matlab.object")
-        
+
         self._matlab_object = matlab_object
 
     def _as_runtime(self):

@@ -1,5 +1,8 @@
+import warnings
+import numpy as np
+
 from .core import (
-    AnyWrappedArray, 
+    AnyWrappedArray,
     _SparseMixin
 )
 from .utils import (
@@ -8,8 +11,6 @@ from .utils import (
 )
 from .array import Array
 
-import numpy as np
-import warnings
 
 if sparse:
     class WrappedSparseArray(sparse.sparray, AnyWrappedArray):
@@ -205,4 +206,3 @@ else:
             obj = cls.from_shape(shape, dtype=dtype)
             obj[tuple(indices)] = values
             return obj
-

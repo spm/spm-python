@@ -7,9 +7,11 @@ try:
 except (ImportError, ModuleNotFoundError):
     sparse = None
 
+
 # ----------------------------------------------------------------------
 # Helpers
 # ----------------------------------------------------------------------
+
 
 # We'll complain later if the runtime is not instantiated
 def _import_matlab():
@@ -17,7 +19,7 @@ def _import_matlab():
         import matlab
     except (ImportError, ModuleNotFoundError):
         matlab = None
-    return matlab 
+    return matlab
 
 
 def _copy_if_needed(out, inp, copy=None) -> np.ndarray:

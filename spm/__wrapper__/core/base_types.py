@@ -1,9 +1,10 @@
+from functools import partial
+import numpy as np
 from ..utils import (
     _matlab_array_types,
     _import_matlab,
-) 
-from functools import partial
-import numpy as np
+)
+
 
 class MatlabType(object):
     """Generic type for objects that have an exact matlab equivalent."""
@@ -16,10 +17,10 @@ class MatlabType(object):
 
         !!! warning "Conversion is performed in-place when possible."
         """
-         # FIXME: Circular import
+        # FIXME: Circular import
         from .delayed_types import AnyDelayedArray
 
-         # FIXME: Circular import
+        # FIXME: Circular import
         from ..cell import Cell
         from ..array import Array
         from ..matlab_function import MatlabFunction
@@ -45,10 +46,19 @@ class MatlabType(object):
             if "type__" in other:
                 type__ = other["type__"]
 
-                if type__ == "structarray":
+                if type__ == "none":
+                    # MPython returns this when run with nargout=1 but
+                    # should have been nargout=0
+                    return None
+
+                elif type__ == "structarray":
                     # MPython returns a list of dictionaries in data__
                     # and the array shape in size__.
                     return Struct._from_runtime(other)
+
+                elif type__ == "emptystruct":
+                    # 0x0 struct
+                    return Struct.from_shape([0])
 
                 elif type__ == "cell":
                     # MPython returns a list of dictionaries in data__
@@ -81,8 +91,7 @@ class MatlabType(object):
 
             else:
                 other = type(other)(
-                    zip(other.keys(),
-                        map(_from_any, other.values()))
+                    zip(other.keys(), map(_from_any, other.values()))
                 )
                 return Struct.from_any(other)
 
@@ -135,7 +144,7 @@ class MatlabType(object):
         Convert object to representation that the matlab runtime understands.
         """
         to_runtime = cls._to_runtime
-        from ..utils import sparse # FIXME: Circular import
+        from ..utils import sparse  # FIXME: Circular import
 
         if isinstance(obj, MatlabType):
             # class / structarray / cell
@@ -159,7 +168,7 @@ class MatlabType(object):
             return obj
 
         elif sparse and isinstance(obj, sparse.sparray):
-            from .SparseArray import SparseArray
+            from ..sparse_array import SparseArray
             return SparseArray.from_any(obj)._as_runtime()
 
         else:
@@ -181,6 +190,7 @@ class MatlabType(object):
         # Backward compatibility
         # FIXME: Or just keep `_as_matlab_object` and remove `_as_runtime`?
         return self._as_runtime()
+
 
 class AnyMatlabArray(MatlabType):
     """Base class for all matlab-like arrays (numeric, cell, struct)."""
