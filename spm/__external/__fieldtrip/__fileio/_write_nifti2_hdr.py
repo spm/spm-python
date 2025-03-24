@@ -1,4 +1,4 @@
-from spm.__wrapper__ import Runtime
+from mpython import Runtime
 
 
 def _write_nifti2_hdr(*args, **kwargs):

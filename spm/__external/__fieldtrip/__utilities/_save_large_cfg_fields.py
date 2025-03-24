@@ -1,4 +1,4 @@
-from spm.__wrapper__ import Runtime
+from mpython import Runtime
 
 
 def _save_large_cfg_fields(*args, **kwargs):

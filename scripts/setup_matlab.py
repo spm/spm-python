@@ -2,7 +2,6 @@ import os
 import os.path as op
 import platform
 import subprocess
-import sys
 import urllib.request
 import zipfile
 from itertools import product
@@ -170,7 +169,7 @@ def setup_matlab_environment(download):
     runtime_installed = download_and_install_matlab_runtime()
 
     if not runtime_installed:
-        raise SystemError(f'Failed to install Matlab Runtime. Please try manually.')
+        raise SystemError('Failed to install Matlab Runtime. Please try manually.')
 
     runtime_found = add_matlab_to_path('R2024b')
 

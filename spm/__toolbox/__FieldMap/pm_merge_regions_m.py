@@ -1,4 +1,4 @@
-from spm.__wrapper__ import Runtime
+from mpython import Runtime
 
 
 def pm_merge_regions_m(*args, **kwargs):

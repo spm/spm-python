@@ -1,4 +1,4 @@
-from spm.__wrapper__ import Runtime
+from mpython import Runtime
 
 
 def fiff_pick_types_evoked(*args, **kwargs):

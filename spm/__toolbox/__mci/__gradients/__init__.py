@@ -12,3 +12,19 @@ from .spm_mci_sens import spm_mci_sens
 from .spm_mci_sens_init import spm_mci_sens_init
 from .spm_mci_sens_sun import spm_mci_sens_sun
 
+
+__all__ = [
+    "mci_compare_setup",
+    "spm_mci_adjoint",
+    "spm_mci_adjoint_int",
+    "spm_mci_adjoint_sun",
+    "spm_mci_flow_sun",
+    "spm_mci_flow_t",
+    "spm_mci_fwd",
+    "spm_mci_grad_curve",
+    "spm_mci_joint",
+    "spm_mci_joint_grad",
+    "spm_mci_sens",
+    "spm_mci_sens_init",
+    "spm_mci_sens_sun"
+]

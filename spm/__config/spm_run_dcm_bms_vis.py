@@ -1,4 +1,4 @@
-from spm.__wrapper__ import Runtime
+from mpython import Runtime
 
 
 def spm_run_dcm_bms_vis(*args, **kwargs):

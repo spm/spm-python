@@ -1,4 +1,4 @@
-from spm.__wrapper__ import Runtime
+from mpython import Runtime
 
 
 def spm_eeg_select_event_ui(*args, **kwargs):

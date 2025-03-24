@@ -19,3 +19,26 @@ from .spm_resss import spm_resss
 from .spm_spm_ui import spm_spm_ui
 from .spm_tbx_config2cfg import spm_tbx_config2cfg
 
+
+__all__ = [
+    "loadxml",
+    "savexml",
+    "spm_add",
+    "spm_adjmean_fmri_ui",
+    "spm_adjmean_ui",
+    "spm_atranspa",
+    "spm_chi2_plot",
+    "spm_digamma",
+    "spm_dirichlet",
+    "spm_eeval",
+    "spm_fMRI_design_show",
+    "spm_imcalc_ui",
+    "spm_load_float",
+    "spm_matlab_version_chk",
+    "spm_mean",
+    "spm_mean_ui",
+    "spm_read_hdr",
+    "spm_resss",
+    "spm_spm_ui",
+    "spm_tbx_config2cfg"
+]

@@ -32,3 +32,39 @@ from ._setsubfield import _setsubfield
 from ._sine_taper import _sine_taper
 from ._sine_taper_scaled import _sine_taper_scaled
 
+
+__all__ = [
+    "ft_specest_hilbert",
+    "ft_specest_irasa",
+    "ft_specest_mtmconvol",
+    "ft_specest_mtmfft",
+    "ft_specest_neuvar",
+    "ft_specest_tfr",
+    "ft_specest_wavelet",
+    "_alpha_taper",
+    "_defaultId",
+    "_filter_with_correction",
+    "_fir_df",
+    "_fixname",
+    "_ft_debug",
+    "_ft_error",
+    "_ft_getopt",
+    "_ft_info",
+    "_ft_notice",
+    "_ft_notification",
+    "_ft_platform_supports",
+    "_ft_preproc_bandpassfilter",
+    "_ft_preproc_polyremoval",
+    "_ft_version",
+    "_ft_warning",
+    "_getsubfield",
+    "_isalmostequal",
+    "_issubfield",
+    "_istrue",
+    "_keyval",
+    "_keyvalcheck",
+    "_rmsubfield",
+    "_setsubfield",
+    "_sine_taper",
+    "_sine_taper_scaled"
+]

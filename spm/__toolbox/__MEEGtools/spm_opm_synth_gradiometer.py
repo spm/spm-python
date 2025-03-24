@@ -1,4 +1,4 @@
-from spm.__wrapper__ import Runtime
+from mpython import Runtime
 
 
 def spm_opm_synth_gradiometer(*args, **kwargs):

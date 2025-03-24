@@ -1,4 +1,4 @@
-from spm.__wrapper__ import Runtime
+from mpython import Runtime
 
 
 def cfg_basicio_rewrite(*args, **kwargs):

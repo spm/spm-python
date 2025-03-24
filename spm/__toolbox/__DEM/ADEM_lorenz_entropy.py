@@ -1,4 +1,4 @@
-from spm.__wrapper__ import Runtime
+from mpython import Runtime
 
 
 def ADEM_lorenz_entropy(*args, **kwargs):

@@ -1,4 +1,4 @@
-from spm.__wrapper__ import Runtime
+from mpython import Runtime
 
 
 def DEM_demo_GF_and_KF(*args, **kwargs):

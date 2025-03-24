@@ -24,3 +24,31 @@ from .solid_angle import solid_angle
 from .splint_gh import splint_gh
 from .write_ctf_shm import write_ctf_shm
 
+
+__all__ = [
+    "det2x2",
+    "det3x3",
+    "getpid",
+    "inv2x2",
+    "inv3x3",
+    "lmoutr",
+    "ltrisect",
+    "meg_leadfield1",
+    "mtimes2x2",
+    "mtimes3x3",
+    "mxDeserialize",
+    "mxSerialize",
+    "plgndr",
+    "plinproj",
+    "ptriproj",
+    "read_16bit",
+    "read_24bit",
+    "read_ctf_shm",
+    "rfbevent",
+    "routlm",
+    "sandwich2x2",
+    "sandwich3x3",
+    "solid_angle",
+    "splint_gh",
+    "write_ctf_shm"
+]

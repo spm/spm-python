@@ -1,3 +1,3 @@
-from .isfile import isfile
-from .isfolder import isfolder
+from .isfile import isfile as isfile
+from .isfolder import isfolder as isfolder
 

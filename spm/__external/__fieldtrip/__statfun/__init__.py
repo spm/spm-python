@@ -24,3 +24,31 @@ from ._istrue import _istrue
 from ._rmsubfield import _rmsubfield
 from ._setsubfield import _setsubfield
 
+
+__all__ = [
+    "ft_statfun_actvsblT",
+    "ft_statfun_bayesfactor",
+    "ft_statfun_cohensd",
+    "ft_statfun_correlationT",
+    "ft_statfun_depsamplesFmultivariate",
+    "ft_statfun_depsamplesFunivariate",
+    "ft_statfun_depsamplesT",
+    "ft_statfun_depsamplesregrT",
+    "ft_statfun_diff",
+    "ft_statfun_diff_itc",
+    "ft_statfun_gcmi",
+    "ft_statfun_indepsamplesF",
+    "ft_statfun_indepsamplesT",
+    "ft_statfun_indepsamplesZcoh",
+    "ft_statfun_indepsamplesregrT",
+    "ft_statfun_mean",
+    "ft_statfun_pooledT",
+    "ft_statfun_roc",
+    "_defaultId",
+    "_fixname",
+    "_getsubfield",
+    "_issubfield",
+    "_istrue",
+    "_rmsubfield",
+    "_setsubfield"
+]

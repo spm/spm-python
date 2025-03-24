@@ -1,4 +1,4 @@
-from spm.__wrapper__ import Runtime
+from mpython import Runtime
 
 
 def test_spm_dcm_bmr_all(*args, **kwargs):

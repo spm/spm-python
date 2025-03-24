@@ -1,4 +1,4 @@
-from spm.__wrapper__ import Runtime
+from mpython import Runtime
 
 
 def spm_dcm_fmri_graph_gen(*args, **kwargs):

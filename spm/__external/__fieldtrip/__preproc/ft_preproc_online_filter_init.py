@@ -1,4 +1,4 @@
-from spm.__wrapper__ import Runtime
+from mpython import Runtime
 
 
 def ft_preproc_online_filter_init(*args, **kwargs):

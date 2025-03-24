@@ -1,6 +1,7 @@
 import unittest
 import numpy as np
-from itertools import product, starmap
+from itertools import product
+
 from spm import Struct, Array, Runtime
 
 

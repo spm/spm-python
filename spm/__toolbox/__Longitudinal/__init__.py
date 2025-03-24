@@ -8,3 +8,15 @@ from .spm_rice_mixture import spm_rice_mixture
 from .spm_series_align import spm_series_align
 from .tbx_cfg_longitudinal import tbx_cfg_longitudinal
 
+
+__all__ = [
+    "spm_compute_avg_mat",
+    "spm_dexpm",
+    "spm_groupwise_ls",
+    "spm_meanm",
+    "spm_noise_estimate",
+    "spm_pairwise",
+    "spm_rice_mixture",
+    "spm_series_align",
+    "tbx_cfg_longitudinal"
+]

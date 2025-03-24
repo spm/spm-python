@@ -20,3 +20,27 @@ from .spm_mb_shape import spm_mb_shape
 from .spm_mbnorm import spm_mbnorm
 from .tbx_cfg_mb import tbx_cfg_mb
 
+
+__all__ = [
+    "fil_fit",
+    "fil_install",
+    "fil_io",
+    "fil_label",
+    "fil_prec",
+    "fil_prune",
+    "fil_push_train_data",
+    "fil_subvol",
+    "fil_train",
+    "spm_label",
+    "spm_mb_appearance",
+    "spm_mb_classes",
+    "spm_mb_fit",
+    "spm_mb_gmm",
+    "spm_mb_init",
+    "spm_mb_io",
+    "spm_mb_merge",
+    "spm_mb_output",
+    "spm_mb_shape",
+    "spm_mbnorm",
+    "tbx_cfg_mb"
+]

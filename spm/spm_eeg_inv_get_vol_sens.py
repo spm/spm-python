@@ -1,4 +1,4 @@
-from spm.__wrapper__ import Runtime
+from mpython import Runtime
 
 
 def spm_eeg_inv_get_vol_sens(*args, **kwargs):

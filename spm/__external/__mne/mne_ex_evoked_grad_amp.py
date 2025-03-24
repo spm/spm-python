@@ -1,4 +1,4 @@
-from spm.__wrapper__ import Runtime
+from mpython import Runtime
 
 
 def mne_ex_evoked_grad_amp(*args, **kwargs):

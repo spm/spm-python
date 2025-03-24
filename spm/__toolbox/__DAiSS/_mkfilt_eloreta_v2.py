@@ -1,4 +1,4 @@
-from spm.__wrapper__ import Runtime
+from mpython import Runtime
 
 
 def _mkfilt_eloreta_v2(*args, **kwargs):

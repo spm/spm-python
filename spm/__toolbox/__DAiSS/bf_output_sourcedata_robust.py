@@ -1,4 +1,4 @@
-from spm.__wrapper__ import Runtime
+from mpython import Runtime
 
 
 def bf_output_sourcedata_robust(*args, **kwargs):

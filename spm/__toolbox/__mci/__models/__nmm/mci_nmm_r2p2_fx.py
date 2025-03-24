@@ -1,4 +1,4 @@
-from spm.__wrapper__ import Runtime
+from mpython import Runtime
 
 
 def mci_nmm_r2p2_fx(*args, **kwargs):

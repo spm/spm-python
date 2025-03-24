@@ -1,5 +1,4 @@
 import unittest
-import numpy as np
 
 from spm import Struct, Cell, Array, cfg_dep, Runtime
 
@@ -194,7 +193,7 @@ class BatchCreationTestCase(unittest.TestCase):
         matlabbatch(2).spm.spatial.coreg.estimate.eoptions.cost_fun = 'nmi'
         matlabbatch(2).spm.spatial.coreg.estimate.eoptions.sep = Array.from_any([4, 2])
         matlabbatch(2).spm.spatial.coreg.estimate.eoptions.tol = Array.from_any([0.02, 0.02, 0.02, 0.001, 0.001, 0.001, 0.01, 0.01, 0.01, 0.001, 0.001, 0.001])
-        matlabbatch(3).spm.spatial.coreg.estimate.eoptions.fwhm = Array.from_any([7, 7]);
+        matlabbatch(3).spm.spatial.coreg.estimate.eoptions.fwhm = Array.from_any([7, 7])
         s1 = Runtime.call('substruct', '.','val', '{}',{3}, '.','val', '{}',{1}, '.','val', '{}',{1}, '.','val', '{}',{1})
         s2 = Runtime.call('substruct', '.','cfiles')
         matlabbatch(3).spm.spatial.preproc.channel.vols[0] = cfg_dep('Coregister: Estimate: Coregistered Images', s1, s2)

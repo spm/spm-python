@@ -1,2 +1,2 @@
-from .removevars import removevars
+from .removevars import removevars as removevars
 

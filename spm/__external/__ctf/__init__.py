@@ -11,3 +11,18 @@ from .writeCTFhdm import writeCTFhdm
 from .writeMarkerFile import writeMarkerFile
 from .writeRes4 import writeRes4
 
+
+__all__ = [
+    "addCTFtrial",
+    "getCTFdata",
+    "readCPersist",
+    "readCTFMRI",
+    "readCTFds",
+    "readCTFhdm",
+    "setCTFDataBalance",
+    "writeCTFMRI",
+    "writeCTFds",
+    "writeCTFhdm",
+    "writeMarkerFile",
+    "writeRes4"
+]

@@ -1,4 +1,4 @@
-from spm.__wrapper__ import Runtime
+from mpython import Runtime
 
 
 def cfg_cfg_basicio_def(*args, **kwargs):

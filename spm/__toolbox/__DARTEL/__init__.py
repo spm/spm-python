@@ -17,3 +17,24 @@ from .spm_klaff import spm_klaff
 from .spm_norm_population import spm_norm_population
 from .tbx_cfg_dartel import tbx_cfg_dartel
 
+
+__all__ = [
+    "dartel3",
+    "optimN",
+    "optimNn",
+    "optim_compat",
+    "spm_dartel_dotprods",
+    "spm_dartel_import",
+    "spm_dartel_invnorm",
+    "spm_dartel_jacobian",
+    "spm_dartel_kernel",
+    "spm_dartel_norm",
+    "spm_dartel_norm_fun",
+    "spm_dartel_resids",
+    "spm_dartel_smooth",
+    "spm_dartel_template",
+    "spm_dartel_warp",
+    "spm_klaff",
+    "spm_norm_population",
+    "tbx_cfg_dartel"
+]

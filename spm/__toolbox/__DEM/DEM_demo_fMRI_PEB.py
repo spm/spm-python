@@ -1,4 +1,4 @@
-from spm.__wrapper__ import Runtime
+from mpython import Runtime
 
 
 def DEM_demo_fMRI_PEB(*args, **kwargs):

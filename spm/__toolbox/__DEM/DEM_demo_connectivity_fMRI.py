@@ -1,4 +1,4 @@
-from spm.__wrapper__ import Runtime
+from mpython import Runtime
 
 
 def DEM_demo_connectivity_fMRI(*args, **kwargs):

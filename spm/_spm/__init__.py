@@ -68,7 +68,7 @@ class _PathInitializer(object):
     
         # This will return 'Windows', 'Linux', or 'Darwin' (for Mac).
         self.system = platform.system() 
-        if not self.system in _PathInitializer.PLATFORM_DICT:
+        if self.system not in _PathInitializer.PLATFORM_DICT:
             raise RuntimeError('{0} is not a supported platform.'.format(self.system))
         else:
             # path_var is the OS-dependent name of the path variable ('PATH', 'LD_LIBRARY_PATH', "DYLD_LIBRARY_PATH')
@@ -338,7 +338,7 @@ def initialize_runtime(option_list):
 # When running interactively, the user should call exit() after done using the package. 
 # When running a script, the runtime will automatically be terminated when the script ends.
 def terminate_runtime():
-    _pir.terminate_runtime();
+    _pir.terminate_runtime()
 
 @atexit.register
 def __exit_packages():

@@ -1,4 +1,4 @@
-from spm.__wrapper__ import Runtime
+from mpython import Runtime
 
 
 def MDP_DEM_Oculomotion_demo(*args, **kwargs):

@@ -9,3 +9,16 @@ from .spm_rglm import spm_rglm
 from .spm_samp_gauss import spm_samp_gauss
 from .spm_samp_mix import spm_samp_mix
 
+
+__all__ = [
+    "spm_MNpdf",
+    "spm_boxcars",
+    "spm_glm",
+    "spm_kmeans",
+    "spm_kmeans1",
+    "spm_mix",
+    "spm_mix_demo1d",
+    "spm_rglm",
+    "spm_samp_gauss",
+    "spm_samp_mix"
+]

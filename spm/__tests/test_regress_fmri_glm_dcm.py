@@ -1,4 +1,4 @@
-from spm.__wrapper__ import Runtime
+from mpython import Runtime
 
 
 def test_regress_fmri_glm_dcm(*args, **kwargs):

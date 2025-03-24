@@ -1,4 +1,4 @@
-from spm.__wrapper__ import Runtime
+from mpython import Runtime
 
 
 def cfg_example_run_cumsum2(*args, **kwargs):

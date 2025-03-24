@@ -1,4 +1,4 @@
-from spm.__wrapper__ import Runtime
+from mpython import Runtime
 
 
 def DEMO_dcm_fmri_nnm(*args, **kwargs):

@@ -19,3 +19,26 @@ from ._defaultId import _defaultId
 from ._ismatch import _ismatch
 from ._select_channel_list import _select_channel_list
 
+
+__all__ = [
+    "ft_trialfun_balert",
+    "ft_trialfun_bids",
+    "ft_trialfun_brainvision_segmented",
+    "ft_trialfun_edf",
+    "ft_trialfun_emgdetect",
+    "ft_trialfun_example1",
+    "ft_trialfun_example2",
+    "ft_trialfun_general",
+    "ft_trialfun_gui",
+    "ft_trialfun_hed",
+    "ft_trialfun_imotions",
+    "ft_trialfun_neuromagSTI016fix",
+    "ft_trialfun_realtime",
+    "ft_trialfun_show",
+    "ft_trialfun_trial",
+    "ft_trialfun_twoclass_classification",
+    "_bids_sidecar",
+    "_defaultId",
+    "_ismatch",
+    "_select_channel_list"
+]

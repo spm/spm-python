@@ -8,3 +8,15 @@ from .tsss_config_momentspace import tsss_config_momentspace
 from .tsss_spm_enm import tsss_spm_enm
 from .tsss_spm_momentspace import tsss_spm_momentspace
 
+
+__all__ = [
+    "_fiff_getpos",
+    "_fiff_getpos_ctf",
+    "_ft_getpos",
+    "_origheader_getpos",
+    "tbx_cfg_tsss",
+    "tsss_config",
+    "tsss_config_momentspace",
+    "tsss_spm_enm",
+    "tsss_spm_momentspace"
+]
