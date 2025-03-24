@@ -44,14 +44,6 @@ class ArrayTestCase(unittest.TestCase):
         self.assertEqual(a.dtype, np.float64)
         self.assertTrue((a == 0).all())
 
-    def test_array_instantiate_shape_2d(self):
-        a = Array(2, 3, 4, 5)
-
-        self.assertIsInstance(a, Array)
-        self.assertEqual(a.shape, (2, 3, 4, 5))
-        self.assertEqual(a.dtype, np.float64)
-        self.assertTrue((a == 0).all())
-
     def test_array_instantiate_with_shape_order(self):
         a = Array([3, 2], order="C")
         self.assertIsInstance(a, Array)

@@ -69,8 +69,8 @@ class TestStruct(unittest.TestCase):
 
         self.assertTrue(
             all(
-                isinstance(s[i, j, k, l], Struct)
-                for i, j, k, l in product(range(2), range(3), range(4), range(5))
+                isinstance(s[i, j, k, m], Struct)
+                for i, j, k, m in product(range(2), range(3), range(4), range(5))
             )
         )
 
