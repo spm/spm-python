@@ -1,3 +1,5 @@
+import numpy as np
+
 from .core import (
     WrappedArray,
     _DictMixin,
@@ -5,11 +7,9 @@ from .core import (
     DelayedStruct
 )
 from .utils import (
-    _copy_if_needed, 
+    _copy_if_needed,
     _empty_array
 )
-
-import numpy as np
 
 
 class Struct(_DictMixin, WrappedArray):
@@ -358,7 +358,7 @@ class Struct(_DictMixin, WrappedArray):
 
         raise ValueError(keys)
         return asdict
-    
+
     def _allkeys(self):
         # Return all keys present across all elements.
         # Keys are ordered by (1) element (2) within-element order
@@ -478,4 +478,3 @@ class Struct(_DictMixin, WrappedArray):
             return _DictMixin.__delitem__(self, key)
         except KeyError as e:
             raise AttributeError(str(e))
-

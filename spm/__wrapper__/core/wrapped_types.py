@@ -1,6 +1,6 @@
 from .base_types import (
-    MatlabType, 
-    AnyMatlabArray, 
+    MatlabType,
+    AnyMatlabArray,
 )
 from .delayed_types import (
     AnyDelayedArray,
@@ -8,6 +8,7 @@ from .delayed_types import (
     DelayedStruct,
 )
 import numpy as np
+
 
 # ----------------------------------------------------------------------
 # WrappedArray
@@ -294,7 +295,7 @@ class WrappedArray(np.ndarray, AnyWrappedArray):
 
     def _return_delayed(self, index):
         from ..cell import Cell
-        from ..struct import Struct # FIXME: avoid circular import
+        from ..struct import Struct  # FIXME: avoid circular import
 
         if not isinstance(index, tuple):
             index = (index,)

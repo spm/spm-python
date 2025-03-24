@@ -1,3 +1,4 @@
+import numpy as np
 from .core import (
     MatlabType,
     WrappedArray,
@@ -6,14 +7,12 @@ from .core import (
     _ListMixin,
 )
 from .utils import (
-    _empty_array, 
-    _copy_if_needed, 
-    _import_matlab, 
+    _empty_array,
+    _copy_if_needed,
+    _import_matlab,
     _matlab_array_types
 )
 global matlab
-
-import numpy as np
 
 
 class Cell(_ListMixin, WrappedArray):

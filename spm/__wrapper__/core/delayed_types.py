@@ -256,6 +256,7 @@ class AnyDelayedArray(AnyMatlabArray):
         self.as_struct[key] = value
         return self._finalize()  # Setter -> we can trigger finalize
 
+
 class WrappedDelayedArray(AnyDelayedArray):
     """
     Base class for future objects with known type.

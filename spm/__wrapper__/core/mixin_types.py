@@ -1,16 +1,17 @@
+from collections.abc import (
+    MutableSequence,
+    MutableMapping,
+    KeysView,
+    ValuesView,
+    ItemsView
+)
+import numpy as np
+
 from .base_types import MatlabType
 from .wrapped_types import WrappedArray
 from .delayed_types import AnyDelayedArray
 from ..utils import _matlab_array_types, _empty_array
 
-import numpy as np
-from collections.abc import (
-    MutableSequence, 
-    MutableMapping, 
-    KeysView, 
-    ValuesView, 
-    ItemsView
-)
 
 class _ListishMixin:
     """These methods are implemented in Cell and Array, but not Struct."""
@@ -81,7 +82,7 @@ class _SparseMixin:
         indices = np.asarray(dictobj['indices__'], dtype=np.long) - 1
         values = np.asarray(dictobj['values__'], dtype=dtype).ravel()
         return cls.from_coo(values, indices.T, size)
-    
+
 
 class _ListMixin(_ListishMixin, MutableSequence):
     """These methods are implemented in Cell, but not in Array or Struct."""
@@ -303,7 +304,6 @@ class _ListMixin(_ListishMixin, MutableSequence):
                 self.reverse()
 
 
-
 class _DictMixin(MutableMapping):
 
     # NOTE:
@@ -446,7 +446,7 @@ class _DictMixin(MutableMapping):
 
             parent = getattr(self, "_delayed_wrapper", self)
 
-            from ..struct import Struct # FIXME: circular imports
+            from ..struct import Struct  # FIXME: circular imports
             delayed = Struct(self.shape)
             opt = dict(
                 flags=['refs_ok', 'zerosize_ok', 'multi_index'],
@@ -527,7 +527,7 @@ class _DictMixin(MutableMapping):
                 item.setdefault(key, value)
 
     def update(self, other):
-        from ..struct import Struct # FIXME: circular imports
+        from ..struct import Struct  # FIXME: circular imports
         other = Struct.from_any(other)
         other = np.ndarray.view(other, np.ndarray)
         other = np.broadcast_to(other, self.shape)
@@ -542,7 +542,7 @@ class _DictMixin(MutableMapping):
                 item.update(other_elem)
 
     # --- helper ------------------------------------------------------
-    class deal: # FIXME: Removed dependency to Cell
+    class deal:  # FIXME: Removed dependency to Cell
         """
         Helper class to assign values into a specific field of a Struct array.
 
@@ -573,6 +573,5 @@ class _DictMixin(MutableMapping):
             return np.broadcast_to(self, shape)
 
         def to_cell(self):
-            from ..cell import Cell # FIXME: circular imports
+            from ..cell import Cell  # FIXME: circular imports
             return np.ndarray.view(self, Cell)
-
