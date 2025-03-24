@@ -3,7 +3,15 @@ from .DEMO_model_reduction_ERP import DEMO_model_reduction_ERP
 from .DEMO_tvec_csd_sim import DEMO_tvec_csd_sim
 from .DEMO_tvec_erp_mmn import DEMO_tvec_erp_mmn
 from .DEMO_tvec_erp_sim import DEMO_tvec_erp_sim
-from .__NMDA_NMM_MFM import *
+from .__NMDA_NMM_MFM import (
+    spm_csd_mtf_plot_pole_zero,
+    spm_dcm_x_neural_NMDA,
+    spm_fx_NMDA,
+    spm_fx_mfm_NMDA,
+    spm_lfp_mtf_sample,
+    spm_nmm_priors_NMDA,
+    spm_x_mfm_NMDA
+)
 from .Neural_demo import Neural_demo
 from .ROBOT_NMM import ROBOT_NMM
 from .spm_csd_demo import spm_csd_demo
@@ -48,6 +56,13 @@ __all__ = [
     "DEMO_tvec_csd_sim",
     "DEMO_tvec_erp_mmn",
     "DEMO_tvec_erp_sim",
+    "spm_csd_mtf_plot_pole_zero",
+    "spm_dcm_x_neural_NMDA",
+    "spm_fx_NMDA",
+    "spm_fx_mfm_NMDA",
+    "spm_lfp_mtf_sample",
+    "spm_nmm_priors_NMDA",
+    "spm_x_mfm_NMDA",
     "Neural_demo",
     "ROBOT_NMM",
     "spm_csd_demo",

@@ -35,7 +35,9 @@ from .cfg_vout_named_file import cfg_vout_named_file
 from .cfg_vout_named_input import cfg_vout_named_input
 from .cfg_vout_runjobs import cfg_vout_runjobs
 from .cfg_vout_save_vars import cfg_vout_save_vars
-from .__src import *
+from .__src import (
+    create_cfg_cfg_basicio
+)
 
 
 __all__ = [
@@ -75,5 +77,6 @@ __all__ = [
     "cfg_vout_named_file",
     "cfg_vout_named_input",
     "cfg_vout_runjobs",
-    "cfg_vout_save_vars"
+    "cfg_vout_save_vars",
+    "create_cfg_cfg_basicio"
 ]

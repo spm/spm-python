@@ -4,11 +4,9 @@
 """ Package for executing deployed MATLAB functions """
 
 import atexit
-import glob
 import importlib
 import os
 import os.path
-import pdb
 import platform
 import re
 import sys
