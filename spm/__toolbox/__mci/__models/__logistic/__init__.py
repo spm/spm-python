@@ -10,5 +10,5 @@ __all__ = [
     "mci_logistic_deriv",
     "mci_logistic_gen",
     "mci_logistic_like",
-    "mci_logistic_struct"
+    "mci_logistic_struct",
 ]

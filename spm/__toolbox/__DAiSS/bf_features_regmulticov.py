@@ -3,9 +3,9 @@ from mpython import Runtime
 
 def bf_features_regmulticov(*args, **kwargs):
     """
-      Simple covariance computation with regularization  
-       __________________________________________________________________________  
-      
+      Simple covariance computation with regularization
+       __________________________________________________________________________
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DAiSS/bf_features_regmulticov.m )
 

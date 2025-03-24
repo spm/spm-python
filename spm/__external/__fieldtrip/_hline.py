@@ -3,8 +3,8 @@ from mpython import Runtime
 
 def _hline(*args, **kwargs):
     """
-      HLINE plot a horizontal line in the current graph  
-      
+      HLINE plot a horizontal line in the current graph
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/hline.m )
 

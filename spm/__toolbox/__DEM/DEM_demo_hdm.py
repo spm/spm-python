@@ -3,9 +3,9 @@ from mpython import Runtime
 
 def DEM_demo_hdm(*args, **kwargs):
     """
-      demo for Hemodynamic deconvolution  
-       __________________________________________________________________________  
-      
+      demo for Hemodynamic deconvolution
+       __________________________________________________________________________
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DEM/DEM_demo_hdm.m )
 

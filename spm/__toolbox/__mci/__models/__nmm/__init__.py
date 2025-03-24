@@ -18,5 +18,5 @@ __all__ = [
     "mci_nmm_r2p2_dfdx",
     "mci_nmm_r2p2_fx",
     "mci_nmm_r2p6_fx",
-    "mci_nmm_struct"
+    "mci_nmm_struct",
 ]

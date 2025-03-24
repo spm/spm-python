@@ -3,13 +3,13 @@ from mpython import Runtime
 
 def bf_output_image_cfGLM(*args, **kwargs):
     """
-      Compute phase-amplitude coupling using a general linear model  
-        currently takes both low frequency phase and amplitude as regressors  
-        needs epoched data - uses epochs for statistics  
-        writes out images for summary phase-amplitude coupling and  
-        amplitude-amplitude coupling, as well as B coefficients per trial  
-       __________________________________________________________________________  
-      
+      Compute phase-amplitude coupling using a general linear model
+        currently takes both low frequency phase and amplitude as regressors
+        needs epoched data - uses epochs for statistics
+        writes out images for summary phase-amplitude coupling and
+        amplitude-amplitude coupling, as well as B coefficients per trial
+       __________________________________________________________________________
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DAiSS/bf_output_image_cfGLM.m )
 

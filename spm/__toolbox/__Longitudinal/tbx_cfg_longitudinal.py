@@ -3,9 +3,9 @@ from mpython import Runtime
 
 def tbx_cfg_longitudinal(*args, **kwargs):
     """
-      MATLABBATCH Configuration file for toolbox 'Longitudinal'  
-       __________________________________________________________________________  
-      
+      MATLABBATCH Configuration file for toolbox 'Longitudinal'
+       __________________________________________________________________________
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/Longitudinal/tbx_cfg_longitudinal.m )
 

@@ -3,10 +3,10 @@ from mpython import Runtime
 
 def _neuralynx_timestamp(*args, **kwargs):
     """
-     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  
-        SUBFUNCTION for reading a single timestamp of a single channel Neuralynx file  
-       %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  
-      
+     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+        SUBFUNCTION for reading a single timestamp of a single channel Neuralynx file
+       %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/neuralynx_timestamp.m )
 

@@ -3,14 +3,14 @@ from mpython import Runtime
 
 def _mni2tal(*args, **kwargs):
     """
-      Converts coordinates from MNI brain to best guess  
-        for equivalent Talairach coordinates  
-        FORMAT outpoints = mni2tal(inpoints)  
-        Where inpoints is N by 3 or 3 by N matrix of coordinates  
-         (N being the number of points)  
-        outpoints is the coordinate matrix with Talairach points  
-        Matthew Brett 10/8/99  
-      
+      Converts coordinates from MNI brain to best guess
+        for equivalent Talairach coordinates
+        FORMAT outpoints = mni2tal(inpoints)
+        Where inpoints is N by 3 or 3 by N matrix of coordinates
+         (N being the number of points)
+        outpoints is the coordinate matrix with Talairach points
+        Matthew Brett 10/8/99
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/mni2tal.m )
 

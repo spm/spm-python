@@ -48,5 +48,5 @@ __all__ = [
     "pm_seed",
     "pm_smooth_phasemap",
     "pm_unwrap",
-    "tbx_cfg_fieldmap"
+    "tbx_cfg_fieldmap",
 ]

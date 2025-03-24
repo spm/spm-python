@@ -3,11 +3,11 @@ from mpython import Runtime
 
 def _tfcestat(*args, **kwargs):
     """
-      TFCESTAT computes threshold-free cluster statistic multidimensional channel-freq-time or  
-        volumetric source data  
-         
-        See also CLUSTERSTAT, FINDCLUSTER  
-      
+      TFCESTAT computes threshold-free cluster statistic multidimensional channel-freq-time or
+        volumetric source data
+
+        See also CLUSTERSTAT, FINDCLUSTER
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/tfcestat.m )
 

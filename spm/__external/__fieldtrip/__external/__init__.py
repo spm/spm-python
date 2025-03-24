@@ -1,28 +1,7 @@
-from .__fileexchange import (
-    uimage,
-    uimagesc
-)
-from .__images import (
-    rgb2hsv
-)
-from .__signal import (
-    boxcar,
-    flattopwin,
-    hanning,
-    hilbert
-)
-from .__stats import (
-    binocdf,
-    binopdf,
-    common_size,
-    mvnrnd,
-    nanvar,
-    _iscomplex,
-    _size_equal,
-    range_,
-    tcdf,
-    tinv
-)
+from .__fileexchange import uimage, uimagesc
+from .__images import rgb2hsv
+from .__signal import boxcar, flattopwin, hanning, hilbert
+from .__stats import binocdf, binopdf, common_size, mvnrnd, nanvar, range_, tcdf, tinv
 
 
 __all__ = [
@@ -38,9 +17,7 @@ __all__ = [
     "common_size",
     "mvnrnd",
     "nanvar",
-    "_iscomplex",
-    "_size_equal",
     "range_",
     "tcdf",
-    "tinv"
+    "tinv",
 ]

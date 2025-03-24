@@ -1,7 +1,3 @@
-from ._bst_prctile import _bst_prctile
-from ._bst_progress import _bst_progress
-from ._macro_method import _macro_method
-from ._process_fooof import _process_fooof
 from .spm_MEEGtools import spm_MEEGtools
 from .spm_create_labels import spm_create_labels
 from .spm_eeg_bst_fooof import spm_eeg_bst_fooof
@@ -44,10 +40,6 @@ from .spm_opm_vslm import spm_opm_vslm
 
 
 __all__ = [
-    "_bst_prctile",
-    "_bst_progress",
-    "_macro_method",
-    "_process_fooof",
     "spm_MEEGtools",
     "spm_create_labels",
     "spm_eeg_bst_fooof",
@@ -86,5 +78,5 @@ __all__ = [
     "spm_opm_rpsd",
     "spm_opm_sim",
     "spm_opm_synth_gradiometer",
-    "spm_opm_vslm"
+    "spm_opm_vslm",
 ]

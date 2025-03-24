@@ -3,9 +3,9 @@ from mpython import Runtime
 
 def _nearest_vec(*args, **kwargs):
     """
-      locate bilateral coordinate  
-        Copyright (C) 2022 Wellcome Centre for Human Neuroimaging  
-      
+      locate bilateral coordinate
+        Copyright (C) 2022 Wellcome Centre for Human Neuroimaging
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DAiSS/private/nearest_vec.m )
 

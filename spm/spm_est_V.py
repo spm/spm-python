@@ -3,14 +3,14 @@ from mpython import Runtime
 
 def spm_est_V(*args, **kwargs):
     """
-      Test routine to evaluate non-sphericity correction (ReML Whitening)  
-        FORMAT [h] = spm_est_V(SPM,c)  
-        SPM    - structure containing generic analysis details  
-        c      - number of contrasts to simulate (default = 4)  
-         
-        h      - hyperparameter estimates  
-       __________________________________________________________________________  
-      
+      Test routine to evaluate non-sphericity correction (ReML Whitening)
+        FORMAT [h] = spm_est_V(SPM,c)
+        SPM    - structure containing generic analysis details
+        c      - number of contrasts to simulate (default = 4)
+
+        h      - hyperparameter estimates
+       __________________________________________________________________________
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_est_V.m )
 

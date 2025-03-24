@@ -3,9 +3,9 @@ from mpython import Runtime
 
 def bf_features_contcov(*args, **kwargs):
     """
-      Robust covariance for continuous data  
-       __________________________________________________________________________  
-      
+      Robust covariance for continuous data
+       __________________________________________________________________________
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DAiSS/bf_features_contcov.m )
 

@@ -3,8 +3,8 @@ from mpython import Runtime
 
 def _sandwich3x3(*args, **kwargs):
     """
-      SANDWICH3X3 compute x*y*x' provided y is Hermitian and dimensionality is 3x3xN  
-      
+      SANDWICH3X3 compute x*y*x' provided y is Hermitian and dimensionality is 3x3xN
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/sandwich3x3.m )
 

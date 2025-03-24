@@ -16,7 +16,7 @@ from .__DARTEL import (
     spm_dartel_warp,
     spm_klaff,
     spm_norm_population,
-    tbx_cfg_dartel
+    tbx_cfg_dartel,
 )
 from .__DAiSS import (
     bf_copy,
@@ -92,29 +92,9 @@ from .__DAiSS import (
     bf_write_gifti,
     bf_write_nifti,
     bf_write_spmeeg,
-    _DeFleCT,
-    _GALA_calculate_distance,
-    _GALA_clustering,
-    _GALA_find_localmin,
-    _GALA_invert,
-    _MNestimator,
-    _Tikhonov_rank_def,
-    _bf_fuse_lf,
-    _bf_reml_sc,
-    _bf_spm_reml_sc,
-    _ft_inverse_beamformer_dics,
-    _get_components,
-    _mkfilt_eloreta_v2,
-    _nearest_vec,
-    _nut_dSPM,
-    _nut_sLORETA,
-    _nut_swLORETA,
-    _output_image_mv_cva,
-    _spm_pca_order,
-    _vbfa_aug2015,
     spm_DAiSS,
     spm_beamforming,
-    tbx_cfg_bf
+    tbx_cfg_bf,
 )
 from .__DEM import (
     ADEM_SHC_demo,
@@ -445,7 +425,7 @@ from .__DEM import (
     spm_voice_segmentation,
     spm_voice_speak,
     spm_voice_test,
-    spm_voice_warp
+    spm_voice_warp,
 )
 from .__FieldMap import (
     FieldMap,
@@ -471,7 +451,7 @@ from .__FieldMap import (
     pm_seed,
     pm_smooth_phasemap,
     pm_unwrap,
-    tbx_cfg_fieldmap
+    tbx_cfg_fieldmap,
 )
 from .__Longitudinal import (
     spm_compute_avg_mat,
@@ -482,7 +462,7 @@ from .__Longitudinal import (
     spm_pairwise,
     spm_rice_mixture,
     spm_series_align,
-    tbx_cfg_longitudinal
+    tbx_cfg_longitudinal,
 )
 from .__MB import (
     fil_fit,
@@ -505,13 +485,9 @@ from .__MB import (
     spm_mb_output,
     spm_mb_shape,
     spm_mbnorm,
-    tbx_cfg_mb
+    tbx_cfg_mb,
 )
 from .__MEEGtools import (
-    _bst_prctile,
-    _bst_progress,
-    _macro_method,
-    _process_fooof,
     spm_MEEGtools,
     spm_create_labels,
     spm_eeg_bst_fooof,
@@ -550,7 +526,7 @@ from .__MEEGtools import (
     spm_opm_rpsd,
     spm_opm_sim,
     spm_opm_synth_gradiometer,
-    spm_opm_vslm
+    spm_opm_vslm,
 )
 from .__NVC import (
     spm_dcm_nvc,
@@ -559,7 +535,7 @@ from .__NVC import (
     spm_dcm_nvc_specify,
     spm_fx_cmc_tfm_gen,
     spm_gen_par,
-    spm_nvc_gen
+    spm_nvc_gen,
 )
 from .__Neural_Models import (
     DEMO_dcm_fmri_nnm,
@@ -609,7 +585,7 @@ from .__Neural_Models import (
     spm_nmda_priors,
     spm_opt_bfun,
     spm_seizure_demo,
-    spm_sigmoid_demo
+    spm_sigmoid_demo,
 )
 from .__OldNorm import (
     spm_affreg,
@@ -619,7 +595,7 @@ from .__OldNorm import (
     spm_normalise,
     spm_normalise_disp,
     spm_run_normalise,
-    spm_write_sn
+    spm_write_sn,
 )
 from .__OldSeg import (
     spm_cfg_preproc,
@@ -629,20 +605,16 @@ from .__OldSeg import (
     spm_prep2sn,
     spm_preproc_write,
     spm_run_preproc,
-    spm_sample_priors
+    spm_sample_priors,
 )
 from .__SPEM_and_DCM import (
     spm_SEM_gen,
     spm_SEM_gen_full,
     spm_dcm_spem,
     spm_dcm_spem_data,
-    spm_dcm_spem_results
+    spm_dcm_spem_results,
 )
-from .__SRender import (
-    spm_sextract,
-    spm_srender,
-    tbx_cfg_render
-)
+from .__SRender import spm_sextract, spm_srender, tbx_cfg_render
 from .__Shoot import (
     covLin,
     spm_GPclass,
@@ -661,15 +633,11 @@ from .__Shoot import (
     spm_shoot_template,
     spm_shoot_update,
     spm_shoot_warp,
-    tbx_cfg_shoot
+    tbx_cfg_shoot,
 )
 from .__Spatial import (
     lbessi,
     pp_settings,
-    _getthreads,
-    _loadlib,
-    _ptxlocation,
-    _threadblocks,
     pull,
     pullg,
     push,
@@ -686,18 +654,14 @@ from .__Spatial import (
     spm_slice2vol_reslice,
     spm_topup,
     spm_topup_config,
-    tbx_cfg_spatial
+    tbx_cfg_spatial,
 )
 from .__TSSS import (
-    _fiff_getpos,
-    _fiff_getpos_ctf,
-    _ft_getpos,
-    _origheader_getpos,
     tbx_cfg_tsss,
     tsss_config,
     tsss_config_momentspace,
     tsss_spm_enm,
-    tsss_spm_momentspace
+    tsss_spm_momentspace,
 )
 from .__dcm_fnirs import (
     estimate_greens_mmclab,
@@ -711,7 +675,7 @@ from .__dcm_fnirs import (
     spm_fnirs_wavg,
     spm_fx_fnirs,
     spm_gx_fnirs,
-    spm_gx_state_fnirs
+    spm_gx_state_fnirs,
 )
 from .__dcm_meeg import (
     spm_L_priors,
@@ -823,7 +787,7 @@ from .__dcm_meeg import (
     spm_x_lfp,
     spm_x_mfm,
     spm_x_nmda,
-    spm_x_nmm
+    spm_x_nmm,
 )
 from .__mci import (
     mci_compare_forward,
@@ -947,7 +911,7 @@ from .__mci import (
     mci_ramsay_gen,
     mci_ramsay_gx,
     mci_ramsay_struct,
-    mci_plot_surface
+    mci_plot_surface,
 )
 from .__mixture import (
     spm_MNpdf,
@@ -959,7 +923,7 @@ from .__mixture import (
     spm_mix_demo1d,
     spm_rglm,
     spm_samp_gauss,
-    spm_samp_mix
+    spm_samp_mix,
 )
 from .__mlm import (
     spm_cva_compare,
@@ -971,7 +935,7 @@ from .__mlm import (
     spm_vpca,
     spm_vpca_f,
     spm_vpca_init,
-    spm_vpca_update
+    spm_vpca_update,
 )
 from .__spectral import (
     spm_ar,
@@ -1019,7 +983,7 @@ from .__spectral import (
     spm_ssm2csd,
     spm_ssm2ker,
     spm_ssm2mtf,
-    spm_wavspec
+    spm_wavspec,
 )
 
 
@@ -1115,26 +1079,6 @@ __all__ = [
     "bf_write_gifti",
     "bf_write_nifti",
     "bf_write_spmeeg",
-    "_DeFleCT",
-    "_GALA_calculate_distance",
-    "_GALA_clustering",
-    "_GALA_find_localmin",
-    "_GALA_invert",
-    "_MNestimator",
-    "_Tikhonov_rank_def",
-    "_bf_fuse_lf",
-    "_bf_reml_sc",
-    "_bf_spm_reml_sc",
-    "_ft_inverse_beamformer_dics",
-    "_get_components",
-    "_mkfilt_eloreta_v2",
-    "_nearest_vec",
-    "_nut_dSPM",
-    "_nut_sLORETA",
-    "_nut_swLORETA",
-    "_output_image_mv_cva",
-    "_spm_pca_order",
-    "_vbfa_aug2015",
     "spm_DAiSS",
     "spm_beamforming",
     "tbx_cfg_bf",
@@ -1521,10 +1465,6 @@ __all__ = [
     "spm_mb_shape",
     "spm_mbnorm",
     "tbx_cfg_mb",
-    "_bst_prctile",
-    "_bst_progress",
-    "_macro_method",
-    "_process_fooof",
     "spm_MEEGtools",
     "spm_create_labels",
     "spm_eeg_bst_fooof",
@@ -1663,10 +1603,6 @@ __all__ = [
     "tbx_cfg_shoot",
     "lbessi",
     "pp_settings",
-    "_getthreads",
-    "_loadlib",
-    "_ptxlocation",
-    "_threadblocks",
     "pull",
     "pullg",
     "push",
@@ -1684,10 +1620,6 @@ __all__ = [
     "spm_topup",
     "spm_topup_config",
     "tbx_cfg_spatial",
-    "_fiff_getpos",
-    "_fiff_getpos_ctf",
-    "_ft_getpos",
-    "_origheader_getpos",
     "tbx_cfg_tsss",
     "tsss_config",
     "tsss_config_momentspace",
@@ -2002,5 +1934,5 @@ __all__ = [
     "spm_ssm2csd",
     "spm_ssm2ker",
     "spm_ssm2mtf",
-    "spm_wavspec"
+    "spm_wavspec",
 ]

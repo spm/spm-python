@@ -3,8 +3,8 @@ from mpython import Runtime
 
 def _mergecellstruct(*args, **kwargs):
     """
-      MERGECELLSTRUCT is a helper function for FT_TEST  
-      
+      MERGECELLSTRUCT is a helper function for FT_TEST
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/utilities/private/mergecellstruct.m )
 

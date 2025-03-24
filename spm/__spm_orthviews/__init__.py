@@ -22,5 +22,5 @@ __all__ = [
     "spm_ov_rgb",
     "spm_ov_roi",
     "spm_ov_save",
-    "spm_ovhelper_3Dreg"
+    "spm_ovhelper_3Dreg",
 ]

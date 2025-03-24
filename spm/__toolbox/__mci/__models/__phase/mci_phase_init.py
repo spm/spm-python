@@ -3,17 +3,17 @@ from mpython import Runtime
 
 def mci_phase_init(*args, **kwargs):
     """
-      Initialise weakly coupled oscillator model  
-        FORMAT [P,M,U,Y] = mci_phase_init (d)  
-         
-        d     number of oscillators  
-         
-        P     parameters (drawn from prior)  
-        M     model structure  
-        U     inputs  
-        Y     data  
-       __________________________________________________________________________  
-      
+      Initialise weakly coupled oscillator model
+        FORMAT [P,M,U,Y] = mci_phase_init (d)
+
+        d     number of oscillators
+
+        P     parameters (drawn from prior)
+        M     model structure
+        U     inputs
+        Y     data
+       __________________________________________________________________________
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/mci/models/phase/mci_phase_init.m )
 

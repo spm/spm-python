@@ -3,12 +3,12 @@ from mpython import Runtime
 
 def spm_unlink(*args, **kwargs):
     """
-      Silently delete files on disk - a compiled routine  
-        FORMAT spm_unlink('file1','file2','file3','file4',...)  
-         
-        Remove the specified file(s) using a system call to unlink().  
-       __________________________________________________________________________  
-      
+      Silently delete files on disk - a compiled routine
+        FORMAT spm_unlink('file1','file2','file3','file4',...)
+
+        Remove the specified file(s) using a system call to unlink().
+       __________________________________________________________________________
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_unlink.m )
 

@@ -3,9 +3,9 @@ from mpython import Runtime
 
 def bf_write(*args, **kwargs):
     """
-      Write out the results of beamforming analysis  
-       __________________________________________________________________________  
-      
+      Write out the results of beamforming analysis
+       __________________________________________________________________________
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DAiSS/bf_write.m )
 

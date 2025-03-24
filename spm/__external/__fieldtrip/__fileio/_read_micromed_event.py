@@ -3,8 +3,8 @@ from mpython import Runtime
 
 def _read_micromed_event(*args, **kwargs):
     """
-      reads the events of the Micromed TRC format files  
-      
+      reads the events of the Micromed TRC format files
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/read_micromed_event.m )
 

@@ -8,5 +8,5 @@ __all__ = [
     "mci_approach_deriv",
     "mci_approach_gen",
     "mci_approach_like",
-    "mci_approach_struct"
+    "mci_approach_struct",
 ]

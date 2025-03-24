@@ -3,16 +3,16 @@ from mpython import Runtime
 
 def spm_dir_sort(*args, **kwargs):
     """
-      sorts the rows and columns of a square matrix  
-        FORMAT [A,i,j] = spm_dir_sort(A)  
-         
-        A    - matrix  
-        i,j  - indices  
-         
-        Effectively, this reorders the rows and columns of A, so that the largest  
-        elements are along the leading diagonal of A(i,j)  
-       __________________________________________________________________________  
-      
+      sorts the rows and columns of a square matrix
+        FORMAT [A,i,j] = spm_dir_sort(A)
+
+        A    - matrix
+        i,j  - indices
+
+        Effectively, this reorders the rows and columns of A, so that the largest
+        elements are along the leading diagonal of A(i,j)
+       __________________________________________________________________________
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_dir_sort.m )
 

@@ -3,9 +3,9 @@ from mpython import Runtime
 
 def test_spm_filter(*args, **kwargs):
     """
-      Unit Tests for spm_filter  
-       __________________________________________________________________________  
-      
+      Unit Tests for spm_filter
+       __________________________________________________________________________
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/tests/test_spm_filter.m )
 

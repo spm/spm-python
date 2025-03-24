@@ -3,15 +3,15 @@ from mpython import Runtime
 
 def fiff_write_dau16(*args, **kwargs):
     """
-       
-        fiff_write_dau16(fid, kind, data)  
-         
-        Writes a 16-bit integer tag to a fif file  
-         
-            fid           An open fif file descriptor  
-            kind          Tag kind  
-            data          The integers to use as data  
-      
+
+        fiff_write_dau16(fid, kind, data)
+
+        Writes a 16-bit integer tag to a fif file
+
+            fid           An open fif file descriptor
+            kind          Tag kind
+            data          The integers to use as data
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/external/mne/fiff_write_dau16.m )
 

@@ -3,9 +3,9 @@ from mpython import Runtime
 
 def spm_run_dcm_bms_vis(*args, **kwargs):
     """
-      Review BMS results  
-       __________________________________________________________________________  
-      
+      Review BMS results
+       __________________________________________________________________________
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/config/spm_run_dcm_bms_vis.m )
 

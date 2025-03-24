@@ -3,8 +3,8 @@ from mpython import Runtime
 
 def _checktime(*args, **kwargs):
     """
-      last input is always the required string  
-      
+      last input is always the required string
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/checktime.m )
 

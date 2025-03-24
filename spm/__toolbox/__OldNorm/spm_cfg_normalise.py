@@ -3,9 +3,9 @@ from mpython import Runtime
 
 def spm_cfg_normalise(*args, **kwargs):
     """
-      SPM Configuration file for toolbox 'Old Normalise'  
-       __________________________________________________________________________  
-      
+      SPM Configuration file for toolbox 'Old Normalise'
+       __________________________________________________________________________
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/OldNorm/spm_cfg_normalise.m )
 

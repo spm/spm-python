@@ -3,14 +3,14 @@ from mpython import Runtime
 
 def fiff_start_block(*args, **kwargs):
     """
-       
-        fiff_start_block(fid,kind)  
-          
-        Writes a FIFF_BLOCK_START tag  
-         
-            fid           An open fif file descriptor  
-            kind          The block kind to start  
-      
+
+        fiff_start_block(fid,kind)
+
+        Writes a FIFF_BLOCK_START tag
+
+            fid           An open fif file descriptor
+            kind          The block kind to start
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/external/mne/fiff_start_block.m )
 

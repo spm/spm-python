@@ -3,12 +3,12 @@ from mpython import Runtime
 
 def spm_mesh_mass_matrix(*args, **kwargs):
     """
-      Compute the mass matrix of a triangle mesh  
-        M        - patch structure: vertices and faces must be mx3 and nx3 arrays  
-         
-        A        - Mass matrix  
-       __________________________________________________________________________  
-      
+      Compute the mass matrix of a triangle mesh
+        M        - patch structure: vertices and faces must be mx3 and nx3 arrays
+
+        A        - Mass matrix
+       __________________________________________________________________________
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_mesh_mass_matrix.m )
 

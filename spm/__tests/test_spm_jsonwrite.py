@@ -3,9 +3,9 @@ from mpython import Runtime
 
 def test_spm_jsonwrite(*args, **kwargs):
     """
-      Unit Tests for spm_jsonwrite  
-       __________________________________________________________________________  
-      
+      Unit Tests for spm_jsonwrite
+       __________________________________________________________________________
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/tests/test_spm_jsonwrite.m )
 

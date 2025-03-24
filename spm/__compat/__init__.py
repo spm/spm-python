@@ -40,5 +40,5 @@ __all__ = [
     "spm_read_hdr",
     "spm_resss",
     "spm_spm_ui",
-    "spm_tbx_config2cfg"
+    "spm_tbx_config2cfg",
 ]

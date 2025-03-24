@@ -3,9 +3,9 @@ from mpython import Runtime
 
 def bf_output_image_kurtosis(*args, **kwargs):
     """
-      Compute kurtosis image  
-       __________________________________________________________________________  
-      
+      Compute kurtosis image
+       __________________________________________________________________________
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DAiSS/bf_output_image_kurtosis.m )
 

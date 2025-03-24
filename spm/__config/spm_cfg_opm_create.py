@@ -3,9 +3,9 @@ from mpython import Runtime
 
 def spm_cfg_opm_create(*args, **kwargs):
     """
-      Configuration file for creating OPM objects  
-       __________________________________________________________________________  
-      
+      Configuration file for creating OPM objects
+       __________________________________________________________________________
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/config/spm_cfg_opm_create.m )
 

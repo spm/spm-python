@@ -3,8 +3,8 @@ from mpython import Runtime
 
 def _elec1020_follow(*args, **kwargs):
     """
-      ELEC1020_FOLLOW  
-      
+      ELEC1020_FOLLOW
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/elec1020_follow.m )
 

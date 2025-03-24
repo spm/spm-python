@@ -3,12 +3,12 @@ from mpython import Runtime
 
 def _read_neuralynx_ncs(*args, **kwargs):
     """
-      READ_NEURALYNX_NCS reads a single continuous channel file  
-         
-        Use as  
-          [ncs] = read_neuralynx_ncs(filename)  
-          [ncs] = read_neuralynx_ncs(filename, begrecord, endrecord)  
-      
+      READ_NEURALYNX_NCS reads a single continuous channel file
+
+        Use as
+          [ncs] = read_neuralynx_ncs(filename)
+          [ncs] = read_neuralynx_ncs(filename, begrecord, endrecord)
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/read_neuralynx_ncs.m )
 

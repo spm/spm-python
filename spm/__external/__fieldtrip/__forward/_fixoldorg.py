@@ -3,8 +3,8 @@ from mpython import Runtime
 
 def _fixoldorg(*args, **kwargs):
     """
-      FIXOLDORG use "old/new" instead of "org/new"  
-      
+      FIXOLDORG use "old/new" instead of "org/new"
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/forward/private/fixoldorg.m )
 

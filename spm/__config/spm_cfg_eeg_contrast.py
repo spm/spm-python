@@ -3,9 +3,9 @@ from mpython import Runtime
 
 def spm_cfg_eeg_contrast(*args, **kwargs):
     """
-      Configuration file for computing contrast over epochs  
-       __________________________________________________________________________  
-      
+      Configuration file for computing contrast over epochs
+       __________________________________________________________________________
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/config/spm_cfg_eeg_contrast.m )
 

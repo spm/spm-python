@@ -3,9 +3,9 @@ from mpython import Runtime
 
 def test_spm_mesh_dist(*args, **kwargs):
     """
-      Unit Tests for spm_mesh_dist  
-       __________________________________________________________________________  
-      
+      Unit Tests for spm_mesh_dist
+       __________________________________________________________________________
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/tests/test_spm_mesh_dist.m )
 

@@ -3,10 +3,10 @@ from mpython import Runtime
 
 def _volumefillholes(*args, **kwargs):
     """
-      VOLUMEFILLHOLES is a helper function for segmentations  
-         
-        See also VOLUMETHRESHOLD, VOLUMESMOOTH, VOLUMEPAD, VOLUMESELECTLARGEST  
-      
+      VOLUMEFILLHOLES is a helper function for segmentations
+
+        See also VOLUMETHRESHOLD, VOLUMESMOOTH, VOLUMEPAD, VOLUMESELECTLARGEST
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/volumefillholes.m )
 

@@ -3,9 +3,9 @@ from mpython import Runtime
 
 def _join_str(*args, **kwargs):
     """
-    join_str is a function.  
-          t = join_str(separator, cells)  
-      
+    join_str is a function.
+          t = join_str(separator, cells)
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/join_str.m )
 

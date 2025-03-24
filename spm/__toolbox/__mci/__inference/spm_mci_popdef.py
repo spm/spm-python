@@ -3,10 +3,10 @@ from mpython import Runtime
 
 def spm_mci_popdef(*args, **kwargs):
     """
-      Set default parameters for population MCMC  
-        FORMAT [mh] = spm_mci_popdef (scale,tune,samp)  
-       __________________________________________________________________________  
-      
+      Set default parameters for population MCMC
+        FORMAT [mh] = spm_mci_popdef (scale,tune,samp)
+       __________________________________________________________________________
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/mci/inference/spm_mci_popdef.m )
 

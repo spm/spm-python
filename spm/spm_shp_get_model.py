@@ -3,16 +3,16 @@ from mpython import Runtime
 
 def spm_shp_get_model(*args, **kwargs):
     """
-      Get the path to a Shape PCA model file, install/download if needed.  
-         
-        FORMAT path = spm_get_model(name)  
-         
-        name     - Model variable to return  
-                   {'subspace_scaled', 'model_variables', 'Template_{01234}'}  
-        dartadir - Data directory [spm('Dir')/tpl/shp]  
-        path     - Path to model file  
-       __________________________________________________________________________  
-      
+      Get the path to a Shape PCA model file, install/download if needed.
+
+        FORMAT path = spm_get_model(name)
+
+        name     - Model variable to return
+                   {'subspace_scaled', 'model_variables', 'Template_{01234}'}
+        dartadir - Data directory [spm('Dir')/tpl/shp]
+        path     - Path to model file
+       __________________________________________________________________________
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_shp_get_model.m )
 

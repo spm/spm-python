@@ -3,21 +3,21 @@ from mpython import Runtime
 
 def _shiftpredict(*args, **kwargs):
     """
-      SHIFTPREDICT implements a shift-predictor for testing significance  
-        of coherence within a single condition. This function is a subfunction   
-        for SOURCESTATISTICS_SHIFTPREDICT and FREQSTATISTICS_SHIFTPREDICT.  
-         
-        cfg.method  
-        cfg.numrandomization  
-        cfg.method  
-        cfg.method  
-        cfg.loopdim  
-        cfg.feedback  
-        cfg.method  
-        cfg.loopdim  
-        cfg.correctm  
-        cfg.tail  
-      
+      SHIFTPREDICT implements a shift-predictor for testing significance
+        of coherence within a single condition. This function is a subfunction
+        for SOURCESTATISTICS_SHIFTPREDICT and FREQSTATISTICS_SHIFTPREDICT.
+
+        cfg.method
+        cfg.numrandomization
+        cfg.method
+        cfg.method
+        cfg.loopdim
+        cfg.feedback
+        cfg.method
+        cfg.loopdim
+        cfg.correctm
+        cfg.tail
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/shiftpredict.m )
 

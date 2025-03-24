@@ -18,5 +18,5 @@ __all__ = [
     "spm_pairwise",
     "spm_rice_mixture",
     "spm_series_align",
-    "tbx_cfg_longitudinal"
+    "tbx_cfg_longitudinal",
 ]

@@ -71,26 +71,6 @@ from .bf_write import bf_write
 from .bf_write_gifti import bf_write_gifti
 from .bf_write_nifti import bf_write_nifti
 from .bf_write_spmeeg import bf_write_spmeeg
-from ._DeFleCT import _DeFleCT
-from ._GALA_calculate_distance import _GALA_calculate_distance
-from ._GALA_clustering import _GALA_clustering
-from ._GALA_find_localmin import _GALA_find_localmin
-from ._GALA_invert import _GALA_invert
-from ._MNestimator import _MNestimator
-from ._Tikhonov_rank_def import _Tikhonov_rank_def
-from ._bf_fuse_lf import _bf_fuse_lf
-from ._bf_reml_sc import _bf_reml_sc
-from ._bf_spm_reml_sc import _bf_spm_reml_sc
-from ._ft_inverse_beamformer_dics import _ft_inverse_beamformer_dics
-from ._get_components import _get_components
-from ._mkfilt_eloreta_v2 import _mkfilt_eloreta_v2
-from ._nearest_vec import _nearest_vec
-from ._nut_dSPM import _nut_dSPM
-from ._nut_sLORETA import _nut_sLORETA
-from ._nut_swLORETA import _nut_swLORETA
-from ._output_image_mv_cva import _output_image_mv_cva
-from ._spm_pca_order import _spm_pca_order
-from ._vbfa_aug2015 import _vbfa_aug2015
 from .spm_DAiSS import spm_DAiSS
 from .spm_beamforming import spm_beamforming
 from .tbx_cfg_bf import tbx_cfg_bf
@@ -170,27 +150,7 @@ __all__ = [
     "bf_write_gifti",
     "bf_write_nifti",
     "bf_write_spmeeg",
-    "_DeFleCT",
-    "_GALA_calculate_distance",
-    "_GALA_clustering",
-    "_GALA_find_localmin",
-    "_GALA_invert",
-    "_MNestimator",
-    "_Tikhonov_rank_def",
-    "_bf_fuse_lf",
-    "_bf_reml_sc",
-    "_bf_spm_reml_sc",
-    "_ft_inverse_beamformer_dics",
-    "_get_components",
-    "_mkfilt_eloreta_v2",
-    "_nearest_vec",
-    "_nut_dSPM",
-    "_nut_sLORETA",
-    "_nut_swLORETA",
-    "_output_image_mv_cva",
-    "_spm_pca_order",
-    "_vbfa_aug2015",
     "spm_DAiSS",
     "spm_beamforming",
-    "tbx_cfg_bf"
+    "tbx_cfg_bf",
 ]

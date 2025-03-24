@@ -3,13 +3,13 @@ from mpython import Runtime
 
 def _octahedron(*args, **kwargs):
     """
-      OCTAHEDRON  
-         
-        Use as  
-          [pos tri] = octahedron;  
-         
-        See also TETRAHEDRON ICOSAHEDRON  
-      
+      OCTAHEDRON
+
+        Use as
+          [pos tri] = octahedron;
+
+        See also TETRAHEDRON ICOSAHEDRON
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/plotting/private/octahedron.m )
 

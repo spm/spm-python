@@ -3,9 +3,9 @@ from mpython import Runtime
 
 def _avgoverlabel(*args, **kwargs):
     """
-    avgoverlabel is a function.  
-          str = avgoverlabel(label)  
-      
+    avgoverlabel is a function.
+          str = avgoverlabel(label)
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/utilities/private/avgoverlabel.m )
 

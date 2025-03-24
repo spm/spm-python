@@ -3,9 +3,9 @@ from mpython import Runtime
 
 def test_spm_cfg_dcm_fmri(*args, **kwargs):
     """
-      Unit Tests for spm_cfg_dcm_fmri (DCM fMRI spec batch)  
-       __________________________________________________________________________  
-      
+      Unit Tests for spm_cfg_dcm_fmri (DCM fMRI spec batch)
+       __________________________________________________________________________
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/tests/test_spm_cfg_dcm_fmri.m )
 

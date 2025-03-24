@@ -3,10 +3,10 @@ from mpython import Runtime
 
 def spm_opt_bfun(*args, **kwargs):
     """
-       
-        FORMAT spm_opt_bfun  
-       __________________________________________________________________________  
-      
+
+        FORMAT spm_opt_bfun
+       __________________________________________________________________________
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/Neural_Models/spm_opt_bfun.m )
 

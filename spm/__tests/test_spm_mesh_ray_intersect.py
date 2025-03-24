@@ -3,9 +3,9 @@ from mpython import Runtime
 
 def test_spm_mesh_ray_intersect(*args, **kwargs):
     """
-      Unit Tests for spm_mesh_ray_intersect  
-       __________________________________________________________________________  
-      
+      Unit Tests for spm_mesh_ray_intersect
+       __________________________________________________________________________
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/tests/test_spm_mesh_ray_intersect.m )
 

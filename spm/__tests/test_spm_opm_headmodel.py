@@ -3,9 +3,9 @@ from mpython import Runtime
 
 def test_spm_opm_headmodel(*args, **kwargs):
     """
-      Unit Tests for spm_opm_headmodel  
-       __________________________________________________________________________  
-      
+      Unit Tests for spm_opm_headmodel
+       __________________________________________________________________________
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/tests/test_spm_opm_headmodel.m )
 

@@ -3,9 +3,9 @@ from mpython import Runtime
 
 def bf_sources_mesh(*args, **kwargs):
     """
-      Generate cortical mesh  
-       __________________________________________________________________________  
-      
+      Generate cortical mesh
+       __________________________________________________________________________
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DAiSS/bf_sources_mesh.m )
 

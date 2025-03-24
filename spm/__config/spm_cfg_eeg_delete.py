@@ -3,9 +3,9 @@ from mpython import Runtime
 
 def spm_cfg_eeg_delete(*args, **kwargs):
     """
-      Configuration file for deleting M/EEG datasets  
-       __________________________________________________________________________  
-      
+      Configuration file for deleting M/EEG datasets
+       __________________________________________________________________________
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/config/spm_cfg_eeg_delete.m )
 

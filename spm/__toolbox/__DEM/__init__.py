@@ -658,5 +658,5 @@ __all__ = [
     "spm_voice_segmentation",
     "spm_voice_speak",
     "spm_voice_test",
-    "spm_voice_warp"
+    "spm_voice_warp",
 ]

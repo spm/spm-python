@@ -3,9 +3,9 @@ from mpython import Runtime
 
 def spm_cfg_eeg(*args, **kwargs):
     """
-      SPM M/EEG Configuration file for MATLABBATCH  
-       __________________________________________________________________________  
-      
+      SPM M/EEG Configuration file for MATLABBATCH
+       __________________________________________________________________________
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/config/spm_cfg_eeg.m )
 

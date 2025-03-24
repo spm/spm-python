@@ -3,18 +3,18 @@ from mpython import Runtime
 
 def mne_find_channel(*args, **kwargs):
     """
-       
-        [which] = mne_find_channel(info,name)  
-         
-        Find a channel by name employing the info structure  
-        output by mne_raw2mat or mne_epochs2mat  
-         
-        epoch - The data structure containing the channel information  
-        name  - name of the channel to look for  
-         
-        Returns index of the channel in the data  
-        If the channel is not found, returns -1  
-      
+
+        [which] = mne_find_channel(info,name)
+
+        Find a channel by name employing the info structure
+        output by mne_raw2mat or mne_epochs2mat
+
+        epoch - The data structure containing the channel information
+        name  - name of the channel to look for
+
+        Returns index of the channel in the data
+        If the channel is not found, returns -1
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/external/mne/mne_find_channel.m )
 

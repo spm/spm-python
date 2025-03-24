@@ -3,9 +3,9 @@ from mpython import Runtime
 
 def spm_cfg_st(*args, **kwargs):
     """
-      SPM Configuration file for Slice Timing Correction  
-       __________________________________________________________________________  
-      
+      SPM Configuration file for Slice Timing Correction
+       __________________________________________________________________________
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/config/spm_cfg_st.m )
 

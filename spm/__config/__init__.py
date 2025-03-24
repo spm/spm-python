@@ -258,5 +258,5 @@ __all__ = [
     "spm_run_smooth",
     "spm_run_st",
     "spm_run_tissue_volumes",
-    "spm_run_voi"
+    "spm_run_voi",
 ]

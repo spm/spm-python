@@ -3,12 +3,12 @@ from mpython import Runtime
 
 def _volumethreshold(*args, **kwargs):
     """
-      VOLUMETHRESHOLD is a helper function for segmentations. It applies a  
-        relative threshold and subsequently looks for the largest connected part,  
-        thereby removing small blobs such as vitamine E capsules.  
-         
-        See also VOLUMEFILLHOLES, VOLUMESMOOTH, VOLUMEPAD  
-      
+      VOLUMETHRESHOLD is a helper function for segmentations. It applies a
+        relative threshold and subsequently looks for the largest connected part,
+        thereby removing small blobs such as vitamine E capsules.
+
+        See also VOLUMEFILLHOLES, VOLUMESMOOTH, VOLUMEPAD
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/utilities/private/volumethreshold.m )
 

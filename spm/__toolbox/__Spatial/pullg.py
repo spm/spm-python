@@ -3,13 +3,13 @@ from mpython import Runtime
 
 def pullg(*args, **kwargs):
     """
-      GPU single precision pullg  
-        FORMAT g1 = pullg(f0, phi, sett)  
-        f0   - 3D float array  
-        phi  - 4D float array (dim(4)=3)  
-        sett - Settings  
-       __________________________________________________________________________  
-      
+      GPU single precision pullg
+        FORMAT g1 = pullg(f0, phi, sett)
+        f0   - 3D float array
+        phi  - 4D float array (dim(4)=3)
+        sett - Settings
+       __________________________________________________________________________
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/Spatial/pullg.m )
 

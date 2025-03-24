@@ -3,13 +3,13 @@ from mpython import Runtime
 
 def spm_spy(*args, **kwargs):
     """
-      Pretty version of spy  
-        FORMAT spm_spy(X,Markersize,m)  
-        X    - sparse {m x n} matrix  
-         
-        See also: spy  
-       __________________________________________________________________________  
-      
+      Pretty version of spy
+        FORMAT spm_spy(X,Markersize,m)
+        X    - sparse {m x n} matrix
+
+        See also: spy
+       __________________________________________________________________________
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_spy.m )
 

@@ -3,9 +3,9 @@ from mpython import Runtime
 
 def bf_inverse(*args, **kwargs):
     """
-      Compute inverse projectors  
-       __________________________________________________________________________  
-      
+      Compute inverse projectors
+       __________________________________________________________________________
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DAiSS/bf_inverse.m )
 

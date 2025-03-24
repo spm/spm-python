@@ -3,61 +3,61 @@ from mpython import Runtime
 
 def spm_shoot3d(*args, **kwargs):
     """
-      Geodesic shooting  
-        FORMAT [phi,Jphi,v1,theta,Jtheta] = spm_shoot3d(v0,prm,args, F)  
-        v0   - Initial velocity field n1*n2*n3*3 (single prec. float)  
-        prm  - Differential operator parameters  
-        prm  - 8 settings  
-               - [1][2][3] Voxel sizes  
-               - [4][5][6][7][8] Regularisation settings.  
-                 Regularisation uses the sum of  
-                 - [4] - absolute displacements  
-                 - [5] - laplacian  
-                 - [6] - bending energy  
-                 - [7] - linear elasticity mu  
-                 - [8] - linear elasticity lambda  
-        args - Integration parameters  
-               - [1] Num time steps  
-        F    - optional Fourier transform of Green's function (saves a little time).  
-         
-        phi  - Forward deformation field n1*n2*n3*3 (single prec. float)  
-        Jphi - Forward Jacobian tensors n1*n2*n3 (single prec. float)  
-        v1   - Final velocity field n1*n2*n3*3 (single prec. float)  
-        theta - Inverse deformation field n1*n2*n3*3 (single prec. float)  
-        Jtheta   - Inverse Jacobian tensors n1*n2*n3 (single prec. float)  
-         
-        This code generates deformations and their Jacobian determinans from  
-        initial velocity fields by gedesic shooting.  See the work of Miller,  
-        Younes and others.  
-         
-        LDDMM (Beg et al) uses the following evolution equation:  
-            d\phi/dt = v_t(\phi_t)  
-        where a variational procedure is used to find the stationary solution  
-        for the time varying velocity field.  
-        In principle though, once the initial velocity is known, then the  
-        velocity at subsequent time points can be computed.  This requires  
-        initial momentum (m_0), computed (using differential operator L) by:  
-            m_0 = L v_0  
-        Then (Ad_{\phi_t})^* m_0 is computed:  
-            m_t = |d \phi_t| (d\phi_t)^T m_0(\phi_t)  
-        The velocity field at this time point is then obtained by using  
-        multigrid to solve:  
-            v_t = L^{-1} m_t  
-         
-        These equations can be found in:  
-        Younes (2007). "Jacobi fields in groups of diffeomorphisms and  
-        applications". Quarterly of Applied Mathematics, vol LXV,  
-        number 1, pages 113-134 (2007).  
-         
-        Note that in practice, (Ad_{\phi_t})^* m_0 is computed differently,  
-        by multiplying the initial momentum by the inverse of the Jacobian  
-        matrices of the inverse warp, and pushing the values to their new  
-        location by the inverse warp (see the "pushg" code of shoot3).  
-        Multigrid is currently used to obtain v_t = L^{-1} m_t, but  
-        this could also be done by convolution with the Greens function  
-        K = L^{-1} (see e.g. Bro-Nielson).  
-       __________________________________________________________________________  
-      
+      Geodesic shooting
+        FORMAT [phi,Jphi,v1,theta,Jtheta] = spm_shoot3d(v0,prm,args, F)
+        v0   - Initial velocity field n1*n2*n3*3 (single prec. float)
+        prm  - Differential operator parameters
+        prm  - 8 settings
+               - [1][2][3] Voxel sizes
+               - [4][5][6][7][8] Regularisation settings.
+                 Regularisation uses the sum of
+                 - [4] - absolute displacements
+                 - [5] - laplacian
+                 - [6] - bending energy
+                 - [7] - linear elasticity mu
+                 - [8] - linear elasticity lambda
+        args - Integration parameters
+               - [1] Num time steps
+        F    - optional Fourier transform of Green's function (saves a little time).
+
+        phi  - Forward deformation field n1*n2*n3*3 (single prec. float)
+        Jphi - Forward Jacobian tensors n1*n2*n3 (single prec. float)
+        v1   - Final velocity field n1*n2*n3*3 (single prec. float)
+        theta - Inverse deformation field n1*n2*n3*3 (single prec. float)
+        Jtheta   - Inverse Jacobian tensors n1*n2*n3 (single prec. float)
+
+        This code generates deformations and their Jacobian determinans from
+        initial velocity fields by gedesic shooting.  See the work of Miller,
+        Younes and others.
+
+        LDDMM (Beg et al) uses the following evolution equation:
+            d\phi/dt = v_t(\phi_t)
+        where a variational procedure is used to find the stationary solution
+        for the time varying velocity field.
+        In principle though, once the initial velocity is known, then the
+        velocity at subsequent time points can be computed.  This requires
+        initial momentum (m_0), computed (using differential operator L) by:
+            m_0 = L v_0
+        Then (Ad_{\phi_t})^* m_0 is computed:
+            m_t = |d \phi_t| (d\phi_t)^T m_0(\phi_t)
+        The velocity field at this time point is then obtained by using
+        multigrid to solve:
+            v_t = L^{-1} m_t
+
+        These equations can be found in:
+        Younes (2007). "Jacobi fields in groups of diffeomorphisms and
+        applications". Quarterly of Applied Mathematics, vol LXV,
+        number 1, pages 113-134 (2007).
+
+        Note that in practice, (Ad_{\phi_t})^* m_0 is computed differently,
+        by multiplying the initial momentum by the inverse of the Jacobian
+        matrices of the inverse warp, and pushing the values to their new
+        location by the inverse warp (see the "pushg" code of shoot3).
+        Multigrid is currently used to obtain v_t = L^{-1} m_t, but
+        this could also be done by convolution with the Greens function
+        K = L^{-1} (see e.g. Bro-Nielson).
+       __________________________________________________________________________
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/Shoot/spm_shoot3d.m )
 

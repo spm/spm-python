@@ -3,10 +3,10 @@ from mpython import Runtime
 
 def _loadvar(*args, **kwargs):
     """
-      LOADVAR is a helper function for cfg.inputfile  
-         
-        See also SAVEVAR  
-      
+      LOADVAR is a helper function for cfg.inputfile
+
+        See also SAVEVAR
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/utilities/private/loadvar.m )
 

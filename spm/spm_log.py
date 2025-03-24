@@ -3,10 +3,10 @@ from mpython import Runtime
 
 def spm_log(*args, **kwargs):
     """
-      Log of numeric array plus a small constant  
-        FORMAT A = spm_log(A)  
-       __________________________________________________________________________  
-      
+      Log of numeric array plus a small constant
+        FORMAT A = spm_log(A)
+       __________________________________________________________________________
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_log.m )
 

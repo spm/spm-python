@@ -16,5 +16,5 @@ __all__ = [
     "spm_prep2sn",
     "spm_preproc_write",
     "spm_run_preproc",
-    "spm_sample_priors"
+    "spm_sample_priors",
 ]

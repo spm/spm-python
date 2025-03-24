@@ -3,16 +3,16 @@ from mpython import Runtime
 
 def spm_ar_freq(*args, **kwargs):
     """
-      Compute spectra from AR coefficients  
-        FORMAT [p] = spm_ar_freq (ar, freq, fs)  
-         
-        ar    AR model data structure (see spm_ar.m)  
-        freq  [Nf x 1] vector containing list of frequencies  
-        fs    sample rate  
-         
-        p     [Nf x 1] vector containing power estimates  
-       __________________________________________________________________________  
-      
+      Compute spectra from AR coefficients
+        FORMAT [p] = spm_ar_freq (ar, freq, fs)
+
+        ar    AR model data structure (see spm_ar.m)
+        freq  [Nf x 1] vector containing list of frequencies
+        fs    sample rate
+
+        p     [Nf x 1] vector containing power estimates
+       __________________________________________________________________________
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/spectral/spm_ar_freq.m )
 

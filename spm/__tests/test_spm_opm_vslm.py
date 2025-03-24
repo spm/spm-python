@@ -3,9 +3,9 @@ from mpython import Runtime
 
 def test_spm_opm_vslm(*args, **kwargs):
     """
-      Unit Tests for spm_opm_vslm  
-       __________________________________________________________________________  
-      
+      Unit Tests for spm_opm_vslm
+       __________________________________________________________________________
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/tests/test_spm_opm_vslm.m )
 

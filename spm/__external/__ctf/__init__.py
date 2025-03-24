@@ -24,5 +24,5 @@ __all__ = [
     "writeCTFds",
     "writeCTFhdm",
     "writeMarkerFile",
-    "writeRes4"
+    "writeRes4",
 ]

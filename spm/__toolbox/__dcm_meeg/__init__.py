@@ -220,5 +220,5 @@ __all__ = [
     "spm_x_lfp",
     "spm_x_mfm",
     "spm_x_nmda",
-    "spm_x_nmm"
+    "spm_x_nmm",
 ]

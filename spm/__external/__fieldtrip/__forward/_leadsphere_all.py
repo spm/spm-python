@@ -3,8 +3,8 @@ from mpython import Runtime
 
 def _leadsphere_all(*args, **kwargs):
     """
-      usage: out=leadsphere_all(xloc,sensorloc,sensorori)  
-      
+      usage: out=leadsphere_all(xloc,sensorloc,sensorori)
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/forward/private/leadsphere_all.m )
 

@@ -24,5 +24,5 @@ __all__ = [
     "mci_lds_par2lat",
     "mci_lds_params",
     "mci_lds_plot_params",
-    "mci_lds_struct"
+    "mci_lds_struct",
 ]

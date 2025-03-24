@@ -3,12 +3,12 @@ from mpython import Runtime
 
 def spm_dem_reach_plot(*args, **kwargs):
     """
-      plots the trajectory of a two-joint arm  
-        FORMAT [f]= spm_dem_reach_plot(DEM)  
-         
-        DEM - DEM structure from reaching simulations  
-       __________________________________________________________________________  
-      
+      plots the trajectory of a two-joint arm
+        FORMAT [f]= spm_dem_reach_plot(DEM)
+
+        DEM - DEM structure from reaching simulations
+       __________________________________________________________________________
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DEM/spm_dem_reach_plot.m )
 

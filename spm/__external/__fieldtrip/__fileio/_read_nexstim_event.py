@@ -3,9 +3,9 @@ from mpython import Runtime
 
 def _read_nexstim_event(*args, **kwargs):
     """
-      Use as  
-          [event] = read_nexstim_event(filename)  
-      
+      Use as
+          [event] = read_nexstim_event(filename)
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/read_nexstim_event.m )
 

@@ -9,48 +9,6 @@ from .ft_inverse_pcc import ft_inverse_pcc
 from .ft_inverse_rv import ft_inverse_rv
 from .ft_inverse_sam import ft_inverse_sam
 from .ft_inverse_sloreta import ft_inverse_sloreta
-from ._SAM_costfun import _SAM_costfun
-from ._avgref import _avgref
-from ._calctangent import _calctangent
-from ._defaultId import _defaultId
-from ._find_innermost_boundary import _find_innermost_boundary
-from ._fixdipole import _fixdipole
-from ._fixinside import _fixinside
-from ._fixname import _fixname
-from ._fixpos import _fixpos
-from ._ft_debug import _ft_debug
-from ._ft_error import _ft_error
-from ._ft_getopt import _ft_getopt
-from ._ft_hastoolbox import _ft_hastoolbox
-from ._ft_headmodeltype import _ft_headmodeltype
-from ._ft_info import _ft_info
-from ._ft_inside_headmodel import _ft_inside_headmodel
-from ._ft_inv import _ft_inv
-from ._ft_notice import _ft_notice
-from ._ft_notification import _ft_notification
-from ._ft_platform_supports import _ft_platform_supports
-from ._ft_progress import _ft_progress
-from ._ft_scalingfactor import _ft_scalingfactor
-from ._ft_senslabel import _ft_senslabel
-from ._ft_senstype import _ft_senstype
-from ._ft_setopt import _ft_setopt
-from ._ft_version import _ft_version
-from ._ft_warning import _ft_warning
-from ._getsubfield import _getsubfield
-from ._hasyokogawa import _hasyokogawa
-from ._headsurface import _headsurface
-from ._issubfield import _issubfield
-from ._keyval import _keyval
-from ._mesh_laplacian import _mesh_laplacian
-from ._mkfilt_eloreta import _mkfilt_eloreta
-from ._quaternion import _quaternion
-from ._rigidbody import _rigidbody
-from ._rotate import _rotate
-from ._settang import _settang
-from ._solid_angle import _solid_angle
-from ._surface_inside import _surface_inside
-from ._surface_orientation import _surface_orientation
-from ._translate import _translate
 
 
 __all__ = [
@@ -65,46 +23,4 @@ __all__ = [
     "ft_inverse_rv",
     "ft_inverse_sam",
     "ft_inverse_sloreta",
-    "_SAM_costfun",
-    "_avgref",
-    "_calctangent",
-    "_defaultId",
-    "_find_innermost_boundary",
-    "_fixdipole",
-    "_fixinside",
-    "_fixname",
-    "_fixpos",
-    "_ft_debug",
-    "_ft_error",
-    "_ft_getopt",
-    "_ft_hastoolbox",
-    "_ft_headmodeltype",
-    "_ft_info",
-    "_ft_inside_headmodel",
-    "_ft_inv",
-    "_ft_notice",
-    "_ft_notification",
-    "_ft_platform_supports",
-    "_ft_progress",
-    "_ft_scalingfactor",
-    "_ft_senslabel",
-    "_ft_senstype",
-    "_ft_setopt",
-    "_ft_version",
-    "_ft_warning",
-    "_getsubfield",
-    "_hasyokogawa",
-    "_headsurface",
-    "_issubfield",
-    "_keyval",
-    "_mesh_laplacian",
-    "_mkfilt_eloreta",
-    "_quaternion",
-    "_rigidbody",
-    "_rotate",
-    "_settang",
-    "_solid_angle",
-    "_surface_inside",
-    "_surface_orientation",
-    "_translate"
 ]

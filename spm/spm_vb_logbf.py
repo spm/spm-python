@@ -3,15 +3,15 @@ from mpython import Runtime
 
 def spm_vb_logbf(*args, **kwargs):
     """
-      Compute and write log Bayes factor image  
-        FORMAT [xCon,SPM] = spm_vb_logbf(SPM,XYZ,xCon,ic)  
-         
-        SPM    - SPM data structure  
-        XYZ    - voxel list  
-        xCon   - contrast info  
-        ic     - contrast number  
-       __________________________________________________________________________  
-      
+      Compute and write log Bayes factor image
+        FORMAT [xCon,SPM] = spm_vb_logbf(SPM,XYZ,xCon,ic)
+
+        SPM    - SPM data structure
+        XYZ    - voxel list
+        xCon   - contrast info
+        ic     - contrast number
+       __________________________________________________________________________
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_vb_logbf.m )
 

@@ -3,9 +3,9 @@ from mpython import Runtime
 
 def spm_cfg_factorial_design(*args, **kwargs):
     """
-      SPM Configuration file for second-level models  
-       __________________________________________________________________________  
-      
+      SPM Configuration file for second-level models
+       __________________________________________________________________________
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/config/spm_cfg_factorial_design.m )
 

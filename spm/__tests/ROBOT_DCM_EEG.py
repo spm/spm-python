@@ -3,12 +3,12 @@ from mpython import Runtime
 
 def ROBOT_DCM_EEG(*args, **kwargs):
     """
-      test routine to check current implementations of DCM (electrophysiology)  
-       ==========================================================================  
-          options.analysis     - 'ERP','CSD', 'IND' or 'TFM  
-          options.model        - 'ERP','SEP','LFP','CMC','CMM','NMM' or 'MFM'  
-          options.spatial      - 'ECD','LFP' or 'IMG'  
-      
+      test routine to check current implementations of DCM (electrophysiology)
+       ==========================================================================
+          options.analysis     - 'ERP','CSD', 'IND' or 'TFM
+          options.model        - 'ERP','SEP','LFP','CMC','CMM','NMM' or 'MFM'
+          options.spatial      - 'ECD','LFP' or 'IMG'
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/tests/ROBOT_DCM_EEG.m )
 

@@ -10,5 +10,5 @@ __all__ = [
     "mci_discount_deriv",
     "mci_discount_gen",
     "mci_discount_like",
-    "mci_discount_struct"
+    "mci_discount_struct",
 ]

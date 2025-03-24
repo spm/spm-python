@@ -3,11 +3,11 @@ from mpython import Runtime
 
 def mne_transpose_named_matrix(*args, **kwargs):
     """
-       
-        [res] = mne_transpose_named_matrix(mat)  
-         
-        Transpose a named matrix  
-      
+
+        [res] = mne_transpose_named_matrix(mat)
+
+        Transpose a named matrix
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/external/mne/mne_transpose_named_matrix.m )
 

@@ -3,10 +3,10 @@ from mpython import Runtime
 
 def spm_fx_Lagrangian(*args, **kwargs):
     """
-      FORMAT [f] = spm_fx_Lagrangian(P,M,U)  
-         
-        flow subfunction for Langrangian demo  
-      
+      FORMAT [f] = spm_fx_Lagrangian(P,M,U)
+
+        flow subfunction for Langrangian demo
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DEM/spm_fx_Lagrangian.m )
 

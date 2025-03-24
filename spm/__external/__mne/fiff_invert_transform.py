@@ -3,11 +3,11 @@ from mpython import Runtime
 
 def fiff_invert_transform(*args, **kwargs):
     """
-       
-        [itrans] = fiff_invert_transform(trans)  
-         
-        Invert a coordinate transformation  
-      
+
+        [itrans] = fiff_invert_transform(trans)
+
+        Invert a coordinate transformation
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/external/mne/fiff_invert_transform.m )
 

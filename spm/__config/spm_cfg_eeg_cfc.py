@@ -3,9 +3,9 @@ from mpython import Runtime
 
 def spm_cfg_eeg_cfc(*args, **kwargs):
     """
-      Configuration file for M/EEG cross-frequency coupling analysis  
-       __________________________________________________________________________  
-      
+      Configuration file for M/EEG cross-frequency coupling analysis
+       __________________________________________________________________________
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/config/spm_cfg_eeg_cfc.m )
 

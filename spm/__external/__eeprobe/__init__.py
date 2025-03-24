@@ -14,5 +14,5 @@ __all__ = [
     "read_eep_trg",
     "read_eep_trial",
     "write_eep_avr",
-    "write_eep_cnt"
+    "write_eep_cnt",
 ]

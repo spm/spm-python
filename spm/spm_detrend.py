@@ -3,18 +3,18 @@ from mpython import Runtime
 
 def spm_detrend(*args, **kwargs):
     """
-      Polynomial detrending over columns  
-        FORMAT y = spm_detrend(x,p)  
-        x   - data matrix  
-        p   - order of polynomial [default: 0]  
-          
-        y   - detrended data matrix  
-       __________________________________________________________________________  
-         
-        spm_detrend removes linear and nonlinear trends from column-wise data  
-        matrices.  
-       __________________________________________________________________________  
-      
+      Polynomial detrending over columns
+        FORMAT y = spm_detrend(x,p)
+        x   - data matrix
+        p   - order of polynomial [default: 0]
+
+        y   - detrended data matrix
+       __________________________________________________________________________
+
+        spm_detrend removes linear and nonlinear trends from column-wise data
+        matrices.
+       __________________________________________________________________________
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_detrend.m )
 

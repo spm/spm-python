@@ -42,5 +42,5 @@ __all__ = [
     "spm_mb_output",
     "spm_mb_shape",
     "spm_mbnorm",
-    "tbx_cfg_mb"
+    "tbx_cfg_mb",
 ]

@@ -1,9 +1,5 @@
 from .lbessi import lbessi
 from .pp_settings import pp_settings
-from ._getthreads import _getthreads
-from ._loadlib import _loadlib
-from ._ptxlocation import _ptxlocation
-from ._threadblocks import _threadblocks
 from .pull import pull
 from .pullg import pullg
 from .push import push
@@ -26,10 +22,6 @@ from .tbx_cfg_spatial import tbx_cfg_spatial
 __all__ = [
     "lbessi",
     "pp_settings",
-    "_getthreads",
-    "_loadlib",
-    "_ptxlocation",
-    "_threadblocks",
     "pull",
     "pullg",
     "push",
@@ -46,5 +38,5 @@ __all__ = [
     "spm_slice2vol_reslice",
     "spm_topup",
     "spm_topup_config",
-    "tbx_cfg_spatial"
+    "tbx_cfg_spatial",
 ]

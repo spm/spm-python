@@ -3,9 +3,9 @@ from mpython import Runtime
 
 def spm_cfg_eeg_avgtime(*args, **kwargs):
     """
-      Configuration file for averaging over time  
-       __________________________________________________________________________  
-      
+      Configuration file for averaging over time
+       __________________________________________________________________________
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/config/spm_cfg_eeg_avgtime.m )
 

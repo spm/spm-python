@@ -3,12 +3,12 @@ from mpython import Runtime
 
 def spm_dartel_template(*args, **kwargs):
     """
-      Iteratively compute a template with mean shape and intensities  
-        FORMAT spm_dartel_template(job)  
-         
-        The outputs are flow fields, and a series of Template images.  
-       __________________________________________________________________________  
-      
+      Iteratively compute a template with mean shape and intensities
+        FORMAT spm_dartel_template(job)
+
+        The outputs are flow fields, and a series of Template images.
+       __________________________________________________________________________
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DARTEL/spm_dartel_template.m )
 

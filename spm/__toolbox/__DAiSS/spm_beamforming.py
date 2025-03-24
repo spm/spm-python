@@ -3,9 +3,9 @@ from mpython import Runtime
 
 def spm_beamforming(*args, **kwargs):
     """
-      GUI gateway to Beamforming toolbox  
-       __________________________________________________________________________  
-      
+      GUI gateway to Beamforming toolbox
+       __________________________________________________________________________
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DAiSS/spm_beamforming.m )
 

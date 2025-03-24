@@ -3,10 +3,10 @@ from mpython import Runtime
 
 def spm_cfg_eeg_inv_post(*args, **kwargs):
     """
-      Configuration file for taking a number of previous inversion results  
-        (maybe based on different data), smoothing and creating an approximate posterior  
-       __________________________________________________________________________  
-      
+      Configuration file for taking a number of previous inversion results
+        (maybe based on different data), smoothing and creating an approximate posterior
+       __________________________________________________________________________
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/config/spm_cfg_eeg_inv_post.m )
 

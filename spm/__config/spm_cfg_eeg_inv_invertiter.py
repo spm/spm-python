@@ -3,9 +3,9 @@ from mpython import Runtime
 
 def spm_cfg_eeg_inv_invertiter(*args, **kwargs):
     """
-      Configuration file for running imaging source reconstruction  
-       __________________________________________________________________________  
-      
+      Configuration file for running imaging source reconstruction
+       __________________________________________________________________________
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/config/spm_cfg_eeg_inv_invertiter.m )
 

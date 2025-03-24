@@ -3,15 +3,15 @@ from mpython import Runtime
 
 def fiff_read_epochs(*args, **kwargs):
     """
-       
-        [epochs] = fiff_read_epochs(fname,setno)  
-         
-        Read epochs from file  
-         
-         
-          Author : Martin Luessi, MGH Martinos Center  
-          License : BSD 3-clause  
-      
+
+        [epochs] = fiff_read_epochs(fname,setno)
+
+        Read epochs from file
+
+
+          Author : Martin Luessi, MGH Martinos Center
+          License : BSD 3-clause
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/external/mne/fiff_read_epochs.m )
 

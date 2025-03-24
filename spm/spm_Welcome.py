@@ -3,11 +3,11 @@ from mpython import Runtime
 
 def spm_Welcome(*args, **kwargs):
     """
-      Open SPM's welcome splash screen  
-        FORMAT F = spm_Welcome  
-        F        - welcome figure handle  
-       __________________________________________________________________________  
-      
+      Open SPM's welcome splash screen
+        FORMAT F = spm_Welcome
+        F        - welcome figure handle
+       __________________________________________________________________________
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_Welcome.m )
 

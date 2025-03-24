@@ -3,14 +3,14 @@ from mpython import Runtime
 
 def spm_dir_norm(*args, **kwargs):
     """
-      Normalisation of a (Dirichlet) conditional probability matrix  
-        FORMAT A = spm_dir_norm(a)  
-         
-        a    - (Dirichlet) parameters of a conditional probability matrix  
-         
-        A    - conditional probability matrix  
-       __________________________________________________________________________  
-      
+      Normalisation of a (Dirichlet) conditional probability matrix
+        FORMAT A = spm_dir_norm(a)
+
+        a    - (Dirichlet) parameters of a conditional probability matrix
+
+        A    - conditional probability matrix
+       __________________________________________________________________________
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_dir_norm.m )
 

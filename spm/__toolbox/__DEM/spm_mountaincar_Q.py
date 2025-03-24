@@ -3,14 +3,14 @@ from mpython import Runtime
 
 def spm_mountaincar_Q(*args, **kwargs):
     """
-      Desired ensemble density  
-        FORMAT [Q] = spm_mountaincar_Q(x)  
-         
-        x:  (n x m) matrix of n m-D point in states space  
-         
-        Q   - desired equilibrium density; p(x)  
-       __________________________________________________________________________  
-      
+      Desired ensemble density
+        FORMAT [Q] = spm_mountaincar_Q(x)
+
+        x:  (n x m) matrix of n m-D point in states space
+
+        Q   - desired equilibrium density; p(x)
+       __________________________________________________________________________
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DEM/spm_mountaincar_Q.m )
 

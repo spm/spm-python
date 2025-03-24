@@ -3,11 +3,11 @@ from mpython import Runtime
 
 def _write_brainvoyager(*args, **kwargs):
     """
-      helper function to write volumetric data for brainvoyager.  
-        this is old code that moved from ft_volumewrite to clean up  
-        the high level function a bit. it is assumed that the orientation  
-        of the volume is correct.  
-      
+      helper function to write volumetric data for brainvoyager.
+        this is old code that moved from ft_volumewrite to clean up
+        the high level function a bit. it is assumed that the orientation
+        of the volume is correct.
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/write_brainvoyager.m )
 

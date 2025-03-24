@@ -3,10 +3,10 @@ from mpython import Runtime
 
 def _volumepermute(*args, **kwargs):
     """
-      VOLUMEPERMUTE  
-         
-        See also VOLUMEFLIP, ALIGN_IJK2XYZ, ALIGN_XYZ2IJK  
-      
+      VOLUMEPERMUTE
+
+        See also VOLUMEFLIP, ALIGN_IJK2XYZ, ALIGN_XYZ2IJK
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/utilities/private/volumepermute.m )
 

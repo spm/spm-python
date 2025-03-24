@@ -8,46 +8,47 @@ from itertools import product
 import tempfile
 import argparse
 
+
 def add_matlab_to_path(matlab_version) -> bool:
     """Detect default MATLAB installation path based on the platform."""
     system = platform.system().lower()
 
     paths = [
-        'runtime', 
-        'bin',
-        'sys/os',
-        'extern/bin',
+        "runtime",
+        "bin",
+        "sys/os",
+        "extern/bin",
     ]
 
     if system == "windows":
-        variable = 'PATH'
+        variable = "PATH"
         bases = [
-            f"C:/Program Files/MATLAB/{matlab_version}", 
-            f"C:/Program Files (x86)/MATLAB/{matlab_version}", 
-            f"C:/Program Files/MATLAB/MATLAB Runtime/{matlab_version}", 
-            f"C:/Program Files (x86)/MATLAB/MATLAB Runtime/{matlab_version}", 
+            f"C:/Program Files/MATLAB/{matlab_version}",
+            f"C:/Program Files (x86)/MATLAB/{matlab_version}",
+            f"C:/Program Files/MATLAB/MATLAB Runtime/{matlab_version}",
+            f"C:/Program Files (x86)/MATLAB/MATLAB Runtime/{matlab_version}",
         ]
-        archs = ['win32', 'win64']
+        archs = ["win32", "win64"]
 
     elif system == "darwin":  # macOS
-        variable = 'DYLD_LIBRARY_PATH'
+        variable = "DYLD_LIBRARY_PATH"
         bases = [
             f"/Applications/MATLAB_{matlab_version}",
-            f"/Applications/MATLAB_Runtime/{matlab_version}"
+            f"/Applications/MATLAB_Runtime/{matlab_version}",
         ]
 
-        if platform.processor() == 'i386':
-            archs = ['maci64']
+        if platform.processor() == "i386":
+            archs = ["maci64"]
         else:
-            archs = ['maca64']
+            archs = ["maca64"]
 
     elif system == "linux":
-        variable = 'LD_LIBRARY_PATH'
+        variable = "LD_LIBRARY_PATH"
         bases = [
             f"/usr/local/MATLAB/{matlab_version}",
             f"/usr/local/MATLAB/MATLAB_Runtime/{matlab_version}",
         ]
-        archs = ['glnxa64']
+        archs = ["glnxa64"]
 
     envpath = os.environ.get(variable, "")
     found = False
@@ -57,7 +58,7 @@ def add_matlab_to_path(matlab_version) -> bool:
         if op.exists(check_path):
             print(f"{check_path}")
             found = True
-        else: 
+        else:
             continue
 
         # Add to the environment variables
@@ -67,38 +68,39 @@ def add_matlab_to_path(matlab_version) -> bool:
                 envpath = f"{fullpath}{os.pathsep}{envpath}"
 
         # Break
-        if found: 
+        if found:
             break
-
 
     os.environ[variable] = envpath
 
     return found
-    
+
 
 def try_import(module_name):
     """Try importing a module and return success status."""
     try:
-        subprocess.check_call(['python', '-c', '"import spm;exit(0)"'])
+        subprocess.check_call(["python", "-c", '"import spm;exit(0)"'])
         return True
     except:
         return False
+
 
 def download_matlab_runtime(system):
     base_url = "https://github.com/spm/spm/releases/download/25.01.alpha42/"
 
     if system == "windows":
-        zip_name = 'spm_standalone_25.01.alpha42_Windows_matlab_runtime_installer.zip'
+        zip_name = "spm_standalone_25.01.alpha42_Windows_matlab_runtime_installer.zip"
 
     elif system == "darwin":  # macOS
-
-        if platform.processor() == 'i386':
-            zip_name = 'spm_standalone_25.01.alpha42_macOS_Intel_matlab_runtime_installer.zip'
+        if platform.processor() == "i386":
+            zip_name = (
+                "spm_standalone_25.01.alpha42_macOS_Intel_matlab_runtime_installer.zip"
+            )
         else:
-            zip_name = 'spm_standalone_25.01.alpha42_macOS_Apple_Silicon_matlab_runtime_installer.zip'
+            zip_name = "spm_standalone_25.01.alpha42_macOS_Apple_Silicon_matlab_runtime_installer.zip"
 
     elif system == "linux":
-        zip_name = 'spm_standalone_25.01.alpha42_Linux_matlab_runtime_installer.zip'
+        zip_name = "spm_standalone_25.01.alpha42_Linux_matlab_runtime_installer.zip"
 
     runtime_url = op.join(base_url, zip_name)
 
@@ -109,12 +111,13 @@ def download_matlab_runtime(system):
     urllib.request.urlretrieve(runtime_url, zip_file_path)
 
     print("Extracting MATLAB Runtime...")
-    with zipfile.ZipFile(zip_file_path, 'r') as zip_ref:
+    with zipfile.ZipFile(zip_file_path, "r") as zip_ref:
         zip_ref.extractall(dest_folder)
 
     installer_path = op.join(dest_folder, "runtime_installer")
 
     return installer_path, dest_folder
+
 
 def download_and_install_matlab_runtime():
     """Download and install MATLAB Runtime."""
@@ -126,13 +129,13 @@ def download_and_install_matlab_runtime():
     os.chdir(installer_path)
     installer_file = os.listdir(installer_path)[0]
 
-    if system == 'linux' or system == 'darwin':
-        subprocess.check_call(['chmod', 'u+x', installer_file])
+    if system == "linux" or system == "darwin":
+        subprocess.check_call(["chmod", "u+x", installer_file])
 
-        installer_file = op.join('.', installer_file)
+        installer_file = op.join(".", installer_file)
 
-    command = [installer_file, '-agreeToLicense', 'yes']
-    
+    command = [installer_file, "-agreeToLicense", "yes"]
+
     success = False
     try:
         subprocess.check_call(command)
@@ -142,10 +145,11 @@ def download_and_install_matlab_runtime():
         print(f"Permission error during installation: {e}")
 
     except Exception as e:
-        print(f'Command {command} raised:\n')
+        print(f"Command {command} raised:\n")
         print(e)
 
     return success
+
 
 def setup_matlab_environment(download):
     """Main function to set up MATLAB or MATLAB Runtime."""
@@ -155,7 +159,7 @@ def setup_matlab_environment(download):
     if try_import(module_name):
         return True
 
-    runtime_found = add_matlab_to_path('R2024b')
+    runtime_found = add_matlab_to_path("R2024b")
 
     if runtime_found and try_import(module_name):
         return True
@@ -163,31 +167,36 @@ def setup_matlab_environment(download):
     if not download:
         ans = input("MATLAB Runtime not found, do you want to download it? (y/n) ")
 
-        if ans.lower() != 'y':
-            raise ImportError(f"Failed to import {module_name}. Please check your setup.")
+        if ans.lower() != "y":
+            raise ImportError(
+                f"Failed to import {module_name}. Please check your setup."
+            )
 
     runtime_installed = download_and_install_matlab_runtime()
 
     if not runtime_installed:
-        raise SystemError('Failed to install Matlab Runtime. Please try manually.')
+        raise SystemError("Failed to install Matlab Runtime. Please try manually.")
 
-    runtime_found = add_matlab_to_path('R2024b')
+    runtime_found = add_matlab_to_path("R2024b")
 
     if runtime_found and try_import(module_name):
-        return True 
+        return True
     else:
         raise ImportError(f"Failed to import {module_name}. Please check your setup.")
 
+
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(prog='setup_matlab')
-    parser.add_argument('-d', '--download-if-not-found', dest='download', action='store_true')
-    parser.add_argument('-p', '--print', dest='print', action='store_true')
+    parser = argparse.ArgumentParser(prog="setup_matlab")
+    parser.add_argument(
+        "-d", "--download-if-not-found", dest="download", action="store_true"
+    )
+    parser.add_argument("-p", "--print", dest="print", action="store_true")
     args = parser.parse_args()
 
-    if args.print: 
+    if args.print:
         add_matlab_to_path("R2024b")
         exit(0)
-    else:    
+    else:
         result = setup_matlab_environment(args.download)
         if result:
             exit(0)

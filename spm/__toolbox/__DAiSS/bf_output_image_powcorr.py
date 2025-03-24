@@ -3,9 +3,9 @@ from mpython import Runtime
 
 def bf_output_image_powcorr(*args, **kwargs):
     """
-      Compute phase-amplitude coupling  
-       __________________________________________________________________________  
-      
+      Compute phase-amplitude coupling
+       __________________________________________________________________________
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DAiSS/bf_output_image_powcorr.m )
 

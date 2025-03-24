@@ -16,13 +16,6 @@ from .ft_statfun_indepsamplesregrT import ft_statfun_indepsamplesregrT
 from .ft_statfun_mean import ft_statfun_mean
 from .ft_statfun_pooledT import ft_statfun_pooledT
 from .ft_statfun_roc import ft_statfun_roc
-from ._defaultId import _defaultId
-from ._fixname import _fixname
-from ._getsubfield import _getsubfield
-from ._issubfield import _issubfield
-from ._istrue import _istrue
-from ._rmsubfield import _rmsubfield
-from ._setsubfield import _setsubfield
 
 
 __all__ = [
@@ -44,11 +37,4 @@ __all__ = [
     "ft_statfun_mean",
     "ft_statfun_pooledT",
     "ft_statfun_roc",
-    "_defaultId",
-    "_fixname",
-    "_getsubfield",
-    "_issubfield",
-    "_istrue",
-    "_rmsubfield",
-    "_setsubfield"
 ]

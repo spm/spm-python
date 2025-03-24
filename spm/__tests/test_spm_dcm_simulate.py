@@ -3,9 +3,9 @@ from mpython import Runtime
 
 def test_spm_dcm_simulate(*args, **kwargs):
     """
-      Unit Tests for test_spm_dcm_simulate  
-       __________________________________________________________________________  
-      
+      Unit Tests for test_spm_dcm_simulate
+       __________________________________________________________________________
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/tests/test_spm_dcm_simulate.m )
 

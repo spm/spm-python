@@ -3,11 +3,11 @@ from mpython import Runtime
 
 def spm_run_tissue_volumes(*args, **kwargs):
     """
-      SPM job execution function for Tissue Volumes  
-         
-        See also: spm_cfg_tissue_volumes, spm_summarise  
-       __________________________________________________________________________  
-      
+      SPM job execution function for Tissue Volumes
+
+        See also: spm_cfg_tissue_volumes, spm_summarise
+       __________________________________________________________________________
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/config/spm_run_tissue_volumes.m )
 

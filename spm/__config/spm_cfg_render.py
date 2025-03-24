@@ -3,9 +3,9 @@ from mpython import Runtime
 
 def spm_cfg_render(*args, **kwargs):
     """
-      SPM Configuration file for Render  
-       __________________________________________________________________________  
-      
+      SPM Configuration file for Render
+       __________________________________________________________________________
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/config/spm_cfg_render.m )
 

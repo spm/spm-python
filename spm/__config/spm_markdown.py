@@ -3,9 +3,9 @@ from mpython import Runtime
 
 def spm_markdown(*args, **kwargs):
     """
-      Convert a job configuration tree into a series of markdown documents  
-       __________________________________________________________________________  
-      
+      Convert a job configuration tree into a series of markdown documents
+       __________________________________________________________________________
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/config/spm_markdown.m )
 

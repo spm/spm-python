@@ -3,12 +3,12 @@ from mpython import Runtime
 
 def spm_eeg_display_tf(*args, **kwargs):
     """
-      Display TF images saved as NIfTI  
-        FORMAT spm_eeg_display_tf(files)  
-        files  -  list of images to display (as char or cell array of strings)  
-                  Up to 6 images are supported   
-       __________________________________________________________________________  
-      
+      Display TF images saved as NIfTI
+        FORMAT spm_eeg_display_tf(files)
+        files  -  list of images to display (as char or cell array of strings)
+                  Up to 6 images are supported
+       __________________________________________________________________________
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_eeg_display_tf.m )
 

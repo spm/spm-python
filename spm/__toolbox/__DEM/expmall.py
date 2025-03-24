@@ -3,9 +3,9 @@ from mpython import Runtime
 
 def expmall(*args, **kwargs):
     """
-    expmall is a function.  
-          dx = expmall(J, f, t, EP)  
-      
+    expmall is a function.
+          dx = expmall(J, f, t, EP)
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DEM/expmall.m )
 

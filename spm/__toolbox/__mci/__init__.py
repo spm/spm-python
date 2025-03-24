@@ -1,7 +1,7 @@
 from .__demo_gradients import (
     mci_compare_forward,
     mci_compare_gradients,
-    mci_compare_jacobians
+    mci_compare_jacobians,
 )
 from .__gradients import (
     mci_compare_setup,
@@ -16,7 +16,7 @@ from .__gradients import (
     spm_mci_joint_grad,
     spm_mci_sens,
     spm_mci_sens_init,
-    spm_mci_sens_sun
+    spm_mci_sens_sun,
 )
 from .__inference import (
     spm_mci_ais,
@@ -61,7 +61,7 @@ from .__inference import (
     spm_nwcov,
     spm_nwpost,
     spm_nwrnd,
-    spm_wishrnd
+    spm_wishrnd,
 )
 from .__models import (
     mci_approach_deriv,
@@ -125,11 +125,9 @@ from .__models import (
     mci_ramsay_fx,
     mci_ramsay_gen,
     mci_ramsay_gx,
-    mci_ramsay_struct
+    mci_ramsay_struct,
 )
-from .__plotting import (
-    mci_plot_surface
-)
+from .__plotting import mci_plot_surface
 
 
 __all__ = [
@@ -254,5 +252,5 @@ __all__ = [
     "mci_ramsay_gen",
     "mci_ramsay_gx",
     "mci_ramsay_struct",
-    "mci_plot_surface"
+    "mci_plot_surface",
 ]

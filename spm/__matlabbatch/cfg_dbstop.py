@@ -3,9 +3,9 @@ from mpython import Runtime
 
 def cfg_dbstop(*args, **kwargs):
     """
-    cfg_dbstop is a function.  
-          cfg_dbstop(fh)  
-      
+    cfg_dbstop is a function.
+          cfg_dbstop(fh)
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/matlabbatch/cfg_dbstop.m )
 

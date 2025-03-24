@@ -3,9 +3,9 @@ from mpython import Runtime
 
 def bf_regularise_mantrunc(*args, **kwargs):
     """
-      User-specified dimensional reduction  
-       __________________________________________________________________________  
-      
+      User-specified dimensional reduction
+       __________________________________________________________________________
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DAiSS/bf_regularise_mantrunc.m )
 

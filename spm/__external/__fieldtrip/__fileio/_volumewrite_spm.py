@@ -3,12 +3,12 @@ from mpython import Runtime
 
 def _volumewrite_spm(*args, **kwargs):
     """
-      VOLUMEWRITE_SPM writes anatomical or functional MRI volume data to analyze or nifti format  
-        using the SPM toolbox.  
-         
-        Use as  
-          [Va] = volumewrite_spm(filename, data, transform)  
-      
+      VOLUMEWRITE_SPM writes anatomical or functional MRI volume data to analyze or nifti format
+        using the SPM toolbox.
+
+        Use as
+          [Va] = volumewrite_spm(filename, data, transform)
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/volumewrite_spm.m )
 

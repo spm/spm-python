@@ -3,8 +3,8 @@ from mpython import Runtime
 
 def _rejectvisual_channel(*args, **kwargs):
     """
-      SUBFUNCTION for ft_rejectvisual  
-      
+      SUBFUNCTION for ft_rejectvisual
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/rejectvisual_channel.m )
 

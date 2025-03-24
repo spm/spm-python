@@ -3,12 +3,12 @@ from mpython import Runtime
 
 def _read_neuralynx_nts(*args, **kwargs):
     """
-      READ_NEURALYNX_NTS reads spike timestamps  
-         
-        Use as  
-          [nts] = read_neuralynx_nts(filename)  
-          [nts] = read_neuralynx_nts(filename, begrecord, endrecord)  
-      
+      READ_NEURALYNX_NTS reads spike timestamps
+
+        Use as
+          [nts] = read_neuralynx_nts(filename)
+          [nts] = read_neuralynx_nts(filename, begrecord, endrecord)
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/read_neuralynx_nts.m )
 

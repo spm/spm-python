@@ -3,12 +3,12 @@ from mpython import Runtime
 
 def _read_neuralynx_nst(*args, **kwargs):
     """
-      READ_NEURALYNX_NST reads a single stereotrode file  
-         
-        Use as  
-          [nst] = read_neuralynx_nst(filename)  
-          [nst] = read_neuralynx_nst(filename, begrecord, endrecord)  
-      
+      READ_NEURALYNX_NST reads a single stereotrode file
+
+        Use as
+          [nst] = read_neuralynx_nst(filename)
+          [nst] = read_neuralynx_nst(filename, begrecord, endrecord)
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/read_neuralynx_nst.m )
 

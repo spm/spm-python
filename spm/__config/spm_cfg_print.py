@@ -3,9 +3,9 @@ from mpython import Runtime
 
 def spm_cfg_print(*args, **kwargs):
     """
-      SPM Configuration file for 'Print figure'  
-       __________________________________________________________________________  
-      
+      SPM Configuration file for 'Print figure'
+       __________________________________________________________________________
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/config/spm_cfg_print.m )
 

@@ -3,9 +3,9 @@ from mpython import Runtime
 
 def _avgoverdim(*args, **kwargs):
     """
-    avgoverdim is a function.  
-          data = avgoverdim(data, avgdim, fb)  
-      
+    avgoverdim is a function.
+          data = avgoverdim(data, avgdim, fb)
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/utilities/private/avgoverdim.m )
 

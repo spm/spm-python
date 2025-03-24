@@ -36,5 +36,5 @@ __all__ = [
     "spm_dartel_warp",
     "spm_klaff",
     "spm_norm_population",
-    "tbx_cfg_dartel"
+    "tbx_cfg_dartel",
 ]

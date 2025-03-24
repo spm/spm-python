@@ -3,8 +3,8 @@ from mpython import Runtime
 
 def _selfromraw(*args, **kwargs):
     """
-      FIXME this function is not documented  
-      
+      FIXME this function is not documented
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/utilities/private/selfromraw.m )
 

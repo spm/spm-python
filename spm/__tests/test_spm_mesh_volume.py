@@ -3,9 +3,9 @@ from mpython import Runtime
 
 def test_spm_mesh_volume(*args, **kwargs):
     """
-      Unit Tests for spm_mesh_volume  
-       __________________________________________________________________________  
-      
+      Unit Tests for spm_mesh_volume
+       __________________________________________________________________________
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/tests/test_spm_mesh_volume.m )
 

@@ -3,10 +3,10 @@ from mpython import Runtime
 
 def _volumeedit(*args, **kwargs):
     """
-      VOLUMEEDIT allows for editing of a (booleanized) volume, in order to  
-        remove unwanted voxels. Interaction proceeds with the keyboard and the  
-        mouse.  
-      
+      VOLUMEEDIT allows for editing of a (booleanized) volume, in order to
+        remove unwanted voxels. Interaction proceeds with the keyboard and the
+        mouse.
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/volumeedit.m )
 

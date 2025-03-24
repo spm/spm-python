@@ -3,16 +3,16 @@ from mpython import Runtime
 
 def spm_mesh_join(*args, **kwargs):
     """
-      Join a list of surface meshes into a single one  
-        FORMAT [M, I] = spm_mesh_join(Ms)  
-        Ms            - a patch structure array or list of scalar patch structures  
-         
-        M             - a scalar patch structure  
-        I             - a column vector of face indices  
-         
-        See also spm_mesh_split  
-       __________________________________________________________________________  
-      
+      Join a list of surface meshes into a single one
+        FORMAT [M, I] = spm_mesh_join(Ms)
+        Ms            - a patch structure array or list of scalar patch structures
+
+        M             - a scalar patch structure
+        I             - a column vector of face indices
+
+        See also spm_mesh_split
+       __________________________________________________________________________
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_mesh_join.m )
 

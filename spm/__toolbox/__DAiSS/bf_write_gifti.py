@@ -3,9 +3,9 @@ from mpython import Runtime
 
 def bf_write_gifti(*args, **kwargs):
     """
-      Write out beamformer results as GIfTI meshes  
-       __________________________________________________________________________  
-      
+      Write out beamformer results as GIfTI meshes
+       __________________________________________________________________________
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DAiSS/bf_write_gifti.m )
 

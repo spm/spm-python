@@ -3,9 +3,9 @@ from mpython import Runtime
 
 def spm_cfg_eeg_crop(*args, **kwargs):
     """
-      configuration file for cropping M/EEG data  
-       __________________________________________________________________________  
-      
+      configuration file for cropping M/EEG data
+       __________________________________________________________________________
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/config/spm_cfg_eeg_crop.m )
 

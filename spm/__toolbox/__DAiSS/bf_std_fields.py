@@ -3,9 +3,9 @@ from mpython import Runtime
 
 def bf_std_fields(*args, **kwargs):
     """
-       
-       __________________________________________________________________________  
-      
+
+       __________________________________________________________________________
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DAiSS/bf_std_fields.m )
 

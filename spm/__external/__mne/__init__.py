@@ -292,5 +292,5 @@ __all__ = [
     "mne_write_stc_file1",
     "mne_write_surface",
     "mne_write_w_file",
-    "mne_write_w_file1"
+    "mne_write_w_file1",
 ]

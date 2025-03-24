@@ -16,5 +16,5 @@ __all__ = [
     "spm_normalise",
     "spm_normalise_disp",
     "spm_run_normalise",
-    "spm_write_sn"
+    "spm_write_sn",
 ]

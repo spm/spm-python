@@ -3,8 +3,8 @@ from mpython import Runtime
 
 def _memprofile(*args, **kwargs):
     """
-      MEMPROFILE this is a dummy placeholder  
-      
+      MEMPROFILE this is a dummy placeholder
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/utilities/private/memprofile.m )
 

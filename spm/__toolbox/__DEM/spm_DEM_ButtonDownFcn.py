@@ -3,13 +3,13 @@ from mpython import Runtime
 
 def spm_DEM_ButtonDownFcn(*args, **kwargs):
     """
-      ButtonDownFcn to play (or save) a movie or sound on button press  
-        FORMAT spm_DEM_ButtonDownFcn  
-         
-        Requires gcbo to have appropriate UserData; see spm_DEM_movie and  
-        spm_DEM_play_song  
-       __________________________________________________________________________  
-      
+      ButtonDownFcn to play (or save) a movie or sound on button press
+        FORMAT spm_DEM_ButtonDownFcn
+
+        Requires gcbo to have appropriate UserData; see spm_DEM_movie and
+        spm_DEM_play_song
+       __________________________________________________________________________
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DEM/spm_DEM_ButtonDownFcn.m )
 

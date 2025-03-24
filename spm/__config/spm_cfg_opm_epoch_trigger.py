@@ -3,9 +3,9 @@ from mpython import Runtime
 
 def spm_cfg_opm_epoch_trigger(*args, **kwargs):
     """
-      Configuration file for epoching OPM data  
-       __________________________________________________________________________  
-      
+      Configuration file for epoching OPM data
+       __________________________________________________________________________
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/config/spm_cfg_opm_epoch_trigger.m )
 
