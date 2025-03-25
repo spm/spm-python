@@ -6,7 +6,7 @@
 ```
 
 ```
-Copyright (C) 1991,1994-2024 Wellcome Centre for Human Neuroimaging
+Copyright (C) 1991,1994-2025 Wellcome Centre for Human Neuroimaging
 ```
 
 # The Python interface to _[SPM](https://www.fil.ion.ucl.ac.uk/spm/docs/)_
