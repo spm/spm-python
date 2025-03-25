@@ -1,11 +1,11 @@
-from spm.__wrapper__ import Runtime
+from mpython import Runtime
 
 
 def _bf_fuse_lf(*args, **kwargs):
     """
-      Prepares lead-fields to match channels in covariance  
-        Copyright (C) 2014 Wellcome Trust Centre for Neuroimaging  
-      
+      Prepares lead-fields to match channels in covariance
+        Copyright (C) 2014 Wellcome Trust Centre for Neuroimaging
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DAiSS/private/bf_fuse_lf.m )
 

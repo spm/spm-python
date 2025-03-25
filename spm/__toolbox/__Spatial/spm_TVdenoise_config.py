@@ -1,11 +1,11 @@
-from spm.__wrapper__ import Runtime
+from mpython import Runtime
 
 
 def spm_TVdenoise_config(*args, **kwargs):
     """
-      SPM Configuration file for total variation denoising  
-       __________________________________________________________________________  
-      
+      SPM Configuration file for total variation denoising
+       __________________________________________________________________________
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/Spatial/spm_TVdenoise_config.m )
 

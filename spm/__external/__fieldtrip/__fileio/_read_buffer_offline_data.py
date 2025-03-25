@@ -1,12 +1,12 @@
-from spm.__wrapper__ import Runtime
+from mpython import Runtime
 
 
 def _read_buffer_offline_data(*args, **kwargs):
     """
-      function dat = read_buffer_offline_data(datafile, header, range)  
-         
-        This function reads FCDC buffer-type data from a binary file.  
-      
+      function dat = read_buffer_offline_data(datafile, header, range)
+
+        This function reads FCDC buffer-type data from a binary file.
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/read_buffer_offline_data.m )
 

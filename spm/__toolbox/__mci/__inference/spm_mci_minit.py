@@ -1,14 +1,14 @@
-from spm.__wrapper__ import Runtime
+from mpython import Runtime
 
 
 def spm_mci_minit(*args, **kwargs):
     """
-      Check and initialise model strucuture  
-        FORMAT [M] = spm_mci_minit (M)  
-         
-        eg. Pre-compute quantities for computing log-joint  
-       __________________________________________________________________________  
-      
+      Check and initialise model strucuture
+        FORMAT [M] = spm_mci_minit (M)
+
+        eg. Pre-compute quantities for computing log-joint
+       __________________________________________________________________________
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/mci/inference/spm_mci_minit.m )
 

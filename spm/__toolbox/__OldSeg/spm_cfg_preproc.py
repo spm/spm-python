@@ -1,11 +1,11 @@
-from spm.__wrapper__ import Runtime
+from mpython import Runtime
 
 
 def spm_cfg_preproc(*args, **kwargs):
     """
-      SPM Configuration file for toolbox 'Old Segment'  
-       __________________________________________________________________________  
-      
+      SPM Configuration file for toolbox 'Old Segment'
+       __________________________________________________________________________
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/OldSeg/spm_cfg_preproc.m )
 

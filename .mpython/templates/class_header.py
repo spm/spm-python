@@ -1,4 +1,4 @@
-from <pkgname>.__wrapper__ import Runtime, MatlabClass
+from mpython import Runtime, MatlabClass
 
 
 class <classname>(MatlabClass):

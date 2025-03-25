@@ -1,12 +1,12 @@
-from spm.__wrapper__ import Runtime
+from mpython import Runtime
 
 
 def _ft_test_compare(*args, **kwargs):
     """
-      FT_TEST_COMPARE documentation is included inside ft_test documentation.  
-          
-        See also FT_TEST  
-      
+      FT_TEST_COMPARE documentation is included inside ft_test documentation.
+
+        See also FT_TEST
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/utilities/private/ft_test_compare.m )
 

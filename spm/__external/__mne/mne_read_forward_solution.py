@@ -1,19 +1,19 @@
-from spm.__wrapper__ import Runtime
+from mpython import Runtime
 
 
 def mne_read_forward_solution(*args, **kwargs):
     """
-       
-        [fwd] = mne_read_forward_solution(fname,force_fixed,surf_ori,include,exclude)  
-         
-        A forward solution from a fif file  
-         
-        fname        - The name of the file  
-        force_fixed  - Force fixed source orientation mode? (optional)  
-        surf_ori     - Use surface based source coordinate system? (optional)  
-        include      - Include these channels (optional)  
-        exclude      - Exclude these channels (optional)  
-      
+
+        [fwd] = mne_read_forward_solution(fname,force_fixed,surf_ori,include,exclude)
+
+        A forward solution from a fif file
+
+        fname        - The name of the file
+        force_fixed  - Force fixed source orientation mode? (optional)
+        surf_ori     - Use surface based source coordinate system? (optional)
+        include      - Include these channels (optional)
+        exclude      - Exclude these channels (optional)
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/external/mne/mne_read_forward_solution.m )
 

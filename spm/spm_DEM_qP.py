@@ -1,17 +1,17 @@
-from spm.__wrapper__ import Runtime
+from mpython import Runtime
 
 
 def spm_DEM_qP(*args, **kwargs):
     """
-      Report on conditional estimates of parameters  
-        FORMAT spm_DEM_qP(qP,pP)  
-         
-        qP.P   - conditional expectations  
-        qP.V   - conditional variance  
-         
-        pP     - optional priors  
-       __________________________________________________________________________  
-      
+      Report on conditional estimates of parameters
+        FORMAT spm_DEM_qP(qP,pP)
+
+        qP.P   - conditional expectations
+        qP.V   - conditional variance
+
+        pP     - optional priors
+       __________________________________________________________________________
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_DEM_qP.m )
 

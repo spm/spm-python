@@ -1,15 +1,15 @@
-from spm.__wrapper__ import Runtime
+from mpython import Runtime
 
 
 def _write_neuralynx_nts(*args, **kwargs):
     """
-      WRITE_NEURALYNX_NTS writes spike timestamps to a NTS file  
-         
-        Use as  
-          write_neuralynx_nts(filename, nts)  
-         
-        See also READ_NEURALYNX_NTS  
-      
+      WRITE_NEURALYNX_NTS writes spike timestamps to a NTS file
+
+        Use as
+          write_neuralynx_nts(filename, nts)
+
+        See also READ_NEURALYNX_NTS
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/write_neuralynx_nts.m )
 

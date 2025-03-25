@@ -1,5 +1,4 @@
 import unittest
-import numpy as np
 
 from spm import Struct, Cell, Array, cfg_dep, Runtime
 
@@ -111,23 +110,49 @@ matlabbatch{6}.spm.spatial.smooth.prefix = 's';
 
 
 class BatchCreationTestCase(unittest.TestCase):
-
     def test_batch1(self):
         # Implicit creation
         realign_estimate_reslice = Struct()
-        realign_estimate_reslice.matlabbatch(0).spm.spatial.realign.estwrite.data = [["file1"], ["file2"]]
-        realign_estimate_reslice.matlabbatch(0).spm.spatial.realign.estwrite.eoptions.quality = 0.9
-        realign_estimate_reslice.matlabbatch(0).spm.spatial.realign.estwrite.eoptions.sep = 4
-        realign_estimate_reslice.matlabbatch(0).spm.spatial.realign.estwrite.eoptions.fwhm = 5
-        realign_estimate_reslice.matlabbatch(0).spm.spatial.realign.estwrite.eoptions.rtm = 1
-        realign_estimate_reslice.matlabbatch(0).spm.spatial.realign.estwrite.eoptions.interp = 2
-        realign_estimate_reslice.matlabbatch(0).spm.spatial.realign.estwrite.eoptions.wrap = Array.from_any([0, 0, 0])
-        realign_estimate_reslice.matlabbatch(0).spm.spatial.realign.estwrite.eoptions.weight = ''
-        realign_estimate_reslice.matlabbatch(0).spm.spatial.realign.estwrite.roptions.which = Array.from_any([2, 1])
-        realign_estimate_reslice.matlabbatch(0).spm.spatial.realign.estwrite.roptions.interp = 4
-        realign_estimate_reslice.matlabbatch(0).spm.spatial.realign.estwrite.roptions.wrap = Array.from_any([0, 0, 0])
-        realign_estimate_reslice.matlabbatch(0).spm.spatial.realign.estwrite.roptions.mask = 1
-        realign_estimate_reslice.matlabbatch(0).spm.spatial.realign.estwrite.roptions.prefix = 'r'
+        realign_estimate_reslice.matlabbatch(0).spm.spatial.realign.estwrite.data = [
+            ["file1"],
+            ["file2"],
+        ]
+        realign_estimate_reslice.matlabbatch(
+            0
+        ).spm.spatial.realign.estwrite.eoptions.quality = 0.9
+        realign_estimate_reslice.matlabbatch(
+            0
+        ).spm.spatial.realign.estwrite.eoptions.sep = 4
+        realign_estimate_reslice.matlabbatch(
+            0
+        ).spm.spatial.realign.estwrite.eoptions.fwhm = 5
+        realign_estimate_reslice.matlabbatch(
+            0
+        ).spm.spatial.realign.estwrite.eoptions.rtm = 1
+        realign_estimate_reslice.matlabbatch(
+            0
+        ).spm.spatial.realign.estwrite.eoptions.interp = 2
+        realign_estimate_reslice.matlabbatch(
+            0
+        ).spm.spatial.realign.estwrite.eoptions.wrap = Array.from_any([0, 0, 0])
+        realign_estimate_reslice.matlabbatch(
+            0
+        ).spm.spatial.realign.estwrite.eoptions.weight = ""
+        realign_estimate_reslice.matlabbatch(
+            0
+        ).spm.spatial.realign.estwrite.roptions.which = Array.from_any([2, 1])
+        realign_estimate_reslice.matlabbatch(
+            0
+        ).spm.spatial.realign.estwrite.roptions.interp = 4
+        realign_estimate_reslice.matlabbatch(
+            0
+        ).spm.spatial.realign.estwrite.roptions.wrap = Array.from_any([0, 0, 0])
+        realign_estimate_reslice.matlabbatch(
+            0
+        ).spm.spatial.realign.estwrite.roptions.mask = 1
+        realign_estimate_reslice.matlabbatch(
+            0
+        ).spm.spatial.realign.estwrite.roptions.prefix = "r"
 
         # Explicit creation
         eoptions = Struct(
@@ -137,122 +162,294 @@ class BatchCreationTestCase(unittest.TestCase):
             rtm=1,
             interp=2,
             wrap=Array.from_any([0, 0, 0]),
-            weight='',
+            weight="",
         )
         roptions = Struct(
             which=Array.from_any([2, 1]),
             interp=4,
             wrap=Array.from_any([0, 0, 0]),
             mask=1,
-            prefix='r'
+            prefix="r",
         )
         realign_estimate_reslice_ref = Struct(
-            matlabbatch=Cell([
-                Struct(spm=Struct(spatial=Struct(realign=Struct(estwrite=Struct(
-                    data=[["file1"], ["file2"]],
-                    eoptions=eoptions,
-                    roptions=roptions,
-                )))))
-            ])
+            matlabbatch=Cell(
+                [
+                    Struct(
+                        spm=Struct(
+                            spatial=Struct(
+                                realign=Struct(
+                                    estwrite=Struct(
+                                        data=[["file1"], ["file2"]],
+                                        eoptions=eoptions,
+                                        roptions=roptions,
+                                    )
+                                )
+                            )
+                        )
+                    )
+                ]
+            )
         )
 
         self.assertEqual(
-            str(realign_estimate_reslice),
-            str(realign_estimate_reslice_ref)
+            str(realign_estimate_reslice), str(realign_estimate_reslice_ref)
         )
 
     def test_batch2(self):
         # Implicit creation
         matlabbatch = Cell()
-        matlabbatch(0).spm.spatial.realign.estwrite.data = [['/Users/olivia/OneDrive - King''s College London/spm/spm_tutorials/preprocessing/MoAEpilot/sub-01/func/sub-01_task-auditory_bold.nii']]
+        matlabbatch(0).spm.spatial.realign.estwrite.data = [
+            [
+                "/Users/olivia/OneDrive - King"
+                "s College London/spm/spm_tutorials/preprocessing/MoAEpilot/sub-01/func/sub-01_task-auditory_bold.nii"
+            ]
+        ]
         matlabbatch(0).spm.spatial.realign.estwrite.eoptions.quality = 0.9
         matlabbatch(0).spm.spatial.realign.estwrite.eoptions.sep = 4
         matlabbatch(0).spm.spatial.realign.estwrite.eoptions.fwhm = 5
         matlabbatch(0).spm.spatial.realign.estwrite.eoptions.rtm = 1
         matlabbatch(0).spm.spatial.realign.estwrite.eoptions.interp = 2
-        matlabbatch(0).spm.spatial.realign.estwrite.eoptions.wrap = Array.from_any([0, 0, 0])
-        matlabbatch(0).spm.spatial.realign.estwrite.eoptions.weight = ''
-        matlabbatch(0).spm.spatial.realign.estwrite.roptions.which = Array.from_any([0, 1])
+        matlabbatch(0).spm.spatial.realign.estwrite.eoptions.wrap = Array.from_any(
+            [0, 0, 0]
+        )
+        matlabbatch(0).spm.spatial.realign.estwrite.eoptions.weight = ""
+        matlabbatch(0).spm.spatial.realign.estwrite.roptions.which = Array.from_any(
+            [0, 1]
+        )
         matlabbatch(0).spm.spatial.realign.estwrite.roptions.interp = Array.from_any(4)
-        matlabbatch(0).spm.spatial.realign.estwrite.roptions.wrap = Array.from_any([0, 0, 0])
+        matlabbatch(0).spm.spatial.realign.estwrite.roptions.wrap = Array.from_any(
+            [0, 0, 0]
+        )
         matlabbatch(0).spm.spatial.realign.estwrite.roptions.mask = 1
-        matlabbatch(0).spm.spatial.realign.estwrite.roptions.prefix = 'r'
-        s1 = Runtime.call('substruct', '.','val', '{}',[1], '.','val', '{}',[1], '.','val', '{}',[1], '.','val', '{}',[1])
-        s2 = Runtime.call('substruct', '.','sess', '()',[1], '.','cfiles')
-        matlabbatch(1).spm.temporal.st.scans(0)[0] = cfg_dep('Realign: Estimate & Reslice: Realigned Images (Sess 1)', s1, s2)
+        matlabbatch(0).spm.spatial.realign.estwrite.roptions.prefix = "r"
+        s1 = Runtime.call(
+            "substruct",
+            ".",
+            "val",
+            "{}",
+            [1],
+            ".",
+            "val",
+            "{}",
+            [1],
+            ".",
+            "val",
+            "{}",
+            [1],
+            ".",
+            "val",
+            "{}",
+            [1],
+        )
+        s2 = Runtime.call("substruct", ".", "sess", "()", [1], ".", "cfiles")
+        matlabbatch(1).spm.temporal.st.scans(0)[0] = cfg_dep(
+            "Realign: Estimate & Reslice: Realigned Images (Sess 1)", s1, s2
+        )
         matlabbatch(1).spm.temporal.st.nslices = 64
         matlabbatch(1).spm.temporal.st.tr = 7
         matlabbatch(1).spm.temporal.st.ta = 6.890625
         matlabbatch(1).spm.temporal.st.so = Array.from_any(range(64, 0, -1))
         matlabbatch(1).spm.temporal.st.refslice = 32
-        matlabbatch(1).spm.temporal.st.prefix = 'a'
-        s1 = Runtime.call('substruct', '.','val', '{}',{1}, '.','val', '{}',{1}, '.','val', '{}',{1}, '.','val', '{}',{1})
-        s2 = Runtime.call('substruct', '.','rmean')
-        matlabbatch(2).spm.spatial.coreg.estimate.ref[0] = cfg_dep('Realign: Estimate & Reslice: Mean Image', s1, s2)
-        matlabbatch(2).spm.spatial.coreg.estimate.source = ['/Users/olivia/OneDrive - King''s College London/spm/spm_tutorials/preprocessing/MoAEpilot/sub-01/anat/sub-01_T1w.nii,1']
-        matlabbatch(2).spm.spatial.coreg.estimate.other = ['']
-        matlabbatch(2).spm.spatial.coreg.estimate.eoptions.cost_fun = 'nmi'
+        matlabbatch(1).spm.temporal.st.prefix = "a"
+        s1 = Runtime.call(
+            "substruct",
+            ".",
+            "val",
+            "{}",
+            {1},
+            ".",
+            "val",
+            "{}",
+            {1},
+            ".",
+            "val",
+            "{}",
+            {1},
+            ".",
+            "val",
+            "{}",
+            {1},
+        )
+        s2 = Runtime.call("substruct", ".", "rmean")
+        matlabbatch(2).spm.spatial.coreg.estimate.ref[0] = cfg_dep(
+            "Realign: Estimate & Reslice: Mean Image", s1, s2
+        )
+        matlabbatch(2).spm.spatial.coreg.estimate.source = [
+            "/Users/olivia/OneDrive - King"
+            "s College London/spm/spm_tutorials/preprocessing/MoAEpilot/sub-01/anat/sub-01_T1w.nii,1"
+        ]
+        matlabbatch(2).spm.spatial.coreg.estimate.other = [""]
+        matlabbatch(2).spm.spatial.coreg.estimate.eoptions.cost_fun = "nmi"
         matlabbatch(2).spm.spatial.coreg.estimate.eoptions.sep = Array.from_any([4, 2])
-        matlabbatch(2).spm.spatial.coreg.estimate.eoptions.tol = Array.from_any([0.02, 0.02, 0.02, 0.001, 0.001, 0.001, 0.01, 0.01, 0.01, 0.001, 0.001, 0.001])
-        matlabbatch(3).spm.spatial.coreg.estimate.eoptions.fwhm = Array.from_any([7, 7]);
-        s1 = Runtime.call('substruct', '.','val', '{}',{3}, '.','val', '{}',{1}, '.','val', '{}',{1}, '.','val', '{}',{1})
-        s2 = Runtime.call('substruct', '.','cfiles')
-        matlabbatch(3).spm.spatial.preproc.channel.vols[0] = cfg_dep('Coregister: Estimate: Coregistered Images', s1, s2)
+        matlabbatch(2).spm.spatial.coreg.estimate.eoptions.tol = Array.from_any(
+            [
+                0.02,
+                0.02,
+                0.02,
+                0.001,
+                0.001,
+                0.001,
+                0.01,
+                0.01,
+                0.01,
+                0.001,
+                0.001,
+                0.001,
+            ]
+        )
+        matlabbatch(3).spm.spatial.coreg.estimate.eoptions.fwhm = Array.from_any([7, 7])
+        s1 = Runtime.call(
+            "substruct",
+            ".",
+            "val",
+            "{}",
+            {3},
+            ".",
+            "val",
+            "{}",
+            {1},
+            ".",
+            "val",
+            "{}",
+            {1},
+            ".",
+            "val",
+            "{}",
+            {1},
+        )
+        s2 = Runtime.call("substruct", ".", "cfiles")
+        matlabbatch(3).spm.spatial.preproc.channel.vols[0] = cfg_dep(
+            "Coregister: Estimate: Coregistered Images", s1, s2
+        )
         matlabbatch(3).spm.spatial.preproc.channel.biasreg = 0.001
         matlabbatch(3).spm.spatial.preproc.channel.biasfwhm = 60
         matlabbatch(3).spm.spatial.preproc.channel.write = Array.from_any([0, 0])
-        matlabbatch(3).spm.spatial.preproc.tissue(0).tpm = ['/Applications/spm12/tpm/TPM.nii,1']
+        matlabbatch(3).spm.spatial.preproc.tissue(0).tpm = [
+            "/Applications/spm12/tpm/TPM.nii,1"
+        ]
         matlabbatch(3).spm.spatial.preproc.tissue(0).ngaus = 1
         matlabbatch(3).spm.spatial.preproc.tissue(0).native = Array.from_any([1, 0])
         matlabbatch(3).spm.spatial.preproc.tissue(0).warped = Array.from_any([0, 0])
-        matlabbatch(3).spm.spatial.preproc.tissue(1).tpm = ['/Applications/spm12/tpm/TPM.nii,2']
+        matlabbatch(3).spm.spatial.preproc.tissue(1).tpm = [
+            "/Applications/spm12/tpm/TPM.nii,2"
+        ]
         matlabbatch(3).spm.spatial.preproc.tissue(1).ngaus = 1
         matlabbatch(3).spm.spatial.preproc.tissue(1).native = Array.from_any([1, 0])
         matlabbatch(3).spm.spatial.preproc.tissue(1).warped = Array.from_any([0, 0])
-        matlabbatch(3).spm.spatial.preproc.tissue(2).tpm = ['/Applications/spm12/tpm/TPM.nii,3']
+        matlabbatch(3).spm.spatial.preproc.tissue(2).tpm = [
+            "/Applications/spm12/tpm/TPM.nii,3"
+        ]
         matlabbatch(3).spm.spatial.preproc.tissue(2).ngaus = 2
         matlabbatch(3).spm.spatial.preproc.tissue(2).native = Array.from_any([1, 0])
         matlabbatch(3).spm.spatial.preproc.tissue(2).warped = Array.from_any([0, 0])
-        matlabbatch(3).spm.spatial.preproc.tissue(3).tpm = ['/Applications/spm12/tpm/TPM.nii,4']
+        matlabbatch(3).spm.spatial.preproc.tissue(3).tpm = [
+            "/Applications/spm12/tpm/TPM.nii,4"
+        ]
         matlabbatch(3).spm.spatial.preproc.tissue(3).ngaus = 3
         matlabbatch(3).spm.spatial.preproc.tissue(3).native = Array.from_any([1, 0])
         matlabbatch(3).spm.spatial.preproc.tissue(3).warped = Array.from_any([0, 0])
-        matlabbatch(3).spm.spatial.preproc.tissue(4).tpm = ['/Applications/spm12/tpm/TPM.nii,5']
+        matlabbatch(3).spm.spatial.preproc.tissue(4).tpm = [
+            "/Applications/spm12/tpm/TPM.nii,5"
+        ]
         matlabbatch(3).spm.spatial.preproc.tissue(4).ngaus = 4
         matlabbatch(3).spm.spatial.preproc.tissue(4).native = Array.from_any([1, 0])
         matlabbatch(3).spm.spatial.preproc.tissue(4).warped = Array.from_any([0, 0])
-        matlabbatch(3).spm.spatial.preproc.tissue(5).tpm = ['/Applications/spm12/tpm/TPM.nii,6']
+        matlabbatch(3).spm.spatial.preproc.tissue(5).tpm = [
+            "/Applications/spm12/tpm/TPM.nii,6"
+        ]
         matlabbatch(3).spm.spatial.preproc.tissue(5).ngaus = 2
         matlabbatch(3).spm.spatial.preproc.tissue(5).native = Array.from_any([0, 0])
         matlabbatch(3).spm.spatial.preproc.tissue(5).warped = Array.from_any([0, 0])
         matlabbatch(3).spm.spatial.preproc.warp.mrf = 1
         matlabbatch(3).spm.spatial.preproc.warp.cleanup = 1
-        matlabbatch(3).spm.spatial.preproc.warp.reg = Array.from_any([0, 0.001, 0.5, 0.05, 0.2])
-        matlabbatch(3).spm.spatial.preproc.warp.affreg = 'mni'
+        matlabbatch(3).spm.spatial.preproc.warp.reg = Array.from_any(
+            [0, 0.001, 0.5, 0.05, 0.2]
+        )
+        matlabbatch(3).spm.spatial.preproc.warp.affreg = "mni"
         matlabbatch(3).spm.spatial.preproc.warp.fwhm = 0
         matlabbatch(3).spm.spatial.preproc.warp.samp = 3
         matlabbatch(3).spm.spatial.preproc.warp.write = Array.from_any([0, 1])
-        matlabbatch(3).spm.spatial.preproc.warp.vox = float('nan')
-        matlabbatch(3).spm.spatial.preproc.warp.bb = Array.from_any([[float('nan'), float('nan'), float('nan')],
-                                                                     [float('nan'), float('nan'), float('nan')]])
-        s1 = Runtime.call('substruct', '.','val', '{}',{4}, '.','val', '{}',{1}, '.','val', '{}',{1})
-        s2 = Runtime.call('substruct', '.','fordef', '()',{':'})
-        matlabbatch(4).spm.spatial.normalise.write.subj["def"][0] = cfg_dep('Segment: Forward Deformations', s1, s2)
-        s1 = Runtime.call('substruct', '.','val', '{}',{2}, '.','val', '{}',{1}, '.','val', '{}',{1})
-        s2 = Runtime.call('substruct', '()',{1}, '.','files')
-        matlabbatch(4).spm.spatial.normalise.write.subj.resample[0] = cfg_dep('Slice Timing: Slice Timing Corr. Images (Sess 1)', s1, s2)
-        matlabbatch(4).spm.spatial.normalise.write.woptions.bb = Array.from_any([[-78, -112, -70], [78, 76, 85]])
-        matlabbatch(4).spm.spatial.normalise.write.woptions.vox = Array.from_any([3, 3, 3])
+        matlabbatch(3).spm.spatial.preproc.warp.vox = float("nan")
+        matlabbatch(3).spm.spatial.preproc.warp.bb = Array.from_any(
+            [
+                [float("nan"), float("nan"), float("nan")],
+                [float("nan"), float("nan"), float("nan")],
+            ]
+        )
+        s1 = Runtime.call(
+            "substruct",
+            ".",
+            "val",
+            "{}",
+            {4},
+            ".",
+            "val",
+            "{}",
+            {1},
+            ".",
+            "val",
+            "{}",
+            {1},
+        )
+        s2 = Runtime.call("substruct", ".", "fordef", "()", {":"})
+        matlabbatch(4).spm.spatial.normalise.write.subj["def"][0] = cfg_dep(
+            "Segment: Forward Deformations", s1, s2
+        )
+        s1 = Runtime.call(
+            "substruct",
+            ".",
+            "val",
+            "{}",
+            {2},
+            ".",
+            "val",
+            "{}",
+            {1},
+            ".",
+            "val",
+            "{}",
+            {1},
+        )
+        s2 = Runtime.call("substruct", "()", {1}, ".", "files")
+        matlabbatch(4).spm.spatial.normalise.write.subj.resample[0] = cfg_dep(
+            "Slice Timing: Slice Timing Corr. Images (Sess 1)", s1, s2
+        )
+        matlabbatch(4).spm.spatial.normalise.write.woptions.bb = Array.from_any(
+            [[-78, -112, -70], [78, 76, 85]]
+        )
+        matlabbatch(4).spm.spatial.normalise.write.woptions.vox = Array.from_any(
+            [3, 3, 3]
+        )
         matlabbatch(4).spm.spatial.normalise.write.woptions.interp = 4
-        matlabbatch(4).spm.spatial.normalise.write.woptions.prefix = 'w'
-        s1 = Runtime.call('substruct', '.','val', '{}',{5}, '.','val', '{}',{1}, '.','val', '{}',{1}, '.','val', '{}',{1})
-        s2 = Runtime.call('substruct', '()',{1}, '.','files')
-        matlabbatch(5).spm.spatial.smooth.data[0] = cfg_dep('Normalise: Write: Normalised Images (Subj 1)', s1, s2)
+        matlabbatch(4).spm.spatial.normalise.write.woptions.prefix = "w"
+        s1 = Runtime.call(
+            "substruct",
+            ".",
+            "val",
+            "{}",
+            {5},
+            ".",
+            "val",
+            "{}",
+            {1},
+            ".",
+            "val",
+            "{}",
+            {1},
+            ".",
+            "val",
+            "{}",
+            {1},
+        )
+        s2 = Runtime.call("substruct", "()", {1}, ".", "files")
+        matlabbatch(5).spm.spatial.smooth.data[0] = cfg_dep(
+            "Normalise: Write: Normalised Images (Subj 1)", s1, s2
+        )
         matlabbatch(5).spm.spatial.smooth.fwhm = Array.from_any([6, 6, 6])
         matlabbatch(5).spm.spatial.smooth.dtype = 0
         matlabbatch(5).spm.spatial.smooth.im = 0
-        matlabbatch(5).spm.spatial.smooth.prefix = 's'
+        matlabbatch(5).spm.spatial.smooth.prefix = "s"
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

@@ -1,13 +1,13 @@
-from spm.__wrapper__ import Runtime
+from mpython import Runtime
 
 
 def spm_fy_erp(*args, **kwargs):
     """
-      Feature selection for erp models   
-        FORMAT f = spm_fy_erp(y,M)  
-        f = y*M.U;  
-       __________________________________________________________________________  
-      
+      Feature selection for erp models
+        FORMAT f = spm_fy_erp(y,M)
+        f = y*M.U;
+       __________________________________________________________________________
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/dcm_meeg/spm_fy_erp.m )
 

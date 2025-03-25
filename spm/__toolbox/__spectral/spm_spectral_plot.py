@@ -1,16 +1,16 @@
-from spm.__wrapper__ import Runtime
+from mpython import Runtime
 
 
 def spm_spectral_plot(*args, **kwargs):
     """
-      subplot for spectral arrays  
-        FORMAT spm_spectral_plot(Hz,csd,str,xlab,ylab)  
-         
-        str  - format (default: '-')  
-        xlab - xlabel (default: 'Hz')  
-        ylab - ylabel (default: 'power')  
-       __________________________________________________________________________  
-      
+      subplot for spectral arrays
+        FORMAT spm_spectral_plot(Hz,csd,str,xlab,ylab)
+
+        str  - format (default: '-')
+        xlab - xlabel (default: 'Hz')
+        ylab - ylabel (default: 'power')
+       __________________________________________________________________________
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/spectral/spm_spectral_plot.m )
 

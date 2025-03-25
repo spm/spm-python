@@ -1,11 +1,11 @@
-from spm.__wrapper__ import Runtime
+from mpython import Runtime
 
 
 def bf_output(*args, **kwargs):
     """
-      Perform postprocessing based on beamforming projectors  
-       __________________________________________________________________________  
-      
+      Perform postprocessing based on beamforming projectors
+       __________________________________________________________________________
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DAiSS/bf_output.m )
 

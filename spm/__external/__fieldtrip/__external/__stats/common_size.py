@@ -1,11 +1,11 @@
-from spm.__wrapper__ import Runtime
+from mpython import Runtime
 
 
 def common_size(*args, **kwargs):
     """
-    common_size is a function.  
-          [errorcode, varargout] = common_size(varargin)  
-      
+    common_size is a function.
+          [errorcode, varargout] = common_size(varargin)
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/external/stats/common_size.m )
 

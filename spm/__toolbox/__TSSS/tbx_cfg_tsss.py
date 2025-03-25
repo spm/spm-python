@@ -1,11 +1,11 @@
-from spm.__wrapper__ import Runtime
+from mpython import Runtime
 
 
 def tbx_cfg_tsss(*args, **kwargs):
     """
-      Configuration file for toolbox 'TSSS'  
-       __________________________________________________________________________  
-      
+      Configuration file for toolbox 'TSSS'
+       __________________________________________________________________________
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/TSSS/tbx_cfg_tsss.m )
 

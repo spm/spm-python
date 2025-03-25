@@ -5,7 +5,6 @@ from spm import Runtime, Array
 
 
 class ArrayTestCase(unittest.TestCase):
-
     def test_array_instantiate_empty(self):
         a = Array()
 
@@ -45,24 +44,16 @@ class ArrayTestCase(unittest.TestCase):
         self.assertEqual(a.dtype, np.float64)
         self.assertTrue((a == 0).all())
 
-    def test_array_instantiate_shape_2d(self):
-        a = Array(2, 3, 4, 5)
-
-        self.assertIsInstance(a, Array)
-        self.assertEqual(a.shape, (2, 3, 4, 5))
-        self.assertEqual(a.dtype, np.float64)
-        self.assertTrue((a == 0).all())
-
     def test_array_instantiate_with_shape_order(self):
         a = Array([3, 2], order="C")
         self.assertIsInstance(a, Array)
         self.assertEqual(a.shape, (3, 2))
-        self.assertEqual(a.strides, (2*8, 8))
+        self.assertEqual(a.strides, (2 * 8, 8))
 
         a = Array([3, 2], order="F")
         self.assertIsInstance(a, Array)
         self.assertEqual(a.shape, (3, 2))
-        self.assertEqual(a.strides, (8, 8*3))
+        self.assertEqual(a.strides, (8, 8 * 3))
 
     def test_array_as_struct(self):
         self.assertRaises(TypeError, lambda: Array().as_struct)
@@ -78,7 +69,7 @@ class ArrayTestCase(unittest.TestCase):
         try:
             a = Runtime.call("eval", "[]")
         except Exception:
-            self.fail('Empty array to Matlab failed.')
+            self.fail("Empty array to Matlab failed.")
 
         self.assertIsInstance(a, Array)
         self.assertEqual(a.size, 0)
@@ -88,7 +79,7 @@ class ArrayTestCase(unittest.TestCase):
         try:
             a = Runtime.call("eval", "[1, 2, 3]")
         except Exception:
-            self.fail('2D row array to Matlab failed.')
+            self.fail("2D row array to Matlab failed.")
 
         self.assertIsInstance(a, Array)
         self.assertEqual(a.shape, (3,))
@@ -99,7 +90,7 @@ class ArrayTestCase(unittest.TestCase):
         try:
             a = Runtime.call("eval", "[1; 2; 3]")
         except Exception:
-            self.fail('2D col array to Matlab failed.')
+            self.fail("2D col array to Matlab failed.")
 
         self.assertIsInstance(a, Array)
         self.assertEqual(a.shape, (3, 1))
@@ -110,7 +101,7 @@ class ArrayTestCase(unittest.TestCase):
         try:
             a = Runtime.call("eval", "[1, 2, 3; 4, 5, 6]")
         except Exception:
-            self.fail('2D array to Matlab failed.')
+            self.fail("2D array to Matlab failed.")
 
         self.assertIsInstance(a, Array)
         self.assertEqual(a.shape, (2, 3))
@@ -123,14 +114,14 @@ class ArrayTestCase(unittest.TestCase):
 
         # Get properties in Matlab
         try:
-            size = Runtime.call('size', a)
-            type = Runtime.call('class', a)
+            size = Runtime.call("size", a)
+            type = Runtime.call("class", a)
         except Exception:
-            self.fail('Empty array to Matlab failed.')
+            self.fail("Empty array to Matlab failed.")
 
         # Check properties in Matlab
         self.assertEqual(size.tolist(), [1, 1])
-        self.assertEqual(type, 'double')
+        self.assertEqual(type, "double")
 
     def test_array_to_matlab_empty_1d(self):
         # Construct a 1x3 array
@@ -138,14 +129,14 @@ class ArrayTestCase(unittest.TestCase):
 
         # Get properties in Matlab
         try:
-            size = Runtime.call('size', a)
-            type = Runtime.call('class', a)
+            size = Runtime.call("size", a)
+            type = Runtime.call("class", a)
         except Exception:
-            self.fail('1D shape array to Matlab failed.')
+            self.fail("1D shape array to Matlab failed.")
 
         # Check properties in Matlab
         self.assertEqual(size.tolist(), [1, 3])
-        self.assertEqual(type, 'double')
+        self.assertEqual(type, "double")
 
     def test_array_to_matlab_empty_2d_row(self):
         # Construct a 1x3 array
@@ -153,14 +144,14 @@ class ArrayTestCase(unittest.TestCase):
 
         # Get properties in Matlab
         try:
-            size = Runtime.call('size', a)
-            type = Runtime.call('class', a)
+            size = Runtime.call("size", a)
+            type = Runtime.call("class", a)
         except Exception:
-            self.fail('1D row array to Matlab failed.')
+            self.fail("1D row array to Matlab failed.")
 
         # Check properties in Matlab
         self.assertEqual(size.tolist(), [1, 3])
-        self.assertEqual(type, 'double')
+        self.assertEqual(type, "double")
 
     def test_array_to_matlab_empty_2d_col(self):
         # Construct a 3x1 array
@@ -168,14 +159,14 @@ class ArrayTestCase(unittest.TestCase):
 
         # Get properties in Matlab
         try:
-            size = Runtime.call('size', a)
-            type = Runtime.call('class', a)
+            size = Runtime.call("size", a)
+            type = Runtime.call("class", a)
         except Exception:
-            self.fail('1D col array to Matlab failed.')
+            self.fail("1D col array to Matlab failed.")
 
         # Check properties in Matlab
         self.assertEqual(size.tolist(), [3, 1])
-        self.assertEqual(type, 'double')
+        self.assertEqual(type, "double")
 
     def test_array_to_matlab_empty_2d(self):
         # Construct a 3x2 array
@@ -183,14 +174,14 @@ class ArrayTestCase(unittest.TestCase):
 
         # Get properties in Matlab
         try:
-            size = Runtime.call('size', a)
-            type = Runtime.call('class', a)
+            size = Runtime.call("size", a)
+            type = Runtime.call("class", a)
         except Exception:
-            self.fail('2D array to Matlab failed.')
+            self.fail("2D array to Matlab failed.")
 
         # Check properties in Matlab
         self.assertEqual(size.tolist(), [3, 2])
-        self.assertEqual(type, 'double')
+        self.assertEqual(type, "double")
 
     def test_array_to_matlab_empty_nd(self):
         # Construct a 2x3x4x5 array
@@ -198,14 +189,14 @@ class ArrayTestCase(unittest.TestCase):
 
         # Get properties in Matlab
         try:
-            size = Runtime.call('size', a)
-            type = Runtime.call('class', a)
+            size = Runtime.call("size", a)
+            type = Runtime.call("class", a)
         except Exception:
-            self.fail('N-D array to Matlab failed.')
+            self.fail("N-D array to Matlab failed.")
 
         # Check properties in Matlab
         self.assertEqual(size.tolist(), [2, 3, 4, 5])
-        self.assertEqual(type, 'double')
+        self.assertEqual(type, "double")
 
     def test_array_append_1d(self):
         a = Array.from_any([1, 2, 3], owndata=True)
@@ -258,17 +249,17 @@ class ArrayTestCase(unittest.TestCase):
         self.assertEqual(a.tolist(), [2])
 
     def test_array_roundtrip_1d(self):
-        identity = Runtime.call('eval',  '@(x) x')
+        identity = Runtime.call("eval", "@(x) x")
         a = Array.from_any([1, 2, 3])
         d = identity(a)
         self.assertListEqual(a.tolist(), d.tolist())
 
     def test_array_roundtrip_2d(self):
-        identity = Runtime.call('eval',  '@(x) x')
+        identity = Runtime.call("eval", "@(x) x")
         a = Array.from_any([[1, 2, 3], [3, 4, 5]])
         d = identity(a)
         self.assertListEqual(a.tolist(), d.tolist())
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

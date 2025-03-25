@@ -1,15 +1,15 @@
-from spm.__wrapper__ import Runtime
+from mpython import Runtime
 
 
 def _cornerpoints(*args, **kwargs):
     """
-      CORNERPOINTS returns the eight corner points of an anatomical volume  
-        in voxel and in head coordinates  
-         
-        Use as  
-          [voxel, head] = cornerpoints(dim, transform)  
-        which will return two 8x3 matrices.  
-      
+      CORNERPOINTS returns the eight corner points of an anatomical volume
+        in voxel and in head coordinates
+
+        Use as
+          [voxel, head] = cornerpoints(dim, transform)
+        which will return two 8x3 matrices.
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/cornerpoints.m )
 

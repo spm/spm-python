@@ -1,12 +1,12 @@
-from spm.__wrapper__ import Runtime
+from mpython import Runtime
 
 
 def _loadvar(*args, **kwargs):
     """
-      LOADVAR is a helper function for cfg.inputfile  
-         
-        See also SAVEVAR  
-      
+      LOADVAR is a helper function for cfg.inputfile
+
+        See also SAVEVAR
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/loadvar.m )
 

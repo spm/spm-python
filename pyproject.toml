@@ -19,7 +19,8 @@ classifiers = [
   "Programming Language :: Python :: 3.12",
 ]
 dependencies = [
-    "numpy"
+    "numpy", 
+    "mpython-core"
 ]
 
 [project.urls]
@@ -30,3 +31,9 @@ find = {}
 
 [tool.setuptools.package-data]
 spm = ["_spm/_spm.ctf"]
+
+[tool.ruff]
+include = ["pyproject.toml", "spm/**/*.py", "tests/**/*.py", "scripts/**/*.py"]
+
+[tool.ruff.lint.per-file-ignores]
+"__init__.py" = ["F811"]

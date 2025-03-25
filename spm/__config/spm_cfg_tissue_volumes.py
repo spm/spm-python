@@ -1,13 +1,13 @@
-from spm.__wrapper__ import Runtime
+from mpython import Runtime
 
 
 def spm_cfg_tissue_volumes(*args, **kwargs):
     """
-      SPM Configuration file for Tissue Volumes  
-         
-        See also: spm_run_tissue_volumes, spm_summarise  
-       __________________________________________________________________________  
-      
+      SPM Configuration file for Tissue Volumes
+
+        See also: spm_run_tissue_volumes, spm_summarise
+       __________________________________________________________________________
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/config/spm_cfg_tissue_volumes.m )
 

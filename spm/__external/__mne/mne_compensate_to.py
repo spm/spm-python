@@ -1,13 +1,13 @@
-from spm.__wrapper__ import Runtime
+from mpython import Runtime
 
 
 def mne_compensate_to(*args, **kwargs):
     """
-       
-        [newdata] = mne_compensate_to(data,to)  
-         
-        Apply compensation to the data as desired  
-      
+
+        [newdata] = mne_compensate_to(data,to)
+
+        Apply compensation to the data as desired
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/external/mne/mne_compensate_to.m )
 

@@ -1,12 +1,12 @@
-from spm.__wrapper__ import Runtime
+from mpython import Runtime
 
 
 def spm_label(*args, **kwargs):
     """
-      Factorisation-based Image Labelling  
-        FORMAT out = spm_label(cfg)  
-       __________________________________________________________________________  
-      
+      Factorisation-based Image Labelling
+        FORMAT out = spm_label(cfg)
+       __________________________________________________________________________
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/MB/spm_label.m )
 

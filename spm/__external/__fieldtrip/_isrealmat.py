@@ -1,15 +1,15 @@
-from spm.__wrapper__ import Runtime
+from mpython import Runtime
 
 
 def _isrealmat(*args, **kwargs):
     """
-      ISREALMAT returns true for a real matrix  
-         
-        Use as  
-          status = isrealmat(x)  
-         
-        See also ISNUMERIC, ISREAL, ISVECTOR, ISREALVEC  
-      
+      ISREALMAT returns true for a real matrix
+
+        Use as
+          status = isrealmat(x)
+
+        See also ISNUMERIC, ISREAL, ISVECTOR, ISREALVEC
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/isrealmat.m )
 

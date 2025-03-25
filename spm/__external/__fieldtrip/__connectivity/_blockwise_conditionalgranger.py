@@ -1,10 +1,10 @@
-from spm.__wrapper__ import Runtime
+from mpython import Runtime
 
 
 def _blockwise_conditionalgranger(*args, **kwargs):
     """
-      BLOCKWISE_CONDITIONALGRANGER  
-      
+      BLOCKWISE_CONDITIONALGRANGER
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/connectivity/private/blockwise_conditionalgranger.m )
 

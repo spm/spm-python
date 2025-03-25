@@ -1,12 +1,12 @@
-from spm.__wrapper__ import Runtime
+from mpython import Runtime
 
 
 def spm_mb_gmm(*args, **kwargs):
     """
-       
-        FORMAT varargout = spm_mb_gmm(varargin)  
-       __________________________________________________________________________  
-      
+
+        FORMAT varargout = spm_mb_gmm(varargin)
+       __________________________________________________________________________
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/MB/spm_mb_gmm.m )
 

@@ -1,11 +1,11 @@
-from spm.__wrapper__ import Runtime
+from mpython import Runtime
 
 
 def spm_cfg_exp_frames(*args, **kwargs):
     """
-      SPM Configuration file for Expand Image Frames  
-       __________________________________________________________________________  
-      
+      SPM Configuration file for Expand Image Frames
+       __________________________________________________________________________
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/config/spm_cfg_exp_frames.m )
 

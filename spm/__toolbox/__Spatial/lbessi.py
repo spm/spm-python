@@ -1,12 +1,12 @@
-from spm.__wrapper__ import Runtime
+from mpython import Runtime
 
 
 def lbessi(*args, **kwargs):
     """
-      GPU single precision f = log(besseli(nu, z))  
-        FORMAT f = lbessi(nu,z)  
-       __________________________________________________________________________  
-      
+      GPU single precision f = log(besseli(nu, z))
+        FORMAT f = lbessi(nu,z)
+       __________________________________________________________________________
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/Spatial/lbessi.m )
 

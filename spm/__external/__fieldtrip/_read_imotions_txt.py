@@ -1,15 +1,15 @@
-from spm.__wrapper__ import Runtime
+from mpython import Runtime
 
 
 def _read_imotions_txt(*args, **kwargs):
     """
-      READ_IMOTIONS_TXT reads *.txt files that are exported from the iMotions software.  
-         
-        Use as  
-          dat = read_imotions_txt(filename  
-         
-        See also TEXTSCAN  
-      
+      READ_IMOTIONS_TXT reads *.txt files that are exported from the iMotions software.
+
+        Use as
+          dat = read_imotions_txt(filename
+
+        See also TEXTSCAN
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/read_imotions_txt.m )
 

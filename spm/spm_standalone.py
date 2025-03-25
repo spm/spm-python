@@ -1,18 +1,18 @@
-from spm.__wrapper__ import Runtime
+from mpython import Runtime
 
 
 def spm_standalone(*args, **kwargs):
     """
-      Gateway function for standalone SPM  
-         
-        References:  
-         
-          SPM Standalone:  https://www.fil.ion.ucl.ac.uk/spm/docs/installation/standalone/  
-          MATLAB Compiler: http://www.mathworks.com/products/compiler/  
-         
-        See also: config/spm_make_standalone.m  
-       __________________________________________________________________________  
-      
+      Gateway function for standalone SPM
+
+        References:
+
+          SPM Standalone:  https://www.fil.ion.ucl.ac.uk/spm/docs/installation/standalone/
+          MATLAB Compiler: http://www.mathworks.com/products/compiler/
+
+        See also: config/spm_make_standalone.m
+       __________________________________________________________________________
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_standalone.m )
 

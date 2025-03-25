@@ -1,11 +1,11 @@
-from spm.__wrapper__ import Runtime
+from mpython import Runtime
 
 
 def bf_output_image_dics(*args, **kwargs):
     """
-      Computes DICS image  
-       __________________________________________________________________________  
-      
+      Computes DICS image
+       __________________________________________________________________________
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DAiSS/bf_output_image_dics.m )
 

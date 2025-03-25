@@ -1,9 +1,5 @@
 from .lbessi import lbessi
 from .pp_settings import pp_settings
-from ._getthreads import _getthreads
-from ._loadlib import _loadlib
-from ._ptxlocation import _ptxlocation
-from ._threadblocks import _threadblocks
 from .pull import pull
 from .pullg import pullg
 from .push import push
@@ -22,3 +18,25 @@ from .spm_topup import spm_topup
 from .spm_topup_config import spm_topup_config
 from .tbx_cfg_spatial import tbx_cfg_spatial
 
+
+__all__ = [
+    "lbessi",
+    "pp_settings",
+    "pull",
+    "pullg",
+    "push",
+    "spm_TVdenoise",
+    "spm_TVdenoise2",
+    "spm_TVdenoise_config",
+    "spm_dctdst",
+    "spm_run_denoise",
+    "spm_scope",
+    "spm_scope_config",
+    "spm_slice2vol",
+    "spm_slice2vol_config",
+    "spm_slice2vol_estimate",
+    "spm_slice2vol_reslice",
+    "spm_topup",
+    "spm_topup_config",
+    "tbx_cfg_spatial",
+]

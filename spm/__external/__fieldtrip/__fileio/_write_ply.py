@@ -1,19 +1,19 @@
-from spm.__wrapper__ import Runtime
+from mpython import Runtime
 
 
 def _write_ply(*args, **kwargs):
     """
-      WRITE_PLY writes triangles, tetraheders or hexaheders to a Stanford *.ply format file  
-         
-        Use as  
-          write_ply(filename, vertex, element)  
-         
-        Documentation is provided on  
-          http://paulbourke.net/dataformats/ply/  
-          http://en.wikipedia.org/wiki/PLY_(file_format)  
-         
-        See also READ_PLY, READ_VTK, WRITE_VTK  
-      
+      WRITE_PLY writes triangles, tetraheders or hexaheders to a Stanford *.ply format file
+
+        Use as
+          write_ply(filename, vertex, element)
+
+        Documentation is provided on
+          http://paulbourke.net/dataformats/ply/
+          http://en.wikipedia.org/wiki/PLY_(file_format)
+
+        See also READ_PLY, READ_VTK, WRITE_VTK
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/write_ply.m )
 

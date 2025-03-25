@@ -1,11 +1,11 @@
-from spm.__wrapper__ import Runtime
+from mpython import Runtime
 
 
 def _guidelines(*args, **kwargs):
     """
-      GUIDELINES searches for a contiguous block of commented text and shows  
-        its contents. It is used to display additional help sections.  
-      
+      GUIDELINES searches for a contiguous block of commented text and shows
+        its contents. It is used to display additional help sections.
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/guidelines.m )
 

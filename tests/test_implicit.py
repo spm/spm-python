@@ -4,7 +4,6 @@ from spm import Struct, Cell, Array
 
 
 class ImplicitTestCase(unittest.TestCase):
-
     def test_array(self):
         x = Array()
         x[2] = 3
@@ -60,8 +59,8 @@ class ImplicitTestCase(unittest.TestCase):
 
     def test_struct_of_cell_reuse(self):
         x = Struct()
-        x.a[0] = 'a'
+        x.a[0] = "a"
         # This is to make sure that x.a owns its data after the first
         # finalization. If it did not own its data, the resize triggered
         # by a[1] in the following line would raise an error.
-        x.a[1] = 'b'
+        x.a[1] = "b"

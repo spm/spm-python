@@ -1,10 +1,10 @@
-from spm.__wrapper__ import Runtime
+from mpython import Runtime
 
 
 def _read_ctf_hist(*args, **kwargs):
     """
-      READ_CTF_HIST  
-      
+      READ_CTF_HIST
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/read_ctf_hist.m )
 

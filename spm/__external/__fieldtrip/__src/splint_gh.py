@@ -1,11 +1,11 @@
-from spm.__wrapper__ import Runtime
+from mpython import Runtime
 
 
 def splint_gh(*args, **kwargs):
     """
-      SPLINT_GH implements equations (3) and (5b) of Perrin 1989  
-        for simultaneous computation of multiple values  
-      
+      SPLINT_GH implements equations (3) and (5b) of Perrin 1989
+        for simultaneous computation of multiple values
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/src/splint_gh.m )
 

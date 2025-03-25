@@ -1,18 +1,18 @@
-from spm.__wrapper__ import Runtime
+from mpython import Runtime
 
 
 def mci_ramsay_gen(*args, **kwargs):
     """
-      Generate data from Ramsay model  
-        FORMAT [Y] = mci_ramsay_gen (P,M,U)  
-         
-        P         Parameters  
-        M         Model structure  
-        U         Inputs  
-         
-        Y         Data  
-       __________________________________________________________________________  
-      
+      Generate data from Ramsay model
+        FORMAT [Y] = mci_ramsay_gen (P,M,U)
+
+        P         Parameters
+        M         Model structure
+        U         Inputs
+
+        Y         Data
+       __________________________________________________________________________
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/mci/models/ramsay/mci_ramsay_gen.m )
 

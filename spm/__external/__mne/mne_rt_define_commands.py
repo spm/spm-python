@@ -1,13 +1,13 @@
-from spm.__wrapper__ import Runtime
+from mpython import Runtime
 
 
 def mne_rt_define_commands(*args, **kwargs):
     """
-       
-           [ FIFF ] = mne_rt_define_commands()  
-         
-           Defines structure containing the MNE_RT constants  
-      
+
+           [ FIFF ] = mne_rt_define_commands()
+
+           Defines structure containing the MNE_RT constants
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/external/mne/mne_rt_define_commands.m )
 

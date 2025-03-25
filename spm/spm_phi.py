@@ -1,14 +1,14 @@
-from spm.__wrapper__ import Runtime
+from mpython import Runtime
 
 
 def spm_phi(*args, **kwargs):
     """
-      Logistic function  
-        FORMAT [y] = spm_phi(x)  
-         
-        y   = 1./(1 + exp(-x))  
-       __________________________________________________________________________  
-      
+      Logistic function
+        FORMAT [y] = spm_phi(x)
+
+        y   = 1./(1 + exp(-x))
+       __________________________________________________________________________
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_phi.m )
 

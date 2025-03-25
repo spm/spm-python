@@ -1,6 +1,7 @@
 import unittest
 import numpy as np
-from itertools import product, starmap
+from itertools import product
+
 from spm import Struct, Array, Runtime
 
 
@@ -54,7 +55,9 @@ class TestStruct(unittest.TestCase):
         self.assertIsInstance(s, Struct)
         self.assertTupleEqual(s.shape, (3, 2))
 
-        self.assertTrue(all(isinstance(s[i,j], Struct) for i, j in product(range(3), range(2))))
+        self.assertTrue(
+            all(isinstance(s[i, j], Struct) for i, j in product(range(3), range(2)))
+        )
 
     def test_struct_instantiate_empty_nd(self):
         # Construct a 2x3x4x5 struct array
@@ -64,7 +67,12 @@ class TestStruct(unittest.TestCase):
         self.assertIsInstance(s, Struct)
         self.assertTupleEqual(s.shape, (2, 3, 4, 5))
 
-        self.assertTrue(all(isinstance(s[i,j,k,l], Struct) for i, j, k, l in product(range(2), range(3), range(4), range(5))))
+        self.assertTrue(
+            all(
+                isinstance(s[i, j, k, m], Struct)
+                for i, j, k, m in product(range(2), range(3), range(4), range(5))
+            )
+        )
 
     def test_struct_set_and_get_attribute(self):
         self.struct.foo = "bar"
@@ -75,12 +83,13 @@ class TestStruct(unittest.TestCase):
         self.assertListEqual(list(self.struct.items()), [("foo", "bar")])
 
         self.struct.bar = "foo"
-        self.assertEqual(self.struct.bar, 'foo')
-        self.assertEqual(self.struct['bar'], 'foo')
+        self.assertEqual(self.struct.bar, "foo")
+        self.assertEqual(self.struct["bar"], "foo")
         self.assertListEqual(list(self.struct.keys()), ["foo", "bar"])
         self.assertListEqual(list(self.struct.values()), ["bar", "foo"])
-        self.assertListEqual(list(self.struct.items()),
-                             [("foo", "bar"), ("bar", "foo")])
+        self.assertListEqual(
+            list(self.struct.items()), [("foo", "bar"), ("bar", "foo")]
+        )
 
     def test_struct_set_and_get_item(self):
         self.struct["baz"] = 42
@@ -106,7 +115,7 @@ class TestStruct(unittest.TestCase):
         self.struct[1].baz = 42
         # raise ValueError(self.struct)
 
-        keys = set(('foo', 'bar', 'baz'))
+        keys = set(("foo", "bar", "baz"))
 
         # All fields exist in struct array
         self.assertSetEqual(keys, set(self.struct.keys()))
@@ -135,7 +144,7 @@ class TestStruct(unittest.TestCase):
         try:
             s_matlab = Runtime.call("eval", "struct('field1', 1, 'field2', 2)")
         except Exception:
-            self.fail('Struct from Matlab failed.')
+            self.fail("Struct from Matlab failed.")
 
         # Check Runtime conversion
         self.assertIsInstance(s_matlab, Struct)
@@ -148,9 +157,11 @@ class TestStruct(unittest.TestCase):
     def test_struct_from_matlab_nested(self):
         # Construct a nested struct in Matlab
         try:
-            s_matlab = Runtime.call("eval", "struct('field1', struct('subfield1', 1), 'field2', 2)")
+            s_matlab = Runtime.call(
+                "eval", "struct('field1', struct('subfield1', 1), 'field2', 2)"
+            )
         except Exception:
-            self.fail('Nested struct from Matlab failed.')
+            self.fail("Nested struct from Matlab failed.")
 
         # Check Runtime conversion
         self.assertIsInstance(s_matlab, Struct)
@@ -160,14 +171,16 @@ class TestStruct(unittest.TestCase):
         self.assertListEqual(list(s_matlab.keys()), ["field1", "field2"])
         self.assertListEqual(list(s_matlab.field1.keys()), ["subfield1"])
         self.assertListEqual(list(s_matlab.values()), [s_matlab.field1, 2])
-        self.assertListEqual(list(s_matlab.items()), [("field1", s_matlab.field1), ("field2", 2)])
+        self.assertListEqual(
+            list(s_matlab.items()), [("field1", s_matlab.field1), ("field2", 2)]
+        )
 
     def test_struct_from_matlab_with_array(self):
         # Construct a struct with an array in Matlab
         try:
             s_matlab = Runtime.call("eval", "struct('field1', [1, 2, 3], 'field2', 2)")
         except Exception:
-            self.fail('Struct with array from Matlab failed.')
+            self.fail("Struct with array from Matlab failed.")
 
         # Check Runtime conversion
         self.assertIsInstance(s_matlab, Struct)
@@ -176,14 +189,18 @@ class TestStruct(unittest.TestCase):
         self.assertEqual(s_matlab.field2, 2)
         self.assertListEqual(list(s_matlab.keys()), ["field1", "field2"])
         self.assertListEqual(list(s_matlab.values()), [s_matlab.field1, 2])
-        self.assertListEqual(list(s_matlab.items()), [("field1", s_matlab.field1), ("field2", 2)])
+        self.assertListEqual(
+            list(s_matlab.items()), [("field1", s_matlab.field1), ("field2", 2)]
+        )
 
     def test_struct_from_matlab_with_structure_array(self):
         # Construct a struct array of size 2 in Matlab
         try:
-            s_matlab = Runtime.call("eval", "repmat(struct('field1', 1, 'field2', 2), 2, 1)")
+            s_matlab = Runtime.call(
+                "eval", "repmat(struct('field1', 1, 'field2', 2), 2, 1)"
+            )
         except Exception:
-            self.fail('Struct array from Matlab failed.')
+            self.fail("Struct array from Matlab failed.")
 
         # Check Runtime conversion
         self.assertIsInstance(s_matlab, Struct)
@@ -193,14 +210,18 @@ class TestStruct(unittest.TestCase):
         self.assertEqual(s_matlab[0, 0].field2, 2)
         self.assertListEqual(list(s_matlab[0, 0].keys()), ["field1", "field2"])
         self.assertListEqual(list(s_matlab[0, 0].values()), [1, 2])
-        self.assertListEqual(list(s_matlab[0, 0].items()), [("field1", 1), ("field2", 2)])
+        self.assertListEqual(
+            list(s_matlab[0, 0].items()), [("field1", 1), ("field2", 2)]
+        )
 
         self.assertIsInstance(s_matlab[1, 0], Struct)
         self.assertEqual(s_matlab[1, 0].field1, 1)
         self.assertEqual(s_matlab[1, 0].field2, 2)
         self.assertListEqual(list(s_matlab[1, 0].keys()), ["field1", "field2"])
         self.assertListEqual(list(s_matlab[1, 0].values()), [1, 2])
-        self.assertListEqual(list(s_matlab[1, 0].items()), [("field1", 1), ("field2", 2)])
+        self.assertListEqual(
+            list(s_matlab[1, 0].items()), [("field1", 1), ("field2", 2)]
+        )
 
     def test_struct_to_matlab_empty(self):
         # Construct an empty struct
@@ -208,15 +229,15 @@ class TestStruct(unittest.TestCase):
 
         # Get properties in Matlab
         try:
-            size = Runtime.call('size', s)
-            type = Runtime.call('class', s)
-            fieldnames = Runtime.call('fieldnames', s)
+            size = Runtime.call("size", s)
+            type = Runtime.call("class", s)
+            fieldnames = Runtime.call("fieldnames", s)
         except Exception:
-            self.fail('Empty struct to Matlab failed.')
+            self.fail("Empty struct to Matlab failed.")
 
         # Check properties in Matlab
         self.assertEqual(size.tolist(), [1, 1])
-        self.assertEqual(type, 'struct')
+        self.assertEqual(type, "struct")
         self.assertListEqual(fieldnames.tolist(), [])
 
     def test_struct_to_matlab_empty_1d(self):
@@ -225,15 +246,15 @@ class TestStruct(unittest.TestCase):
 
         # Get properties in Matlab
         try:
-            size = Runtime.call('size', s)
-            type = Runtime.call('class', s)
-            fieldnames = Runtime.call('fieldnames', s)
+            size = Runtime.call("size", s)
+            type = Runtime.call("class", s)
+            fieldnames = Runtime.call("fieldnames", s)
         except Exception:
-            self.fail('1D shape struct to Matlab failed.')
+            self.fail("1D shape struct to Matlab failed.")
 
         # Check properties in Matlab
         self.assertEqual(size.tolist(), [1, 3])
-        self.assertEqual(type, 'struct')
+        self.assertEqual(type, "struct")
         self.assertListEqual(fieldnames.tolist(), [])
 
     def test_struct_to_matlab_empty_2d_row(self):
@@ -242,15 +263,15 @@ class TestStruct(unittest.TestCase):
 
         # Get properties in Matlab
         try:
-            size = Runtime.call('size', s)
-            type = Runtime.call('class', s)
-            fieldnames = Runtime.call('fieldnames', s)
+            size = Runtime.call("size", s)
+            type = Runtime.call("class", s)
+            fieldnames = Runtime.call("fieldnames", s)
         except Exception:
-            self.fail('1D row struct to Matlab failed.')
+            self.fail("1D row struct to Matlab failed.")
 
         # Check properties in Matlab
         self.assertEqual(size.tolist(), [1, 3])
-        self.assertEqual(type, 'struct')
+        self.assertEqual(type, "struct")
         self.assertListEqual(fieldnames.tolist(), [])
 
     def test_struct_to_matlab_empty_2d_col(self):
@@ -259,15 +280,15 @@ class TestStruct(unittest.TestCase):
 
         # Get properties in Matlab
         try:
-            size = Runtime.call('size', s)
-            type = Runtime.call('class', s)
-            fieldnames = Runtime.call('fieldnames', s)
+            size = Runtime.call("size", s)
+            type = Runtime.call("class", s)
+            fieldnames = Runtime.call("fieldnames", s)
         except Exception:
-            self.fail('1D col struct to Matlab failed.')
+            self.fail("1D col struct to Matlab failed.")
 
         # Check properties in Matlab
         self.assertEqual(size.tolist(), [3, 1])
-        self.assertEqual(type, 'struct')
+        self.assertEqual(type, "struct")
         self.assertListEqual(fieldnames.tolist(), [])
 
     def test_struct_to_matlab_empty_2d(self):
@@ -276,16 +297,17 @@ class TestStruct(unittest.TestCase):
 
         # Get properties in Matlab
         try:
-            size = Runtime.call('size', s)
-            type = Runtime.call('class', s)
-            fieldnames = Runtime.call('fieldnames', s)
+            size = Runtime.call("size", s)
+            type = Runtime.call("class", s)
+            fieldnames = Runtime.call("fieldnames", s)
         except Exception:
-            self.fail('2D struct to Matlab failed.')
+            self.fail("2D struct to Matlab failed.")
 
         # Check properties in Matlab
         self.assertEqual(size.tolist(), [3, 2])
-        self.assertEqual(type, 'struct')
+        self.assertEqual(type, "struct")
         self.assertListEqual(fieldnames.tolist(), [])
+
 
 if __name__ == "__main__":
     unittest.main()

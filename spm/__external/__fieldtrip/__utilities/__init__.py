@@ -85,112 +85,6 @@ from .memtic import memtic
 from .memtoc import memtoc
 from .nearest import nearest
 from .printstruct import printstruct
-from ._CalcMD5 import _CalcMD5
-from ._align_ctf2acpc import _align_ctf2acpc
-from ._align_fsaverage2mni import _align_fsaverage2mni
-from ._align_neuromag2acpc import _align_neuromag2acpc
-from ._avgoverdim import _avgoverdim
-from ._avgoverlabel import _avgoverlabel
-from ._base64encode import _base64encode
-from ._channelposition import _channelposition
-from ._convert_segmentationstyle import _convert_segmentationstyle
-from ._coordsys2label import _coordsys2label
-from ._cornerpoints import _cornerpoints
-from ._dataset2files import _dataset2files
-from ._debugCleanup import _debugCleanup
-from ._defaultId import _defaultId
-from ._determine_segmentationstyle import _determine_segmentationstyle
-from ._dimindex import _dimindex
-from ._dimlength import _dimlength
-from ._fixcoordsys import _fixcoordsys
-from ._fixdimord import _fixdimord
-from ._fixdipole import _fixdipole
-from ._fixinside import _fixinside
-from ._fixname import _fixname
-from ._fixoldorg import _fixoldorg
-from ._fixpos import _fixpos
-from ._fixsampleinfo import _fixsampleinfo
-from ._fixsegmentation import _fixsegmentation
-from ._fixsource import _fixsource
-from ._fixvolume import _fixvolume
-from ._ft_findcfg import _ft_findcfg
-from ._ft_notification import _ft_notification
-from ._ft_struct2json import _ft_struct2json
-from ._ft_test_compare import _ft_test_compare
-from ._ft_test_find_dependency import _ft_test_find_dependency
-from ._ft_test_moxunit_run import _ft_test_moxunit_run
-from ._ft_test_report import _ft_test_report
-from ._ft_test_run import _ft_test_run
-from ._ft_test_untested_functions import _ft_test_untested_functions
-from ._ft_test_update_dependency import _ft_test_update_dependency
-from ._ft_urlread import _ft_urlread
-from ._funargname import _funargname
-from ._getaddress import _getaddress
-from ._getdatfield import _getdatfield
-from ._getdimord import _getdimord
-from ._getdimsiz import _getdimsiz
-from ._gethostname import _gethostname
-from ._getusername import _getusername
-from ._globalrescale import _globalrescale
-from ._hcp_getopt import _hcp_getopt
-from ._hcp_provenance import _hcp_provenance
-from ._ignorefields import _ignorefields
-from ._individual2sn import _individual2sn
-from ._isplottingfunction import _isplottingfunction
-from ._labelcmb2indx import _labelcmb2indx
-from ._leaveoneout import _leaveoneout
-from ._lmoutr import _lmoutr
-from ._lmoutrn import _lmoutrn
-from ._loadvar import _loadvar
-from ._make_or_fetch_inputfile import _make_or_fetch_inputfile
-from ._makessense import _makessense
-from ._memprofile import _memprofile
-from ._mergecellstruct import _mergecellstruct
-from ._mergestruct import _mergestruct
-from ._mesh_icosahedron import _mesh_icosahedron
-from ._mesh_octahedron import _mesh_octahedron
-from ._mesh_sphere import _mesh_sphere
-from ._mesh_tetrahedron import _mesh_tetrahedron
-from ._mutexlock import _mutexlock
-from ._mxSerialize import _mxSerialize
-from ._offset2time import _offset2time
-from ._parameterselection import _parameterselection
-from ._pinvNx2 import _pinvNx2
-from ._plinprojn import _plinprojn
-from ._pos2dim import _pos2dim
-from ._pos2transform import _pos2transform
-from ._printand import _printand
-from ._printor import _printor
-from ._printstruct_as_table import _printstruct_as_table
-from ._project_elec import _project_elec
-from ._ptriproj import _ptriproj
-from ._ptriprojn import _ptriprojn
-from ._quaternion import _quaternion
-from ._randomseed import _randomseed
-from ._recursive_download import _recursive_download
-from ._refine import _refine
-from ._reproducescript import _reproducescript
-from ._rigidbody import _rigidbody
-from ._rotate import _rotate
-from ._save_large_cfg_fields import _save_large_cfg_fields
-from ._savevar import _savevar
-from ._scale import _scale
-from ._selfromraw import _selfromraw
-from ._seloverdim import _seloverdim
-from ._selparam import _selparam
-from ._smartinput import _smartinput
-from ._sn2individual import _sn2individual
-from ._time2offset import _time2offset
-from ._traditional import _traditional
-from ._translate import _translate
-from ._undobalancing import _undobalancing
-from ._unparcellate import _unparcellate
-from ._varsize import _varsize
-from ._volumefillholes import _volumefillholes
-from ._volumeflip import _volumeflip
-from ._volumepermute import _volumepermute
-from ._volumesmooth import _volumesmooth
-from ._volumethreshold import _volumethreshold
 from .removefields import removefields
 from .renamefields import renamefields
 from .rmsubfield import rmsubfield
@@ -198,3 +92,99 @@ from .setsubfield import setsubfield
 from .strel_bol import strel_bol
 from .tokenize import tokenize
 
+
+__all__ = [
+    "appendstruct",
+    "copyfields",
+    "dccnpath",
+    "ft_affinecoordinates",
+    "ft_average_sens",
+    "ft_cfg2keyval",
+    "ft_channelcombination",
+    "ft_channelselection",
+    "ft_checkconfig",
+    "ft_checkdata",
+    "ft_checkopt",
+    "ft_compile_mex",
+    "ft_compile_standalone",
+    "ft_convert_coordsys",
+    "ft_datatype",
+    "ft_datatype_comp",
+    "ft_datatype_dip",
+    "ft_datatype_freq",
+    "ft_datatype_headmodel",
+    "ft_datatype_mvar",
+    "ft_datatype_parcellation",
+    "ft_datatype_raw",
+    "ft_datatype_segmentation",
+    "ft_datatype_sens",
+    "ft_datatype_source",
+    "ft_datatype_spike",
+    "ft_datatype_timelock",
+    "ft_datatype_volume",
+    "ft_debug",
+    "ft_determine_coordsys",
+    "ft_documentationconfiguration",
+    "ft_documentationreference",
+    "ft_error",
+    "ft_fetch_data",
+    "ft_fetch_event",
+    "ft_fetch_header",
+    "ft_findcfg",
+    "ft_getopt",
+    "ft_hash",
+    "ft_hastoolbox",
+    "ft_headcoordinates",
+    "ft_info",
+    "ft_keyval2cfg",
+    "ft_notice",
+    "ft_platform_supports",
+    "ft_postamble",
+    "ft_preamble",
+    "ft_progress",
+    "ft_save_workspace",
+    "ft_scalingfactor",
+    "ft_selectdata",
+    "ft_setopt",
+    "ft_source2full",
+    "ft_source2grid",
+    "ft_source2sparse",
+    "ft_standalone",
+    "ft_struct2char",
+    "ft_struct2double",
+    "ft_struct2single",
+    "ft_struct2string",
+    "ft_test",
+    "ft_trackusage",
+    "ft_transform_geometry",
+    "ft_transform_headmodel",
+    "ft_transform_headshape",
+    "ft_transform_sens",
+    "ft_transform_vol",
+    "ft_version",
+    "ft_warning",
+    "ft_warp_apply",
+    "ft_warp_error",
+    "ft_warp_optim",
+    "getsubfield",
+    "hasyokogawa",
+    "issubfield",
+    "istrue",
+    "keepfields",
+    "keyval",
+    "keyvalcheck",
+    "markdown2matlab",
+    "match_str",
+    "match_val",
+    "matlab2markdown",
+    "memtic",
+    "memtoc",
+    "nearest",
+    "printstruct",
+    "removefields",
+    "renamefields",
+    "rmsubfield",
+    "setsubfield",
+    "strel_bol",
+    "tokenize",
+]

@@ -1,11 +1,11 @@
-from spm.__wrapper__ import Runtime
+from mpython import Runtime
 
 
 def bf_output_image_sensitivity(*args, **kwargs):
     """
-      Sensitivity profile for a group of sensors  
-       __________________________________________________________________________  
-      
+      Sensitivity profile for a group of sensors
+       __________________________________________________________________________
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DAiSS/bf_output_image_sensitivity.m )
 

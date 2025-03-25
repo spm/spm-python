@@ -1,11 +1,11 @@
-from spm.__wrapper__ import Runtime
+from mpython import Runtime
 
 
 def spm_sextract(*args, **kwargs):
     """
-      Surface extraction  
-       __________________________________________________________________________  
-      
+      Surface extraction
+       __________________________________________________________________________
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/SRender/spm_sextract.m )
 

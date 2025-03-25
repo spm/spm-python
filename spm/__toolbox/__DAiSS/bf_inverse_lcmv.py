@@ -1,11 +1,11 @@
-from spm.__wrapper__ import Runtime
+from mpython import Runtime
 
 
 def bf_inverse_lcmv(*args, **kwargs):
     """
-      Computes LCMV filters  
-       __________________________________________________________________________  
-      
+      Computes LCMV filters
+       __________________________________________________________________________
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DAiSS/bf_inverse_lcmv.m )
 

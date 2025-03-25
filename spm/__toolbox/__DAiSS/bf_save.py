@@ -1,11 +1,11 @@
-from spm.__wrapper__ import Runtime
+from mpython import Runtime
 
 
 def bf_save(*args, **kwargs):
     """
-      Save BF data in a MAT file  
-       __________________________________________________________________________  
-      
+      Save BF data in a MAT file
+       __________________________________________________________________________
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DAiSS/bf_save.m )
 

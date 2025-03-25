@@ -1,12 +1,12 @@
-from spm.__wrapper__ import Runtime
+from mpython import Runtime
 
 
 def bf_isfield(*args, **kwargs):
     """
-      Efficiently identify if a field is contained within a BF file  
-        FORMAT bool = bf_isfield(BF,field)  
-       __________________________________________________________________________  
-      
+      Efficiently identify if a field is contained within a BF file
+        FORMAT bool = bf_isfield(BF,field)
+       __________________________________________________________________________
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DAiSS/bf_isfield.m )
 

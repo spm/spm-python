@@ -1,16 +1,16 @@
-from spm.__wrapper__ import Runtime
+from mpython import Runtime
 
 
 def _keyval(*args, **kwargs):
     """
-      KEYVAL returns the value that corresponds to the requested key in a  
-        key-value pair list of variable input arguments  
-         
-        Use as  
-          [val] = keyval(key, varargin)  
-         
-        See also VARARGIN  
-      
+      KEYVAL returns the value that corresponds to the requested key in a
+        key-value pair list of variable input arguments
+
+        Use as
+          [val] = keyval(key, varargin)
+
+        See also VARARGIN
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/preproc/private/keyval.m )
 

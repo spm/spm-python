@@ -1,11 +1,11 @@
-from spm.__wrapper__ import Runtime
+from mpython import Runtime
 
 
 def spm_cfg_dicom(*args, **kwargs):
     """
-      SPM Configuration file for DICOM Import  
-       __________________________________________________________________________  
-      
+      SPM Configuration file for DICOM Import
+       __________________________________________________________________________
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/config/spm_cfg_dicom.m )
 

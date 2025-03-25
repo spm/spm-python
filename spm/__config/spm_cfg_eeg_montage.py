@@ -1,11 +1,11 @@
-from spm.__wrapper__ import Runtime
+from mpython import Runtime
 
 
 def spm_cfg_eeg_montage(*args, **kwargs):
     """
-      Configuration file for reading montage files  
-       __________________________________________________________________________  
-      
+      Configuration file for reading montage files
+       __________________________________________________________________________
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/config/spm_cfg_eeg_montage.m )
 

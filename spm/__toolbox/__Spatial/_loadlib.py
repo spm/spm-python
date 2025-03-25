@@ -1,12 +1,12 @@
-from spm.__wrapper__ import Runtime
+from mpython import Runtime
 
 
 def _loadlib(*args, **kwargs):
     """
-      Load a shared library into MATLAB  
-        FORMAT loadlib(nam)  
-       __________________________________________________________________________  
-      
+      Load a shared library into MATLAB
+        FORMAT loadlib(nam)
+       __________________________________________________________________________
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/Spatial/private/loadlib.m )
 

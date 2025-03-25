@@ -1,16 +1,16 @@
-from spm.__wrapper__ import Runtime
+from mpython import Runtime
 
 
 def mci_ramsay_struct(*args, **kwargs):
     """
-      Data structures for Ramsay model  
-        FORMAT [M,U] = mci_ramsay_struct (sigme_e)  
-         
-        sigma_e       Noise SD  
-         
-        M,U           model, input data structures  
-       __________________________________________________________________________  
-      
+      Data structures for Ramsay model
+        FORMAT [M,U] = mci_ramsay_struct (sigme_e)
+
+        sigma_e       Noise SD
+
+        M,U           model, input data structures
+       __________________________________________________________________________
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/mci/models/ramsay/mci_ramsay_struct.m )
 

@@ -1,18 +1,18 @@
-from spm.__wrapper__ import Runtime
+from mpython import Runtime
 
 
 def mne_write_surface(*args, **kwargs):
     """
-       
-        mne_write_surface(fname,verts,faces)  
-         
-        Writes a FreeSurfer surface file  
-         
-        fname       - The file to write  
-        verts       - Vertex coordinates in meters  
-        faces       - The triangle descriptions  
-        comment     - Optional comment to include  
-      
+
+        mne_write_surface(fname,verts,faces)
+
+        Writes a FreeSurfer surface file
+
+        fname       - The file to write
+        verts       - Vertex coordinates in meters
+        faces       - The triangle descriptions
+        comment     - Optional comment to include
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/external/mne/mne_write_surface.m )
 

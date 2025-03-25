@@ -1,10 +1,10 @@
-from spm.__wrapper__ import Runtime
+from mpython import Runtime
 
 
 def test_regress_fmri_group(*args, **kwargs):
     """
-      Regression tests for second-level SPM for fMRI  
-      
+      Regression tests for second-level SPM for fMRI
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/tests/test_regress_fmri_group.m )
 

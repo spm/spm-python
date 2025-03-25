@@ -1,15 +1,15 @@
-from spm.__wrapper__ import Runtime
+from mpython import Runtime
 
 
 def _avgref(*args, **kwargs):
     """
-      AVGREF computes the average reference in each column  
-          [data] = avgref(data)  
-         
-        or it computes the re-referenced data relative to the  
-        average over the selected channels  
-          [data] = avgref(data, sel)  
-      
+      AVGREF computes the average reference in each column
+          [data] = avgref(data)
+
+        or it computes the re-referenced data relative to the
+        average over the selected channels
+          [data] = avgref(data, sel)
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/inverse/private/avgref.m )
 

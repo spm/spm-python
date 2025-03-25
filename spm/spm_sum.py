@@ -1,14 +1,14 @@
-from spm.__wrapper__ import Runtime
+from mpython import Runtime
 
 
 def spm_sum(*args, **kwargs):
     """
-      Sum of elements  
-        FORMAT S = spm_sum(X,vecdim)  
-         
-        Compatibility layer for SUM for MATLAB < R2018b  
-       __________________________________________________________________________  
-      
+      Sum of elements
+        FORMAT S = spm_sum(X,vecdim)
+
+        Compatibility layer for SUM for MATLAB < R2018b
+       __________________________________________________________________________
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_sum.m )
 

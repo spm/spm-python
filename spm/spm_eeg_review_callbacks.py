@@ -1,11 +1,11 @@
-from spm.__wrapper__ import Runtime
+from mpython import Runtime
 
 
 def spm_eeg_review_callbacks(*args, **kwargs):
     """
-      Callbacks of the M/EEG Review facility  
-       __________________________________________________________________________  
-      
+      Callbacks of the M/EEG Review facility
+       __________________________________________________________________________
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_eeg_review_callbacks.m )
 

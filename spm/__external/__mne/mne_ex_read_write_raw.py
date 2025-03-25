@@ -1,13 +1,13 @@
-from spm.__wrapper__ import Runtime
+from mpython import Runtime
 
 
 def mne_ex_read_write_raw(*args, **kwargs):
     """
-       
-        function mne_ex_read_write_raw(infile,outfile);  
-         
-        Read and write raw data in 60-sec blocks  
-      
+
+        function mne_ex_read_write_raw(infile,outfile);
+
+        Read and write raw data in 60-sec blocks
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/external/mne/mne_ex_read_write_raw.m )
 

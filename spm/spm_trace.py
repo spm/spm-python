@@ -1,14 +1,14 @@
-from spm.__wrapper__ import Runtime
+from mpython import Runtime
 
 
 def spm_trace(*args, **kwargs):
     """
-      Fast trace for large matrices: C = spm_trace(A,B) = trace(A*B)  
-        FORMAT [C] = spm_trace(A,B)  
-         
-        C = spm_trace(A,B) = trace(A*B) = sum(sum(A'.*B));  
-       __________________________________________________________________________  
-      
+      Fast trace for large matrices: C = spm_trace(A,B) = trace(A*B)
+        FORMAT [C] = spm_trace(A,B)
+
+        C = spm_trace(A,B) = trace(A*B) = sum(sum(A'.*B));
+       __________________________________________________________________________
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_trace.m )
 

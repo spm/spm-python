@@ -17,3 +17,24 @@ from .spm_shoot_update import spm_shoot_update
 from .spm_shoot_warp import spm_shoot_warp
 from .tbx_cfg_shoot import tbx_cfg_shoot
 
+
+__all__ = [
+    "covLin",
+    "spm_GPclass",
+    "spm_def2sparse",
+    "spm_dotprods2",
+    "spm_lincom",
+    "spm_shoot3d",
+    "spm_shoot3di",
+    "spm_shoot_blur",
+    "spm_shoot_defaults",
+    "spm_shoot_divergence",
+    "spm_shoot_greens",
+    "spm_shoot_kernel",
+    "spm_shoot_norm",
+    "spm_shoot_scalmom",
+    "spm_shoot_template",
+    "spm_shoot_update",
+    "spm_shoot_warp",
+    "tbx_cfg_shoot",
+]

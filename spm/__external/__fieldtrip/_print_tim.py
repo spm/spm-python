@@ -1,10 +1,10 @@
-from spm.__wrapper__ import Runtime
+from mpython import Runtime
 
 
 def _print_tim(*args, **kwargs):
     """
-      SUBFUNCTION for pretty-printing time in hours, minutes, ...  
-      
+      SUBFUNCTION for pretty-printing time in hours, minutes, ...
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/print_tim.m )
 

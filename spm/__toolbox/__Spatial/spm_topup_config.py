@@ -1,11 +1,11 @@
-from spm.__wrapper__ import Runtime
+from mpython import Runtime
 
 
 def spm_topup_config(*args, **kwargs):
     """
-      SPM Configuration file for Topup  
-       __________________________________________________________________________  
-      
+      SPM Configuration file for Topup
+       __________________________________________________________________________
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/Spatial/spm_topup_config.m )
 

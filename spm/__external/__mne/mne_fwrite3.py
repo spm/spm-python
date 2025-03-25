@@ -1,12 +1,12 @@
-from spm.__wrapper__ import Runtime
+from mpython import Runtime
 
 
 def mne_fwrite3(*args, **kwargs):
     """
-       
-        mne_fwrite(fid, val)  
-        write a 3 byte integer to a file  
-      
+
+        mne_fwrite(fid, val)
+        write a 3 byte integer to a file
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/external/mne/mne_fwrite3.m )
 

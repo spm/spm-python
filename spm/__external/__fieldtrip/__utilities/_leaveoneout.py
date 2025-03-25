@@ -1,11 +1,11 @@
-from spm.__wrapper__ import Runtime
+from mpython import Runtime
 
 
 def _leaveoneout(*args, **kwargs):
     """
-    leaveoneout is a function.  
-          data = leaveoneout(data)  
-      
+    leaveoneout is a function.
+          data = leaveoneout(data)
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/utilities/private/leaveoneout.m )
 

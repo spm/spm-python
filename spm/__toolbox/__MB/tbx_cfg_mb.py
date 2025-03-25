@@ -1,11 +1,11 @@
-from spm.__wrapper__ import Runtime
+from mpython import Runtime
 
 
 def tbx_cfg_mb(*args, **kwargs):
     """
-      MATLABBATCH Configuration file for toolbox 'Multi-Brain'  
-       _____________________________________________________________________________  
-      
+      MATLABBATCH Configuration file for toolbox 'Multi-Brain'
+       _____________________________________________________________________________
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/MB/tbx_cfg_mb.m )
 

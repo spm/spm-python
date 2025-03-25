@@ -1,11 +1,11 @@
-from spm.__wrapper__ import Runtime
+from mpython import Runtime
 
 
 def spm_dcm_fnirs_viewer_result(*args, **kwargs):
     """
-      GUI for displaying DCM-fNIRS results  
-       __________________________________________________________________________  
-      
+      GUI for displaying DCM-fNIRS results
+       __________________________________________________________________________
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/dcm_fnirs/spm_dcm_fnirs_viewer_result.m )
 

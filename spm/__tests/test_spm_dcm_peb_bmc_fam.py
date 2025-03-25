@@ -1,11 +1,11 @@
-from spm.__wrapper__ import Runtime
+from mpython import Runtime
 
 
 def test_spm_dcm_peb_bmc_fam(*args, **kwargs):
     """
-      Unit Tests for test_spm_dcm_peb_bmc_fam  
-       __________________________________________________________________________  
-      
+      Unit Tests for test_spm_dcm_peb_bmc_fam
+       __________________________________________________________________________
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/tests/test_spm_dcm_peb_bmc_fam.m )
 

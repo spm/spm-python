@@ -1,11 +1,11 @@
-from spm.__wrapper__ import Runtime
+from mpython import Runtime
 
 
 def bf_features_tdcov(*args, **kwargs):
     """
-      Simple band limited covariance computation with temporal decomposition  
-       __________________________________________________________________________  
-      
+      Simple band limited covariance computation with temporal decomposition
+       __________________________________________________________________________
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DAiSS/bf_features_tdcov.m )
 

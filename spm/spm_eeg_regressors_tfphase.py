@@ -1,22 +1,22 @@
-from spm.__wrapper__ import Runtime
+from mpython import Runtime
 
 
 def spm_eeg_regressors_tfphase(*args, **kwargs):
     """
-      Generate regressors from phase in TF dataset  
-        FORMAT res = spm_eeg_regressors_tfphase(S)  
-        S                     - input structure  
-        fields of S:  
-           S.D                - M/EEG object  
-         
-           Additional parameters can be defined specific for each plugin  
-        Output:  
-         res -  
-          If no input is provided the plugin returns a cfg branch for itself  
-         
-          If input is provided the plugin returns  
-       __________________________________________________________________________  
-      
+      Generate regressors from phase in TF dataset
+        FORMAT res = spm_eeg_regressors_tfphase(S)
+        S                     - input structure
+        fields of S:
+           S.D                - M/EEG object
+
+           Additional parameters can be defined specific for each plugin
+        Output:
+         res -
+          If no input is provided the plugin returns a cfg branch for itself
+
+          If input is provided the plugin returns
+       __________________________________________________________________________
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_eeg_regressors_tfphase.m )
 

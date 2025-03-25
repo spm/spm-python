@@ -1,14 +1,14 @@
-from spm.__wrapper__ import Runtime
+from mpython import Runtime
 
 
 def spm_dcm_local_minima(*args, **kwargs):
     """
-      Evaluate the free energy landscape around the posterior  
-        FORMAT spm_dcm_local_minima(DCM)  
-        DCM - (invert) model structure  
-         
-       __________________________________________________________________________  
-      
+      Evaluate the free energy landscape around the posterior
+        FORMAT spm_dcm_local_minima(DCM)
+        DCM - (invert) model structure
+
+       __________________________________________________________________________
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/dcm_meeg/spm_dcm_local_minima.m )
 

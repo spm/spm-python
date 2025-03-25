@@ -1,20 +1,20 @@
-from spm.__wrapper__ import Runtime
+from mpython import Runtime
 
 
 def spm_dirichlet(*args, **kwargs):
     """
-      Dirichlet distribution - deprecated  
-          
-        FORMAT [p] = dirichlet(x,alpha)  
-          
-        x     - vector of outcome/event probabilities  
-        alpha - vector of observed events  
-       __________________________________________________________________________  
-        Copyright (C) 2008 Wellcome Trust Centre for Neuroimaging  
-          
-        Will Penny  
-        $Id: spm_dirichlet.m 4418 2011-08-03 12:00:13Z guillaume $  
-      
+      Dirichlet distribution - deprecated
+
+        FORMAT [p] = dirichlet(x,alpha)
+
+        x     - vector of outcome/event probabilities
+        alpha - vector of observed events
+       __________________________________________________________________________
+        Copyright (C) 2008 Wellcome Trust Centre for Neuroimaging
+
+        Will Penny
+        $Id: spm_dirichlet.m 4418 2011-08-03 12:00:13Z guillaume $
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/compat/spm_dirichlet.m )
 

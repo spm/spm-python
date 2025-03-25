@@ -1,11 +1,11 @@
-from spm.__wrapper__ import Runtime
+from mpython import Runtime
 
 
 def end2end_restingfMRI(*args, **kwargs):
     """
-      End-to-end test for resting dataset  
-       __________________________________________________________________________  
-      
+      End-to-end test for resting dataset
+       __________________________________________________________________________
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/tests/end2end_restingfMRI.m )
 

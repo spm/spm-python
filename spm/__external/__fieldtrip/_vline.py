@@ -1,10 +1,10 @@
-from spm.__wrapper__ import Runtime
+from mpython import Runtime
 
 
 def _vline(*args, **kwargs):
     """
-      VLINE plot a vertical line in the current graph  
-      
+      VLINE plot a vertical line in the current graph
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/vline.m )
 

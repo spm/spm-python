@@ -1,15 +1,15 @@
-from spm.__wrapper__ import Runtime
+from mpython import Runtime
 
 
 def spm_funcheck(*args, **kwargs):
     """
-      Convert strings and inline objects to function handles  
-        FORMAT [h] = spm_funcheck(f)  
-         
-        f   - filename, character expression or inline function  
-        h   - corresponding function handle  
-       __________________________________________________________________________  
-      
+      Convert strings and inline objects to function handles
+        FORMAT [h] = spm_funcheck(f)
+
+        f   - filename, character expression or inline function
+        h   - corresponding function handle
+       __________________________________________________________________________
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_funcheck.m )
 

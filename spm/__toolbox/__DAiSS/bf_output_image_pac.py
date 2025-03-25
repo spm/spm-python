@@ -1,11 +1,11 @@
-from spm.__wrapper__ import Runtime
+from mpython import Runtime
 
 
 def bf_output_image_pac(*args, **kwargs):
     """
-      Computes phase-amplitude coupling  
-       __________________________________________________________________________  
-      
+      Computes phase-amplitude coupling
+       __________________________________________________________________________
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DAiSS/bf_output_image_pac.m )
 

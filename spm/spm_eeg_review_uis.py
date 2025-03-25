@@ -1,11 +1,11 @@
-from spm.__wrapper__ import Runtime
+from mpython import Runtime
 
 
 def spm_eeg_review_uis(*args, **kwargs):
     """
-      GUI of the M/EEG Review facility  
-       __________________________________________________________________________  
-      
+      GUI of the M/EEG Review facility
+       __________________________________________________________________________
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_eeg_review_uis.m )
 

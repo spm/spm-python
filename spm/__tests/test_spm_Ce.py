@@ -1,11 +1,11 @@
-from spm.__wrapper__ import Runtime
+from mpython import Runtime
 
 
 def test_spm_Ce(*args, **kwargs):
     """
-      Unit Tests for spm_Ce  
-       __________________________________________________________________________  
-      
+      Unit Tests for spm_Ce
+       __________________________________________________________________________
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/tests/test_spm_Ce.m )
 

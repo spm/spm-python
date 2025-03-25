@@ -1,11 +1,11 @@
-from spm.__wrapper__ import Runtime
+from mpython import Runtime
 
 
 def bf_regularise_manual(*args, **kwargs):
     """
-      Manual specification of the regularisation parameter  
-       __________________________________________________________________________  
-      
+      Manual specification of the regularisation parameter
+       __________________________________________________________________________
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DAiSS/bf_regularise_manual.m )
 

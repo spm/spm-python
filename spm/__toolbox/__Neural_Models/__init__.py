@@ -3,7 +3,15 @@ from .DEMO_model_reduction_ERP import DEMO_model_reduction_ERP
 from .DEMO_tvec_csd_sim import DEMO_tvec_csd_sim
 from .DEMO_tvec_erp_mmn import DEMO_tvec_erp_mmn
 from .DEMO_tvec_erp_sim import DEMO_tvec_erp_sim
-from .__NMDA_NMM_MFM import *
+from .__NMDA_NMM_MFM import (
+    spm_csd_mtf_plot_pole_zero,
+    spm_dcm_x_neural_NMDA,
+    spm_fx_NMDA,
+    spm_fx_mfm_NMDA,
+    spm_lfp_mtf_sample,
+    spm_nmm_priors_NMDA,
+    spm_x_mfm_NMDA,
+)
 from .Neural_demo import Neural_demo
 from .ROBOT_NMM import ROBOT_NMM
 from .spm_csd_demo import spm_csd_demo
@@ -41,3 +49,54 @@ from .spm_opt_bfun import spm_opt_bfun
 from .spm_seizure_demo import spm_seizure_demo
 from .spm_sigmoid_demo import spm_sigmoid_demo
 
+
+__all__ = [
+    "DEMO_dcm_fmri_nnm",
+    "DEMO_model_reduction_ERP",
+    "DEMO_tvec_csd_sim",
+    "DEMO_tvec_erp_mmn",
+    "DEMO_tvec_erp_sim",
+    "spm_csd_mtf_plot_pole_zero",
+    "spm_dcm_x_neural_NMDA",
+    "spm_fx_NMDA",
+    "spm_fx_mfm_NMDA",
+    "spm_lfp_mtf_sample",
+    "spm_nmm_priors_NMDA",
+    "spm_x_mfm_NMDA",
+    "Neural_demo",
+    "ROBOT_NMM",
+    "spm_csd_demo",
+    "spm_dcm_Granger_asymmetry_demo",
+    "spm_dcm_Granger_demo",
+    "spm_dcm_prior_responses",
+    "spm_delays_demo",
+    "spm_demo_proceed",
+    "spm_erp2csd_demo",
+    "spm_freqs",
+    "spm_fx_hh",
+    "spm_fx_lfp",
+    "spm_fx_mfm_ensemble",
+    "spm_gx_hh",
+    "spm_gx_mfm",
+    "spm_ind_demo",
+    "spm_induced_optimise",
+    "spm_induced_optimise_parameters",
+    "spm_lfp_demo",
+    "spm_lfp_log",
+    "spm_lfp_mtf",
+    "spm_lfp_priors",
+    "spm_lfp_sqrt",
+    "spm_mfa",
+    "spm_mfa_G",
+    "spm_mfa_bi",
+    "spm_mfa_bi_multi",
+    "spm_mfa_demo",
+    "spm_mfm_demo",
+    "spm_mtf_demo",
+    "spm_neil",
+    "spm_nested_oscillations_demo",
+    "spm_nmda_priors",
+    "spm_opt_bfun",
+    "spm_seizure_demo",
+    "spm_sigmoid_demo",
+]

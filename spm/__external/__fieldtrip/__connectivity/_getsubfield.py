@@ -1,19 +1,19 @@
-from spm.__wrapper__ import Runtime
+from mpython import Runtime
 
 
 def _getsubfield(*args, **kwargs):
     """
-      GETSUBFIELD returns a field from a structure just like the standard  
-        GETFIELD function, except that you can also specify nested fields  
-        using a '.' in the fieldname. The nesting can be arbitrary deep.  
-         
-        Use as  
-          f = getsubfield(s, 'fieldname')  
-        or as  
-          f = getsubfield(s, 'fieldname.subfieldname')  
-         
-        See also GETFIELD, ISSUBFIELD, SETSUBFIELD  
-      
+      GETSUBFIELD returns a field from a structure just like the standard
+        GETFIELD function, except that you can also specify nested fields
+        using a '.' in the fieldname. The nesting can be arbitrary deep.
+
+        Use as
+          f = getsubfield(s, 'fieldname')
+        or as
+          f = getsubfield(s, 'fieldname.subfieldname')
+
+        See also GETFIELD, ISSUBFIELD, SETSUBFIELD
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/connectivity/private/getsubfield.m )
 

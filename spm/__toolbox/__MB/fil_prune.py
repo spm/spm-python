@@ -1,16 +1,16 @@
-from spm.__wrapper__ import Runtime
+from mpython import Runtime
 
 
 def fil_prune(*args, **kwargs):
     """
-      Prune the model  
-        FORMAT model = fil_prune(model,sett,p)  
-        model - The learned model from fil_train  
-         
-        Take a fitted model, orthogonalise and remove irrelevent latent  
-        variables.  
-       __________________________________________________________________________  
-      
+      Prune the model
+        FORMAT model = fil_prune(model,sett,p)
+        model - The learned model from fil_train
+
+        Take a fitted model, orthogonalise and remove irrelevent latent
+        variables.
+       __________________________________________________________________________
+
 
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/MB/fil_prune.m )
 
