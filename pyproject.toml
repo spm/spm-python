@@ -4,11 +4,13 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "spm-python"
-version = "25.01-alpha1.dev15"
+version = "25.01.beta1"
 description = "Python bindings for the SPM software."
 readme = "README.md"
 license = {file = "LICENSE"}
-authors = [{name = "Johan Medrano", email = "johan.medrano@ucl.ac.uk"}]
+authors = [
+  {name = "Johan Medrano", email = "johan.medrano@ucl.ac.uk"}, 
+  {name = "Yael Balbastre", email = "y.balbastre@ucl.ac.yk"}]
 requires-python = ">=3.9,<3.13"
 classifiers = [
   "Development Status :: 3 - Alpha",
