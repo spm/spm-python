@@ -7,6 +7,7 @@ from mpython import (
     Array,
     SparseArray,
 )
+from ._version import __version__
 from .file_array import file_array
 from .gifti import gifti
 from .meeg import meeg
@@ -2781,6 +2782,7 @@ __all__ = [
     "Struct",
     "Array",
     "SparseArray",
+    "__version__",
     "file_array",
     "gifti",
     "meeg",
