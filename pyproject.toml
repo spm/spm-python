@@ -9,30 +9,45 @@ description = "Python bindings for the SPM software."
 readme = "README.md"
 license = {file = "LICENSE"}
 authors = [
-  {name = "Johan Medrano", email = "johan.medrano@ucl.ac.uk"}, 
-  {name = "Yael Balbastre", email = "y.balbastre@ucl.ac.yk"}]
-requires-python = ">=3.9,<3.13"
+  {name = "Johan Medrano", email = "johan.medrano@ucl.ac.uk"},
+  {name = "Yael Balbastre", email = "y.balbastre@ucl.ac.uk"}]
+requires-python = ">=3.6,<3.13"
 classifiers = [
   "Development Status :: 3 - Alpha",
   "License :: OSI Approved :: GNU General Public License v2 (GPLv2)",
+  "Programming Language :: Python :: 3.6",
+  "Programming Language :: Python :: 3.7",
+  "Programming Language :: Python :: 3.8",
   "Programming Language :: Python :: 3.9",
   "Programming Language :: Python :: 3.10",
   "Programming Language :: Python :: 3.11",
   "Programming Language :: Python :: 3.12",
 ]
 dependencies = [
-    "numpy", 
-    "mpython-core"
+    "mpython-core",
+    "spm-runtime-R2024b; python_version>='3.9' and python_version<'3.13'",
+    "spm-runtime-R2023a; python_version=='3.8'",
+    "spm-runtime-R2021b; python_version=='3.7'",
+    "spm-runtime-R2020b; python_version=='3.6'",
 ]
+
+[project.optional-dependencies]
+latest = ["spm-runtime"]
+R2024b = ["spm-runtime-R2024b"]
+R2024a = ["spm-runtime-R2024a"]
+R2023b = ["spm-runtime-R2023b"]
+R2023a = ["spm-runtime-R2023a"]
+R2022b = ["spm-runtime-R2022b"]
+R2022a = ["spm-runtime-R2022a"]
+R2021b = ["spm-runtime-R2021b"]
+R2021a = ["spm-runtime-R2021a"]
+R2020b = ["spm-runtime-R2020b"]
 
 [project.urls]
 Repository = "https://github.com/spm/spm-python"
 
 [tool.setuptools.packages]
 find = {}
-
-[tool.setuptools.package-data]
-spm = ["_spm/_spm.ctf"]
 
 [tool.setuptools.dynamic]
 version = {attr = "spm._version.__version__"}

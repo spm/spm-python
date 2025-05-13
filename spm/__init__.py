@@ -1,5 +1,4 @@
 from mpython import (
-    Runtime,
     MatlabClass,
     MatlabFunction,
     Cell,
@@ -7,6 +6,7 @@ from mpython import (
     Array,
     SparseArray,
 )
+from ._runtime import Runtime
 from ._version import __version__
 from .file_array import file_array
 from .gifti import gifti
