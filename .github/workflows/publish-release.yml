@@ -14,90 +14,93 @@ permissions:
 
 jobs:
   compile-and-deploy:
-    runs-on: ${{ matrix.os }}
     strategy:
       fail-fast: false
       matrix:
         include: 
           - matlab: "R2020b"
             python: "2.7"
-            os: 'ubuntu-20.04'
+            os: "ubuntu-20.04"
             
           - matlab: "R2020b"
             python: "3.8"
             py3from: "3.6"
             py3to:   "3.9"
-            os: 'ubuntu-latest'
+            os: "ubuntu-latest"
             
           - matlab: "R2021a"
             python: "2.7"
-            os: 'ubuntu-20.04'
+            os: "ubuntu-20.04"
             
           - matlab: "R2021a"
             python: "3.8"
             py3from: "3.7"
             py3to:   "3.9"
-            os: 'ubuntu-latest'
+            os: "ubuntu-latest"
             
           - matlab: "R2021b"
             python: "2.7"
-            os: 'ubuntu-20.04'
+            os: "ubuntu-20.04"
             
           - matlab: "R2021b"
             python:  "3.9"
             py3from: "3.7"
             py3to:   "3.10"
-            os: 'ubuntu-latest'
+            os: "ubuntu-latest"
             
           - matlab: "R2022a"
             python: "2.7"
-            os: 'ubuntu-20.04'
+            os: "ubuntu-20.04"
             
           - matlab: "R2022a"
             python:  "3.9"
             py3from: "3.8"
             py3to:   "3.10"
-            os: 'ubuntu-latest'
+            os: "ubuntu-latest"
             
           - matlab: "R2022b"
             python: "2.7"
-            os: 'ubuntu-20.04'
+            os: "ubuntu-20.04"
             
           - matlab: "R2022b"
             python: "3.10"
             py3from: "3.8"
             py3to:   "3.11"
+            os: "ubuntu-latest"
             
           - matlab: "R2023a"
             python: "3.10"
             py3from: "3.8"
             py3to:   "3.11"
-            os: 'ubuntu-latest'
+            os: "ubuntu-latest"
             
           - matlab: "R2023b"
             python: "3.11"
             py3from: "3.9"
             py3to:   "3.12"
-            os: 'ubuntu-latest'
+            os: "ubuntu-latest"
             
           - matlab: "R2024a"
             python: "3.11"
             py3from: "3.9"
             py3to:   "3.12"
-            os: 'ubuntu-latest'
+            os: "ubuntu-latest"
            
           - matlab: "R2024b"
             python: "3.12"
             py3from: "3.9"
             py3to:   "3.13"
-            os: 'ubuntu-latest'
+            os: "ubuntu-latest"
             
           - matlab: "R2024b"
             main: "true"
             python: "3.12"
             py3from: "3.9"
             py3to:   "3.13"
-            os: 'ubuntu-latest'
+            os: "ubuntu-latest"
+        
+    runs-on: ${{ matrix.os }}
+
             
     steps: 
       - name: Set up MATLAB
