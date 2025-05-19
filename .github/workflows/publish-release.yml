@@ -98,11 +98,24 @@ jobs:
             py3from: "3.9"
             py3to:   "3.13"
             os: "ubuntu-latest"
+            
+          - matlab: "R2025a"
+            main: "false"
+            python: "3.13"
+            py3from: "3.9"
+            py3to:   "3.14"
+            os: "ubuntu-latest"
         
     runs-on: ${{ matrix.os }}
 
             
     steps: 
+      - name: Update MPM 
+        run: | 
+          rm -f /home/runner/work/_temp/mpm
+          wget https://www.mathworks.com/mpm/glnxa64/mpm -O /home/runner/work/_temp/mpm
+          /usr/bin/chmod +x /home/runner/work/_temp/mpm
+          
       - name: Set up MATLAB
         uses: matlab-actions/setup-matlab@v2
         with:          
