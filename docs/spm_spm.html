@@ -1,0 +1,627 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+<meta name="generator" content="pdoc3 0.11.5">
+<title>spm.spm_spm API documentation</title>
+<meta name="description" content="">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/13.0.0/sanitize.min.css" integrity="sha512-y1dtMcuvtTMJc1yPgEqF0ZjQbhnc/bFhyvIyVNb9Zk5mIGtqVaAB1Ttl28su8AvFMOY0EwRbAe+HCLqj6W7/KA==" crossorigin>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/13.0.0/typography.min.css" integrity="sha512-Y1DYSb995BAfxobCkKepB1BqJJTPrOp3zPL74AWFugHHmmdcvO+C48WLrUOlhGMc0QG7AE3f7gmvvcrmX2fDoA==" crossorigin>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css" crossorigin>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:1.5em;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:2em 0 .50em 0}h3{font-size:1.4em;margin:1.6em 0 .7em 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .2s ease-in-out}a:visited{color:#503}a:hover{color:#b62}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900;font-weight:bold}pre code{font-size:.8em;line-height:1.4em;padding:1em;display:block}code{background:#f3f3f3;font-family:"DejaVu Sans Mono",monospace;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source > summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible;min-width:max-content}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em 1em;margin:1em 0}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul ul{padding-left:1em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js" integrity="sha512-D9gUyxqja7hBtkWpPWGt9wfbfaMGVt9gnyCvYa+jojwwPHLCzUm5i8rpk7vD7wNee9bA35eYIjobYPaQuKS1MQ==" crossorigin></script>
+<script>window.addEventListener('DOMContentLoaded', () => {
+hljs.configure({languages: ['bash', 'css', 'diff', 'graphql', 'ini', 'javascript', 'json', 'plaintext', 'python', 'python-repl', 'rust', 'shell', 'sql', 'typescript', 'xml', 'yaml']});
+hljs.highlightAll();
+/* Collapse source docstrings */
+setTimeout(() => {
+[...document.querySelectorAll('.hljs.language-python > .hljs-string')]
+.filter(el => el.innerHTML.length > 200 && ['"""', "'''"].includes(el.innerHTML.substring(0, 3)))
+.forEach(el => {
+let d = document.createElement('details');
+d.classList.add('hljs-string');
+d.innerHTML = '<summary>"""</summary>' + el.innerHTML.substring(3);
+el.replaceWith(d);
+});
+}, 100);
+})</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>spm.spm_spm</code></h1>
+</header>
+<section id="section-intro">
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-functions">Functions</h2>
+<dl>
+<dt id="spm.spm_spm.spm_spm"><code class="name flex">
+<span>def <span class="ident">spm_spm</span></span>(<span>*args, **kwargs)</span>
+</code></dt>
+<dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def spm_spm(*args, **kwargs):
+    &#34;&#34;&#34;
+      [Re]ML Estimation of a General Linear Model  
+        FORMAT SPM = spm_spm(SPM)  
+         
+        Required fields of SPM:  
+         
+        xY.VY - nScan x 1 struct array of image handles (see spm_vol)  
+                Images must have the same orientation, voxel size and data type  
+              - Any scaling should have already been applied via the image handle  
+                scalefactors.  
+         
+        xX    - Structure containing design matrix information  
+              - Required fields are:  
+                xX.X      - Design matrix (raw, not temporally smoothed)  
+                xX.name   - cellstr of parameter names corresponding to columns  
+                            of design matrix  
+              - Optional fields are:  
+                xX.K      - cell of session-specific structures (see spm_filter)  
+                          - Design &amp; data are pre-multiplied by K  
+                            (K*Y = K*X*beta + K*e)  
+                          - Note that K should not smooth across block boundaries  
+                          - defaults to speye(size(xX.X,1))  
+                xX.W      - Optional whitening/weighting matrix used to give  
+                            weighted least squares estimates (WLS). If not  
+                            specified spm_spm will set this to whiten the data  
+                            and render the OLS estimates maximum likelihood  
+                            i.e. W*W&#39; = inv(xVi.V).  
+         
+        xVi   - Structure describing intrinsic temporal non-sphericity  
+              - Required fields are:  
+                xVi.Vi    - array of non-sphericity components  
+                          - defaults to {speye(size(xX.X,1))} - i.i.d.  
+                          - specifying a cell array of constraints (Qi)  
+                            These constraints invoke spm_reml to estimate  
+                            hyperparameters assuming V is constant over voxels.  
+                            that provide a high precise estimate of xX.V  
+              - Optional fields are:  
+                xX.V      - Optional non-sphericity matrix.  Cov(e) = sigma^2*V  
+                            If not specified spm_spm will compute this using  
+                            a 1st pass to identify significant voxels over which  
+                            to estimate V.  A 2nd pass is then used to re-estimate  
+                            the parameters with WLS and save the ML estimates  
+                            (unless xX.W is already specified).  
+         
+        xM    - Structure containing masking information, or a simple column vector  
+                of thresholds corresponding to the images in VY [default: -Inf]  
+              - If a structure, the required fields are:  
+                xM.TH - nVar x nScan matrix of analysis thresholds, one per image  
+                xM.I  - Implicit masking (0=&gt;none, 1 =&gt; implicit zero/NaN mask)  
+                xM.VM - struct array of explicit mask image handles  
+              - (empty if no explicit masks)  
+                      - Explicit mask images are &gt;0 for valid voxels to assess.  
+                      - Mask images can have any orientation, voxel size or data  
+                        type. They are interpolated using nearest neighbour  
+                        interpolation to the voxel locations of the data Y.  
+              - Note that voxels with constant data (i.e. the same value across  
+                scans) are also automatically masked out.  
+         
+        swd   - Directory where the output files will be saved [default: pwd]  
+                If exists, it becomes the current working directory.  
+         
+        In addition, global SPM &#34;defaults&#34; variable is used (see spm_defaults):  
+          
+        stats.&lt;modality&gt;.UFp - critical F-threshold for selecting voxels over   
+                               which the non-sphericity is estimated (if   
+                               required) [default: 0.001]  
+          
+        stats.maxres         - maximum number of residual images for smoothness  
+                               estimation  
+         
+        stats.maxmem         - maximum amount of data processed at a time (in bytes)  
+         
+        modality             - SPM modality {&#39;PET&#39;,&#39;FMRI&#39;,&#39;EEG&#39;}  
+         
+       __________________________________________________________________________  
+         
+        spm_spm is the heart of the SPM package. Given image files and a  
+        General Linear Model, it estimates the model parameters, variance  
+        hyperparameters, and smoothness of standardised residual fields, writing  
+        these out to disk in the current working directory for later  
+        interrogation in the results section. (NB: Existing analyses in the  
+        current working directory are overwritten).  This directory  
+        now becomes the working directory for this analysis and all saved  
+        images are relative to this directory.  
+         
+        The model is expressed via the design matrix (xX.X). The basic model  
+        at each voxel is of the form is Y = X*B + e, for data Y, design  
+        matrix X, (unknown) parameters B and residual errors e. The errors  
+        are assumed to have a normal distribution.  
+         
+        Sometimes confounds (e.g. drift terms in fMRI) are necessary. These  
+        can be specified directly in the design matrix or implicitly, in terms  
+        of a residual forming matrix K to give a generalised linear model  
+        K*Y = K*X*B + K*e.  In fact K can be any matrix (e.g. a convolution  
+        matrix).  
+         
+        In some instances i.i.d. assumptions about errors do not hold. For  
+        example, with serially correlated (fMRI) data or correlations among the  
+        levels of a factor in repeated measures designs. This non-sphericity  
+        can be specified in terms of components (SPM.xVi.Vi{i}). If specified  
+        these covariance components will then be estimated with ReML (restricted  
+        maximum likelihood) hyperparameters. This estimation assumes the same  
+        non-sphericity for voxels that exceed the global F-threshold. The ReML  
+        estimates can then be used to whiten the data giving maximum likelihood  
+        (ML) or Gauss-Markov estimators. This entails a second pass of the data  
+        with an augmented model K*W*Y = K*W*X*B + K*W*e where W*W&#39; = inv(xVi.V).  
+        xVi.V is the non-sphericity based on the hyperparameter estimates.  
+        W is stored in xX.W and cov(K*W*e) in xX.V. The covariance of the  
+        parameter estimates is then xX.Bcov = pinv(K*W*X)*xX.V*pinv(K*W*X)&#39;.  
+         
+        If you do not want ML estimates but want to use ordinary least squares  
+        (OLS) then simply set SPM.xX.W to the identity matrix. Any non-sphericity  
+        V will still be estimated but will be used to adjust the degrees of freedom  
+        of the ensuing statistics using the Satterthwaite approximation (c.f.  
+        the Greenhouse-Geisser corrections).  
+         
+        If [non-spherical] variance components Vi are not specified xVi.Vi and  
+        xVi.V default to the identity matrix (i.e. i.i.d). The parameters are  
+        then estimated by OLS.  In this instance the OLS and ML estimates are  
+        the same.  
+         
+        Note that only a single voxel-specific hyperparameter (i.e. variance  
+        component) is estimated, even if V is not i.i.d.  This means spm_spm  
+        always implements a fixed-effects model.  
+        Random effects models can be emulated using a multi-stage procedure:  
+        This entails summarising the data with contrasts such that the fixed  
+        effects in a second model on the summary data are those effects of  
+        interest (i.e. the population effects). This means contrasts are  
+        re-entered into spm_spm to make an inference (SPM) at the next  
+        level. At this higher hierarchical level the residual variance for the  
+        model contains the appropriate variance components from lower levels.  
+         
+        Under the additional assumption that the standardised error fields  
+        are non-stationary standard Gaussian random fields, results from  
+        Random field theory can be applied to estimate the significance  
+        statistic images (SPM&#39;s) adjusting p values for the multiple tests  
+        at all voxels in the search volume. The parameters required for  
+        this random field correction are the volume, and Lambda, the covariance  
+        matrix of partial derivatives of the standardised error fields, estimated  
+        by spm_est_smoothness.  
+         
+                                   ----------------  
+         
+        The volume analysed is the intersection of the threshold masks,  
+        explicit masks and implicit masks. See spm_spm_ui for further details  
+        on masking options.  
+       __________________________________________________________________________  
+         
+        The output of spm_spm takes the form of an SPM.mat file of the analysis  
+        parameters, and &#39;float&#39; flat-file images of the parameter and variance  
+        [hyperparameter] estimates. An 8bit zero-one mask image indicating the  
+        voxels assessed is also written out, with zero indicating voxels outside  
+        the analysed volume.  
+         
+                                   ----------------  
+         
+        The following SPM.fields are set by spm_spm (unless specified)  
+         
+            xVi.V      - estimated non-sphericity trace(V) = rank(V)  
+            xVi.h      - hyperparameters  xVi.V = xVi.h(1)*xVi.Vi{1} + ...  
+            xVi.Cy     - spatially whitened &lt;Y*Y&#39;&gt; (used by ReML to estimate h)  
+         
+                                   ----------------  
+         
+            Vbeta     - struct array of beta image handles (relative)  
+            VResMS    - file struct of ResMS image handle  (relative)  
+            VM        - file struct of Mask  image handle  (relative)  
+         
+                                   ----------------  
+         
+            xX.W      - if not specified W*W&#39; = inv(x.Vi.V)  
+            xX.V      - V matrix (K*W*Vi*W&#39;*K&#39;) = correlations after K*W is applied  
+            xX.xKXs   - space structure for K*W*X, the &#39;filtered and whitened&#39;  
+                        design matrix  
+                      - given as spm_sp(&#39;Set&#39;,xX.K*xX.W*xX.X) - see spm_sp  
+            xX.pKX    - pseudoinverse of K*W*X, computed by spm_sp  
+            xX.Bcov   - xX.pKX*xX.V*xX.pKX - variance-covariance matrix of  
+                        parameter estimates  
+                        (when multiplied by the voxel-specific hyperparameter ResMS  
+                        of the parameter estimates (ResSS/xX.trRV = ResMS) )  
+            xX.trRV   - trace of R*V  
+            xX.trRVRV - trace of RVRV  
+            xX.erdf   - effective residual degrees of freedom (trRV^2/trRVRV)  
+            xX.nKX    - design matrix (xX.xKXs.X) scaled for display  
+                        (see spm_DesMtx(&#39;sca&#39;,... for details)  
+         
+                                   ----------------  
+         
+            xVol.M    - 4x4 voxel-&gt;mm transformation matrix  
+            xVol.iM   - 4x4 mm-&gt;voxel transformation matrix  
+            xVol.DIM  - image dimensions - column vector (in voxels)  
+            xVol.XYZ  - 3 x S vector of in-mask voxel coordinates  
+            xVol.S    - Lebesgue measure or volume       (in voxels)  
+            xVol.R    - vector of resel counts           (in resels)  
+            xVol.FWHM - Smoothness of components - FWHM, (in voxels)  
+         
+                                   ----------------  
+         
+            xCon      - Contrast structure (created by spm_FcUtil.m)  
+            xCon.name - Name of contrast  
+            xCon.STAT - &#39;F&#39;, &#39;T&#39; or &#39;P&#39; - for F/T-contrast (&#39;P&#39; for PPMs)  
+            xCon.c    - (F) Contrast weights  
+            xCon.X0   - Reduced design matrix (spans design space under Ho)  
+                        It is in the form of a matrix (spm99b) or the  
+                        coordinates of this matrix in the orthogonal basis  
+                        of xX.X defined in spm_sp.  
+            xCon.iX0  - Indicates how contrast was specified:  
+                        If by columns for reduced design matrix then iX0 contains  
+                        the column indices. Otherwise, it&#39;s a string containing  
+                        the spm_FcUtil &#39;Set&#39; action: Usually one of {&#39;c&#39;,&#39;c+&#39;,&#39;X0&#39;}  
+                        (Usually this is the input argument F_iX0.)  
+            xCon.X1o  - Remaining design space (orthogonal to X0).  
+                        It is in the form of the coordinates of this matrix in  
+                        the orthogonal basis of xX.X defined in spm_sp.  
+            xCon.eidf - Effective interest degrees of freedom (numerator df)  
+            xCon.Vcon - ...for handle of contrast/ESS image (empty at this stage)  
+            xCon.Vspm - ...for handle of SPM image (empty at this stage)  
+       __________________________________________________________________________  
+         
+        The following images are written to disk:  
+         
+        mask.&lt;ext&gt;                                          - analysis mask image  
+        8-bit (uint8) image of zero-s &amp; one&#39;s indicating which voxels were  
+        included in the analysis. This mask image is the intersection of the  
+        explicit, implicit and threshold masks specified in the xM argument.  
+        The XYZ matrix contains the voxel coordinates of all voxels in the  
+        analysis mask. The mask image is included for reference, but is not  
+        explicitly used by the results section.  
+         
+                                   ----------------  
+         
+        beta_????.&lt;ext&gt;                                     - parameter images  
+        These are 32-bit (float32) images of the parameter estimates. The image  
+        files are numbered according to the corresponding column of the  
+        design matrix. Voxels outside the analysis mask (mask.&lt;ext&gt;) are given  
+        value NaN.  
+         
+                                   ----------------  
+         
+        ResMS.&lt;ext&gt;                           - estimated residual variance image  
+        This is a 64-bit (float64) image of the residual variance estimate.  
+        Voxels outside the analysis mask are given value NaN.  
+         
+                                   ----------------  
+         
+        RPV.&lt;ext&gt;                              - estimated resels per voxel image  
+        This is a 64-bit (float64) image of the RESELs per voxel estimate.  
+        Voxels outside the analysis mask are given value 0.  These images  
+        reflect the nonstationary aspects the spatial autocorrelations.  
+         
+                                   ----------------  
+         
+        ResI_????.&lt;ext&gt;                - standardised residual (temporary) images  
+        These are 64-bit (float64) images of standardised residuals. At most  
+        maxres images will be saved and used by spm_est_smoothness, after which  
+        they will be deleted.  
+       __________________________________________________________________________  
+         
+        References:  
+         
+        Statistical Parametric Maps in Functional Imaging: A General Linear  
+        Approach. Friston KJ, Holmes AP, Worsley KJ, Poline JB, Frith CD,  
+        Frackowiak RSJ. (1995) Human Brain Mapping 2:189-210.  
+         
+        Analysis of fMRI Time-Series Revisited - Again. Worsley KJ, Friston KJ.  
+        (1995) NeuroImage 2:173-181.  
+       __________________________________________________________________________  
+      
+
+    [Matlab code]( https://github.com/spm/spm/blob/main/spm_spm.m )
+
+    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    &#34;&#34;&#34;
+    return Runtime.call(&#34;spm_spm&#34;, *args, **kwargs)</code></pre>
+</details>
+<div class="desc"><p>[Re]ML Estimation of a General Linear Model<br>
+FORMAT SPM = spm_spm(SPM)
+</p>
+<pre><code>Required fields of SPM:
+
+xY.VY - nScan x 1 struct array of image handles (see spm_vol)  
+        Images must have the same orientation, voxel size and data type  
+      - Any scaling should have already been applied via the image handle  
+        scalefactors.
+
+xX    - Structure containing design matrix information  
+      - Required fields are:  
+        xX.X      - Design matrix (raw, not temporally smoothed)  
+        xX.name   - cellstr of parameter names corresponding to columns  
+                    of design matrix  
+      - Optional fields are:  
+        xX.K      - cell of session-specific structures (see spm_filter)  
+                  - Design &amp; data are pre-multiplied by K  
+                    (K*Y = K*X*beta + K*e)  
+                  - Note that K should not smooth across block boundaries  
+                  - defaults to speye(size(xX.X,1))  
+        xX.W      - Optional whitening/weighting matrix used to give  
+                    weighted least squares estimates (WLS). If not  
+                    specified spm_spm will set this to whiten the data  
+                    and render the OLS estimates maximum likelihood  
+                    i.e. W*W' = inv(xVi.V).
+
+xVi   - Structure describing intrinsic temporal non-sphericity  
+      - Required fields are:  
+        xVi.Vi    - array of non-sphericity components  
+                  - defaults to {speye(size(xX.X,1))} - i.i.d.  
+                  - specifying a cell array of constraints (Qi)  
+                    These constraints invoke spm_reml to estimate  
+                    hyperparameters assuming V is constant over voxels.  
+                    that provide a high precise estimate of xX.V  
+      - Optional fields are:  
+        xX.V      - Optional non-sphericity matrix.  Cov(e) = sigma^2*V  
+                    If not specified spm_spm will compute this using  
+                    a 1st pass to identify significant voxels over which  
+                    to estimate V.  A 2nd pass is then used to re-estimate  
+                    the parameters with WLS and save the ML estimates  
+                    (unless xX.W is already specified).
+
+xM    - Structure containing masking information, or a simple column vector  
+        of thresholds corresponding to the images in VY [default: -Inf]  
+      - If a structure, the required fields are:  
+        xM.TH - nVar x nScan matrix of analysis thresholds, one per image  
+        xM.I  - Implicit masking (0=&gt;none, 1 =&gt; implicit zero/NaN mask)  
+        xM.VM - struct array of explicit mask image handles  
+      - (empty if no explicit masks)  
+              - Explicit mask images are &gt;0 for valid voxels to assess.  
+              - Mask images can have any orientation, voxel size or data  
+                type. They are interpolated using nearest neighbour  
+                interpolation to the voxel locations of the data Y.  
+      - Note that voxels with constant data (i.e. the same value across  
+        scans) are also automatically masked out.
+
+swd   - Directory where the output files will be saved [default: pwd]  
+        If exists, it becomes the current working directory.
+
+In addition, global SPM "defaults" variable is used (see spm_defaults):
+
+stats.&lt;modality&gt;.UFp - critical F-threshold for selecting voxels over   
+                       which the non-sphericity is estimated (if   
+                       required) [default: 0.001]
+
+stats.maxres         - maximum number of residual images for smoothness  
+                       estimation
+
+stats.maxmem         - maximum amount of data processed at a time (in bytes)
+
+modality             - SPM modality {'PET','FMRI','EEG'}
+</code></pre>
+<hr>
+<pre><code>spm_spm is the heart of the SPM package. Given image files and a  
+General Linear Model, it estimates the model parameters, variance  
+hyperparameters, and smoothness of standardised residual fields, writing  
+these out to disk in the current working directory for later  
+interrogation in the results section. (NB: Existing analyses in the  
+current working directory are overwritten).  This directory  
+now becomes the working directory for this analysis and all saved  
+images are relative to this directory.
+
+The model is expressed via the design matrix (xX.X). The basic model  
+at each voxel is of the form is Y = X*B + e, for data Y, design  
+matrix X, (unknown) parameters B and residual errors e. The errors  
+are assumed to have a normal distribution.
+
+Sometimes confounds (e.g. drift terms in fMRI) are necessary. These  
+can be specified directly in the design matrix or implicitly, in terms  
+of a residual forming matrix K to give a generalised linear model  
+K*Y = K*X*B + K*e.  In fact K can be any matrix (e.g. a convolution  
+matrix).
+
+In some instances i.i.d. assumptions about errors do not hold. For  
+example, with serially correlated (fMRI) data or correlations among the  
+levels of a factor in repeated measures designs. This non-sphericity  
+can be specified in terms of components (SPM.xVi.Vi{i}). If specified  
+these covariance components will then be estimated with ReML (restricted  
+maximum likelihood) hyperparameters. This estimation assumes the same  
+non-sphericity for voxels that exceed the global F-threshold. The ReML  
+estimates can then be used to whiten the data giving maximum likelihood  
+(ML) or Gauss-Markov estimators. This entails a second pass of the data  
+with an augmented model K*W*Y = K*W*X*B + K*W*e where W*W' = inv(xVi.V).  
+xVi.V is the non-sphericity based on the hyperparameter estimates.  
+W is stored in xX.W and cov(K*W*e) in xX.V. The covariance of the  
+parameter estimates is then xX.Bcov = pinv(K*W*X)*xX.V*pinv(K*W*X)'.
+
+If you do not want ML estimates but want to use ordinary least squares  
+(OLS) then simply set SPM.xX.W to the identity matrix. Any non-sphericity  
+V will still be estimated but will be used to adjust the degrees of freedom  
+of the ensuing statistics using the Satterthwaite approximation (c.f.  
+the Greenhouse-Geisser corrections).
+
+If [non-spherical] variance components Vi are not specified xVi.Vi and  
+xVi.V default to the identity matrix (i.e. i.i.d). The parameters are  
+then estimated by OLS.  In this instance the OLS and ML estimates are  
+the same.
+
+Note that only a single voxel-specific hyperparameter (i.e. variance  
+component) is estimated, even if V is not i.i.d.  This means spm_spm  
+always implements a fixed-effects model.  
+Random effects models can be emulated using a multi-stage procedure:  
+This entails summarising the data with contrasts such that the fixed  
+effects in a second model on the summary data are those effects of  
+interest (i.e. the population effects). This means contrasts are  
+re-entered into spm_spm to make an inference (SPM) at the next  
+level. At this higher hierarchical level the residual variance for the  
+model contains the appropriate variance components from lower levels.
+
+Under the additional assumption that the standardised error fields  
+are non-stationary standard Gaussian random fields, results from  
+Random field theory can be applied to estimate the significance  
+statistic images (SPM's) adjusting p values for the multiple tests  
+at all voxels in the search volume. The parameters required for  
+this random field correction are the volume, and Lambda, the covariance  
+matrix of partial derivatives of the standardised error fields, estimated  
+by spm_est_smoothness.
+
+                           ----------------
+
+The volume analysed is the intersection of the threshold masks,  
+explicit masks and implicit masks. See spm_spm_ui for further details  
+on masking options.
+</code></pre>
+<hr>
+<pre><code>The output of spm_spm takes the form of an SPM.mat file of the analysis  
+parameters, and 'float' flat-file images of the parameter and variance  
+[hyperparameter] estimates. An 8bit zero-one mask image indicating the  
+voxels assessed is also written out, with zero indicating voxels outside  
+the analysed volume.
+
+                           ----------------
+
+The following SPM.fields are set by spm_spm (unless specified)
+
+    xVi.V      - estimated non-sphericity trace(V) = rank(V)  
+    xVi.h      - hyperparameters  xVi.V = xVi.h(1)*xVi.Vi{1} + ...  
+    xVi.Cy     - spatially whitened &lt;Y*Y'&gt; (used by ReML to estimate h)
+
+                           ----------------
+
+    Vbeta     - struct array of beta image handles (relative)  
+    VResMS    - file struct of ResMS image handle  (relative)  
+    VM        - file struct of Mask  image handle  (relative)
+
+                           ----------------
+
+    xX.W      - if not specified W*W' = inv(x.Vi.V)  
+    xX.V      - V matrix (K*W*Vi*W'*K') = correlations after K*W is applied  
+    xX.xKXs   - space structure for K*W*X, the 'filtered and whitened'  
+                design matrix  
+              - given as spm_sp('Set',xX.K*xX.W*xX.X) - see spm_sp  
+    xX.pKX    - pseudoinverse of K*W*X, computed by spm_sp  
+    xX.Bcov   - xX.pKX*xX.V*xX.pKX - variance-covariance matrix of  
+                parameter estimates  
+                (when multiplied by the voxel-specific hyperparameter ResMS  
+                of the parameter estimates (ResSS/xX.trRV = ResMS) )  
+    xX.trRV   - trace of R*V  
+    xX.trRVRV - trace of RVRV  
+    xX.erdf   - effective residual degrees of freedom (trRV^2/trRVRV)  
+    xX.nKX    - design matrix (xX.xKXs.X) scaled for display  
+                (see spm_DesMtx('sca',... for details)
+
+                           ----------------
+
+    xVol.M    - 4x4 voxel-&gt;mm transformation matrix  
+    xVol.iM   - 4x4 mm-&gt;voxel transformation matrix  
+    xVol.DIM  - image dimensions - column vector (in voxels)  
+    xVol.XYZ  - 3 x S vector of in-mask voxel coordinates  
+    xVol.S    - Lebesgue measure or volume       (in voxels)  
+    xVol.R    - vector of resel counts           (in resels)  
+    xVol.FWHM - Smoothness of components - FWHM, (in voxels)
+
+                           ----------------
+
+    xCon      - Contrast structure (created by spm_FcUtil.m)  
+    xCon.name - Name of contrast  
+    xCon.STAT - 'F', 'T' or 'P' - for F/T-contrast ('P' for PPMs)  
+    xCon.c    - (F) Contrast weights  
+    xCon.X0   - Reduced design matrix (spans design space under Ho)  
+                It is in the form of a matrix (spm99b) or the  
+                coordinates of this matrix in the orthogonal basis  
+                of xX.X defined in spm_sp.  
+    xCon.iX0  - Indicates how contrast was specified:  
+                If by columns for reduced design matrix then iX0 contains  
+                the column indices. Otherwise, it's a string containing  
+                the spm_FcUtil 'Set' action: Usually one of {'c','c+','X0'}  
+                (Usually this is the input argument F_iX0.)  
+    xCon.X1o  - Remaining design space (orthogonal to X0).  
+                It is in the form of the coordinates of this matrix in  
+                the orthogonal basis of xX.X defined in spm_sp.  
+    xCon.eidf - Effective interest degrees of freedom (numerator df)  
+    xCon.Vcon - ...for handle of contrast/ESS image (empty at this stage)  
+    xCon.Vspm - ...for handle of SPM image (empty at this stage)
+</code></pre>
+<hr>
+<pre><code>The following images are written to disk:
+
+mask.&lt;ext&gt;                                          - analysis mask image  
+8-bit (uint8) image of zero-s &amp; one's indicating which voxels were  
+included in the analysis. This mask image is the intersection of the  
+explicit, implicit and threshold masks specified in the xM argument.  
+The XYZ matrix contains the voxel coordinates of all voxels in the  
+analysis mask. The mask image is included for reference, but is not  
+explicitly used by the results section.
+
+                           ----------------
+
+beta_????.&lt;ext&gt;                                     - parameter images  
+These are 32-bit (float32) images of the parameter estimates. The image  
+files are numbered according to the corresponding column of the  
+design matrix. Voxels outside the analysis mask (mask.&lt;ext&gt;) are given  
+value NaN.
+
+                           ----------------
+
+ResMS.&lt;ext&gt;                           - estimated residual variance image  
+This is a 64-bit (float64) image of the residual variance estimate.  
+Voxels outside the analysis mask are given value NaN.
+
+                           ----------------
+
+RPV.&lt;ext&gt;                              - estimated resels per voxel image  
+This is a 64-bit (float64) image of the RESELs per voxel estimate.  
+Voxels outside the analysis mask are given value 0.  These images  
+reflect the nonstationary aspects the spatial autocorrelations.
+
+                           ----------------
+
+ResI_????.&lt;ext&gt;                - standardised residual (temporary) images  
+These are 64-bit (float64) images of standardised residuals. At most  
+maxres images will be saved and used by spm_est_smoothness, after which  
+they will be deleted.
+</code></pre>
+<hr>
+<pre><code>References:
+
+Statistical Parametric Maps in Functional Imaging: A General Linear  
+Approach. Friston KJ, Holmes AP, Worsley KJ, Poline JB, Frith CD,  
+Frackowiak RSJ. (1995) Human Brain Mapping 2:189-210.
+
+Analysis of fMRI Time-Series Revisited - Again. Worsley KJ, Friston KJ.  
+(1995) NeuroImage 2:173-181.
+</code></pre>
+<hr>
+<p><a href="https://github.com/spm/spm/blob/main/spm_spm.m">Matlab code</a></p>
+<p>Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL</p></div>
+</dd>
+</dl>
+</section>
+<section>
+</section>
+</article>
+<nav id="sidebar">
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3>Super-module</h3>
+<ul>
+<li><code><a title="spm" href="index.html">spm</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-functions">Functions</a></h3>
+<ul class="">
+<li><code><a title="spm.spm_spm.spm_spm" href="#spm.spm_spm.spm_spm">spm_spm</a></code></li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc" title="pdoc: Python API documentation generator"><cite>pdoc</cite> 0.11.5</a>.</p>
+</footer>
+</body>
+</html>

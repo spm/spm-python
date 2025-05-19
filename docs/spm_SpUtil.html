@@ -1,0 +1,604 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+<meta name="generator" content="pdoc3 0.11.5">
+<title>spm.spm_SpUtil API documentation</title>
+<meta name="description" content="">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/13.0.0/sanitize.min.css" integrity="sha512-y1dtMcuvtTMJc1yPgEqF0ZjQbhnc/bFhyvIyVNb9Zk5mIGtqVaAB1Ttl28su8AvFMOY0EwRbAe+HCLqj6W7/KA==" crossorigin>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/13.0.0/typography.min.css" integrity="sha512-Y1DYSb995BAfxobCkKepB1BqJJTPrOp3zPL74AWFugHHmmdcvO+C48WLrUOlhGMc0QG7AE3f7gmvvcrmX2fDoA==" crossorigin>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css" crossorigin>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:1.5em;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:2em 0 .50em 0}h3{font-size:1.4em;margin:1.6em 0 .7em 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .2s ease-in-out}a:visited{color:#503}a:hover{color:#b62}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900;font-weight:bold}pre code{font-size:.8em;line-height:1.4em;padding:1em;display:block}code{background:#f3f3f3;font-family:"DejaVu Sans Mono",monospace;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source > summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible;min-width:max-content}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em 1em;margin:1em 0}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul ul{padding-left:1em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js" integrity="sha512-D9gUyxqja7hBtkWpPWGt9wfbfaMGVt9gnyCvYa+jojwwPHLCzUm5i8rpk7vD7wNee9bA35eYIjobYPaQuKS1MQ==" crossorigin></script>
+<script>window.addEventListener('DOMContentLoaded', () => {
+hljs.configure({languages: ['bash', 'css', 'diff', 'graphql', 'ini', 'javascript', 'json', 'plaintext', 'python', 'python-repl', 'rust', 'shell', 'sql', 'typescript', 'xml', 'yaml']});
+hljs.highlightAll();
+/* Collapse source docstrings */
+setTimeout(() => {
+[...document.querySelectorAll('.hljs.language-python > .hljs-string')]
+.filter(el => el.innerHTML.length > 200 && ['"""', "'''"].includes(el.innerHTML.substring(0, 3)))
+.forEach(el => {
+let d = document.createElement('details');
+d.classList.add('hljs-string');
+d.innerHTML = '<summary>"""</summary>' + el.innerHTML.substring(3);
+el.replaceWith(d);
+});
+}, 100);
+})</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>spm.spm_SpUtil</code></h1>
+</header>
+<section id="section-intro">
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-functions">Functions</h2>
+<dl>
+<dt id="spm.spm_SpUtil.spm_SpUtil"><code class="name flex">
+<span>def <span class="ident">spm_SpUtil</span></span>(<span>*args, **kwargs)</span>
+</code></dt>
+<dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def spm_SpUtil(*args, **kwargs):
+    &#34;&#34;&#34;
+      Space matrix utilities  
+        FORMAT varargout = spm_SpUtil(action,varargin)  
+         
+       _______________________________________________________________________  
+         
+        spm_SpUtil is a multi-function function containing various utilities  
+        for Design matrix and contrast construction and manipulation. In  
+        general, it accepts design matrices as plain matrices or as space  
+        structures setup by spm_sp.  
+         
+        Many of the space utilities are computed using an SVD of the design  
+        matrix. The advantage of using space structures is that the svd of  
+        the design matrix is stored in the space structure, thereby saving  
+        unnecessary repeated computation of the SVD. This presents a  
+        considerable efficiency gain for large design matrices.  
+         
+        Note that when space structures are passed as arguments is is  
+        assumed that their basic fields are filled in. See spm_sp for  
+        details of (design) space structures and their manipulation.  
+         
+        Quick Reference    :  
+       ---------------------  
+        (&#39;isCon&#39;,x,c)      :  
+        (&#39;allCon&#39;,x,c)     :  
+        (&#39;ConR&#39;,x,c)       :  
+        (&#39;ConO&#39;,x,c)       :  
+        (&#39;size&#39;,x,dim)     :  
+        (&#39;iX0check&#39;,i0,sL) :  
+       ---------------------  
+        (&#39;i0-&gt;c&#39;,x,i0)     : Out : c  
+        (&#39;c-&gt;Tsp&#39;,x,c)     : Out : [X1o [X0]]  
+        (&#39;+c-&gt;Tsp&#39;,x,c)    : Out : [ukX1o [ukX0]]  
+        (&#39;i0-&gt;x1o&#39;,x,i0)   : Use (&#39;i0-&gt;c&#39;,x,i0) and (&#39;c-&gt;Tsp&#39;,X,c)  
+        (&#39;+i0-&gt;x1o&#39;,x,i0)  : Use (&#39;i0-&gt;c&#39;,x,i0) and (&#39;+c-&gt;Tsp&#39;,X,c)  
+        (&#39;X0-&gt;c&#39;,x,X0)     :~   
+        (&#39;+X0-&gt;c&#39;,x,cukX0) :~   
+       ---------------------  
+        (&#39;trRV&#39;,x[,V])     :  
+        (&#39;trMV&#39;,x[,V])     :  
+        (&#39;i0-&gt;edf&#39;,x,i0,V) :  
+         
+       ---------------------  
+         
+        Improvement compared to the spm99 beta version :  
+         
+        Improvements in df computation using spm_SpUtil(&#39;trRV&#39;,x[,V]) and  
+        spm_SpUtil(&#39;trMV&#39;,sX [,V]). The degrees of freedom computation requires  
+        in general that the trace of RV and of RVRV be computed, where R is a  
+        projector onto either a sub space of the design space or the residual  
+        space, namely the space that is orthogonal to the design space. V is  
+        the (estimated or assumed) variance covariance matrix and is a number  
+        of scans by number of scans matrix which can be huge in some cases. We  
+        have (thanks to S Rouquette and JB) speed up this computation   
+        by using matlab built in functions of the frobenius norm and some theorems  
+        on trace computations.   
+         
+        ======================================================================  
+         
+        FORMAT i = spm_SpUtil(&#39;isCon&#39;,x,c)  
+        Tests whether weight vectors specify contrasts  
+        x   - Design matrix X, or space structure of X  
+        c   - contrast matrix (I.e. matrix of contrast weights, contrasts in columns)  
+              Must have column dimension matching that of X  
+              [defaults to eye(size(X,2)) to test uniqueness of parameter estimates]  
+        i   - logical row vector indicating estimability of contrasts in c  
+         
+        A linear combination of the parameter estimates is a contrast if and  
+        only if the weight vector is in the space spanned by the rows of X.  
+         
+        The algorithm works by regressing the contrast weight vectors using  
+        design matrix X&#39; (X transposed). Any contrast weight vectors will be  
+        fitted exactly by this procedure, leaving zero residual. Parameter  
+        tol is the tolerance applied when searching for zero residuals.  
+         
+        Christensen R (1996)  
+          &#34;Plane Answers to Complex Questions&#34;  
+           2nd Ed. Springer-Verlag, New York  
+         
+        Andrade A, Paradis AL, Rouquette S and Poline JB, NeuroImage 9, 1999  
+                                  ----------------  
+         
+        FORMAT i = spm_SpUtil(&#39;allCon&#39;,x,c)  
+        Tests whether all weight vectors specify contrasts:  
+        Same as all(spm_SpUtil(&#39;isCon&#39;,x,c)).  
+         
+                                  ----------------  
+         
+        FORMAT r = spm_SpUtil(&#39;ConR&#39;,x,c)  
+        Assess orthogonality of contrasts (wirit the data)  
+        x   - Design matrix X, or space structure of X  
+        c   - contrast matrix (I.e. matrix of contrast weights, contrasts in columns)  
+              Must have column dimension matching that of X  
+              defaults to eye(size(X,2)) to test independence of parameter estimates  
+        r   - Contrast correlation matrix, of dimension the number of contrasts.  
+         
+        For the general linear model Y = X*B + E, a contrast weight vector c  
+        defines a contrast c*B. This is estimated by c*b, where b are the  
+        least squares estimates of B given by b=pinv(X)*Y. Thus, c*b = w*Y,  
+        where weight vector w is given by w=c*pinv(X); Since the data are  
+        assumed independent, two contrasts are independent if the  
+        corresponding weight vectors are orthogonal.  
+         
+        r is the matrix of normalised inner products between the weight  
+        vectors corresponding to the contrasts. For iid E, r is the  
+        correlation matrix of the contrasts.  
+         
+        The logical matrix ~r will be true for orthogonal pairs of contrasts.  
+          
+                                  ----------------  
+         
+        FORMAT r = spm_SpUtil(&#39;ConO&#39;,x,c)  
+        Assess orthogonality of contrasts (wirit the data)  
+        x   - Design matrix X, or space structure of X  
+        c   - contrast matrix (I.e. matrix of contrast weights, contrasts in columns)  
+              Must have column dimension matching that of X  
+              [defaults to eye(size(X,2)) to test uniqueness of parameter estimates]  
+        r   - Contrast orthogonality matrix, of dimension the number of contrasts.  
+         
+        This is the same as ~spm_SpUtil(&#39;ConR&#39;,X,c), but uses a quicker  
+        algorithm by looking at the orthogonality of the subspaces of the  
+        design space which are implied by the contrasts:  
+              r = abs(c*X&#39;*X*c&#39;)&lt;tol  
+          
+                                  ----------------  
+         
+        FORMAT c = spm_SpUtil(&#39;i0-&gt;c&#39;,x,i0)  
+        Return F-contrast for specified design matrix partition  
+        x   - Design matrix X, or space structure of X  
+        i0  - column indices of null hypothesis design matrix  
+         
+        This functionality returns a rank n mxp matrix of contrasts suitable  
+        for an extra-sum-of-squares F-test comparing the design X, with a  
+        reduced design. The design matrix for the reduced design is X0 =  
+        X(:,i0), a reduction of n degrees of freedom.  
+         
+        The algorithm, due to J-B, and derived from Christensen, computes the  
+        contrasts as an orthonormal basis set for the rows of the  
+        hypothesised redundant columns of the design matrix, after  
+        orthogonalisation with respect to X0. For non-unique designs, there  
+        are a variety of ways to produce equivalent F-contrasts. This method  
+        produces contrasts with non-zero weights only for the hypothesised  
+        redundant columns.  
+         
+                                  ----------------  
+          
+        case {&#39;x0-&gt;c&#39;}                %-   
+        FORMAT c = spm_SpUtil(&#39;X0-&gt;c&#39;,sX,X0)  
+                                  ----------------  
+         
+        FORMAT [X1,X0] = spm_SpUtil(&#39;c-&gt;TSp&#39;,X,c)  
+        Orthogonalised partitioning of design space implied by F-contrast  
+        x   - Design matrix X, or space structure of X  
+        c   - contrast matrix (I.e. matrix of contrast weights, contrasts in columns)  
+              Must have column dimension matching that of X  
+        X1o - contrast space - design matrix corresponding according to contrast  
+              (orthogonalised wirit X0)  
+        X0  - matrix reduced according to null hypothesis  
+              (of same size as X but rank deficient)  
+        FORMAT [uX1,uX0] = spm_SpUtil(&#39;c-&gt;TSp+&#39;,X,c)  
+               + version to deal with the X1o and X0 partitions in the &#34;uk basis&#34;  
+         
+        ( Note that unless X0 is reduced to a set of linearely independent   )  
+        ( vectors, c will only be contained in the null space of X0.  If X0  )  
+        ( is &#34;reduced&#34;, then the &#34;parent&#34; space of c must be reduced as well )  
+        ( for c to be the actual null space of X0.                           )  
+         
+        This functionality returns a design matrix subpartition whose columns  
+        span the hypothesised null design space of a given contrast. Note  
+        that X1 is orthogonal(ised) to X0, reflecting the situation when an  
+        F-contrast is tested using the extra sum-of-squares principle (when  
+        the extra distance in the hypothesised null space is measured  
+        orthogonal to the space of X0).  
+         
+        Note that the null space design matrix will probably not be a simple  
+        sub-partition of the full design matrix, although the space spanned  
+        will be the same.  
+         
+                                  ----------------  
+         
+        FORMAT X1 = spm_SpUtil(&#39;i0-&gt;x1o&#39;,X,i0)  
+        x   - Design matrix X, or space structure of X  
+        i0  - Columns of X that make up X0 - the reduced model (Ho:B1=0)  
+        X1  - Hypothesised null design space, i.e. that part of X orthogonal to X0  
+        This offers the same functionality as the &#39;c-&gt;TSp&#39; option, but for  
+        simple reduced models formed from the columns of X.  
+         
+        FORMAT X1 = spm_SpUtil(&#39;i0-&gt;x1o+&#39;,X,i0)  
+               + version to deal with the X1o and X0 partitions in the &#34;uk basis&#34;  
+         
+                                  ----------------  
+         
+        FORMAT [trRV,trRVRV] = spm_SpUtil(&#39;trRV&#39;,x[,V])  
+        trace(RV) &amp; trace(RVRV) - used in df calculation  
+        x      - Design matrix X, or space structure of X  
+        V      - V matrix [default eye] (trRV == trRVRV if V==eye, since R idempotent)  
+        trRV   - trace(R*V),     computed efficiently  
+        trRVRV - trace(R*V*R*V), computed efficiently  
+        This uses the Karl&#39;s cunning understanding of the trace:  
+                     (tr(A*B) = sum(sum(A&#39;*B)).  
+        If the space of X is set, then algorithm uses x.u to avoid extra computation.  
+         
+                                  ----------------  
+         
+        FORMAT [trMV, trMVMV]] = spm_SpUtil(&#39;trMV&#39;,x[,V])  
+        trace(MV) &amp; trace(MVMV) if two output arguments.  
+        x      - Design matrix X, or space structure of X  
+        V      - V matrix [default eye] (trMV == trMVMV if V==eye, since M idempotent)  
+        trMV   - trace(M*V),     computed efficiently  
+        trMVMV - trace(M*V*M*V), computed efficiently  
+        Again, this uses the Karl&#39;s cunning understanding of the trace:  
+                     (tr(A*B) = sum(sum(A&#39;.*B)).  
+        If the space of X is set, then algorithm uses x.u to avoid extra computation.  
+         
+                                  ----------------  
+         
+        OBSOLETE use FcUtil(&#39;H&#39;) for spm_SpUtil(&#39;c-&gt;H&#39;,x,c)   
+        Extra sum of squares matrix O for beta&#39;s from contrast  
+        x   - Design matrix X, or space structure of X  
+        c   - contrast matrix (I.e. matrix of contrast weights, contrasts in columns)  
+              Must have column dimension matching that of X  
+        O   - Matrix such that b&#39;*O*b = extra sum of squares for F-test of contrast c  
+         
+                                  ----------------  
+         
+        OBSOLETE use spm_sp(&#39;==&#39;...) for spm_SpUtil(&#39;c==X1o&#39;,x,c) {or &#39;cxpequi&#39;}  
+        x   - Design matrix X, or space structure of X  
+        c   - contrast matrix (I.e. matrix of contrast weights, contrasts in columns)  
+              Must have column dimension matching that of X  
+        b   - True is c is a spanning set for space of X  
+              (I.e. if contrast and space test the same thing)  
+         
+                                  ----------------  
+         
+        FORMAT [df1,df2] = spm_SpUtil(&#39;i0-&gt;edf&#39;,x,i0,V) {or &#39;edf&#39;}  
+        (effective) df1 and df2 the residual df for the projector onto the  
+        null space of x&#39; (residual forming projector) and the numerator of  
+        the F-test where i0 are the columns for the null hypothesis model.  
+        x   - Design matrix X, or space structure of X  
+        i0  - Columns of X corresponding to X0 partition X = [X1,X0] &amp; with  
+              parameters B = [B1;B0]. Ho:B1=0  
+        V   - V matrix  
+         
+                                  ----------------  
+         
+        FORMAT  sz           = spm_SpUtil(&#39;size&#39;,x,dim)  
+        FORMAT [sz1,sz2,...] = spm_SpUtil(&#39;size&#39;,x)  
+        Returns size of design matrix  
+        (Like MatLab&#39;s `size`, but copes with design matrices inside structures.)  
+        x   - Design matrix X, or structure containing design matrix in field X  
+              (Structure needn&#39;t be a space structure.)  
+        dim - dimension which to size  
+        sz  - size  
+         
+       _______________________________________________________________________  
+      
+
+    [Matlab code]( https://github.com/spm/spm/blob/main/spm_SpUtil.m )
+
+    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    &#34;&#34;&#34;
+    return Runtime.call(&#34;spm_SpUtil&#34;, *args, **kwargs)</code></pre>
+</details>
+<div class="desc"><p>Space matrix utilities<br>
+FORMAT varargout = spm_SpUtil(action,varargin)
+</p>
+<hr>
+<pre><code>spm_SpUtil is a multi-function function containing various utilities  
+for Design matrix and contrast construction and manipulation. In  
+general, it accepts design matrices as plain matrices or as space  
+structures setup by spm_sp.
+
+Many of the space utilities are computed using an SVD of the design  
+matrix. The advantage of using space structures is that the svd of  
+the design matrix is stored in the space structure, thereby saving  
+unnecessary repeated computation of the SVD. This presents a  
+considerable efficiency gain for large design matrices.
+
+Note that when space structures are passed as arguments is is  
+assumed that their basic fields are filled in. See spm_sp for  
+details of (design) space structures and their manipulation.
+
+Quick Reference    :
+</code></pre>
+<hr>
+<pre><code>('isCon',x,c)      :  
+('allCon',x,c)     :  
+('ConR',x,c)       :  
+('ConO',x,c)       :  
+('size',x,dim)     :  
+('iX0check',i0,sL) :
+</code></pre>
+<hr>
+<pre><code>('i0-&gt;c',x,i0)     : Out : c  
+('c-&gt;Tsp',x,c)     : Out : [X1o [X0]]  
+('+c-&gt;Tsp',x,c)    : Out : [ukX1o [ukX0]]  
+('i0-&gt;x1o',x,i0)   : Use ('i0-&gt;c',x,i0) and ('c-&gt;Tsp',X,c)  
+('+i0-&gt;x1o',x,i0)  : Use ('i0-&gt;c',x,i0) and ('+c-&gt;Tsp',X,c)  
+('X0-&gt;c',x,X0)     :~   
+('+X0-&gt;c',x,cukX0) :~
+</code></pre>
+<hr>
+<pre><code>('trRV',x[,V])     :  
+('trMV',x[,V])     :  
+('i0-&gt;edf',x,i0,V) :
+</code></pre>
+<hr>
+<pre><code>Improvement compared to the spm99 beta version :
+
+Improvements in df computation using spm_SpUtil('trRV',x[,V]) and  
+spm_SpUtil('trMV',sX [,V]). The degrees of freedom computation requires  
+in general that the trace of RV and of RVRV be computed, where R is a  
+projector onto either a sub space of the design space or the residual  
+space, namely the space that is orthogonal to the design space. V is  
+the (estimated or assumed) variance covariance matrix and is a number  
+of scans by number of scans matrix which can be huge in some cases. We  
+have (thanks to S Rouquette and JB) speed up this computation   
+by using matlab built in functions of the frobenius norm and some theorems  
+on trace computations.
+
+======================================================================
+
+FORMAT i = spm_SpUtil('isCon',x,c)  
+Tests whether weight vectors specify contrasts  
+x   - Design matrix X, or space structure of X  
+c   - contrast matrix (I.e. matrix of contrast weights, contrasts in columns)  
+      Must have column dimension matching that of X  
+      [defaults to eye(size(X,2)) to test uniqueness of parameter estimates]  
+i   - logical row vector indicating estimability of contrasts in c
+
+A linear combination of the parameter estimates is a contrast if and  
+only if the weight vector is in the space spanned by the rows of X.
+
+The algorithm works by regressing the contrast weight vectors using  
+design matrix X' (X transposed). Any contrast weight vectors will be  
+fitted exactly by this procedure, leaving zero residual. Parameter  
+tol is the tolerance applied when searching for zero residuals.
+
+Christensen R (1996)  
+  "Plane Answers to Complex Questions"  
+   2nd Ed. Springer-Verlag, New York
+
+Andrade A, Paradis AL, Rouquette S and Poline JB, NeuroImage 9, 1999  
+                          ----------------
+
+FORMAT i = spm_SpUtil('allCon',x,c)  
+Tests whether all weight vectors specify contrasts:  
+Same as all(spm_SpUtil('isCon',x,c)).
+
+                          ----------------
+
+FORMAT r = spm_SpUtil('ConR',x,c)  
+Assess orthogonality of contrasts (wirit the data)  
+x   - Design matrix X, or space structure of X  
+c   - contrast matrix (I.e. matrix of contrast weights, contrasts in columns)  
+      Must have column dimension matching that of X  
+      defaults to eye(size(X,2)) to test independence of parameter estimates  
+r   - Contrast correlation matrix, of dimension the number of contrasts.
+
+For the general linear model Y = X*B + E, a contrast weight vector c  
+defines a contrast c*B. This is estimated by c*b, where b are the  
+least squares estimates of B given by b=pinv(X)*Y. Thus, c*b = w*Y,  
+where weight vector w is given by w=c*pinv(X); Since the data are  
+assumed independent, two contrasts are independent if the  
+corresponding weight vectors are orthogonal.
+
+r is the matrix of normalised inner products between the weight  
+vectors corresponding to the contrasts. For iid E, r is the  
+correlation matrix of the contrasts.
+
+The logical matrix ~r will be true for orthogonal pairs of contrasts.
+
+                          ----------------
+
+FORMAT r = spm_SpUtil('ConO',x,c)  
+Assess orthogonality of contrasts (wirit the data)  
+x   - Design matrix X, or space structure of X  
+c   - contrast matrix (I.e. matrix of contrast weights, contrasts in columns)  
+      Must have column dimension matching that of X  
+      [defaults to eye(size(X,2)) to test uniqueness of parameter estimates]  
+r   - Contrast orthogonality matrix, of dimension the number of contrasts.
+
+This is the same as ~spm_SpUtil('ConR',X,c), but uses a quicker  
+algorithm by looking at the orthogonality of the subspaces of the  
+design space which are implied by the contrasts:  
+      r = abs(c*X'*X*c')&lt;tol
+
+                          ----------------
+
+FORMAT c = spm_SpUtil('i0-&gt;c',x,i0)  
+Return F-contrast for specified design matrix partition  
+x   - Design matrix X, or space structure of X  
+i0  - column indices of null hypothesis design matrix
+
+This functionality returns a rank n mxp matrix of contrasts suitable  
+for an extra-sum-of-squares F-test comparing the design X, with a  
+reduced design. The design matrix for the reduced design is X0 =  
+X(:,i0), a reduction of n degrees of freedom.
+
+The algorithm, due to J-B, and derived from Christensen, computes the  
+contrasts as an orthonormal basis set for the rows of the  
+hypothesised redundant columns of the design matrix, after  
+orthogonalisation with respect to X0. For non-unique designs, there  
+are a variety of ways to produce equivalent F-contrasts. This method  
+produces contrasts with non-zero weights only for the hypothesised  
+redundant columns.
+
+                          ----------------
+
+case {'x0-&gt;c'}                %-   
+FORMAT c = spm_SpUtil('X0-&gt;c',sX,X0)  
+                          ----------------
+
+FORMAT [X1,X0] = spm_SpUtil('c-&gt;TSp',X,c)  
+Orthogonalised partitioning of design space implied by F-contrast  
+x   - Design matrix X, or space structure of X  
+c   - contrast matrix (I.e. matrix of contrast weights, contrasts in columns)  
+      Must have column dimension matching that of X  
+X1o - contrast space - design matrix corresponding according to contrast  
+      (orthogonalised wirit X0)  
+X0  - matrix reduced according to null hypothesis  
+      (of same size as X but rank deficient)  
+FORMAT [uX1,uX0] = spm_SpUtil('c-&gt;TSp+',X,c)  
+       + version to deal with the X1o and X0 partitions in the "uk basis"
+
+( Note that unless X0 is reduced to a set of linearely independent   )  
+( vectors, c will only be contained in the null space of X0.  If X0  )  
+( is "reduced", then the "parent" space of c must be reduced as well )  
+( for c to be the actual null space of X0.                           )
+
+This functionality returns a design matrix subpartition whose columns  
+span the hypothesised null design space of a given contrast. Note  
+that X1 is orthogonal(ised) to X0, reflecting the situation when an  
+F-contrast is tested using the extra sum-of-squares principle (when  
+the extra distance in the hypothesised null space is measured  
+orthogonal to the space of X0).
+
+Note that the null space design matrix will probably not be a simple  
+sub-partition of the full design matrix, although the space spanned  
+will be the same.
+
+                          ----------------
+
+FORMAT X1 = spm_SpUtil('i0-&gt;x1o',X,i0)  
+x   - Design matrix X, or space structure of X  
+i0  - Columns of X that make up X0 - the reduced model (Ho:B1=0)  
+X1  - Hypothesised null design space, i.e. that part of X orthogonal to X0  
+This offers the same functionality as the 'c-&gt;TSp' option, but for  
+simple reduced models formed from the columns of X.
+
+FORMAT X1 = spm_SpUtil('i0-&gt;x1o+',X,i0)  
+       + version to deal with the X1o and X0 partitions in the "uk basis"
+
+                          ----------------
+
+FORMAT [trRV,trRVRV] = spm_SpUtil('trRV',x[,V])  
+trace(RV) &amp; trace(RVRV) - used in df calculation  
+x      - Design matrix X, or space structure of X  
+V      - V matrix [default eye] (trRV == trRVRV if V==eye, since R idempotent)  
+trRV   - trace(R*V),     computed efficiently  
+trRVRV - trace(R*V*R*V), computed efficiently  
+This uses the Karl's cunning understanding of the trace:  
+             (tr(A*B) = sum(sum(A'*B)).  
+If the space of X is set, then algorithm uses x.u to avoid extra computation.
+
+                          ----------------
+
+FORMAT [trMV, trMVMV]] = spm_SpUtil('trMV',x[,V])  
+trace(MV) &amp; trace(MVMV) if two output arguments.  
+x      - Design matrix X, or space structure of X  
+V      - V matrix [default eye] (trMV == trMVMV if V==eye, since M idempotent)  
+trMV   - trace(M*V),     computed efficiently  
+trMVMV - trace(M*V*M*V), computed efficiently  
+Again, this uses the Karl's cunning understanding of the trace:  
+             (tr(A*B) = sum(sum(A'.*B)).  
+If the space of X is set, then algorithm uses x.u to avoid extra computation.
+
+                          ----------------
+
+OBSOLETE use FcUtil('H') for spm_SpUtil('c-&gt;H',x,c)   
+Extra sum of squares matrix O for beta's from contrast  
+x   - Design matrix X, or space structure of X  
+c   - contrast matrix (I.e. matrix of contrast weights, contrasts in columns)  
+      Must have column dimension matching that of X  
+O   - Matrix such that b'*O*b = extra sum of squares for F-test of contrast c
+
+                          ----------------
+
+OBSOLETE use spm_sp('=='...) for spm_SpUtil('c==X1o',x,c) {or 'cxpequi'}  
+x   - Design matrix X, or space structure of X  
+c   - contrast matrix (I.e. matrix of contrast weights, contrasts in columns)  
+      Must have column dimension matching that of X  
+b   - True is c is a spanning set for space of X  
+      (I.e. if contrast and space test the same thing)
+
+                          ----------------
+
+FORMAT [df1,df2] = spm_SpUtil('i0-&gt;edf',x,i0,V) {or 'edf'}  
+(effective) df1 and df2 the residual df for the projector onto the  
+null space of x' (residual forming projector) and the numerator of  
+the F-test where i0 are the columns for the null hypothesis model.  
+x   - Design matrix X, or space structure of X  
+i0  - Columns of X corresponding to X0 partition X = [X1,X0] &amp; with  
+      parameters B = [B1;B0]. Ho:B1=0  
+V   - V matrix
+
+                          ----------------
+
+FORMAT  sz           = spm_SpUtil('size',x,dim)  
+FORMAT [sz1,sz2,...] = spm_SpUtil('size',x)  
+Returns size of design matrix  
+(Like MatLab's &lt;code&gt;size&lt;/code&gt;, but copes with design matrices inside structures.)  
+x   - Design matrix X, or structure containing design matrix in field X  
+      (Structure needn't be a space structure.)  
+dim - dimension which to size  
+sz  - size
+</code></pre>
+<hr>
+<p><a href="https://github.com/spm/spm/blob/main/spm_SpUtil.m">Matlab code</a></p>
+<p>Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL</p></div>
+</dd>
+</dl>
+</section>
+<section>
+</section>
+</article>
+<nav id="sidebar">
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3>Super-module</h3>
+<ul>
+<li><code><a title="spm" href="index.html">spm</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-functions">Functions</a></h3>
+<ul class="">
+<li><code><a title="spm.spm_SpUtil.spm_SpUtil" href="#spm.spm_SpUtil.spm_SpUtil">spm_SpUtil</a></code></li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc" title="pdoc: Python API documentation generator"><cite>pdoc</cite> 0.11.5</a>.</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+<meta name="generator" content="pdoc3 0.11.5">
+<title>spm.spm_results_ui API documentation</title>
+<meta name="description" content="">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/13.0.0/sanitize.min.css" integrity="sha512-y1dtMcuvtTMJc1yPgEqF0ZjQbhnc/bFhyvIyVNb9Zk5mIGtqVaAB1Ttl28su8AvFMOY0EwRbAe+HCLqj6W7/KA==" crossorigin>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/13.0.0/typography.min.css" integrity="sha512-Y1DYSb995BAfxobCkKepB1BqJJTPrOp3zPL74AWFugHHmmdcvO+C48WLrUOlhGMc0QG7AE3f7gmvvcrmX2fDoA==" crossorigin>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css" crossorigin>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:1.5em;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:2em 0 .50em 0}h3{font-size:1.4em;margin:1.6em 0 .7em 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .2s ease-in-out}a:visited{color:#503}a:hover{color:#b62}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900;font-weight:bold}pre code{font-size:.8em;line-height:1.4em;padding:1em;display:block}code{background:#f3f3f3;font-family:"DejaVu Sans Mono",monospace;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source > summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible;min-width:max-content}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em 1em;margin:1em 0}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul ul{padding-left:1em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js" integrity="sha512-D9gUyxqja7hBtkWpPWGt9wfbfaMGVt9gnyCvYa+jojwwPHLCzUm5i8rpk7vD7wNee9bA35eYIjobYPaQuKS1MQ==" crossorigin></script>
+<script>window.addEventListener('DOMContentLoaded', () => {
+hljs.configure({languages: ['bash', 'css', 'diff', 'graphql', 'ini', 'javascript', 'json', 'plaintext', 'python', 'python-repl', 'rust', 'shell', 'sql', 'typescript', 'xml', 'yaml']});
+hljs.highlightAll();
+/* Collapse source docstrings */
+setTimeout(() => {
+[...document.querySelectorAll('.hljs.language-python > .hljs-string')]
+.filter(el => el.innerHTML.length > 200 && ['"""', "'''"].includes(el.innerHTML.substring(0, 3)))
+.forEach(el => {
+let d = document.createElement('details');
+d.classList.add('hljs-string');
+d.innerHTML = '<summary>"""</summary>' + el.innerHTML.substring(3);
+el.replaceWith(d);
+});
+}, 100);
+})</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>spm.spm_results_ui</code></h1>
+</header>
+<section id="section-intro">
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-functions">Functions</h2>
+<dl>
+<dt id="spm.spm_results_ui.spm_results_ui"><code class="name flex">
+<span>def <span class="ident">spm_results_ui</span></span>(<span>*args, **kwargs)</span>
+</code></dt>
+<dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def spm_results_ui(*args, **kwargs):
+    &#34;&#34;&#34;
+      User interface for SPM/PPM results: Display and analysis of regional effects  
+        FORMAT [hReg,xSPM,SPM] = spm_results_ui(&#39;Setup&#39;,[xSPM])  
+         
+        hReg   - handle of MIP XYZ registry object  
+                 (see spm_XYZreg.m for details)  
+        xSPM   - structure containing specific SPM, distribution &amp; filtering details  
+                 (see spm_getSPM.m for contents)  
+        SPM    - SPM structure containing generic parameters  
+                 (see spm_spm.m for contents)  
+         
+        NB: Results section GUI CallBacks use these data structures by name,  
+            which therefore *must* be assigned to the correctly named variables.  
+       __________________________________________________________________________  
+         
+        The SPM results section is for the interactive exploration and  
+        characterisation of the results of a statistical analysis.  
+         
+        The user is prompted to select a SPM{T} or SPM{F}, that is thresholded at  
+        user specified levels. The specification of the contrasts to use and the  
+        height and size thresholds are described in spm_getSPM.m. The resulting  
+        SPM is then displayed in the Graphics window as a maximum intensity  
+        projection, alongside the design matrix and contrasts employed.  
+         
+        The cursors in the MIP can be moved (dragged) to select a particular  
+        voxel. The three mouse buttons give different drag and drop behaviour:  
+        Button 1 - point &amp; drop; Button 2 - &#34;dynamic&#34; drag &amp; drop with  
+        coordinate &amp; SPM value updating; Button 3 - &#34;magnetic&#34; drag &amp; drop,  
+        where the cursor jumps to the nearest suprathreshold voxel in the MIP,  
+        and shows the value there.  
+        See spm_mip_ui.m, the MIP GUI handling function for further details.  
+         
+        The design matrix and contrast pictures are &#34;surfable&#34;: Click and drag  
+        over the images to report associated data. Clicking with different  
+        buttons produces different results. Double-clicking extracts the  
+        underlying data into the base workspace.  
+        See spm_DesRep.m for further details.  
+         
+        The current voxel specifies the voxel, suprathreshold cluster, or  
+        orthogonal planes (planes passing through that voxel) for subsequent  
+        localised utilities.  
+         
+        A control panel in the Interactive window enables interactive exploration  
+        of the results.  
+         
+        p-values buttons:  
+          (i) volume   - Tabulates p-values and statistics for entire volume.  
+                                                   - see spm_list.m  
+         (ii) cluster  - Tabulates p-values and statistics for nearest cluster.  
+                       - Note that the cursor will jump to the nearest  
+                         suprathreshold voxel, if it is not already at a  
+                         location with suprathreshold statistic.  
+                                                   - see spm_list.m  
+        (iii)  S.V.C   - Small Volume Correction:  
+                         Tabulates p-values corrected for a small specified  
+                         volume of interest. (Tabulation by spm_list.m)  
+                                                   - see spm_VOI.m  
+         
+        Data extraction buttons:  
+        Eigenvariate/CVA  
+                       - Extracts the principal eigenvariate for small volumes   
+                         of interest; or CVA of data within a specified volume  
+                       - Data can be adjusted or not for eigenvariate summaries  
+                       - If temporal filtering was specified (fMRI), then it is  
+                         the filtered data that is returned.  
+                       - Choose a VOI of radius 0 to extract the (filtered &amp;)  
+                         adjusted data for a single voxel. Note that this vector  
+                         will be scaled to have a 2-norm of 1. (See spm_regions.m  
+                         for further details.)  
+                       - The plot button also returns fitted and adjusted  
+                         (after any filtering) data for the voxel being plotted.)  
+                       - Note that the cursor will jump to the nearest voxel for  
+                         which raw data was saved.  
+                                                   - see spm_regions.m  
+         
+        Visualisation buttons:  
+          (i) plot     - Graphs of adjusted and fitted activity against  
+                         various ordinates.  
+                       - Note that the cursor will jump to the nearest  
+                         suprathreshold voxel, if it is not already at a  
+                         location with suprathreshold statistic.  
+                       - Additionally, returns fitted and adjusted data to the  
+                         MATLAB base workspace.  
+                                                      - see spm_graph.m  
+         (ii) overlays - Popup menu: Overlays of filtered SPM on a structural image  
+            -   slices - Slices of the thresholded statistic image overlaid  
+                         on a secondary image chosen by the user. Three  
+                         transverse slices are shown, being those at the  
+                         level of the cursor in the z-axis and the two  
+                         adjacent to it.           - see spm_transverse.m  
+            - sections - Orthogonal sections of the thresholded statistic  
+                         image overlaid on a secondary image chosen by the user.  
+                         The sections are through the cursor position.  
+                                                   - see spm_sections.m  
+            -   render - Render blobs on previously extracted cortical surface  
+                                                   - see spm_render.m  
+        (iii) save     - Write out thresholded SPM as image  
+                                                   - see spm_write_filtered.m  
+         
+        The current cursor location can be set by editing the coordinate widgets  
+        at the bottom of the Interactive window. (Note that many of the results  
+        section facilities are &#34;linked&#34; and can update coordinates. E.g.  
+        clicking on the coordinates in a p-value listing jumps to that location.)  
+         
+        Graphics appear in the bottom half of the Graphics window, additional  
+        controls and questions appearing in the Interactive window.  
+         
+                                  ----------------  
+         
+        The MIP uses a template outline in MNI space. Consequently for the  
+        results section to display properly the input images to the statistics  
+        section should be in MNI space.  
+         
+        Similarly, secondary images should be aligned with the input images used  
+        for the statistical analysis.  
+         
+                                  ----------------  
+         
+        In addition to setting up the results section, spm_results_ui.m sets  
+        up the results section GUI and services the CallBacks. FORMAT  
+        specifications for embedded CallBack functions are given in the main  
+        body of the code.  
+       __________________________________________________________________________  
+      
+
+    [Matlab code]( https://github.com/spm/spm/blob/main/spm_results_ui.m )
+
+    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    &#34;&#34;&#34;
+    return Runtime.call(&#34;spm_results_ui&#34;, *args, **kwargs)</code></pre>
+</details>
+<div class="desc"><p>User interface for SPM/PPM results: Display and analysis of regional effects<br>
+FORMAT [hReg,xSPM,SPM] = spm_results_ui('Setup',[xSPM])
+</p>
+<pre><code>hReg   - handle of MIP XYZ registry object  
+         (see spm_XYZreg.m for details)  
+xSPM   - structure containing specific SPM, distribution &amp; filtering details  
+         (see spm_getSPM.m for contents)  
+SPM    - SPM structure containing generic parameters  
+         (see spm_spm.m for contents)
+
+NB: Results section GUI CallBacks use these data structures by name,  
+    which therefore *must* be assigned to the correctly named variables.
+</code></pre>
+<hr>
+<pre><code>The SPM results section is for the interactive exploration and  
+characterisation of the results of a statistical analysis.
+
+The user is prompted to select a SPM{T} or SPM{F}, that is thresholded at  
+user specified levels. The specification of the contrasts to use and the  
+height and size thresholds are described in spm_getSPM.m. The resulting  
+SPM is then displayed in the Graphics window as a maximum intensity  
+projection, alongside the design matrix and contrasts employed.
+
+The cursors in the MIP can be moved (dragged) to select a particular  
+voxel. The three mouse buttons give different drag and drop behaviour:  
+Button 1 - point &amp; drop; Button 2 - "dynamic" drag &amp; drop with  
+coordinate &amp; SPM value updating; Button 3 - "magnetic" drag &amp; drop,  
+where the cursor jumps to the nearest suprathreshold voxel in the MIP,  
+and shows the value there.  
+See spm_mip_ui.m, the MIP GUI handling function for further details.
+
+The design matrix and contrast pictures are "surfable": Click and drag  
+over the images to report associated data. Clicking with different  
+buttons produces different results. Double-clicking extracts the  
+underlying data into the base workspace.  
+See spm_DesRep.m for further details.
+
+The current voxel specifies the voxel, suprathreshold cluster, or  
+orthogonal planes (planes passing through that voxel) for subsequent  
+localised utilities.
+
+A control panel in the Interactive window enables interactive exploration  
+of the results.
+
+p-values buttons:  
+  (i) volume   - Tabulates p-values and statistics for entire volume.  
+                                           - see spm_list.m  
+ (ii) cluster  - Tabulates p-values and statistics for nearest cluster.  
+               - Note that the cursor will jump to the nearest  
+                 suprathreshold voxel, if it is not already at a  
+                 location with suprathreshold statistic.  
+                                           - see spm_list.m  
+(iii)  S.V.C   - Small Volume Correction:  
+                 Tabulates p-values corrected for a small specified  
+                 volume of interest. (Tabulation by spm_list.m)  
+                                           - see spm_VOI.m
+
+Data extraction buttons:  
+Eigenvariate/CVA  
+               - Extracts the principal eigenvariate for small volumes   
+                 of interest; or CVA of data within a specified volume  
+               - Data can be adjusted or not for eigenvariate summaries  
+               - If temporal filtering was specified (fMRI), then it is  
+                 the filtered data that is returned.  
+               - Choose a VOI of radius 0 to extract the (filtered &amp;)  
+                 adjusted data for a single voxel. Note that this vector  
+                 will be scaled to have a 2-norm of 1. (See spm_regions.m  
+                 for further details.)  
+               - The plot button also returns fitted and adjusted  
+                 (after any filtering) data for the voxel being plotted.)  
+               - Note that the cursor will jump to the nearest voxel for  
+                 which raw data was saved.  
+                                           - see spm_regions.m
+
+Visualisation buttons:  
+  (i) plot     - Graphs of adjusted and fitted activity against  
+                 various ordinates.  
+               - Note that the cursor will jump to the nearest  
+                 suprathreshold voxel, if it is not already at a  
+                 location with suprathreshold statistic.  
+               - Additionally, returns fitted and adjusted data to the  
+                 MATLAB base workspace.  
+                                              - see spm_graph.m  
+ (ii) overlays - Popup menu: Overlays of filtered SPM on a structural image  
+    -   slices - Slices of the thresholded statistic image overlaid  
+                 on a secondary image chosen by the user. Three  
+                 transverse slices are shown, being those at the  
+                 level of the cursor in the z-axis and the two  
+                 adjacent to it.           - see spm_transverse.m  
+    - sections - Orthogonal sections of the thresholded statistic  
+                 image overlaid on a secondary image chosen by the user.  
+                 The sections are through the cursor position.  
+                                           - see spm_sections.m  
+    -   render - Render blobs on previously extracted cortical surface  
+                                           - see spm_render.m  
+(iii) save     - Write out thresholded SPM as image  
+                                           - see spm_write_filtered.m
+
+The current cursor location can be set by editing the coordinate widgets  
+at the bottom of the Interactive window. (Note that many of the results  
+section facilities are "linked" and can update coordinates. E.g.  
+clicking on the coordinates in a p-value listing jumps to that location.)
+
+Graphics appear in the bottom half of the Graphics window, additional  
+controls and questions appearing in the Interactive window.
+
+                          ----------------
+
+The MIP uses a template outline in MNI space. Consequently for the  
+results section to display properly the input images to the statistics  
+section should be in MNI space.
+
+Similarly, secondary images should be aligned with the input images used  
+for the statistical analysis.
+
+                          ----------------
+
+In addition to setting up the results section, spm_results_ui.m sets  
+up the results section GUI and services the CallBacks. FORMAT  
+specifications for embedded CallBack functions are given in the main  
+body of the code.
+</code></pre>
+<hr>
+<p><a href="https://github.com/spm/spm/blob/main/spm_results_ui.m">Matlab code</a></p>
+<p>Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL</p></div>
+</dd>
+</dl>
+</section>
+<section>
+</section>
+</article>
+<nav id="sidebar">
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3>Super-module</h3>
+<ul>
+<li><code><a title="spm" href="index.html">spm</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-functions">Functions</a></h3>
+<ul class="">
+<li><code><a title="spm.spm_results_ui.spm_results_ui" href="#spm.spm_results_ui.spm_results_ui">spm_results_ui</a></code></li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc" title="pdoc: Python API documentation generator"><cite>pdoc</cite> 0.11.5</a>.</p>
+</footer>
+</body>
+</html>

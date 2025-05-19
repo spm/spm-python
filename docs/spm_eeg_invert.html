@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+<meta name="generator" content="pdoc3 0.11.5">
+<title>spm.spm_eeg_invert API documentation</title>
+<meta name="description" content="">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/13.0.0/sanitize.min.css" integrity="sha512-y1dtMcuvtTMJc1yPgEqF0ZjQbhnc/bFhyvIyVNb9Zk5mIGtqVaAB1Ttl28su8AvFMOY0EwRbAe+HCLqj6W7/KA==" crossorigin>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/13.0.0/typography.min.css" integrity="sha512-Y1DYSb995BAfxobCkKepB1BqJJTPrOp3zPL74AWFugHHmmdcvO+C48WLrUOlhGMc0QG7AE3f7gmvvcrmX2fDoA==" crossorigin>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css" crossorigin>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:1.5em;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:2em 0 .50em 0}h3{font-size:1.4em;margin:1.6em 0 .7em 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .2s ease-in-out}a:visited{color:#503}a:hover{color:#b62}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900;font-weight:bold}pre code{font-size:.8em;line-height:1.4em;padding:1em;display:block}code{background:#f3f3f3;font-family:"DejaVu Sans Mono",monospace;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source > summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible;min-width:max-content}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em 1em;margin:1em 0}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul ul{padding-left:1em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js" integrity="sha512-D9gUyxqja7hBtkWpPWGt9wfbfaMGVt9gnyCvYa+jojwwPHLCzUm5i8rpk7vD7wNee9bA35eYIjobYPaQuKS1MQ==" crossorigin></script>
+<script>window.addEventListener('DOMContentLoaded', () => {
+hljs.configure({languages: ['bash', 'css', 'diff', 'graphql', 'ini', 'javascript', 'json', 'plaintext', 'python', 'python-repl', 'rust', 'shell', 'sql', 'typescript', 'xml', 'yaml']});
+hljs.highlightAll();
+/* Collapse source docstrings */
+setTimeout(() => {
+[...document.querySelectorAll('.hljs.language-python > .hljs-string')]
+.filter(el => el.innerHTML.length > 200 && ['"""', "'''"].includes(el.innerHTML.substring(0, 3)))
+.forEach(el => {
+let d = document.createElement('details');
+d.classList.add('hljs-string');
+d.innerHTML = '<summary>"""</summary>' + el.innerHTML.substring(3);
+el.replaceWith(d);
+});
+}, 100);
+})</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>spm.spm_eeg_invert</code></h1>
+</header>
+<section id="section-intro">
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-functions">Functions</h2>
+<dl>
+<dt id="spm.spm_eeg_invert.spm_eeg_invert"><code class="name flex">
+<span>def <span class="ident">spm_eeg_invert</span></span>(<span>*args, **kwargs)</span>
+</code></dt>
+<dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def spm_eeg_invert(*args, **kwargs):
+    &#34;&#34;&#34;
+      ReML inversion of multiple forward models for EEG-MEG  
+        FORMAT [D] = spm_eeg_invert(D, val)  
+        ReML estimation of regularisation hyperparameters using the  
+        spatiotemporal hierarchy implicit in EEG/MEG data  
+         
+        Requires:  
+        D{i}.inv{val}.inverse:  
+         
+            inverse.modality - modality to use in case of multimodal datasets  
+         
+            inverse.trials - D.events.types to invert  
+            inverse.type   - &#39;GS&#39; Greedy search on MSPs  
+                             &#39;ARD&#39; ARD search on MSPs  
+                             &#39;MSP&#39; GS and ARD multiple sparse priors  
+                             &#39;LOR&#39; LORETA-like model  
+                             &#39;IID&#39; minimum norm  
+            inverse.woi    - time window of interest ([start stop] in ms)  
+            inverse.lpf    - band-pass filter - low frequency cut-off (Hz)  
+            inverse.hpf    - band-pass filter - high frequency cut-off (Hz)  
+            inverse.Han    - switch for Hanning window  
+            inverse.xyz    - (n x 3) locations of spherical VOIs  
+            inverse.rad    - radius (mm) of VOIs  
+         
+            inverse.Nm     - maximum number of channel modes  
+            inverse.Nr     - maximum number of temporal modes  
+            inverse.Np     - number of sparse priors per hemisphere  
+            inverse.smooth - smoothness of source priors (0 to 1)  
+            inverse.Na     - number of most energetic dipoles  
+            inverse.sdv    - standard deviations of Gaussian temporal correlation  
+            inverse.pQ     - any source priors (e.g. from fMRI); vector or matrix  
+            inverse.Qe     - any sensor error components (e.g. empty-room data)  
+            inverse.dplot  - make diagnostics plots (0 or 1)  
+            inverse.STAT   - flag for stationarity assumption, which invokes a   
+                             full DCT temporal projector (from lpf to hpf Hz)  
+         
+        Evaluates:  
+         
+            inverse.M      - MAP projector (reduced)  
+            inverse.J{i}   - Conditional expectation (i conditions) J = M*U*Y  
+            inverse.L      - Lead field (reduced UL := U*L)  
+            inverse.qC     - spatial covariance  
+            inverse.qV     - temporal correlations  
+            inverse.T      - temporal projector  
+            inverse.U(j)   - spatial projector (j modalities)  
+            inverse.Y{i}   - reduced data (i conditions) UY = UL*J + UE  
+            inverse.Is     - Indices of active dipoles  
+            inverse.It     - Indices of time bins  
+            inverse.Ic{j}  - Indices of good channels (j modalities)  
+            inverse.Nd     - number of dipoles  
+            inverse.pst    - peristimulus time  
+            inverse.dct    - frequency range  
+            inverse.F      - log-evidence  
+            inverse.VE     - variance explained in spatial/temporal subspaces (%)  
+            inverse.R2     - variance in subspaces accounted for by model (%)  
+            inverse.scale  - scaling of data for each of j modalities  
+       __________________________________________________________________________  
+         
+        1. This routine implements &#34;group-based&#34; inversion, corresponding to  
+        ill-posed linear models of the following form:  
+         
+        [AY{1}...AY{n}] = L(1} * [J{1}...J{n}]   +  [e{1}...e{n}]  
+         
+        where AY{i} are the spatially normalized or adjusted data from subject i  
+        that would have been seen if the lead-field L{i} = L{1}. The ensuing  
+        Gaussian process priors on sources are then used to estimate subject-  
+        specific MAP estimates of J{i} using  
+         
+        AY{i} = L(1} * J{i}  +  e{i}  
+         
+        using spatial priors from the group model above.  
+         
+        Here, A{i}  = L{1}*pinv(L{i}) =&gt;  
+              AY{i} = A(i}*L(i}*J{i}  
+                    = L(1}*J{i}  
+         
+        Potential scaling differences between the lead-fields are handled by  
+        scaling L{1} such that trace(L{1}*L{1}&#39;) = constant (number of spatial  
+        modes or channels), while scaling the data such that trace(AY{n}*AY{n}&#39;) =  
+        constant over subjects (and modalities; see below).  
+         
+        See: Electromagnetic source reconstruction for group studies.  
+        Litvak V, Friston K.  
+        NeuroImage. 2008 Oct 1;42(4):1490-8.  
+         
+       __________________________________________________________________________  
+         
+        2. It also implements &#34;fusion&#34; of different types of MEG and EEG data,  
+        corresponding to ill-posed linear models of the following form:  
+         
+                    AY{1}{1,...,t}  = L(1} * J{1,...,t}   +  e{{1,...,t}}  
+                    AY{2}{1,...,t}  = L(2}                   e{{2,...,t}}  
+                         .  
+                         .  
+                         .  
+                    AY{m}{1,...,t}  = L(n}                   e{{n,...,t}}  
+         
+        Under empirical priors on J{1,...,t} for m modalities with t trial types.  
+         
+        See: MEG and EEG data fusion: Simultaneous localisation of face-evoked  
+        responses.  
+        Henson R, Mouchlianitis E &amp; Friston K.  
+        Neuroimage. 2009. 47:581-9.  
+       __________________________________________________________________________  
+         
+        3. It also allows incorporation of spatial source priors, eg, from fMRI  
+        (see spm_eeg_inv_fmripriors.m). Note that if a vector is passed in  
+        inverse.pQ, then variance components used (pass a matrix if a covariance  
+        component is desired).  
+         
+        See: A Parametric Empirical Bayesian framework for fMRI-constrained  
+        MEG/EEG source reconstruction.  
+        Henson R, Flandin G, Friston K &amp; Mattout J.  
+        Human Brain Mapping. 2010. 1(10):1512-31.  
+       __________________________________________________________________________  
+         
+        The routine essentially consists of two steps:  
+         
+          1. Optimisation of spatial source priors over subjects  
+          2. Re-inversion of each subject, fusing across all modalities  
+       __________________________________________________________________________  
+      
+
+    [Matlab code]( https://github.com/spm/spm/blob/main/spm_eeg_invert.m )
+
+    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    &#34;&#34;&#34;
+    return Runtime.call(&#34;spm_eeg_invert&#34;, *args, **kwargs)</code></pre>
+</details>
+<div class="desc"><p>ReML inversion of multiple forward models for EEG-MEG<br>
+FORMAT [D] = spm_eeg_invert(D, val)<br>
+ReML estimation of regularisation hyperparameters using the<br>
+spatiotemporal hierarchy implicit in EEG/MEG data
+</p>
+<pre><code>Requires:  
+D{i}.inv{val}.inverse:
+
+    inverse.modality - modality to use in case of multimodal datasets
+
+    inverse.trials - D.events.types to invert  
+    inverse.type   - 'GS' Greedy search on MSPs  
+                     'ARD' ARD search on MSPs  
+                     'MSP' GS and ARD multiple sparse priors  
+                     'LOR' LORETA-like model  
+                     'IID' minimum norm  
+    inverse.woi    - time window of interest ([start stop] in ms)  
+    inverse.lpf    - band-pass filter - low frequency cut-off (Hz)  
+    inverse.hpf    - band-pass filter - high frequency cut-off (Hz)  
+    inverse.Han    - switch for Hanning window  
+    inverse.xyz    - (n x 3) locations of spherical VOIs  
+    inverse.rad    - radius (mm) of VOIs
+
+    inverse.Nm     - maximum number of channel modes  
+    inverse.Nr     - maximum number of temporal modes  
+    inverse.Np     - number of sparse priors per hemisphere  
+    inverse.smooth - smoothness of source priors (0 to 1)  
+    inverse.Na     - number of most energetic dipoles  
+    inverse.sdv    - standard deviations of Gaussian temporal correlation  
+    inverse.pQ     - any source priors (e.g. from fMRI); vector or matrix  
+    inverse.Qe     - any sensor error components (e.g. empty-room data)  
+    inverse.dplot  - make diagnostics plots (0 or 1)  
+    inverse.STAT   - flag for stationarity assumption, which invokes a   
+                     full DCT temporal projector (from lpf to hpf Hz)
+
+Evaluates:
+
+    inverse.M      - MAP projector (reduced)  
+    inverse.J{i}   - Conditional expectation (i conditions) J = M*U*Y  
+    inverse.L      - Lead field (reduced UL := U*L)  
+    inverse.qC     - spatial covariance  
+    inverse.qV     - temporal correlations  
+    inverse.T      - temporal projector  
+    inverse.U(j)   - spatial projector (j modalities)  
+    inverse.Y{i}   - reduced data (i conditions) UY = UL*J + UE  
+    inverse.Is     - Indices of active dipoles  
+    inverse.It     - Indices of time bins  
+    inverse.Ic{j}  - Indices of good channels (j modalities)  
+    inverse.Nd     - number of dipoles  
+    inverse.pst    - peristimulus time  
+    inverse.dct    - frequency range  
+    inverse.F      - log-evidence  
+    inverse.VE     - variance explained in spatial/temporal subspaces (%)  
+    inverse.R2     - variance in subspaces accounted for by model (%)  
+    inverse.scale  - scaling of data for each of j modalities
+</code></pre>
+<hr>
+<pre><code>1. This routine implements "group-based" inversion, corresponding to  
+ill-posed linear models of the following form:
+
+[AY{1}...AY{n}] = L(1} * [J{1}...J{n}]   +  [e{1}...e{n}]
+
+where AY{i} are the spatially normalized or adjusted data from subject i  
+that would have been seen if the lead-field L{i} = L{1}. The ensuing  
+Gaussian process priors on sources are then used to estimate subject-  
+specific MAP estimates of J{i} using
+
+AY{i} = L(1} * J{i}  +  e{i}
+
+using spatial priors from the group model above.
+
+Here, A{i}  = L{1}*pinv(L{i}) =&gt;  
+      AY{i} = A(i}*L(i}*J{i}  
+            = L(1}*J{i}
+
+Potential scaling differences between the lead-fields are handled by  
+scaling L{1} such that trace(L{1}*L{1}') = constant (number of spatial  
+modes or channels), while scaling the data such that trace(AY{n}*AY{n}') =  
+constant over subjects (and modalities; see below).
+
+See: Electromagnetic source reconstruction for group studies.  
+Litvak V, Friston K.  
+NeuroImage. 2008 Oct 1;42(4):1490-8.
+</code></pre>
+<hr>
+<pre><code>2. It also implements "fusion" of different types of MEG and EEG data,  
+corresponding to ill-posed linear models of the following form:
+
+            AY{1}{1,...,t}  = L(1} * J{1,...,t}   +  e{{1,...,t}}  
+            AY{2}{1,...,t}  = L(2}                   e{{2,...,t}}  
+                 .  
+                 .  
+                 .  
+            AY{m}{1,...,t}  = L(n}                   e{{n,...,t}}
+
+Under empirical priors on J{1,...,t} for m modalities with t trial types.
+
+See: MEG and EEG data fusion: Simultaneous localisation of face-evoked  
+responses.  
+Henson R, Mouchlianitis E &amp; Friston K.  
+Neuroimage. 2009. 47:581-9.
+</code></pre>
+<hr>
+<pre><code>3. It also allows incorporation of spatial source priors, eg, from fMRI  
+(see spm_eeg_inv_fmripriors.m). Note that if a vector is passed in  
+inverse.pQ, then variance components used (pass a matrix if a covariance  
+component is desired).
+
+See: A Parametric Empirical Bayesian framework for fMRI-constrained  
+MEG/EEG source reconstruction.  
+Henson R, Flandin G, Friston K &amp; Mattout J.  
+Human Brain Mapping. 2010. 1(10):1512-31.
+</code></pre>
+<hr>
+<pre><code>The routine essentially consists of two steps:
+
+  1. Optimisation of spatial source priors over subjects  
+  2. Re-inversion of each subject, fusing across all modalities
+</code></pre>
+<hr>
+<p><a href="https://github.com/spm/spm/blob/main/spm_eeg_invert.m">Matlab code</a></p>
+<p>Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL</p></div>
+</dd>
+</dl>
+</section>
+<section>
+</section>
+</article>
+<nav id="sidebar">
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3>Super-module</h3>
+<ul>
+<li><code><a title="spm" href="index.html">spm</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-functions">Functions</a></h3>
+<ul class="">
+<li><code><a title="spm.spm_eeg_invert.spm_eeg_invert" href="#spm.spm_eeg_invert.spm_eeg_invert">spm_eeg_invert</a></code></li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc" title="pdoc: Python API documentation generator"><cite>pdoc</cite> 0.11.5</a>.</p>
+</footer>
+</body>
+</html>

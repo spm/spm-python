@@ -1,0 +1,571 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+<meta name="generator" content="pdoc3 0.11.5">
+<title>spm.spm_conman API documentation</title>
+<meta name="description" content="">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/13.0.0/sanitize.min.css" integrity="sha512-y1dtMcuvtTMJc1yPgEqF0ZjQbhnc/bFhyvIyVNb9Zk5mIGtqVaAB1Ttl28su8AvFMOY0EwRbAe+HCLqj6W7/KA==" crossorigin>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/13.0.0/typography.min.css" integrity="sha512-Y1DYSb995BAfxobCkKepB1BqJJTPrOp3zPL74AWFugHHmmdcvO+C48WLrUOlhGMc0QG7AE3f7gmvvcrmX2fDoA==" crossorigin>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css" crossorigin>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:1.5em;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:2em 0 .50em 0}h3{font-size:1.4em;margin:1.6em 0 .7em 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .2s ease-in-out}a:visited{color:#503}a:hover{color:#b62}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900;font-weight:bold}pre code{font-size:.8em;line-height:1.4em;padding:1em;display:block}code{background:#f3f3f3;font-family:"DejaVu Sans Mono",monospace;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source > summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible;min-width:max-content}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em 1em;margin:1em 0}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul ul{padding-left:1em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js" integrity="sha512-D9gUyxqja7hBtkWpPWGt9wfbfaMGVt9gnyCvYa+jojwwPHLCzUm5i8rpk7vD7wNee9bA35eYIjobYPaQuKS1MQ==" crossorigin></script>
+<script>window.addEventListener('DOMContentLoaded', () => {
+hljs.configure({languages: ['bash', 'css', 'diff', 'graphql', 'ini', 'javascript', 'json', 'plaintext', 'python', 'python-repl', 'rust', 'shell', 'sql', 'typescript', 'xml', 'yaml']});
+hljs.highlightAll();
+/* Collapse source docstrings */
+setTimeout(() => {
+[...document.querySelectorAll('.hljs.language-python > .hljs-string')]
+.filter(el => el.innerHTML.length > 200 && ['"""', "'''"].includes(el.innerHTML.substring(0, 3)))
+.forEach(el => {
+let d = document.createElement('details');
+d.classList.add('hljs-string');
+d.innerHTML = '<summary>"""</summary>' + el.innerHTML.substring(3);
+el.replaceWith(d);
+});
+}, 100);
+})</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>spm.spm_conman</code></h1>
+</header>
+<section id="section-intro">
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-functions">Functions</h2>
+<dl>
+<dt id="spm.spm_conman.spm_conman"><code class="name flex">
+<span>def <span class="ident">spm_conman</span></span>(<span>*args, **kwargs)</span>
+</code></dt>
+<dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def spm_conman(*args, **kwargs):
+    &#34;&#34;&#34;
+      Contrast manager: GUI for defining valid contrasts  
+        FORMAT varargout=spm_conman(varargin)  
+              - An embedded callback, multi-function function  
+              - For detailed programmers comments,  
+                see format specifications in main body of program (below user help)  
+       __________________________________________________________________________  
+         
+        The contrast manager is a user interface for the selection and definition  
+        of contrasts for a given SPM design. At present, the contrast manager  
+        provides only interactive GUI facilities.  
+         
+        See also: spm_getSPM.m, spm_contrasts.m  
+         
+       ==========================================================================  
+        U s i n g   t h e   S P M   C o n t r a s t   M a n a g e r   G U I  
+       ==========================================================================  
+         
+        The contrast manager graphicsl user interface (GUI) is a dialog box for  
+        the specification and selection of contrasts. The contrast selection   
+        interface is presented initially, pressing the &#34;Define new contrast...&#34;   
+        button pops up the contrast definition interface:  
+         
+       __________________________________________________________________________  
+                                             ConMan: Contrast selection interface  
+         
+        The contrast selection interface consists of:  
+         
+        * &#34;Show&#34; statistic type radio-buttons: &#34;t-contrasts&#34;, &#34;F-contrasts&#34;, &#34;All&#34;:  
+          Selects the types of contrast that are presented for selection in the  
+          contrast selection list box. Depending on the use of the contrast  
+          manager, some options may be unavailable.  
+         
+        * List-box of currently defined contrasts.  
+          Each contrast is listed by number, type (&#34;T&#34; or &#34;F&#34;), and name. Only  
+          contrasts of types specified by the settings of the &#34;show&#34;  
+          radiobuttons are shown.  
+          Select contrasts by clicking on their entry in the list-box. To  
+          select multiple contrasts (for conjunctions or masking, if  
+          appropriate), the standard techniques of drag selection and  
+          shift-clicking can be used for selecting a set of adjacent contrasts,  
+          control-click to select individual contrasts separated in the list.  
+          Selected contrasts are highlit in black.  
+         
+        * Image of the design matrix:  
+          A grey-scale representation of the design matrix, to aid interpretation  
+          of the contrasts.  
+         
+          The design matrix is &#34;surfable&#34;: Clicking (and holding or dragging)  
+          around the design matrix image reports the corresponding value of the  
+          design matrix (&#39;normal&#39; click - &#34;left&#34; mouse button usually), the  
+          image filename (&#39;extend&#39; mouse click - &#34;middle&#34; mouse), or parameter  
+          name (&#39;alt&#39; click - &#34;right&#34; mouse). Double clicking the design matrix  
+          image extracts the design matrix into the base MATLAB workspace.  
+          (Surfing is handled by spm_DesRep.m)  
+         
+        * Parameter estimability bar  
+          Under the design matrix the parameter estimability is displayed as  
+          a 1xp matrix of grey and white squares. Parameters that are not  
+          uniquely specified by the model are shown with a grey patch.  
+         
+          Recall that only uniquely estimable parameters can be examined  
+          individually with [0,...,0,1,0,...,0] type contrats.  
+         
+          Surfing the estimability image reports the parameter names and  
+          their estimability. Double clicking extracts the estimability  
+          vector into the base MatLab workspace.  
+         
+        * Contrast weights plot/image:  
+          The weights of the selected contrast(s) are imaged above the design  
+          matrix, labelled by their contrast number. t-contrasts are displayed  
+          as bar-charts, F-contrasts have their weights matrix c&#39; depicted as a  
+          grey-scale image.  
+         
+          Again, the contrast representation is &#34;surfable&#34;: Clicking and  
+          dragging over the contrast image reports the contrast name, type and  
+          number, and the value of the contrast at the mouse location.  
+         
+        * &#34;Define new contrast...&#34; button:  
+          Pops up the contrast definition interface (described below)  
+         
+        * &#34;Reset&#34; button:  
+          Clears the current contrast selection.  
+         
+        * &#34;Done&#34; button:  
+          Press when the required contrasts have been selected.  
+         
+        * Status line:  
+          This indicates how many contrasts have been selected, how  
+          multi-contrast selections will be handled, and whether you can press  
+          &#34;Done&#34; yet!  
+         
+        In addition, the dialog has a figure ContextMenu, accessed by  
+        right-clicking in the figure background: In addition to providing  
+        repeats of the &#34;Define new contrast...&#34;, &#34;Reset&#34; &amp; &#34;Done&#34; buttons  
+        described above, there are two additional options:  
+         
+          - crash out: this bails out of the contrast manager in a nice way!  
+          - rename:    This permits a single contrast to be re-named. You  
+                   must select the contrast to be renamed before pulling  
+                       up the context menu for this option to be available.  
+         
+       __________________________________________________________________________  
+                                            ConMan: Contrast definition interface  
+         
+        To define a contrast, you must specify:  
+         1) a name  
+         2) the statistic type: &#34;t-contrast&#34; for SPM{T} or &#34;F-contrast&#34; for SPM{F}  
+         3) a valid set of contrast weights  
+            (for F-contrasts, this can also be generated given a reduced  
+            (design as a partition of the existing design  
+         
+        The contrast definition interface consists of:  
+         
+        * A lilac &#34;name&#34; edit widget for naming the new contrast  
+          Type the name of the contrast in this widget.  
+          Press return or move the focus to enter the name.  
+         
+        * Radio-buttons for selecting statistic type: &#34;t-contrast&#34; or &#34;F-contrast&#34;  
+         
+        * A large lilac edit widget for entering &#34;contrast weights matrix&#34;  
+          - Note that contrast weights should be entered transposed, with  
+            contrast weights in rows.  
+          - Zero&#39;s will be automatically added to the right hand side of  
+            contrast weights as needed to give contrast weights matching the  
+            number of parameters. For example, if you are interested in  
+            contrasting the first two conditions of a design four parameters  
+            (design matrix with 4 columns), you need only enter &#34;+1 -1&#34;. The  
+            contrast manager will parse this to [+1 -1 0 0].  
+          - For t-contrasts, this will only accept a single line of input,  
+            since contrast weights c&#39; for an SPM{T} must be a row-vector.  
+            Pressing &lt;return&gt; or moving the focus (by clicking on another GUI  
+            element, such as the &#34;Submit&#34; button) will enter the contrast  
+            weights for parsing.  
+          - For F-contrasts, the widget accepts multi-line input.  
+            Pressing &lt;return&gt; will move to a new line. Press &lt;ctrl&gt;-&lt;return&gt; or  
+            move the focus (by clicking on another GUI element, such as the  
+            &#34;Submit&#34; button) to enter the contrast weights for parsing.  
+          - Text entered in the &#34;contrast weights matrix&#34; is evaluated in the  
+            base workspace. Thus, matlab functions can be used in the widget,  
+            and base workspace variables can be referred to. (See the help for  
+            spm_input.m for more tips on using evaluated input widgets.)  
+         
+        * For F-contrasts, a &#34;columns for reduced design&#34; edit widget appears:  
+          - Here you can specify SPM{F}s by specifying the reduced design as  
+            a sub-partition of the current design matrix.  
+          - Enter the indices of the design matrix columns you wish to retain  
+            in the reduced design.  
+          - Pressing &lt;return&gt; or moving the focus (by clicking on another GUI  
+            element, such as the &#34;Submit&#34; button) will enter the column indices  
+            for parsing.  
+          - An F-contrast weights matrix is constructed from the specified  
+            partitioning. (The corresponding F-contrast weights are imaged  
+            above the design matrix picture. Double click (or &#34;surf&#34;) the  
+            contrast image to see the actual values of the F-contrast weights  
+            matrix.)  
+          - Again, text entered in the &#34;columns for reduced design&#34; is  
+            evaluated in the base workspace, permitting the use of functions  
+            and variables available in the base workspace.  
+          - (Note that the F-contrast weights matrix produced may not be the  
+            simplest F-contrast possible for this test, and that the F-contrast  
+            weights matrix may not be full rank (e.g. may have two rows where  
+            one would do). Nonetheless, the F-test is equivalent for the  
+            specified partitioning.  
+         
+        * &#34;Submit&#34; button:  
+          This button can be used to force parsing of the contrast weights (or  
+          columns for reduced design).  
+         
+        * contrast parsing errors pane &amp; contrast parsing info pane:  
+          - Once the contrast weights matrix has been entered in the GUI, the  
+            inout is parsed.  
+          - First, each line is evaluated.  
+          - Then, the results for each line are checked to ensure they define  
+            valid contrasts, with trailing zeros added as necessary so the  
+            contrast length matches the number of parameters.  
+          - Errors encountered during parsing, and invalid contrast weights,  
+            are reported in the &#34;contrast parsing errors&#34; pane in red text.  
+            Usually the contrast cannot be defined if there are any errors!  
+          - Information messages regarding contrast parsing appear in the lower  
+            &#34;contrast parsing info&#34; pane in green text.  
+          - When defining an F-contrast via &#34;columns for reduced design&#34;, the  
+            string defining the indices is similarly parsed, with errors and  
+            information messages appearing in the two panes.  
+         
+        * Contrast weights plot/image:  
+          Depicts the contrast once valid contrast weights have been specified.  
+         
+        * Image of the design matrix:  
+          (As described above for the contrast selection interface)  
+         
+        * Parameter estimability bar  
+          (As described above for the contrast selection interface)  
+         
+        * &#34;Reset&#34; button:  
+           Resets the contrast definition interface, clearing any contrast  
+           currently being defined.  
+         
+        * &#34;Cancel&#34; button:  
+          Returns to the contrast selection interface without defining a new  
+          contrast.  
+         
+        * &#34;OK&#34; button:  
+          Once a valid set of contrast weights has been defined, and the  
+          contrast named, pressing &#34;OK&#34; defines the contrast and returns to the  
+          contrast selection interface, with the newly defined contrast  
+          selected.  
+         
+        * Status line:  
+          This indicates progress in contrast definition.  
+          Once a valid set of contrast weights have been specified, and a  
+          the contrast named, then the status line turns green, indicating  
+          that the current contrast can be defined by pressing &#34;OK&#34;.  
+         
+         
+       ==========================================================================  
+        S P M   C o n t r a s t   m a n a g e m e n t  
+       ==========================================================================  
+         
+        Contrasts are stored by SPM in a single structure (See spm_FcUtil.m  
+        for the definition and handling of the contrast structure.)  
+         
+        Note that the xCon structure for each contrast contains data specific  
+        to the current experimental design. Therefore, contrast structures  
+        can only be copied between analyses (to save re-entering contrasts)  
+        if the designs are *identical*.  
+         
+        Although the contrasts are named by the user, they are referred to  
+        internally and on the corresponding contrast, ESS and SPM images (see  
+        spm_getSPM.m) by their contrast number, which indexes them in the  
+        order in which they were created. Because of this, it can be rather  
+        involved to delete any but the most recently defined contrast: All  
+        file references and indices would have to be canonicalised! Thus, no  
+        &#34;delete&#34; function is provided (as yet).  
+         
+       __________________________________________________________________________  
+      
+
+    [Matlab code]( https://github.com/spm/spm/blob/main/spm_conman.m )
+
+    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    &#34;&#34;&#34;
+    return Runtime.call(&#34;spm_conman&#34;, *args, **kwargs)</code></pre>
+</details>
+<div class="desc"><p>Contrast manager: GUI for defining valid contrasts<br>
+FORMAT varargout=spm_conman(varargin)<br>
+- An embedded callback, multi-function function<br>
+- For detailed programmers comments,<br>
+see format specifications in main body of program (below user help)
+</p>
+<hr>
+<pre><code>The contrast manager is a user interface for the selection and definition  
+of contrasts for a given SPM design. At present, the contrast manager  
+provides only interactive GUI facilities.
+
+See also: spm_getSPM.m, spm_contrasts.m
+</code></pre>
+<p>==========================================================================<br>
+U s i n g
+t h e
+S P M
+C o n t r a s t
+M a n a g e r
+G U I<br>
+==========================================================================
+</p>
+<pre><code>The contrast manager graphicsl user interface (GUI) is a dialog box for  
+the specification and selection of contrasts. The contrast selection   
+interface is presented initially, pressing the "Define new contrast..."   
+button pops up the contrast definition interface:
+</code></pre>
+<hr>
+<pre><code>                                     ConMan: Contrast selection interface
+
+The contrast selection interface consists of:
+
+* "Show" statistic type radio-buttons: "t-contrasts", "F-contrasts", "All":  
+  Selects the types of contrast that are presented for selection in the  
+  contrast selection list box. Depending on the use of the contrast  
+  manager, some options may be unavailable.
+
+* List-box of currently defined contrasts.  
+  Each contrast is listed by number, type ("T" or "F"), and name. Only  
+  contrasts of types specified by the settings of the "show"  
+  radiobuttons are shown.  
+  Select contrasts by clicking on their entry in the list-box. To  
+  select multiple contrasts (for conjunctions or masking, if  
+  appropriate), the standard techniques of drag selection and  
+  shift-clicking can be used for selecting a set of adjacent contrasts,  
+  control-click to select individual contrasts separated in the list.  
+  Selected contrasts are highlit in black.
+
+* Image of the design matrix:  
+  A grey-scale representation of the design matrix, to aid interpretation  
+  of the contrasts.
+
+  The design matrix is "surfable": Clicking (and holding or dragging)  
+  around the design matrix image reports the corresponding value of the  
+  design matrix ('normal' click - "left" mouse button usually), the  
+  image filename ('extend' mouse click - "middle" mouse), or parameter  
+  name ('alt' click - "right" mouse). Double clicking the design matrix  
+  image extracts the design matrix into the base MATLAB workspace.  
+  (Surfing is handled by spm_DesRep.m)
+
+* Parameter estimability bar  
+  Under the design matrix the parameter estimability is displayed as  
+  a 1xp matrix of grey and white squares. Parameters that are not  
+  uniquely specified by the model are shown with a grey patch.
+
+  Recall that only uniquely estimable parameters can be examined  
+  individually with [0,...,0,1,0,...,0] type contrats.
+
+  Surfing the estimability image reports the parameter names and  
+  their estimability. Double clicking extracts the estimability  
+  vector into the base MatLab workspace.
+
+* Contrast weights plot/image:  
+  The weights of the selected contrast(s) are imaged above the design  
+  matrix, labelled by their contrast number. t-contrasts are displayed  
+  as bar-charts, F-contrasts have their weights matrix c' depicted as a  
+  grey-scale image.
+
+  Again, the contrast representation is "surfable": Clicking and  
+  dragging over the contrast image reports the contrast name, type and  
+  number, and the value of the contrast at the mouse location.
+
+* "Define new contrast..." button:  
+  Pops up the contrast definition interface (described below)
+
+* "Reset" button:  
+  Clears the current contrast selection.
+
+* "Done" button:  
+  Press when the required contrasts have been selected.
+
+* Status line:  
+  This indicates how many contrasts have been selected, how  
+  multi-contrast selections will be handled, and whether you can press  
+  "Done" yet!
+
+In addition, the dialog has a figure ContextMenu, accessed by  
+right-clicking in the figure background: In addition to providing  
+repeats of the "Define new contrast...", "Reset" &amp; "Done" buttons  
+described above, there are two additional options:
+
+  - crash out: this bails out of the contrast manager in a nice way!  
+  - rename:    This permits a single contrast to be re-named. You  
+           must select the contrast to be renamed before pulling  
+               up the context menu for this option to be available.
+</code></pre>
+<hr>
+<pre><code>                                    ConMan: Contrast definition interface
+
+To define a contrast, you must specify:  
+ 1) a name  
+ 2) the statistic type: "t-contrast" for SPM{T} or "F-contrast" for SPM{F}  
+ 3) a valid set of contrast weights  
+    (for F-contrasts, this can also be generated given a reduced  
+    (design as a partition of the existing design
+
+The contrast definition interface consists of:
+
+* A lilac "name" edit widget for naming the new contrast  
+  Type the name of the contrast in this widget.  
+  Press return or move the focus to enter the name.
+
+* Radio-buttons for selecting statistic type: "t-contrast" or "F-contrast"
+
+* A large lilac edit widget for entering "contrast weights matrix"  
+  - Note that contrast weights should be entered transposed, with  
+    contrast weights in rows.  
+  - Zero's will be automatically added to the right hand side of  
+    contrast weights as needed to give contrast weights matching the  
+    number of parameters. For example, if you are interested in  
+    contrasting the first two conditions of a design four parameters  
+    (design matrix with 4 columns), you need only enter "+1 -1". The  
+    contrast manager will parse this to [+1 -1 0 0].  
+  - For t-contrasts, this will only accept a single line of input,  
+    since contrast weights c' for an SPM{T} must be a row-vector.  
+    Pressing &lt;return&gt; or moving the focus (by clicking on another GUI  
+    element, such as the "Submit" button) will enter the contrast  
+    weights for parsing.  
+  - For F-contrasts, the widget accepts multi-line input.  
+    Pressing &lt;return&gt; will move to a new line. Press &lt;ctrl&gt;-&lt;return&gt; or  
+    move the focus (by clicking on another GUI element, such as the  
+    "Submit" button) to enter the contrast weights for parsing.  
+  - Text entered in the "contrast weights matrix" is evaluated in the  
+    base workspace. Thus, matlab functions can be used in the widget,  
+    and base workspace variables can be referred to. (See the help for  
+    spm_input.m for more tips on using evaluated input widgets.)
+
+* For F-contrasts, a "columns for reduced design" edit widget appears:  
+  - Here you can specify SPM{F}s by specifying the reduced design as  
+    a sub-partition of the current design matrix.  
+  - Enter the indices of the design matrix columns you wish to retain  
+    in the reduced design.  
+  - Pressing &lt;return&gt; or moving the focus (by clicking on another GUI  
+    element, such as the "Submit" button) will enter the column indices  
+    for parsing.  
+  - An F-contrast weights matrix is constructed from the specified  
+    partitioning. (The corresponding F-contrast weights are imaged  
+    above the design matrix picture. Double click (or "surf") the  
+    contrast image to see the actual values of the F-contrast weights  
+    matrix.)  
+  - Again, text entered in the "columns for reduced design" is  
+    evaluated in the base workspace, permitting the use of functions  
+    and variables available in the base workspace.  
+  - (Note that the F-contrast weights matrix produced may not be the  
+    simplest F-contrast possible for this test, and that the F-contrast  
+    weights matrix may not be full rank (e.g. may have two rows where  
+    one would do). Nonetheless, the F-test is equivalent for the  
+    specified partitioning.
+
+* "Submit" button:  
+  This button can be used to force parsing of the contrast weights (or  
+  columns for reduced design).
+
+* contrast parsing errors pane &amp; contrast parsing info pane:  
+  - Once the contrast weights matrix has been entered in the GUI, the  
+    inout is parsed.  
+  - First, each line is evaluated.  
+  - Then, the results for each line are checked to ensure they define  
+    valid contrasts, with trailing zeros added as necessary so the  
+    contrast length matches the number of parameters.  
+  - Errors encountered during parsing, and invalid contrast weights,  
+    are reported in the "contrast parsing errors" pane in red text.  
+    Usually the contrast cannot be defined if there are any errors!  
+  - Information messages regarding contrast parsing appear in the lower  
+    "contrast parsing info" pane in green text.  
+  - When defining an F-contrast via "columns for reduced design", the  
+    string defining the indices is similarly parsed, with errors and  
+    information messages appearing in the two panes.
+
+* Contrast weights plot/image:  
+  Depicts the contrast once valid contrast weights have been specified.
+
+* Image of the design matrix:  
+  (As described above for the contrast selection interface)
+
+* Parameter estimability bar  
+  (As described above for the contrast selection interface)
+
+* "Reset" button:  
+   Resets the contrast definition interface, clearing any contrast  
+   currently being defined.
+
+* "Cancel" button:  
+  Returns to the contrast selection interface without defining a new  
+  contrast.
+
+* "OK" button:  
+  Once a valid set of contrast weights has been defined, and the  
+  contrast named, pressing "OK" defines the contrast and returns to the  
+  contrast selection interface, with the newly defined contrast  
+  selected.
+
+* Status line:  
+  This indicates progress in contrast definition.  
+  Once a valid set of contrast weights have been specified, and a  
+  the contrast named, then the status line turns green, indicating  
+  that the current contrast can be defined by pressing "OK".
+</code></pre>
+<p>==========================================================================<br>
+S P M
+C o n t r a s t
+m a n a g e m e n t<br>
+==========================================================================
+</p>
+<pre><code>Contrasts are stored by SPM in a single structure (See spm_FcUtil.m  
+for the definition and handling of the contrast structure.)
+
+Note that the xCon structure for each contrast contains data specific  
+to the current experimental design. Therefore, contrast structures  
+can only be copied between analyses (to save re-entering contrasts)  
+if the designs are *identical*.
+
+Although the contrasts are named by the user, they are referred to  
+internally and on the corresponding contrast, ESS and SPM images (see  
+spm_getSPM.m) by their contrast number, which indexes them in the  
+order in which they were created. Because of this, it can be rather  
+involved to delete any but the most recently defined contrast: All  
+file references and indices would have to be canonicalised! Thus, no  
+"delete" function is provided (as yet).
+</code></pre>
+<hr>
+<p><a href="https://github.com/spm/spm/blob/main/spm_conman.m">Matlab code</a></p>
+<p>Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL</p></div>
+</dd>
+</dl>
+</section>
+<section>
+</section>
+</article>
+<nav id="sidebar">
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3>Super-module</h3>
+<ul>
+<li><code><a title="spm" href="index.html">spm</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-functions">Functions</a></h3>
+<ul class="">
+<li><code><a title="spm.spm_conman.spm_conman" href="#spm.spm_conman.spm_conman">spm_conman</a></code></li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc" title="pdoc: Python API documentation generator"><cite>pdoc</cite> 0.11.5</a>.</p>
+</footer>
+</body>
+</html>
