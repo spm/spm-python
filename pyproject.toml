@@ -10,10 +10,14 @@ readme = "README.md"
 license = {file = "LICENSE"}
 authors = [
   {name = "Johan Medrano", email = "johan.medrano@ucl.ac.uk"}, 
-  {name = "Yael Balbastre", email = "y.balbastre@ucl.ac.yk"}]
+  {name = "Yael Balbastre", email = "y.balbastre@ucl.ac.yk"}, 
+  {name = "Yulia Bezsudnova"},
+  {name = "Arthur Mitchell"}, 
+  {name = "Peter Zeidman"}, 
+  {name = "Olivia Kowalczyk"} ]
 requires-python = ">=3.9,<3.13"
 classifiers = [
-  "Development Status :: 3 - Alpha",
+  "Development Status :: 4 - Beta",
   "License :: OSI Approved :: GNU General Public License v2 (GPLv2)",
   "Programming Language :: Python :: 3.9",
   "Programming Language :: Python :: 3.10",
