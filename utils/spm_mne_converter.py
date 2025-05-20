@@ -10,7 +10,7 @@ def spm_2_mne_raw(D):
 
     n_channels = int(D.nchannels()) 
     sampling_freq = D.fsample()
-    duration = [float(D.time()[0]),float(D.time()[-1])]
+    duration = [float(D.time()[0][0]),float(D.time()[0][-1])]
     n_samples =int(D.nsamples())
 
     channel_names = list(D.chanlabels())
@@ -96,7 +96,7 @@ def spm_2_mne_raw(D):
         if  proj_vec.shape[1] > 0 :
             for ii in arange(proj_vec.shape[1]):
                 proj_data = dict(
-                    col_names=list(np.asarray(D.sensors('MEG').label.tolist()).reshape(1, -1)[0]),
+                    col_names=list(np.asarray(D.sensors('MEG').label).reshape(1, -1)[0]),
                     row_names=None,
                     data=proj_vec[:, ii].reshape(1, -1),
                     ncol=len(D.sensors('MEG').label),
