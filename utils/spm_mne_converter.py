@@ -96,7 +96,7 @@ def spm_2_mne_raw(D):
         if  proj_vec.shape[1] > 0 :
             for ii in arange(proj_vec.shape[1]):
                 proj_data = dict(
-                    col_names=list(np.asarray(D.sensors('MEG').label).reshape(1, -1)[0]),
+                    col_names=list(D.sensors('MEG').label),
                     row_names=None,
                     data=proj_vec[:, ii].reshape(1, -1),
                     ncol=len(D.sensors('MEG').label),
@@ -104,7 +104,7 @@ def spm_2_mne_raw(D):
                 )
                 info['projs'].append(mne.Projection(active=True, data=proj_data, desc='from matlab tra matrix', kind=1, explained_var=None))      
     #np.savetxt(D.path()+'/tra_matrix_from_spm.tsv', D.sensors('MEG').tra, delimiter='\t')  
-    bad_channels = D.badchannels().astype(int) # matlab index = (python index + 1)
+    bad_channels = D.badchannels()[0].astype(int) # matlab index = (python index + 1)
     if D.badchannels().size ==1:
         info['bads'] = [channel_names[bad_channels]]
     elif D.badchannels().size !=0:

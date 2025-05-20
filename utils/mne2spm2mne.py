@@ -3,7 +3,7 @@ import numpy as np
 import mne
 import sys
 plt.ion()
-sys.path.insert(1, r'C:\Users\ybezsudnova\Documents\Git\spm2mne')
+sys.path.insert(1, r'C:\Users\ybezsudnova\Documents\Git\spm-python\utils\spm_mne_converter.py')
 
 from spm_mne_converter import spm_2_mne_raw, mne_raw_2_spm
 from spm import *
