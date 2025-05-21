@@ -177,11 +177,12 @@ def spm_2_mne_raw(D):
                     )
                 )
     # np.savetxt(D.path()+'/tra_matrix_from_spm.tsv', D.sensors('MEG').tra, delimiter='\t')
-    bad_channels = D.badchannels()[0].astype(int)  # matlab index = (python index + 1)
-    if D.badchannels().size == 1:
-        info["bads"] = [channel_names[bad_channels]]
-    elif D.badchannels().size != 0:
-        info["bads"] = [channel_names[i] for i in bad_channels]
+    bad_channels = D.badchannels()
+    if len(bad_channels) > 0:
+        info["bads"] = [
+            channel_names[i - 1]  # python index = matlab index - 1
+            for i in bad_channels
+        ]
     raw = mne.io.RawArray(data, info)
     return raw
 
