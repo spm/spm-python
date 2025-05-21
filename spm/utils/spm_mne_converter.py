@@ -180,7 +180,7 @@ def spm_2_mne_raw(D):
     bad_channels = D.badchannels()
     if len(bad_channels) > 0:
         info["bads"] = [
-            channel_names[i - 1]  # python index = matlab index - 1
+            channel_names[int(i - 1)]  # python index = matlab index - 1
             for i in bad_channels
         ]
     raw = mne.io.RawArray(data, info)
