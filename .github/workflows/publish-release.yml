@@ -101,9 +101,9 @@ jobs:
             
           - matlab: "R2025a"
             main: "false"
-            python: "3.13"
+            python: "3.12"
             py3from: "3.9"
-            py3to:   "3.14"
+            py3to:   "3.13"
             os: "ubuntu-latest"
         
     runs-on: ${{ matrix.os }}
