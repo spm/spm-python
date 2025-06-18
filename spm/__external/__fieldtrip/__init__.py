@@ -263,6 +263,7 @@ from .loreta2fieldtrip import loreta2fieldtrip
 from .nutmeg2fieldtrip import nutmeg2fieldtrip
 from .__plotting import (
     ft_colormap,
+    ft_headlight,
     ft_plot_axes,
     ft_plot_box,
     ft_plot_cloud,
@@ -745,6 +746,7 @@ __all__ = [
     "loreta2fieldtrip",
     "nutmeg2fieldtrip",
     "ft_colormap",
+    "ft_headlight",
     "ft_plot_axes",
     "ft_plot_box",
     "ft_plot_cloud",

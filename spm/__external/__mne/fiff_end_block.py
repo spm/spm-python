@@ -16,4 +16,5 @@ def fiff_end_block(*args, **kwargs):
 
     Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
+
     return Runtime.call("fiff_end_block", *args, **kwargs, nargout=0)

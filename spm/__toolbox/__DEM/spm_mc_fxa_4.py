@@ -20,4 +20,5 @@ def spm_mc_fxa_4(*args, **kwargs):
 
     Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
+
     return Runtime.call("spm_mc_fxa_4", *args, **kwargs)

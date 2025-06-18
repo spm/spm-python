@@ -55,7 +55,13 @@ def ft_redefinetrial(*args, **kwargs):
         segments, starting from the beginning of each trial. This may lead to loss
         of data at the end of the trials
           cfg.length    = number (in seconds) that specifies the length of the required snippets
-          cfg.overlap   = number between 0 and 1 (exclusive) specifying the fraction of overlap between snippets (0 = no overlap)
+          cfg.overlap   = number between 0 and 1 (exclusive) specifying the fraction of overlap
+                          between snippets (0 = no overlap)
+          cfg.updatetrialinfo = 'no' (default), or 'yes', which adds a column
+                          with original trial indices trialinfo
+          cfg.keeppartial = 'no' (default), or 'yes', which keeps the partial sub
+                          epochs at the end of the input trials
+
 
         Alternatively you can merge or stitch pseudo-continuous segmented data back into a
         continuous representation. This requires that the data has a valid sampleinfo field
@@ -80,4 +86,5 @@ def ft_redefinetrial(*args, **kwargs):
 
     Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
+
     return Runtime.call("ft_redefinetrial", *args, **kwargs)

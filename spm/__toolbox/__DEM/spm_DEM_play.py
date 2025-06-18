@@ -23,4 +23,5 @@ def spm_DEM_play(*args, **kwargs):
 
     Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
+
     return Runtime.call("spm_DEM_play", *args, **kwargs)

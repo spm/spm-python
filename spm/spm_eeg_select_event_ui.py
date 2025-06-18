@@ -12,4 +12,5 @@ def spm_eeg_select_event_ui(*args, **kwargs):
 
     Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
+
     return Runtime.call("spm_eeg_select_event_ui", *args, **kwargs)

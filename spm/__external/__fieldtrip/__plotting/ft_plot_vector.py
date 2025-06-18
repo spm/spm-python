@@ -17,7 +17,7 @@ def ft_plot_vector(*args, **kwargs):
           'linewidth'       = see MATLAB standard line properties
           'markersize'      = see MATLAB standard line properties
           'markerfacecolor' = see MATLAB standard line properties
-          'axis'            = draw the local axis,  can be 'yes', 'no', 'xy', 'x' or 'y'
+          'axis'            = draw the local axis, can be 'yes', 'no', 'xy', 'x' or 'y'
           'highlight'       = a logical vector of size Y, where 1 means that the corresponding values in Y are highlighted (according to the highlightstyle)
           'highlightstyle'  = can be 'box', 'thickness', 'saturation', 'difference' (default='box')
           'facecolor'       = color for the highlighted box/difference (default = [0.6 0.6 0.6])
@@ -26,11 +26,12 @@ def ft_plot_vector(*args, **kwargs):
           'tag'             = string, the tag assigned to the plotted elements (default = '')
 
         The line color can be specified in a variety of ways
-          - as a string with one character per line that you want to plot. Supported colors are the same as in PLOT, i.e. 'bgrcmykw'.
-          - as 'none' if you do not want the lines to be plotted (useful in combination with the difference highlightstyle).
-          - as a Nx3 matrix, where N=length(x), to use graded RGB colors along the line
+          - as a string with one character per line that you want to plot, like 'bgrcmykw'.
+          - as 'none' if you do not want the lines to be plotted, this is useful in combination with the 'difference' highlightstyle.
+          - as an Nx3 matrix, where N is the number of points along the line, to use graded RGB colors along the line
+          - as an Nx3 matrix, where N is the number of lines, to use a different color for each line
 
-        It is possible to plot the object in a local pseudo-axis (c.f. subplot), which is specfied as follows
+        It is possible to plot the object in a local pseudo-axis (c.f. subplot), which is specified as follows
           'box'             = draw a box around the local axes, can be 'yes' or 'no'
           'hpos'            = horizontal position of the center of the local axes
           'vpos'            = vertical position of the center of the local axes
@@ -49,30 +50,30 @@ def ft_plot_vector(*args, **kwargs):
           'fontweight'      =
 
         Example 1
-          subplot(2,1,1); ft_plot_vector(1:100, randn(1,100), 'color', 'r')
-          subplot(2,1,2); ft_plot_vector(1:100, randn(1,100), 'color', rand(100,3))
+          subplot(2, 1, 1); ft_plot_vector(1:100, randn(1, 100), 'color', 'r')
+          subplot(2, 1, 2); ft_plot_vector(1:100, randn(1, 100), 'color', rand(100, 3))
 
         Example 2
-          ft_plot_vector(randn(1,100), 'width', 0.9, 'height', 0.9, 'hpos', 0, 'vpos', 0, 'box', 'yes')
-          ft_plot_vector(randn(1,100), 'width', 0.9, 'height', 0.9, 'hpos', 1, 'vpos', 0, 'box', 'yes')
-          ft_plot_vector(randn(1,100), 'width', 0.9, 'height', 0.9, 'hpos', 0, 'vpos', 1, 'box', 'yes')
+          ft_plot_vector(randn(1, 100), 'width', 0.9, 'height', 0.9, 'hpos', 0, 'vpos', 0, 'box', 'yes')
+          ft_plot_vector(randn(1, 100), 'width', 0.9, 'height', 0.9, 'hpos', 1, 'vpos', 0, 'box', 'yes')
+          ft_plot_vector(randn(1, 100), 'width', 0.9, 'height', 0.9, 'hpos', 0, 'vpos', 1, 'box', 'yes')
 
         Example 3
-         x = 1:100; y = hann(100)';
-         subplot(3,1,1); ft_plot_vector(x, y, 'highlight', y>0.8, 'highlightstyle', 'box');
-         subplot(3,1,2); ft_plot_vector(x, y, 'highlight', y>0.8, 'highlightstyle', 'thickness');
-         subplot(3,1,3); ft_plot_vector(x, y, 'highlight', y>0.8, 'highlightstyle', 'saturation');
+          x = 1:100; y = hann(100)';
+          subplot(3, 1, 1); ft_plot_vector(x, y, 'highlight', y>0.8, 'highlightstyle', 'box');
+          subplot(3, 1, 2); ft_plot_vector(x, y, 'highlight', y>0.8, 'highlightstyle', 'thickness');
+          subplot(3, 1, 3); ft_plot_vector(x, y, 'highlight', y>0.8, 'highlightstyle', 'saturation');
 
         Example 4
-         x = 1:100; y = hann(100)'; ymin = 0.8*y; ymax = 1.2*y;
-         ft_plot_vector(x, [ymin; ymax], 'highlight', ones(size(y)), 'highlightstyle', 'difference', 'color', 'none');
-         ft_plot_vector(x, y);
+          x = 1:100; y = hann(100)'; ymin = 0.8*y; ymax = 1.2*y;
+          ft_plot_vector(x, [ymin; ymax], 'highlight', ones(size(y)), 'highlightstyle', 'difference', 'color', 'none');
+          ft_plot_vector(x, y);
 
         Example 5
-         colormap hot;
-         rgb = colormap;
-         rgb = interp1(1:64, rgb, linspace(1,64,100));
-         ft_plot_vector(1:100, 'color', rgb);
+          r = linspace(0, 1, 100)';
+          g = linspace(1, 0, 100)';
+          b = zeros(1, 100)';
+          ft_plot_vector(1:100, 'color', [r g b], 'linewidth', 5);
 
         See also FT_PLOT_MATRIX, PLOT
 
@@ -81,4 +82,5 @@ def ft_plot_vector(*args, **kwargs):
 
     Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
+
     return Runtime.call("ft_plot_vector", *args, **kwargs)

@@ -3,30 +3,27 @@ from mpython import Runtime
 
 def ft_electroderealign(*args, **kwargs):
     """
-      FT_ELECTRODEREALIGN rotates, translates, scales and warps electrode positions. The
-        default is to only rotate and translate, i.e. to do a rigid body transformation in
-        which only the coordinate system is changed. With the right settings if can apply
-        additional deformations to the input sensors (e.g. scale them to better fit the
-        skin surface). The different methods are described in detail below.
+      FT_ELECTRODEREALIGN rotates, translates, scales, warps and/or projects EEG
+        electrode positions. The different methods are described in detail below.
 
-        INTERACTIVE - You can display the skin surface together with the electrode or
-        gradiometer positions, and manually (using the graphical user interface) adjust the
-        rotation, translation and scaling parameters, so that the electrodes correspond
-        with the skin.
+        INTERACTIVE - This displays the skin surface together with the electrode or
+        gradiometer positions, and allows you to manually adjust (using the graphical user
+        interface) the rotation, translation and scaling parameters, so that the electrodes
+        correspond with the skin.
 
-        FIDUCIAL - You can apply a rigid body realignment based on three fiducial
-        locations. After realigning, the fiducials in the input electrode set (typically
-        nose, left and right ear) are along the same axes as the fiducials in the template
-        electrode set.
+        FIDUCIAL - This applies a rigid body realignment based on three fiducial or
+        anatomical locations. After realigning, the fiducials that are part of the input
+        electrode set (typically nose, left and right ear) are along the same axes as
+        the fiducials in the target electrode set.
 
-        TEMPLATE - You can apply a spatial transformation/deformation that automatically
-        minimizes the distance between the electrodes or gradiometers and a template or
-        sensor array. The warping methods use a non-linear search to minimize the distance
-        between the input sensor positions and the corresponding template sensors.
+        TEMPLATE - This applies a linear or non-linear spatial transformation/deformation
+        that automatically minimizes the distance between the input electrodes and a target
+        electrode set. The warping methods use a non-linear search to minimize the distance
+        between the input electrode positions and the corresponding target electrode.
 
-        HEADSHAPE - You can apply a spatial transformation/deformation that automatically
+        HEADSHAPE - This applies a spatial transformation/deformation that automatically
         minimizes the distance between the electrodes and the head surface. The warping
-        methods use a non-linear search to minimize the distance between the input sensor
+        methods use a non-linear search to minimize the distance between the input electrode
         positions and the projection of the electrodes on the head surface.
 
         PROJECT - This projects each of the electrodes to the nearest point on the
@@ -40,14 +37,14 @@ def ft_electroderealign(*args, **kwargs):
         Use as
           [elec_realigned] = ft_electroderealign(cfg)
         with the electrode or gradiometer details in the configuration, or as
-          [elec_realigned] = ft_electroderealign(cfg, elec_orig)
+          [elec_realigned] = ft_electroderealign(cfg, elec_input)
         with the electrode or gradiometer definition as 2nd input argument.
 
         The configuration can contain the following options
           cfg.method         = string representing the method for aligning or placing the electrodes
                                'interactive'     realign manually using a graphical user interface
                                'fiducial'        realign using three fiducials (e.g. NAS, LPA and RPA)
-                               'template'        realign the electrodes to match a template set
+                               'template'        realign the electrodes to match a target electrode set
                                'headshape'       realign the electrodes to fit the head surface
                                'project'         projects electrodes onto the head surface
                                'moveinward'      moves electrodes inward along their normals
@@ -68,27 +65,29 @@ def ft_electroderealign(*args, **kwargs):
                                'fsinflated'      surface-based realignment with FreeSurfer individual subject inflated brain (left->left or right->right)
           cfg.channel        = Nx1 cell-array with selection of channels (default = 'all'), see FT_CHANNELSELECTION for details
           cfg.keepchannel    = string, 'yes' or 'no' (default = 'no')
-          cfg.fiducial       = cell-array with the name of three fiducials used for realigning (default = {'nasion', 'lpa', 'rpa'})
+          cfg.fiducial       = cell-array with the name of three fiducials used for aligning to the target (default = {'nasion', 'lpa', 'rpa'})
           cfg.casesensitive  = 'yes' or 'no', determines whether string comparisons between electrode labels are case sensitive (default = 'yes')
           cfg.feedback       = 'yes' or 'no' (default = 'no')
 
         The electrode positions can be present in the 2nd input argument or can be specified as
           cfg.elec          = structure with electrode positions or filename, see FT_READ_SENS
 
-        If you want to realign the EEG electrodes using anatomical fiducials, you should
-        specify the target location of the three fiducials, e.g.
-          cfg.target.pos(1,:) = [110 0 0]     % location of the nose
-          cfg.target.pos(2,:) = [0  90 0]     % location of the left ear
-          cfg.target.pos(3,:) = [0 -90 0]     % location of the right ear
+        If your input EEG electrodes include the positions of anatomical landmarks or
+        fiducials, you can specify the target location of those, for example here in
+        millimeter according to the CTF coordinate system with the nose along X and the
+        ears along +Y and -Y
+          cfg.target.pos(1,:) = [110 0 0]     % target location of the nose
+          cfg.target.pos(2,:) = [0  90 0]     % target location of the left ear
+          cfg.target.pos(3,:) = [0 -90 0]     % target location of the right ear
           cfg.target.label    = {'NAS', 'LPA', 'RPA'}
 
-        If you want to align EEG electrodes to a single or multiple template electrode sets
-        (which will be averaged), you should specify the template electrode sets either as
-        electrode structures (i.e. when they are already read in memory) or their file
-        names using
-          cfg.target          = single electrode set that serves as standard
+        If you want to align the input EEG electrodes to a target electrode sets or to
+        multiple target electrode sets (which will be averaged), you should specify the
+        target electrode sets either as electrode structures (i.e. when they are already
+        read in memory) or as their file names using
+          cfg.target          = single electrode set to serve as the target
         or
-          cfg.target{1..N}    = list of electrode sets that will be averaged
+          cfg.target{1..N}    = list of electrode sets to serve as the target, these will be averaged
 
         If you want to align EEG electrodes to the head surface, you should specify the head surface as
           cfg.headshape      = a filename containing headshape, a structure containing a
@@ -147,4 +146,5 @@ def ft_electroderealign(*args, **kwargs):
 
     Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
+
     return Runtime.call("ft_electroderealign", *args, **kwargs)

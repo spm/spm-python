@@ -33,6 +33,7 @@ def ft_write_data(*args, **kwargs):
           matlab
           homer_nirs
           snirf
+          csv
 
         For EEG data, the input data is assumed to be scaled in microvolt.
         For NIRS data, the input data is assumed to represent optical densities.
@@ -44,4 +45,5 @@ def ft_write_data(*args, **kwargs):
 
     Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
+
     return Runtime.call("ft_write_data", *args, **kwargs, nargout=0)

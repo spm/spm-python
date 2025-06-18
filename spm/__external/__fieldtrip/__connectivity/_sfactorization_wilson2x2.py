@@ -29,4 +29,5 @@ def _sfactorization_wilson2x2(*args, **kwargs):
 
     Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
+
     return Runtime.call("sfactorization_wilson2x2", *args, **kwargs)

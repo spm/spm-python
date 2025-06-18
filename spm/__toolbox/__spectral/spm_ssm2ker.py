@@ -22,4 +22,5 @@ def spm_ssm2ker(*args, **kwargs):
 
     Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
+
     return Runtime.call("spm_ssm2ker", *args, **kwargs)

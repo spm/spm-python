@@ -11,4 +11,5 @@ def _timestamp_neuralynx(*args, **kwargs):
 
     Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
+
     return Runtime.call("timestamp_neuralynx", *args, **kwargs)

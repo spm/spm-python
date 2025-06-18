@@ -21,4 +21,5 @@ def _prepare_freq_matrices(*args, **kwargs):
 
     Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
+
     return Runtime.call("prepare_freq_matrices", *args, **kwargs)

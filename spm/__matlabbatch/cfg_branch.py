@@ -62,6 +62,7 @@ class cfg_branch(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         super().__init__()
 
     def all_leafs(self, *args, **kwargs):
@@ -83,6 +84,7 @@ class cfg_branch(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("all_leafs", self._as_matlab_object(), *args, **kwargs)
 
     def all_set(self, *args, **kwargs):
@@ -110,6 +112,7 @@ class cfg_branch(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("all_set", self._as_matlab_object(), *args, **kwargs)
 
     def all_set_item(self, *args, **kwargs):
@@ -128,6 +131,7 @@ class cfg_branch(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("all_set_item", self._as_matlab_object(), *args, **kwargs)
 
     def cfg2jobsubs(self, *args, **kwargs):
@@ -148,6 +152,7 @@ class cfg_branch(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("cfg2jobsubs", self._as_matlab_object(), *args, **kwargs)
 
     def cfg2struct(self, *args, **kwargs):
@@ -167,6 +172,7 @@ class cfg_branch(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("cfg2struct", self._as_matlab_object(), *args, **kwargs)
 
     def checksubs_job(self, *args, **kwargs):
@@ -190,6 +196,7 @@ class cfg_branch(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("checksubs_job", self._as_matlab_object(), *args, **kwargs)
 
     def clearval(self, *args, **kwargs):
@@ -209,6 +216,7 @@ class cfg_branch(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("clearval", self._as_matlab_object(), *args, **kwargs)
 
     def expand(self, *args, **kwargs):
@@ -251,6 +259,7 @@ class cfg_branch(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("expand", self._as_matlab_object(), *args, **kwargs)
 
     def fillvals(self, *args, **kwargs):
@@ -278,6 +287,7 @@ class cfg_branch(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("fillvals", self._as_matlab_object(), *args, **kwargs)
 
     def harvest(self, *args, **kwargs):
@@ -312,6 +322,7 @@ class cfg_branch(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("harvest", self._as_matlab_object(), *args, **kwargs)
 
     def initialise(self, *args, **kwargs):
@@ -337,6 +348,7 @@ class cfg_branch(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("initialise", self._as_matlab_object(), *args, **kwargs)
 
     def list_(self, *args, **kwargs):
@@ -397,6 +409,7 @@ class cfg_branch(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("list", self._as_matlab_object(), *args, **kwargs)
 
     def setval(self, *args, **kwargs):
@@ -415,6 +428,7 @@ class cfg_branch(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("setval", self._as_matlab_object(), *args, **kwargs)
 
     def showdetail(self, *args, **kwargs):
@@ -433,6 +447,7 @@ class cfg_branch(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("showdetail", self._as_matlab_object(), *args, **kwargs)
 
     def showdoc(self, *args, **kwargs):
@@ -453,6 +468,7 @@ class cfg_branch(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("showdoc", self._as_matlab_object(), *args, **kwargs)
 
     def showmydoc(self, *args, **kwargs):
@@ -472,6 +488,7 @@ class cfg_branch(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("showmydoc", self._as_matlab_object(), *args, **kwargs)
 
     def subs_fields(self, *args, **kwargs):
@@ -494,6 +511,7 @@ class cfg_branch(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("subs_fields", self._as_matlab_object(), *args, **kwargs)
 
     def subsasgn(self, *args, **kwargs):
@@ -534,6 +552,7 @@ class cfg_branch(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("subsasgn", self._as_matlab_object(), *args, **kwargs)
 
     def subsasgn_check(self, *args, **kwargs):
@@ -552,6 +571,7 @@ class cfg_branch(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("subsasgn_check", self._as_matlab_object(), *args, **kwargs)
 
     def subsasgn_job(self, *args, **kwargs):
@@ -576,6 +596,7 @@ class cfg_branch(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("subsasgn_job", self._as_matlab_object(), *args, **kwargs)
 
     def subsref(self, *args, **kwargs):
@@ -607,6 +628,7 @@ class cfg_branch(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("subsref", self._as_matlab_object(), *args, **kwargs)
 
     def subsref_job(self, *args, **kwargs):
@@ -634,6 +656,7 @@ class cfg_branch(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("subsref_job", self._as_matlab_object(), *args, **kwargs)
 
     def tag2cfgsubs(self, *args, **kwargs):
@@ -665,6 +688,7 @@ class cfg_branch(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("tag2cfgsubs", self._as_matlab_object(), *args, **kwargs)
 
     def tagnames(self, *args, **kwargs):
@@ -688,6 +712,7 @@ class cfg_branch(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("tagnames", self._as_matlab_object(), *args, **kwargs)
 
     def treepart(self, *args, **kwargs):
@@ -706,6 +731,7 @@ class cfg_branch(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("treepart", self._as_matlab_object(), *args, **kwargs)
 
     def update_deps(self, *args, **kwargs):
@@ -728,6 +754,7 @@ class cfg_branch(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("update_deps", self._as_matlab_object(), *args, **kwargs)
 
     def val2def(self, *args, **kwargs):
@@ -752,6 +779,7 @@ class cfg_branch(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("val2def", self._as_matlab_object(), *args, **kwargs)
 
     def _mysubs_fields(self, *args, **kwargs):
@@ -771,4 +799,5 @@ class cfg_branch(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("mysubs_fields", self._as_matlab_object(), *args, **kwargs)

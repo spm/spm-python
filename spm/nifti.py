@@ -16,6 +16,7 @@ class nifti(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         super().__init__()
 
     def cifti(self, *args, **kwargs):
@@ -28,6 +29,7 @@ class nifti(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("cifti", self._as_matlab_object(), *args, **kwargs)
 
     def create(self, *args, **kwargs):
@@ -45,6 +47,7 @@ class nifti(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call(
             "create", self._as_matlab_object(), *args, **kwargs, nargout=0
         )
@@ -59,6 +62,7 @@ class nifti(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call(
             "disp", self._as_matlab_object(), *args, **kwargs, nargout=0
         )
@@ -73,6 +77,7 @@ class nifti(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call(
             "display", self._as_matlab_object(), *args, **kwargs, nargout=0
         )
@@ -87,6 +92,7 @@ class nifti(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("fieldnames", self._as_matlab_object(), *args, **kwargs)
 
     def structn(self, *args, **kwargs):
@@ -99,6 +105,7 @@ class nifti(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("structn", self._as_matlab_object(), *args, **kwargs)
 
     def subsasgn(self, *args, **kwargs):
@@ -112,6 +119,7 @@ class nifti(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("subsasgn", self._as_matlab_object(), *args, **kwargs)
 
     def subsref(self, *args, **kwargs):
@@ -159,6 +167,7 @@ class nifti(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("subsref", self._as_matlab_object(), *args, **kwargs)
 
     def _M2Q(self, *args, **kwargs):
@@ -172,6 +181,7 @@ class nifti(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("M2Q", self._as_matlab_object(), *args, **kwargs)
 
     def _Q2M(self, *args, **kwargs):
@@ -186,6 +196,7 @@ class nifti(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("Q2M", self._as_matlab_object(), *args, **kwargs)
 
     def _decode_qform0(self, *args, **kwargs):
@@ -198,6 +209,7 @@ class nifti(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("decode_qform0", self._as_matlab_object(), *args, **kwargs)
 
     def _empty_hdr(self, *args, **kwargs):
@@ -211,6 +223,7 @@ class nifti(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("empty_hdr", self._as_matlab_object(), *args, **kwargs)
 
     def _encode_qform0(self, *args, **kwargs):
@@ -223,6 +236,7 @@ class nifti(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("encode_qform0", self._as_matlab_object(), *args, **kwargs)
 
     def _findindict(self, *args, **kwargs):
@@ -235,6 +249,7 @@ class nifti(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("findindict", self._as_matlab_object(), *args, **kwargs)
 
     def _getdict(self, *args, **kwargs):
@@ -247,6 +262,7 @@ class nifti(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("getdict", self._as_matlab_object(), *args, **kwargs)
 
     def _mayo2nifti1(self, *args, **kwargs):
@@ -259,6 +275,7 @@ class nifti(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("mayo2nifti1", self._as_matlab_object(), *args, **kwargs)
 
     def _mayostruc(self, *args, **kwargs):
@@ -271,6 +288,7 @@ class nifti(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("mayostruc", self._as_matlab_object(), *args, **kwargs)
 
     def _nifti1struc(self, *args, **kwargs):
@@ -283,6 +301,7 @@ class nifti(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("nifti1struc", self._as_matlab_object(), *args, **kwargs)
 
     def _nifti2struc(self, *args, **kwargs):
@@ -295,6 +314,7 @@ class nifti(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("nifti2struc", self._as_matlab_object(), *args, **kwargs)
 
     def _nifti_stats(self, *args, **kwargs):
@@ -330,6 +350,7 @@ class nifti(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("nifti_stats", self._as_matlab_object(), *args, **kwargs)
 
     def _niftistruc(self, *args, **kwargs):
@@ -342,6 +363,7 @@ class nifti(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("niftistruc", self._as_matlab_object(), *args, **kwargs)
 
     def _read_extras(self, *args, **kwargs):
@@ -354,6 +376,7 @@ class nifti(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("read_extras", self._as_matlab_object(), *args, **kwargs)
 
     def _read_hdr(self, *args, **kwargs):
@@ -369,6 +392,7 @@ class nifti(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("read_hdr", self._as_matlab_object(), *args, **kwargs)
 
     def _read_hdr_raw(self, *args, **kwargs):
@@ -385,6 +409,7 @@ class nifti(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("read_hdr_raw", self._as_matlab_object(), *args, **kwargs)
 
     def _write_extras(self, *args, **kwargs):
@@ -397,6 +422,7 @@ class nifti(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("write_extras", self._as_matlab_object(), *args, **kwargs)
 
     def _write_hdr_raw(self, *args, **kwargs):
@@ -415,4 +441,5 @@ class nifti(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("write_hdr_raw", self._as_matlab_object(), *args, **kwargs)

@@ -11,11 +11,12 @@ def _setviewpoint(*args, **kwargs):
         For example
           setviewpoint(gca, 'mni', 'left')
 
-        See alo GETORTHOVIEWPOS, COORDSYS2LABEL
+        See also GETORTHOVIEWPOS, COORDSYS2LABEL
 
 
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/setviewpoint.m )
 
     Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
+
     return Runtime.call("setviewpoint", *args, **kwargs, nargout=0)

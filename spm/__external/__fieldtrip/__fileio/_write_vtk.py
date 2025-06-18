@@ -16,11 +16,12 @@ def _write_vtk(*args, **kwargs):
         The optional val argument can be used to write scalar or vector values for
         each vertex or element.
 
-        See also READ_VTK, WRITE_PLY
+        See also READ_VTK, READ_VTK_XML, WRITE_PLY
 
 
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/write_vtk.m )
 
     Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
+
     return Runtime.call("write_vtk", *args, **kwargs, nargout=0)

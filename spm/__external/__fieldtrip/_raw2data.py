@@ -14,4 +14,5 @@ def _raw2data(*args, **kwargs):
 
     Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
+
     return Runtime.call("raw2data", *args, **kwargs)

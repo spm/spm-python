@@ -23,4 +23,5 @@ def _shiftpredict(*args, **kwargs):
 
     Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
+
     return Runtime.call("shiftpredict", *args, **kwargs)

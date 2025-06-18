@@ -12,4 +12,5 @@ def _output_image_mv_cva(*args, **kwargs):
 
     Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
+
     return Runtime.call("output_image_mv_cva", *args, **kwargs)

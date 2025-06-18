@@ -160,6 +160,7 @@ class slover(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         super().__init__()
 
     def add_blobs(self, *args, **kwargs):
@@ -182,6 +183,7 @@ class slover(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("add_blobs", self._as_matlab_object(), *args, **kwargs)
 
     def add_matrix(self, *args, **kwargs):
@@ -204,6 +206,7 @@ class slover(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("add_matrix", self._as_matlab_object(), *args, **kwargs)
 
     def add_spm(self, *args, **kwargs):
@@ -219,6 +222,7 @@ class slover(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("add_spm", self._as_matlab_object(), *args, **kwargs)
 
     def display(self, *args, **kwargs):
@@ -231,6 +235,7 @@ class slover(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call(
             "display", self._as_matlab_object(), *args, **kwargs, nargout=0
         )
@@ -252,6 +257,7 @@ class slover(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("fill_defaults", self._as_matlab_object(), *args, **kwargs)
 
     def get_pos(self, *args, **kwargs):
@@ -264,6 +270,7 @@ class slover(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("get_pos", self._as_matlab_object(), *args, **kwargs)
 
     def paint(self, *args, **kwargs):
@@ -291,6 +298,7 @@ class slover(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("paint", self._as_matlab_object(), *args, **kwargs)
 
     def point_vals(self, *args, **kwargs):
@@ -314,6 +322,7 @@ class slover(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("point_vals", self._as_matlab_object(), *args, **kwargs)
 
     def print_fig(self, *args, **kwargs):
@@ -335,6 +344,7 @@ class slover(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call(
             "print_fig", self._as_matlab_object(), *args, **kwargs, nargout=0
         )
@@ -350,6 +360,7 @@ class slover(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("subsasgn", self._as_matlab_object(), *args, **kwargs)
 
     def subsref(self, *args, **kwargs):
@@ -363,6 +374,7 @@ class slover(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("subsref", self._as_matlab_object(), *args, **kwargs)
 
     def _mars_struct(self, *args, **kwargs):
@@ -444,6 +456,7 @@ class slover(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("mars_struct", self._as_matlab_object(), *args, **kwargs)
 
     def _pr_basic_ui(self, *args, **kwargs):
@@ -463,6 +476,7 @@ class slover(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("pr_basic_ui", self._as_matlab_object(), *args, **kwargs)
 
     def _pr_blobs2vol(self, *args, **kwargs):
@@ -484,6 +498,7 @@ class slover(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("pr_blobs2vol", self._as_matlab_object(), *args, **kwargs)
 
     def _pr_get_spm_results(self, *args, **kwargs):
@@ -502,6 +517,7 @@ class slover(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call(
             "pr_get_spm_results", self._as_matlab_object(), *args, **kwargs
         )
@@ -530,6 +546,7 @@ class slover(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("pr_getcmap", self._as_matlab_object(), *args, **kwargs)
 
     def _pr_matrix2vol(self, *args, **kwargs):
@@ -550,6 +567,7 @@ class slover(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("pr_matrix2vol", self._as_matlab_object(), *args, **kwargs)
 
     def _pr_scaletocmap(self, *args, **kwargs):
@@ -580,6 +598,7 @@ class slover(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("pr_scaletocmap", self._as_matlab_object(), *args, **kwargs)
 
     def _pr_volmaxmin(self, *args, **kwargs):
@@ -600,4 +619,5 @@ class slover(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("pr_volmaxmin", self._as_matlab_object(), *args, **kwargs)

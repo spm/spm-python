@@ -47,4 +47,5 @@ def spm_dcm_peb_bmc_fam(*args, **kwargs):
 
     Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
+
     return Runtime.call("spm_dcm_peb_bmc_fam", *args, **kwargs)

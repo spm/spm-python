@@ -50,11 +50,12 @@ def ft_colormap(*args, **kwargs):
         - Cooper et al. 2021. Over the rainbow: Guidelines for meaningful use of colour maps in neurophysiology. https://doi.org/10.1016/j.neuroimage.2021.118628
         - Kovesi 2015, Good colour maps: How to design them. https://doi.org/10.48550/arXiv.1509.03700
 
-        See also COLORMAP, COLORMAPEDITOR, BREWERMAP, MATPLOTLIB, CMOCEAN, COLORCET
+        See also COLORMAP, COLORMAPEDITOR, BREWERMAP, MATPLOTLIB, CMOCEAN, COLORCET, COLORSPEC2RGB
 
 
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/plotting/ft_colormap.m )
 
     Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
+
     return Runtime.call("ft_colormap", *args, **kwargs)

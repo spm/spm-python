@@ -12,9 +12,9 @@ def ft_plot_headmodel(*args, **kwargs):
           ft_plot_headmodel(headmodel, ...)
 
         Optional arguments should come in key-value pairs and can include
-          'facecolor'    = [r g b] values or string, for example 'brain', 'cortex', 'skin', 'black', 'red', 'r', or an Nx3 or Nx1 array where N is the number of faces
-          'vertexcolor'  = [r g b] values or string, for example 'brain', 'cortex', 'skin', 'black', 'red', 'r', or an Nx3 or Nx1 array where N is the number of vertices
-          'edgecolor'    = [r g b] values or string, for example 'brain', 'cortex', 'skin', 'black', 'red', 'r'
+          'facecolor'    = [r g b] values or string, for example 'skin', 'skull', 'brain', 'black', 'red', 'r', or an Nx3 or Nx1 array where N is the number of faces
+          'vertexcolor'  = [r g b] values or string, for example 'skin', 'skull', 'brain', 'black', 'red', 'r', or an Nx3 or Nx1 array where N is the number of vertices
+          'edgecolor'    = [r g b] values or string, for example 'skin', 'skull', 'brain', 'black', 'red', 'r'
           'faceindex'    = true or false
           'vertexindex'  = true or false
           'facealpha'    = transparency, between 0 and 1 (default = 1)
@@ -39,4 +39,5 @@ def ft_plot_headmodel(*args, **kwargs):
 
     Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
+
     return Runtime.call("ft_plot_headmodel", *args, **kwargs, nargout=0)

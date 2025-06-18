@@ -22,6 +22,7 @@ class cfg_leaf(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         super().__init__()
 
     def disp(self, *args, **kwargs):
@@ -40,6 +41,7 @@ class cfg_leaf(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call(
             "disp", self._as_matlab_object(), *args, **kwargs, nargout=0
         )
@@ -60,6 +62,7 @@ class cfg_leaf(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call(
             "display", self._as_matlab_object(), *args, **kwargs, nargout=0
         )

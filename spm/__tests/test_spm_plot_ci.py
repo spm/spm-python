@@ -12,4 +12,5 @@ def test_spm_plot_ci(*args, **kwargs):
 
     Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
+
     return Runtime.call("test_spm_plot_ci", *args, **kwargs)

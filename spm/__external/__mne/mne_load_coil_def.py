@@ -22,4 +22,5 @@ def mne_load_coil_def(*args, **kwargs):
 
     Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
+
     return Runtime.call("mne_load_coil_def", *args, **kwargs)

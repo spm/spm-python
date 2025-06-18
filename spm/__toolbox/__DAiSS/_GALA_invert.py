@@ -11,4 +11,5 @@ def _GALA_invert(*args, **kwargs):
 
     Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
+
     return Runtime.call("GALA_invert", *args, **kwargs)

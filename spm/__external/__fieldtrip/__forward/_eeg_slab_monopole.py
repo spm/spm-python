@@ -18,4 +18,5 @@ def _eeg_slab_monopole(*args, **kwargs):
 
     Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
+
     return Runtime.call("eeg_slab_monopole", *args, **kwargs)

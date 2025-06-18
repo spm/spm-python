@@ -15,7 +15,7 @@ def ft_plot_line(*args, **kwargs):
           'linewidth'       =
           'tag'             = string, the tag assigned to the plotted elements (default = '')
 
-        It is possible to plot the object in a local pseudo-axis (c.f. subplot), which is specfied as follows
+        It is possible to plot the object in a local pseudo-axis (c.f. subplot), which is specified as follows
           'hpos'            = horizontal position of the center of the local axes
           'vpos'            = vertical position of the center of the local axes
           'width'           = width of the local axes
@@ -30,4 +30,5 @@ def ft_plot_line(*args, **kwargs):
 
     Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
+
     return Runtime.call("ft_plot_line", *args, **kwargs)

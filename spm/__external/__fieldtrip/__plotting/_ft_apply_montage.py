@@ -55,4 +55,5 @@ def _ft_apply_montage(*args, **kwargs):
 
     Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
+
     return Runtime.call("ft_apply_montage", *args, **kwargs)

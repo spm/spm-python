@@ -16,4 +16,5 @@ def mne_find_source_space_hemi(*args, **kwargs):
 
     Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
+
     return Runtime.call("mne_find_source_space_hemi", *args, **kwargs)

@@ -17,4 +17,5 @@ def _handle_atlas_input(*args, **kwargs):
 
     Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
+
     return Runtime.call("handle_atlas_input", *args, **kwargs)

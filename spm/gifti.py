@@ -20,6 +20,7 @@ class gifti(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         super().__init__()
 
     def display(self, *args, **kwargs):
@@ -34,6 +35,7 @@ class gifti(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call(
             "display", self._as_matlab_object(), *args, **kwargs, nargout=0
         )
@@ -52,6 +54,7 @@ class gifti(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("export", self._as_matlab_object(), *args, **kwargs)
 
     def fieldnames(self, *args, **kwargs):
@@ -67,6 +70,7 @@ class gifti(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("fieldnames", self._as_matlab_object(), *args, **kwargs)
 
     def isfield(self, *args, **kwargs):
@@ -83,6 +87,7 @@ class gifti(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("isfield", self._as_matlab_object(), *args, **kwargs)
 
     def plot(self, *args, **kwargs):
@@ -95,6 +100,7 @@ class gifti(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("plot", self._as_matlab_object(), *args, **kwargs)
 
     def save(self, *args, **kwargs):
@@ -116,6 +122,7 @@ class gifti(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call(
             "save", self._as_matlab_object(), *args, **kwargs, nargout=0
         )
@@ -137,6 +144,7 @@ class gifti(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call(
             "saveas", self._as_matlab_object(), *args, **kwargs, nargout=0
         )
@@ -154,6 +162,7 @@ class gifti(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("struct", self._as_matlab_object(), *args, **kwargs)
 
     def subsasgn(self, *args, **kwargs):
@@ -166,6 +175,7 @@ class gifti(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("subsasgn", self._as_matlab_object(), *args, **kwargs)
 
     def subsref(self, *args, **kwargs):
@@ -178,6 +188,7 @@ class gifti(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("subsref", self._as_matlab_object(), *args, **kwargs)
 
     def _base64(self, *args, **kwargs):
@@ -203,6 +214,7 @@ class gifti(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("base64", self._as_matlab_object(), *args, **kwargs)
 
     def _base64decode(self, *args, **kwargs):
@@ -228,6 +240,7 @@ class gifti(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("base64decode", self._as_matlab_object(), *args, **kwargs)
 
     def _base64encode(self, *args, **kwargs):
@@ -276,6 +289,7 @@ class gifti(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("base64encode", self._as_matlab_object(), *args, **kwargs)
 
     def _freesurfer_read(self, *args, **kwargs):
@@ -293,6 +307,7 @@ class gifti(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call(
             "freesurfer_read", self._as_matlab_object(), *args, **kwargs
         )
@@ -307,6 +322,7 @@ class gifti(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("getdict", self._as_matlab_object(), *args, **kwargs)
 
     def _gifti_read(self, *args, **kwargs):
@@ -322,6 +338,7 @@ class gifti(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("gifti_read", self._as_matlab_object(), *args, **kwargs)
 
     def _isintent(self, *args, **kwargs):
@@ -339,6 +356,7 @@ class gifti(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("isintent", self._as_matlab_object(), *args, **kwargs)
 
     def _mvtk_read(self, *args, **kwargs):
@@ -361,6 +379,7 @@ class gifti(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("mvtk_read", self._as_matlab_object(), *args, **kwargs)
 
     def _mvtk_write(self, *args, **kwargs):
@@ -385,6 +404,7 @@ class gifti(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call(
             "mvtk_write", self._as_matlab_object(), *args, **kwargs, nargout=0
         )
@@ -407,6 +427,7 @@ class gifti(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("mz3_read", self._as_matlab_object(), *args, **kwargs)
 
     def _mz3_write(self, *args, **kwargs):
@@ -428,6 +449,7 @@ class gifti(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call(
             "mz3_write", self._as_matlab_object(), *args, **kwargs, nargout=0
         )
@@ -450,6 +472,7 @@ class gifti(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("obj_read", self._as_matlab_object(), *args, **kwargs)
 
     def _off_read(self, *args, **kwargs):
@@ -470,6 +493,7 @@ class gifti(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("off_read", self._as_matlab_object(), *args, **kwargs)
 
     def _ply_read(self, *args, **kwargs):
@@ -490,6 +514,7 @@ class gifti(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("ply_read", self._as_matlab_object(), *args, **kwargs)
 
     def _stl_read(self, *args, **kwargs):
@@ -510,6 +535,7 @@ class gifti(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("stl_read", self._as_matlab_object(), *args, **kwargs)
 
     def _xml_parser(self, *args, **kwargs):
@@ -549,6 +575,7 @@ class gifti(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("xml_parser", self._as_matlab_object(), *args, **kwargs)
 
     def _zstream(self, *args, **kwargs):
@@ -579,4 +606,5 @@ class gifti(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("zstream", self._as_matlab_object(), *args, **kwargs)

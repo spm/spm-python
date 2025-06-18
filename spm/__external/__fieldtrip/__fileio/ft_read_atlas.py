@@ -4,9 +4,10 @@ from mpython import Runtime
 def ft_read_atlas(*args, **kwargs):
     """
       FT_READ_ATLAS reads an template/individual segmentation or parcellation from disk.
+
         The volumetric segmentation or the surface-based parcellation can either represent
-        a template atlas (e.g. AAL or the Talairach Daemon), it can represent an
-        individualized atlas (e.g. obtained from FreeSurfer) or it can represent an
+        a template atlas (for example AAL or the Talairach Daemon), it can represent an
+        individualized atlas (for example obtained from FreeSurfer) or it can represent an
         unlabeled parcellation/segmentation obtained from an individual's DTi, anatomical,
         or resting state fMRI scan.
 
@@ -17,18 +18,19 @@ def ft_read_atlas(*args, **kwargs):
 
         Additional options should be specified in key-value pairs and can include
           'format'      = string, see below
-          'unit'        = string, e.g. 'mm' (default is to keep it in the native units of the file)
+          'unit'        = string, for example 'mm' (default is to keep it in the native units of the file)
           'map'         = string, 'maxprob' (default), or 'prob', for FSL-based atlases, providing
                           either a probabilistic segmentation or a maximum a posterior probability map
-          'labelfile'   = string, point to a (generic) text or xml file for interpretation of the values in the atlas
+          'labelfile'   = string, point to a (generic) txt or xml file for the interpretation of
+                          the values in the atlas (default is automatic)
 
         For individual surface-based atlases from FreeSurfer you should specify two
         filenames as a cell-array: the first points to the file that contains information
         with respect to the parcels' labels, the second points to the file that defines the
         mesh on which the parcellation is defined.
 
-        The 'format' variable, if not specified, will be determined automatically. In general
-        it will not be needed to specify it. The following formats are supported:
+        The 'format' variable in general is not needed to be specified, it will be determined
+        automatically. The following formats are supported:
 
         Volumetric atlases based on a (gzipped) nifti-file with an companion txt-file for interpretation
           'aal'               assumes filename starting with 'ROI_MNI'
@@ -52,25 +54,26 @@ def ft_read_atlas(*args, **kwargs):
                               for the TTatlas+tlrc, or otherwise the interpretation should be in the file
 
         Volumetric atlas based on the spm_anatomy toolbox
-          'spm_anatomy'       pair of .hdr/.img files, and an associated mat-file for the interpretation
-                              Specify the associated mat-file with MPM in filename
+          'spm_anatomy'         pair of .hdr/.img files, and an associated mat-file for the interpretation. Please
+                                specify the associated mat-file with MPM as the filename.
 
         Surface based atlases, requiring a pair of files, containing the labels, and the associated geometry
-          'caret_label'       hcp-workbench/caret style .gii, with .label. in filename, requires additional file describing the geometry
-          'freesurfer_surface' freesurfer style annotation file, requires additional file describing the geometry
+          'caret_label'         hcp-workbench/caret style .gii, with .label. in filename, requires additional file describing the geometry
+          'freesurfer_surface'  freesurfer style annotation file, requires additional file describing the geometry
 
         Miscellaneous formats
-          'mat'               mat-file, with FieldTrip style struct, other matlab data that FieldTrip knows to handle, can also be
-                              Brainstorm derived surfaces
           'vtpm'
+          'mat'                 mat-file, with FieldTrip style struct, or other MATLAB data that FieldTrip knows to
+                                handle, this can also be Brainstorm derived surfaces
 
-        For volume data for whicth the format cannot be automatically detected, or if the volume data does not have a companion file
-        for the interpretation of the labels, a list of 'fake' labels will be generated.
+        A list of fake tissue labels will be generated if the volume data does not have a
+        companion file for the interpretation of the labels or for volume data for which
+        the format cannot be automatically detected.
 
         The output atlas will be represented as structure according to FT_DATATYPE_SEGMENTATION or
         FT_DATATYPE_PARCELLATION.
 
-        The 'lines' and the 'colorcube' colormaps may be useful for plotting the different
+        The 'lines' and the 'colorcube' colormaps are useful for plotting the different
         patches, for example using FT_PLOT_MESH, or FT_SOURCEPLOT.
 
         See also FT_READ_MRI, FT_READ_HEADSHAPE, FT_PREPARE_SOURCEMODEL, FT_SOURCEPARCELLATE, FT_PLOT_MESH
@@ -80,4 +83,5 @@ def ft_read_atlas(*args, **kwargs):
 
     Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
+
     return Runtime.call("ft_read_atlas", *args, **kwargs)

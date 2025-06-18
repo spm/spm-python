@@ -18,4 +18,5 @@ def _remove_unused_vertices(*args, **kwargs):
 
     Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
+
     return Runtime.call("remove_unused_vertices", *args, **kwargs)

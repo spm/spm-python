@@ -18,4 +18,5 @@ def spm_ADEM_cue_rt(*args, **kwargs):
 
     Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
+
     return Runtime.call("spm_ADEM_cue_rt", *args, **kwargs)

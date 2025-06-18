@@ -41,4 +41,5 @@ def spm_voice(*args, **kwargs):
 
     Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
+
     return Runtime.call("spm_voice", *args, **kwargs, nargout=0)

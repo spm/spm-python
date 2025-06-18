@@ -9,8 +9,8 @@ def ft_volumerealign(*args, **kwargs):
         matrix that describes the mapping from voxels to the coordinate system. It also
         appends a coordsys-field to the output data, or it updates it. This field specifies
         how the x/y/z-axes of the coordinate system should be interpreted. Occasionally,
-        the orientation and handedness of the output volume may be different from the orientation
-        and handedness of the input volume. This is determined by the cfg.flip
+        the orientation and handedness of the output volume may be different from the
+        orientation and handedness of the input volume. This is determined by the cfg.flip
         argument. See the code for more details.
 
         For spatial normalisation and deformation (i.e. warping) an MRI to a template brain
@@ -19,10 +19,11 @@ def ft_volumerealign(*args, **kwargs):
         Different methods for aligning the anatomical MRI to a coordinate system are
         implemented, which are described in detail below:
 
-        INTERACTIVE - Use a graphical user interface to click on the location of anatomical
-        landmarks or fiducials. The anatomical data can be displayed as three orthogonal
-        MRI slices or as a rendering of the head surface. The coordinate system is updated
-        according to the definition of the coordinates of these fiducials.
+        INTERACTIVE - This shows a graphical user interface in which you can click on the
+        location of anatomical landmarks or fiducials. The anatomical data can be displayed
+        as three orthogonal MRI slices or as a rendering of the head surface. The
+        coordinate system is updated according to the definition of the coordinates of
+        these fiducials.
 
         FIDUCIAL - The coordinate system is updated according to the definition of the
         coordinates of anatomical landmarks or fiducials that are specified in the
@@ -196,4 +197,5 @@ def ft_volumerealign(*args, **kwargs):
 
     Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
+
     return Runtime.call("ft_volumerealign", *args, **kwargs)

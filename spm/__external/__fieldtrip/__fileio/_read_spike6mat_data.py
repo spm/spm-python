@@ -28,4 +28,5 @@ def _read_spike6mat_data(*args, **kwargs):
 
     Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
+
     return Runtime.call("read_spike6mat_data", *args, **kwargs)

@@ -17,4 +17,5 @@ def cfg_vout_dir_move(*args, **kwargs):
 
     Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
+
     return Runtime.call("cfg_vout_dir_move", *args, **kwargs)

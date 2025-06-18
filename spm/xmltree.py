@@ -31,6 +31,7 @@ class xmltree(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         super().__init__()
 
     def add(self, *args, **kwargs):
@@ -62,6 +63,7 @@ class xmltree(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("add", self._as_matlab_object(), *args, **kwargs)
 
     def attributes(self, *args, **kwargs):
@@ -95,6 +97,7 @@ class xmltree(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("attributes", self._as_matlab_object(), *args, **kwargs)
 
     def branch(self, *args, **kwargs):
@@ -115,6 +118,7 @@ class xmltree(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("branch", self._as_matlab_object(), *args, **kwargs)
 
     def char(self, *args, **kwargs):
@@ -135,6 +139,7 @@ class xmltree(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("char", self._as_matlab_object(), *args, **kwargs)
 
     def children(self, *args, **kwargs):
@@ -155,6 +160,7 @@ class xmltree(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("children", self._as_matlab_object(), *args, **kwargs)
 
     def convert(self, *args, **kwargs):
@@ -184,6 +190,7 @@ class xmltree(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("convert", self._as_matlab_object(), *args, **kwargs)
 
     def copy(self, *args, **kwargs):
@@ -205,6 +212,7 @@ class xmltree(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("copy", self._as_matlab_object(), *args, **kwargs)
 
     def delete(self, *args, **kwargs):
@@ -224,6 +232,7 @@ class xmltree(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("delete", self._as_matlab_object(), *args, **kwargs)
 
     def display(self, *args, **kwargs):
@@ -243,6 +252,7 @@ class xmltree(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call(
             "display", self._as_matlab_object(), *args, **kwargs, nargout=0
         )
@@ -263,6 +273,7 @@ class xmltree(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call(
             "editor", self._as_matlab_object(), *args, **kwargs, nargout=0
         )
@@ -296,6 +307,7 @@ class xmltree(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("find", self._as_matlab_object(), *args, **kwargs)
 
     def flush(self, *args, **kwargs):
@@ -316,6 +328,7 @@ class xmltree(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("flush", self._as_matlab_object(), *args, **kwargs)
 
     def get(self, *args, **kwargs):
@@ -337,6 +350,7 @@ class xmltree(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("get", self._as_matlab_object(), *args, **kwargs)
 
     def getfilename(self, *args, **kwargs):
@@ -357,6 +371,7 @@ class xmltree(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("getfilename", self._as_matlab_object(), *args, **kwargs)
 
     def isfield(self, *args, **kwargs):
@@ -378,6 +393,7 @@ class xmltree(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("isfield", self._as_matlab_object(), *args, **kwargs)
 
     def length(self, *args, **kwargs):
@@ -399,6 +415,7 @@ class xmltree(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("length", self._as_matlab_object(), *args, **kwargs)
 
     def move(self, *args, **kwargs):
@@ -419,6 +436,7 @@ class xmltree(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("move", self._as_matlab_object(), *args, **kwargs)
 
     def parent(self, *args, **kwargs):
@@ -439,6 +457,7 @@ class xmltree(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("parent", self._as_matlab_object(), *args, **kwargs)
 
     def root(self, *args, **kwargs):
@@ -458,6 +477,7 @@ class xmltree(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("root", self._as_matlab_object(), *args, **kwargs)
 
     def save(self, *args, **kwargs):
@@ -479,6 +499,7 @@ class xmltree(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("save", self._as_matlab_object(), *args, **kwargs)
 
     def set_(self, *args, **kwargs):
@@ -501,6 +522,7 @@ class xmltree(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("set", self._as_matlab_object(), *args, **kwargs)
 
     def setfilename(self, *args, **kwargs):
@@ -520,6 +542,7 @@ class xmltree(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("setfilename", self._as_matlab_object(), *args, **kwargs)
 
     def view(self, *args, **kwargs):
@@ -540,6 +563,7 @@ class xmltree(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call(
             "view", self._as_matlab_object(), *args, **kwargs, nargout=0
         )
@@ -567,6 +591,7 @@ class xmltree(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("struct2xml", self._as_matlab_object(), *args, **kwargs)
 
     def _xml_findstr(self, *args, **kwargs):
@@ -598,6 +623,7 @@ class xmltree(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("xml_findstr", self._as_matlab_object(), *args, **kwargs)
 
     def _xml_parser(self, *args, **kwargs):
@@ -622,4 +648,5 @@ class xmltree(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("xml_parser", self._as_matlab_object(), *args, **kwargs)

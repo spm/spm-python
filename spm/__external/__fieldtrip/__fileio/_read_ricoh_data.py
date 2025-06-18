@@ -21,4 +21,5 @@ def _read_ricoh_data(*args, **kwargs):
 
     Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
+
     return Runtime.call("read_ricoh_data", *args, **kwargs)

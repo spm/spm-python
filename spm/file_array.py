@@ -25,6 +25,7 @@ class file_array(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         super().__init__()
 
     def cat(self, *args, **kwargs):
@@ -38,6 +39,7 @@ class file_array(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("cat", self._as_matlab_object(), *args, **kwargs)
 
     def ctranspose(self, *args, **kwargs):
@@ -50,6 +52,7 @@ class file_array(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("ctranspose", self._as_matlab_object(), *args, **kwargs)
 
     def disp(self, *args, **kwargs):
@@ -62,6 +65,7 @@ class file_array(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call(
             "disp", self._as_matlab_object(), *args, **kwargs, nargout=0
         )
@@ -76,6 +80,7 @@ class file_array(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call(
             "display", self._as_matlab_object(), *args, **kwargs, nargout=0
         )
@@ -92,6 +97,7 @@ class file_array(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("double", self._as_matlab_object(), *args, **kwargs)
 
     def end(self, *args, **kwargs):
@@ -104,6 +110,7 @@ class file_array(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("end", self._as_matlab_object(), *args, **kwargs)
 
     def fieldnames(self, *args, **kwargs):
@@ -116,6 +123,7 @@ class file_array(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("fieldnames", self._as_matlab_object(), *args, **kwargs)
 
     def full(self, *args, **kwargs):
@@ -130,6 +138,7 @@ class file_array(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("full", self._as_matlab_object(), *args, **kwargs)
 
     def horzcat(self, *args, **kwargs):
@@ -142,6 +151,7 @@ class file_array(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("horzcat", self._as_matlab_object(), *args, **kwargs)
 
     def initialise(self, *args, **kwargs):
@@ -157,6 +167,7 @@ class file_array(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call(
             "initialise", self._as_matlab_object(), *args, **kwargs, nargout=0
         )
@@ -173,6 +184,7 @@ class file_array(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("isnan", self._as_matlab_object(), *args, **kwargs)
 
     def length(self, *args, **kwargs):
@@ -185,6 +197,7 @@ class file_array(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("length", self._as_matlab_object(), *args, **kwargs)
 
     def loadobj(self, *args, **kwargs):
@@ -197,6 +210,7 @@ class file_array(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("loadobj", self._as_matlab_object(), *args, **kwargs)
 
     def ndims(self, *args, **kwargs):
@@ -209,6 +223,7 @@ class file_array(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("ndims", self._as_matlab_object(), *args, **kwargs)
 
     def numel(self, *args, **kwargs):
@@ -221,6 +236,7 @@ class file_array(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("numel", self._as_matlab_object(), *args, **kwargs)
 
     def numeric(self, *args, **kwargs):
@@ -235,6 +251,7 @@ class file_array(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("numeric", self._as_matlab_object(), *args, **kwargs)
 
     def permute(self, *args, **kwargs):
@@ -247,6 +264,7 @@ class file_array(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("permute", self._as_matlab_object(), *args, **kwargs)
 
     def reshape(self, *args, **kwargs):
@@ -259,6 +277,7 @@ class file_array(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("reshape", self._as_matlab_object(), *args, **kwargs)
 
     def size(self, *args, **kwargs):
@@ -271,6 +290,7 @@ class file_array(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("size", self._as_matlab_object(), *args, **kwargs)
 
     def subsasgn(self, *args, **kwargs):
@@ -283,6 +303,7 @@ class file_array(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("subsasgn", self._as_matlab_object(), *args, **kwargs)
 
     def subsref(self, *args, **kwargs):
@@ -296,6 +317,7 @@ class file_array(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("subsref", self._as_matlab_object(), *args, **kwargs)
 
     def transpose(self, *args, **kwargs):
@@ -308,6 +330,7 @@ class file_array(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("transpose", self._as_matlab_object(), *args, **kwargs)
 
     def vertcat(self, *args, **kwargs):
@@ -320,6 +343,7 @@ class file_array(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("vertcat", self._as_matlab_object(), *args, **kwargs)
 
     def _datatypes(self, *args, **kwargs):
@@ -332,6 +356,7 @@ class file_array(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("datatypes", self._as_matlab_object(), *args, **kwargs)
 
     def _dim(self, *args, **kwargs):
@@ -349,6 +374,7 @@ class file_array(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("dim", self._as_matlab_object(), *args, **kwargs)
 
     def _dtype(self, *args, **kwargs):
@@ -367,6 +393,7 @@ class file_array(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("dtype", self._as_matlab_object(), *args, **kwargs)
 
     def _file2mat(self, *args, **kwargs):
@@ -385,6 +412,7 @@ class file_array(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("file2mat", self._as_matlab_object(), *args, **kwargs)
 
     def _fname(self, *args, **kwargs):
@@ -402,6 +430,7 @@ class file_array(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("fname", self._as_matlab_object(), *args, **kwargs)
 
     def _init(self, *args, **kwargs):
@@ -423,6 +452,7 @@ class file_array(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call(
             "init", self._as_matlab_object(), *args, **kwargs, nargout=0
         )
@@ -443,6 +473,7 @@ class file_array(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call(
             "mat2file", self._as_matlab_object(), *args, **kwargs, nargout=0
         )
@@ -456,6 +487,7 @@ class file_array(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("mystruct", self._as_matlab_object(), *args, **kwargs)
 
     def _offset(self, *args, **kwargs):
@@ -473,6 +505,7 @@ class file_array(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("offset", self._as_matlab_object(), *args, **kwargs)
 
     def _permission(self, *args, **kwargs):
@@ -490,6 +523,7 @@ class file_array(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("permission", self._as_matlab_object(), *args, **kwargs)
 
     def _resize_scales(self, *args, **kwargs):
@@ -502,6 +536,7 @@ class file_array(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("resize_scales", self._as_matlab_object(), *args, **kwargs)
 
     def _scl_inter(self, *args, **kwargs):
@@ -519,6 +554,7 @@ class file_array(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("scl_inter", self._as_matlab_object(), *args, **kwargs)
 
     def _scl_slope(self, *args, **kwargs):
@@ -536,4 +572,5 @@ class file_array(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("scl_slope", self._as_matlab_object(), *args, **kwargs)

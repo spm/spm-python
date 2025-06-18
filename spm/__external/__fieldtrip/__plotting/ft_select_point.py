@@ -27,4 +27,5 @@ def ft_select_point(*args, **kwargs):
 
     Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
+
     return Runtime.call("ft_select_point", *args, **kwargs)

@@ -42,7 +42,6 @@ def ft_singleplotTFR(*args, **kwargs):
                                In a interactive plot you can select areas and produce a new
                                interactive plot when a selected area is clicked. Multiple areas
                                can be selected by holding down the SHIFT key.
-          cfg.figure         = 'yes' or 'no', whether to open a new figure. You can also specify a figure handle from FIGURE, GCF or SUBPLOT. (default = 'yes')
           cfg.position       = location and size of the figure, specified as [left bottom width height] (default is automatic)
           cfg.renderer       = string, 'opengl', 'zbuffer', 'painters', see RENDERERINFO (default is automatic, try 'painters' when it crashes)
           cfg.directionality = '', 'inflow' or 'outflow' specifies for
@@ -50,6 +49,9 @@ def ft_singleplotTFR(*args, **kwargs):
                               node, or the outflow from a node is plotted. The
                               (default) behavior of this option depends on the dimor
                               of the input data (see below).
+          cfg.figure         = 'yes', 'no', or 'subplot',  whether to open a new figure. You can also specify a figure
+                               handle from FIGURE, GCF or SUBPLOT. (default = 'yes'). With multiple data inputs, 'subplot'
+                               will make subplots in a single figure.
 
         The following options for the scaling of the EEG, EOG, ECG, EMG, MEG and NIRS channels
         is optional and can be used to bring the absolute numbers of the different
@@ -67,23 +69,16 @@ def ft_singleplotTFR(*args, **kwargs):
           cfg.mychan         = Nx1 cell-array with selection of channels
           cfg.chanscale      = Nx1 vector with scaling factors, one per channel specified in cfg.channel
 
-        For the plotting of directional connectivity data the cfg.directionality
-        option determines what is plotted. The default value and the supported
-        functionality depend on the dimord of the input data. If the input data
-        is of dimord 'chan_chan_XXX', the value of directionality determines
-        whether, given the reference channel(s), the columns (inflow), or rows
-        (outflow) are selected for plotting. In this situation the default is
-        'inflow'. Note that for undirected measures, inflow and outflow should
-        give the same output. If the input data is of dimord 'chancmb_XXX', the
-        value of directionality determines whether the rows in data.labelcmb are
-        selected. With 'inflow' the rows are selected if the refchannel(s) occur in
-        the right column, with 'outflow' the rows are selected if the
-        refchannel(s) occur in the left column of the labelcmb-field. Default in
-        this case is '', which means that all rows are selected in which the
-        refchannel(s) occur. This is to robustly support linearly indexed
-        undirected connectivity metrics. In the situation where undirected
-        connectivity measures are linearly indexed, specifying 'inflow' or
-        'outflow' can result in unexpected behavior.
+        For the plotting of directional connectivity data the cfg.directionality option determines what is plotted. The default
+        value and the supported functionality depend on the dimord of the input data. If the input data is of dimord 'chan_chan_XXX',
+        the value of directionality determines whether, given the reference channel(s), the columns (inflow), or rows (outflow) are
+        selected for plotting. In this situation the default is 'inflow'. Note that for undirected measures, inflow and outflow should
+        give the same output. If the input data is of dimord 'chancmb_XXX', the value of directionality determines whether the rows in
+        data.labelcmb are selected. With 'inflow' the rows are selected if the refchannel(s) occur in the right column, with 'outflow'
+        the rows are selected if the refchannel(s) occur in the left column of the labelcmb-field. Default in this case is '', which
+        means that all rows are selected in which the refchannel(s) occur. This is to robustly support linearly indexed undirected
+        connectivity metrics. In the situation where undirected connectivity measures are linearly indexed, specifying 'inflow' or
+        outflow' can result in unexpected behavior.
 
         See also FT_SINGLEPLOTER, FT_MULTIPLOTER, FT_MULTIPLOTTFR, FT_TOPOPLOTER, FT_TOPOPLOTTFR
 
@@ -92,4 +87,5 @@ def ft_singleplotTFR(*args, **kwargs):
 
     Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
+
     return Runtime.call("ft_singleplotTFR", *args, **kwargs)

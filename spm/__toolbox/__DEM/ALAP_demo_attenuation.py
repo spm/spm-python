@@ -22,4 +22,5 @@ def ALAP_demo_attenuation(*args, **kwargs):
 
     Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
+
     return Runtime.call("ALAP_demo_attenuation", *args, **kwargs, nargout=0)

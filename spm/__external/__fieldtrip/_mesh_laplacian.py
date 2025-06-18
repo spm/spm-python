@@ -28,11 +28,12 @@ def _mesh_laplacian(*args, **kwargs):
         Interpolation on a triangulated 3D surface.
         Journal of Computational Physics, 80: 331-343.
 
-        See also, eeg_interp_scalp_mesh
+        See also EEG_INTERP_SCALP_MESH
 
 
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/mesh_laplacian.m )
 
     Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
+
     return Runtime.call("mesh_laplacian", *args, **kwargs)

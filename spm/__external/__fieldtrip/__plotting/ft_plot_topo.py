@@ -23,7 +23,7 @@ def ft_plot_topo(*args, **kwargs):
           'parent'        = handle which is set as the parent for all plots (default = [])
           'tag'           = string, the tag assigned to the plotted elements (default = '')
 
-        It is possible to plot the object in a local pseudo-axis (c.f. subplot), which is specfied as follows
+        It is possible to plot the object in a local pseudo-axis (c.f. subplot), which is specified as follows
           'box'           = draw a box around the local axes, can be 'yes' or 'no'
           'hpos'          = horizontal position of the lower left corner of the local axes
           'vpos'          = vertical position of the lower left corner of the local axes
@@ -39,4 +39,5 @@ def ft_plot_topo(*args, **kwargs):
 
     Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
+
     return Runtime.call("ft_plot_topo", *args, **kwargs)

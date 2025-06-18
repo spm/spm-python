@@ -3,7 +3,7 @@ from mpython import Runtime
 
 def ft_uilayout(*args, **kwargs):
     """
-      FT_UILAYOUT is a helper function to make a consistent graphical user interafce with
+      FT_UILAYOUT is a helper function to make a consistent graphical user interface with
         multiple control elements. This function will find all elements with a specific tag
         and style, and update or position them consistently.
 
@@ -65,4 +65,5 @@ def ft_uilayout(*args, **kwargs):
 
     Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
+
     return Runtime.call("ft_uilayout", *args, **kwargs, nargout=0)

@@ -28,4 +28,5 @@ def DEMO_model_reduction_ERP(*args, **kwargs):
 
     Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
+
     return Runtime.call("DEMO_model_reduction_ERP", *args, **kwargs, nargout=0)

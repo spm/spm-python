@@ -20,4 +20,5 @@ def _cfg_ui_restore(*args, **kwargs):
 
     Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
+
     return Runtime.call("cfg_ui_restore", *args, **kwargs, nargout=0)

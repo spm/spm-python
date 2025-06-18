@@ -18,4 +18,5 @@ def _biopac_acq(*args, **kwargs):
 
     Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
+
     return Runtime.call("biopac_acq", *args, **kwargs)

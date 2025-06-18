@@ -51,4 +51,5 @@ def DEM_demo_MDP_XX(*args, **kwargs):
 
     Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
+
     return Runtime.call("DEM_demo_MDP_XX", *args, **kwargs)

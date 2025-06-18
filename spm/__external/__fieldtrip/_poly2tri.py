@@ -11,11 +11,12 @@ def _poly2tri(*args, **kwargs):
         Use as
          mesh = poly2tri(mesh)
 
-        See also MESH2EDGE
+        See also MESH2EDGE, TRI2BND
 
 
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/poly2tri.m )
 
     Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
+
     return Runtime.call("poly2tri", *args, **kwargs)

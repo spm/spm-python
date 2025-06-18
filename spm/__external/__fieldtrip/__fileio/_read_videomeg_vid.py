@@ -17,4 +17,5 @@ def _read_videomeg_vid(*args, **kwargs):
 
     Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
+
     return Runtime.call("read_videomeg_vid", *args, **kwargs)

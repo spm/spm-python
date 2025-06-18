@@ -130,6 +130,7 @@ class meeg(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         super().__init__()
 
     def badchannels(self, *args, **kwargs):
@@ -143,6 +144,7 @@ class meeg(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("badchannels", self._as_matlab_object(), *args, **kwargs)
 
     def badsamples(self, *args, **kwargs):
@@ -156,6 +158,7 @@ class meeg(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("badsamples", self._as_matlab_object(), *args, **kwargs)
 
     def badtrials(self, *args, **kwargs):
@@ -169,6 +172,7 @@ class meeg(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("badtrials", self._as_matlab_object(), *args, **kwargs)
 
     def blank(self, *args, **kwargs):
@@ -186,6 +190,7 @@ class meeg(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("blank", self._as_matlab_object(), *args, **kwargs)
 
     def chanlabels(self, *args, **kwargs):
@@ -199,6 +204,7 @@ class meeg(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("chanlabels", self._as_matlab_object(), *args, **kwargs)
 
     def chantype(self, *args, **kwargs):
@@ -217,6 +223,7 @@ class meeg(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("chantype", self._as_matlab_object(), *args, **kwargs)
 
     def check(self, *args, **kwargs):
@@ -238,6 +245,7 @@ class meeg(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("check", self._as_matlab_object(), *args, **kwargs)
 
     def clone(self, *args, **kwargs):
@@ -260,6 +268,7 @@ class meeg(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("clone", self._as_matlab_object(), *args, **kwargs)
 
     def conditions(self, *args, **kwargs):
@@ -273,6 +282,7 @@ class meeg(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("conditions", self._as_matlab_object(), *args, **kwargs)
 
     def condlist(self, *args, **kwargs):
@@ -287,6 +297,7 @@ class meeg(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("condlist", self._as_matlab_object(), *args, **kwargs)
 
     def coor2D(self, *args, **kwargs):
@@ -300,6 +311,7 @@ class meeg(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("coor2D", self._as_matlab_object(), *args, **kwargs)
 
     def copy(self, *args, **kwargs):
@@ -317,6 +329,7 @@ class meeg(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("copy", self._as_matlab_object(), *args, **kwargs)
 
     def delete(self, *args, **kwargs):
@@ -330,6 +343,7 @@ class meeg(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("delete", self._as_matlab_object(), *args, **kwargs)
 
     def display(self, *args, **kwargs):
@@ -343,6 +357,7 @@ class meeg(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("display", self._as_matlab_object(), *args, **kwargs)
 
     def end(self, *args, **kwargs):
@@ -355,6 +370,7 @@ class meeg(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("end", self._as_matlab_object(), *args, **kwargs)
 
     def events(self, *args, **kwargs):
@@ -369,6 +385,7 @@ class meeg(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("events", self._as_matlab_object(), *args, **kwargs)
 
     def fiducials(self, *args, **kwargs):
@@ -382,6 +399,7 @@ class meeg(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("fiducials", self._as_matlab_object(), *args, **kwargs)
 
     def fieldnames(self, *args, **kwargs):
@@ -397,6 +415,7 @@ class meeg(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("fieldnames", self._as_matlab_object(), *args, **kwargs)
 
     def fname(self, *args, **kwargs):
@@ -410,6 +429,7 @@ class meeg(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("fname", self._as_matlab_object(), *args, **kwargs)
 
     def fnamedat(self, *args, **kwargs):
@@ -423,6 +443,7 @@ class meeg(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("fnamedat", self._as_matlab_object(), *args, **kwargs)
 
     def frequencies(self, *args, **kwargs):
@@ -436,6 +457,7 @@ class meeg(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("frequencies", self._as_matlab_object(), *args, **kwargs)
 
     def fsample(self, *args, **kwargs):
@@ -449,6 +471,7 @@ class meeg(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("fsample", self._as_matlab_object(), *args, **kwargs)
 
     def ftraw(self, *args, **kwargs):
@@ -462,6 +485,7 @@ class meeg(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("ftraw", self._as_matlab_object(), *args, **kwargs)
 
     def fttimelock(self, *args, **kwargs):
@@ -479,6 +503,7 @@ class meeg(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("fttimelock", self._as_matlab_object(), *args, **kwargs)
 
     def fullfile(self, *args, **kwargs):
@@ -492,6 +517,7 @@ class meeg(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("fullfile", self._as_matlab_object(), *args, **kwargs)
 
     def getfield(self, *args, **kwargs):
@@ -507,6 +533,7 @@ class meeg(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("getfield", self._as_matlab_object(), *args, **kwargs)
 
     def history(self, *args, **kwargs):
@@ -521,6 +548,7 @@ class meeg(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("history", self._as_matlab_object(), *args, **kwargs)
 
     def indchannel(self, *args, **kwargs):
@@ -538,6 +566,7 @@ class meeg(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("indchannel", self._as_matlab_object(), *args, **kwargs)
 
     def indchantype(self, *args, **kwargs):
@@ -558,6 +587,7 @@ class meeg(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("indchantype", self._as_matlab_object(), *args, **kwargs)
 
     def indfrequency(self, *args, **kwargs):
@@ -575,6 +605,7 @@ class meeg(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("indfrequency", self._as_matlab_object(), *args, **kwargs)
 
     def indsample(self, *args, **kwargs):
@@ -592,6 +623,7 @@ class meeg(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("indsample", self._as_matlab_object(), *args, **kwargs)
 
     def indtrial(self, *args, **kwargs):
@@ -613,6 +645,7 @@ class meeg(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("indtrial", self._as_matlab_object(), *args, **kwargs)
 
     def isempty(self, *args, **kwargs):
@@ -626,6 +659,7 @@ class meeg(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("isempty", self._as_matlab_object(), *args, **kwargs)
 
     def isequal(self, *args, **kwargs):
@@ -639,6 +673,7 @@ class meeg(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("isequal", self._as_matlab_object(), *args, **kwargs)
 
     def isfield(self, *args, **kwargs):
@@ -655,6 +690,7 @@ class meeg(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("isfield", self._as_matlab_object(), *args, **kwargs)
 
     def islinked(self, *args, **kwargs):
@@ -668,6 +704,7 @@ class meeg(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("islinked", self._as_matlab_object(), *args, **kwargs)
 
     def link(self, *args, **kwargs):
@@ -686,6 +723,7 @@ class meeg(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("link", self._as_matlab_object(), *args, **kwargs)
 
     def modality(self, *args, **kwargs):
@@ -706,6 +744,7 @@ class meeg(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("modality", self._as_matlab_object(), *args, **kwargs)
 
     def montage(self, *args, **kwargs):
@@ -737,6 +776,7 @@ class meeg(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("montage", self._as_matlab_object(), *args, **kwargs)
 
     def move(self, *args, **kwargs):
@@ -755,6 +795,7 @@ class meeg(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("move", self._as_matlab_object(), *args, **kwargs)
 
     def nchannels(self, *args, **kwargs):
@@ -768,6 +809,7 @@ class meeg(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("nchannels", self._as_matlab_object(), *args, **kwargs)
 
     def nconditions(self, *args, **kwargs):
@@ -781,6 +823,7 @@ class meeg(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("nconditions", self._as_matlab_object(), *args, **kwargs)
 
     def nfrequencies(self, *args, **kwargs):
@@ -794,6 +837,7 @@ class meeg(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("nfrequencies", self._as_matlab_object(), *args, **kwargs)
 
     def nsamples(self, *args, **kwargs):
@@ -807,6 +851,7 @@ class meeg(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("nsamples", self._as_matlab_object(), *args, **kwargs)
 
     def ntrials(self, *args, **kwargs):
@@ -820,6 +865,7 @@ class meeg(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("ntrials", self._as_matlab_object(), *args, **kwargs)
 
     def path(self, *args, **kwargs):
@@ -833,6 +879,7 @@ class meeg(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("path", self._as_matlab_object(), *args, **kwargs)
 
     def reload(self, *args, **kwargs):
@@ -848,6 +895,7 @@ class meeg(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("reload", self._as_matlab_object(), *args, **kwargs)
 
     def repl(self, *args, **kwargs):
@@ -861,6 +909,7 @@ class meeg(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("repl", self._as_matlab_object(), *args, **kwargs)
 
     def rmdata(self, *args, **kwargs):
@@ -874,6 +923,7 @@ class meeg(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("rmdata", self._as_matlab_object(), *args, **kwargs)
 
     def rmfield(self, *args, **kwargs):
@@ -887,6 +937,7 @@ class meeg(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("rmfield", self._as_matlab_object(), *args, **kwargs)
 
     def save(self, *args, **kwargs):
@@ -902,6 +953,7 @@ class meeg(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("save", self._as_matlab_object(), *args, **kwargs)
 
     def sconfounds(self, *args, **kwargs):
@@ -915,6 +967,7 @@ class meeg(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("sconfounds", self._as_matlab_object(), *args, **kwargs)
 
     def selectchannels(self, *args, **kwargs):
@@ -933,6 +986,7 @@ class meeg(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("selectchannels", self._as_matlab_object(), *args, **kwargs)
 
     def selectdata(self, *args, **kwargs):
@@ -953,6 +1007,7 @@ class meeg(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("selectdata", self._as_matlab_object(), *args, **kwargs)
 
     def sensors(self, *args, **kwargs):
@@ -968,6 +1023,7 @@ class meeg(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("sensors", self._as_matlab_object(), *args, **kwargs)
 
     def size(self, *args, **kwargs):
@@ -981,6 +1037,7 @@ class meeg(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("size", self._as_matlab_object(), *args, **kwargs)
 
     def subsasgn(self, *args, **kwargs):
@@ -993,6 +1050,7 @@ class meeg(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("subsasgn", self._as_matlab_object(), *args, **kwargs)
 
     def subsref(self, *args, **kwargs):
@@ -1006,6 +1064,7 @@ class meeg(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("subsref", self._as_matlab_object(), *args, **kwargs)
 
     def time(self, *args, **kwargs):
@@ -1019,6 +1078,7 @@ class meeg(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("time", self._as_matlab_object(), *args, **kwargs)
 
     def timeonset(self, *args, **kwargs):
@@ -1033,6 +1093,7 @@ class meeg(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("timeonset", self._as_matlab_object(), *args, **kwargs)
 
     def transformtype(self, *args, **kwargs):
@@ -1046,6 +1107,7 @@ class meeg(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("transformtype", self._as_matlab_object(), *args, **kwargs)
 
     def trialonset(self, *args, **kwargs):
@@ -1060,6 +1122,7 @@ class meeg(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("trialonset", self._as_matlab_object(), *args, **kwargs)
 
     def trialtag(self, *args, **kwargs):
@@ -1078,6 +1141,7 @@ class meeg(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("trialtag", self._as_matlab_object(), *args, **kwargs)
 
     def type_(self, *args, **kwargs):
@@ -1091,6 +1155,7 @@ class meeg(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("type", self._as_matlab_object(), *args, **kwargs)
 
     def units(self, *args, **kwargs):
@@ -1104,6 +1169,7 @@ class meeg(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("units", self._as_matlab_object(), *args, **kwargs)
 
     def unlink(self, *args, **kwargs):
@@ -1117,6 +1183,7 @@ class meeg(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("unlink", self._as_matlab_object(), *args, **kwargs)
 
     def _checkmeeg(self, *args, **kwargs):
@@ -1131,6 +1198,7 @@ class meeg(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("checkmeeg", self._as_matlab_object(), *args, **kwargs)
 
     def _fixpnt(self, *args, **kwargs):
@@ -1144,6 +1212,7 @@ class meeg(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("fixpnt", self._as_matlab_object(), *args, **kwargs)
 
     def _getset(self, *args, **kwargs):
@@ -1157,6 +1226,7 @@ class meeg(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("getset", self._as_matlab_object(), *args, **kwargs)
 
     def _match_str(self, *args, **kwargs):
@@ -1182,6 +1252,7 @@ class meeg(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call("match_str", self._as_matlab_object(), *args, **kwargs)
 
     def _warning_flexible(self, *args, **kwargs):
@@ -1195,6 +1266,7 @@ class meeg(MatlabClass):
 
         Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
         """
+
         return Runtime.call(
             "warning_flexible", self._as_matlab_object(), *args, **kwargs, nargout=0
         )

@@ -26,10 +26,10 @@ def ft_multiplotER(*args, **kwargs):
           cfg.maskfacealpha = mask transparency value between 0 and 1
           cfg.xlim          = 'maxmin', 'maxabs', 'zeromax', 'minzero', or [xmin xmax] (default = 'maxmin')
           cfg.ylim          = 'maxmin', 'maxabs', 'zeromax', 'minzero', or [ymin ymax] (default = 'maxmin')
-          cfg.gradscale     = number, scaling to apply to the MEG gradiometer channels prior to display
-          cfg.magscale      = number, scaling to apply to the MEG magnetometer channels prior to display
           cfg.channel       = Nx1 cell-array with selection of channels (default = 'all'), see FT_CHANNELSELECTION for details
           cfg.refchannel    = name of reference channel for visualising connectivity, can be 'gui'
+          cfg.magscale      = number, scaling to apply to the MEG magnetometer channels prior to display
+          cfg.gradscale     = number, scaling to apply to the MEG gradiometer channels prior to display
           cfg.baseline      = 'yes', 'no' or [time1 time2] (default = 'no'), see FT_TIMELOCKBASELINE or FT_FREQBASELINE
           cfg.trials        = 'all' or a selection given as a 1xN vector (default = 'all')
           cfg.axes          = string, 'yes' or 'no' whether to draw x- and y-axes for each graph (default = 'yes')
@@ -123,4 +123,5 @@ def ft_multiplotER(*args, **kwargs):
 
     Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
+
     return Runtime.call("ft_multiplotER", *args, **kwargs)

@@ -11,4 +11,5 @@ def _make_or_fetch_inputfile(*args, **kwargs):
 
     Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
+
     return Runtime.call("make_or_fetch_inputfile", *args, **kwargs)

@@ -3,7 +3,7 @@ from mpython import Runtime
 
 def bf_regularise_tichonov_rankdef(*args, **kwargs):
     """
-      Tichonov regularisation for rank deficient matrices based on the function
+      Tikhonov regularisation for rank deficient matrices based on the function
        __________________________________________________________________________
 
 
@@ -11,4 +11,5 @@ def bf_regularise_tichonov_rankdef(*args, **kwargs):
 
     Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
+
     return Runtime.call("bf_regularise_tichonov_rankdef", *args, **kwargs)

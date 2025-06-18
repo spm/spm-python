@@ -14,4 +14,5 @@ def _browse_topoplotVAR(*args, **kwargs):
 
     Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
+
     return Runtime.call("browse_topoplotVAR", *args, **kwargs, nargout=0)

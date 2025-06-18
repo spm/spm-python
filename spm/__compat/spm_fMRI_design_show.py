@@ -16,4 +16,5 @@ def spm_fMRI_design_show(*args, **kwargs):
 
     Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
+
     return Runtime.call("spm_fMRI_design_show", *args, **kwargs, nargout=0)

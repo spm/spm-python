@@ -13,4 +13,5 @@ def mne_license(*args, **kwargs):
 
     Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
+
     return Runtime.call("mne_license", *args, **kwargs, nargout=0)

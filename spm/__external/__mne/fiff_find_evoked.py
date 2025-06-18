@@ -13,4 +13,5 @@ def fiff_find_evoked(*args, **kwargs):
 
     Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
+
     return Runtime.call("fiff_find_evoked", *args, **kwargs)

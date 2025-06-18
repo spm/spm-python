@@ -21,4 +21,5 @@ def _mat2ades(*args, **kwargs):
 
     Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
+
     return Runtime.call("mat2ades", *args, **kwargs, nargout=0)

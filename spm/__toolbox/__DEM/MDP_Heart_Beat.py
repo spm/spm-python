@@ -15,4 +15,5 @@ def MDP_Heart_Beat(*args, **kwargs):
 
     Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
+
     return Runtime.call("MDP_Heart_Beat", *args, **kwargs)

@@ -15,4 +15,5 @@ def _nut_dSPM(*args, **kwargs):
 
     Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
+
     return Runtime.call("nut_dSPM", *args, **kwargs)

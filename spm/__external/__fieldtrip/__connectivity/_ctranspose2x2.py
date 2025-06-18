@@ -10,4 +10,5 @@ def _ctranspose2x2(*args, **kwargs):
 
     Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
+
     return Runtime.call("ctranspose2x2", *args, **kwargs)

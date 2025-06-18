@@ -24,4 +24,5 @@ def _write_bioimage_mgrid(*args, **kwargs):
 
     Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
+
     return Runtime.call("write_bioimage_mgrid", *args, **kwargs, nargout=0)

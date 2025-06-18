@@ -17,4 +17,5 @@ def fiff_reset_ch_pos(*args, **kwargs):
 
     Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
+
     return Runtime.call("fiff_reset_ch_pos", *args, **kwargs)

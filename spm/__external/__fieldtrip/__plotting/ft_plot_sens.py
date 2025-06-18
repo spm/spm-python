@@ -43,10 +43,16 @@ def ft_plot_sens(*args, **kwargs):
           'style'           = plotting style for the points representing the channels, see plot3 (default = [])
           'marker'          = marker type representing the channels, see plot3 (default = '.')
         The following options apply when electrodes/coils/optodes are plotted individually
-          'facecolor'       = [r g b] values or string, for example 'brain', 'cortex', 'skin', 'black', 'red', 'r', or an Nx3 or Nx1 array where N is the number of faces (default is automatic)
-          'edgecolor'       = [r g b] values or string, for example 'brain', 'cortex', 'skin', 'black', 'red', 'r', color of channels or coils (default is automatic)
+          'facecolor'       = [r g b] values or string, for example 'black', 'red', 'r', or an Nx3 or Nx1 array where N is the number of faces (default is automatic)
+          'edgecolor'       = [r g b] values or string, for example 'black', 'red', 'r', color of channels or coils (default is automatic)
           'facealpha'       = transparency, between 0 and 1 (default = 1)
           'edgealpha'       = transparency, between 0 and 1 (default = 1)
+
+        The following options apply when the orientation is plotted as a line segment per channel
+          'linecolor'       = [r g b] values or string, or Nx3 matrix for color of orientation line,
+                              default is the default matlab colororder
+          'linewidth'       = scalar, width of the orientation line (default = 1)
+          'linelength'      = scalar, length of the orientation line in mm (default = 20)
 
         The sensor array can include an optional fid field with fiducials, which will also be plotted.
           'fiducial'        = rue/false, plot the fiducials (default = true)
@@ -69,4 +75,5 @@ def ft_plot_sens(*args, **kwargs):
 
     Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
+
     return Runtime.call("ft_plot_sens", *args, **kwargs)

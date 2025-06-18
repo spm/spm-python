@@ -200,4 +200,5 @@ def spm_adjmean_fmri_ui(*args, **kwargs):
 
     Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
+
     return Runtime.call("spm_adjmean_fmri_ui", *args, **kwargs, nargout=0)

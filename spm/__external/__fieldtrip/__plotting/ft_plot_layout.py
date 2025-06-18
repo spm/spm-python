@@ -36,7 +36,7 @@ def ft_plot_layout(*args, **kwargs):
           'pointsize'   = scalar or vector for marker size
         The default marker is a blue dot sorrunded by a yellow circle.
 
-        It is possible to plot the object in a local pseudo-axis (c.f. subplot), which is specfied as follows
+        It is possible to plot the object in a local pseudo-axis (c.f. subplot), which is specified as follows
           'hpos'        = horizontal position of the lower left corner of the local axes
           'vpos'        = vertical position of the lower left corner of the local axes
           'width'       = width of the local axes
@@ -49,4 +49,5 @@ def ft_plot_layout(*args, **kwargs):
 
     Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
+
     return Runtime.call("ft_plot_layout", *args, **kwargs, nargout=0)

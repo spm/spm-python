@@ -13,13 +13,15 @@ def ft_meshrealign(*args, **kwargs):
 
         FIDUCIAL - The coordinate system is updated according to the definition of the
         coordinates of anatomical landmarks or fiducials that are specified in the
-        configuration. If the fiducials are not specified in the configuration, you will
-        have to click them in an interactive display of the mesh surface.
+        configuration. If the fiducials or anatomical landmarks are not specified in the
+        configuration, you will have to click them in an interactive display of the mesh
+        surface.
 
         Use as
           mesh = ft_meshrealign(cfg, mesh)
-        where the mesh input argument comes from FT_READ_HEADSHAPE or FT_PREPARE_MESH and
-        cfg is a configuration structure that should contain
+        where the mesh input argument comes from FT_READ_HEADSHAPE or FT_PREPARE_MESH.
+
+        The configuration can contain the following options
           cfg.method         = string, can be 'interactive' or fiducial' (default = 'interactive')
           cfg.coordsys       = string specifying the origin and the axes of the coordinate
                                system. Supported coordinate systems are 'ctf', '4d', 'bti',
@@ -28,13 +30,14 @@ def ft_meshrealign(*args, **kwargs):
 
         When cfg.method = 'fiducial' and cfg.coordsys is based on external anatomical
         landmarks, as is common for EEG and MEG, the following can be used to specify the
-        voxel indices of the fiducials:
+        position of the fiducials or anatomical landmarks:
           cfg.fiducial.nas   = [x y z], position of nasion
           cfg.fiducial.lpa   = [x y z], position of LPA
           cfg.fiducial.rpa   = [x y z], position of RPA
-        The fiducials should be expressed in the same coordinates and units as the input
-        mesh. If the fiducials are not specified in the configuration, the mesh is
-        displayed and you have to click on the fidicuals.
+        The fiducials or anatomical landmarks should be expressed in the same coordinates
+        and units as the input mesh. If the fiducials are not specified in the
+        configuration, the mesh is displayed and you have to click on the fiducials or
+        anatomical landmarks.
 
         When cfg.method = 'fiducial' you can specify
           cfg.mri            = structure, see FT_READ_MRI
@@ -59,4 +62,5 @@ def ft_meshrealign(*args, **kwargs):
 
     Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
+
     return Runtime.call("ft_meshrealign", *args, **kwargs)

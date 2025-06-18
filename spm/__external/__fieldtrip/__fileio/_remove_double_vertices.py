@@ -11,11 +11,12 @@ def _remove_double_vertices(*args, **kwargs):
           [pos, tet] = remove_double_vertices(pos, tet)
           [pos, hex] = remove_double_vertices(pos, hex)
 
-        See also REMOVE_VERTICES
+        See also REMOVE_VERTICES, REMOVE_UNUSED_VERTICES
 
 
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/remove_double_vertices.m )
 
     Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
+
     return Runtime.call("remove_double_vertices", *args, **kwargs)

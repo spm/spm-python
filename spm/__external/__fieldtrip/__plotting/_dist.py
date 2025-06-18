@@ -3,7 +3,7 @@ from mpython import Runtime
 
 def _dist(*args, **kwargs):
     """
-      DIST computes the euclidian distance between the columns of the input matrix
+      DIST computes the euclidean distance between the columns of the input matrix
 
         Use as
           [d] = dist(x)
@@ -17,4 +17,5 @@ def _dist(*args, **kwargs):
 
     Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
+
     return Runtime.call("dist", *args, **kwargs)

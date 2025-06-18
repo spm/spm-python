@@ -7,7 +7,6 @@ from mpython import (
     Array,
     SparseArray,
 )
-from ._version import __version__
 from .file_array import file_array
 from .gifti import gifti
 from .meeg import meeg
@@ -442,6 +441,7 @@ from .__external import (
     loreta2fieldtrip,
     nutmeg2fieldtrip,
     ft_colormap,
+    ft_headlight,
     ft_plot_axes,
     ft_plot_box,
     ft_plot_cloud,
@@ -1436,6 +1436,7 @@ from .spm_log import spm_log
 from .spm_log_evidence import spm_log_evidence
 from .spm_log_evidence_reduce import spm_log_evidence_reduce
 from .spm_logdet import spm_logdet
+from .spm_logo import spm_logo
 from .spm_lorenz_k import spm_lorenz_k
 from .spm_lotka_volterra import spm_lotka_volterra
 from .spm_maff8 import spm_maff8
@@ -2446,6 +2447,8 @@ from .__toolbox import (
     spm_TVdenoise2,
     spm_TVdenoise_config,
     spm_dctdst,
+    spm_depth,
+    spm_distance3,
     spm_run_denoise,
     spm_scope,
     spm_scope_config,
@@ -2453,6 +2456,8 @@ from .__toolbox import (
     spm_slice2vol_config,
     spm_slice2vol_estimate,
     spm_slice2vol_reslice,
+    spm_thin,
+    spm_topo_lookup,
     spm_topup,
     spm_topup_config,
     tbx_cfg_spatial,
@@ -2782,7 +2787,6 @@ __all__ = [
     "Struct",
     "Array",
     "SparseArray",
-    "__version__",
     "file_array",
     "gifti",
     "meeg",
@@ -3212,6 +3216,7 @@ __all__ = [
     "loreta2fieldtrip",
     "nutmeg2fieldtrip",
     "ft_colormap",
+    "ft_headlight",
     "ft_plot_axes",
     "ft_plot_box",
     "ft_plot_cloud",
@@ -4205,6 +4210,7 @@ __all__ = [
     "spm_log_evidence",
     "spm_log_evidence_reduce",
     "spm_logdet",
+    "spm_logo",
     "spm_lorenz_k",
     "spm_lotka_volterra",
     "spm_maff8",
@@ -5210,6 +5216,8 @@ __all__ = [
     "spm_TVdenoise2",
     "spm_TVdenoise_config",
     "spm_dctdst",
+    "spm_depth",
+    "spm_distance3",
     "spm_run_denoise",
     "spm_scope",
     "spm_scope_config",
@@ -5217,6 +5225,8 @@ __all__ = [
     "spm_slice2vol_config",
     "spm_slice2vol_estimate",
     "spm_slice2vol_reslice",
+    "spm_thin",
+    "spm_topo_lookup",
     "spm_topup",
     "spm_topup_config",
     "tbx_cfg_spatial",

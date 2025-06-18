@@ -4,7 +4,7 @@ from mpython import Runtime
 def ft_select_box(*args, **kwargs):
     """
       FT_SELECT_BOX helper function for selecting a single rectangular region in the
-        current figure using the mouse. This function is not used as a callabck, but blocks
+        current figure using the mouse. This function is not used as a callback, but blocks
         the execution of the code until a selection is made.
 
         Use as
@@ -21,4 +21,5 @@ def ft_select_box(*args, **kwargs):
 
     Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
+
     return Runtime.call("ft_select_box", *args, **kwargs)

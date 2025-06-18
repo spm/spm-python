@@ -21,4 +21,5 @@ def ROBOT_DCM_fMRI(*args, **kwargs):
 
     Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
+
     return Runtime.call("ROBOT_DCM_fMRI", *args, **kwargs)

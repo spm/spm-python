@@ -11,8 +11,8 @@ def ft_determine_coordsys(*args, **kwargs):
           [dataout] = ft_determine_coordsys(datain, ...)
         where the input data structure can be either
          - an anatomical MRI
-         - a cortical or head surface mesh
          - an electrode, gradiometer or optode definition
+         - a cortical or head surface mesh
          - a volume conduction model of the head
         or most other FieldTrip structures that represent geometrical information.
 
@@ -44,4 +44,5 @@ def ft_determine_coordsys(*args, **kwargs):
 
     Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
+
     return Runtime.call("ft_determine_coordsys", *args, **kwargs)

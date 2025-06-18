@@ -19,4 +19,5 @@ def _magnetic_dipole(*args, **kwargs):
 
     Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
+
     return Runtime.call("magnetic_dipole", *args, **kwargs)

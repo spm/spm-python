@@ -31,6 +31,7 @@ def ft_read_headshape(*args, **kwargs):
           'surface'     = specific surface to be read (only for Caret spec files)
           'refine'      = number, used for refining Structure Sensor meshes (default = 1)
           'jmeshopt'    = cell-array with {'name', 'value'} pairs, options for reading JSON/JMesh files
+          'meshtype'    = string, which type of mesh to read in case the file contains multiple types, can be 'tri', 'tet' or 'hex'
 
         Supported input file formats include
           'gifti'           see https://www.nitrc.org/projects/gifti/
@@ -77,4 +78,5 @@ def ft_read_headshape(*args, **kwargs):
 
     Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
+
     return Runtime.call("ft_read_headshape", *args, **kwargs)

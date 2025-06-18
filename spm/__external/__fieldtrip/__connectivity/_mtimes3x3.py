@@ -10,4 +10,5 @@ def _mtimes3x3(*args, **kwargs):
 
     Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
+
     return Runtime.call("mtimes3x3", *args, **kwargs)

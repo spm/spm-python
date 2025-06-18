@@ -10,4 +10,5 @@ def spm_DAiSS(*args, **kwargs):
 
     Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
+
     return Runtime.call("spm_DAiSS", *args, **kwargs, nargout=0)

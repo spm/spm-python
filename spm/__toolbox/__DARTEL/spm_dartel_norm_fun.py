@@ -31,7 +31,7 @@ def spm_dartel_norm_fun(*args, **kwargs):
         normalised for a 2nd level analysis.
 
         Two "preserve" options are provided.  One of them should do the
-        equavalent of generating smoothed "modulated" spatially normalised
+        equivalent of generating smoothed "modulated" spatially normalised
         images.  The other does the equivalent of smoothing the modulated
         normalised fMRI/PET, and dividing by the smoothed Jacobian determinants.
 
@@ -42,4 +42,5 @@ def spm_dartel_norm_fun(*args, **kwargs):
 
     Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
+
     return Runtime.call("spm_dartel_norm_fun", *args, **kwargs)

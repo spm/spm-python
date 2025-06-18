@@ -35,4 +35,5 @@ def _splint(*args, **kwargs):
 
     Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
+
     return Runtime.call("splint", *args, **kwargs)

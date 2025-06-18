@@ -72,10 +72,10 @@ def ft_prepare_sourcemodel(*args, **kwargs):
 
         BASEDONCENTROIDS - places sources on the centroids of a volumetric mesh
           cfg.headmodel       = tetrahedral or hexahedral mesh
-          cfg.headmodel.type  = 'simbio';
+          cfg.headmodel.type  = 'simbio'
 
         Other configuration options include
-          cfg.unit            = string, can be 'mm', 'cm', 'm' (default is automatic)
+          cfg.unit            = string, can be 'mm', 'cm', 'm' (default is automatic, based on the input data)
           cfg.tight           = 'yes' or 'no' (default is automatic)
           cfg.inwardshift     = number, amount to shift the innermost surface of the headmodel inward when determining
                                 whether sources are inside or outside the source compartment (default = 0)
@@ -119,4 +119,5 @@ def ft_prepare_sourcemodel(*args, **kwargs):
 
     Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
+
     return Runtime.call("ft_prepare_sourcemodel", *args, **kwargs)

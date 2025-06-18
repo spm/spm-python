@@ -11,4 +11,5 @@ def _GALA_calculate_distance(*args, **kwargs):
 
     Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
+
     return Runtime.call("GALA_calculate_distance", *args, **kwargs)

@@ -35,4 +35,5 @@ def mne_source_spectral_analysis(*args, **kwargs):
 
     Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
+
     return Runtime.call("mne_source_spectral_analysis", *args, **kwargs)

@@ -18,4 +18,5 @@ def _find_outermost_boundary(*args, **kwargs):
 
     Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
+
     return Runtime.call("find_outermost_boundary", *args, **kwargs)

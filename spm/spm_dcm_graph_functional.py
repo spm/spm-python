@@ -18,4 +18,5 @@ def spm_dcm_graph_functional(*args, **kwargs):
 
     Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
+
     return Runtime.call("spm_dcm_graph_functional", *args, **kwargs, nargout=0)

@@ -16,4 +16,5 @@ def mci_ramsay_struct(*args, **kwargs):
 
     Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
     """
+
     return Runtime.call("mci_ramsay_struct", *args, **kwargs)
