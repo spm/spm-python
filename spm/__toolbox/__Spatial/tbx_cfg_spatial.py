@@ -1,11 +1,11 @@
-from mpython import Runtime
+from spm._runtime import Runtime
 
 
 def tbx_cfg_spatial(*args, **kwargs):
     """
-      Configuration file for toolbox 'Spatial Tools'
-       __________________________________________________________________________
-
+      Configuration file for toolbox 'Spatial Tools'  
+       __________________________________________________________________________  
+      
 
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/Spatial/tbx_cfg_spatial.m )
 

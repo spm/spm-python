@@ -1,16 +1,16 @@
-from mpython import Runtime
+from spm._runtime import Runtime
 
 
 def _getdatfield(*args, **kwargs):
     """
-      GETDATFIELD
-
-        Use as
-          [datfield, dimord] = getdatfield(data)
-        where the output arguments are cell-arrays.
-
-        See also GETDIMORD, GETDIMSIZ
-
+      GETDATFIELD  
+         
+        Use as  
+          [datfield, dimord] = getdatfield(data)  
+        where the output arguments are cell-arrays.  
+         
+        See also GETDIMORD, GETDIMSIZ  
+      
 
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/utilities/private/getdatfield.m )
 

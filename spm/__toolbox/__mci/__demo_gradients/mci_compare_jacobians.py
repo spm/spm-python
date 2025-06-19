@@ -1,14 +1,14 @@
-from mpython import Runtime
+from spm._runtime import Runtime
 
 
 def mci_compare_jacobians(*args, **kwargs):
     """
-      Compare user supplied and finite difference methods
-        FORMAT [Fx,Fp,FxFD,FpFD] = mci_compare_jacobians (model)
-
-        model     'phase'
-       __________________________________________________________________________
-
+      Compare user supplied and finite difference methods  
+        FORMAT [Fx,Fp,FxFD,FpFD] = mci_compare_jacobians (model)  
+         
+        model     'phase'  
+       __________________________________________________________________________  
+      
 
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/mci/demo-gradients/mci_compare_jacobians.m )
 

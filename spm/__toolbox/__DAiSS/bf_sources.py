@@ -1,11 +1,11 @@
-from mpython import Runtime
+from spm._runtime import Runtime
 
 
 def bf_sources(*args, **kwargs):
     """
-      Prepare source locations and lead fields for beamforming
-       __________________________________________________________________________
-
+      Prepare source locations and lead fields for beamforming  
+       __________________________________________________________________________  
+      
 
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DAiSS/bf_sources.m )
 

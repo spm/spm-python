@@ -1,14 +1,14 @@
-from mpython import Runtime
+from spm._runtime import Runtime
 
 
 def spm_inv_phi(*args, **kwargs):
     """
-      Inverse logistic function
-        FORMAT [y] = spm_inv_phi(x)
-
-        x   = log((y./(1 - y))
-       __________________________________________________________________________
-
+      Inverse logistic function  
+        FORMAT [y] = spm_inv_phi(x)  
+         
+        x   = log((y./(1 - y))  
+       __________________________________________________________________________  
+      
 
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_inv_phi.m )
 

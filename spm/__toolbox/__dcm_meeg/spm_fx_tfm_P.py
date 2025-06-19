@@ -1,25 +1,25 @@
-from mpython import Runtime
+from spm._runtime import Runtime
 
 
 def spm_fx_tfm_P(*args, **kwargs):
     """
-      Exogenous input and input dependent parameters
-        FORMAT [u,P] = spm_fx_tfm_P(u,P)
-
-        arguments:
-        u  - inputs
-        P  - parameters
-
-        returns:
-        u  - exogenous (conductance) inputs driving states
-        P  - input dependent parameters
-
-        This is a help routine for the microcircuit models equations of motion -
-        it simply separates inputs into those affecting (driving) his neuronal
-        states and those modulating parameters. It returns the exogenous
-        (conductance) inputs and input dependent parameters.
-       ___________________________________________________________________________
-
+      Exogenous input and input dependent parameters  
+        FORMAT [u,P] = spm_fx_tfm_P(u,P)  
+         
+        arguments:  
+        u  - inputs  
+        P  - parameters  
+         
+        returns:  
+        u  - exogenous (conductance) inputs driving states  
+        P  - input dependent parameters  
+         
+        This is a help routine for the microcircuit models equations of motion -  
+        it simply separates inputs into those affecting (driving) his neuronal  
+        states and those modulating parameters. It returns the exogenous  
+        (conductance) inputs and input dependent parameters.  
+       ___________________________________________________________________________  
+      
 
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/dcm_meeg/spm_fx_tfm_P.m )
 

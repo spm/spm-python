@@ -1,11 +1,11 @@
-from mpython import Runtime
+from spm._runtime import Runtime
 
 
 def test_spm_dcm_identify(*args, **kwargs):
     """
-      Unit Tests for test_spm_dcm_identify
-       __________________________________________________________________________
-
+      Unit Tests for test_spm_dcm_identify  
+       __________________________________________________________________________  
+      
 
     [Matlab code]( https://github.com/spm/spm/blob/main/tests/test_spm_dcm_identify.m )
 

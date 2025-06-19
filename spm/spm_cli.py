@@ -1,11 +1,11 @@
-from mpython import Runtime
+from spm._runtime import Runtime
 
 
 def spm_cli(*args, **kwargs):
     """
-      Command line interface for SPM
-       __________________________________________________________________________
-
+      Command line interface for SPM  
+       __________________________________________________________________________  
+      
 
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_cli.m )
 

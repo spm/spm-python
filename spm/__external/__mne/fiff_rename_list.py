@@ -1,11 +1,11 @@
-from mpython import Runtime
+from spm._runtime import Runtime
 
 
 def fiff_rename_list(*args, **kwargs):
     """
-    fiff_rename_list is a function.
-          lst = fiff_rename_list(lst, ch_rename)
-
+    fiff_rename_list is a function.  
+          lst = fiff_rename_list(lst, ch_rename)  
+      
 
     [Matlab code]( https://github.com/spm/spm/blob/main/external/mne/fiff_rename_list.m )
 

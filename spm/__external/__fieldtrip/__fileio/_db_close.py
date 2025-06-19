@@ -1,15 +1,13 @@
-from mpython import Runtime
+from spm._runtime import Runtime
 
 
 def _db_close(*args, **kwargs):
     """
-      DB_CLOSE closes the connection to the database
-
-        Use as
-          db_close
-
-        See also DB_OPEN, DB_SELECT, DB_INSERT, DB_SELECT_BLOB, DB_INSERT_BLOB
-
+      DB_CLOSE closes the connection to the database  
+         
+        Use as  
+          db_close  
+      
 
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/db_close.m )
 

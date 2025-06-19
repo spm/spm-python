@@ -1,11 +1,11 @@
-from mpython import Runtime
+from spm._runtime import Runtime
 
 
 def fiff_make_ch_rename(*args, **kwargs):
     """
-    fiff_make_ch_rename is a function.
-          ch_rename = fiff_make_ch_rename(chs)
-
+    fiff_make_ch_rename is a function.  
+          ch_rename = fiff_make_ch_rename(chs)  
+      
 
     [Matlab code]( https://github.com/spm/spm/blob/main/external/mne/fiff_make_ch_rename.m )
 

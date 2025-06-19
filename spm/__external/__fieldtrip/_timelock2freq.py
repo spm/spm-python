@@ -1,14 +1,14 @@
-from mpython import Runtime
+from spm._runtime import Runtime
 
 
 def _timelock2freq(*args, **kwargs):
     """
-      TIMELOCK2FREQ transform the reconstructed dipole moment into
-        something that again resembles the physical input parameter in
-        the frequency domain.
-
-        This is needed after source reconstruction using FREQ2TIMELOCK.
-
+      TIMELOCK2FREQ transform the reconstructed dipole moment into  
+        something that again resembles the physical input parameter in  
+        the frequency domain.   
+         
+        This is needed after source reconstruction using FREQ2TIMELOCK.  
+      
 
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/timelock2freq.m )
 

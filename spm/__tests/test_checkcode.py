@@ -1,11 +1,11 @@
-from mpython import Runtime
+from spm._runtime import Runtime
 
 
 def test_checkcode(*args, **kwargs):
     """
-      Test for possible problems in all of MATLAB code files
-       __________________________________________________________________________
-
+      Test for possible problems in all of MATLAB code files  
+       __________________________________________________________________________  
+      
 
     [Matlab code]( https://github.com/spm/spm/blob/main/tests/test_checkcode.m )
 

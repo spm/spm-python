@@ -1,17 +1,17 @@
-from mpython import Runtime
+from spm._runtime import Runtime
 
 
 def fiff_write_double_complex(*args, **kwargs):
     """
-
-        fiff_write_double_complex(fid,kind,data)
-
-        Writes a double-precision complex tag to a fif file
-
-            fid           An open fif file descriptor
-            kind          Tag kind
-            data          The data
-
+       
+        fiff_write_double_complex(fid,kind,data)  
+          
+        Writes a double-precision complex tag to a fif file  
+         
+            fid           An open fif file descriptor  
+            kind          Tag kind  
+            data          The data  
+      
 
     [Matlab code]( https://github.com/spm/spm/blob/main/external/mne/fiff_write_double_complex.m )
 

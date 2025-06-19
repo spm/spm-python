@@ -1,10 +1,10 @@
-from mpython import Runtime
+from spm._runtime import Runtime
 
 
 def _cellStruct2StructCell(*args, **kwargs):
     """
-      Converts a cell-array of structure arrays into a structure array
-
+      Converts a cell-array of structure arrays into a structure array  
+      
 
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/cellStruct2StructCell.m )
 

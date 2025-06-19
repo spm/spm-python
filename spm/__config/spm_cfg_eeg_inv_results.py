@@ -1,11 +1,11 @@
-from mpython import Runtime
+from spm._runtime import Runtime
 
 
 def spm_cfg_eeg_inv_results(*args, **kwargs):
     """
-      Configuration file for exporting results of source reconstruction
-       __________________________________________________________________________
-
+      Configuration file for exporting results of source reconstruction  
+       __________________________________________________________________________  
+      
 
     [Matlab code]( https://github.com/spm/spm/blob/main/config/spm_cfg_eeg_inv_results.m )
 

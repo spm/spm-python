@@ -1,11 +1,11 @@
-from mpython import Runtime
+from spm._runtime import Runtime
 
 
 def bf_output_image_filtcorr(*args, **kwargs):
     """
-      Computes filter correlation images
-       __________________________________________________________________________
-
+      Computes filter correlation images  
+       __________________________________________________________________________  
+      
 
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DAiSS/bf_output_image_filtcorr.m )
 

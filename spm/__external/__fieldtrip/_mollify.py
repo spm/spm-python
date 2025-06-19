@@ -1,10 +1,10 @@
-from mpython import Runtime
+from spm._runtime import Runtime
 
 
 def _mollify(*args, **kwargs):
     """
-      This function does something
-
+      This function does something  
+      
 
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/mollify.m )
 

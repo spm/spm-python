@@ -1,17 +1,17 @@
-from mpython import Runtime
+from spm._runtime import Runtime
 
 
 def mne_write_cov(*args, **kwargs):
     """
-
-
-          mne_write_cov(fid,cov)
-
-          Write a covariance matrix to an open file
-
-          fid     - an open file id
-          cov     - the covariance matrix to write
-
+       
+         
+          mne_write_cov(fid,cov)  
+         
+          Write a covariance matrix to an open file  
+         
+          fid     - an open file id  
+          cov     - the covariance matrix to write  
+      
 
     [Matlab code]( https://github.com/spm/spm/blob/main/external/mne/mne_write_cov.m )
 

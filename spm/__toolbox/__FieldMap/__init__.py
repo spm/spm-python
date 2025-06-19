@@ -1,3 +1,14 @@
+from mpython import (
+    MatlabClass,
+    MatlabFunction,
+    Cell,
+    Struct,
+    Array,
+    SparseArray,
+)
+from ._runtime import Runtime
+from ._version import __version__
+
 from .FieldMap import FieldMap
 from .FieldMap_Run import FieldMap_Run
 from .FieldMap_applyvdm import FieldMap_applyvdm
@@ -19,9 +30,11 @@ from .pm_merge_regions_m import pm_merge_regions_m
 from .pm_pad import pm_pad
 from .pm_restore_ramp import pm_restore_ramp
 from .pm_seed import pm_seed
+from .pm_segment import pm_segment
 from .pm_smooth_phasemap import pm_smooth_phasemap
 from .pm_unwrap import pm_unwrap
 from .tbx_cfg_fieldmap import tbx_cfg_fieldmap
+
 
 
 __all__ = [
@@ -46,7 +59,8 @@ __all__ = [
     "pm_pad",
     "pm_restore_ramp",
     "pm_seed",
+    "pm_segment",
     "pm_smooth_phasemap",
     "pm_unwrap",
-    "tbx_cfg_fieldmap",
+    "tbx_cfg_fieldmap"
 ]

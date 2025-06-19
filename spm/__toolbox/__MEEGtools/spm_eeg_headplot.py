@@ -1,17 +1,17 @@
-from mpython import Runtime
+from spm._runtime import Runtime
 
 
 def spm_eeg_headplot(*args, **kwargs):
     """
-      SPM interface to headplot function from EEGLAB
-        FORMAT spm_eeg_headplot(Y, D, H)
-
-                Y - data vector
-                D - M/EEG object
-                H - (optional) axes handle
-
-       __________________________________________________________________________
-
+      SPM interface to headplot function from EEGLAB  
+        FORMAT spm_eeg_headplot(Y, D, H)  
+         
+                Y - data vector  
+                D - M/EEG object  
+                H - (optional) axes handle  
+         
+       __________________________________________________________________________  
+      
 
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/MEEGtools/spm_eeg_headplot.m )
 

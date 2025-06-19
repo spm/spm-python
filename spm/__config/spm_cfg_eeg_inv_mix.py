@@ -1,12 +1,12 @@
-from mpython import Runtime
+from spm._runtime import Runtime
 
 
 def spm_cfg_eeg_inv_mix(*args, **kwargs):
     """
-      Configuration file for merging (using a new inversion) a number of
-        imaging source inversion reconstructions
-       __________________________________________________________________________
-
+      Configuration file for merging (using a new inversion) a number of  
+        imaging source inversion reconstructions  
+       __________________________________________________________________________  
+      
 
     [Matlab code]( https://github.com/spm/spm/blob/main/config/spm_cfg_eeg_inv_mix.m )
 

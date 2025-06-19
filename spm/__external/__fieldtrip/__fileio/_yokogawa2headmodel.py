@@ -1,12 +1,12 @@
-from mpython import Runtime
+from spm._runtime import Runtime
 
 
 def _yokogawa2headmodel(*args, **kwargs):
     """
-      YOKOGAWA2HEADMODEL converts a spherical volume conductor model that can
-        be present in the header of a datafile into a structure that can
-        be used by FieldTrip.
-
+      YOKOGAWA2HEADMODEL converts a spherical volume conductor model that can  
+        be present in the header of a datafile into a structure that can  
+        be used by FieldTrip.  
+      
 
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/yokogawa2headmodel.m )
 

@@ -1,11 +1,11 @@
-from mpython import Runtime
+from spm._runtime import Runtime
 
 
 def bf_regularise_tichonov_rankdef(*args, **kwargs):
     """
-      Tikhonov regularisation for rank deficient matrices based on the function
-       __________________________________________________________________________
-
+      Tichonov regularisation for rank deficient matrices based on the function  
+       __________________________________________________________________________  
+      
 
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DAiSS/bf_regularise_tichonov_rankdef.m )
 

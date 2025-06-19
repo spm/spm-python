@@ -1,3 +1,14 @@
+from mpython import (
+    MatlabClass,
+    MatlabFunction,
+    Cell,
+    Struct,
+    Array,
+    SparseArray,
+)
+from ._runtime import Runtime
+from ._version import __version__
+
 from .DEMO_dcm_fmri_nnm import DEMO_dcm_fmri_nnm
 from .DEMO_model_reduction_ERP import DEMO_model_reduction_ERP
 from .DEMO_tvec_csd_sim import DEMO_tvec_csd_sim
@@ -10,7 +21,7 @@ from .__NMDA_NMM_MFM import (
     spm_fx_mfm_NMDA,
     spm_lfp_mtf_sample,
     spm_nmm_priors_NMDA,
-    spm_x_mfm_NMDA,
+    spm_x_mfm_NMDA
 )
 from .Neural_demo import Neural_demo
 from .ROBOT_NMM import ROBOT_NMM
@@ -48,6 +59,7 @@ from .spm_nmda_priors import spm_nmda_priors
 from .spm_opt_bfun import spm_opt_bfun
 from .spm_seizure_demo import spm_seizure_demo
 from .spm_sigmoid_demo import spm_sigmoid_demo
+
 
 
 __all__ = [
@@ -98,5 +110,5 @@ __all__ = [
     "spm_nmda_priors",
     "spm_opt_bfun",
     "spm_seizure_demo",
-    "spm_sigmoid_demo",
+    "spm_sigmoid_demo"
 ]

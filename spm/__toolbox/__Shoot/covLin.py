@@ -1,13 +1,13 @@
-from mpython import Runtime
+from spm._runtime import Runtime
 
 
 def covLin(*args, **kwargs):
     """
-      Covariance function for linear regression/classification
-        FORMAT [K1,lambda] = covLin(lambda0,settings,args,lab)
-        No usage documentation yet
-       __________________________________________________________________________
-
+      Covariance function for linear regression/classification  
+        FORMAT [K1,lambda] = covLin(lambda0,settings,args,lab)  
+        No usage documentation yet  
+       __________________________________________________________________________  
+      
 
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/Shoot/covLin.m )
 

@@ -1,16 +1,16 @@
-from mpython import Runtime
+from spm._runtime import Runtime
 
 
 def spm_check_results(*args, **kwargs):
     """
-      Display several MIPs in the same figure
-        FORMAT spm_check_results(SPMs,xSPM)
-        SPMs    - char or cell array of paths to SPM.mat[s]
-        xSPM    - structure containing thresholding details, see spm_getSPM.m
-
-        Beware: syntax and features of this function are likely to change.
-       __________________________________________________________________________
-
+      Display several MIPs in the same figure  
+        FORMAT spm_check_results(SPMs,xSPM)  
+        SPMs    - char or cell array of paths to SPM.mat[s]  
+        xSPM    - structure containing thresholding details, see spm_getSPM.m  
+         
+        Beware: syntax and features of this function are likely to change.  
+       __________________________________________________________________________  
+      
 
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_check_results.m )
 

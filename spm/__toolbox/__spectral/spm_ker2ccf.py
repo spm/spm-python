@@ -1,18 +1,18 @@
-from mpython import Runtime
+from spm._runtime import Runtime
 
 
 def spm_ker2ccf(*args, **kwargs):
     """
-      computes cross covariance function from kernels
-        FORMAT [ccf,pst] = spm_ker2ccf(ker,dt)
-
-        ker  - first-order (Volterra) kernels
-        dt   - time bin (sec)
-
-        ccf  - cross covariance functions
-        pst  - time samples
-       __________________________________________________________________________
-
+      computes cross covariance function from kernels  
+        FORMAT [ccf,pst] = spm_ker2ccf(ker,dt)  
+         
+        ker  - first-order (Volterra) kernels  
+        dt   - time bin (sec)  
+         
+        ccf  - cross covariance functions  
+        pst  - time samples  
+       __________________________________________________________________________  
+      
 
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/spectral/spm_ker2ccf.m )
 

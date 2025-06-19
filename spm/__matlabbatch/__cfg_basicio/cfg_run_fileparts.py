@@ -1,16 +1,16 @@
-from mpython import Runtime
+from spm._runtime import Runtime
 
 
 def cfg_run_fileparts(*args, **kwargs):
     """
-      Run fileparts on a list of files.
-
-        This code is part of a batch job configuration system for MATLAB. See
-             help matlabbatch
-        for a general overview.
-       _______________________________________________________________________
-        Copyright (C) 2007 Freiburg Brain Imaging
-
+      Run fileparts on a list of files.  
+         
+        This code is part of a batch job configuration system for MATLAB. See   
+             help matlabbatch  
+        for a general overview.  
+       _______________________________________________________________________  
+        Copyright (C) 2007 Freiburg Brain Imaging  
+      
 
     [Matlab code]( https://github.com/spm/spm/blob/main/matlabbatch/cfg_basicio/cfg_run_fileparts.m )
 

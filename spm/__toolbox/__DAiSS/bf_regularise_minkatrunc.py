@@ -1,11 +1,11 @@
-from mpython import Runtime
+from spm._runtime import Runtime
 
 
 def bf_regularise_minkatrunc(*args, **kwargs):
     """
-      Bayesian regularisation based on Minka's method
-       __________________________________________________________________________
-
+      Bayesian regularisation based on Minka's method  
+       __________________________________________________________________________  
+      
 
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DAiSS/bf_regularise_minkatrunc.m )
 

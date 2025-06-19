@@ -1,11 +1,11 @@
-from mpython import Runtime
+from spm._runtime import Runtime
 
 
 def spm_cfg_opm_synth_gradiometer(*args, **kwargs):
     """
-      Configuration file for performing synthetic gradiometery on OPM data
-       __________________________________________________________________________
-
+      Configuration file for performing synthetic gradiometery on OPM data  
+       __________________________________________________________________________  
+      
 
     [Matlab code]( https://github.com/spm/spm/blob/main/config/spm_cfg_opm_synth_gradiometer.m )
 

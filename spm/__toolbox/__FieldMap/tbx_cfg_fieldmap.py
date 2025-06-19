@@ -1,11 +1,11 @@
-from mpython import Runtime
+from spm._runtime import Runtime
 
 
 def tbx_cfg_fieldmap(*args, **kwargs):
     """
-      MATLABBATCH Configuration file for toolbox 'FieldMap'
-       __________________________________________________________________________
-
+      MATLABBATCH Configuration file for toolbox 'FieldMap'  
+       __________________________________________________________________________  
+      
 
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/FieldMap/tbx_cfg_fieldmap.m )
 

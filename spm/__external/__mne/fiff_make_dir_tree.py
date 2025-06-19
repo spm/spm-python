@@ -1,13 +1,13 @@
-from mpython import Runtime
+from spm._runtime import Runtime
 
 
 def fiff_make_dir_tree(*args, **kwargs):
     """
-
-        [tree, last] = fiff_make_dir_tree(fid,dir,start,indent)
-
-        Create the directory tree structure
-
+       
+        [tree, last] = fiff_make_dir_tree(fid,dir,start,indent)  
+         
+        Create the directory tree structure  
+      
 
     [Matlab code]( https://github.com/spm/spm/blob/main/external/mne/fiff_make_dir_tree.m )
 

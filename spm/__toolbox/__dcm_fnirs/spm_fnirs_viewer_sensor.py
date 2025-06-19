@@ -1,16 +1,16 @@
-from mpython import Runtime
+from spm._runtime import Runtime
 
 
 def spm_fnirs_viewer_sensor(*args, **kwargs):
     """
-      Display optode/channel positions on the rendered brain surface
-
-        FORMAT spm_fnirs_viewer_sensor(R)
-
-        R - structure array containing optode/channel positions
-           - This structure can be obtained using the SPM-fNIRS toolbox
-       __________________________________________________________________________
-
+      Display optode/channel positions on the rendered brain surface  
+          
+        FORMAT spm_fnirs_viewer_sensor(R)  
+         
+        R - structure array containing optode/channel positions   
+           - This structure can be obtained using the SPM-fNIRS toolbox  
+       __________________________________________________________________________  
+      
 
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/dcm_fnirs/spm_fnirs_viewer_sensor.m )
 

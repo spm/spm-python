@@ -1,13 +1,13 @@
-from mpython import Runtime
+from spm._runtime import Runtime
 
 
 def DEM_demo_EM(*args, **kwargs):
     """
-      Dual estimation of parameters and hyperparameters; under known causes:
-        This demo focuses on conditional parameter estimation with DEM and
-        provides a comparative evaluation using EM.  This proceeds by removing
-        uncertainly about the input so that the D-step can be discounted.
-
+      Dual estimation of parameters and hyperparameters; under known causes:  
+        This demo focuses on conditional parameter estimation with DEM and  
+        provides a comparative evaluation using EM.  This proceeds by removing  
+        uncertainly about the input so that the D-step can be discounted.  
+      
 
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DEM/DEM_demo_EM.m )
 

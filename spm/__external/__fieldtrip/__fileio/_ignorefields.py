@@ -1,12 +1,12 @@
-from mpython import Runtime
+from spm._runtime import Runtime
 
 
 def _ignorefields(*args, **kwargs):
     """
-      IGNOREFIELDS returns a list of fields that can be present in the cfg structure that
-        should be ignored at various places in the code, e.g. for provenance, history,
-        size-checking, etc.
-
+      IGNOREFIELDS returns a list of fields that can be present in the cfg structure that  
+        should be ignored at various places in the code, e.g. for provenance, history,  
+        size-checking, etc.  
+      
 
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/ignorefields.m )
 

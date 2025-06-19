@@ -1,13 +1,13 @@
-from mpython import Runtime
+from spm._runtime import Runtime
 
 
 def boxcar(*args, **kwargs):
     """
-      BOXCAR returns a boxcar taper
-
-        Use as
-          w = boxcar(n)
-
+      BOXCAR returns a boxcar taper  
+         
+        Use as  
+          w = boxcar(n)  
+      
 
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/external/signal/boxcar.m )
 

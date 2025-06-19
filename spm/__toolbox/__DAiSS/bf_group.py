@@ -1,11 +1,11 @@
-from mpython import Runtime
+from spm._runtime import Runtime
 
 
 def bf_group(*args, **kwargs):
     """
-      A module for applying a processing step to a group of subjects
-       __________________________________________________________________________
-
+      A module for applying a processing step to a group of subjects  
+       __________________________________________________________________________  
+      
 
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DAiSS/bf_group.m )
 

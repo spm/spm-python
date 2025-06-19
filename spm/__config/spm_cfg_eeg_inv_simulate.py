@@ -1,11 +1,11 @@
-from mpython import Runtime
+from spm._runtime import Runtime
 
 
 def spm_cfg_eeg_inv_simulate(*args, **kwargs):
     """
-      Configuration file for simulation of sources
-       __________________________________________________________________________
-
+      Configuration file for simulation of sources  
+       __________________________________________________________________________  
+      
 
     [Matlab code]( https://github.com/spm/spm/blob/main/config/spm_cfg_eeg_inv_simulate.m )
 

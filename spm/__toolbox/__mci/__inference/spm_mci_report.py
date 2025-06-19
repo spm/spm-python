@@ -1,18 +1,18 @@
-from mpython import Runtime
+from spm._runtime import Runtime
 
 
 def spm_mci_report(*args, **kwargs):
     """
-      Report on posterior density from MCI
-        FUNCTION [Ep,SDp] = spm_mci_report (P,mcmc,true_P)
-
-        P         Samples
-        mcmc      Sampling options
-
-        Ep        Posterior mean
-        SDp       Posterior SD
-       __________________________________________________________________________
-
+      Report on posterior density from MCI  
+        FUNCTION [Ep,SDp] = spm_mci_report (P,mcmc,true_P)  
+         
+        P         Samples  
+        mcmc      Sampling options  
+          
+        Ep        Posterior mean  
+        SDp       Posterior SD  
+       __________________________________________________________________________  
+      
 
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/mci/inference/spm_mci_report.m )
 

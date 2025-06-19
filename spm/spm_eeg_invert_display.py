@@ -1,19 +1,19 @@
-from mpython import Runtime
+from spm._runtime import Runtime
 
 
 def spm_eeg_invert_display(*args, **kwargs):
     """
-      Displays conditional expectation of response (J)
-        FORMAT spm_eeg_invert_display(D,PST,Ndip)
-        FORMAT spm_eeg_invert_display(D,XYZ,Ndip)
-        D    - 3D structure (ReML estimation of response (J) )
-        PST  - peristimulus time (ms) - defaults to the PST of max abs(J)
-             - [Start Stop] (ms)     - invokes a movie of CSD
-        XYZ  - dipole location of interest
-
-        Ndip - number of dipole to display (default 512)
-       __________________________________________________________________________
-
+      Displays conditional expectation of response (J)  
+        FORMAT spm_eeg_invert_display(D,PST,Ndip)  
+        FORMAT spm_eeg_invert_display(D,XYZ,Ndip)  
+        D    - 3D structure (ReML estimation of response (J) )  
+        PST  - peristimulus time (ms) - defaults to the PST of max abs(J)  
+             - [Start Stop] (ms)     - invokes a movie of CSD  
+        XYZ  - dipole location of interest  
+         
+        Ndip - number of dipole to display (default 512)  
+       __________________________________________________________________________  
+      
 
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_eeg_invert_display.m )
 

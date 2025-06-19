@@ -1,10 +1,10 @@
-from mpython import Runtime
+from spm._runtime import Runtime
 
 
 def _hcp_provenance(*args, **kwargs):
     """
-      HCP_PROVENANCE returns a structure with provenance information
-
+      HCP_PROVENANCE returns a structure with provenance information  
+      
 
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/utilities/private/hcp_provenance.m )
 

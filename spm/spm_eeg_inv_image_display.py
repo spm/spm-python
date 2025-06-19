@@ -1,15 +1,15 @@
-from mpython import Runtime
+from spm._runtime import Runtime
 
 
 def spm_eeg_inv_image_display(*args, **kwargs):
     """
-      Display an interpolated 3D image or mesh of a contrast or window
-
-        FORMAT D = spm_eeg_inv_image_display(D,val)
-        Input:
-        D        - input data struct (optional)
-       __________________________________________________________________________
-
+      Display an interpolated 3D image or mesh of a contrast or window  
+         
+        FORMAT D = spm_eeg_inv_image_display(D,val)  
+        Input:  
+        D        - input data struct (optional)  
+       __________________________________________________________________________  
+      
 
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_eeg_inv_image_display.m )
 

@@ -1,11 +1,11 @@
-from mpython import Runtime
+from spm._runtime import Runtime
 
 
 def spm_cfg_dcm_bms(*args, **kwargs):
     """
-      Configuration file for Bayesian Model Selection (DCM)
-       __________________________________________________________________________
-
+      Configuration file for Bayesian Model Selection (DCM)  
+       __________________________________________________________________________  
+      
 
     [Matlab code]( https://github.com/spm/spm/blob/main/config/spm_cfg_dcm_bms.m )
 

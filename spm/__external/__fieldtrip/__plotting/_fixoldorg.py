@@ -1,10 +1,10 @@
-from mpython import Runtime
+from spm._runtime import Runtime
 
 
 def _fixoldorg(*args, **kwargs):
     """
-      FIXOLDORG use "old/new" instead of "org/new"
-
+      FIXOLDORG use "old/new" instead of "org/new"  
+      
 
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/plotting/private/fixoldorg.m )
 

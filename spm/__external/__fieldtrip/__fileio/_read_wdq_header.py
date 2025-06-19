@@ -1,13 +1,13 @@
-from mpython import Runtime
+from spm._runtime import Runtime
 
 
 def _read_wdq_header(*args, **kwargs):
     """
-      READ_WDQ_HEADER reads header information from wdq files
-
-        Use as
-         [hdr] = read_wdq_header(filename)
-
+      READ_WDQ_HEADER reads header information from wdq files  
+         
+        Use as  
+         [hdr] = read_wdq_header(filename)  
+      
 
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/read_wdq_header.m )
 

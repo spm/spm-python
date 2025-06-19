@@ -1,11 +1,11 @@
-from mpython import Runtime
+from spm._runtime import Runtime
 
 
 def bf_features_identity(*args, **kwargs):
     """
-      Identity matrix for cases when covariance is not necessary
-       __________________________________________________________________________
-
+      Identity matrix for cases when covariance is not necessary  
+       __________________________________________________________________________  
+      
 
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DAiSS/bf_features_identity.m )
 

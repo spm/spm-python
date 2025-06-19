@@ -1,11 +1,11 @@
-from mpython import Runtime
+from spm._runtime import Runtime
 
 
 def test_spm_cfg_dcm_est(*args, **kwargs):
     """
-      Unit Tests for test_spm_cfg_dcm_est (DCM model estimation batch)
-       __________________________________________________________________________
-
+      Unit Tests for test_spm_cfg_dcm_est (DCM model estimation batch)  
+       __________________________________________________________________________  
+      
 
     [Matlab code]( https://github.com/spm/spm/blob/main/tests/test_spm_cfg_dcm_est.m )
 

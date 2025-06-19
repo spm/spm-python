@@ -1,11 +1,11 @@
-from mpython import Runtime
+from spm._runtime import Runtime
 
 
 def test_spm_cfg_dcm_peb(*args, **kwargs):
     """
-      Unit Tests for spm_cfg_dcm_peb (PEB batch)
-       __________________________________________________________________________
-
+      Unit Tests for spm_cfg_dcm_peb (PEB batch)  
+       __________________________________________________________________________  
+      
 
     [Matlab code]( https://github.com/spm/spm/blob/main/tests/test_spm_cfg_dcm_peb.m )
 

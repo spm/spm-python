@@ -1,11 +1,11 @@
-from mpython import Runtime
+from spm._runtime import Runtime
 
 
 def test_spm_platform(*args, **kwargs):
     """
-      Unit Tests for spm_platform
-       __________________________________________________________________________
-
+      Unit Tests for spm_platform  
+       __________________________________________________________________________  
+      
 
     [Matlab code]( https://github.com/spm/spm/blob/main/tests/test_spm_platform.m )
 

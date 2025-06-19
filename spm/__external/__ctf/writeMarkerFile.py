@@ -1,10 +1,10 @@
-from mpython import Runtime
+from spm._runtime import Runtime
 
 
 def writeMarkerFile(*args, **kwargs):
     """
-       Version 1.0   27 Oct. 2006
-
+       Version 1.0   27 Oct. 2006  
+      
 
     [Matlab code]( https://github.com/spm/spm/blob/main/external/ctf/writeMarkerFile.m )
 

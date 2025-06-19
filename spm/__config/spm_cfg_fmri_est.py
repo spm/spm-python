@@ -1,11 +1,11 @@
-from mpython import Runtime
+from spm._runtime import Runtime
 
 
 def spm_cfg_fmri_est(*args, **kwargs):
     """
-      SPM Configuration file for Model Estimation
-       __________________________________________________________________________
-
+      SPM Configuration file for Model Estimation  
+       __________________________________________________________________________  
+      
 
     [Matlab code]( https://github.com/spm/spm/blob/main/config/spm_cfg_fmri_est.m )
 

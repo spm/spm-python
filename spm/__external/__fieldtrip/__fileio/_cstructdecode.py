@@ -1,12 +1,12 @@
-from mpython import Runtime
+from spm._runtime import Runtime
 
 
 def _cstructdecode(*args, **kwargs):
     """
-      CSTRUCTDECODE decodes a structure from a uint8 buffer
-
-        See READ_NEURALYNX_NEV for an example
-
+      CSTRUCTDECODE decodes a structure from a uint8 buffer  
+         
+        See READ_NEURALYNX_NEV for an example  
+      
 
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/cstructdecode.m )
 

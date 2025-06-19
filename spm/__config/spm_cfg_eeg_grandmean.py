@@ -1,11 +1,11 @@
-from mpython import Runtime
+from spm._runtime import Runtime
 
 
 def spm_cfg_eeg_grandmean(*args, **kwargs):
     """
-      Configuration file for averaging evoked responses
-       __________________________________________________________________________
-
+      Configuration file for averaging evoked responses  
+       __________________________________________________________________________  
+      
 
     [Matlab code]( https://github.com/spm/spm/blob/main/config/spm_cfg_eeg_grandmean.m )
 

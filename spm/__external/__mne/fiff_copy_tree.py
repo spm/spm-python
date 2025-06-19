@@ -1,13 +1,13 @@
-from mpython import Runtime
+from spm._runtime import Runtime
 
 
 def fiff_copy_tree(*args, **kwargs):
     """
-
-           fiff_copy_tree(fidin, in_id, nodes, fidout)
-
-           Copies directory subtrees from fidin to fidout
-
+       
+           fiff_copy_tree(fidin, in_id, nodes, fidout)  
+         
+           Copies directory subtrees from fidin to fidout  
+      
 
     [Matlab code]( https://github.com/spm/spm/blob/main/external/mne/fiff_copy_tree.m )
 

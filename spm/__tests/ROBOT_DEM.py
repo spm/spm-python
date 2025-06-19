@@ -1,11 +1,11 @@
-from mpython import Runtime
+from spm._runtime import Runtime
 
 
 def ROBOT_DEM(*args, **kwargs):
     """
-      Tests routines in DEM GUI
-       __________________________________________________________________________
-
+      Tests routines in DEM GUI  
+       __________________________________________________________________________  
+      
 
     [Matlab code]( https://github.com/spm/spm/blob/main/tests/ROBOT_DEM.m )
 

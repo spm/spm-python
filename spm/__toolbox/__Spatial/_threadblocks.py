@@ -1,12 +1,12 @@
-from mpython import Runtime
+from spm._runtime import Runtime
 
 
 def _threadblocks(*args, **kwargs):
     """
-      Set the size of a block of threads and grid on a CUDA kernel
-        FORMAT kernel = threadblocks(kernel,d)
-       __________________________________________________________________________
-
+      Set the size of a block of threads and grid on a CUDA kernel  
+        FORMAT kernel = threadblocks(kernel,d)  
+       __________________________________________________________________________  
+      
 
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/Spatial/private/threadblocks.m )
 

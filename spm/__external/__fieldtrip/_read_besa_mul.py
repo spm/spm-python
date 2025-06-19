@@ -1,13 +1,13 @@
-from mpython import Runtime
+from spm._runtime import Runtime
 
 
 def _read_besa_mul(*args, **kwargs):
     """
-      READ_BESA_MUL reads data from a BESA multiplexed (*.mul) file
-
-        Use as
-          dat = read_besa_mul(filename);
-
+      READ_BESA_MUL reads data from a BESA multiplexed (*.mul) file  
+         
+        Use as  
+          dat = read_besa_mul(filename);  
+      
 
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/read_besa_mul.m )
 

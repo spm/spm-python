@@ -1,15 +1,15 @@
-from mpython import Runtime
+from spm._runtime import Runtime
 
 
 def _find_mesh_edge(*args, **kwargs):
     """
-      FIND_MESH_EDGE returns the edge of a triangulated mesh
-
-        [pnt, line] = find_mesh_edge(pnt, tri), where
-
-        pnt   contains the vertex locations and
-        line  contains the indices of the linepieces connecting the vertices
-
+      FIND_MESH_EDGE returns the edge of a triangulated mesh  
+         
+        [pnt, line] = find_mesh_edge(pnt, tri), where  
+         
+        pnt   contains the vertex locations and   
+        line  contains the indices of the linepieces connecting the vertices  
+      
 
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/find_mesh_edge.m )
 

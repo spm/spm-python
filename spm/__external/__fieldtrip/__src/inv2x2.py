@@ -1,11 +1,11 @@
-from mpython import Runtime
+from spm._runtime import Runtime
 
 
 def inv2x2(*args, **kwargs):
     """
-      INV2X2 computes inverse of matrix x, using explicit analytic definition
-        if size(x,1) < 4, otherwise use MATLAB inv-function
-
+      INV2X2 computes inverse of matrix x, using explicit analytic definition  
+        if size(x,1) < 4, otherwise use MATLAB inv-function  
+      
 
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/src/inv2x2.m )
 

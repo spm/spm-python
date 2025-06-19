@@ -1,11 +1,11 @@
-from mpython import Runtime
+from spm._runtime import Runtime
 
 
 def spm_rewrite_job(*args, **kwargs):
     """
-      Rewrite a batch job for SPM12
-       __________________________________________________________________________
-
+      Rewrite a batch job for SPM12  
+       __________________________________________________________________________  
+      
 
     [Matlab code]( https://github.com/spm/spm/blob/main/config/spm_rewrite_job.m )
 

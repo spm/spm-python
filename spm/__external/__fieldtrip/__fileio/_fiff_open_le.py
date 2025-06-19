@@ -1,20 +1,20 @@
-from mpython import Runtime
+from spm._runtime import Runtime
 
 
 def _fiff_open_le(*args, **kwargs):
     """
-
-        [fid, tree, dir] = fiff_open_le(fname)
-
-        Open a fif file and provide the directory of tags
-
-        fid     the opened file id
-        tree    tag directory organized into a tree
-        dir     the sequential tag directory
-
-        This is a modified version, specific for opening 'little endian' fiff files
-        Arjen Stolk
-
+       
+        [fid, tree, dir] = fiff_open_le(fname)  
+         
+        Open a fif file and provide the directory of tags  
+         
+        fid     the opened file id  
+        tree    tag directory organized into a tree  
+        dir     the sequential tag directory  
+         
+        This is a modified version, specific for opening 'little endian' fiff files  
+        Arjen Stolk  
+      
 
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/fiff_open_le.m )
 

@@ -1,10 +1,10 @@
-from mpython import Runtime
+from spm._runtime import Runtime
 
 
 def _rejectvisual_trial(*args, **kwargs):
     """
-      SUBFUNCTION for ft_rejectvisual
-
+      SUBFUNCTION for ft_rejectvisual  
+      
 
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/rejectvisual_trial.m )
 

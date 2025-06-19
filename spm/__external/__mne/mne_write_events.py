@@ -1,13 +1,13 @@
-from mpython import Runtime
+from spm._runtime import Runtime
 
 
 def mne_write_events(*args, **kwargs):
     """
-
-        mne_write_events(filename,eventlist)
-
-        Write an event list into a fif file
-
+       
+        mne_write_events(filename,eventlist)  
+         
+        Write an event list into a fif file  
+      
 
     [Matlab code]( https://github.com/spm/spm/blob/main/external/mne/mne_write_events.m )
 

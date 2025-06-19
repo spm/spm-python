@@ -1,12 +1,12 @@
-from mpython import Runtime
+from spm._runtime import Runtime
 
 
 def _cfg_mlbatch_appcfg_1(*args, **kwargs):
     """
-      Add SPM to the application list of MATLABBATCH
-        This file must be on MATLAB search path for cfg_util to detect it.
-       __________________________________________________________________________
-
+      Add SPM to the application list of MATLABBATCH  
+        This file must be on MATLAB search path for cfg_util to detect it.  
+       __________________________________________________________________________  
+      
 
     [Matlab code]( https://github.com/spm/spm/blob/main/matlabbatch/private/cfg_mlbatch_appcfg_1.m )
 

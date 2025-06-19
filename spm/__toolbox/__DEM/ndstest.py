@@ -1,16 +1,16 @@
-from mpython import Runtime
+from spm._runtime import Runtime
 
 
 def ndstest(*args, **kwargs):
     """
-     Performs numerous tests of ndSparse math operations,
-
-         ndstest(TOL)
-
-       TOL is a tolerance value on the percent error. Execution will pause in debug
-       mode for inspection if any one of the tests exhibits an error greater than
-       TOL.
-
+     Performs numerous tests of ndSparse math operations,   
+         
+         ndstest(TOL)  
+         
+       TOL is a tolerance value on the percent error. Execution will pause in debug  
+       mode for inspection if any one of the tests exhibits an error greater than  
+       TOL.  
+      
 
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DEM/ndstest.m )
 
