@@ -47,7 +47,7 @@ jobs:
 
       - name: Install SPM Python
         run: |
-          pythin -m pip install "git+https://github.com/MPython-Package-Factory/mpython-core.git@no-spm-dep"
+          python -m pip install "git+https://github.com/MPython-Package-Factory/mpython-core.git@no-spm-dep"
           python -m pip install -e .
 
       # Setup MATLAB and Runtime
