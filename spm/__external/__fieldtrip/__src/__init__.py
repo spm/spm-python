@@ -1,14 +1,3 @@
-from mpython import (
-    MatlabClass,
-    MatlabFunction,
-    Cell,
-    Struct,
-    Array,
-    SparseArray,
-)
-from ._runtime import Runtime
-from ._version import __version__
-
 from .det2x2 import det2x2
 from .det3x3 import det3x3
 from .getpid import getpid
@@ -34,7 +23,6 @@ from .sandwich3x3 import sandwich3x3
 from .solid_angle import solid_angle
 from .splint_gh import splint_gh
 from .write_ctf_shm import write_ctf_shm
-
 
 
 __all__ = [

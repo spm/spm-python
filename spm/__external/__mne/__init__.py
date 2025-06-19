@@ -1,14 +1,3 @@
-from mpython import (
-    MatlabClass,
-    MatlabFunction,
-    Cell,
-    Struct,
-    Array,
-    SparseArray,
-)
-from ._runtime import Runtime
-from ._version import __version__
-
 from .fiff_copy_tree import fiff_copy_tree
 from .fiff_define_constants import fiff_define_constants
 from .fiff_dir_tree_find import fiff_dir_tree_find
@@ -155,7 +144,6 @@ from .mne_write_stc_file1 import mne_write_stc_file1
 from .mne_write_surface import mne_write_surface
 from .mne_write_w_file import mne_write_w_file
 from .mne_write_w_file1 import mne_write_w_file1
-
 
 
 __all__ = [

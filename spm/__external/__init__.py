@@ -1,14 +1,3 @@
-from mpython import (
-    MatlabClass,
-    MatlabFunction,
-    Cell,
-    Struct,
-    Array,
-    SparseArray,
-)
-from ._runtime import Runtime
-from ._version import __version__
-
 from .__bemcp import (
     bemcp_example
 )
@@ -651,7 +640,6 @@ from .__mne import (
     mne_write_w_file,
     mne_write_w_file1
 )
-
 
 
 __all__ = [

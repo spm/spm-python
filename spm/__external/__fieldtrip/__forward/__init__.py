@@ -1,14 +1,3 @@
-from mpython import (
-    MatlabClass,
-    MatlabFunction,
-    Cell,
-    Struct,
-    Array,
-    SparseArray,
-)
-from ._runtime import Runtime
-from ._version import __version__
-
 from .ft_apply_montage import ft_apply_montage
 from .ft_compute_leadfield import ft_compute_leadfield
 from .ft_convert_units import ft_convert_units
@@ -35,7 +24,6 @@ from .ft_prepare_vol_sens import ft_prepare_vol_sens
 from .ft_senslabel import ft_senslabel
 from .ft_senstype import ft_senstype
 from .ft_sourcedepth import ft_sourcedepth
-
 
 
 __all__ = [

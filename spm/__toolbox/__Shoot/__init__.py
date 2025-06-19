@@ -1,14 +1,3 @@
-from mpython import (
-    MatlabClass,
-    MatlabFunction,
-    Cell,
-    Struct,
-    Array,
-    SparseArray,
-)
-from ._runtime import Runtime
-from ._version import __version__
-
 from .covLin import covLin
 from .spm_GPclass import spm_GPclass
 from .spm_def2sparse import spm_def2sparse
@@ -27,7 +16,6 @@ from .spm_shoot_template import spm_shoot_template
 from .spm_shoot_update import spm_shoot_update
 from .spm_shoot_warp import spm_shoot_warp
 from .tbx_cfg_shoot import tbx_cfg_shoot
-
 
 
 __all__ = [

@@ -1,14 +1,3 @@
-from mpython import (
-    MatlabClass,
-    MatlabFunction,
-    Cell,
-    Struct,
-    Array,
-    SparseArray,
-)
-from ._runtime import Runtime
-from ._version import __version__
-
 from .__DARTEL import (
     dartel3,
     optimN,
@@ -1001,7 +990,6 @@ from .__spectral import (
     spm_ssm2mtf,
     spm_wavspec
 )
-
 
 
 __all__ = [

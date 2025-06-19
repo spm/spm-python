@@ -1,14 +1,3 @@
-from mpython import (
-    MatlabClass,
-    MatlabFunction,
-    Cell,
-    Struct,
-    Array,
-    SparseArray,
-)
-from ._runtime import Runtime
-from ._version import __version__
-
 from .spm_MEEGtools import spm_MEEGtools
 from .spm_create_labels import spm_create_labels
 from .spm_eeg_bst_fooof import spm_eeg_bst_fooof
@@ -48,7 +37,6 @@ from .spm_opm_rpsd import spm_opm_rpsd
 from .spm_opm_sim import spm_opm_sim
 from .spm_opm_synth_gradiometer import spm_opm_synth_gradiometer
 from .spm_opm_vslm import spm_opm_vslm
-
 
 
 __all__ = [
