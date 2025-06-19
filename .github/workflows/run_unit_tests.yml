@@ -3,23 +3,23 @@ on:
   workflow_dispatch:
   workflow_call:
   push:
-    paths: 
+    paths:
       - tests/**
       - spm/**
-      - setup.py 
+      - setup.py
       - pyproject.toml
   pull_request:
-  
+
 env:
   MLM_LICENSE_TOKEN: ${{ secrets.MATLAB_BATCH_TOKEN }}
-  
+
 jobs:
   run-unit-tests:
     runs-on: ${{ matrix.os }}
     strategy:
       fail-fast: False
       matrix:
-        matlab: ["latest"]
+        matlab: ["2025a"]
         os: [ubuntu-latest, macos-13, macos-latest, windows-latest]
         python-version: ["3.9", "3.10", "3.11", "3.12"]
         include:
@@ -41,14 +41,14 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: ${{ matrix.python-version }}
-          
+
       - name: Check out SPM Python
         uses: actions/checkout@v4
 
       - name: Install SPM Python
         run: python -m pip install -e .
-        
-      # Setup MATLAB and Runtime 
+
+      # Setup MATLAB and Runtime
       - name: Set up MATLAB
         uses: matlab-actions/setup-matlab@v2
         with:
@@ -73,7 +73,7 @@ jobs:
         # sometimes this step hangs when closing matlab, automatically terminating after 2 minutes solves the issue
         timeout-minutes: 2
         continue-on-error: true
-        
+
       - name: Set environment variable with MATLAB path
         shell: bash # Works on Windows as well because of shell: bash
         run: |
@@ -90,7 +90,7 @@ jobs:
           ${{ env.MATLAB_PATH }}/extern/bin/maca64"
           export PYTHONHOME=${{ env.pythonLocation }}
           mwpython -m unittest discover tests -v
-      
+
       - name: Run tests (Mac Intel)
         if: matrix.os_name == 'macOS_Intel'
         run: |
@@ -101,7 +101,7 @@ jobs:
           ${{ env.MATLAB_PATH }}/extern/bin/maci64"
           export PYTHONHOME=${{ env.pythonLocation }}
           mwpython -m unittest discover tests -v
-        
+
       - name: Run tests (Windows)
         if: matrix.os_name == 'Windows'
         shell: bash
