@@ -30,24 +30,24 @@ classifiers = [
 ]
 dependencies = [
     "mpython-core",
-    "spm-runtime-R2025a=='25.1'; python_version>='3.9' and python_version<'3.13'",
-    "spm-runtime-R2023a=='25.1'; python_version=='3.8'",
-    "spm-runtime-R2021b=='25.1'; python_version=='3.7'",
-    "spm-runtime-R2020b=='25.1'; python_version=='3.6'",
+    "spm-runtime-r2025a == 25.1.1 ; python_version >= '3.9'",
+    "spm-runtime-r2023a == 25.1.1 ; python_version == '3.8'",
+    "spm-runtime-r2021b == 25.1.1 ; python_version == '3.7'",
+    "spm-runtime-r2020b == 25.1.1 ; python_version == '3.6'",
 ]
 
 [project.optional-dependencies]
-latest = ["spm-runtime=='25.1'"]
-R2025a = ["spm-runtime-R2025a=='25.1'"]
-R2024b = ["spm-runtime-R2024b=='25.1'"]
-R2024a = ["spm-runtime-R2024a=='25.1'"]
-R2023b = ["spm-runtime-R2023b=='25.1'"]
-R2023a = ["spm-runtime-R2023a=='25.1'"]
-R2022b = ["spm-runtime-R2022b=='25.1'"]
-R2022a = ["spm-runtime-R2022a=='25.1'"]
-R2021b = ["spm-runtime-R2021b=='25.1'"]
-R2021a = ["spm-runtime-R2021a=='25.1'"]
-R2020b = ["spm-runtime-R2020b=='25.1'"]
+latest = ["spm-runtime        == 25.1.1"]
+R2025a = ["spm-runtime-R2025a == 25.1.1"]
+R2024b = ["spm-runtime-R2024b == 25.1.1"]
+R2024a = ["spm-runtime-R2024a == 25.1.1"]
+R2023b = ["spm-runtime-R2023b == 25.1.1"]
+R2023a = ["spm-runtime-R2023a == 25.1.1"]
+R2022b = ["spm-runtime-R2022b == 25.1.1"]
+R2022a = ["spm-runtime-R2022a == 25.1.1"]
+R2021b = ["spm-runtime-R2021b == 25.1.1"]
+R2021a = ["spm-runtime-R2021a == 25.1.1"]
+R2020b = ["spm-runtime-R2020b == 25.1.1"]
 
 [project.urls]
 Repository = "https://github.com/spm/spm-python"
