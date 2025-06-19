@@ -9,24 +9,31 @@ description = "Python bindings for the SPM software."
 readme = "README.md"
 license = {file = "LICENSE"}
 authors = [
-  {name = "Johan Medrano", email = "johan.medrano@ucl.ac.uk"}, 
-  {name = "Yael Balbastre", email = "y.balbastre@ucl.ac.yk"}, 
+  {name = "Johan Medrano", email = "johan.medrano@ucl.ac.uk"},
+  {name = "Yael Balbastre", email = "y.balbastre@ucl.ac.uk"},
   {name = "Yulia Bezsudnova"},
-  {name = "Arthur Mitchell"}, 
-  {name = "Peter Zeidman"}, 
-  {name = "Olivia Kowalczyk"} ]
-requires-python = ">=3.9,<3.13"
+  {name = "Arthur Mitchell"},
+  {name = "Peter Zeidman"},
+  {name = "Olivia Kowalczyk"},
+]
+requires-python = ">=3.6,<3.13"
 classifiers = [
   "Development Status :: 4 - Beta",
   "License :: OSI Approved :: GNU General Public License v2 (GPLv2)",
+  "Programming Language :: Python :: 3.6",
+  "Programming Language :: Python :: 3.7",
+  "Programming Language :: Python :: 3.8",
   "Programming Language :: Python :: 3.9",
   "Programming Language :: Python :: 3.10",
   "Programming Language :: Python :: 3.11",
   "Programming Language :: Python :: 3.12",
 ]
 dependencies = [
-    "numpy", 
-    "mpython-core<=25.4a3"
+    "mpython-core",
+    "spm-runtime-R2025a; python_version>='3.9' and python_version<'3.13'",
+    "spm-runtime-R2023a; python_version=='3.8'",
+    "spm-runtime-R2021b; python_version=='3.7'",
+    "spm-runtime-R2020b; python_version=='3.6'",
 ]
 
 [project.urls]
