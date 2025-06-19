@@ -46,7 +46,9 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Install SPM Python
-        run: python -m pip install -e .
+        run: |
+          pythin -m pip install "git+https://github.com/MPython-Package-Factory/mpython-core.git@no-spm-dep"
+          python -m pip install -e .
 
       # Setup MATLAB and Runtime
       - name: Set up MATLAB
