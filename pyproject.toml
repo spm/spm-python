@@ -36,6 +36,19 @@ dependencies = [
     "spm-runtime-R2020b; python_version=='3.6'",
 ]
 
+[project.optional-dependencies]
+latest = ["spm-runtime"]
+R2025a = ["spm-runtime-R2025a"]
+R2024b = ["spm-runtime-R2024b"]
+R2024a = ["spm-runtime-R2024a"]
+R2023b = ["spm-runtime-R2023b"]
+R2023a = ["spm-runtime-R2023a"]
+R2022b = ["spm-runtime-R2022b"]
+R2022a = ["spm-runtime-R2022a"]
+R2021b = ["spm-runtime-R2021b"]
+R2021a = ["spm-runtime-R2021a"]
+R2020b = ["spm-runtime-R2020b"]
+
 [project.urls]
 Repository = "https://github.com/spm/spm-python"
 
