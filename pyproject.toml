@@ -55,9 +55,6 @@ Repository = "https://github.com/spm/spm-python"
 [tool.setuptools.packages]
 find = {}
 
-[tool.setuptools.package-data]
-spm = ["_spm/_spm.ctf"]
-
 [tool.setuptools.dynamic]
 version = {attr = "spm._version.__version__"}
 
