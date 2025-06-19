@@ -3,7 +3,8 @@ import warnings
 import numpy as np
 from unittest.mock import patch
 
-from spm import Runtime, MatlabClass
+from spm import MatlabClass
+from spm._runtime import Runtime, RuntimeMixin
 
 
 orig_runtime_call = Runtime.call
@@ -23,7 +24,7 @@ def mock_runtime_call(f, *args, **kwargs):
 class TestMatlabClass(unittest.TestCase):
     def setUp(self):
         # Example subclass for testing
-        class TestClass(MatlabClass):
+        class TestClass(RuntimeMixin, MatlabClass):
             def __init__(self, *args, **kwargs):
                 super().__init__()
 
