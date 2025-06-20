@@ -29,7 +29,7 @@ classifiers = [
   "Programming Language :: Python :: 3.12",
 ]
 dependencies = [
-    "mpython-core",
+    "mpython-core>=25.4rc1",
     "spm-runtime-r2025a == 25.1.1 ; python_version >= '3.9'",
     "spm-runtime-r2023a == 25.1.1 ; python_version == '3.8'",
     "spm-runtime-r2021b == 25.1.1 ; python_version == '3.7'",
