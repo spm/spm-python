@@ -1,10 +1,10 @@
-from mpython import Runtime
+from spm._runtime import Runtime
 
 
 def _ft_struct2json(*args, **kwargs):
     """
-       FT_STRUCT2JSON
-
+       FT_STRUCT2JSON  
+      
 
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/utilities/private/ft_struct2json.m )
 

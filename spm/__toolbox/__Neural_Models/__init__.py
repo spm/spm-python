@@ -10,7 +10,7 @@ from .__NMDA_NMM_MFM import (
     spm_fx_mfm_NMDA,
     spm_lfp_mtf_sample,
     spm_nmm_priors_NMDA,
-    spm_x_mfm_NMDA,
+    spm_x_mfm_NMDA
 )
 from .Neural_demo import Neural_demo
 from .ROBOT_NMM import ROBOT_NMM
@@ -98,5 +98,5 @@ __all__ = [
     "spm_nmda_priors",
     "spm_opt_bfun",
     "spm_seizure_demo",
-    "spm_sigmoid_demo",
+    "spm_sigmoid_demo"
 ]

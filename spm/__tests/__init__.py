@@ -196,5 +196,5 @@ __all__ = [
     "test_spm_sum",
     "test_spm_trace",
     "test_spm_update",
-    "test_spm_z2p",
+    "test_spm_z2p"
 ]

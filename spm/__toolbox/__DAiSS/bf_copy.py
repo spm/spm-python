@@ -1,11 +1,11 @@
-from mpython import Runtime
+from spm._runtime import Runtime
 
 
 def bf_copy(*args, **kwargs):
     """
-      Set up a new analysis by copying an existing one
-       __________________________________________________________________________
-
+      Set up a new analysis by copying an existing one  
+       __________________________________________________________________________  
+      
 
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DAiSS/bf_copy.m )
 

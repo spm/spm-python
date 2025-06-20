@@ -1,10 +1,10 @@
-from mpython import Runtime
+from spm._runtime import Runtime
 
 
 def bf_regularise_roi(*args, **kwargs):
     """
-      ROI regularisation
-
+      ROI regularisation  
+      
 
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DAiSS/bf_regularise_roi.m )
 

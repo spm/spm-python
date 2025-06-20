@@ -1,16 +1,16 @@
-from mpython import Runtime
+from spm._runtime import Runtime
 
 
 def spm_eeg_test_coverage(*args, **kwargs):
     """
-      Return number of M/EEG functions and number of associated tests
-        FORMAT [coverage, tocover] = spm_eeg_test_coverage
-
-        Output:
-          coverage - number of M/EEG tested functions
-          tocover  - number of M/EEG functions
-       __________________________________________________________________________
-
+      Return number of M/EEG functions and number of associated tests  
+        FORMAT [coverage, tocover] = spm_eeg_test_coverage  
+         
+        Output:  
+          coverage - number of M/EEG tested functions  
+          tocover  - number of M/EEG functions   
+       __________________________________________________________________________  
+      
 
     [Matlab code]( https://github.com/spm/spm/blob/main/tests/spm_eeg_test_coverage.m )
 

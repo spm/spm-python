@@ -36,5 +36,5 @@ __all__ = [
     "spm_shoot_template",
     "spm_shoot_update",
     "spm_shoot_warp",
-    "tbx_cfg_shoot",
+    "tbx_cfg_shoot"
 ]

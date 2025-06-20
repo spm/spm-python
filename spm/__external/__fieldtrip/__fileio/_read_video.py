@@ -1,17 +1,17 @@
-from mpython import Runtime
+from spm._runtime import Runtime
 
 
 def _read_video(*args, **kwargs):
     """
-      READ_VIDEO
-
-        Use as
-          hdr = read_video(filename)
-        or
-          dat = read_video(filename, hdr, begsample, endsample)
-
-        See also READ_VIDEOMEG_VID, LOAD_VIDEO123
-
+      READ_VIDEO  
+         
+        Use as  
+          hdr = read_video(filename)  
+        or  
+          dat = read_video(filename, hdr, begsample, endsample)  
+         
+        See also READ_VIDEOMEG_VID, LOAD_VIDEO123  
+      
 
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/read_video.m )
 

@@ -1,16 +1,16 @@
-from mpython import Runtime
+from spm._runtime import Runtime
 
 
 def _read_besa_src(*args, **kwargs):
     """
-      READ_BESA_SRC reads a beamformer source reconstruction from a BESA file
-
-        Use as
-          [src] = read_besa_src(filename)
-
-        The output structure contains a minimal representation of the contents
-        of the file.
-
+      READ_BESA_SRC reads a beamformer source reconstruction from a BESA file  
+         
+        Use as  
+          [src] = read_besa_src(filename)  
+         
+        The output structure contains a minimal representation of the contents  
+        of the file.  
+      
 
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/read_besa_src.m )
 

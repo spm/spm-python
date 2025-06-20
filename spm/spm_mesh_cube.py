@@ -1,17 +1,17 @@
-from mpython import Runtime
+from spm._runtime import Runtime
 
 
 def spm_mesh_cube(*args, **kwargs):
     """
-      Triangle mesh of a unit cube
-        FORMAT M = spm_mesh_cube
-        M        - patch structure
-       __________________________________________________________________________
-
-        Return a triangle mesh of a unit cube (sides of 1 unit long).
-        See https://www.wikipedia.org/wiki/Unit_cube
-       __________________________________________________________________________
-
+      Triangle mesh of a unit cube  
+        FORMAT M = spm_mesh_cube  
+        M        - patch structure  
+       __________________________________________________________________________  
+         
+        Return a triangle mesh of a unit cube (sides of 1 unit long).  
+        See https://www.wikipedia.org/wiki/Unit_cube  
+       __________________________________________________________________________  
+      
 
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_mesh_cube.m )
 

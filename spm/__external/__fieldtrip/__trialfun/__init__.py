@@ -32,5 +32,5 @@ __all__ = [
     "ft_trialfun_realtime",
     "ft_trialfun_show",
     "ft_trialfun_trial",
-    "ft_trialfun_twoclass_classification",
+    "ft_trialfun_twoclass_classification"
 ]

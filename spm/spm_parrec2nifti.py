@@ -1,18 +1,18 @@
-from mpython import Runtime
+from spm._runtime import Runtime
 
 
 def spm_parrec2nifti(*args, **kwargs):
     """
-      Import PAR/REC images from Philips scanners into NIfTI
-        FORMAT N = spm_parrec2nifti(parfile,opts)
-        parfile   - name of PAR file
-        opts      - options structure
-           .ext     - NIfTI file extension {'img','nii'} [default: spm_file_ext]
-           .outdir  - output directory [default: pwd]
-
-        N         - NIfTI object
-       __________________________________________________________________________
-
+      Import PAR/REC images from Philips scanners into NIfTI  
+        FORMAT N = spm_parrec2nifti(parfile,opts)  
+        parfile   - name of PAR file  
+        opts      - options structure  
+           .ext     - NIfTI file extension {'img','nii'} [default: spm_file_ext]  
+           .outdir  - output directory [default: pwd]  
+         
+        N         - NIfTI object  
+       __________________________________________________________________________  
+      
 
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_parrec2nifti.m )
 

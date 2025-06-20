@@ -1,14 +1,14 @@
-from mpython import Runtime
+from spm._runtime import Runtime
 
 
 def spm_data_id(*args, **kwargs):
     """
-      Generate a specific real number in a deterministic way from any data structure
-        FORMAT ID = spm_data_id(X)
-        X  - numeric, character, cell or structure array[s]
-        ID - specific ID
-       __________________________________________________________________________
-
+      Generate a specific real number in a deterministic way from any data structure  
+        FORMAT ID = spm_data_id(X)  
+        X  - numeric, character, cell or structure array[s]  
+        ID - specific ID  
+       __________________________________________________________________________  
+      
 
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_data_id.m )
 

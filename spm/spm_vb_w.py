@@ -1,15 +1,15 @@
-from mpython import Runtime
+from spm._runtime import Runtime
 
 
 def spm_vb_w(*args, **kwargs):
     """
-      Variational Bayes for GLM-AR modelling in a block - update w
-        FORMAT [block] = spm_vb_w (Y,block)
-
-        Y          - [T x N] time series
-        block      - data structure (see spm_vb_glmar)
-       __________________________________________________________________________
-
+      Variational Bayes for GLM-AR modelling in a block - update w  
+        FORMAT [block] = spm_vb_w (Y,block)  
+         
+        Y          - [T x N] time series   
+        block      - data structure (see spm_vb_glmar)  
+       __________________________________________________________________________  
+      
 
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_vb_w.m )
 

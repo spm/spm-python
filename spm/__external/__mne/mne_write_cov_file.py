@@ -1,16 +1,16 @@
-from mpython import Runtime
+from spm._runtime import Runtime
 
 
 def mne_write_cov_file(*args, **kwargs):
     """
-
-          function mne_write_cov_file(name,cov)
-
-          Write a complete fif file containing a covariance matrix
-
-          fname    filename
-          cov      the covariance matrix to write
-
+       
+          function mne_write_cov_file(name,cov)  
+         
+          Write a complete fif file containing a covariance matrix  
+         
+          fname    filename  
+          cov      the covariance matrix to write  
+      
 
     [Matlab code]( https://github.com/spm/spm/blob/main/external/mne/mne_write_cov_file.m )
 

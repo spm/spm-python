@@ -14,5 +14,5 @@ __all__ = [
     "ft_specest_mtmfft",
     "ft_specest_neuvar",
     "ft_specest_tfr",
-    "ft_specest_wavelet",
+    "ft_specest_wavelet"
 ]

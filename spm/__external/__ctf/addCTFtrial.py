@@ -1,18 +1,18 @@
-from mpython import Runtime
+from spm._runtime import Runtime
 
 
 def addCTFtrial(*args, **kwargs):
     """
-     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-                                                                                       %
-          This program creates datasets that can be analyzed by CTF software.          %
-                                                                                       %
-          Datasets created by this program MUST NOT BE USED FOR CLINICAL APPLICATIONS. %
-                                                                                       %
-          Please do not redistribute it without permission from VSM MedTech Ltd.       %
-                                                                                       %
-       %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  
+                                                                                       %  
+          This program creates datasets that can be analyzed by CTF software.          %  
+                                                                                       %  
+          Datasets created by this program MUST NOT BE USED FOR CLINICAL APPLICATIONS. %  
+                                                                                       %  
+          Please do not redistribute it without permission from VSM MedTech Ltd.       %  
+                                                                                       %  
+       %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  
+      
 
     [Matlab code]( https://github.com/spm/spm/blob/main/external/ctf/addCTFtrial.m )
 

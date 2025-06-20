@@ -1,11 +1,11 @@
-from mpython import Runtime
+from spm._runtime import Runtime
 
 
 def _iscomplex(*args, **kwargs):
     """
-    iscomplex is a function.
-          a = iscomplex(X)
-
+    iscomplex is a function.  
+          a = iscomplex(X)  
+      
 
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/external/stats/private/iscomplex.m )
 

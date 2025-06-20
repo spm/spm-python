@@ -1,11 +1,11 @@
-from mpython import Runtime
+from spm._runtime import Runtime
 
 
 def bf_sources_grid_phantom(*args, **kwargs):
     """
-      Generate beamforming grid
-       __________________________________________________________________________
-
+      Generate beamforming grid  
+       __________________________________________________________________________  
+      
 
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DAiSS/bf_sources_grid_phantom.m )
 

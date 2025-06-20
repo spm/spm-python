@@ -1,10 +1,10 @@
-from mpython import Runtime
+from spm._runtime import Runtime
 
 
 def spm_DAiSS(*args, **kwargs):
     """
-     __________________________________________________________________________
-
+     __________________________________________________________________________  
+      
 
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DAiSS/spm_DAiSS.m )
 

@@ -1,12 +1,12 @@
-from mpython import Runtime
+from spm._runtime import Runtime
 
 
 def spm_squeeze(*args, **kwargs):
     """
-      Version of squeeze with the possibility to select the dimensions to remove
-        FORMAT  B = spm_squeeze(A, dim)
-       __________________________________________________________________________
-
+      Version of squeeze with the possibility to select the dimensions to remove  
+        FORMAT  B = spm_squeeze(A, dim)  
+       __________________________________________________________________________  
+      
 
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_squeeze.m )
 

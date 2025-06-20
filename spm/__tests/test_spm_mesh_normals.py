@@ -1,11 +1,11 @@
-from mpython import Runtime
+from spm._runtime import Runtime
 
 
 def test_spm_mesh_normals(*args, **kwargs):
     """
-      Unit Tests for spm_mesh_normals
-       __________________________________________________________________________
-
+      Unit Tests for spm_mesh_normals  
+       __________________________________________________________________________  
+      
 
     [Matlab code]( https://github.com/spm/spm/blob/main/tests/test_spm_mesh_normals.m )
 

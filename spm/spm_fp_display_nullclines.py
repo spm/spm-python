@@ -1,17 +1,17 @@
-from mpython import Runtime
+from spm._runtime import Runtime
 
 
 def spm_fp_display_nullclines(*args, **kwargs):
     """
-      Nullcline plot of flow and sample trajectory
-        FORMAT spm_fp_display_nullclines(M,x)
-
-        M   - model specifying flow; M(1).f;
-        x   - cell array of domain or support
-
-        f   - derivative of x(2)
-       __________________________________________________________________________
-
+      Nullcline plot of flow and sample trajectory  
+        FORMAT spm_fp_display_nullclines(M,x)  
+         
+        M   - model specifying flow; M(1).f;  
+        x   - cell array of domain or support  
+         
+        f   - derivative of x(2)  
+       __________________________________________________________________________  
+      
 
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_fp_display_nullclines.m )
 

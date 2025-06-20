@@ -1,15 +1,15 @@
-from mpython import Runtime
+from spm._runtime import Runtime
 
 
 def mci_approach_like(*args, **kwargs):
     """
-      Log-likelihood for approach model
-        FORMAT [L,yhat,st] = mci_approach_like (P,M,U,Y)
-
-        P         parameters
-        M,U,Y     as usual
-       __________________________________________________________________________
-
+      Log-likelihood for approach model   
+        FORMAT [L,yhat,st] = mci_approach_like (P,M,U,Y)  
+         
+        P         parameters  
+        M,U,Y     as usual  
+       __________________________________________________________________________  
+      
 
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/mci/models/approach/mci_approach_like.m )
 

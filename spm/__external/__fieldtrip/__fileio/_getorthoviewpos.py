@@ -1,19 +1,19 @@
-from mpython import Runtime
+from spm._runtime import Runtime
 
 
 def _getorthoviewpos(*args, **kwargs):
     """
-      GETORTHOVIEWPOS obtains the orthographic projections of 3D positions
-        based on a given coordinate system and viewpoint
-
-        Use as
-          getorthoviewpos(pos, coordsys, viewpoint)
-
-        For example
-          getorthoviewpoint(pos, 'mni', 'superior')
-
-        See alo SETVIEWPOINT, COORDSYS2LABEL
-
+      GETORTHOVIEWPOS obtains the orthographic projections of 3D positions  
+        based on a given coordinate system and viewpoint  
+         
+        Use as  
+          getorthoviewpos(pos, coordsys, viewpoint)  
+         
+        For example  
+          getorthoviewpoint(pos, 'mni', 'superior')  
+         
+        See alo SETVIEWPOINT, COORDSYS2LABEL  
+      
 
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/getorthoviewpos.m )
 

@@ -16,5 +16,5 @@ __all__ = [
     "nanvar",
     "range_",
     "tcdf",
-    "tinv",
+    "tinv"
 ]

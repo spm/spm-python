@@ -1,13 +1,13 @@
-from mpython import Runtime
+from spm._runtime import Runtime
 
 
 def spm_shp_install(*args, **kwargs):
     """
-      Download files required for Shape PCA model
-
-        FORMAT datadir = spm_shp_install(datadir,[force=true])
-       __________________________________________________________________________
-
+      Download files required for Shape PCA model  
+         
+        FORMAT datadir = spm_shp_install(datadir,[force=true])  
+       __________________________________________________________________________  
+      
 
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_shp_install.m )
 

@@ -186,5 +186,5 @@ __all__ = [
     "rmsubfield",
     "setsubfield",
     "strel_bol",
-    "tokenize",
+    "tokenize"
 ]

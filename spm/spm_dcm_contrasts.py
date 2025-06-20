@@ -1,17 +1,17 @@
-from mpython import Runtime
+from spm._runtime import Runtime
 
 
 def spm_dcm_contrasts(*args, **kwargs):
     """
-      Make contrast vector for a DCM
-        FORMAT con = spm_dcm_contrasts(DCM,D)
-
-        DCM    - DCM structure or its filename
-        D      - 'A','B' or 'C' i.e. connectivity matrix of interest
-
-        con    - column vector specifying contrast weights
-       __________________________________________________________________________
-
+      Make contrast vector for a DCM  
+        FORMAT con = spm_dcm_contrasts(DCM,D)  
+         
+        DCM    - DCM structure or its filename  
+        D      - 'A','B' or 'C' i.e. connectivity matrix of interest  
+         
+        con    - column vector specifying contrast weights  
+       __________________________________________________________________________  
+      
 
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_dcm_contrasts.m )
 

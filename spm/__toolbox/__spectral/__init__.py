@@ -92,5 +92,5 @@ __all__ = [
     "spm_ssm2csd",
     "spm_ssm2ker",
     "spm_ssm2mtf",
-    "spm_wavspec",
+    "spm_wavspec"
 ]

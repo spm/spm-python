@@ -1,18 +1,18 @@
-from mpython import Runtime
+from spm._runtime import Runtime
 
 
 def spm_meanm(*args, **kwargs):
     """
-      Compute barycentre of matrix exponentials
-        FORMAT M = spm_meanm(A)
-        A - A 3D array, where each slice is a matrix
-        M - the resulting mean
-
-        Note that matrices should not be too dissimilar to each other or the
-        procedure fails.
-        See http://hal.archives-ouvertes.fr/hal-00699361/
-       __________________________________________________________________________
-
+      Compute barycentre of matrix exponentials  
+        FORMAT M = spm_meanm(A)  
+        A - A 3D array, where each slice is a matrix  
+        M - the resulting mean  
+         
+        Note that matrices should not be too dissimilar to each other or the  
+        procedure fails.  
+        See http://hal.archives-ouvertes.fr/hal-00699361/  
+       __________________________________________________________________________  
+      
 
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/Longitudinal/spm_meanm.m )
 

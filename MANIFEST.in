@@ -1,4 +1,3 @@
 include README.md
 include LICENSE
 include AUTHORS.txt
-recursive-include spm/_spm *.ctf

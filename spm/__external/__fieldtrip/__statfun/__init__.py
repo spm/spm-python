@@ -36,5 +36,5 @@ __all__ = [
     "ft_statfun_indepsamplesregrT",
     "ft_statfun_mean",
     "ft_statfun_pooledT",
-    "ft_statfun_roc",
+    "ft_statfun_roc"
 ]

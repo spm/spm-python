@@ -1,10 +1,10 @@
-from mpython import Runtime
+from spm._runtime import Runtime
 
 
 def spm_axis(*args, **kwargs):
     """
-      AXIS  Control axis scaling and appearance.
-
+      AXIS  Control axis scaling and appearance.  
+      
 
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_axis.m )
 

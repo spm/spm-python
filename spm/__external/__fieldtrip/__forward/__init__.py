@@ -52,5 +52,5 @@ __all__ = [
     "ft_prepare_vol_sens",
     "ft_senslabel",
     "ft_senstype",
-    "ft_sourcedepth",
+    "ft_sourcedepth"
 ]

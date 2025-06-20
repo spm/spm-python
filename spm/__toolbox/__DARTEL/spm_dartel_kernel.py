@@ -1,27 +1,27 @@
-from mpython import Runtime
+from spm._runtime import Runtime
 
 
 def spm_dartel_kernel(*args, **kwargs):
     """
-      Generate Fisher kernel from flow fields
-        FORMAT spm_dartel_kernel(job)
-        job.flowfields - Flow-fields
-        job.rform      - Form of L
-        job.rparam     - Parameters of L
-        job.dotprod    - Part of filename for results
-
-        k(x_1,x_2) = <x_1,L x_2> = <L x_1, x_2>
-
-        This is very slow, and is not in a form that would be
-        suited to weighting according to location in the image.
-        For this, the "square root" of L would need to be used
-        in order to convert the flow fields into (e.g.) their
-        Jacobian tensor fields.  For linear elasticity, this
-        field would be decomposed by J = (J+J')/2 + (J-J')/2.
-        The elements of the symetric part (along with its trace)
-        would then be used to generate the kernel.
-       __________________________________________________________________________
-
+      Generate Fisher kernel from flow fields  
+        FORMAT spm_dartel_kernel(job)  
+        job.flowfields - Flow-fields  
+        job.rform      - Form of L  
+        job.rparam     - Parameters of L  
+        job.dotprod    - Part of filename for results  
+         
+        k(x_1,x_2) = <x_1,L x_2> = <L x_1, x_2>  
+         
+        This is very slow, and is not in a form that would be  
+        suited to weighting according to location in the image.  
+        For this, the "square root" of L would need to be used  
+        in order to convert the flow fields into (e.g.) their  
+        Jacobian tensor fields.  For linear elasticity, this  
+        field would be decomposed by J = (J+J')/2 + (J-J')/2.  
+        The elements of the symetric part (along with its trace)  
+        would then be used to generate the kernel.  
+       __________________________________________________________________________  
+      
 
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DARTEL/spm_dartel_kernel.m )
 

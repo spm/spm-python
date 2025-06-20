@@ -1,11 +1,11 @@
-from mpython import Runtime
+from spm._runtime import Runtime
 
 
 def tbx_cfg_bf(*args, **kwargs):
     """
-      Configuration file for toolbox 'Beamforming'
-       __________________________________________________________________________
-
+      Configuration file for toolbox 'Beamforming'  
+       __________________________________________________________________________  
+      
 
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DAiSS/tbx_cfg_bf.m )
 

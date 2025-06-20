@@ -1,13 +1,13 @@
-from mpython import Runtime
+from spm._runtime import Runtime
 
 
 def fiff_read_proj(*args, **kwargs):
     """
-
-        [ projdata ] = fiff_read_proj(fid,node,ch_rename)
-
-        Read the SSP data under a given directory node
-
+       
+        [ projdata ] = fiff_read_proj(fid,node,ch_rename)  
+         
+        Read the SSP data under a given directory node  
+      
 
     [Matlab code]( https://github.com/spm/spm/blob/main/external/mne/fiff_read_proj.m )
 

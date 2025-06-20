@@ -1,13 +1,13 @@
-from mpython import Runtime
+from spm._runtime import Runtime
 
 
 def spm_extract_files(*args, **kwargs):
     """
-      FORMAT spm_extract_files(P,cwd)
-        forints files (and their subroutines) and expect them to the current
-        directory
-       __________________________________________________________________________
-
+      FORMAT spm_extract_files(P,cwd)  
+        forints files (and their subroutines) and expect them to the current  
+        directory  
+       __________________________________________________________________________  
+      
 
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_extract_files.m )
 

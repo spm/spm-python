@@ -1,14 +1,14 @@
-from mpython import Runtime
+from spm._runtime import Runtime
 
 
 def spm_Volt_W(*args, **kwargs):
     """
-      Return basis functions used for Volterra expansion
-        FORMAT [W] = spm_Volt_W(u)
-        u  - times {seconds}
-        W  - basis functions (mixture of Gammas)
-       __________________________________________________________________________
-
+      Return basis functions used for Volterra expansion  
+        FORMAT [W] = spm_Volt_W(u)  
+        u  - times {seconds}  
+        W  - basis functions (mixture of Gammas)  
+       __________________________________________________________________________  
+      
 
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_Volt_W.m )
 

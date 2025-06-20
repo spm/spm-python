@@ -1,11 +1,11 @@
-from mpython import Runtime
+from spm._runtime import Runtime
 
 
 def _load_curry_data_file(*args, **kwargs):
     """
-    load_curry_data_file is a function.
-          [orig, data] = load_curry_data_file(datafile)
-
+    load_curry_data_file is a function.  
+          [orig, data] = load_curry_data_file(datafile)  
+      
 
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/load_curry_data_file.m )
 

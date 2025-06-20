@@ -10,5 +10,5 @@ __all__ = [
     "tsss_config",
     "tsss_config_momentspace",
     "tsss_spm_enm",
-    "tsss_spm_momentspace",
+    "tsss_spm_momentspace"
 ]

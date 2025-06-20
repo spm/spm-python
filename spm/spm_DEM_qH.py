@@ -1,22 +1,22 @@
-from mpython import Runtime
+from spm._runtime import Runtime
 
 
 def spm_DEM_qH(*args, **kwargs):
     """
-      Report on conditional estimates of hyperparameters
-        FORMAT spm_DEM_qH(qH,pH)
-
-        qH.h    - conditional estimate of log-precision (causes)
-        qH.g    - conditional of log-precision (state)
-        qH.V    - conditional variance (causes)
-        qH.W    - conditional (states)
-
-        qH.p    - time-dependent estimates from Laplace scheme
-        qH.c    - time-dependent covariances
-
-        pH      - option true log-precisions
-       __________________________________________________________________________
-
+      Report on conditional estimates of hyperparameters  
+        FORMAT spm_DEM_qH(qH,pH)  
+         
+        qH.h    - conditional estimate of log-precision (causes)  
+        qH.g    - conditional of log-precision (state)  
+        qH.V    - conditional variance (causes)  
+        qH.W    - conditional (states)  
+         
+        qH.p    - time-dependent estimates from Laplace scheme  
+        qH.c    - time-dependent covariances  
+         
+        pH      - option true log-precisions  
+       __________________________________________________________________________  
+      
 
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_DEM_qH.m )
 

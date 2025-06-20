@@ -20,5 +20,5 @@ __all__ = [
     "mci_rphase_dfdx",
     "mci_rphase_fx",
     "mci_rphase_gen",
-    "mci_rphase_struct",
+    "mci_rphase_struct"
 ]

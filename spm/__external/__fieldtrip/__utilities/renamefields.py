@@ -1,17 +1,17 @@
-from mpython import Runtime
+from spm._runtime import Runtime
 
 
 def renamefields(*args, **kwargs):
     """
-      RENAMEFIELDS renames a selection of the fields in a structure
-
-        Use as
-          b = renamefields(a, old, new)
-        which renames the fields with the old name to the new name. Fields that
-        are specified but not present will be silently ignored.
-
-        See also COPYFIELDS, KEEPFIELDS, REMOVEFIELDS
-
+      RENAMEFIELDS renames a selection of the fields in a structure  
+         
+        Use as  
+          b = renamefields(a, old, new)  
+        which renames the fields with the old name to the new name. Fields that  
+        are specified but not present will be silently ignored.  
+         
+        See also COPYFIELDS, KEEPFIELDS, REMOVEFIELDS  
+      
 
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/utilities/renamefields.m )
 

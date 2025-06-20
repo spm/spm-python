@@ -1,13 +1,13 @@
-from mpython import Runtime
+from spm._runtime import Runtime
 
 
 def _getusername(*args, **kwargs):
     """
-      GETUSERNAME
-
-        Use as
-          str = getusername();
-
+      GETUSERNAME  
+         
+        Use as  
+          str = getusername();  
+      
 
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/getusername.m )
 

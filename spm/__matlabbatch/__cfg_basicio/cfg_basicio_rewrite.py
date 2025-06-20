@@ -1,16 +1,16 @@
-from mpython import Runtime
+from spm._runtime import Runtime
 
 
 def cfg_basicio_rewrite(*args, **kwargs):
     """
-      Rewrite job to conform to new submenu structure of BasicIO
-
-        This code is part of a batch job configuration system for MATLAB. See
-             help matlabbatch
-        for a general overview.
-       _______________________________________________________________________
-        Copyright (C) 2007 Freiburg Brain Imaging
-
+      Rewrite job to conform to new submenu structure of BasicIO  
+         
+        This code is part of a batch job configuration system for MATLAB. See   
+             help matlabbatch  
+        for a general overview.  
+       _______________________________________________________________________  
+        Copyright (C) 2007 Freiburg Brain Imaging  
+      
 
     [Matlab code]( https://github.com/spm/spm/blob/main/matlabbatch/cfg_basicio/cfg_basicio_rewrite.m )
 

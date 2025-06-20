@@ -28,5 +28,5 @@ __all__ = [
     "cfg_example_run_div",
     "cfg_example_run_sum",
     "cfg_example_sum",
-    "toy_example",
+    "toy_example"
 ]

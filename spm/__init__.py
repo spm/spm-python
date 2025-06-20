@@ -1,5 +1,4 @@
 from mpython import (
-    Runtime,
     MatlabClass,
     MatlabFunction,
     Cell,
@@ -7,6 +6,9 @@ from mpython import (
     Array,
     SparseArray,
 )
+from spm._runtime import Runtime
+from spm._version import __version__
+
 from .file_array import file_array
 from .gifti import gifti
 from .meeg import meeg
@@ -33,7 +35,7 @@ from .__compat import (
     spm_read_hdr,
     spm_resss,
     spm_spm_ui,
-    spm_tbx_config2cfg,
+    spm_tbx_config2cfg
 )
 from .__config import (
     cfg_mlbatch_appcfg,
@@ -164,7 +166,7 @@ from .__config import (
     spm_run_smooth,
     spm_run_st,
     spm_run_tissue_volumes,
-    spm_run_voi,
+    spm_run_voi
 )
 from .__external import (
     bemcp_example,
@@ -441,7 +443,6 @@ from .__external import (
     loreta2fieldtrip,
     nutmeg2fieldtrip,
     ft_colormap,
-    ft_headlight,
     ft_plot_axes,
     ft_plot_box,
     ft_plot_cloud,
@@ -799,9 +800,13 @@ from .__external import (
     mne_write_stc_file1,
     mne_write_surface,
     mne_write_w_file,
-    mne_write_w_file1,
+    mne_write_w_file1
 )
-from .__man import dcm_fit_finger, gen_finger, glm_phi
+from .__man import (
+    dcm_fit_finger,
+    gen_finger,
+    glm_phi
+)
 from .__matlabbatch import (
     cfg_branch,
     cfg_choice,
@@ -895,7 +900,7 @@ from .__matlabbatch import (
     hgsave_pre2008a,
     subsasgn_check_funhandle,
     subsasgn_check_num,
-    subsasgn_check_valcfg,
+    subsasgn_check_valcfg
 )
 from .spm import spm
 from .spm_ADEM import spm_ADEM
@@ -1436,7 +1441,6 @@ from .spm_log import spm_log
 from .spm_log_evidence import spm_log_evidence
 from .spm_log_evidence_reduce import spm_log_evidence_reduce
 from .spm_logdet import spm_logdet
-from .spm_logo import spm_logo
 from .spm_lorenz_k import spm_lorenz_k
 from .spm_lotka_volterra import spm_lotka_volterra
 from .spm_maff8 import spm_maff8
@@ -1563,7 +1567,7 @@ from .__spm_orthviews import (
     spm_ov_rgb,
     spm_ov_roi,
     spm_ov_save,
-    spm_ovhelper_3Dreg,
+    spm_ovhelper_3Dreg
 )
 from .spm_orthviews import spm_orthviews
 from .spm_padarray import spm_padarray
@@ -1822,7 +1826,7 @@ from .__tests import (
     test_spm_sum,
     test_spm_trace,
     test_spm_update,
-    test_spm_z2p,
+    test_spm_z2p
 )
 from .__toolbox import (
     dartel3,
@@ -2269,6 +2273,7 @@ from .__toolbox import (
     pm_pad,
     pm_restore_ramp,
     pm_seed,
+    pm_segment,
     pm_smooth_phasemap,
     pm_unwrap,
     tbx_cfg_fieldmap,
@@ -2447,8 +2452,6 @@ from .__toolbox import (
     spm_TVdenoise2,
     spm_TVdenoise_config,
     spm_dctdst,
-    spm_depth,
-    spm_distance3,
     spm_run_denoise,
     spm_scope,
     spm_scope_config,
@@ -2456,8 +2459,6 @@ from .__toolbox import (
     spm_slice2vol_config,
     spm_slice2vol_estimate,
     spm_slice2vol_reslice,
-    spm_thin,
-    spm_topo_lookup,
     spm_topup,
     spm_topup_config,
     tbx_cfg_spatial,
@@ -2775,7 +2776,7 @@ from .__toolbox import (
     spm_ssm2csd,
     spm_ssm2ker,
     spm_ssm2mtf,
-    spm_wavspec,
+    spm_wavspec
 )
 
 
@@ -3216,7 +3217,6 @@ __all__ = [
     "loreta2fieldtrip",
     "nutmeg2fieldtrip",
     "ft_colormap",
-    "ft_headlight",
     "ft_plot_axes",
     "ft_plot_box",
     "ft_plot_cloud",
@@ -4210,7 +4210,6 @@ __all__ = [
     "spm_log_evidence",
     "spm_log_evidence_reduce",
     "spm_logdet",
-    "spm_logo",
     "spm_lorenz_k",
     "spm_lotka_volterra",
     "spm_maff8",
@@ -5038,6 +5037,7 @@ __all__ = [
     "pm_pad",
     "pm_restore_ramp",
     "pm_seed",
+    "pm_segment",
     "pm_smooth_phasemap",
     "pm_unwrap",
     "tbx_cfg_fieldmap",
@@ -5216,8 +5216,6 @@ __all__ = [
     "spm_TVdenoise2",
     "spm_TVdenoise_config",
     "spm_dctdst",
-    "spm_depth",
-    "spm_distance3",
     "spm_run_denoise",
     "spm_scope",
     "spm_scope_config",
@@ -5225,8 +5223,6 @@ __all__ = [
     "spm_slice2vol_config",
     "spm_slice2vol_estimate",
     "spm_slice2vol_reslice",
-    "spm_thin",
-    "spm_topo_lookup",
     "spm_topup",
     "spm_topup_config",
     "tbx_cfg_spatial",
@@ -5544,5 +5540,5 @@ __all__ = [
     "spm_ssm2csd",
     "spm_ssm2ker",
     "spm_ssm2mtf",
-    "spm_wavspec",
+    "spm_wavspec"
 ]

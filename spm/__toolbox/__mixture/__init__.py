@@ -20,5 +20,5 @@ __all__ = [
     "spm_mix_demo1d",
     "spm_rglm",
     "spm_samp_gauss",
-    "spm_samp_mix",
+    "spm_samp_mix"
 ]

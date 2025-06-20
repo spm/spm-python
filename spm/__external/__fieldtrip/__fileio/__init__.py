@@ -64,5 +64,5 @@ __all__ = [
     "ft_write_mri",
     "ft_write_sens",
     "ft_write_spike",
-    "ft_write_tsv",
+    "ft_write_tsv"
 ]

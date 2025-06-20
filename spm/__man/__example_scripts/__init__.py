@@ -3,4 +3,8 @@ from .gen_finger import gen_finger
 from .glm_phi import glm_phi
 
 
-__all__ = ["dcm_fit_finger", "gen_finger", "glm_phi"]
+__all__ = [
+    "dcm_fit_finger",
+    "gen_finger",
+    "glm_phi"
+]

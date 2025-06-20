@@ -1,18 +1,18 @@
-from mpython import Runtime
+from spm._runtime import Runtime
 
 
 def DEM_demo_convolution_LAP(*args, **kwargs):
     """
-      Linear convolution revisited: A dual estimation problem
-       __________________________________________________________________________
-        This demonstration compares generalised filtering and a state-of-the-art
-        Bayesian smoother (SCKS) in the context of dual estimation. Note that the
-        parameter estimates are smaller then the true values for generalised
-        schemes (LAP and DEM). This is largely due to the shrinkage priors and
-        optimisation of model evidence (marginal likelihood), as opposed to the
-        likelihood optimised by the Square-root Cubature Kalman Smoother (SCKS).
-       __________________________________________________________________________
-
+      Linear convolution revisited: A dual estimation problem  
+       __________________________________________________________________________  
+        This demonstration compares generalised filtering and a state-of-the-art   
+        Bayesian smoother (SCKS) in the context of dual estimation. Note that the  
+        parameter estimates are smaller then the true values for generalised   
+        schemes (LAP and DEM). This is largely due to the shrinkage priors and   
+        optimisation of model evidence (marginal likelihood), as opposed to the  
+        likelihood optimised by the Square-root Cubature Kalman Smoother (SCKS).  
+       __________________________________________________________________________  
+      
 
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DEM/DEM_demo_convolution_LAP.m )
 

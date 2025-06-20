@@ -1,18 +1,18 @@
-from mpython import Runtime
+from spm._runtime import Runtime
 
 
 def _littleendian(*args, **kwargs):
     """
-      LITTLEENDIAN returns 1 (true) on a little endian machine, e.g. with an
-        Intel or AMD, or 0 (false) otherwise
-
-        Example
-          if (littleendian)
-            % do something, e.g. swap some bytes
-           end
-
-        See also BIGENDIAN, SWAPBYTES, TYPECAST
-
+      LITTLEENDIAN returns 1 (true) on a little endian machine, e.g. with an  
+        Intel or AMD, or 0 (false) otherwise  
+         
+        Example  
+          if (littleendian)  
+            % do something, e.g. swap some bytes  
+           end  
+         
+        See also BIGENDIAN, SWAPBYTES, TYPECAST  
+      
 
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/littleendian.m )
 

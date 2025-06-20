@@ -1,19 +1,19 @@
-from mpython import Runtime
+from spm._runtime import Runtime
 
 
 def ft_preproc_online_filter_apply(*args, **kwargs):
     """
-      FT_PREPROC_ONLINE_FILTER_APPLY passes a signal through the online filter and
-        returns the updated filter model (delay states) and the filtered signal.
-
-        Use as
-          [state, dat] = ft_preproc_online_filter_apply(state, dat)
-        where
-          dat   = Nchan x Ntime
-          state = filter state, see FT_PREPROC_ONLINE_FILTER_INIT
-
-        See also PREPROC
-
+      FT_PREPROC_ONLINE_FILTER_APPLY passes a signal through the online filter and  
+        returns the updated filter model (delay states) and the filtered signal.  
+         
+        Use as  
+          [state, dat] = ft_preproc_online_filter_apply(state, dat)  
+        where  
+          dat   = Nchan x Ntime  
+          state = filter state, see FT_PREPROC_ONLINE_FILTER_INIT  
+         
+        See also PREPROC  
+      
 
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/preproc/ft_preproc_online_filter_apply.m )
 

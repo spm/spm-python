@@ -1,11 +1,11 @@
-from mpython import Runtime
+from spm._runtime import Runtime
 
 
 def spm_cfg_eeg_bc(*args, **kwargs):
     """
-      configuration file for baseline correction
-       __________________________________________________________________________
-
+      configuration file for baseline correction  
+       __________________________________________________________________________  
+      
 
     [Matlab code]( https://github.com/spm/spm/blob/main/config/spm_cfg_eeg_bc.m )
 

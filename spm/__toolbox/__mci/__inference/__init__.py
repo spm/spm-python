@@ -86,5 +86,5 @@ __all__ = [
     "spm_nwcov",
     "spm_nwpost",
     "spm_nwrnd",
-    "spm_wishrnd",
+    "spm_wishrnd"
 ]

@@ -78,5 +78,5 @@ __all__ = [
     "spm_opm_rpsd",
     "spm_opm_sim",
     "spm_opm_synth_gradiometer",
-    "spm_opm_vslm",
+    "spm_opm_vslm"
 ]

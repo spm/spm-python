@@ -1,15 +1,15 @@
-from mpython import Runtime
+from spm._runtime import Runtime
 
 
 def spm_MDP_da(*args, **kwargs):
     """
-      Simulated histograms of dopamine firing
-        FORMAT spm_MDP_da(MDP)
-
-        See also: spm_MDP_game, which generalises this scheme and replaces prior
-        beliefs about KL control with minimisation of expected free energy.
-       __________________________________________________________________________
-
+      Simulated histograms of dopamine firing  
+        FORMAT spm_MDP_da(MDP)  
+         
+        See also: spm_MDP_game, which generalises this scheme and replaces prior  
+        beliefs about KL control with minimisation of expected free energy.  
+       __________________________________________________________________________  
+      
 
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_MDP_da.m )
 

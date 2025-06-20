@@ -1,16 +1,16 @@
-from mpython import Runtime
+from spm._runtime import Runtime
 
 
 def _cfg_util_persistent(*args, **kwargs):
     """
-     CFG_UTIL_PERSISTENT - store persistent variables for cfg_util
-
-        This code is part of a batch job configuration system for MATLAB. See
-             help matlabbatch
-        for a general overview.
-       _______________________________________________________________________
-        Copyright (C) 2007 Freiburg Brain Imaging
-
+     CFG_UTIL_PERSISTENT - store persistent variables for cfg_util  
+         
+        This code is part of a batch job configuration system for MATLAB. See   
+             help matlabbatch  
+        for a general overview.  
+       _______________________________________________________________________  
+        Copyright (C) 2007 Freiburg Brain Imaging  
+      
 
     [Matlab code]( https://github.com/spm/spm/blob/main/matlabbatch/private/cfg_util_persistent.m )
 

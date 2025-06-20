@@ -1,17 +1,17 @@
-from mpython import Runtime
+from spm._runtime import Runtime
 
 
 def fiff_write_int_matrix(*args, **kwargs):
     """
-
-        fiff_write_int_matrix(fid,kind,mat)
-
-        Writes a integer matrix tag
-
-            fid           An open fif file descriptor
-            kind          The tag kind
-            mat           The data matrix
-
+       
+        fiff_write_int_matrix(fid,kind,mat)  
+          
+        Writes a integer matrix tag  
+         
+            fid           An open fif file descriptor  
+            kind          The tag kind  
+            mat           The data matrix  
+      
 
     [Matlab code]( https://github.com/spm/spm/blob/main/external/mne/fiff_write_int_matrix.m )
 

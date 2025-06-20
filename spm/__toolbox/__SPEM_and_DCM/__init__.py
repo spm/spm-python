@@ -10,5 +10,5 @@ __all__ = [
     "spm_SEM_gen_full",
     "spm_dcm_spem",
     "spm_dcm_spem_data",
-    "spm_dcm_spem_results",
+    "spm_dcm_spem_results"
 ]

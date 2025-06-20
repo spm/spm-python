@@ -26,5 +26,5 @@ __all__ = [
     "ft_connectivity_powcorr_ortho",
     "ft_connectivity_ppc",
     "ft_connectivity_psi",
-    "ft_connectivity_wpli",
+    "ft_connectivity_wpli"
 ]

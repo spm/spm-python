@@ -1,17 +1,17 @@
-from mpython import Runtime
+from spm._runtime import Runtime
 
 
 def _select3dtool(*args, **kwargs):
     """
-     SELECT3DTOOL A simple tool for interactively obtaining 3-D coordinates
-
-        SELECT3DTOOL(FIG) Specify figure handle
-
-        Example:
-          surf(peaks);
-          select3dtool;
-          % click on surface
-
+     SELECT3DTOOL A simple tool for interactively obtaining 3-D coordinates   
+         
+        SELECT3DTOOL(FIG) Specify figure handle  
+         
+        Example:  
+          surf(peaks);  
+          select3dtool;  
+          % click on surface  
+      
 
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/plotting/private/select3dtool.m )
 

@@ -22,5 +22,5 @@ __all__ = [
     "ft_inverse_pcc",
     "ft_inverse_rv",
     "ft_inverse_sam",
-    "ft_inverse_sloreta",
+    "ft_inverse_sloreta"
 ]

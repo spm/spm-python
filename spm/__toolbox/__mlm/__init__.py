@@ -20,5 +20,5 @@ __all__ = [
     "spm_vpca",
     "spm_vpca_f",
     "spm_vpca_init",
-    "spm_vpca_update",
+    "spm_vpca_update"
 ]

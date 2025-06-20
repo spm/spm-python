@@ -1,10 +1,10 @@
-from mpython import Runtime
+from spm._runtime import Runtime
 
 
 def _checkfreq(*args, **kwargs):
     """
-      last input is always the required string
-
+      last input is always the required string  
+      
 
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/checkfreq.m )
 

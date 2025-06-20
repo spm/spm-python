@@ -1,10 +1,10 @@
-from mpython import Runtime
+from spm._runtime import Runtime
 
 
 def _fixpos(*args, **kwargs):
     """
-      FIXPOS helper function to ensure that meshes are described properly
-
+      FIXPOS helper function to ensure that meshes are described properly  
+      
 
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/plotting/private/fixpos.m )
 

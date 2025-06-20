@@ -152,5 +152,5 @@ __all__ = [
     "bf_write_spmeeg",
     "spm_DAiSS",
     "spm_beamforming",
-    "tbx_cfg_bf",
+    "tbx_cfg_bf"
 ]

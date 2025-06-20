@@ -14,5 +14,5 @@ __all__ = [
     "spm_dcm_nvc_specify",
     "spm_fx_cmc_tfm_gen",
     "spm_gen_par",
-    "spm_nvc_gen",
+    "spm_nvc_gen"
 ]

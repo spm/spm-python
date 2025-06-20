@@ -1,11 +1,11 @@
-from mpython import Runtime
+from spm._runtime import Runtime
 
 
 def spm_cfg_dcm_peb(*args, **kwargs):
     """
-      SPM Configuration file for second-level DCM (PEB)
-       __________________________________________________________________________
-
+      SPM Configuration file for second-level DCM (PEB)  
+       __________________________________________________________________________  
+      
 
     [Matlab code]( https://github.com/spm/spm/blob/main/config/spm_cfg_dcm_peb.m )
 

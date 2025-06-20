@@ -46,5 +46,5 @@ __all__ = [
     "ft_preproc_resample",
     "ft_preproc_slidingrange",
     "ft_preproc_smooth",
-    "ft_preproc_standardize",
+    "ft_preproc_standardize"
 ]

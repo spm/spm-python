@@ -1,18 +1,18 @@
-from mpython import Runtime
+from spm._runtime import Runtime
 
 
 def spm_grid(*args, **kwargs):
     """
-      Superimpose a Talairach and Tournoux grid
-        FORMAT O = spm_grid(I)
-        I - image matrix
-        O - image matrix with grid added
-       __________________________________________________________________________
-
-        spm_grid adds a grid to the input argument.
-        The grid is scaled to 10% of the input's maximum.
-       __________________________________________________________________________
-
+      Superimpose a Talairach and Tournoux grid  
+        FORMAT O = spm_grid(I)  
+        I - image matrix  
+        O - image matrix with grid added  
+       __________________________________________________________________________  
+         
+        spm_grid adds a grid to the input argument.  
+        The grid is scaled to 10% of the input's maximum.  
+       __________________________________________________________________________  
+      
 
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_grid.m )
 

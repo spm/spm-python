@@ -1,20 +1,20 @@
-from mpython import Runtime
+from spm._runtime import Runtime
 
 
 def spm_get_data(*args, **kwargs):
     """
-      Get data from image files at specified locations
-        FORMAT [Y] = spm_get_data(V,XYZ,check)
-
-        V          - [1 x n] struct array of file handles (or filename matrix)
-        XYZ        - [3 x m] or [4 x m] location matrix {voxel}
-        check      - check validity of input parameters [default: true]
-
-        Y          - [n x m] double values
-
-        See also spm_sample_vol
-       __________________________________________________________________________
-
+      Get data from image files at specified locations  
+        FORMAT [Y] = spm_get_data(V,XYZ,check)  
+         
+        V          - [1 x n] struct array of file handles (or filename matrix)  
+        XYZ        - [3 x m] or [4 x m] location matrix {voxel}  
+        check      - check validity of input parameters [default: true]  
+         
+        Y          - [n x m] double values  
+         
+        See also spm_sample_vol  
+       __________________________________________________________________________  
+      
 
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_get_data.m )
 

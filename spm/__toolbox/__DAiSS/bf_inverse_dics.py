@@ -1,11 +1,11 @@
-from mpython import Runtime
+from spm._runtime import Runtime
 
 
 def bf_inverse_dics(*args, **kwargs):
     """
-      Computes DICS filters
-       __________________________________________________________________________
-
+      Computes DICS filters  
+       __________________________________________________________________________  
+      
 
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DAiSS/bf_inverse_dics.m )
 

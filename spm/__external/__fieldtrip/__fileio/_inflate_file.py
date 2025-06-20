@@ -1,12 +1,12 @@
-from mpython import Runtime
+from spm._runtime import Runtime
 
 
 def _inflate_file(*args, **kwargs):
     """
-      INFLATE_FILE helper function to uncompress a compressed file of arbitrary
-        compression type. Returns the full path to the extracted file or
-        directory, which will be located in a temporary location.
-
+      INFLATE_FILE helper function to uncompress a compressed file of arbitrary  
+        compression type. Returns the full path to the extracted file or  
+        directory, which will be located in a temporary location.  
+      
 
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/inflate_file.m )
 

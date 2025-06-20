@@ -1,12 +1,12 @@
-from mpython import Runtime
+from spm._runtime import Runtime
 
 
 def spm_series_align(*args, **kwargs):
     """
-      Longitudinal registration of image series
-        FORMAT out = spm_series_align(job)
-       __________________________________________________________________________
-
+      Longitudinal registration of image series  
+        FORMAT out = spm_series_align(job)  
+       __________________________________________________________________________  
+      
 
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/Longitudinal/spm_series_align.m )
 

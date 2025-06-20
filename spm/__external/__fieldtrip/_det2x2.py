@@ -1,11 +1,11 @@
-from mpython import Runtime
+from spm._runtime import Runtime
 
 
 def _det2x2(*args, **kwargs):
     """
-      DET2X2 computes determinant of matrix x, using explicit analytic definition
-        if size(x,1) < 4, otherwise use MATLAB det-function
-
+      DET2X2 computes determinant of matrix x, using explicit analytic definition  
+        if size(x,1) < 4, otherwise use MATLAB det-function  
+      
 
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/det2x2.m )
 

@@ -1,11 +1,11 @@
-from mpython import Runtime
+from spm._runtime import Runtime
 
 
 def bf_write_spmeeg(*args, **kwargs):
     """
-      Writes out beamformer results as M/EEG dataset
-       __________________________________________________________________________
-
+      Writes out beamformer results as M/EEG dataset  
+       __________________________________________________________________________  
+      
 
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DAiSS/bf_write_spmeeg.m )
 

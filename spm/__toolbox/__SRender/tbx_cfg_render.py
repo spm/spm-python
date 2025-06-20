@@ -1,11 +1,11 @@
-from mpython import Runtime
+from spm._runtime import Runtime
 
 
 def tbx_cfg_render(*args, **kwargs):
     """
-      Configuration file for toolbox 'Rendering'
-       __________________________________________________________________________
-
+      Configuration file for toolbox 'Rendering'  
+       __________________________________________________________________________  
+      
 
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/SRender/tbx_cfg_render.m )
 

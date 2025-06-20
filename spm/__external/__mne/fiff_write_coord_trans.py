@@ -1,16 +1,16 @@
-from mpython import Runtime
+from spm._runtime import Runtime
 
 
 def fiff_write_coord_trans(*args, **kwargs):
     """
-
-        fiff_write_coord_trans(fid,trans)
-
-        Writes a coordinate transformation structure
-
-            fid           An open fif file descriptor
-            trans         The coordinate transfomation structure
-
+       
+        fiff_write_coord_trans(fid,trans)  
+          
+        Writes a coordinate transformation structure  
+         
+            fid           An open fif file descriptor  
+            trans         The coordinate transfomation structure  
+      
 
     [Matlab code]( https://github.com/spm/spm/blob/main/external/mne/fiff_write_coord_trans.m )
 

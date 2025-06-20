@@ -1,15 +1,15 @@
-from mpython import Runtime
+from spm._runtime import Runtime
 
 
 def ft_flush_event(*args, **kwargs):
     """
-      FT_FLUSH_EVENT removes all events from the event queue
-
-        Use as
-          ft_flush_event(filename, ...)
-
-        See also FT_FLUSH_HEADER, FT_FLUSH_DATA
-
+      FT_FLUSH_EVENT removes all events from the event queue  
+         
+        Use as  
+          ft_flush_event(filename, ...)  
+         
+        See also FT_FLUSH_HEADER, FT_FLUSH_DATA  
+      
 
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/ft_flush_event.m )
 

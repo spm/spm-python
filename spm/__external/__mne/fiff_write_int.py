@@ -1,17 +1,17 @@
-from mpython import Runtime
+from spm._runtime import Runtime
 
 
 def fiff_write_int(*args, **kwargs):
     """
-
-        fiff_write_int(fid,kind,data)
-
-        Writes a 32-bit integer tag to a fif file
-
-            fid           An open fif file descriptor
-            kind          Tag kind
-            data          The integers to use as data
-
+       
+        fiff_write_int(fid,kind,data)  
+          
+        Writes a 32-bit integer tag to a fif file  
+         
+            fid           An open fif file descriptor  
+            kind          Tag kind  
+            data          The integers to use as data  
+      
 
     [Matlab code]( https://github.com/spm/spm/blob/main/external/mne/fiff_write_int.m )
 

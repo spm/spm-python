@@ -1,11 +1,11 @@
-from mpython import Runtime
+from spm._runtime import Runtime
 
 
 def bf_output_montage(*args, **kwargs):
     """
-      Generate a montage for source extraction
-       __________________________________________________________________________
-
+      Generate a montage for source extraction  
+       __________________________________________________________________________  
+      
 
     [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DAiSS/bf_output_montage.m )
 

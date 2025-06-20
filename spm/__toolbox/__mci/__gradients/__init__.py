@@ -26,5 +26,5 @@ __all__ = [
     "spm_mci_joint_grad",
     "spm_mci_sens",
     "spm_mci_sens_init",
-    "spm_mci_sens_sun",
+    "spm_mci_sens_sun"
 ]

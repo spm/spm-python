@@ -10,5 +10,5 @@ __all__ = [
     "mci_linear_gen",
     "mci_linear_like",
     "mci_linear_post",
-    "mci_linear_struct",
+    "mci_linear_struct"
 ]

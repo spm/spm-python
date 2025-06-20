@@ -14,5 +14,5 @@ __all__ = [
     "spm_fx_mfm_NMDA",
     "spm_lfp_mtf_sample",
     "spm_nmm_priors_NMDA",
-    "spm_x_mfm_NMDA",
+    "spm_x_mfm_NMDA"
 ]

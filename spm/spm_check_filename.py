@@ -1,14 +1,14 @@
-from mpython import Runtime
+from spm._runtime import Runtime
 
 
 def spm_check_filename(*args, **kwargs):
     """
-      Check paths are valid and try to restore path names
-        FORMAT V = spm_check_filename(V)
-
-        V - struct array of file handles
-       __________________________________________________________________________
-
+      Check paths are valid and try to restore path names  
+        FORMAT V = spm_check_filename(V)  
+         
+        V - struct array of file handles  
+       __________________________________________________________________________  
+      
 
     [Matlab code]( https://github.com/spm/spm/blob/main/spm_check_filename.m )
 

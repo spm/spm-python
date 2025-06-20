@@ -1,11 +1,11 @@
-from mpython import Runtime
+from spm._runtime import Runtime
 
 
 def cfg_callbuiltin(*args, **kwargs):
     """
-    cfg_callbuiltin is a function.
-          varargout = cfg_callbuiltin(varargin)
-
+    cfg_callbuiltin is a function.  
+          varargout = cfg_callbuiltin(varargin)  
+      
 
     [Matlab code]( https://github.com/spm/spm/blob/main/matlabbatch/cfg_callbuiltin.m )
 

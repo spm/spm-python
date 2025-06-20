@@ -1,19 +1,19 @@
-from mpython import Runtime
+from spm._runtime import Runtime
 
 
 def _nex_ts(*args, **kwargs):
     """
-      nex_ts(filename, varname): Read timestamps from a .nex file
-
-        [n, ts] = nex_ts(filename, varname)
-
-        INPUT:
-          filename - if empty string, will use File Open dialog
-          varname - variable name
-        OUTPUT:
-          n - number of timestamps
-          ts - array of timestamps (in seconds)
-
+      nex_ts(filename, varname): Read timestamps from a .nex file  
+         
+        [n, ts] = nex_ts(filename, varname)  
+         
+        INPUT:  
+          filename - if empty string, will use File Open dialog  
+          varname - variable name  
+        OUTPUT:  
+          n - number of timestamps  
+          ts - array of timestamps (in seconds)  
+      
 
     [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/nex_ts.m )
 

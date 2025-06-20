@@ -4,4 +4,9 @@ from .hanning import hanning
 from .hilbert import hilbert
 
 
-__all__ = ["boxcar", "flattopwin", "hanning", "hilbert"]
+__all__ = [
+    "boxcar",
+    "flattopwin",
+    "hanning",
+    "hilbert"
+]
