@@ -1,30 +1,32 @@
 name: Upload and Publish Python Package
-
 on:
   workflow_run:
     workflows: ["run_unit_tests"]
     types:
       - completed
+  workflow_dispatch:
 
 jobs:
   check-tag:
     name: Check if commit is a tag
-    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    if: >
+      github.event_name == 'workflow_dispatch' ||
+      github.event.workflow_run.conclusion == 'success'
     runs-on: ubuntu-latest
     outputs:
       is_tagged: ${{ steps.check-tag.outputs.is_tagged }}
       tag_name: ${{ steps.check-tag.outputs.tag_name }}
       is_prerelease: ${{ steps.check-tag.outputs.is_prerelease }}
     steps:
-      - name: Fetch repo
+      - name: Checkout full history
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
-      - name: Check if commit was a tag and detect prerelease
+      - name: Determine tagged commit and pre-release
         id: check-tag
         run: |
-          TAG=$(git tag --points-at ${{ github.event.workflow_run.head_sha }} | head -n 1)
+          TAG=$(git tag --points-at HEAD | head -n 1)
           echo "Found tag: $TAG"
           if [[ "$TAG" =~ ^[0-9]+\.[0-9]+\.[0-9]+.*$ ]]; then
             echo "is_tagged=true" >> $GITHUB_OUTPUT
