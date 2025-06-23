@@ -1,239 +1,154 @@
-name: Upload Python Package
+name: Upload and Publish Python Package
 
 on:
-  workflow_dispatch:
-  push:
-    tags:
-      - "[0-9][0-9].[0-9]*"
-
-env:
-  MLM_LICENSE_TOKEN: ${{ secrets.MATLAB_BATCH_TOKEN }}
-  
-permissions:
-  contents: write
+  workflow_run:
+    workflows: ["run_unit_tests"]
+    types:
+      - completed
 
 jobs:
-  compile-and-deploy:
-    strategy:
-      fail-fast: false
-      matrix:
-        include: 
-          - matlab: "R2020b"
-            python: "2.7"
-            os: "ubuntu-20.04"
-            
-          - matlab: "R2020b"
-            python: "3.8"
-            py3from: "3.6"
-            py3to:   "3.9"
-            os: "ubuntu-latest"
-            
-          - matlab: "R2021a"
-            python: "2.7"
-            os: "ubuntu-20.04"
-            
-          - matlab: "R2021a"
-            python: "3.8"
-            py3from: "3.7"
-            py3to:   "3.9"
-            os: "ubuntu-latest"
-            
-          - matlab: "R2021b"
-            python: "2.7"
-            os: "ubuntu-20.04"
-            
-          - matlab: "R2021b"
-            python:  "3.9"
-            py3from: "3.7"
-            py3to:   "3.10"
-            os: "ubuntu-latest"
-            
-          - matlab: "R2022a"
-            python: "2.7"
-            os: "ubuntu-20.04"
-            
-          - matlab: "R2022a"
-            python:  "3.9"
-            py3from: "3.8"
-            py3to:   "3.10"
-            os: "ubuntu-latest"
-            
-          - matlab: "R2022b"
-            python: "2.7"
-            os: "ubuntu-20.04"
-            
-          - matlab: "R2022b"
-            python: "3.10"
-            py3from: "3.8"
-            py3to:   "3.11"
-            os: "ubuntu-latest"
-            
-          - matlab: "R2023a"
-            python: "3.10"
-            py3from: "3.8"
-            py3to:   "3.11"
-            os: "ubuntu-latest"
-            
-          - matlab: "R2023b"
-            python: "3.11"
-            py3from: "3.9"
-            py3to:   "3.12"
-            os: "ubuntu-latest"
-            
-          - matlab: "R2024a"
-            python: "3.11"
-            py3from: "3.9"
-            py3to:   "3.12"
-            os: "ubuntu-latest"
-           
-          - matlab: "R2024b"
-            python: "3.12"
-            py3from: "3.9"
-            py3to:   "3.13"
-            os: "ubuntu-latest"
-            
-          - matlab: "R2024b"
-            main: "true"
-            python: "3.12"
-            py3from: "3.9"
-            py3to:   "3.13"
-            os: "ubuntu-latest"
-            
-          - matlab: "R2025a"
-            main: "false"
-            python: "3.12"
-            py3from: "3.9"
-            py3to:   "3.13"
-            os: "ubuntu-latest"
-        
-    runs-on: ${{ matrix.os }}
-
-            
-    steps: 
-      - name: Update MPM 
-        run: | 
-          rm -f /home/runner/work/_temp/mpm
-          wget https://www.mathworks.com/mpm/glnxa64/mpm -O /home/runner/work/_temp/mpm
-          /usr/bin/chmod +x /home/runner/work/_temp/mpm
-          
-      - name: Set up MATLAB
-        uses: matlab-actions/setup-matlab@v2
-        with:          
-          cache: True
-          release: ${{ matrix.matlab }}
-          products:  |
-            MATLAB_Compiler
-            MATLAB_Compiler_SDK
-          
-      - name: Check out repository
+  check-tag:
+    name: Check if commit is a tag
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    runs-on: ubuntu-latest
+    outputs:
+      is_tagged: ${{ steps.check-tag.outputs.is_tagged }}
+      tag_name: ${{ steps.check-tag.outputs.tag_name }}
+      is_prerelease: ${{ steps.check-tag.outputs.is_prerelease }}
+    steps:
+      - name: Fetch repo
         uses: actions/checkout@v4
-        
-      - name: Run MPython
-        uses: matlab-actions/run-command@v2
         with:
-          command: |
-            cd('.mpython'); 
-            addpath(genpath('.')); 
-            spm_make_python('.', true, false); 
-            
-      - name: Set up Python 
+          fetch-depth: 0
+
+      - name: Check if commit was a tag and detect prerelease
+        id: check-tag
+        run: |
+          TAG=$(git tag --points-at ${{ github.event.workflow_run.head_sha }} | head -n 1)
+          echo "Found tag: $TAG"
+          if [[ "$TAG" =~ ^[0-9]+\.[0-9]+\.[0-9]+.*$ ]]; then
+            echo "is_tagged=true" >> $GITHUB_OUTPUT
+            echo "tag_name=$TAG" >> $GITHUB_OUTPUT
+
+            if [[ "$TAG" =~ ^[0-9]+\.[0-9]+\.[0-9]+[a-zA-Z].*$ ]]; then
+              echo "is_prerelease=true" >> $GITHUB_OUTPUT
+            else
+              echo "is_prerelease=false" >> $GITHUB_OUTPUT
+            fi
+          else
+            echo "is_tagged=false" >> $GITHUB_OUTPUT
+          fi
+
+  build:
+    name: Build Package
+    needs: check-tag
+    if: needs.check-tag.outputs.is_tagged == 'true'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: ${{ matrix.python }}
-          
+          python-version: "3.12"
+
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
           pip install build
-          pip install numpy
 
-      - name: Setup python version
-        if: ${{ matrix.main }}
-        run: |
-          sed -i 's/\(version = "[^"]*\)"/version = "${{ github.ref_name }}"/' pyproject.toml
+      - name: Build sdist and wheel
+        run: python -m build
 
-      - name: Add Matlab version specifier
-        if: ${{ !matrix.main }}
-        run: | 
-          sed -i 's/\(version = "[^"]*\)"/\1+${{ matrix.matlab }}"/' pyproject.toml
-
-      - name: Setup Python version (2.7) 
-        if:  ${{ !matrix.py3from }}
-        run: |
-          sed -i 's/^python-requires = .*/python-requires = ">=2.7,<3.1"/' pyproject.toml
-          echo "[tool.distutils.bdist_wheel]" >> pyproject.toml
-          echo "python-tag = \"2.7\"" >> pyproject.toml
-          cat pyproject.toml
-        
-      - name: Setup Python version (3+)
-        if: ${{ matrix.py3from }}
-        run: |
-          FROM=${{ matrix.py3from }}
-          TO=${{ matrix.py3to }}
-          sed -i 's/^python-requires = .*/python-requires = "$FROM>=,<$TO"/' pyproject.toml
-          tags=$(for i in $(seq ${FROM//3./} $(( ${TO//3./}  - 1)) ); do echo -n "py3$i."; done | sed 's/\.$//')
-          echo "[tool.distutils.bdist_wheel]" >> pyproject.toml
-          echo "python-tag = \"$tags\"" >> pyproject.toml    
-          cat pyproject.toml
-        
-      - name: Build package
-        run: python -m build --sdist --wheel
-
-      - name: Extract MATLAB path to file
-        uses: matlab-actions/run-command@v2
+      - name: Upload built packages
+        uses: actions/upload-artifact@v4
         with:
-          command: |
-            fileID = fopen('matlab_path.txt', 'w');
-            matlabpath = matlabroot;
-            matlabpath = strrep(matlabpath, filesep, '/');
-            matlabpath = strrep(matlabpath, '\', '\\');
-            matlabpath = strrep(matlabpath, 'C:', '/c/');
-            matlabpath = strrep(matlabpath, 'D:', '/d/');
-            fprintf(fileID, matlabpath);
-            fclose(fileID);
-        # sometimes this step hangs when closing matlab, automatically terminating after 2 minutes solves the issue
-        timeout-minutes: 2
-        continue-on-error: true
-        
-      - name: Set environment variable with MATLAB path
-        shell: bash # Works on Windows as well because of shell: bash
-        run: |
-          matlab_path=$(cat matlab_path.txt)
-          echo "MATLAB_PATH=$matlab_path" >> $GITHUB_ENV
-          
-      - name: Install package
-        run: |
-          python -m pip install $(find ./dist -name "*.whl")
-          
-      - name: Run unit tests
-        run: |
-          export LD_LIBRARY_PATH="${LD_LIBRARY_PATH:+${LD_LIBRARY_PATH}:}\
-          ${{ env.MATLAB_PATH }}/runtime/glnxa64:\
-          ${{ env.MATLAB_PATH }}/bin/glnxa64:\
-          ${{ env.MATLAB_PATH }}/sys/os/glnxa64:\
-          ${{ env.MATLAB_PATH }}/extern/bin/glnxa64"
-          python -m unittest discover tests -v
+          name: dist
+          path: dist/
 
-      - name: Detect pre-release
-        shell: bash
+  publish-to-testpypi:
+    name: Publish to TestPyPI
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: dist
+          path: dist/
+
+      - name: Publish to TestPyPI
+        uses: pypa/gh-action-pypi-publish@release/v1
+        with:
+          repository-url: https://test.pypi.org/legacy/
+
+  test-install:
+    name: Test Install from TestPyPI
+    needs: publish-to-testpypi
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Test install from TestPyPI
         run: |
-          if echo "${{ github.ref_name }}" | grep -q '^[0-9][0-9]\.[0-9][0-9]\.[A-Za-z]'; then
-            echo "PRERELEASE=true" >> $GITHUB_ENV
-          else
-            echo "PRERELEASE=false" >> $GITHUB_ENV
-          fi
-          echo PRERELEASE=${{ env.PRERELEASE }}
-          
-      - name: Release package
-        uses: softprops/action-gh-release@v2
+          python -m pip install --index-url https://test.pypi.org/simple/ --extra-index-url https://pypi.org/simple spm-python
+          python -c "import spm"  
+
+  publish-to-pypi:
+    name: Publish to PyPI
+    needs: test-install
+    runs-on: ubuntu-latest
+    environment:
+      name: pypi
+      url: https://pypi.org/project/spm-python/
+    permissions:
+      id-token: write
+    steps:
+      - uses: actions/download-artifact@v4
         with:
-          prerelease: ${{ env.PRERELEASE }}
-          files: ./dist/spm_python*.whl
-        continue-on-error: true
-        
-      - name: Publish package
-        uses: pypa/gh-action-pypi-publish@27b31702a0e7fc50959f5ad993c78deac1bdfc29
+          name: dist
+          path: dist/
+
+      - name: Publish to PyPI
+        uses: pypa/gh-action-pypi-publish@release/v1
+
+  sign-and-release:
+    name: Sign and Create GitHub Release
+    needs: [check-tag, publish-to-pypi]
+    if: needs.check-tag.outputs.is_tagged == 'true'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      id-token: write
+    steps:
+      - uses: actions/download-artifact@v4
         with:
-          user: __token__
-          password: ${{ secrets.PYPI_API_TOKEN }}
-          
+          name: dist
+          path: dist/
+
+      - name: Sign with Sigstore
+        uses: sigstore/gh-action-sigstore-python@v3.0.0
+        with:
+          inputs: >-
+            dist/*.tar.gz
+            dist/*.whl
+
+      - name: Create GitHub Release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh release create "${{ needs.check-tag.outputs.tag_name }}" \
+            --repo "$GITHUB_REPOSITORY" \
+            --notes "" \
+            $([[ "${{ needs.check-tag.outputs.is_prerelease }}" == "true" ]] && echo "--prerelease") \
+            dist/*
+
+      - name: Upload artifact signatures
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh release upload "${{ needs.check-tag.outputs.tag_name }}" dist/** --repo "$GITHUB_REPOSITORY"
