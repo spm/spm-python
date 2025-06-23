@@ -145,12 +145,6 @@ jobs:
         run: |
           gh release create "${{ needs.check-tag.outputs.tag_name }}" \
             --repo "$GITHUB_REPOSITORY" \
-            --notes "" \
+            --generate-notes \
             $([[ "${{ needs.check-tag.outputs.is_prerelease }}" == "true" ]] && echo "--prerelease") \
             dist/*
-
-      - name: Upload artifact signatures
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          gh release upload "${{ needs.check-tag.outputs.tag_name }}" dist/** --repo "$GITHUB_REPOSITORY"
