@@ -8,9 +8,13 @@ dynamic = ["version"]
 description = "Python bindings for the SPM software."
 readme = "README.md"
 license = {file = "LICENSE"}
-authors = [
+maintainers = [
   {name = "Johan Medrano", email = "johan.medrano@ucl.ac.uk"},
-  {name = "Yael Balbastre", email = "y.balbastre@ucl.ac.uk"},
+  {name = "Yael Balbastre", email = "y.balbastre@ucl.ac.uk"}
+]
+authors = [
+  {name = "Johan Medrano"},
+  {name = "Yael Balbastre"},
   {name = "Yulia Bezsudnova"},
   {name = "Arthur Mitchell"},
   {name = "Peter Zeidman"},
@@ -18,7 +22,7 @@ authors = [
 ]
 requires-python = ">=3.6,<3.13"
 classifiers = [
-  "Development Status :: 4 - Beta",
+  "Development Status :: 5 - Production/Stable",
   "License :: OSI Approved :: GNU General Public License v2 (GPLv2)",
   "Programming Language :: Python :: 3.6",
   "Programming Language :: Python :: 3.7",
