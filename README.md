@@ -14,6 +14,8 @@ Copyright (C) 1991,1994-2025 Wellcome Centre for Human Neuroimaging
 ![PyPI - License](https://img.shields.io/pypi/l/spm-python)
 ![PyPI - Version](https://img.shields.io/pypi/v/spm-python)
 ![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/spm/spm-python/.github%2Fworkflows%2Frun_unit_tests.yml)
+![PyPI - Downloads](https://img.shields.io/pypi/dw/spm-python?color=99c411)
+
 
 > [!WARNING]
 > This project is **young** and might contain bugs.
