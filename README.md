@@ -35,8 +35,8 @@ By default, spm-python uses:
 - Python 3.6: R2020b
 - Python 3.7: R2021b
 - Python 3.8: R2023a
-- Python 3.9-3.12: R2025a
-- Python 3.13: Unsupported
+- Python 3.9: R2025a
+- Python 3.10 - 3.13: R2025b
 
 ### Option 1 - Install the MATLAB runtime on first use
 
@@ -78,7 +78,7 @@ By default, spm-python uses:
    ```
 2. Run the installer
    ```shell
-   install_matlab_runtime --version R2025a --yes
+   install_matlab_runtime --version R2025b --yes
    ```
 
 - **Advantages**
