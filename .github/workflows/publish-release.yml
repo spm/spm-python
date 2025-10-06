@@ -6,6 +6,9 @@ on:
       - completed
   workflow_dispatch:
 
+env: 
+  PYTHON_VERSION: "3.13"
+
 jobs:
   check-tag:
     name: Check if commit is a tag
@@ -52,7 +55,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: "3.12"
+          python-version: ${{ env.PYTHON_VERSION }}
 
       - name: Install dependencies
         run: |
@@ -93,7 +96,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: "3.12"
+          python-version: ${{ env.PYTHON_VERSION }}
 
       - name: Test install from TestPyPI
         run: |

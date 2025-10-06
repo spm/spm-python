@@ -20,7 +20,7 @@ authors = [
   {name = "Peter Zeidman"},
   {name = "Olivia Kowalczyk"},
 ]
-requires-python = ">=3.6,<3.13"
+requires-python = ">=3.6,<3.14"
 classifiers = [
   "Development Status :: 5 - Production/Stable",
   "License :: OSI Approved :: GNU General Public License v2 (GPLv2)",
@@ -31,10 +31,12 @@ classifiers = [
   "Programming Language :: Python :: 3.10",
   "Programming Language :: Python :: 3.11",
   "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
 ]
 dependencies = [
     "mpython-core>=25.4rc1",
-    "spm-runtime-r2025a == 25.1.2 ; python_version >= '3.9'",
+    "spm-runtime-r2025b >= 25.1.2 ; python_version >= '3.10'",
+    "spm-runtime-r2025a == 25.1.2 ; python_version == '3.9'",
     "spm-runtime-r2023a == 25.1.2 ; python_version == '3.8'",
     "spm-runtime-r2021b == 25.1.2 ; python_version == '3.7'",
     "spm-runtime-r2020b == 25.1.2 ; python_version == '3.6'",
@@ -42,6 +44,7 @@ dependencies = [
 
 [project.optional-dependencies]
 latest = ["spm-runtime        == 25.1.2"]
+R2025b = ["spm-runtime-R2025b == 25.1.2"]
 R2025a = ["spm-runtime-R2025a == 25.1.2"]
 R2024b = ["spm-runtime-R2024b == 25.1.2"]
 R2024a = ["spm-runtime-R2024a == 25.1.2"]
