@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_checkopt(*args, **kwargs):
-    """
+    r"""
       FT_CHECKOPT does a validity test on the types and values of a configuration  
         structure or cell-array with key-value pairs.  
          
@@ -44,12 +44,15 @@ def ft_checkopt(*args, **kwargs):
         allowed types and any of the allowed values is sufficient to let this  
         function pass.  
          
-        See also FT_GETOPT, FT_SETOPT  
+        See also FT_GETOPT, FT_SETOPT, FT_DELETEOPT  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/utilities/ft_checkopt.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/utilities/ft_checkopt.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_checkopt", *args, **kwargs)

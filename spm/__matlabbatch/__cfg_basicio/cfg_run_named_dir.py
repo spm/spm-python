@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def cfg_run_named_dir(*args, **kwargs):
-    """
+    r"""
       Return selected dirs as separate output arguments.  
          
         This code is part of a batch job configuration system for MATLAB. See   
@@ -12,9 +12,12 @@ def cfg_run_named_dir(*args, **kwargs):
         Copyright (C) 2007 Freiburg Brain Imaging  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/matlabbatch/cfg_basicio/cfg_run_named_dir.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/matlabbatch/cfg_basicio/cfg_run_named_dir.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("cfg_run_named_dir", *args, **kwargs)

@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_prepare_mesh(*args, **kwargs):
-    """
+    r"""
       FT_PREPARE_MESH creates a triangulated surface mesh or tetrahedral/hexahedral  
         volume mesh that can be used as geometrical description for a volume conduction  
         model. The mesh can either be created manually from anatomical MRI data or can be  
@@ -71,9 +71,12 @@ def ft_prepare_mesh(*args, **kwargs):
         See also FT_VOLUMESEGMENT, FT_PREPARE_HEADMODEL, FT_PLOT_MESH  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/ft_prepare_mesh.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/ft_prepare_mesh.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_prepare_mesh", *args, **kwargs)

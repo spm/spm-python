@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_mar(*args, **kwargs):
-    """
+    r"""
       Bayesian Multivariate Autoregressive Modelling  
         FORMAT [mar,y,y_pred] = spm_mar (X,p,prior,verbose)  
          
@@ -25,9 +25,12 @@ def spm_mar(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/spectral/spm_mar.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/spectral/spm_mar.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_mar", *args, **kwargs)

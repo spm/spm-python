@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_appendspike(*args, **kwargs):
-    """
+    r"""
       FT_APPENDSPIKE combines continuous data (i.e. LFP) with point-process data  
         (i.e. spikes) into a single large dataset. For each spike channel an  
         additional continuos channel is inserted in the data that contains  
@@ -20,9 +20,12 @@ def ft_appendspike(*args, **kwargs):
         See also FT_APPENDDATA, FT_PREPROCESSING  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/ft_appendspike.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/ft_appendspike.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_appendspike", *args, **kwargs)

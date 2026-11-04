@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_invXcdf(*args, **kwargs):
-    """
+    r"""
       Inverse Cumulative Distribution Function (CDF) of Chi-squared distribution  
         FORMAT x = spm_invXcdf(F,v)  
          
@@ -49,9 +49,12 @@ def spm_invXcdf(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/spm_invXcdf.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/spm_invXcdf.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_invXcdf", *args, **kwargs)

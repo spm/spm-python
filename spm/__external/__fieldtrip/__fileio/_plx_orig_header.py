@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _plx_orig_header(*args, **kwargs):
-    """
+    r"""
       PLX_ORIG_HEADER Extracts the header informations of plx files using the  
         Plexon Offline SDK, which is available from  
         http://www.plexon.com/assets/downloads/sdk/ReadingPLXandDDTfilesinMatlab-mexw.zip  
@@ -16,9 +16,12 @@ def _plx_orig_header(*args, **kwargs):
         newer.  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/plx_orig_header.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/fileio/private/plx_orig_header.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("plx_orig_header", *args, **kwargs)

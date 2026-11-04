@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_clusterplot(*args, **kwargs):
-    """
+    r"""
       FT_CLUSTERPLOT plots a series of topographies with highlighted clusters.  
          
         Use as  
@@ -24,6 +24,10 @@ def ft_clusterplot(*args, **kwargs):
           cfg.toi                     = vector, or 'all' (default) indicates which time  
                                         points (or frequency bins) are to be plotted. If specified as 'all' only the  
                                         data points with identified clusters are plotted  
+          cfg.figure                  = 'yes' or 'no', whether to open a new figure. You can also specify a figure handle from FIGURE, GCF or SUBPLOT. (default = 'yes')  
+          cfg.figurename              = string, title of the figure window  
+          cfg.position                = location and size of the figure, specified as [left bottom width height] (default is automatic)  
+          cfg.renderer                = string, 'opengl', 'zbuffer', 'painters', see RENDERERINFO (default is automatic, try 'painters' when it crashes)  
          
         You can also specify most configuration options that apply to FT_TOPOPLOTER or FT_TOPOPLOTTFR,  
         except for cfg.xlim, any of the highlight options, cfg.comment and cfg.commentpos.  
@@ -37,9 +41,12 @@ def ft_clusterplot(*args, **kwargs):
         See also FT_TOPOPLOTTFR, FT_TOPOPLOTER, FT_MOVIEPLOTTFR, FT_MOVIEPLOTER  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/ft_clusterplot.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/ft_clusterplot.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_clusterplot", *args, **kwargs)

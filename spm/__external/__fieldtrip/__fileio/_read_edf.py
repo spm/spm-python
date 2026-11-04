@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _read_edf(*args, **kwargs):
-    """
+    r"""
       READ_EDF reads specified samples from an EDF datafile. It neglects all trial or  
         data block boundaries as if the data was acquired in non-continuous mode.  
          
@@ -31,7 +31,7 @@ def _read_edf(*args, **kwargs):
           hdr.nSamplesPre  number of pre-trigger samples in each trial  
           hdr.nTrials      number of trials  
           hdr.label        cell-array with labels of each channel  
-          hdr.orig         detailled EDF header information  
+          hdr.orig         detailed EDF header information  
          
         Or use as  
           [dat] = read_edf(filename, hdr, begsample, endsample, chanindx)  
@@ -51,9 +51,12 @@ def _read_edf(*args, **kwargs):
         This returns an Nsamples data vector of just the annotation channel  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/read_edf.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/fileio/private/read_edf.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("read_edf", *args, **kwargs)

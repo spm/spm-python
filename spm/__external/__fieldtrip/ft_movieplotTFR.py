@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_movieplotTFR(*args, **kwargs):
-    """
+    r"""
       FT_MOVIEPLOTTFR makes a movie of the time-frequency representation of power or  
         coherence.  
          
@@ -32,6 +32,7 @@ def ft_movieplotTFR(*args, **kwargs):
           cfg.colorbar        = 'yes', 'no' (default = 'no')  
           cfg.colorbartext    = string indicating the text next to colorbar  
           cfg.figure          = 'yes' or 'no', whether to open a new figure. You can also specify a figure handle from FIGURE, GCF or SUBPLOT. (default = 'yes')  
+          cfg.figurename      = string, title of the figure window  
           cfg.position        = location and size of the figure, specified as [left bottom width height] (default is automatic)  
           cfg.renderer        = string, 'opengl', 'zbuffer', 'painters', see RENDERERINFO (default is automatic, try 'painters' when it crashes)  
          
@@ -56,9 +57,12 @@ def ft_movieplotTFR(*args, **kwargs):
         See also FT_MULTIPLOTTFR, FT_TOPOPLOTTFR, FT_SINGLEPLOTTFR, FT_MOVIEPLOTER, FT_SOURCEMOVIE  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/ft_movieplotTFR.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/ft_movieplotTFR.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_movieplotTFR", *args, **kwargs)

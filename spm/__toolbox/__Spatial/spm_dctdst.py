@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_dctdst(*args, **kwargs):
-    """
+    r"""
       Function pointers to various forms of sin and cosine transforms etc  
         FORMAT fun = spm_dctdst  
         fun - a structure with function handles  
@@ -47,9 +47,12 @@ def spm_dctdst(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/Spatial/spm_dctdst.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/Spatial/spm_dctdst.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_dctdst", *args, **kwargs)

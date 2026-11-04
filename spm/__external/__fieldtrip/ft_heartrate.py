@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_heartrate(*args, **kwargs):
-    """
+    r"""
       FT_HEARTRATE estimates the heart rate from a continuous PPG or ECG channel. It  
         returns a new data structure with a continuous representation of the heartrate in  
         beats per minute, the heart period (i.e., the RR interval) in seconds per interval,  
@@ -53,9 +53,12 @@ def ft_heartrate(*args, **kwargs):
         See also FT_ELECTRODERMALACTIVITY, FT_HEADMOVEMENT, FT_REGRESSCONFOUND  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/ft_heartrate.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/ft_heartrate.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_heartrate", *args, **kwargs)

@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_plot_montage(*args, **kwargs):
-    """
+    r"""
       FT_PLOT_MONTAGE makes a montage of a 3-D array by selecting slices at regular distances  
         and combining them in one large 2-D image.  Note that the montage of MRI slices is not to  
         be confused with the EEG montage, which is a way of specifying the reference scheme  
@@ -27,9 +27,12 @@ def ft_plot_montage(*args, **kwargs):
         See also FT_PLOT_ORTHO, FT_PLOT_SLICE, FT_SOURCEPLOT  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/plotting/ft_plot_montage.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/plotting/ft_plot_montage.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_plot_montage", *args, **kwargs, nargout=0)

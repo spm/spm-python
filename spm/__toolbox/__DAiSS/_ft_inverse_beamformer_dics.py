@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _ft_inverse_beamformer_dics(*args, **kwargs):
-    """
+    r"""
       FT_INVERSE_BEAMFORMER_DICS estimates the source power or source  
         coherence according to the Dynamic Imaging of Coherent Sources  
         method.  
@@ -35,9 +35,12 @@ def _ft_inverse_beamformer_dics(*args, **kwargs):
         This implements Joachim Gross et al. 2001  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DAiSS/private/ft_inverse_beamformer_dics.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/DAiSS/private/ft_inverse_beamformer_dics.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_inverse_beamformer_dics", *args, **kwargs)

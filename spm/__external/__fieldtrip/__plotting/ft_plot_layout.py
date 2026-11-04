@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_plot_layout(*args, **kwargs):
-    """
+    r"""
       FT_PLOT_LAYOUT plots a two-dimensional channel layout  
          
         Use as  
@@ -10,7 +10,7 @@ def ft_plot_layout(*args, **kwargs):
         where the layout is a FieldTrip structure obtained from FT_PREPARE_LAYOUT.  
          
         Additional options should be specified in key-value pairs and can be  
-          'chanindx'    = logical vector or vector of indices. Which channels to plot (default is all)  
+          'chanindx'    = logical vector or vector of indices with the channels to plot (default is all)  
           'point'       = 'yes' or 'no' (default 'yes'), plot markers for sensors, comment and scale  
           'box'         = 'yes' or 'no' (default 'yes'), plot boxes around the sensors, comment and scale  
           'label'       = 'yes' or 'no' (default 'yes'), plot the labels of the sensors, comment and scale  
@@ -29,14 +29,14 @@ def ft_plot_layout(*args, **kwargs):
           'interpreter' = string, 'none', 'tex' or 'latex' (default = 'tex')  
          
         The following options control the markers of the sensors. If any is defined, the other two must be defined as well.  
-        Further note that if 'chanindx' is used, the number of elements in each choice should correspond to the original   
+        Further note that if 'chanindx' is used, the number of elements in each choice should correspond to the original  
         labels in the layout, and not to the chosen subset.  
           'pointsymbol' = string with symbol (e.g. 'o' or 'oooxxx')  
           'pointcolor'  = string with color (e.g. 'k'), or an NX3 matrix of RGB values  
           'pointsize'   = scalar or vector for marker size  
         The default marker is a blue dot sorrunded by a yellow circle.  
          
-        It is possible to plot the object in a local pseudo-axis (c.f. subplot), which is specfied as follows  
+        It is possible to plot the object in a local pseudo-axis (c.f. subplot), which is specified as follows  
           'hpos'        = horizontal position of the lower left corner of the local axes  
           'vpos'        = vertical position of the lower left corner of the local axes  
           'width'       = width of the local axes  
@@ -45,9 +45,12 @@ def ft_plot_layout(*args, **kwargs):
         See also FT_PREPARE_LAYOUT, FT_PLOT_TOPO  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/plotting/ft_plot_layout.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/plotting/ft_plot_layout.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_plot_layout", *args, **kwargs, nargout=0)

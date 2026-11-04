@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_write_spike(*args, **kwargs):
-    """
+    r"""
       FT_WRITE_SPIKE writes animal electrophysiology spike timestamps and/or waveforms  
         to file  
          
@@ -24,9 +24,12 @@ def ft_write_spike(*args, **kwargs):
         See also FT_READ_SPIKE  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/ft_write_spike.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/fileio/ft_write_spike.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_write_spike", *args, **kwargs, nargout=0)

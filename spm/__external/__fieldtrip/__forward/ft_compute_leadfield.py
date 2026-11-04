@@ -2,10 +2,10 @@ from spm._runtime import Runtime
 
 
 def ft_compute_leadfield(*args, **kwargs):
-    """
+    r"""
       FT_COMPUTE_LEADFIELD computes a forward solution for a dipole in a a volume  
         conductor model. The forward solution is expressed as the leadfield matrix  
-        (Nchan*3), where each column corresponds with the potential or field distributions  
+        with size Nchan*3, where each column corresponds with the potential or field distributions  
         on all sensors for one of the x,y,z-orientations of the dipole.  
          
         Use as  
@@ -67,9 +67,12 @@ def ft_compute_leadfield(*args, **kwargs):
         FT_HEADMODEL_HALFSPACE, FT_HEADMODEL_DUNEURO  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/forward/ft_compute_leadfield.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/forward/ft_compute_leadfield.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_compute_leadfield", *args, **kwargs)

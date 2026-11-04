@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ADEM_sample_image(*args, **kwargs):
-    """
+    r"""
       samples a (memory mapped) image at displacement o  
         FORMAT [s] = ADEM_sample_image(V,o,R)  
         FORMAT [s] = ADEM_sample_image(o,h)  
@@ -28,9 +28,12 @@ def ADEM_sample_image(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DEM/ADEM_sample_image.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/DEM/ADEM_sample_image.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ADEM_sample_image", *args, **kwargs)

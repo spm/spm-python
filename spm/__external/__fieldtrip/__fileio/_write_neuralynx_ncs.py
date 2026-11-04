@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _write_neuralynx_ncs(*args, **kwargs):
-    """
+    r"""
       WRITE_NEURALYNX_NCS writes continuous data to a NCS file  
          
         Use as  
@@ -13,9 +13,12 @@ def _write_neuralynx_ncs(*args, **kwargs):
         See also READ_NEURALYNX_NCS  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/write_neuralynx_ncs.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/fileio/private/write_neuralynx_ncs.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("write_neuralynx_ncs", *args, **kwargs, nargout=0)

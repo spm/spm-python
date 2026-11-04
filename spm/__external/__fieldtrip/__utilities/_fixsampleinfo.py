@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _fixsampleinfo(*args, **kwargs):
-    """
+    r"""
       FIXSAMPLEINFO checks for the existence of a sampleinfo and trialinfo field in the  
         provided raw or timelock data structure. If present, nothing is done; if absent,  
         this function attempts to reconstruct them based on either an trl-matrix present in  
@@ -12,9 +12,12 @@ def _fixsampleinfo(*args, **kwargs):
         See also FT_DATATYPE_RAW, FT_DATATYPE_TIMELOCK  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/utilities/private/fixsampleinfo.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/utilities/private/fixsampleinfo.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("fixsampleinfo", *args, **kwargs)

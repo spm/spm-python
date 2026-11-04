@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_cost_SHC_path(*args, **kwargs):
-    """
+    r"""
       plots path for cost_SHC demo's  
         FORMAT spm_cost_SHC_path(qU,A)  
          
@@ -12,9 +12,12 @@ def spm_cost_SHC_path(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DEM/spm_cost_SHC_path.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/DEM/spm_cost_SHC_path.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_cost_SHC_path", *args, **kwargs, nargout=0)

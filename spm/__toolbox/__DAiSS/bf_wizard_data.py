@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def bf_wizard_data(*args, **kwargs):
-    """
+    r"""
       A handy command-line based batch filler with some defaults for DAiSS  
         data module, pick a few options and default for unpopulated fields. It  
         will by default run the batch for the user.  
@@ -34,9 +34,12 @@ def bf_wizard_data(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DAiSS/bf_wizard_data.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/DAiSS/bf_wizard_data.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("bf_wizard_data", *args, **kwargs)

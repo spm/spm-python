@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_dexpm(*args, **kwargs):
-    """
+    r"""
       Differentiate a matrix exponential  
         FORMAT [E,dE] = spm_dexpm(A,dA)  
         A  - Lie algebra  
@@ -17,9 +17,12 @@ def spm_dexpm(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/Longitudinal/spm_dexpm.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/Longitudinal/spm_dexpm.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_dexpm", *args, **kwargs)

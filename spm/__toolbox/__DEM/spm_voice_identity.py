@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_voice_identity(*args, **kwargs):
-    """
+    r"""
       Evaluate the fundamental and formant frequencies of a speaker  
         FORMAT [F0,F1] = spm_voice_identity(wfile,P)  
          
@@ -22,9 +22,12 @@ def spm_voice_identity(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DEM/spm_voice_identity.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/DEM/spm_voice_identity.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_voice_identity", *args, **kwargs)

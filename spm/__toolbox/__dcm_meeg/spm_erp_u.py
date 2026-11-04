@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_erp_u(*args, **kwargs):
-    """
+    r"""
       [scalar] input for EEG models (Gaussian function)  
         FORMAT [u] = spm_erp_u(t,P,M)  
         t      - PST (seconds)  
@@ -19,9 +19,12 @@ def spm_erp_u(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/dcm_meeg/spm_erp_u.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/dcm_meeg/spm_erp_u.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_erp_u", *args, **kwargs)

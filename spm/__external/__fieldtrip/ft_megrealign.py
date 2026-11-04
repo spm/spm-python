@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_megrealign(*args, **kwargs):
-    """
+    r"""
       FT_MEGREALIGN interpolates MEG data towards standard gradiometer locations by  
         projecting the individual timelocked data towards a coarse source reconstructed  
         representation and computing the magnetic field on the standard gradiometer  
@@ -81,9 +81,12 @@ def ft_megrealign(*args, **kwargs):
         See also FT_PREPARE_LOCALSPHERES, FT_PREPARE_SINGLESHELL  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/ft_megrealign.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/ft_megrealign.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_megrealign", *args, **kwargs)

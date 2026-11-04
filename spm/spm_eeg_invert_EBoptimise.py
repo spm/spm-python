@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_eeg_invert_EBoptimise(*args, **kwargs):
-    """
+    r"""
       function [F,M,Cq,Cp,QE,Qp] = spm_eeg_invert_EBoptimise(AY,UL,opttype,Qp,Qe,Qe0)  
         Empirical Bayes optimization of priors Qp and Qe to fit data AY based on lead fields UL  
         AY concatenated dimension reduced trials of M/EEG data  
@@ -24,9 +24,12 @@ def spm_eeg_invert_EBoptimise(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/spm_eeg_invert_EBoptimise.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/spm_eeg_invert_EBoptimise.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_eeg_invert_EBoptimise", *args, **kwargs)

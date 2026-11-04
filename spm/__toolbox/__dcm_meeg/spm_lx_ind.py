@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_lx_ind(*args, **kwargs):
-    """
+    r"""
       Observer matrix for a DCM of induced responses: y = G*x  
         FORMAT [G] = spm_lx_ind(P,M)  
         x    - state vector - running over sources and then frequencies  
@@ -15,9 +15,12 @@ def spm_lx_ind(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/dcm_meeg/spm_lx_ind.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/dcm_meeg/spm_lx_ind.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_lx_ind", *args, **kwargs)

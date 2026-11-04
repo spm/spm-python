@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_preamble(*args, **kwargs):
-    """
+    r"""
       FT_PREAMBLE is a helper function that is included in many of the FieldTrip  
         functions and which takes care of some general settings and operations at the  
         begin of the function.  
@@ -15,9 +15,12 @@ def ft_preamble(*args, **kwargs):
         See also FT_POSTAMBLE  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/utilities/ft_preamble.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/utilities/ft_preamble.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_preamble", *args, **kwargs, nargout=0)

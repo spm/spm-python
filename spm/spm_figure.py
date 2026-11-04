@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_figure(*args, **kwargs):
-    """
+    r"""
       Setup and callback functions for Graphics window  
         FORMAT varargout = spm_figure(varargin)  
          
@@ -48,9 +48,12 @@ def spm_figure(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/spm_figure.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/spm_figure.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_figure", *args, **kwargs)

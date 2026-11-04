@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _spikesort(*args, **kwargs):
-    """
+    r"""
       SPIKESORT uses a variation on the cocktail sort algorithm in combination  
         with a city block distance to achieve N-D trial pairing between spike  
         counts. The sorting is not guaranteed to result in the optimal pairing. A  
@@ -32,9 +32,12 @@ def _spikesort(*args, **kwargs):
         See also COCKTAILSORT  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/spikesort.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/private/spikesort.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spikesort", *args, **kwargs)

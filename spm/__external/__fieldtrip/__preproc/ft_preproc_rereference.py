@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_preproc_rereference(*args, **kwargs):
-    """
+    r"""
       FT_PREPROC_REREFERENCE computes the average reference over all EEG channels  
         or rereferences the data to the selected channels  
          
@@ -30,9 +30,12 @@ def ft_preproc_rereference(*args, **kwargs):
         See also PREPROC  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/preproc/ft_preproc_rereference.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/preproc/ft_preproc_rereference.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_preproc_rereference", *args, **kwargs)

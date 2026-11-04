@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_vol_nifti(*args, **kwargs):
-    """
+    r"""
       Get header information for a NIFTI-1 image  
         FORMAT V = spm_vol_nifti(P,n)  
         P   - filename or NIfTI object  
@@ -12,9 +12,12 @@ def spm_vol_nifti(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/spm_vol_nifti.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/spm_vol_nifti.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_vol_nifti", *args, **kwargs)

@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _dimlength(*args, **kwargs):
-    """
+    r"""
       DIMLENGTH(DATA, SELDIM, FLD) is a helper function to obtain n, the number  
         of elements along dimension seldim from the appropriate field from the  
         input data containing functional data.  
@@ -20,9 +20,12 @@ def _dimlength(*args, **kwargs):
         See also FIXSOURCE, CREATEDIMORD  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/dimlength.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/private/dimlength.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("dimlength", *args, **kwargs)

@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def DEM_FEP_Lorenz(*args, **kwargs):
-    """
+    r"""
      --------------------------------------------------------------------------  
         This is a simple demonstration of deterministic convergence to  
         nonequilibrium steady-state, using the Lorenz system. Deterministic  
@@ -29,9 +29,12 @@ def DEM_FEP_Lorenz(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DEM/DEM_FEP_Lorenz.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/DEM/DEM_FEP_Lorenz.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("DEM_FEP_Lorenz", *args, **kwargs, nargout=0)

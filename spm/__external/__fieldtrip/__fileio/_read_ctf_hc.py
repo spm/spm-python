@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _read_ctf_hc(*args, **kwargs):
-    """
+    r"""
       READ_CTF_HC reads the MEG headcoil marker positions from an ascii file  
         and computes the coordinate transformation required to get from from  
         dewar to head-coordinates  
@@ -36,9 +36,12 @@ def _read_ctf_hc(*args, **kwargs):
         the warp3d function from the WARPING toolbox  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/read_ctf_hc.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/fileio/private/read_ctf_hc.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("read_ctf_hc", *args, **kwargs)

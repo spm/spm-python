@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def DEMO_BAYES_FACTORS(*args, **kwargs):
-    """
+    r"""
       FORMAT DEMO_BAYES_FACTORS(pC,hE,hC,N)  
         Demonstration Bayes factors and classical p-values  
        --------------------------------------------------------------------------  
@@ -26,9 +26,12 @@ def DEMO_BAYES_FACTORS(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DEM/DEMO_BAYES_FACTORS.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/DEM/DEMO_BAYES_FACTORS.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("DEMO_BAYES_FACTORS", *args, **kwargs, nargout=0)

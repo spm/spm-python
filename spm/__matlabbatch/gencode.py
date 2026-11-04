@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def gencode(*args, **kwargs):
-    """
+    r"""
       GENCODE  Generate code to recreate any MATLAB struct/cell variable.  
         For any MATLAB variable, this function generates a .m file that  
         can be run to recreate it. Classes can implement their class specific  
@@ -35,9 +35,12 @@ def gencode(*args, **kwargs):
         Copyright (C) 2007 Freiburg Brain Imaging  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/matlabbatch/gencode.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/matlabbatch/gencode.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("gencode", *args, **kwargs)

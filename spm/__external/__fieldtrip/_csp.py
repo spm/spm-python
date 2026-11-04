@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _csp(*args, **kwargs):
-    """
+    r"""
       CSP calculates the common spatial pattern (CSP) projection.  
          
         Use as:  
@@ -39,9 +39,12 @@ def _csp(*args, **kwargs):
             spatio-spectral filters in BCI. Neural Networks, 22:1278--1285, 2009.  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/csp.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/private/csp.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("csp", *args, **kwargs)

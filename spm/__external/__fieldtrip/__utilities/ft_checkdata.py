@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_checkdata(*args, **kwargs):
-    """
+    r"""
       FT_CHECKDATA checks the input data of the main FieldTrip functions, e.g. whether the  
         type of data structure corresponds with the required data. If necessary and possible,  
         this function will adjust the data structure to the input requirements (e.g. change  
@@ -46,9 +46,12 @@ def ft_checkdata(*args, **kwargs):
         See also FT_DATATYPE_XXX for each of the respective data types.  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/utilities/ft_checkdata.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/utilities/ft_checkdata.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_checkdata", *args, **kwargs)

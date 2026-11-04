@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _read_neuralynx_dma(*args, **kwargs):
-    """
+    r"""
       READ_NEURALYNX_DMA reads specified samples and channels data from a Neuralynx DMA log file  
          
         Use as  
@@ -19,9 +19,12 @@ def _read_neuralynx_dma(*args, **kwargs):
         the Neuralynx amplifier and scale the values accordingly.  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/read_neuralynx_dma.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/fileio/private/read_neuralynx_dma.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("read_neuralynx_dma", *args, **kwargs)

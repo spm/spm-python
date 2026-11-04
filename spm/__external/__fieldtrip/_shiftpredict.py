@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _shiftpredict(*args, **kwargs):
-    """
+    r"""
       SHIFTPREDICT implements a shift-predictor for testing significance  
         of coherence within a single condition. This function is a subfunction   
         for SOURCESTATISTICS_SHIFTPREDICT and FREQSTATISTICS_SHIFTPREDICT.  
@@ -19,9 +19,12 @@ def _shiftpredict(*args, **kwargs):
         cfg.tail  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/shiftpredict.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/private/shiftpredict.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("shiftpredict", *args, **kwargs)

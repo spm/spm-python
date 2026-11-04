@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_read_sens(*args, **kwargs):
-    """
+    r"""
       FT_READ_SENS read sensor positions from various manufacturer specific files. See  
         further down for the list of file types that are supported.  
          
@@ -33,9 +33,12 @@ def ft_read_sens(*args, **kwargs):
         See also FT_READ_HEADER, FT_DATATYPE_SENS, FT_PREPARE_VOL_SENS, FT_COMPUTE_LEADFIELD,  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/ft_read_sens.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/fileio/ft_read_sens.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_read_sens", *args, **kwargs)

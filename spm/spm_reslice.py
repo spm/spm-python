@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_reslice(*args, **kwargs):
-    """
+    r"""
       Rigid body reslicing of images  
         FORMAT spm_reslice(P,flags)  
          
@@ -62,9 +62,12 @@ def spm_reslice(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/spm_reslice.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/spm_reslice.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_reslice", *args, **kwargs, nargout=0)

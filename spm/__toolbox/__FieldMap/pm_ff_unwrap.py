@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def pm_ff_unwrap(*args, **kwargs):
-    """
+    r"""
       Performs phase-unwrapping along the shore of a flood-fill  
         progressing from some seed in a low-variance area towards  
         higher variance areas.  
@@ -40,9 +40,12 @@ def pm_ff_unwrap(*args, **kwargs):
        _______________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/FieldMap/pm_ff_unwrap.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/FieldMap/pm_ff_unwrap.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("pm_ff_unwrap", *args, **kwargs)

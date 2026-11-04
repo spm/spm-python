@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def cfg_run_runjobs(*args, **kwargs):
-    """
+    r"""
       Initialise, fill, save and run a job with repeated inputs.  
         To make use of possible parallel execution of independent jobs, all  
         repeated jobs are filled first and (if successfully filled) run as one  
@@ -15,9 +15,12 @@ def cfg_run_runjobs(*args, **kwargs):
         Copyright (C) 2007 Freiburg Brain Imaging  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/matlabbatch/cfg_basicio/cfg_run_runjobs.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/matlabbatch/cfg_basicio/cfg_run_runjobs.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("cfg_run_runjobs", *args, **kwargs)

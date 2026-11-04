@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def DEMO_niche_construction(*args, **kwargs):
-    """
+    r"""
       Demo of niche construction using active inference  
        __________________________________________________________________________  
          
@@ -35,9 +35,12 @@ def DEMO_niche_construction(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DEM/DEMO_niche_construction.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/DEM/DEMO_niche_construction.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("DEMO_niche_construction", *args, **kwargs, nargout=0)

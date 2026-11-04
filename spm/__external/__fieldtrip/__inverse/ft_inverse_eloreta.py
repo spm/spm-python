@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_inverse_eloreta(*args, **kwargs):
-    """
+    r"""
       FT_INVERSE_ELORETA estimates the source activity using eLORETA  
          
         Use as  
@@ -16,10 +16,14 @@ def ft_inverse_eloreta(*args, **kwargs):
         and  
           estimate    contains the estimated source parameters  
          
+        If the input data "dat" is in V, "cov" is in V^2, and the leadfield is in V/Am,  
+        then the estimated output "mom" is in Am, the output "pow" is (Am)^2, and the  
+        output "filter" is in Am/V.  
+         
         Additional input arguments should be specified as key-value pairs and can include  
-          'keepfilter'       = remember the spatial filter,    can be 'yes' or 'no'  
-          'keepleadfield'    = remember the forward computation,  can be 'yes' or 'no'  
-          'keepmom'          = remember the dipole moment,        can be 'yes' or 'no'  
+          'keepfilter'       = remember the spatial filter, can be 'yes' or 'no'  
+          'keepleadfield'    = remember the forward computation, can be 'yes' or 'no'  
+          'keepmom'          = remember the dipole moment, can be 'yes' or 'no'  
           'lambda'           = scalar, regularisation parameter (default = 0.05)  
          
         These options influence the forward computation of the leadfield  
@@ -41,9 +45,12 @@ def ft_inverse_eloreta(*args, **kwargs):
         See also FT_SOURCEANALYSIS, FT_PREPARE_HEADMODEL, FT_PREPARE_SOURCEMODEL  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/inverse/ft_inverse_eloreta.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/inverse/ft_inverse_eloreta.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_inverse_eloreta", *args, **kwargs)

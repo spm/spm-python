@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_sourceinterpolate(*args, **kwargs):
-    """
+    r"""
       FT_SOURCEINTERPOLATE interpolates source activity or statistical maps onto the  
         voxels or vertices of an anatomical description of the brain.  Both the functional  
         and the anatomical data can either describe a volumetric 3D regular grid, a  
@@ -71,9 +71,12 @@ def ft_sourceinterpolate(*args, **kwargs):
         FT_SOURCEWRITE  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/ft_sourceinterpolate.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/ft_sourceinterpolate.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_sourceinterpolate", *args, **kwargs)

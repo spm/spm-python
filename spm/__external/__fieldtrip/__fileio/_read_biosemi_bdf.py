@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _read_biosemi_bdf(*args, **kwargs):
-    """
+    r"""
       READ_BIOSEMI_BDF reads specified samples from a BDF continuous datafile  
         It neglects all trial boundaries as if the data was acquired in  
         non-continuous mode.  
@@ -18,7 +18,7 @@ def _read_biosemi_bdf(*args, **kwargs):
           hdr.nSamplesPre  number of pre-trigger samples in each trial  
           hdr.nTrials      number of trials  
           hdr.label        cell-array with labels of each channel  
-          hdr.orig         detailled EDF header information  
+          hdr.orig         detailed EDF header information  
          
         Or use as  
           [dat] = read_biosemi_bdf(filename, hdr, begsample, endsample, chanindx);  
@@ -31,9 +31,12 @@ def _read_biosemi_bdf(*args, **kwargs):
         This returns a Nchans X Nsamples data matrix  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/read_biosemi_bdf.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/fileio/private/read_biosemi_bdf.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("read_biosemi_bdf", *args, **kwargs)

@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_neighbourplot(*args, **kwargs):
-    """
+    r"""
       FT_NEIGHBOURPLOT visualizes neighbouring channels in a particular channel  
         configuration. The positions of the channel are specified in a  
         gradiometer or electrode configuration or from a layout.  
@@ -18,6 +18,7 @@ def ft_neighbourplot(*args, **kwargs):
           cfg.enableedit    = string, 'yes' or 'no', allows you to interactively add or remove edges between vertices (default = 'no')  
           cfg.visible       = string, 'on' or 'off' whether figure will be visible (default = 'on')  
           cfg.figure        = 'yes' or 'no', whether to open a new figure. You can also specify a figure handle from FIGURE, GCF or SUBPLOT. (default = 'yes')  
+          cfg.figurename    = string, title of the figure window  
           cfg.position      = location and size of the figure, specified as [left bottom width height] (default is automatic)  
           cfg.renderer      = string, 'opengl', 'zbuffer', 'painters', see MATLAB Figure Properties. If this function crashes, you should try 'painters'.  
          
@@ -41,9 +42,12 @@ def ft_neighbourplot(*args, **kwargs):
         See also FT_PREPARE_NEIGHBOURS, FT_PREPARE_LAYOUT  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/ft_neighbourplot.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/ft_neighbourplot.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_neighbourplot", *args, **kwargs)

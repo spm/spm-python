@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_BIDS_file(*args, **kwargs):
-    """
+    r"""
       Function to create BIDS style filenames for saving and loading data.  
         FORMAT [BIDS_file] = spm_BIDS_file(S)  
          
@@ -28,33 +28,29 @@ def spm_BIDS_file(*args, **kwargs):
                     run = cell array or string, containing run names.  
          
         Output:  
-            outputs: Array of structures containing directory information  
-                     with fields:  
-                     - file: Full path and filename  
-                     - folder: Directory path  
-                     - name: Full filename  
-                     - ext: File extension  
-                     - exists: Boolean, does the file exist already?  
-                     - + bids fields, sub, ses, task, run  
+            BIDS_file:  Struct  
+                file  
+                folder  
+                name  
+                ext  
+                exists  
+                sub  
+                ses  
+                task  
+                run  
        _________________________________________________________________________  
          
         Further help:  
-         
         spm_BIDS_file is a function that takes an input of BIDS parameters, along  
         with some additional specification of the way to handle those parameters,  
-        and provides a single, or array, of file directories. This method may be  
-        used within a loop that, for example, takes a list of subject names and  
-        updates S.BIDS.sub, or by providing the function with the list of subject  
-        names directly. If insufficient information is provided the method  
-        assumes this is intentional and provides a limited output. This may be  
-        useful for accessing files which are independent of the task/run, such as  
-        an anatomical image in an MEG study. Or, for when only a single session  
-        is used, and is excluded from the file specification.  
+        and provides a single, or array, of file directories. If insufficient   
+        information is provided the method assumes this is intentional and provides   
+        a limited output. This may be useful for accessing files which are   
+        independent of the task/run, such as an anatomical image in an MEG study.   
           
         Note, when S.derivative = false, this function will not create new  
         folders, to avoid breaking the organisation of existing data. Otherwise,  
-        it will create a new folder. The function never checks if the file  
-        exists.  
+        it will create a new folder.  
          
         Note, this function does not enforce BIDS standards   
         (found here: https://bids-specification.readthedocs.io), see spm_BIDS for  
@@ -65,9 +61,12 @@ def spm_BIDS_file(*args, **kwargs):
        _________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/spm_BIDS_file.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/spm_BIDS_file.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_BIDS_file", *args, **kwargs)

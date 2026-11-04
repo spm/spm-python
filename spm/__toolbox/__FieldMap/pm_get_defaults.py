@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def pm_get_defaults(*args, **kwargs):
-    """
+    r"""
       FORMAT defval = pm_get_defaults(defstr)  
         Return the defaults value associated with identifier "defstr".  
         Currently, this is a '.' subscript reference into the global  
@@ -18,9 +18,12 @@ def pm_get_defaults(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/FieldMap/pm_get_defaults.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/FieldMap/pm_get_defaults.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("pm_get_defaults", *args, **kwargs)

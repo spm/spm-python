@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _base64encode(*args, **kwargs):
-    """
+    r"""
      BASE64ENCODE Perform base64 encoding on a string.  
          
           BASE64ENCODE(STR, EOL) encode the given string STR.  EOL is the line ending  
@@ -43,9 +43,12 @@ def _base64encode(*args, **kwargs):
           See also BASE64DECODE.  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/utilities/private/base64encode.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/utilities/private/base64encode.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("base64encode", *args, **kwargs)

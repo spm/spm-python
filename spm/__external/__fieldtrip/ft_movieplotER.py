@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_movieplotER(*args, **kwargs):
-    """
+    r"""
       FT_MOVIEPLOTER makes a movie of the the event-related potentials, event-related  
         fields or oscillatory activity (power or coherence) versus frequency.  
          
@@ -24,6 +24,9 @@ def ft_movieplotER(*args, **kwargs):
           cfg.baselinetype    = 'absolute' or 'relative' (default = 'absolute')  
           cfg.colorbar        = 'yes', 'no' (default = 'no')  
           cfg.colorbartext    = string indicating the text next to colorbar  
+          cfg.figure          = 'yes' or 'no', whether to open a new figure. You can also specify a figure handle from FIGURE, GCF or SUBPLOT. (default = 'yes')  
+          cfg.figurename      = string, title of the figure window  
+          cfg.position        = location and size of the figure, specified as [left bottom width height] (default is automatic)  
           cfg.renderer        = string, 'opengl', 'zbuffer', 'painters', see RENDERERINFO (default is automatic, try 'painters' when it crashes)  
          
         The layout defines how the channels are arranged. You can specify the  
@@ -47,9 +50,12 @@ def ft_movieplotER(*args, **kwargs):
         See also FT_MULTIPLOTER, FT_TOPOPLOTER, FT_SINGLEPLOTER, FT_MOVIEPLOTTFR, FT_SOURCEMOVIE  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/ft_movieplotER.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/ft_movieplotER.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_movieplotER", *args, **kwargs)

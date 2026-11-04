@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_select_point(*args, **kwargs):
-    """
+    r"""
       FT_SELECT_POINT helper function for selecting a one or multiple points in the  
         current figure using the mouse. It returns a list of the [x y] coordinates of the  
         selected points.  
@@ -23,9 +23,12 @@ def ft_select_point(*args, **kwargs):
         See also FT_SELECT_BOX, FT_SELECT_CHANNEL, FT_SELECT_POINT3D, FT_SELECT_RANGE, FT_SELECT_VOXEL  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/plotting/ft_select_point.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/plotting/ft_select_point.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_select_point", *args, **kwargs)

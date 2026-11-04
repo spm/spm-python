@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_summarise(*args, **kwargs):
-    """
+    r"""
       Summarise data within a Region of Interest  
         FORMAT [Y, xY] = spm_summarise(V,xY,fhandle)  
         V       - [1 x n] vector of mapped image volumes to read (from spm_vol)  
@@ -28,9 +28,12 @@ def spm_summarise(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/spm_summarise.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/spm_summarise.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_summarise", *args, **kwargs)

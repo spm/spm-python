@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_ov_rgb(*args, **kwargs):
-    """
+    r"""
       RGB overlays - plugin for spm_orthviews  
         A shorthand to overlaying the absolute value of three different images  
         onto a displayed image in colours red, green and blue. The overlay images  
@@ -16,9 +16,12 @@ def spm_ov_rgb(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/spm_orthviews/spm_ov_rgb.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/spm_orthviews/spm_ov_rgb.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_ov_rgb", *args, **kwargs)

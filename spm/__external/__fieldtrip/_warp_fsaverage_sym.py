@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _warp_fsaverage_sym(*args, **kwargs):
-    """
+    r"""
       WARP_FSAVERAGE_SYM maps left or right hemisphere electrodes onto   
         FreeSurfer's fsaverage_sym's left hemisphere. To perform this mapping,   
         you first need to have processed the subject's MRI with FreeSurfer's   
@@ -18,9 +18,12 @@ def _warp_fsaverage_sym(*args, **kwargs):
         See also FT_ELECTRODEREALIGN, WARP_FSAVERAGE  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/warp_fsaverage_sym.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/private/warp_fsaverage_sym.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("warp_fsaverage_sym", *args, **kwargs)

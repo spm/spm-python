@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_design_factorial(*args, **kwargs):
-    """
+    r"""
       Extract factorial matrix, file list and H partition of design matrix  
         FORMAT [I,P,H,Hnames] = spm_design_factorial(fd)  
          
@@ -16,9 +16,12 @@ def spm_design_factorial(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/spm_design_factorial.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/spm_design_factorial.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_design_factorial", *args, **kwargs)

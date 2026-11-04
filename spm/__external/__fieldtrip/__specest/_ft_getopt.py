@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _ft_getopt(*args, **kwargs):
-    """
+    r"""
       FT_GETOPT gets the value of a specified option from a configuration structure  
         or from a cell-array with key-value pairs.  
          
@@ -25,12 +25,15 @@ def _ft_getopt(*args, **kwargs):
         If emptymeaningful==true, then the empty array will be returned.  
         If emptymeaningful==false, then the specified default will be returned.  
          
-        See also FT_SETOPT, FT_CHECKOPT, INPUTPARSER  
+        See also FT_SETOPT, FT_CHECKOPT, FT_DELETEOPT, INPUTPARSER  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/specest/private/ft_getopt.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/specest/private/ft_getopt.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_getopt", *args, **kwargs)

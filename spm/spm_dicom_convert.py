@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_dicom_convert(*args, **kwargs):
-    """
+    r"""
       Convert DICOM images into something that SPM can use (e.g. NIfTI)  
         FORMAT out = spm_dicom_convert(Headers,opts,RootDirectory,format,OutputDirectory,meta)  
         Inputs:  
@@ -13,7 +13,7 @@ def spm_dicom_convert(*args, **kwargs):
                      'standard' - standard DICOM files  
                      'spect'    - SIEMENS Spectroscopy DICOMs (some formats only)  
                                   This will write out a 5D NIFTI containing real  
-                                  and imaginary part of the spectroscopy time   
+                                  and imaginary part of the spectroscopy time  
                                   points at the position of spectroscopy voxel(s)  
                      'raw'      - convert raw FIDs (not implemented)  
         RootDirectory - 'flat'       - do not produce file tree [default]  
@@ -39,9 +39,12 @@ def spm_dicom_convert(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/spm_dicom_convert.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/spm_dicom_convert.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_dicom_convert", *args, **kwargs)

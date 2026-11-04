@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_write_plane(*args, **kwargs):
-    """
+    r"""
       Write transverse plane(s) of image data  
         FORMAT V = spm_write_plane(V,dat,n)  
         V   - data structure containing image information (see spm_vol)  
@@ -17,9 +17,12 @@ def spm_write_plane(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/spm_write_plane.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/spm_write_plane.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_write_plane", *args, **kwargs)

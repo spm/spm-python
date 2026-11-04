@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_defacemesh(*args, **kwargs):
-    """
+    r"""
       FT_DEFACEMESH allows you to de-identify a scalp surface mesh by erasing specific  
         regions, such as the face and ears. The interactive graphical user interface allows  
         you to position a box over the anatomical data inside which all vertices will be  
@@ -24,9 +24,12 @@ def ft_defacemesh(*args, **kwargs):
         See also FT_ANONYMIZEDATA, FT_DEFACEVOLUME, FT_ANALYSISPIPELINE, FT_PLOT_MESH  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/ft_defacemesh.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/ft_defacemesh.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_defacemesh", *args, **kwargs)

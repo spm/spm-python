@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _read_mayo_mef21(*args, **kwargs):
-    """
+    r"""
       READ_MAYO_MEF21 read header, event and data from the files formatted in MEF2.1  
          
         Syntax:  
@@ -38,9 +38,12 @@ def _read_mayo_mef21(*args, **kwargs):
         See also ft_filetype, ft_read_header, ft_read_event, ft_read_data.  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/read_mayo_mef21.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/fileio/private/read_mayo_mef21.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("read_mayo_mef21", *args, **kwargs)

@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_opm_rpsd(*args, **kwargs):
-    """
+    r"""
       Compute relative PSD of two OPM datasets (for checking shielding factors)  
         FORMAT D = spm_opm_rpsd(S)  
           S               - input structure  
@@ -21,9 +21,12 @@ def spm_opm_rpsd(*args, **kwargs):
         Copyright (C) 2018-2022 Wellcome Centre for Human Neuroimaging  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/MEEGtools/spm_opm_rpsd.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/MEEGtools/spm_opm_rpsd.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_opm_rpsd", *args, **kwargs)

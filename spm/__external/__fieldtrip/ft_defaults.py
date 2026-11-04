@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_defaults(*args, **kwargs):
-    """
+    r"""
       FT_DEFAULTS (ending with "s") sets some general settings in the global variable  
         ft_default (without the "s") and takes care of the required path settings. You can  
         call this function in your startup.m script. This function is also called at the  
@@ -49,9 +49,12 @@ def ft_defaults(*args, **kwargs):
         See also FT_HASTOOLBOX, FT_CHECKCONFIG, FT_TRACKUSAGE, LICENSE  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/ft_defaults.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/ft_defaults.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_defaults", *args, **kwargs, nargout=0)

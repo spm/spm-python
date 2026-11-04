@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def DEM_demo_psychosis(*args, **kwargs):
-    """
+    r"""
       This demonstration routine illustrates the use of attractors in dynamical  
         systems theory to explain fluctuations in longitudinal data, such as  
         symptom scores. The generative model is based upon a Lorenz system that  
@@ -22,9 +22,12 @@ def DEM_demo_psychosis(*args, **kwargs):
         states.  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DEM/DEM_demo_psychosis.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/DEM/DEM_demo_psychosis.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("DEM_demo_psychosis", *args, **kwargs, nargout=0)

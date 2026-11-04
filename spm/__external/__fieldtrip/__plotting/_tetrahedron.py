@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _tetrahedron(*args, **kwargs):
-    """
+    r"""
       TETRAHEDRON returns the vertices and triangles of a tetraedron  
          
         Use as  
@@ -11,9 +11,12 @@ def _tetrahedron(*args, **kwargs):
         See also ICOSAHEDRON, OCTAHEDRON  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/plotting/private/tetrahedron.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/plotting/private/tetrahedron.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("tetrahedron", *args, **kwargs)

@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_singleplotER(*args, **kwargs):
-    """
+    r"""
       FT_SINGLEPLOTER plots the event-related fields or potentials of a single  
         channel or the average over multiple channels. Multiple datasets can be  
         overlayed.  
@@ -39,6 +39,7 @@ def ft_singleplotER(*args, **kwargs):
                               interactive plot when a selected area is clicked. multiple areas  
                               can be selected by holding down the shift key.  
           cfg.figure        = 'yes' or 'no', whether to open a new figure. You can also specify a figure handle from FIGURE, GCF or SUBPLOT. (default = 'yes')  
+          cfg.figurename    = string, title of the figure window  
           cfg.position      = location and size of the figure, specified as [left bottom width height] (default is automatic)  
           cfg.renderer      = string, 'opengl', 'zbuffer', 'painters', see RENDERERINFO (default is automatic, try 'painters' when it crashes)  
           cfg.linestyle     = linestyle/marker type, see options of the PLOT function (default = '-')  
@@ -101,9 +102,12 @@ def ft_singleplotER(*args, **kwargs):
         See also FT_SINGLEPLOTTFR, FT_MULTIPLOTER, FT_MULTIPLOTTFR, FT_TOPOPLOTER, FT_TOPOPLOTTFR  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/ft_singleplotER.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/ft_singleplotER.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_singleplotER", *args, **kwargs)

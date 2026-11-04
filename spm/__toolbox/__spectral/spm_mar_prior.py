@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_mar_prior(*args, **kwargs):
-    """
+    r"""
       Specify ARD-type prior for Bayesian MAR model  
         function [prior] = spm_mar_prior (d,p,type)  
          
@@ -15,9 +15,12 @@ def spm_mar_prior(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/spectral/spm_mar_prior.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/spectral/spm_mar_prior.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_mar_prior", *args, **kwargs)

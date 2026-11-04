@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_virtualchannel(*args, **kwargs):
-    """
+    r"""
       FT_VIRTUALCHANNEL creates virtual channel data, combining numeric data from a data  
         structure defined at the channel level with spatial filter information from a  
         source data structure, and optional parcellation information.  
@@ -48,9 +48,12 @@ def ft_virtualchannel(*args, **kwargs):
         FT_SOURCEPARCELLATE, FT_COMPONENTANALYSIS  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/ft_virtualchannel.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/ft_virtualchannel.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_virtualchannel", *args, **kwargs)

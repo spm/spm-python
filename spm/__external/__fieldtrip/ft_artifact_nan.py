@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_artifact_nan(*args, **kwargs):
-    """
+    r"""
       FT_ARTIFACT_NAN identifies artifacts that are indicated in the data as NaN (not a  
         number) values.  
          
@@ -28,9 +28,12 @@ def ft_artifact_nan(*args, **kwargs):
         FT_ARTIFACT_JUMP, FT_ARTIFACT_MUSCLE, FT_ARTIFACT_THRESHOLD, FT_ARTIFACT_ZVALUE  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/ft_artifact_nan.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/ft_artifact_nan.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_artifact_nan", *args, **kwargs)

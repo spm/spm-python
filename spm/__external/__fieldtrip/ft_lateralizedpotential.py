@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_lateralizedpotential(*args, **kwargs):
-    """
+    r"""
       FT_LATERALIZEDPOTENTIAL computes lateralized potentials such as the  
         lateralized readiness potential (LRP)  
          
@@ -52,9 +52,12 @@ def ft_lateralizedpotential(*args, **kwargs):
         See also FT_TIMELOCKANALYSIS, FT_MULTIPLOTER  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/ft_lateralizedpotential.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/ft_lateralizedpotential.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_lateralizedpotential", *args, **kwargs)

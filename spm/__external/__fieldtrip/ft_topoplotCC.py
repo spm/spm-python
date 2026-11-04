@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_topoplotCC(*args, **kwargs):
-    """
+    r"""
       FT_TOPOPLOTCC plots the coherence or connectivity between channel pairs  
          
         Use as  
@@ -11,7 +11,7 @@ def ft_topoplotCC(*args, **kwargs):
         The configuration should contain:  
           cfg.feedback      = string (default = 'textbar')  
           cfg.layout        = specification of the layout, see FT_PREPARE_LAYOUT  
-          cfg.foi           = the frequency of interest which is to be plotted (default is the first frequency bin)  
+          cfg.foi           = scalar, the frequency of interest which is to be plotted (default is the first frequency bin)  
           cfg.widthparam    = string, parameter to be used to control the line width (see below)  
           cfg.alphaparam    = string, parameter to be used to control the opacity (see below)  
           cfg.colorparam    = string, parameter to be used to control the line color  
@@ -45,9 +45,12 @@ def ft_topoplotCC(*args, **kwargs):
         See also FT_PREPARE_LAYOUT, FT_MULTIPLOTCC, FT_CONNECTIVITYPLOT  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/ft_topoplotCC.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/ft_topoplotCC.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_topoplotCC", *args, **kwargs)

@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def FEP_Manifold(*args, **kwargs):
-    """
+    r"""
       This demonstration routine simulates the emergence of life - as defined  
         in terms of active inference - using a synthetic primordial soup. The key  
         aspect of this dynamics is that there is a separation between dynamical  
@@ -33,9 +33,12 @@ def FEP_Manifold(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DEM/FEP_Manifold.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/DEM/FEP_Manifold.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("FEP_Manifold", *args, **kwargs, nargout=0)

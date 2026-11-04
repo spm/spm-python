@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_freqbaseline(*args, **kwargs):
-    """
+    r"""
       FT_FREQBASELINE performs baseline normalization for time-frequency data  
          
         Use as  
@@ -21,9 +21,12 @@ def ft_freqbaseline(*args, **kwargs):
         FT_FREQGRANDAVERAGE  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/ft_freqbaseline.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/ft_freqbaseline.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_freqbaseline", *args, **kwargs)

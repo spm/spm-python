@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_trialfun_hed(*args, **kwargs):
-    """
+    r"""
       FT_TRIALFUN_HED is a trial function that can be used with HED tags. It demonstrates  
         some basic functionality for selecting specific events, but mainly serves as an  
         example or template for your own conditial trial definitions. For that you would  
@@ -23,9 +23,12 @@ def ft_trialfun_hed(*args, **kwargs):
         FT_TRIALFUN_EXAMPLE2  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/trialfun/ft_trialfun_hed.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/trialfun/ft_trialfun_hed.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_trialfun_hed", *args, **kwargs)

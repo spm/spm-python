@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_specest_tfr(*args, **kwargs):
-    """
+    r"""
       FT_SPECEST_TFR performs time-frequency analysis on any time series trial data using  
         the 'wavelet method' based on Morlet wavelets, doing convolution in the time  
         domain.  
@@ -28,9 +28,12 @@ def ft_specest_tfr(*args, **kwargs):
         See also FT_FREQANALYSIS, FT_SPECEST_MTMFFT, FT_SPECEST_MTMCONVOL, FT_SPECEST_HILBERT, FT_SPECEST_NANFFT, FT_SPECEST_WAVELET  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/specest/ft_specest_tfr.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/specest/ft_specest_tfr.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_specest_tfr", *args, **kwargs)

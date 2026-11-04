@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_dcm_nvc(*args, **kwargs):
-    """
+    r"""
       Specify and estimate a DCM for multimodal fMRI and M/EEG  
         FORMAT [DCM] = spm_dcm_nvc(P)  
          
@@ -110,9 +110,12 @@ def spm_dcm_nvc(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/NVC/spm_dcm_nvc.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/NVC/spm_dcm_nvc.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_dcm_nvc", *args, **kwargs)

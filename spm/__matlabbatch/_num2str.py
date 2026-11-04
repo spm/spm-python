@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _num2str(*args, **kwargs):
-    """
+    r"""
      NUM2STR Convert numbers to a string.  
           T = NUM2STR(X) converts the matrix X into a string representation T  
           with about 4 digits and an exponent if required.  This is useful for  
@@ -29,9 +29,12 @@ def _num2str(*args, **kwargs):
           See also INT2STR, SPRINTF, FPRINTF, MAT2STR.  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/matlabbatch/private/num2str.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/matlabbatch/private/num2str.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("num2str", *args, **kwargs)

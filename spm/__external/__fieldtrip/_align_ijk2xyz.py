@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _align_ijk2xyz(*args, **kwargs):
-    """
+    r"""
       ALIGN_IJK2XYZ flips and permutes the 3D volume data such that the axes of  
         the voxel indices and the headcoordinates approximately correspond. The  
         homogeneous transformation matrix is modified accordingly, to ensure that  
@@ -25,9 +25,12 @@ def _align_ijk2xyz(*args, **kwargs):
         See also ALIGN_XYZ2IJK, VOLUMEPERMUTE, VOLUMEFLIP  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/align_ijk2xyz.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/private/align_ijk2xyz.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("align_ijk2xyz", *args, **kwargs)

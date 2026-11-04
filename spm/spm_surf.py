@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_surf(*args, **kwargs):
-    """
+    r"""
       Surface extraction  
         FORMAT spm_surf(P,mode,thresh)  
          
@@ -56,9 +56,12 @@ def spm_surf(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/spm_surf.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/spm_surf.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_surf", *args, **kwargs)

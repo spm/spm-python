@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def mne_transform_coordinates(*args, **kwargs):
-    """
+    r"""
        
         [trans_pos] = mne_transform_coordinates(filename,pos,from,to)  
          
@@ -24,9 +24,12 @@ def mne_transform_coordinates(*args, **kwargs):
         trans_pos  - The transformed locations  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/mne/mne_transform_coordinates.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/mne/mne_transform_coordinates.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("mne_transform_coordinates", *args, **kwargs)

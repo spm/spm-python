@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def tsss_spm_enm(*args, **kwargs):
-    """
+    r"""
       Perform tSSS on rawdata file 'infile' acquired with an Elekta Neuromag  
         306-channel MEG system. The tSSS-processed data are written into 'outfile'.  
         The SSS operation is performed in the head coordinate system with the  
@@ -19,9 +19,12 @@ def tsss_spm_enm(*args, **kwargs):
         MaxFilter software.  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/TSSS/tsss_spm_enm.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/TSSS/tsss_spm_enm.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("tsss_spm_enm", *args, **kwargs)

@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_nlsi_N(*args, **kwargs):
-    """
+    r"""
       Bayesian inversion of a linear-nonlinear model of the form F(p)*G(g)'  
         FORMAT [Ep,Eg,Cp,Cg,S,F,L]= spm_nlsi_N(M,U,Y)  
          
@@ -87,9 +87,12 @@ def spm_nlsi_N(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/spm_nlsi_N.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/spm_nlsi_N.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_nlsi_N", *args, **kwargs)

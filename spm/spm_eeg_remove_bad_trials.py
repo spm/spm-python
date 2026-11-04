@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_eeg_remove_bad_trials(*args, **kwargs):
-    """
+    r"""
       Physically removes trials marked as bad from the dataset  
         FORMAT D = spm_eeg_remove_bad_trials(S)  
          
@@ -20,9 +20,12 @@ def spm_eeg_remove_bad_trials(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/spm_eeg_remove_bad_trials.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/spm_eeg_remove_bad_trials.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_eeg_remove_bad_trials", *args, **kwargs)

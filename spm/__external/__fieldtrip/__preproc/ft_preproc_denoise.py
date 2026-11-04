@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_preproc_denoise(*args, **kwargs):
-    """
+    r"""
       FT_PREPROC_DENOISE performs a regression of the matrix dat onto refdat, and  
         subtracts the projected data. This is for the purpose of removing signals generated  
         by coils during continuous head motion tracking, for example.  
@@ -23,9 +23,12 @@ def ft_preproc_denoise(*args, **kwargs):
         See also PREPROC  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/preproc/ft_preproc_denoise.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/preproc/ft_preproc_denoise.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_preproc_denoise", *args, **kwargs)

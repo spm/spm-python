@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _univariate2bivariate(*args, **kwargs):
-    """
+    r"""
       UNIVARIATE2BIVARIATE is a helper function for FT_CONNECTIVITYANALYSIS  
          
         Use as  
@@ -19,9 +19,12 @@ def _univariate2bivariate(*args, **kwargs):
           sqrtflag    =  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/univariate2bivariate.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/private/univariate2bivariate.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("univariate2bivariate", *args, **kwargs)

@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _prepare_headmodel(*args, **kwargs):
-    """
+    r"""
      %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  
         SUBFUNCTION that helps to prepare the electrodes/gradiometers and the  
         volume conduction model. This is used in sourceanalysis and dipolefitting.  
@@ -22,9 +22,12 @@ def _prepare_headmodel(*args, **kwargs):
        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/prepare_headmodel.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/private/prepare_headmodel.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("prepare_headmodel", *args, **kwargs)

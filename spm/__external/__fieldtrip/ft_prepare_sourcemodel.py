@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_prepare_sourcemodel(*args, **kwargs):
-    """
+    r"""
       FT_PREPARE_SOURCEMODEL constructs a source model, for example a 3D grid or a  
         cortical sheet. The source model that can be used for source reconstruction,  
         beamformer scanning, linear estimation and MEG interpolation.  
@@ -28,13 +28,13 @@ def ft_prepare_sourcemodel(*args, **kwargs):
          
         BASEDONGRID - uses an explicitly specified grid, according to the following  
         configuration options:  
-          cfg.xgrid         = vector (e.g. -20:1:20) or 'auto' (default = 'auto')  
-          cfg.ygrid         = vector (e.g. -20:1:20) or 'auto' (default = 'auto')  
-          cfg.zgrid         = vector (e.g.   0:1:20) or 'auto' (default = 'auto')  
+          cfg.xgrid         = vector (e.g. -120:10:120) or 'auto' (default = 'auto')  
+          cfg.ygrid         = vector (e.g. -120:10:120) or 'auto' (default = 'auto')  
+          cfg.zgrid         = vector (e.g.  -50:10:120) or 'auto' (default = 'auto')  
          
         BASEDONRESOLUTION - uses an grid with the desired resolution, according  
         to the following configuration options:  
-          cfg.resolution    = number (e.g. 1 cm) for automatic grid generation  
+          cfg.resolution    = number (e.g. 10 mm) for automatic grid generation  
          
         BASEDONPOS - places sources on positions that you explicitly specify, according to  
         the following configuration options:  
@@ -53,7 +53,7 @@ def ft_prepare_sourcemodel(*args, **kwargs):
         configuration options:  
           cfg.mri             = structure with the anatomical MRI, or the filename of the MRI, see FT_READ_MRI  
           cfg.nonlinear       = 'no' (or 'yes'), use non-linear normalization  
-          cfg.resolution      = number (e.g. 6) of the resolution of the template MNI grid, defined in mm  
+          cfg.resolution      = scalar with the resolution of the template MNI grid, defined in mm (for example 6)  
           cfg.template        = structure with the template sourcemodel, or the filename of a template sourcemodel (defined in MNI space)  
           cfg.templatemri     = string, filename of the MNI template (default = 'T1.mnc' for SPM2 or 'T1.nii' for SPM8 and SPM12)  
           cfg.spmversion      = string, 'spm2', 'spm8', 'spm12' (default = 'spm12')  
@@ -72,10 +72,10 @@ def ft_prepare_sourcemodel(*args, **kwargs):
          
         BASEDONCENTROIDS - places sources on the centroids of a volumetric mesh  
           cfg.headmodel       = tetrahedral or hexahedral mesh  
-          cfg.headmodel.type  = 'simbio';  
+          cfg.headmodel.type  = 'simbio'  
          
         Other configuration options include  
-          cfg.unit            = string, can be 'mm', 'cm', 'm' (default is automatic)  
+          cfg.unit            = string, can be 'mm', 'cm', 'm' (default is automatic, based on the input data)  
           cfg.tight           = 'yes' or 'no' (default is automatic)  
           cfg.inwardshift     = number, amount to shift the innermost surface of the headmodel inward when determining  
                                 whether sources are inside or outside the source compartment (default = 0)  
@@ -85,6 +85,8 @@ def ft_prepare_sourcemodel(*args, **kwargs):
                                 or tetrahedral mesh (default = 'no')  
           cfg.spherify        = 'yes' or 'no', scale the source model so that it fits inside a sperical  
                                 volume conduction model (default = 'no')  
+          cfg.orientation     = 'yes' or 'no', determine the orientation of dipoles at the vertices   
+                                of a triangulated cortical sheet, can be empty (default = [])  
           cfg.symmetry        = 'x', 'y' or 'z' symmetry for two dipoles, can be empty (default = [])  
           cfg.headshape       = a filename for the headshape, a structure containing a single surface,  
                                 or a Nx3 matrix with headshape surface points (default = [])  
@@ -115,9 +117,12 @@ def ft_prepare_sourcemodel(*args, **kwargs):
         FT_DIPOLEFITTING, FT_MEGREALIGN  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/ft_prepare_sourcemodel.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/ft_prepare_sourcemodel.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_prepare_sourcemodel", *args, **kwargs)

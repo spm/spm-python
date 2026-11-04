@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _ft_singletrialanalysis_aseo(*args, **kwargs):
-    """
+    r"""
       FT_SINGLETRIALANALYSIS_ASEO executes single-trial analysis, using the ASEO  
         algorithm (Xu et al, 2009)  
          
@@ -26,9 +26,12 @@ def _ft_singletrialanalysis_aseo(*args, **kwargs):
         corr_est    : Correlation between the original data and the recovered signal  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/ft_singletrialanalysis_aseo.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/private/ft_singletrialanalysis_aseo.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_singletrialanalysis_aseo", *args, **kwargs)

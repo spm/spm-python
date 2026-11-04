@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def cfg_cfg_basicio_def(*args, **kwargs):
-    """
+    r"""
       'BasicIO' - MATLABBATCH defaults  
         This MATLABBATCH defaults file has been generated automatically  
         by MATLABBATCH using ConfGUI. It contains all pre-defined values for  
@@ -12,9 +12,12 @@ def cfg_cfg_basicio_def(*args, **kwargs):
         Created at 2015-12-01 13:53:35.  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/matlabbatch/cfg_basicio/cfg_cfg_basicio_def.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/matlabbatch/cfg_basicio/cfg_cfg_basicio_def.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("cfg_cfg_basicio_def", *args, **kwargs)

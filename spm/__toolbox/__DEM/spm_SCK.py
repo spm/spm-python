@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_SCK(*args, **kwargs):
-    """
+    r"""
       FORMAT SCKS = spm_SCK(SCKS)  
        __________________________________________________________________________  
         Square-root Cubature Kalman Filters [2] & Square-root Rauch-Tang-Striebel  
@@ -90,9 +90,12 @@ def spm_SCK(*args, **kwargs):
         Copyright (C) - Martin Havlicek  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DEM/spm_SCK.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/DEM/spm_SCK.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_SCK", *args, **kwargs)

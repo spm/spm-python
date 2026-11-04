@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_artifact_zvalue(*args, **kwargs):
-    """
+    r"""
       FT_ARTIFACT_ZVALUE scans data segments of interest for artifacts, by means of  
         thresholding the z-scored values of signals that have been preprocessed,  
         using heuristics that increase the sensitivity to detect certain types of artifacts.  
@@ -48,7 +48,8 @@ def ft_artifact_zvalue(*args, **kwargs):
           cfg.artfctdef.zvalue.artfctpeak       = 'yes' or 'no'  
           cfg.artfctdef.zvalue.artfctpeakrange  = [begin end]  
           cfg.artfctdef.zvalue.interactive      = 'yes' or 'no'  
-          cfg.artfctdef.zvalue.zscore           = 'yes' (default) or 'no'     
+          cfg.artfctdef.zvalue.zscore           = 'yes' (default) or 'no'  
+          cfg.artfctdef.zvalue.keepintermediate = 'no' (default) or 'yes'  
          
         If you specify cfg.artfctdef.zvalue.artfctpeak='yes', a peak detection on the suprathreshold  
         z-scores will be performed, and the artifact will be defined relative to  
@@ -67,6 +68,11 @@ def ft_artifact_zvalue(*args, **kwargs):
         to thresholding. This goes a bit against the name of the function, but it may be useful  
         if the threshold is to be defined in meaningful physical units, e.g. degrees of visual  
         angle for eye position data.  
+         
+        If you specify cfg.artfctdef.zvalue.keepintermediate = 'yes', the intermediate data  
+        that has been used for the artifacts' definition will be passed to the output. This  
+        allows for the (potentially lengthy) computations to be uncoupled from the interactive  
+        part.  
          
         If you specify cfg.artfctdef.zvalue.interactive = 'yes', a graphical user interface  
         will show in which you can manually accept/reject the detected artifacts, and/or  
@@ -132,9 +138,12 @@ def ft_artifact_zvalue(*args, **kwargs):
         FT_ARTIFACT_JUMP, FT_ARTIFACT_MUSCLE, FT_ARTIFACT_THRESHOLD, FT_ARTIFACT_ZVALUE  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/ft_artifact_zvalue.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/ft_artifact_zvalue.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_artifact_zvalue", *args, **kwargs)

@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_preproc_slidingrange(*args, **kwargs):
-    """
+    r"""
       FT_PREPROC_SLIDINGRANGE computes the range of the data in a sliding time  
         window of the width specified.  
          
@@ -19,9 +19,12 @@ def ft_preproc_slidingrange(*args, **kwargs):
         See also PREPROC  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/preproc/ft_preproc_slidingrange.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/preproc/ft_preproc_slidingrange.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_preproc_slidingrange", *args, **kwargs)

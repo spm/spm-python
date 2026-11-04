@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _offset2time(*args, **kwargs):
-    """
+    r"""
       OFFSET2TIME converts the offset of a trial definition into a time-axis  
         according to the definition from DEFINETRIAL  
          
@@ -19,9 +19,12 @@ def _offset2time(*args, **kwargs):
         negative offset indicates a trial beginning before the trigger.  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/offset2time.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/private/offset2time.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("offset2time", *args, **kwargs)

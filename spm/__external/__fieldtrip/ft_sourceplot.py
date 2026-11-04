@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_sourceplot(*args, **kwargs):
-    """
+    r"""
       FT_SOURCEPLOT plots functional source reconstruction data on slices or on a surface,  
         optionally as an overlay on anatomical MRI data, where statistical data can be used to  
         determine the opacity of the mask. Input data comes from FT_SOURCEANALYSIS,  
@@ -165,11 +165,11 @@ def ft_sourceplot(*args, **kwargs):
          
         The following parameters apply to cfg.method='surface' irrespective of whether an interpolation is required  
           cfg.camlight       = 'yes' or 'no' (default = 'yes')  
-          cfg.facecolor      = [r g b] values or string, for example 'brain', 'cortex', 'skin', 'black', 'red', 'r',  
+          cfg.facecolor      = [r g b] values or string, for example 'skin', 'skull', 'brain', 'black', 'red', 'r',  
                                or an Nx3 or Nx1 array where N is the number of faces  
-          cfg.vertexcolor    = [r g b] values or string, for example 'brain', 'cortex', 'skin', 'black', 'red', 'r',  
+          cfg.vertexcolor    = [r g b] values or string, for example 'skin', 'skull', 'brain', 'black', 'red', 'r',  
                                or an Nx3 or Nx1 array where N is the number of vertices  
-          cfg.edgecolor      = [r g b] values or string, for example 'brain', 'cortex', 'skin', 'black', 'red', 'r'  
+          cfg.edgecolor      = [r g b] values or string, for example 'skin', 'skull', 'brain', 'black', 'red', 'r'  
          
         When cfg.method = 'cloud', the functional data will be rendered as as clouds (groups of points),   
         spheres, or single points at each sensor position. These spheres or point clouds can either be   
@@ -204,9 +204,12 @@ def ft_sourceplot(*args, **kwargs):
         FT_VOLUMELOOKUP, FT_READ_ATLAS, FT_READ_MRI  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/ft_sourceplot.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/ft_sourceplot.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_sourceplot", *args, **kwargs)

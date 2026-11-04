@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def DEMO_MDP_questions(*args, **kwargs):
-    """
+    r"""
       Demo of active inference for visual salience  
        __________________________________________________________________________  
          
@@ -40,9 +40,12 @@ def DEMO_MDP_questions(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DEM/DEMO_MDP_questions.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/DEM/DEMO_MDP_questions.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("DEMO_MDP_questions", *args, **kwargs)

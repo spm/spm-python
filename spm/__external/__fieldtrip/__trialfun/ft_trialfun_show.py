@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_trialfun_show(*args, **kwargs):
-    """
+    r"""
       FT_TRIALFUN_SHOW will show a summary of the event information on screen. It will  
         not return an actual trial definition. This function should in general not be  
         called directly, it will be called by FT_DEFINETRIAL.  
@@ -16,9 +16,12 @@ def ft_trialfun_show(*args, **kwargs):
         See also FT_DEFINETRIAL, FT_TRIALFUN_GENERAL, FT_TRIALFUN_GUI  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/trialfun/ft_trialfun_show.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/trialfun/ft_trialfun_show.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_trialfun_show", *args, **kwargs)

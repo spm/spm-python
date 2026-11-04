@@ -2,8 +2,8 @@ from spm._runtime import Runtime
 
 
 def _dist(*args, **kwargs):
-    """
-      DIST computes the euclidian distance between the columns of the input matrix  
+    r"""
+      DIST computes the euclidean distance between the columns of the input matrix  
          
         Use as  
           [d] = dist(x)  
@@ -13,9 +13,12 @@ def _dist(*args, **kwargs):
         Networks toolbox.  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/plotting/private/dist.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/plotting/private/dist.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("dist", *args, **kwargs)

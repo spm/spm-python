@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_standalone(*args, **kwargs):
-    """
+    r"""
       FT_STANDALONE is the entry function of the compiled FieldTrip application.  
         The compiled application can be used to execute FieldTrip data analysis  
         scripts.  
@@ -27,9 +27,12 @@ def ft_standalone(*args, **kwargs):
         See also FT_COMPILE_STANDALONE  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/utilities/ft_standalone.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/utilities/ft_standalone.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_standalone", *args, **kwargs, nargout=0)

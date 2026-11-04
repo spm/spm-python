@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_kernels(*args, **kwargs):
-    """
+    r"""
       Return global Volterra kernels for a MIMO Bilinear system  
         FORMAT [K0,K1,K2] = spm_kernels(M,P,N,dt)            - output kernels  
         FORMAT [K0,K1,K2] = spm_kernels(M0,M1,N,dt)          - state  kernels  
@@ -37,9 +37,12 @@ def spm_kernels(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/spm_kernels.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/spm_kernels.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_kernels", *args, **kwargs)

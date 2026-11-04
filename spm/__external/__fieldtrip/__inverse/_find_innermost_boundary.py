@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _find_innermost_boundary(*args, **kwargs):
-    """
+    r"""
       FIND_INNERMOST_BOUNDARY locates innermost compartment of a BEM model  
         by looking at the containment of the triangular meshes describing   
         the surface boundaries  
@@ -14,9 +14,12 @@ def _find_innermost_boundary(*args, **kwargs):
           bnd(i).tri  triangles of boundary i (matrix of size Mx3)  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/inverse/private/find_innermost_boundary.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/inverse/private/find_innermost_boundary.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("find_innermost_boundary", *args, **kwargs)

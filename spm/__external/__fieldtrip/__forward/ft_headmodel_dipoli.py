@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_headmodel_dipoli(*args, **kwargs):
-    """
+    r"""
       FT_HEADMODEL_DIPOLI creates a volume conduction model of the head  
         using the boundary element method (BEM) for EEG. This function takes  
         as input the triangulated surfaces that describe the boundaries and  
@@ -30,12 +30,15 @@ def ft_headmodel_dipoli(*args, **kwargs):
           tempname         = string, allows you to specify the full tempory name including path (default is automatic)  
           checkmesh        = 'yes' or 'no'  
          
-        See also FT_PREPARE_VOL_SENS, FT_COMPUTE_LEADFIELD  
+        See also FT_PREPARE_HEADMODEL, FT_COMPUTE_LEADFIELD  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/forward/ft_headmodel_dipoli.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/forward/ft_headmodel_dipoli.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_headmodel_dipoli", *args, **kwargs)

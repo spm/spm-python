@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def read_eep_avr(*args, **kwargs):
-    """
+    r"""
       READ_EEP_AVR reads averaged EEG data from an EEProbe *.avr file  
         and returns a structure containing the header and data information.  
          
@@ -31,9 +31,12 @@ def read_eep_avr(*args, **kwargs):
         See also READ_EEP_CNT, READ_EEP_TRG, READ_EEP_REJ  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/eeprobe/read_eep_avr.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/eeprobe/read_eep_avr.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("read_eep_avr", *args, **kwargs)

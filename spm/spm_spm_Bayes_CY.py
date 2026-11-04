@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_spm_Bayes_CY(*args, **kwargs):
-    """
+    r"""
       Estimation of the average sample covariance of whole-brain data.  
          
         SPM - Structure (see spm_spm.m)  
@@ -16,9 +16,12 @@ def spm_spm_Bayes_CY(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/spm_spm_Bayes_CY.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/spm_spm_Bayes_CY.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_spm_Bayes_CY", *args, **kwargs)

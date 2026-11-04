@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _rotate(*args, **kwargs):
-    """
+    r"""
       ROTATE returns the homogenous coordinate transformation matrix  
         corresponding to a rotation around the x, y and z-axis. The direction of  
         the rotation is according to the right-hand rule.  
@@ -20,9 +20,12 @@ def _rotate(*args, **kwargs):
         See also TRANSLATE, SCALE, RIGIDBODY, QUATERNION, HOMOGENOUS2TRADITIONAL  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/plotting/private/rotate.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/plotting/private/rotate.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("rotate", *args, **kwargs)

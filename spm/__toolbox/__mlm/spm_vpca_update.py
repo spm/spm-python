@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_vpca_update(*args, **kwargs):
-    """
+    r"""
       Update VPCA parameters  
         FORMAT [pca,c] = spm_vpca_update (T,S,pca,c,m)  
          
@@ -17,9 +17,12 @@ def spm_vpca_update(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/mlm/spm_vpca_update.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/mlm/spm_vpca_update.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_vpca_update", *args, **kwargs)

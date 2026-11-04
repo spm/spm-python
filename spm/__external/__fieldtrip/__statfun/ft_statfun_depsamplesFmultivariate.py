@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_statfun_depsamplesFmultivariate(*args, **kwargs):
-    """
+    r"""
       FT_STATFUN_DEPSAMPLESFMULTIVARIATE calculates the MANOVA dependent samples  
         F-statistic on the biological data in dat (the dependent variable), using the  
         information on the independent variable (ivar) in design.  
@@ -45,9 +45,12 @@ def ft_statfun_depsamplesFmultivariate(*args, **kwargs):
         See also FT_TIMELOCKSTATISTICS, FT_FREQSTATISTICS or FT_SOURCESTATISTICS  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/statfun/ft_statfun_depsamplesFmultivariate.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/statfun/ft_statfun_depsamplesFmultivariate.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_statfun_depsamplesFmultivariate", *args, **kwargs)

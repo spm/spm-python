@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_appendlayout(*args, **kwargs):
-    """
+    r"""
       FT_APPENDLAYOUT concatenates multiple layout descriptions that have been constructed  
         separately.  
          
@@ -19,9 +19,12 @@ def ft_appendlayout(*args, **kwargs):
         See also FT_PREPARE_LAYOUT, FT_LAYOUTPLOT, FT_APPENDSENS  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/ft_appendlayout.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/ft_appendlayout.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_appendlayout", *args, **kwargs)

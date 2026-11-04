@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_eeg_mask(*args, **kwargs):
-    """
+    r"""
       Create a mask image for scalp-level contrasts  
         FORMAT spm_eeg_mask(S)  
          
@@ -15,9 +15,12 @@ def spm_eeg_mask(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/spm_eeg_mask.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/spm_eeg_mask.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_eeg_mask", *args, **kwargs, nargout=0)

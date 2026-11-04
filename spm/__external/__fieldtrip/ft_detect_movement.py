@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_detect_movement(*args, **kwargs):
-    """
+    r"""
       FT_SACCADE_DETECTION performs detection of movements such as saccades and  
         microsaccades, but also joystick movements, from time series data over multiple  
         trials. Different methods for detecting movements are implemented, which are  
@@ -49,9 +49,12 @@ def ft_detect_movement(*args, **kwargs):
         See also FT_DATABROWSER, FT_DATATYPE_SPIKE  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/ft_detect_movement.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/ft_detect_movement.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_detect_movement", *args, **kwargs)

@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_sourceplot_interactive(*args, **kwargs):
-    """
+    r"""
       FT_SOURCEPLOT_INTERACTIVE provides a rapid way to plot 3D surface  
         renderings of pos_time or pos_freq functional data, and interactively  
         explore them. One figure is created with surface plots of the individual  
@@ -49,9 +49,12 @@ def ft_sourceplot_interactive(*args, **kwargs):
         See also FT_SOURCEPLOT, FT_SOURCEMOVIE  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/ft_sourceplot_interactive.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/ft_sourceplot_interactive.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_sourceplot_interactive", *args, **kwargs)

@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def DEM_demo(*args, **kwargs):
-    """
+    r"""
       DEM_DEMO M-file for DEM_demo.fig  
              DEM_DEMO, by itself, creates a new DEM_DEMO or raises the existing  
              singleton*.  
@@ -25,9 +25,12 @@ def DEM_demo(*args, **kwargs):
         See also: GUIDE, GUIDATA, GUIHANDLES  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DEM/DEM_demo.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/DEM/DEM_demo.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("DEM_demo", *args, **kwargs)

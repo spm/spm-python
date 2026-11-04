@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_source2grid(*args, **kwargs):
-    """
+    r"""
       FT_SOURCE2GRID removes the fields from a source structure that are  
         not necessary to reuse the dipole grid in another source estimation.  
          
@@ -15,9 +15,12 @@ def ft_source2grid(*args, **kwargs):
         See also FTSOURCE2SPARSE, FT_SOURCE2FULL  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/utilities/ft_source2grid.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/utilities/ft_source2grid.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_source2grid", *args, **kwargs)

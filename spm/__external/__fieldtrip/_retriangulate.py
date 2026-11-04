@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _retriangulate(*args, **kwargs):
-    """
+    r"""
       RETRIANGULATE projects a triangulation onto another triangulation  
         thereby providing a a new triangulation of the old one.  
          
@@ -29,9 +29,12 @@ def _retriangulate(*args, **kwargs):
         See also ICOSAHEDRONxxx, ISOSURFACE, REDUCEPATCH  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/retriangulate.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/private/retriangulate.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("retriangulate", *args, **kwargs)

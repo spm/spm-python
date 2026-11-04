@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_eeg_invert_setuppatches(*args, **kwargs):
-    """
+    r"""
       Set prior files for source inversion  
         FORMAT [Qp,Qe,allpriornames] = spm_eeg_invert_setuppatches(allIp,mesh,base,priordir,Qe,UL)  
         Each file contains  number of smooth patches on cortical surface a  
@@ -21,9 +21,12 @@ def spm_eeg_invert_setuppatches(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/spm_eeg_invert_setuppatches.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/spm_eeg_invert_setuppatches.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_eeg_invert_setuppatches", *args, **kwargs)

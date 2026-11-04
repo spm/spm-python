@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_smoothkern(*args, **kwargs):
-    """
+    r"""
       Generate a Gaussian smoothing kernel  
         FORMAT krn = spm_smoothkern(fwhm,x,t)  
         fwhm - full width at half maximum  
@@ -28,9 +28,12 @@ def spm_smoothkern(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/spm_smoothkern.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/spm_smoothkern.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_smoothkern", *args, **kwargs)

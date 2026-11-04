@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_dcm_create(*args, **kwargs):
-    """
+    r"""
       Create a DCM with simulated data (specified via GUI or an existing model)  
         FORMAT spm_dcm_create(syn_model,source_model,SNR)  
          
@@ -26,9 +26,12 @@ def spm_dcm_create(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/spm_dcm_create.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/spm_dcm_create.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_dcm_create", *args, **kwargs, nargout=0)

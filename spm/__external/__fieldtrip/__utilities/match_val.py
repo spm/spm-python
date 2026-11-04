@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def match_val(*args, **kwargs):
-    """
+    r"""
       MATCH_VAL looks for matching values in two arrays of values  
         and returns the indices into both the 1st and 2nd list of the matches.  
         They will be ordered according to the first input argument.  
@@ -13,9 +13,12 @@ def match_val(*args, **kwargs):
         See also MATCH_STR  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/utilities/match_val.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/utilities/match_val.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("match_val", *args, **kwargs)

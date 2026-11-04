@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _transform2grid(*args, **kwargs):
-    """
+    r"""
       TRANSFORM2GRID ensures that the volume contains the definition of the  
         cardian axes, i.e. xgrid/ygrid/zgrid. If the voluyme contains a  
         homogenous coordinate transformation axis that is unequal to eye(4), it  
@@ -11,9 +11,12 @@ def _transform2grid(*args, **kwargs):
         See also GRID2TRANSFORM  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/transform2grid.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/private/transform2grid.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("transform2grid", *args, **kwargs)

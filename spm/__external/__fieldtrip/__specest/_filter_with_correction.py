@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _filter_with_correction(*args, **kwargs):
-    """
+    r"""
       FILTER_WITH_CORRECTION applies the filter to the data and corrects  
         edge-artifacts for one-pass filtering.  
          
@@ -26,9 +26,12 @@ def _filter_with_correction(*args, **kwargs):
         order will attenuate the signal twice as strong.  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/specest/private/filter_with_correction.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/specest/private/filter_with_correction.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("filter_with_correction", *args, **kwargs)

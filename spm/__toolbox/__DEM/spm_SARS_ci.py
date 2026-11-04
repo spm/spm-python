@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_SARS_ci(*args, **kwargs):
-    """
+    r"""
       Graphics for coronavirus simulations - with confidence intervals  
         FORMAT [S,CS,Y,C,t] = spm_SARS_ci(Ep,Cp,Z,U,M,NPI,age)  
         Ep     - posterior expectations  
@@ -38,9 +38,12 @@ def spm_SARS_ci(*args, **kwargs):
         Copyright (C) 2020 Wellcome Centre for Human Neuroimaging  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DEM/spm_SARS_ci.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/DEM/spm_SARS_ci.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_SARS_ci", *args, **kwargs)

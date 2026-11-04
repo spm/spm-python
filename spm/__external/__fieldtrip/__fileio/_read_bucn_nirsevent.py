@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _read_bucn_nirsevent(*args, **kwargs):
-    """
+    r"""
       READ_BUCN_NIRSEVENT reads the event information of ASCII-formatted NIRS   
         data acquired with the UCL-BIRKBECK machine and postprocessed by the  
         Paris group. The first line contains the header-info and the rest of  
@@ -17,9 +17,12 @@ def _read_bucn_nirsevent(*args, **kwargs):
         See also READ_BUCN_NIRSHDR, READ_BUCN_NIRSDATA  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/read_bucn_nirsevent.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/fileio/private/read_bucn_nirsevent.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("read_bucn_nirsevent", *args, **kwargs)

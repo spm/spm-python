@@ -2,11 +2,13 @@ from spm._runtime import Runtime
 
 
 def ft_statistics_stats(*args, **kwargs):
-    """
+    r"""
       FT_STATISTICS_STATS performs a massive univariate statistical test using the MATLAB  
-        statistics toolbox. This function should not be called directly, instead you should  
-        call the function that is associated with the type of data on which you want to  
-        perform the test.  
+        statistics toolbox. It is not recommended to call this function directly,  
+        but instead you should call the function that is associated with the type of data on   
+        which you want to perform the test. This is because important data bookkeeping   
+        operations on the data are performed in the higher-level functions, which are  
+        assumed to have been handled correctly for the input arguments into this function.   
          
         Use as  
           stat = ft_timelockstatistics(cfg, data1, data2, data3, ...)  
@@ -39,9 +41,12 @@ def ft_statistics_stats(*args, **kwargs):
         FT_STATISTICS_MONTECARLO, FT_STATISTICS_CROSSVALIDATE  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/ft_statistics_stats.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/ft_statistics_stats.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_statistics_stats", *args, **kwargs)

@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_trialfun_gui(*args, **kwargs):
-    """
+    r"""
       FT_TRIALFUN_GUI reads events from the dataset, displays a graphical user interface  
         dialog to select the event types and values of interest, and constructs a trial  
         definition. This function should in general not be called directly, it will be  
@@ -17,9 +17,12 @@ def ft_trialfun_gui(*args, **kwargs):
         See also FT_DEFINETRIAL, FT_TRIALFUN_GENERAL, FT_TRIALFUN_SHOW  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/trialfun/ft_trialfun_gui.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/trialfun/ft_trialfun_gui.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_trialfun_gui", *args, **kwargs)

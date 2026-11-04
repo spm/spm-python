@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def fiff_write_raw_segment(*args, **kwargs):
-    """
+    r"""
         FIFF_WRITE_RAW_SEGMENT   Write chunck of raw data to disk  
               [] = FIFF_WRITE_RAW_SEGMENT(FNAME, RAW, FROM, TO, SEL)  
          
@@ -22,9 +22,12 @@ def fiff_write_raw_segment(*args, **kwargs):
         buffer_size          - float (size of data buffers)  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/mne/fiff_write_raw_segment.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/mne/fiff_write_raw_segment.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("fiff_write_raw_segment", *args, **kwargs, nargout=0)

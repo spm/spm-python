@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_datatype_dip(*args, **kwargs):
-    """
+    r"""
       FT_DATATYPE_DIP descripts the FieldTrip MATLAB structure for dip data  
          
         The dip structure represents a dipole model that has been fitted to  
@@ -14,9 +14,12 @@ def ft_datatype_dip(*args, **kwargs):
         See also FT_DATATYPE, FT_DATATYPE_SOURCE, FT_DATATYPE_VOLUME  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/utilities/ft_datatype_dip.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/utilities/ft_datatype_dip.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_datatype_dip", *args, **kwargs)

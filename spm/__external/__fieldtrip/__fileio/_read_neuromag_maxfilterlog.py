@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _read_neuromag_maxfilterlog(*args, **kwargs):
-    """
+    r"""
       READ_NEUROMAG_MAXFILTERLOG reads the ascii logfile that is produced by MaxFilter  
          
         Use as  
@@ -11,9 +11,12 @@ def _read_neuromag_maxfilterlog(*args, **kwargs):
         See also READ_NEUROMAG_EVE, READ_NEUROMAG_HC  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/read_neuromag_maxfilterlog.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/fileio/private/read_neuromag_maxfilterlog.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("read_neuromag_maxfilterlog", *args, **kwargs)

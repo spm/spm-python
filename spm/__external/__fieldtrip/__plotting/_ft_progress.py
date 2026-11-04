@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _ft_progress(*args, **kwargs):
-    """
+    r"""
       FT_PROGRESS shows a graphical or non-graphical progress indication similar to the  
         standard WAITBAR function, but with the extra option of printing it in the command  
         window as a plain text string or as a rotating dial. Alternatively, you can also  
@@ -34,9 +34,12 @@ def _ft_progress(*args, **kwargs):
         See also WAITBAR  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/plotting/private/ft_progress.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/plotting/private/ft_progress.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_progress", *args, **kwargs, nargout=0)

@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_dcm_generate(*args, **kwargs):
-    """
+    r"""
       Generate synthetic data from a DCM specification  
         FORMAT [Y,x,DCM] = spm_dcm_generate(syn_model,SNR,show_graphics)  
           
@@ -25,9 +25,12 @@ def spm_dcm_generate(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/spm_dcm_generate.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/spm_dcm_generate.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_dcm_generate", *args, **kwargs)

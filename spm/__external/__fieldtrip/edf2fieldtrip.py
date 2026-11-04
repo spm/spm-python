@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def edf2fieldtrip(*args, **kwargs):
-    """
+    r"""
       EDF2FIELDTRIP reads data from a EDF file with channels that have a different  
         sampling rates. It upsamples all data to the highest sampling rate and  
         concatenates all channels into a raw data structure that is compatible with the  
@@ -20,9 +20,12 @@ def edf2fieldtrip(*args, **kwargs):
         FT_READ_EVENT  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/edf2fieldtrip.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/edf2fieldtrip.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("edf2fieldtrip", *args, **kwargs)

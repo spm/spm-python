@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _nimh2grad(*args, **kwargs):
-    """
+    r"""
       NIMH2GRAD constructs a gradiometer definition from the res4 header whish  
         is read using the NIMH implementation of ctf_read_res4. The grad  
         structure is compatible with FieldTrip and Robert Oostenveld's low-level  
@@ -15,9 +15,12 @@ def _nimh2grad(*args, **kwargs):
         See also CTF2GRAD, FIF2GRAD  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/nimh2grad.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/private/nimh2grad.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("nimh2grad", *args, **kwargs)

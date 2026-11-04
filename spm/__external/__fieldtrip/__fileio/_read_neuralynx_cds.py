@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _read_neuralynx_cds(*args, **kwargs):
-    """
+    r"""
       READ_NEURALYNX_CDS reads selected samples and channels from a combined Neuralynx dataset with separate subdirectories for the LFP, MUA and spike channels  
          
         Use as  
@@ -14,9 +14,12 @@ def _read_neuralynx_cds(*args, **kwargs):
         with Neuralynx, SPIKESPLITTING and SPIKEDOWNSAMPLE.  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/read_neuralynx_cds.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/fileio/private/read_neuralynx_cds.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("read_neuralynx_cds", *args, **kwargs)

@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def cfg_txtdesc2cfg(*args, **kwargs):
-    """
+    r"""
       Create a cfg_item tree from a short-hand text description  
         cfg = cfg_txtdesc2cfg(fname)  
         This utility reads a text file from fname and creates a configuration  
@@ -72,9 +72,12 @@ def cfg_txtdesc2cfg(*args, **kwargs):
         Copyright (C) 2007 Freiburg Brain Imaging  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/matlabbatch/cfg_txtdesc2cfg.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/matlabbatch/cfg_txtdesc2cfg.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("cfg_txtdesc2cfg", *args, **kwargs)
