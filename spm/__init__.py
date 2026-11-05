@@ -1,6 +1,6 @@
 from spm._runtime import Runtime
 from spm._version import __version__
-from mpython importMatlabClass, MatlabFunction, Cell, Struct, Array, SparseArray
+from mpython import MatlabClass, MatlabFunction, Cell, Struct, Array, SparseArray
 from .file_array import file_array
 from .gifti import gifti
 from .meeg import meeg
