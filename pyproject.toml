@@ -36,7 +36,7 @@ classifiers = [
 ]
 dependencies = [
     "mpython-core>=25.4rc1",
-    "spm-runtime-r2026b >= 26.10.1.* ; python_version >= '3.10'",
+    "spm-runtime-r2026b == 26.10.1.* ; python_version >= '3.10'",
     "spm-runtime-r2025a == 26.10.1.* ; python_version == '3.9'",
     "spm-runtime-r2023a == 26.10.1.* ; python_version == '3.8'",
     "spm-runtime-r2021b == 26.10.1.* ; python_version == '3.7'",
