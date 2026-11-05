@@ -36,7 +36,7 @@ By default, spm-python uses:
 - Python 3.7: R2021b
 - Python 3.8: R2023a
 - Python 3.9: R2025a
-- Python 3.10 - 3.13: R2025b
+- Python 3.10 - 3.14: R2026b
 
 ### Option 1 - Install the MATLAB runtime on first use
 
