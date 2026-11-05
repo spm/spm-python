@@ -12,6 +12,7 @@ on:
 
 env:
   MLM_LICENSE_TOKEN: ${{ secrets.MATLAB_BATCH_TOKEN }}
+  PIP_NO_CACHE_DIR: "1"
 
 jobs:
   run-unit-tests:
@@ -47,6 +48,7 @@ jobs:
 
       - name: Install SPM Python
         run: |
+          python -m pip install --upgrade pip
           python -m pip install mpython-core
           python -m pip install -e .
 
