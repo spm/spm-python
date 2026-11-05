@@ -35,7 +35,7 @@ classifiers = [
   "Programming Language :: Python :: 3.14",
 ]
 dependencies = [
-    "mpython-core>=25.4rc1",
+    "mpython-core>=26.11",
     "spm-runtime-r2026b == 26.10.1.* ; python_version >= '3.10'",
     "spm-runtime-r2025a == 26.10.1.* ; python_version == '3.9'",
     "spm-runtime-r2023a == 26.10.1.* ; python_version == '3.8'",
