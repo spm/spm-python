@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _triangle2connectivity(*args, **kwargs):
-    """
+    r"""
       TRIANGLE2CONNECTIVITY computes a connectivity-matrix from a triangulation.  
          
         Use as  
@@ -22,9 +22,12 @@ def _triangle2connectivity(*args, **kwargs):
         See also CHANNELCONNECTIVIY  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/triangle2connectivity.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/private/triangle2connectivity.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("triangle2connectivity", *args, **kwargs)

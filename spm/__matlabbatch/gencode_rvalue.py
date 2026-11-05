@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def gencode_rvalue(*args, **kwargs):
-    """
+    r"""
       GENCODE_RVALUE  Code for right hand side of MATLAB assignment  
         Generate the right hand side for a valid MATLAB variable  
         assignment. This function is a helper to GENCODE, but can be used on  
@@ -31,9 +31,12 @@ def gencode_rvalue(*args, **kwargs):
         Copyright (C) 2007 Freiburg Brain Imaging  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/matlabbatch/gencode_rvalue.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/matlabbatch/gencode_rvalue.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("gencode_rvalue", *args, **kwargs)

@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_rice_mixture(*args, **kwargs):
-    """
+    r"""
       Fit a mixture of Ricians to a histogram  
         FORMAT [mg,nu,sig,info] = spm_rice_mixture(h,x,K)  
         h    - histogram counts  
@@ -25,9 +25,12 @@ def spm_rice_mixture(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/Longitudinal/spm_rice_mixture.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/Longitudinal/spm_rice_mixture.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_rice_mixture", *args, **kwargs)

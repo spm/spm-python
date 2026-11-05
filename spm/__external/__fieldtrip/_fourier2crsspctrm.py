@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _fourier2crsspctrm(*args, **kwargs):
-    """
+    r"""
       FOURIER2CRSSPCTRM transforms a fourier-containing freq-structure   
         into a crsspctrm-containing freq-structure, in which the  
         powerspectra are also contained in the cross-spectra, being a   
@@ -22,9 +22,12 @@ def _fourier2crsspctrm(*args, **kwargs):
                            input is taken.  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/fourier2crsspctrm.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/private/fourier2crsspctrm.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("fourier2crsspctrm", *args, **kwargs)

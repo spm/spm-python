@@ -2,14 +2,14 @@ from spm._runtime import Runtime
 
 
 def spm_plot_ci(*args, **kwargs):
-    """
+    r"""
       Plot mean and conditional confidence intervals  
         FORMAT spm_plot_ci(E,C,x,j,s)  
         E - expectation (structure or array)  
         C - variance or covariance (structure or array)  
         x - domain  
         j - rows of E to plot  
-        s - string to specify plot type:e.g. '--r' or 'exp', 'log' etc  
+        s - string to specify plot type:e.g. '--r' or 'exp', 'log', 'plot', etc  
          
         -------------------------------------------------------------------------  
         The style of plot depends on the dimensions of the arguments provided:  
@@ -30,9 +30,12 @@ def spm_plot_ci(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/spm_plot_ci.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/spm_plot_ci.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_plot_ci", *args, **kwargs, nargout=0)

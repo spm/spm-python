@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_bsplins(*args, **kwargs):
-    """
+    r"""
       Sample a volume using B-spline interpolation - a compiled routine  
         FORMAT [f,dfx,dfy,dfz] = spm_bsplins(c,x,y,z,d)  
           c - volume of B-spline coefficients (from spm_bsplinc)  
@@ -42,9 +42,12 @@ def spm_bsplins(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/spm_bsplins.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/spm_bsplins.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_bsplins", *args, **kwargs)

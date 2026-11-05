@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_connectivitysimulation(*args, **kwargs):
-    """
+    r"""
       FT_CONNECTIVITYSIMULATION simulates channel-level time-series data with a  
         specified connectivity structure. This function returns an output data  
         structure that resembles the output of FT_PREPROCESSING.  
@@ -101,9 +101,12 @@ def ft_connectivitysimulation(*args, **kwargs):
         FT_CONNECTIVITYANALYSIS  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/ft_connectivitysimulation.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/ft_connectivitysimulation.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_connectivitysimulation", *args, **kwargs)

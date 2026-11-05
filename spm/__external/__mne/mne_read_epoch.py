@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def mne_read_epoch(*args, **kwargs):
-    """
+    r"""
        
         [data,fid] = mne_read_epoch(epoch_info,which,prev_fid)  
          
@@ -19,9 +19,12 @@ def mne_read_epoch(*args, **kwargs):
         The data will contain nchan x ntimes calibrated values  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/mne/mne_read_epoch.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/mne/mne_read_epoch.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("mne_read_epoch", *args, **kwargs)

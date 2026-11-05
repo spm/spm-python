@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def mne_read_surfaces(*args, **kwargs):
-    """
+    r"""
        
         [surfs] = mne_read_surfaces(surfname,read_curv,read_left,read_right,subject,subjects_dir,add_info)  
          
@@ -26,9 +26,12 @@ def mne_read_surfaces(*args, **kwargs):
         surfs          - Output structure containing the surfaces  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/mne/mne_read_surfaces.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/mne/mne_read_surfaces.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("mne_read_surfaces", *args, **kwargs)

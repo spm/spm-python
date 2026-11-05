@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ADEM_occlusion(*args, **kwargs):
-    """
+    r"""
       Slow pursuit and occlusion under active inference:  
        __________________________________________________________________________  
         This demo illustrates slow pursuit in the context of visual occlusion. We  
@@ -33,9 +33,12 @@ def ADEM_occlusion(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DEM/ADEM_occlusion.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/DEM/ADEM_occlusion.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ADEM_occlusion", *args, **kwargs, nargout=0)

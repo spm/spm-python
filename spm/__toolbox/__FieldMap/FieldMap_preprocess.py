@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def FieldMap_preprocess(*args, **kwargs):
-    """
+    r"""
       Function to prepare fieldmap data for processing  
          
         FORMAT VDM = FieldMap_preprocess(fm_dir,epi_dir,pm_defs,sessname)  
@@ -68,9 +68,12 @@ def FieldMap_preprocess(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/FieldMap/FieldMap_preprocess.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/FieldMap/FieldMap_preprocess.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("FieldMap_preprocess", *args, **kwargs)

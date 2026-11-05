@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _read_biff(*args, **kwargs):
-    """
+    r"""
       READ_BIFF reads data and header information from a BIFF file  
          
         This is a attemt for a reference implementation to read the BIFF  
@@ -22,9 +22,12 @@ def _read_biff(*args, **kwargs):
           evnt    : event markers         (struct)  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/read_biff.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/fileio/private/read_biff.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("read_biff", *args, **kwargs)

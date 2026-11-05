@@ -12,6 +12,7 @@ on:
 
 env:
   MLM_LICENSE_TOKEN: ${{ secrets.MATLAB_BATCH_TOKEN }}
+  PIP_NO_CACHE_DIR: "1"
 
 jobs:
   run-unit-tests:
@@ -19,9 +20,9 @@ jobs:
     strategy:
       fail-fast: False
       matrix:
-        matlab: ["R2025b"]
+        matlab: ["R2026b"]
         os: [ubuntu-latest, macos-13, macos-latest, windows-latest]
-        python-version: ["3.10", "3.11", "3.12", "3.13"]
+        python-version: ["3.10", "3.11", "3.12", "3.13", "3.14"]
         include:
           - os: ubuntu-latest
             os_name: Linux
@@ -47,6 +48,7 @@ jobs:
 
       - name: Install SPM Python
         run: |
+          python -m pip install --upgrade pip
           python -m pip install mpython-core
           python -m pip install -e .
 

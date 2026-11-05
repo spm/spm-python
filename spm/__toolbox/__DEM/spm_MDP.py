@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_MDP(*args, **kwargs):
-    """
+    r"""
       solves the active inference problem for Markov decision processes  
         FROMAT [Q,R,S,U,P] = spm_MDP(MDP)  
          
@@ -36,28 +36,28 @@ def spm_MDP(*args, **kwargs):
         P(M,T)   - probabaility of emitting action 1,...,M at time 1,...,T  
          
         This routine provides solutions of active inference (minimisation of  
-        variational free energy)using a generative model based upon a Markov  
-        decision process. This model and inference scheme is formulated  
-        in discrete space and time. This means that the generative model (and  
+        variational free energy) using a generative model based upon a Markov  
+        decision process. This model and inference scheme is formulated in  
+        discrete space and time. This means that the generative model (and  
         process) are  finite state  machines or hidden Markov models whose  
         dynamics are given by transition probabilities among states. For  
         simplicity, we assume an isomorphism between hidden states and outcomes,  
         where the likelihood corresponds to a particular outcome conditioned upon  
-        hidden states. Similarly, for simplicity, this routine assumes that action  
-        and hidden controls are isomorphic. If the dynamics of transition  
+        hidden states. Similarly, for simplicity, this routine assumes that  
+        action and hidden controls are isomorphic. If the dynamics of transition  
         probabilities of the true process are not provided, this routine will use  
         the equivalent probabilities from the generative model.  
          
         The transition probabilities are a cell array of probability transition  
         matrices corresponding to each (discrete) the level of the control state.  
          
-        Mote that the conditional expectations are functions of time but also  
+        Note that the conditional expectations are functions of time but also  
         contain expectations about fictive states over time at each time point.  
         To create time dependent transition probabilities, one can specify a  
         function in place of the transition probabilities under different levels  
         of control.  
          
-        partially observed Markov decision processes can be modelled by  
+        Partially observed Markov decision processes can be modelled by  
         specifying a likelihood (as part of a generative model) and absorbing any  
         probabilistic mapping between (isomorphic) hidden states and outcomes  
         into the transition probabilities G.  
@@ -66,9 +66,12 @@ def spm_MDP(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DEM/spm_MDP.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/DEM/spm_MDP.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_MDP", *args, **kwargs)

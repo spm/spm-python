@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _avgref(*args, **kwargs):
-    """
+    r"""
       AVGREF computes the average reference in each column  
           [data] = avgref(data)  
          
@@ -11,9 +11,12 @@ def _avgref(*args, **kwargs):
           [data] = avgref(data, sel)  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/avgref.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/private/avgref.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("avgref", *args, **kwargs)

@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_trialfun_trial(*args, **kwargs):
-    """
+    r"""
       FT_TRIALFUN_TRIAL creates a trial definition that corresponds to the events that  
         are returned by FT_READ_EVENT with type='trial'  
          
@@ -15,9 +15,12 @@ def ft_trialfun_trial(*args, **kwargs):
         See also FT_DEFINETRIAL, FT_TRIALFUN_GENERAL  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/trialfun/ft_trialfun_trial.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/trialfun/ft_trialfun_trial.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_trialfun_trial", *args, **kwargs)

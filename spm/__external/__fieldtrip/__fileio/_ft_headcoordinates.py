@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _ft_headcoordinates(*args, **kwargs):
-    """
+    r"""
       FT_HEADCOORDINATES returns the homogeneous coordinate transformation matrix  
         that converts the specified fiducials in any coordinate system (e.g. MRI)  
         into the rotated and translated headcoordinate system.  
@@ -47,8 +47,8 @@ def _ft_headcoordinates(*args, **kwargs):
           according to CTF conventions:             coordsys = 'ctf'  
           according to 4D conventions:              coordsys = '4d' or 'bti'  
           according to EEGLAB conventions:          coordsys = 'eeglab'  
-          according to NEUROMAG conventions:        coordsys = 'itab'  
-          according to ITAB conventions:            coordsys = 'neuromag'  
+          according to NEUROMAG conventions:        coordsys = 'neuromag'  
+          according to ITAB conventions:            coordsys = 'itab'  
           according to YOKOGAWA conventions:        coordsys = 'yokogawa'  
           according to ASA conventions:             coordsys = 'asa'  
           according to FTG conventions:             coordsys = 'ftg'  
@@ -97,9 +97,12 @@ def _ft_headcoordinates(*args, **kwargs):
         See also FT_ELECTRODEREALIGN, FT_VOLUMEREALIGN, FT_INTERACTIVEREALIGN, FT_AFFINECOORDINATES, COORDSYS2LABEL  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/ft_headcoordinates.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/fileio/private/ft_headcoordinates.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_headcoordinates", *args, **kwargs)

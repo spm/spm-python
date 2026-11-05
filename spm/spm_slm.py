@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_slm(*args, **kwargs):
-    """
+    r"""
       basis set of spehrical harmonics and their (optional) angular derivatives  
         as observed by point magnetometers.   
         FORMAT [slm,dslmdphi,dslmdtheta] = spm_slm(theta,phi,li)  
@@ -17,9 +17,12 @@ def spm_slm(*args, **kwargs):
         Copyright (C) 2023 Tim Tierney  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/spm_slm.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/spm_slm.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_slm", *args, **kwargs)

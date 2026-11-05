@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _fir_df(*args, **kwargs):
-    """
+    r"""
       FIR_DF computes default and maximum possible transition band width from  
         FIR filter cutoff frequency(ies)  
          
@@ -21,9 +21,12 @@ def _fir_df(*args, **kwargs):
         See also FIRWS, FIRWSORD, INVFIRWSORD  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/preproc/private/fir_df.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/preproc/private/fir_df.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("fir_df", *args, **kwargs)

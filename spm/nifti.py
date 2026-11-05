@@ -4,7 +4,7 @@ from spm._runtime import Runtime, RuntimeMixin
 
 class nifti(RuntimeMixin, MatlabClass):
     def __init__(self, *args, **kwargs):
-        """
+        r"""
           Create a NIFTI-1 object  
            __________________________________________________________________________  
             
@@ -13,28 +13,34 @@ class nifti(RuntimeMixin, MatlabClass):
             
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/@nifti/nifti.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/@nifti/nifti.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         super().__init__()
 
     def cifti(self, *args, **kwargs):
-        """
+        r"""
           Extract CIFTI-2 extension from a NIfTI-2 file and export data  
            __________________________________________________________________________  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/@nifti/cifti.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/@nifti/cifti.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("cifti", self._as_matlab_object(), *args, **kwargs)
 
     def create(self, *args, **kwargs):
-        """
+        r"""
           Create a NIFTI-1 file  
             FORMAT create(obj)  
             Write out the header information for the nifti object  
@@ -44,81 +50,99 @@ class nifti(RuntimeMixin, MatlabClass):
            __________________________________________________________________________  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/@nifti/create.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/@nifti/create.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("create", self._as_matlab_object(), *args, **kwargs, nargout=0)
 
     def disp(self, *args, **kwargs):
-        """
+        r"""
           Disp a NIFTI-1 object  
            __________________________________________________________________________  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/@nifti/disp.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/@nifti/disp.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("disp", self._as_matlab_object(), *args, **kwargs, nargout=0)
 
     def display(self, *args, **kwargs):
-        """
+        r"""
           Display a NIFTI-1 object  
            __________________________________________________________________________  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/@nifti/display.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/@nifti/display.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("display", self._as_matlab_object(), *args, **kwargs, nargout=0)
 
     def fieldnames(self, *args, **kwargs):
-        """
+        r"""
           Fieldnames of a NIFTI-1 object  
            __________________________________________________________________________  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/@nifti/fieldnames.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/@nifti/fieldnames.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("fieldnames", self._as_matlab_object(), *args, **kwargs)
 
     def structn(self, *args, **kwargs):
-        """
+        r"""
           Convert a NIFTI-1 object into a form of struct  
            __________________________________________________________________________  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/@nifti/structn.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/@nifti/structn.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("structn", self._as_matlab_object(), *args, **kwargs)
 
     def subsasgn(self, *args, **kwargs):
-        """
+        r"""
           Subscript assignment  
             See subsref for meaning of fields.  
            __________________________________________________________________________  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/@nifti/subsasgn.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/@nifti/subsasgn.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("subsasgn", self._as_matlab_object(), *args, **kwargs)
 
     def subsref(self, *args, **kwargs):
-        """
+        r"""
           Subscript referencing  
              
             Fields are:  
@@ -158,162 +182,198 @@ class nifti(RuntimeMixin, MatlabClass):
            __________________________________________________________________________  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/@nifti/subsref.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/@nifti/subsref.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("subsref", self._as_matlab_object(), *args, **kwargs)
 
     def _M2Q(self, *args, **kwargs):
-        """
+        r"""
           Convert from rotation matrix to quaternion form  
             See: http://skal.planet-d.net/demo/matrixfaq.htm  
            __________________________________________________________________________  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/@nifti/private/M2Q.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/@nifti/private/M2Q.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("M2Q", self._as_matlab_object(), *args, **kwargs)
 
     def _Q2M(self, *args, **kwargs):
-        """
+        r"""
           Generate a rotation matrix from a quaternion xi+yj+zk+w,  
             where Q = [x y z], and w = 1-x^2-y^2-z^2.  
             See: http://skal.planet-d.net/demo/matrixfaq.htm  
            __________________________________________________________________________  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/@nifti/private/Q2M.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/@nifti/private/Q2M.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("Q2M", self._as_matlab_object(), *args, **kwargs)
 
     def _decode_qform0(self, *args, **kwargs):
-        """
+        r"""
           Decode qform info from NIFTI-1 headers.  
            __________________________________________________________________________  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/@nifti/private/decode_qform0.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/@nifti/private/decode_qform0.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("decode_qform0", self._as_matlab_object(), *args, **kwargs)
 
     def _empty_hdr(self, *args, **kwargs):
-        """
+        r"""
           Create an empty NIFTI header  
             FORMAT hdr = empty_hdr  
            __________________________________________________________________________  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/@nifti/private/empty_hdr.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/@nifti/private/empty_hdr.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("empty_hdr", self._as_matlab_object(), *args, **kwargs)
 
     def _encode_qform0(self, *args, **kwargs):
-        """
+        r"""
           Encode an affine transform into qform  
            __________________________________________________________________________  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/@nifti/private/encode_qform0.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/@nifti/private/encode_qform0.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("encode_qform0", self._as_matlab_object(), *args, **kwargs)
 
     def _findindict(self, *args, **kwargs):
-        """
+        r"""
           Look up an entry in the dictionary  
            __________________________________________________________________________  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/@nifti/private/findindict.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/@nifti/private/findindict.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("findindict", self._as_matlab_object(), *args, **kwargs)
 
     def _getdict(self, *args, **kwargs):
-        """
+        r"""
           Dictionary of NIFTI stuff  
            __________________________________________________________________________  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/@nifti/private/getdict.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/@nifti/private/getdict.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("getdict", self._as_matlab_object(), *args, **kwargs)
 
     def _mayo2nifti1(self, *args, **kwargs):
-        """
+        r"""
           Convert from an ANALYZE to a NIFTI-1 header  
            __________________________________________________________________________  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/@nifti/private/mayo2nifti1.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/@nifti/private/mayo2nifti1.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("mayo2nifti1", self._as_matlab_object(), *args, **kwargs)
 
     def _mayostruc(self, *args, **kwargs):
-        """
+        r"""
           Create a data structure describing Analyze headers  
            __________________________________________________________________________  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/@nifti/private/mayostruc.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/@nifti/private/mayostruc.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("mayostruc", self._as_matlab_object(), *args, **kwargs)
 
     def _nifti1struc(self, *args, **kwargs):
-        """
+        r"""
           Create a data structure describing NIFTI-1 headers  
            __________________________________________________________________________  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/@nifti/private/nifti1struc.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/@nifti/private/nifti1struc.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("nifti1struc", self._as_matlab_object(), *args, **kwargs)
 
     def _nifti2struc(self, *args, **kwargs):
-        """
+        r"""
           Create a data structure describing NIFTI-2 headers  
            __________________________________________________________________________  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/@nifti/private/nifti2struc.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/@nifti/private/nifti2struc.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("nifti2struc", self._as_matlab_object(), *args, **kwargs)
 
     def _nifti_stats(self, *args, **kwargs):
-        """
+        r"""
           Conversion among various statistics  
             FORMAT P = nifti_stats(VAL,CODE,OPT,PARAM)  
               CODE can be one of  
@@ -341,41 +401,50 @@ class nifti(RuntimeMixin, MatlabClass):
            __________________________________________________________________________  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/@nifti/private/nifti_stats.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/@nifti/private/nifti_stats.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("nifti_stats", self._as_matlab_object(), *args, **kwargs)
 
     def _niftistruc(self, *args, **kwargs):
-        """
+        r"""
           Create a data structure describing NIFTI headers  
            __________________________________________________________________________  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/@nifti/private/niftistruc.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/@nifti/private/niftistruc.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("niftistruc", self._as_matlab_object(), *args, **kwargs)
 
     def _read_extras(self, *args, **kwargs):
-        """
+        r"""
           Read extra bits of information  
            __________________________________________________________________________  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/@nifti/private/read_extras.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/@nifti/private/read_extras.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("read_extras", self._as_matlab_object(), *args, **kwargs)
 
     def _read_hdr(self, *args, **kwargs):
-        """
+        r"""
           Get a variety of information from a NIFTI header  
             FORMAT vol = read_hdr(fname)  
             fname      - filename of image  
@@ -383,15 +452,18 @@ class nifti(RuntimeMixin, MatlabClass):
            __________________________________________________________________________  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/@nifti/private/read_hdr.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/@nifti/private/read_hdr.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("read_hdr", self._as_matlab_object(), *args, **kwargs)
 
     def _read_hdr_raw(self, *args, **kwargs):
-        """
+        r"""
           Read a NIFTI header  
             FORMAT [hdr,be] = read_hdr_raw(hname)  
             hname - filename of image's header  
@@ -400,28 +472,34 @@ class nifti(RuntimeMixin, MatlabClass):
            __________________________________________________________________________  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/@nifti/private/read_hdr_raw.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/@nifti/private/read_hdr_raw.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("read_hdr_raw", self._as_matlab_object(), *args, **kwargs)
 
     def _write_extras(self, *args, **kwargs):
-        """
+        r"""
           Write extra bits of information  
            __________________________________________________________________________  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/@nifti/private/write_extras.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/@nifti/private/write_extras.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("write_extras", self._as_matlab_object(), *args, **kwargs)
 
     def _write_hdr_raw(self, *args, **kwargs):
-        """
+        r"""
           Write a NIFTI-1 header  
             FORMAT sts = write_hdr_raw(fname,hdr,be)  
             fname      - filename of image  
@@ -430,11 +508,15 @@ class nifti(RuntimeMixin, MatlabClass):
              
             sts        - status (1=good, 0=bad)  
            __________________________________________________________________________  
+            Copyright (C) 2005-2017 Wellcome Trust Centre for Neuroimaging  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/@nifti/private/write_hdr_raw.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/@nifti/private/write_hdr_raw.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("write_hdr_raw", self._as_matlab_object(), *args, **kwargs)

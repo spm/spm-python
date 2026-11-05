@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_mnc2nifti(*args, **kwargs):
-    """
+    r"""
       Import MINC images into NIfTI  
         FORMAT spm_mnc2nifti(fname)  
         fname - a MINC filename  
@@ -19,9 +19,12 @@ def spm_mnc2nifti(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/spm_mnc2nifti.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/spm_mnc2nifti.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_mnc2nifti", *args, **kwargs)

@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def mne_ex_read_epochs(*args, **kwargs):
-    """
+    r"""
        
           Example of reading raw data  
          
@@ -39,9 +39,12 @@ def mne_ex_read_epochs(*args, **kwargs):
           to create the fif-format event file (or open the file in mne_browse_raw).  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/mne/mne_ex_read_epochs.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/mne/mne_ex_read_epochs.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("mne_ex_read_epochs", *args, **kwargs)

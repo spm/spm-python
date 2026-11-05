@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_fp(*args, **kwargs):
-    """
+    r"""
       Fokker-Planck operators and equilibrium density for dynamic systems  
         FORMAT [M0,q0,X,x,f,M1,L] = spm_fp(M,x,u)  
        --------------------------------------------------------------------------  
@@ -28,9 +28,12 @@ def spm_fp(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/spm_fp.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/spm_fp.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_fp", *args, **kwargs)

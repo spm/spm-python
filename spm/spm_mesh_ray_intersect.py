@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_mesh_ray_intersect(*args, **kwargs):
-    """
+    r"""
       Compute the intersection of ray(s) and triangle(s)  
         FORMAT [I, P, t] = spm_mesh_ray_intersect(M, R)  
         M   - a GIfTI object or patch structure or numeric array [v1;v2;v3]  
@@ -33,9 +33,12 @@ def spm_mesh_ray_intersect(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/spm_mesh_ray_intersect.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/spm_mesh_ray_intersect.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_mesh_ray_intersect", *args, **kwargs)

@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_freqsimulation(*args, **kwargs):
-    """
+    r"""
       FT_FREQSIMULATION simulates channel-level time-series data . The data is built up  
         from different frequencies and can contain a signal in which the different  
         frequencies interact (i.e. cross-frequency coherent). Different methods are  
@@ -34,7 +34,7 @@ def ft_freqsimulation(*args, **kwargs):
          
         For each of the methods default parameters are configured to generate  
         example data, including noise. To get full control over the generated  
-        data you should explicitely set all parameters involved in the method  
+        data you should explicitly set all parameters involved in the method  
         of your choise. The interpretation of the following signal components  
         depends on the specified method:  
          
@@ -139,9 +139,12 @@ def ft_freqsimulation(*args, **kwargs):
         FT_CONNECTIVITYSIMULATION  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/ft_freqsimulation.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/ft_freqsimulation.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_freqsimulation", *args, **kwargs)

@@ -2,16 +2,19 @@ from spm._runtime import Runtime
 
 
 def ft_transform_sens(*args, **kwargs):
-    """
+    r"""
       This function is a backward compatibility wrapper for existing MATLAB scripts  
         that call a function that is not part of the FieldTrip toolbox any more.  
          
         Please update your code to make it future-proof.  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/utilities/ft_transform_sens.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/utilities/ft_transform_sens.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_transform_sens", *args, **kwargs)

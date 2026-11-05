@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_headmodel_openmeeg(*args, **kwargs):
-    """
+    r"""
       FT_HEADMODEL_OPENMEEG creates a volume conduction model of the head using the  
         boundary element method (BEM). This function takes as input the triangulated  
         surfaces that describe the boundaries and returns as output a volume conduction  
@@ -31,12 +31,15 @@ def ft_headmodel_openmeeg(*args, **kwargs):
           tissue           = cell-array with the tissue labels for each compartment  
           checkmesh        = 'yes' or 'no'  
          
-        See also FT_PREPARE_VOL_SENS, FT_COMPUTE_LEADFIELD  
+        See also FT_PREPARE_HEADMODEL, FT_COMPUTE_LEADFIELD  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/forward/ft_headmodel_openmeeg.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/forward/ft_headmodel_openmeeg.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_headmodel_openmeeg", *args, **kwargs)

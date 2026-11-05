@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_connectivity_wpli(*args, **kwargs):
-    """
+    r"""
       FT_CONNECTIVITY_WPLI computes the weighted phase lag index from a data matrix  
         containing the cross-spectral density. This implements the method described in  
         Vinck M, Oostenveld R, van Wingerden M, Battaglia F, Pennartz CM. An improved index  
@@ -46,9 +46,12 @@ def ft_connectivity_wpli(*args, **kwargs):
         See also FT_CONNECTIVITYANALYSIS  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/connectivity/ft_connectivity_wpli.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/connectivity/ft_connectivity_wpli.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_connectivity_wpli", *args, **kwargs)

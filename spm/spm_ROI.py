@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_ROI(*args, **kwargs):
-    """
+    r"""
       Region of Interest specification  
         FORMAT xY = spm_ROI(xY)  
         xY     - VOI structure  
@@ -23,9 +23,12 @@ def spm_ROI(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/spm_ROI.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/spm_ROI.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_ROI", *args, **kwargs)

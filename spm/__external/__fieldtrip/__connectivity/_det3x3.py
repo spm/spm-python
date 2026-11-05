@@ -2,14 +2,17 @@ from spm._runtime import Runtime
 
 
 def _det3x3(*args, **kwargs):
-    """
+    r"""
       DET3X3 computes determinant of matrix x, using explicit analytic definition  
         if size(x) = [3 3 K M]  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/connectivity/private/det3x3.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/connectivity/private/det3x3.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("det3x3", *args, **kwargs)

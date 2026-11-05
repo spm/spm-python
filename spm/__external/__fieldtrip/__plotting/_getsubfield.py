@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _getsubfield(*args, **kwargs):
-    """
+    r"""
       GETSUBFIELD returns a field from a structure just like the standard  
         GETFIELD function, except that you can also specify nested fields  
         using a '.' in the fieldname. The nesting can be arbitrary deep.  
@@ -15,9 +15,12 @@ def _getsubfield(*args, **kwargs):
         See also GETFIELD, ISSUBFIELD, SETSUBFIELD  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/plotting/private/getsubfield.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/plotting/private/getsubfield.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("getsubfield", *args, **kwargs)

@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _ft_notification(*args, **kwargs):
-    """
+    r"""
       FT_NOTIFICATION works mostly like the WARNING and ERROR commands in MATLAB and  
         is called by FT_ERROR, FT_WARNING, FT_NOTICE, FT_INFO and FT_DEBUG. Please note  
         that you should not call this function directly.  
@@ -27,9 +27,12 @@ def _ft_notification(*args, **kwargs):
         See also DEFAULTID, FT_ERROR, FT_WARNING, FT_NOTICE, FT_INFO, FT_DEBUG, ERROR, WARNING  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/specest/private/ft_notification.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/specest/private/ft_notification.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_notification", *args, **kwargs)

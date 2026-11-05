@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_clf(*args, **kwargs):
-    """
+    r"""
       Clear specified figure of objects with visible handles  
         FORMAT spm_clf(F)  
         F - Figure number, or 'Tag' string of figure(s) to clear  
@@ -20,9 +20,12 @@ def spm_clf(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/spm_clf.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/spm_clf.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_clf", *args, **kwargs, nargout=0)

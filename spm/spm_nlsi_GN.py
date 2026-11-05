@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_nlsi_GN(*args, **kwargs):
-    """
+    r"""
       Bayesian inversion of nonlinear models - Gauss-Newton/Variational Laplace  
         FORMAT [Ep,Cp,Eh,F,L,dFdp,dFdpp] = spm_nlsi_GN(M,U,Y)  
          
@@ -99,9 +99,12 @@ def spm_nlsi_GN(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/spm_nlsi_GN.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/spm_nlsi_GN.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_nlsi_GN", *args, **kwargs)

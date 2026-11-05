@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_transverse(*args, **kwargs):
-    """
+    r"""
       Rendering of regional effects [SPM{T/F}] on transverse sections  
         FORMAT spm_transverse('set',SPM,hReg)  
         FORMAT spm_transverse('setcoords',xyzmm)  
@@ -38,9 +38,12 @@ def spm_transverse(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/spm_transverse.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/spm_transverse.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_transverse", *args, **kwargs, nargout=0)

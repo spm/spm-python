@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_datatype_headmodel(*args, **kwargs):
-    """
+    r"""
       FT_DATATYPE_HEADMODEL describes the FieldTrip MATLAB structure for a volume  
         conduction model of the head that can be used for forward computations of the EEG  
         potentials or the MEG fields. The volume conduction model represents the  
@@ -69,9 +69,12 @@ def ft_datatype_headmodel(*args, **kwargs):
         FT_DATATYPE_SPIKE, FT_DATATYPE_TIMELOCK, FT_DATATYPE_VOLUME  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/utilities/ft_datatype_headmodel.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/utilities/ft_datatype_headmodel.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_datatype_headmodel", *args, **kwargs)

@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_statfun_diff(*args, **kwargs):
-    """
+    r"""
       FT_STATFUN_DIFF demonstrates how to compute the difference of the mean in two  
         conditions. Although it can be used for statistical testing, it will have rather  
         limited sensitivity and is not really suited for inferential testing.  
@@ -25,9 +25,12 @@ def ft_statfun_diff(*args, **kwargs):
         See also FT_TIMELOCKSTATISTICS, FT_FREQSTATISTICS or FT_SOURCESTATISTICS, and see FT_STATFUN_MEAN for a similar example  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/statfun/ft_statfun_diff.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/statfun/ft_statfun_diff.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_statfun_diff", *args, **kwargs)

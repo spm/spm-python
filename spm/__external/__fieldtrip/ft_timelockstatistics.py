@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_timelockstatistics(*args, **kwargs):
-    """
+    r"""
       FT_TIMELOCKSTATISTICS  computes significance probabilities and/or critical values of a parametric statistical test  
         or a non-parametric permutation test.  
          
@@ -22,7 +22,8 @@ def ft_timelockstatistics(*args, **kwargs):
         Furthermore, the configuration should contain  
           cfg.method       = different methods for calculating the significance probability and/or critical value  
                            'montecarlo'    get Monte-Carlo estimates of the significance probabilities and/or critical values from the permutation distribution,  
-                           'analytic'      get significance probabilities and/or critical values from the analytic reference distribution (typically, the sampling distribution under the null hypothesis),  
+                           'analytic'      get significance probabilities and/or critical values from the analytic reference distribution   
+                                            (typically, the sampling distribution under the null hypothesis),  
                            'stats'         use a parametric test from the MATLAB statistics toolbox,  
                            'mvpa'          use functionality from the MVPA-light toolbox for classification or multivariate regression  
          
@@ -42,9 +43,12 @@ def ft_timelockstatistics(*args, **kwargs):
         See also FT_TIMELOCKANALYSIS, FT_TIMELOCKGRANDAVERAGE  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/ft_timelockstatistics.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/ft_timelockstatistics.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_timelockstatistics", *args, **kwargs)

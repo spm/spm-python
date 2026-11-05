@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def readCTFhdm(*args, **kwargs):
-    """
+    r"""
        Version 1.1   19 April 2007 - Test date.  
                        21 March 2007.  Modified to read v6.0 .hdm files that have additional   
                                        fields in MultiSphere_Data  
@@ -12,9 +12,12 @@ def readCTFhdm(*args, **kwargs):
          "CTF MEG FIle Formats', PN900-0088.  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/ctf/readCTFhdm.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/ctf/readCTFhdm.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("readCTFhdm", *args, **kwargs)

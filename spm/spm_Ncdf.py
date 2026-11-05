@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_Ncdf(*args, **kwargs):
-    """
+    r"""
       Cumulative Distribution Function (CDF) for univariate Normal distributions  
         FORMAT F = spm_Ncdf(x,u,v)  
          
@@ -54,9 +54,12 @@ def spm_Ncdf(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/spm_Ncdf.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/spm_Ncdf.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_Ncdf", *args, **kwargs)

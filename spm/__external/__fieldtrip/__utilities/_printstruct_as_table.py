@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _printstruct_as_table(*args, **kwargs):
-    """
+    r"""
       PRINTSTRUCT_AS_TABLE prints a struct-array as a table in Markdown format  
          
         Example  
@@ -15,9 +15,12 @@ def _printstruct_as_table(*args, **kwargs):
         See also PRINTSTRUCT, APPENDSTRUCT  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/utilities/private/printstruct_as_table.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/utilities/private/printstruct_as_table.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("printstruct_as_table", *args, **kwargs, nargout=0)

@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_logdet(*args, **kwargs):
-    """
+    r"""
       Compute the log of the determinant of positive (semi-)definite matrix C  
         FORMAT H = spm_logdet(C)  
         H = log(det(C))  
@@ -13,9 +13,12 @@ def spm_logdet(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/spm_logdet.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/spm_logdet.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_logdet", *args, **kwargs)

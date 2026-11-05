@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_mvaranalysis(*args, **kwargs):
-    """
+    r"""
       FT_MVARANALYSIS performs multivariate autoregressive modeling on  
         time series data over multiple trials.  
          
@@ -69,9 +69,12 @@ def ft_mvaranalysis(*args, **kwargs):
         FT_TIMELOCKSTATISTICS  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/ft_mvaranalysis.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/ft_mvaranalysis.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_mvaranalysis", *args, **kwargs)

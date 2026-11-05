@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_multiplotER(*args, **kwargs):
-    """
+    r"""
       FT_MULTIPLOTER plots the event-related potentials or event-related fields  
         versus time, or the oscillatory activity (power or coherence) versus frequency.  
         Multiple datasets can be overlayed. The plots are arranged according to  
@@ -26,10 +26,10 @@ def ft_multiplotER(*args, **kwargs):
           cfg.maskfacealpha = mask transparency value between 0 and 1  
           cfg.xlim          = 'maxmin', 'maxabs', 'zeromax', 'minzero', or [xmin xmax] (default = 'maxmin')  
           cfg.ylim          = 'maxmin', 'maxabs', 'zeromax', 'minzero', or [ymin ymax] (default = 'maxmin')  
-          cfg.gradscale     = number, scaling to apply to the MEG gradiometer channels prior to display  
-          cfg.magscale      = number, scaling to apply to the MEG magnetometer channels prior to display  
           cfg.channel       = Nx1 cell-array with selection of channels (default = 'all'), see FT_CHANNELSELECTION for details  
           cfg.refchannel    = name of reference channel for visualising connectivity, can be 'gui'  
+          cfg.magscale      = number, scaling to apply to the MEG magnetometer channels prior to display  
+          cfg.gradscale     = number, scaling to apply to the MEG gradiometer channels prior to display  
           cfg.baseline      = 'yes', 'no' or [time1 time2] (default = 'no'), see FT_TIMELOCKBASELINE or FT_FREQBASELINE  
           cfg.trials        = 'all' or a selection given as a 1xN vector (default = 'all')  
           cfg.axes          = string, 'yes' or 'no' whether to draw x- and y-axes for each graph (default = 'yes')  
@@ -47,6 +47,7 @@ def ft_multiplotER(*args, **kwargs):
                               interactive plot when a selected area is clicked. Multiple areas  
                               can be selected by holding down the SHIFT key.  
           cfg.figure        = 'yes' or 'no', whether to open a new figure. You can also specify a figure handle from FIGURE, GCF or SUBPLOT. (default = 'yes')  
+          cfg.figurename    = string, title of the figure window  
           cfg.position      = location and size of the figure, specified as [left bottom width height] (default is automatic)  
           cfg.renderer      = string, 'opengl', 'zbuffer', 'painters', see RENDERERINFO (default is automatic, try 'painters' when it crashes)  
           cfg.colorgroups   = 'sequential', 'allblack', 'labelcharN' (N = Nth character in label), 'chantype' or a vector  
@@ -119,9 +120,12 @@ def ft_multiplotER(*args, **kwargs):
         FT_TOPOPLOTTFR, FT_PREPARE_LAYOUT  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/ft_multiplotER.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/ft_multiplotER.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_multiplotER", *args, **kwargs)

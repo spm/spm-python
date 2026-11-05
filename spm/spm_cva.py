@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_cva(*args, **kwargs):
-    """
+    r"""
       Canonical Variate Analysis  
         FORMAT [CVA] = spm_cva(Y,X,X0,c,[U])  
         Y            - data  
@@ -70,9 +70,12 @@ def spm_cva(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/spm_cva.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/spm_cva.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_cva", *args, **kwargs)

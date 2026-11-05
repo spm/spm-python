@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_rejectartifact(*args, **kwargs):
-    """
+    r"""
       FT_REJECTARTIFACT removes data segments containing artifacts. It returns a  
         configuration structure with a modified trial definition which can be used for  
         preprocessing of only the clean data.  
@@ -56,9 +56,12 @@ def ft_rejectartifact(*args, **kwargs):
         FT_REJECTVISUAL  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/ft_rejectartifact.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/ft_rejectartifact.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_rejectartifact", *args, **kwargs)

@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def cfg_tropts(*args, **kwargs):
-    """
+    r"""
       function tropts = cfg_tropts(stopspec, clvl, mlvl, cnt, mcnt, dflag)  
         This function is a shorthand that generates a traversal options structure  
         from the following items:  
@@ -19,9 +19,12 @@ def cfg_tropts(*args, **kwargs):
         Copyright (C) 2007 Freiburg Brain Imaging  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/matlabbatch/cfg_tropts.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/matlabbatch/cfg_tropts.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("cfg_tropts", *args, **kwargs)

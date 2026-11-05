@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_mesh_ray_triangle(*args, **kwargs):
-    """
+    r"""
       Compute the intersection of ray(s) and triangle(s)  
         FORMAT [I, t] = spm_mesh_ray_triangle(V, R)  
         V   - double precision matrix of triangles [v1;v2;v3] [9xNV]  
@@ -25,9 +25,12 @@ def spm_mesh_ray_triangle(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/spm_mesh_ray_triangle.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/spm_mesh_ray_triangle.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_mesh_ray_triangle", *args, **kwargs)

@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _ctf2grad(*args, **kwargs):
-    """
+    r"""
       CTF2GRAD converts a CTF header to a gradiometer structure that can be understood by  
         the FieldTrip low-level forward and inverse routines. The fieldtrip/fileio  
         read_header function can use three different implementations of the low-level code  
@@ -19,9 +19,12 @@ def _ctf2grad(*args, **kwargs):
         FT_READ_SENS, FT_READ_HEADER  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/ctf2grad.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/fileio/private/ctf2grad.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ctf2grad", *args, **kwargs)

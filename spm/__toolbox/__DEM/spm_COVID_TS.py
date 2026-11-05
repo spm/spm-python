@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_COVID_TS(*args, **kwargs):
-    """
+    r"""
       state dependent probability transition matrices  
         FORMAT T = spm_COVID_T(x,P)  
         x      - probability distributions (tensor)  
@@ -24,9 +24,12 @@ def spm_COVID_TS(*args, **kwargs):
         Copyright (C) 2020 Wellcome Centre for Human Neuroimaging  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DEM/spm_COVID_TS.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/DEM/spm_COVID_TS.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_COVID_T", *args, **kwargs)

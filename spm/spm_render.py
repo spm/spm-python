@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_render(*args, **kwargs):
-    """
+    r"""
       Render blobs on surface of a 'standard' brain  
         FORMAT spm_render(dat,brt,rendfile)  
          
@@ -36,9 +36,12 @@ def spm_render(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/spm_render.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/spm_render.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_render", *args, **kwargs)

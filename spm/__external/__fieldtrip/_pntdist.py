@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _pntdist(*args, **kwargs):
-    """
+    r"""
       PNTDIST returns the euclidian distance between two points  
          
          [dist] = pntdist(pnt1, pnt2)  
@@ -11,9 +11,12 @@ def _pntdist(*args, **kwargs):
         or either one can be Npnt x 1  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/pntdist.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/private/pntdist.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("pntdist", *args, **kwargs)

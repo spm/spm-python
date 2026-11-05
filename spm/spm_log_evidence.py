@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_log_evidence(*args, **kwargs):
-    """
+    r"""
       Return the log-evidence of a reduced model (under Laplace approximation)  
         FORMAT [F,sE,sC] = spm_log_evidence(qE,qC,pE,pC,rE,rC)  
         FORMAT [F,sE,sC] = spm_log_evidence(qE,qC,pE,pC,priorfun,varargin)  
@@ -32,9 +32,12 @@ def spm_log_evidence(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/spm_log_evidence.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/spm_log_evidence.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_log_evidence", *args, **kwargs)

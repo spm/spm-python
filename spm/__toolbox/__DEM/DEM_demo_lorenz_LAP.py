@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def DEM_demo_lorenz_LAP(*args, **kwargs):
-    """
+    r"""
       Dual estimation of the Lorenz system: Cross-validation of Laplace schemes  
        __________________________________________________________________________  
         Inversion of the Lorenz attractor with DEM, LAP and SCKS schemes: This  
@@ -17,9 +17,12 @@ def DEM_demo_lorenz_LAP(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DEM/DEM_demo_lorenz_LAP.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/DEM/DEM_demo_lorenz_LAP.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("DEM_demo_lorenz_LAP", *args, **kwargs, nargout=0)

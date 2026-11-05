@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_statfun_roc(*args, **kwargs):
-    """
+    r"""
       FT_STATFUN_ROC computes the area under the curve (AUC) of the Receiver Operator  
         Characteristic (ROC). This is a measure of the separability of the data observed in  
         two conditions. The AUC can be used for statistical testing whether the two  
@@ -35,9 +35,12 @@ def ft_statfun_roc(*args, **kwargs):
         See also FT_TIMELOCKSTATISTICS, FT_FREQSTATISTICS or FT_SOURCESTATISTICS  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/statfun/ft_statfun_roc.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/statfun/ft_statfun_roc.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_statfun_roc", *args, **kwargs)

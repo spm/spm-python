@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_prepare_layout(*args, **kwargs):
-    """
+    r"""
       FT_PREPARE_LAYOUT loads or creates a 2-D layout of the channel locations. This  
         layout is required for plotting the topographical distribution of the potential or  
         field distribution, or for plotting timecourses in a topographical arrangement.  
@@ -115,9 +115,12 @@ def ft_prepare_layout(*args, **kwargs):
         See also FT_TOPOPLOTER, FT_TOPOPLOTTFR, FT_MULTIPLOTER, FT_MULTIPLOTTFR, FT_PLOT_LAYOUT  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/ft_prepare_layout.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/ft_prepare_layout.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_prepare_layout", *args, **kwargs)

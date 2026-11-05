@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def FEP_fluctuations(*args, **kwargs):
-    """
+    r"""
       This demonstration  uses an ensemble of particles with intrinsic (Lorentz  
         attractor) dynamics and (Newtonian) short-range coupling.  The focus of  
         this routine is to unpack the Bayesian perspective. We first simulate  
@@ -33,9 +33,12 @@ def FEP_fluctuations(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DEM/FEP_fluctuations.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/DEM/FEP_fluctuations.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("FEP_fluctuations", *args, **kwargs, nargout=0)

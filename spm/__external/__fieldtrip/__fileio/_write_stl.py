@@ -2,20 +2,23 @@ from spm._runtime import Runtime
 
 
 def _write_stl(*args, **kwargs):
-    """
-      WRITE_STL writes a triangulation to an ascii *.stl file, which is a file  
+    r"""
+      WRITE_STL writes a triangulation to an ASCII *.stl file, which is a file  
         format native to the stereolithography CAD software created by 3D Systems.  
          
         Use as  
-          write_stl(filename, pnt, tri, nrm)  
+          write_stl(filename, pos, tri, nrm)  
         where nrm refers to the triangle normals.  
          
         See also READ_STL  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/write_stl.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/fileio/private/write_stl.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("write_stl", *args, **kwargs, nargout=0)

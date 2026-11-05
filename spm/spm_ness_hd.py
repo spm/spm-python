@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_ness_hd(*args, **kwargs):
-    """
+    r"""
       Nonequilibrium steady-state under a Helmholtz decomposition  
         FORMAT NESS = spm_ness_hd(M,x)  
        --------------------------------------------------------------------------  
@@ -14,6 +14,7 @@ def spm_ness_hd(*args, **kwargs):
            M.W   - (n x n) - precision matrix of random fluctuations  
         x    - cell array of vectors specifying evaluation grid  
          
+        NESS.Ep - parameters of log NESS  
         NESS.p0 - nonequilibrium steady-state  
         NESS.X  - evaluation points of state space  
         NESS.F  - expected flow  
@@ -25,14 +26,24 @@ def spm_ness_hd(*args, **kwargs):
         NESS.H2 - expected Euclidean norm of Hessian  
         NESS.J2 - expected Euclidean norm of Jacobian  
         NESS.D2 - correlation dimension  
-        NESS.bS - p0 = spm_softmax(spm_dctmtx(nx,nb)*bS);  
-        NESS.nb - number of basis functions  
+        NESS.o  - parameter orders  
+         
+        This routine returns the polynomial coefficients of a Laplace  
+        approximation to nonequilibrium steady-state dynamics given some  
+        equations of motion, which themselves could be based upon a Helmholtz  
+        decomposition with a different polynomial expansion. In other words, it  
+        converts a more or less expressive parameterisation of density dynamics  
+        into a second order Laplace approximation that is suitable for solving  
+        density dynamics.  
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/spm_ness_hd.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/spm_ness_hd.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_ness_hd", *args, **kwargs)

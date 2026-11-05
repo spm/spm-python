@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def mne_combine_xyz(*args, **kwargs):
-    """
+    r"""
        
         function [comb] = mne_combine_xyz(vec)  
          
@@ -13,9 +13,12 @@ def mne_combine_xyz(*args, **kwargs):
         comb        - Output vector [x1^2+y1^2+z1^2 ... x_n^2+y_n^2+z_n^2 ]  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/mne/mne_combine_xyz.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/mne/mne_combine_xyz.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("mne_combine_xyz", *args, **kwargs)

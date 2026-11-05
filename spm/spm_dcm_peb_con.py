@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_dcm_peb_con(*args, **kwargs):
-    """
+    r"""
       Bayesian contrast of the parameters in a PEB model or BMA  
         FORMAT [P,c,v] = spm_dcm_peb_con(PEB, C, threshold, doplot)  
          
@@ -46,9 +46,12 @@ def spm_dcm_peb_con(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/spm_dcm_peb_con.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/spm_dcm_peb_con.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_dcm_peb_con", *args, **kwargs)

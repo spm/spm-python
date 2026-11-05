@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def uimage(*args, **kwargs):
-    """
+    r"""
      UIMAGE  Display image with uneven axis.  
           UIMAGE(X,Y,C) displays matrix C as an image, using the vectors X and  
           Y to specify the X and Y coordinates. X and Y may be unevenly spaced  
@@ -45,9 +45,12 @@ def uimage(*args, **kwargs):
         This function is downloaded on Oct 24th 2008 from www.mathworks.com/matlabcentral/fileexchange/11368  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/external/fileexchange/uimage.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/external/fileexchange/uimage.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("uimage", *args, **kwargs)

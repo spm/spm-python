@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _read_ns_eeg(*args, **kwargs):
-    """
+    r"""
       READ_NS_EEG read a NeuroScan 3.x or 4.x EEG File  
          
         [eeg] = read_ns_eeg(filename, epoch)  
@@ -23,9 +23,12 @@ def _read_ns_eeg(*args, **kwargs):
           eeg.nsweeps     - number of accepted trials/sweeps  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/read_ns_eeg.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/fileio/private/read_ns_eeg.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("read_ns_eeg", *args, **kwargs)

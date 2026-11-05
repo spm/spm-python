@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_matrix(*args, **kwargs):
-    """
+    r"""
       Return an affine transformation matrix  
         FORMAT [A] = spm_matrix(P [,order])  
         P(1)  - x translation  
@@ -47,9 +47,12 @@ def spm_matrix(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/spm_matrix.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/spm_matrix.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_matrix", *args, **kwargs)

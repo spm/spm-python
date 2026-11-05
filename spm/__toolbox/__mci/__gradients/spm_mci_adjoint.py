@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_mci_adjoint(*args, **kwargs):
-    """
+    r"""
       Gradient of log joint from adjoint method   
         FORMAT [dLdp,g,x] = spm_mci_adjoint (Pr,M,U,Y)  
          
@@ -24,9 +24,12 @@ def spm_mci_adjoint(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/mci/gradients/spm_mci_adjoint.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/mci/gradients/spm_mci_adjoint.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_mci_adjoint", *args, **kwargs)

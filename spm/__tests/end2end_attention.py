@@ -2,14 +2,17 @@ from spm._runtime import Runtime
 
 
 def end2end_attention(*args, **kwargs):
-    """
+    r"""
       End-to-end test for attention dataset  
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/tests/end2end_attention.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/tests/end2end_attention.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("end2end_attention", *args, **kwargs)

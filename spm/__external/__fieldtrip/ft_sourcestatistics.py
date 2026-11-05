@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_sourcestatistics(*args, **kwargs):
-    """
+    r"""
       FT_SOURCESTATISTICS computes the probability for a given null-hypothesis using  
         a parametric statistical test or using a non-parametric randomization test.  
          
@@ -30,9 +30,12 @@ def ft_sourcestatistics(*args, **kwargs):
         FT_STATISTICS_MONTECARLO, FT_STATISTICS_ANALYTIC, FT_STATISTICS_CROSSVALIDATE, FT_STATISTICS_STATS  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/ft_sourcestatistics.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/ft_sourcestatistics.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_sourcestatistics", *args, **kwargs)

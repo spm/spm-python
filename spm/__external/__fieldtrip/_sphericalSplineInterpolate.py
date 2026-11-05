@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _sphericalSplineInterpolate(*args, **kwargs):
-    """
+    r"""
      interpolate matrix for spherical interpolation  
          
         W = sphericalSplineInterpolate(src,dest,lambda,order,type,tol)  
@@ -22,9 +22,12 @@ def _sphericalSplineInterpolate(*args, **kwargs):
         Based upon the paper: Perrin89  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/sphericalSplineInterpolate.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/private/sphericalSplineInterpolate.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("sphericalSplineInterpolate", *args, **kwargs)

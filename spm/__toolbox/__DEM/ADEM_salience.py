@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ADEM_salience(*args, **kwargs):
-    """
+    r"""
       Saccadic eye movements under active inference  
        __________________________________________________________________________  
         This demo illustrates exploration or visual search in terms of optimality  
@@ -23,9 +23,12 @@ def ADEM_salience(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DEM/ADEM_salience.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/DEM/ADEM_salience.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ADEM_salience", *args, **kwargs, nargout=0)

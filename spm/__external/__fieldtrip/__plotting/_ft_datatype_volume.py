@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _ft_datatype_volume(*args, **kwargs):
-    """
+    r"""
       FT_DATATYPE_VOLUME describes the FieldTrip MATLAB structure for volumetric data  
         such as an anatomical MRI.  
          
@@ -59,9 +59,12 @@ def _ft_datatype_volume(*args, **kwargs):
         See also FT_DATATYPE, FT_DATATYPE_DIP, FT_DATATYPE_SOURCE  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/plotting/private/ft_datatype_volume.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/plotting/private/ft_datatype_volume.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_datatype_volume", *args, **kwargs)

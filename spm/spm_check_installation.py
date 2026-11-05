@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_check_installation(*args, **kwargs):
-    """
+    r"""
       Check SPM installation  
         FORMAT spm_check_installation('basic')  
         Perform a superficial check of SPM installation [default].  
@@ -13,15 +13,19 @@ def spm_check_installation(*args, **kwargs):
         FORMAT rev = spm_check_installation('rev')  
         Return a lower bound of SPM SVN Revision number.  
           
+         
         FORMAT spm_check_installation('build')  
         Build signature of SPM distribution as used by 'full' option.  
         (for developers)  
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/spm_check_installation.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/spm_check_installation.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_check_installation", *args, **kwargs)

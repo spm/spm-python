@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _fourierspctrm2lcrsspctrm(*args, **kwargs):
-    """
+    r"""
       FOURIERSPCTRM2LCRSSPCTRM is a helper function that converts the input fourierspctrm  
         into a lagged crsspctrm, to enable computation of lagged coherence as described in  
         the publication referenced below. It is used in ft_connectivityanalysis in order to  
@@ -30,9 +30,12 @@ def _fourierspctrm2lcrsspctrm(*args, **kwargs):
         written the actual implementation.  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/fourierspctrm2lcrsspctrm.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/private/fourierspctrm2lcrsspctrm.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("fourierspctrm2lcrsspctrm", *args, **kwargs)

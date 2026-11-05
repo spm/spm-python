@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_ness_Sp2p(*args, **kwargs):
-    """
+    r"""
       Convert a density into polynomial potential parameters    
         FORMAT p = spm_ness_Sp2p(Sp,x,[K])  
        --------------------------------------------------------------------------  
@@ -14,9 +14,12 @@ def spm_ness_Sp2p(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/spm_ness_Sp2p.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/spm_ness_Sp2p.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_ness_Sp2p", *args, **kwargs)

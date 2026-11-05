@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _ReadHeader(*args, **kwargs):
-    """
+    r"""
       H = ReadHeader(fp)  
          
          Reads NSMA header, leaves file-read-location at end of header  
@@ -10,9 +10,12 @@ def _ReadHeader(*args, **kwargs):
          INPUT:  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/ReadHeader.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/fileio/private/ReadHeader.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ReadHeader", *args, **kwargs)

@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_kl_normald(*args, **kwargs):
-    """
+    r"""
       KL divergence between two Gaussians with, possibly, diagonal covariances  
         FORMAT [d] = spm_kl_normald(m_q,c_q,m_p,c_p)  
          
@@ -17,9 +17,12 @@ def spm_kl_normald(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/spm_kl_normald.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/spm_kl_normald.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_kl_normald", *args, **kwargs)

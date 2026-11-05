@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_get_orig_coord(*args, **kwargs):
-    """
+    r"""
       Determine corresponding co-ordinate in un-normalised image.  
         FORMAT orig_coord = get_orig_coord2(coord, matname,PU)  
         coord      - [x1 y1 z1 ; x2 y2 z2 ; etc] in MNI space (mm).  
@@ -19,9 +19,12 @@ def spm_get_orig_coord(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/OldNorm/spm_get_orig_coord.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/OldNorm/spm_get_orig_coord.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_get_orig_coord", *args, **kwargs)

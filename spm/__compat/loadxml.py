@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def loadxml(*args, **kwargs):
-    """
+    r"""
      LOADXML Load workspace variables from disk (XML file).  
          LOADXML FILENAME retrieves all variables from a file given a full   
          pathname or a MATLABPATH relative partial pathname (see PARTIALPATH).  
@@ -27,9 +27,12 @@ def loadxml(*args, **kwargs):
          See also LOAD, XML2MAT, XMLTREE.  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/compat/loadxml.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/compat/loadxml.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("loadxml", *args, **kwargs)

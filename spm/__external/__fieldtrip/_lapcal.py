@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _lapcal(*args, **kwargs):
-    """
+    r"""
       LAPCAL computes the finite difference approximation to the surface laplacian  
         matrix using a triangulation of the surface  
          
@@ -16,9 +16,12 @@ def _lapcal(*args, **kwargs):
         See also LAPINT, LAPINTMAT, READ_TRI, SAVE_TRI  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/lapcal.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/private/lapcal.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("lapcal", *args, **kwargs)

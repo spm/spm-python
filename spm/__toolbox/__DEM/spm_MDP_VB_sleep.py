@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_MDP_VB_sleep(*args, **kwargs):
-    """
+    r"""
       Bayesian model reduction (sleep) for MDP models  
         FORMAT [MDP] = spm_MDP_VB_sleep(MDP,BMR)  
          
@@ -12,7 +12,7 @@ def spm_MDP_VB_sleep(*args, **kwargs):
         BMR.o - outcomes - that induce REM [default: {}]  
         BMR.x - increase in concentration parameters for BMR [default: 8]  
         BMR.f - hidden factors to contract over [default: 0]  
-        BMR.T - log Bayes factor threshold [default: 2]  
+        BMR.T - log Bayes factor threshold [default: 0]  
          
         MDP  - (reduced) model structure: with reduced MDP.a  
          
@@ -40,9 +40,12 @@ def spm_MDP_VB_sleep(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DEM/spm_MDP_VB_sleep.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/DEM/spm_MDP_VB_sleep.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_MDP_VB_sleep", *args, **kwargs)

@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def bf_output_PLI(*args, **kwargs):
-    """
+    r"""
       Generate a montage for source extraction, projects the sources one by  
         one and computes phase lag index on the fly, which is written out with no  
         need to call bf_write. Only one VOI allowed, which can be a sphere or a  
@@ -15,9 +15,12 @@ def bf_output_PLI(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DAiSS/bf_output_PLI.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/DAiSS/bf_output_PLI.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("bf_output_PLI", *args, **kwargs)

@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_soreduce(*args, **kwargs):
-    """
+    r"""
       Reduction of a fully nonlinear MIMO system to second-order form  
         FORMAT [M0,M1,M2,L1,L2] = spm_soreduce(M,P);  
          
@@ -35,9 +35,12 @@ def spm_soreduce(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/spm_soreduce.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/spm_soreduce.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_soreduce", *args, **kwargs)

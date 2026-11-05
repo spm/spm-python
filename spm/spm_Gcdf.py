@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_Gcdf(*args, **kwargs):
-    """
+    r"""
       Cumulative Distribution Function (CDF) of Gamma distribution  
         FORMAT F = spm_Gcdf(x,h,l,tail)  
          
@@ -64,9 +64,12 @@ def spm_Gcdf(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/spm_Gcdf.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/spm_Gcdf.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_Gcdf", *args, **kwargs)

@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_eeg_inv_vbecd_getLF(*args, **kwargs):
-    """
+    r"""
       Estimation of the leadfield matrix and its spatial derivative if required   
         for a set of dipoles used in the VB-ECD solution  
         Scales non-eeg data up by a fixed factor (1e8) for compatibility of  
@@ -21,9 +21,12 @@ def spm_eeg_inv_vbecd_getLF(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/spm_eeg_inv_vbecd_getLF.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/spm_eeg_inv_vbecd_getLF.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_eeg_inv_vbecd_getLF", *args, **kwargs)

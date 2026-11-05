@@ -18,19 +18,37 @@ from .__connectivity import (
 from .data2bids import data2bids
 from .edf2fieldtrip import edf2fieldtrip
 from .__external import (
+    eeg_loadbvrf,
+    loadbvrf,
+    CalcMD5,
+    DataHash,
+    arrow,
+    base64decode,
+    base64encode,
+    icp,
+    keep,
+    pan_tompkin,
+    stlwrite,
+    subtightplot,
     uimage,
     uimagesc,
+    vtkwrite,
     rgb2hsv,
     boxcar,
+    dpss,
+    precompute_dpss,
     flattopwin,
     hanning,
     hilbert,
     binocdf,
     binopdf,
-    common_size,
+    knnsearch,
+    kurtosis,
     mvnrnd,
     nanvar,
+    pdist2,
     range_,
+    skewness,
     tcdf,
     tinv
 )
@@ -75,7 +93,6 @@ from .__fileio import (
     ft_write_tsv
 )
 from .__forward import (
-    ft_apply_montage,
     ft_compute_leadfield,
     ft_convert_units,
     ft_determine_units,
@@ -87,6 +104,7 @@ from .__forward import (
     ft_headmodel_duneuro,
     ft_headmodel_fns,
     ft_headmodel_halfspace,
+    ft_headmodel_hbf,
     ft_headmodel_infinite,
     ft_headmodel_interpolate,
     ft_headmodel_localspheres,
@@ -155,6 +173,7 @@ from .ft_dipolesimulation import ft_dipolesimulation
 from .ft_electrodeplacement import ft_electrodeplacement
 from .ft_electroderealign import ft_electroderealign
 from .ft_electrodermalactivity import ft_electrodermalactivity
+from .ft_electrodeselection import ft_electrodeselection
 from .ft_eventtiminganalysis import ft_eventtiminganalysis
 from .ft_examplefunction import ft_examplefunction
 from .ft_freqanalysis import ft_freqanalysis
@@ -205,6 +224,7 @@ from .ft_reproducescript import ft_reproducescript
 from .ft_resampledata import ft_resampledata
 from .ft_respiration import ft_respiration
 from .ft_scalpcurrentdensity import ft_scalpcurrentdensity
+from .ft_sensorplacement import ft_sensorplacement
 from .ft_singleplotER import ft_singleplotER
 from .ft_singleplotTFR import ft_singleplotTFR
 from .ft_sliceinterp import ft_sliceinterp
@@ -263,6 +283,7 @@ from .loreta2fieldtrip import loreta2fieldtrip
 from .nutmeg2fieldtrip import nutmeg2fieldtrip
 from .__plotting import (
     ft_colormap,
+    ft_headlight,
     ft_plot_axes,
     ft_plot_box,
     ft_plot_cloud,
@@ -328,8 +349,10 @@ from .__specest import (
 )
 from .spm2fieldtrip import spm2fieldtrip
 from .__src import (
+    combineClusters,
     det2x2,
     det3x3,
+    ft_getopt,
     getpid,
     inv2x2,
     inv3x3,
@@ -340,6 +363,7 @@ from .__src import (
     mtimes3x3,
     mxDeserialize,
     mxSerialize,
+    nanvar,
     plgndr,
     plinproj,
     ptriproj,
@@ -397,6 +421,7 @@ from .__utilities import (
     copyfields,
     dccnpath,
     ft_affinecoordinates,
+    ft_apply_montage,
     ft_average_sens,
     ft_cfg2keyval,
     ft_channelcombination,
@@ -422,6 +447,7 @@ from .__utilities import (
     ft_datatype_timelock,
     ft_datatype_volume,
     ft_debug,
+    ft_deleteopt,
     ft_determine_coordsys,
     ft_documentationconfiguration,
     ft_documentationreference,
@@ -435,6 +461,7 @@ from .__utilities import (
     ft_hastoolbox,
     ft_headcoordinates,
     ft_info,
+    ft_inverse_montage,
     ft_keyval2cfg,
     ft_notice,
     ft_platform_supports,
@@ -508,19 +535,37 @@ __all__ = [
     "ft_connectivity_wpli",
     "data2bids",
     "edf2fieldtrip",
+    "eeg_loadbvrf",
+    "loadbvrf",
+    "CalcMD5",
+    "DataHash",
+    "arrow",
+    "base64decode",
+    "base64encode",
+    "icp",
+    "keep",
+    "pan_tompkin",
+    "stlwrite",
+    "subtightplot",
     "uimage",
     "uimagesc",
+    "vtkwrite",
     "rgb2hsv",
     "boxcar",
+    "dpss",
+    "precompute_dpss",
     "flattopwin",
     "hanning",
     "hilbert",
     "binocdf",
     "binopdf",
-    "common_size",
+    "knnsearch",
+    "kurtosis",
     "mvnrnd",
     "nanvar",
+    "pdist2",
     "range_",
+    "skewness",
     "tcdf",
     "tinv",
     "fieldtrip2besa",
@@ -561,7 +606,6 @@ __all__ = [
     "ft_write_sens",
     "ft_write_spike",
     "ft_write_tsv",
-    "ft_apply_montage",
     "ft_compute_leadfield",
     "ft_convert_units",
     "ft_determine_units",
@@ -573,6 +617,7 @@ __all__ = [
     "ft_headmodel_duneuro",
     "ft_headmodel_fns",
     "ft_headmodel_halfspace",
+    "ft_headmodel_hbf",
     "ft_headmodel_infinite",
     "ft_headmodel_interpolate",
     "ft_headmodel_localspheres",
@@ -640,6 +685,7 @@ __all__ = [
     "ft_electrodeplacement",
     "ft_electroderealign",
     "ft_electrodermalactivity",
+    "ft_electrodeselection",
     "ft_eventtiminganalysis",
     "ft_examplefunction",
     "ft_freqanalysis",
@@ -690,6 +736,7 @@ __all__ = [
     "ft_resampledata",
     "ft_respiration",
     "ft_scalpcurrentdensity",
+    "ft_sensorplacement",
     "ft_singleplotER",
     "ft_singleplotTFR",
     "ft_sliceinterp",
@@ -745,6 +792,7 @@ __all__ = [
     "loreta2fieldtrip",
     "nutmeg2fieldtrip",
     "ft_colormap",
+    "ft_headlight",
     "ft_plot_axes",
     "ft_plot_box",
     "ft_plot_cloud",
@@ -804,8 +852,10 @@ __all__ = [
     "ft_specest_tfr",
     "ft_specest_wavelet",
     "spm2fieldtrip",
+    "combineClusters",
     "det2x2",
     "det3x3",
+    "ft_getopt",
     "getpid",
     "inv2x2",
     "inv3x3",
@@ -816,6 +866,7 @@ __all__ = [
     "mtimes3x3",
     "mxDeserialize",
     "mxSerialize",
+    "nanvar",
     "plgndr",
     "plinproj",
     "ptriproj",
@@ -867,6 +918,7 @@ __all__ = [
     "copyfields",
     "dccnpath",
     "ft_affinecoordinates",
+    "ft_apply_montage",
     "ft_average_sens",
     "ft_cfg2keyval",
     "ft_channelcombination",
@@ -892,6 +944,7 @@ __all__ = [
     "ft_datatype_timelock",
     "ft_datatype_volume",
     "ft_debug",
+    "ft_deleteopt",
     "ft_determine_coordsys",
     "ft_documentationconfiguration",
     "ft_documentationreference",
@@ -905,6 +958,7 @@ __all__ = [
     "ft_hastoolbox",
     "ft_headcoordinates",
     "ft_info",
+    "ft_inverse_montage",
     "ft_keyval2cfg",
     "ft_notice",
     "ft_platform_supports",

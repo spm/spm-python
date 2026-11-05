@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _homer2opto(*args, **kwargs):
-    """
+    r"""
       HOMER2OPTO converts the Homer SD structure to a FieldTrip optode structure  
          
         See https://www.nitrc.org/plugins/mwiki/index.php/homer2:Homer_Input_Files#NIRS_data_file_format  
@@ -25,9 +25,12 @@ def _homer2opto(*args, **kwargs):
         See also OPTO2HOMER, BTI2GRAD, CTF2GRAD, FIF2GRAD, ITAB2GRAD, MNE2GRAD, NETMEG2GRAD, YOKOGAWA2GRAD, FT_DATATYPE_SENS  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/homer2opto.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/private/homer2opto.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("homer2opto", *args, **kwargs)

@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_prep2sn(*args, **kwargs):
-    """
+    r"""
       Convert the output from spm_preproc into an sn.mat file  
         FORMAT [po,pin] = spm_prep2sn(p)  
         p   - the results of spm_preproc  
@@ -14,9 +14,12 @@ def spm_prep2sn(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/OldSeg/spm_prep2sn.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/OldSeg/spm_prep2sn.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_prep2sn", *args, **kwargs)

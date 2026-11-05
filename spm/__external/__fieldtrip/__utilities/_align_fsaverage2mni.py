@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _align_fsaverage2mni(*args, **kwargs):
-    """
+    r"""
       ALIGN_FSAVERAGE2MNI performs an affine alignment of the anatomical volume from  
         FSAVERAGE towards MNI coordinates. Only the homogeneous transformation matrix is  
         modified and the coordsys-field is updated.  
@@ -19,9 +19,12 @@ def _align_fsaverage2mni(*args, **kwargs):
         See also ALIGN_CTF2ACPC, ALIGN_NEUROMAG2ACPC  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/utilities/private/align_fsaverage2mni.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/utilities/private/align_fsaverage2mni.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("align_fsaverage2mni", *args, **kwargs)

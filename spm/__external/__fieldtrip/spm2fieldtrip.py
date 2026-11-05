@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm2fieldtrip(*args, **kwargs):
-    """
+    r"""
       SPM2FIELDTRIP converts an SPM8 meeg object into a FieldTrip raw data structure  
          
         Use as  
@@ -14,9 +14,12 @@ def spm2fieldtrip(*args, **kwargs):
         See also FT_PREPROCESSING, SPM_EEG_LOAD  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/spm2fieldtrip.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/spm2fieldtrip.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm2fieldtrip", *args, **kwargs)

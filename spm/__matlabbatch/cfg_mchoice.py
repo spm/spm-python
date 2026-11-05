@@ -4,7 +4,7 @@ from spm._runtime import Runtime, RuntimeMixin
 
 class cfg_mchoice(RuntimeMixin, MatlabClass):
     def __init__(self, *args, **kwargs):
-        """
+        r"""
           This is the choice configuration item class  
              
             Data structure  
@@ -55,15 +55,18 @@ class cfg_mchoice(RuntimeMixin, MatlabClass):
             
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/matlabbatch/@cfg_mchoice/cfg_mchoice.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/matlabbatch/@cfg_mchoice/cfg_mchoice.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         super().__init__()
 
     def all_leafs(self, *args, **kwargs):
-        """
+        r"""
           function ok = all_leafs(item)  
             Return true, if all child items in item.val{:} consist of subtrees  
             ending in leaf nodes. Leaf nodes do not have to be set at this time and  
@@ -77,15 +80,18 @@ class cfg_mchoice(RuntimeMixin, MatlabClass):
             Copyright (C) 2007 Freiburg Brain Imaging  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/matlabbatch/@cfg_mchoice/all_leafs.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/matlabbatch/@cfg_mchoice/all_leafs.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("all_leafs", self._as_matlab_object(), *args, **kwargs)
 
     def all_set(self, *args, **kwargs):
-        """
+        r"""
           function ok = all_set(item)  
             Return true, if all child items in item.val{:} are set and item specific  
             criteria (i.e. number of element in .val) are met. No checks based on  
@@ -105,15 +111,18 @@ class cfg_mchoice(RuntimeMixin, MatlabClass):
             Copyright (C) 2007 Freiburg Brain Imaging  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/matlabbatch/@cfg_mchoice/all_set.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/matlabbatch/@cfg_mchoice/all_set.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("all_set", self._as_matlab_object(), *args, **kwargs)
 
     def all_set_item(self, *args, **kwargs):
-        """
+        r"""
           function ok = all_set_item(item)  
             Perform within-item all_set check. For mchoices, this is always true.  
              
@@ -124,15 +133,18 @@ class cfg_mchoice(RuntimeMixin, MatlabClass):
             Copyright (C) 2007 Freiburg Brain Imaging  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/matlabbatch/@cfg_mchoice/all_set_item.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/matlabbatch/@cfg_mchoice/all_set_item.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("all_set_item", self._as_matlab_object(), *args, **kwargs)
 
     def cfg2jobsubs(self, *args, **kwargs):
-        """
+        r"""
           function jsubs = cfg2jobsubs(item, subs)  
             Return the subscript into the job tree for a given subscript vector into  
             the val part of the cfg tree. In a cfg_choice, this is a struct reference  
@@ -145,15 +157,18 @@ class cfg_mchoice(RuntimeMixin, MatlabClass):
             Copyright (C) 2007 Freiburg Brain Imaging  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/matlabbatch/@cfg_mchoice/cfg2jobsubs.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/matlabbatch/@cfg_mchoice/cfg2jobsubs.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("cfg2jobsubs", self._as_matlab_object(), *args, **kwargs)
 
     def cfg2struct(self, *args, **kwargs):
-        """
+        r"""
           function sitem = cfg2struct(item)  
             Return a struct containing all fields of item plus a field type. This is  
             the method suitable for cfg_choice and repeat classes. It descends down  
@@ -166,15 +181,18 @@ class cfg_mchoice(RuntimeMixin, MatlabClass):
             Copyright (C) 2007 Freiburg Brain Imaging  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/matlabbatch/@cfg_mchoice/cfg2struct.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/matlabbatch/@cfg_mchoice/cfg2struct.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("cfg2struct", self._as_matlab_object(), *args, **kwargs)
 
     def checksubs_job(self, *args, **kwargs):
-        """
+        r"""
           function [sts vind] = checksubs_job(item, subs, dflag)  
             Check whether a subscript reference is a valid reference in a job  
             structure starting at item. subs(1) should have a subscript type of  
@@ -190,15 +208,18 @@ class cfg_mchoice(RuntimeMixin, MatlabClass):
             Copyright (C) 2007 Freiburg Brain Imaging  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/matlabbatch/@cfg_mchoice/checksubs_job.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/matlabbatch/@cfg_mchoice/checksubs_job.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("checksubs_job", self._as_matlab_object(), *args, **kwargs)
 
     def clearval(self, *args, **kwargs):
-        """
+        r"""
           function item = clearval(item, dflag)  
             Clear val field, thereby removing the currently selected configuration  
             subtree. If dflag is set, then also all val fields in the item.values{:}  
@@ -212,15 +233,18 @@ class cfg_mchoice(RuntimeMixin, MatlabClass):
             Copyright (C) 2007 Freiburg Brain Imaging  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/matlabbatch/@cfg_mchoice/clearval.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/matlabbatch/@cfg_mchoice/clearval.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("clearval", self._as_matlab_object(), *args, **kwargs)
 
     def expand(self, *args, **kwargs):
-        """
+        r"""
           function [item, sts] = expand(item, eflag, tropts)  
             Set/query expanded flag of item depending on eflag:  
             -1 - do not force eflag to any state, only child state will be inherited  
@@ -255,15 +279,18 @@ class cfg_mchoice(RuntimeMixin, MatlabClass):
             Copyright (C) 2007 Freiburg Brain Imaging  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/matlabbatch/@cfg_mchoice/expand.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/matlabbatch/@cfg_mchoice/expand.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("expand", self._as_matlab_object(), *args, **kwargs)
 
     def fieldnames(self, *args, **kwargs):
-        """
+        r"""
           function fn = fieldnames(item)  
             Return a list of all (inherited and non-inherited) field names.  
              
@@ -274,15 +301,18 @@ class cfg_mchoice(RuntimeMixin, MatlabClass):
             Copyright (C) 2007 Freiburg Brain Imaging  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/matlabbatch/@cfg_mchoice/fieldnames.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/matlabbatch/@cfg_mchoice/fieldnames.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("fieldnames", self._as_matlab_object(), *args, **kwargs)
 
     def fillvals(self, *args, **kwargs):
-        """
+        r"""
           function [item, inputs] = fillvals(item, inputs, infcn)  
             If ~all_set_item, try to set item.val to the items listed in inputs{1}.  
             inputs{1} should be a cell array of indices into item.values. For  
@@ -302,15 +332,18 @@ class cfg_mchoice(RuntimeMixin, MatlabClass):
             Copyright (C) 2007 Freiburg Brain Imaging  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/matlabbatch/@cfg_mchoice/fillvals.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/matlabbatch/@cfg_mchoice/fillvals.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("fillvals", self._as_matlab_object(), *args, **kwargs)
 
     def gencode_item(self, *args, **kwargs):
-        """
+        r"""
           function [str, tag, cind, ccnt] = gencode_item(item, tag, tagctx, stoptag, tropts)  
             Generate code to recreate a cfg_(m)choice item. This code does not deal with  
             arrays of cfg_items, such a configuration should not exist with the  
@@ -336,15 +369,18 @@ class cfg_mchoice(RuntimeMixin, MatlabClass):
             Copyright (C) 2007 Freiburg Brain Imaging  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/matlabbatch/@cfg_mchoice/gencode_item.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/matlabbatch/@cfg_mchoice/gencode_item.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("gencode_item", self._as_matlab_object(), *args, **kwargs)
 
     def harvest(self, *args, **kwargs):
-        """
+        r"""
           function [tag, val, typ, dep, chk, cj] = harvest(item, cj, dflag, rflag)  
             Harvest a cfg_branch object.  
             Input arguments:  
@@ -371,15 +407,18 @@ class cfg_mchoice(RuntimeMixin, MatlabClass):
             Copyright (C) 2007 Freiburg Brain Imaging  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/matlabbatch/@cfg_mchoice/harvest.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/matlabbatch/@cfg_mchoice/harvest.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("harvest", self._as_matlab_object(), *args, **kwargs)
 
     def initialise(self, *args, **kwargs):
-        """
+        r"""
           function item = initialise(item, val, dflag)  
             Initialise a configuration tree with values. If val is a job  
             struct/cell, only the parts of the configuration that are present in  
@@ -401,15 +440,18 @@ class cfg_mchoice(RuntimeMixin, MatlabClass):
             Copyright (C) 2007 Freiburg Brain Imaging  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/matlabbatch/@cfg_mchoice/initialise.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/matlabbatch/@cfg_mchoice/initialise.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("initialise", self._as_matlab_object(), *args, **kwargs)
 
     def list_(self, *args, **kwargs):
-        """
+        r"""
           function [id, stop, val] = list(item, spec, tropts, fn)  
             Find items in a cfg tree rooted at item that match a specification spec.  
             By default, the filled configuration tree is searched (i.e. the  
@@ -462,15 +504,18 @@ class cfg_mchoice(RuntimeMixin, MatlabClass):
             Copyright (C) 2007 Freiburg Brain Imaging  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/matlabbatch/@cfg_mchoice/list.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/matlabbatch/@cfg_mchoice/list.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("list", self._as_matlab_object(), *args, **kwargs)
 
     def setval(self, *args, **kwargs):
-        """
+        r"""
           function item = setval(item, val, dflag)  
             If isempty(val), set item.val to {}. Otherwise, if item.values{val(1)}  
             is not already in item.val, set item.val{end+1} to item.values{val(1)}.  
@@ -485,15 +530,18 @@ class cfg_mchoice(RuntimeMixin, MatlabClass):
             Copyright (C) 2007 Freiburg Brain Imaging  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/matlabbatch/@cfg_mchoice/setval.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/matlabbatch/@cfg_mchoice/setval.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("setval", self._as_matlab_object(), *args, **kwargs)
 
     def showdetail(self, *args, **kwargs):
-        """
+        r"""
           function str = showdetail(item)  
             Display details for a cfg_choice and all of its options.  
              
@@ -504,15 +552,18 @@ class cfg_mchoice(RuntimeMixin, MatlabClass):
             Copyright (C) 2007 Freiburg Brain Imaging  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/matlabbatch/@cfg_mchoice/showdetail.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/matlabbatch/@cfg_mchoice/showdetail.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("showdetail", self._as_matlab_object(), *args, **kwargs)
 
     def showdoc(self, *args, **kwargs):
-        """
+        r"""
           function str = showdoc(item, indent)  
             Display help text for a cfg item and all of its options.  
              
@@ -525,15 +576,18 @@ class cfg_mchoice(RuntimeMixin, MatlabClass):
             Copyright (C) 2007 Freiburg Brain Imaging  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/matlabbatch/@cfg_mchoice/showdoc.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/matlabbatch/@cfg_mchoice/showdoc.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("showdoc", self._as_matlab_object(), *args, **kwargs)
 
     def showmydoc(self, *args, **kwargs):
-        """
+        r"""
           function str = showmydoc(item, indent)  
             Display help text for a cfg_choice and all of its options, without  
             recursive calls to child nodes.  
@@ -545,15 +599,18 @@ class cfg_mchoice(RuntimeMixin, MatlabClass):
             Copyright (C) 2007 Freiburg Brain Imaging  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/matlabbatch/@cfg_mchoice/showmydoc.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/matlabbatch/@cfg_mchoice/showmydoc.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("showmydoc", self._as_matlab_object(), *args, **kwargs)
 
     def subs_fields(self, *args, **kwargs):
-        """
+        r"""
           function fnames = subs_fields(item)  
             This function works as a "class-based switch" to return the value of  
             the private mysubs_fields function for the appropriate class.   
@@ -568,15 +625,18 @@ class cfg_mchoice(RuntimeMixin, MatlabClass):
             Copyright (C) 2007 Freiburg Brain Imaging  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/matlabbatch/@cfg_mchoice/subs_fields.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/matlabbatch/@cfg_mchoice/subs_fields.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("subs_fields", self._as_matlab_object(), *args, **kwargs)
 
     def subsasgn(self, *args, **kwargs):
-        """
+        r"""
           function item = subsasgn(item, subs, varargin)  
             This function implements subsasgn for all classes derived from cfg_item.  
             It relies on the capability of each class constructor to re-classify a  
@@ -609,15 +669,18 @@ class cfg_mchoice(RuntimeMixin, MatlabClass):
             Copyright (C) 2007 Freiburg Brain Imaging  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/matlabbatch/@cfg_mchoice/subsasgn.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/matlabbatch/@cfg_mchoice/subsasgn.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("subsasgn", self._as_matlab_object(), *args, **kwargs)
 
     def subsasgn_check(self, *args, **kwargs):
-        """
+        r"""
           function [sts, val] = subsasgn_check(item,subs,val)  
             Check assignments to item.values and item.val.   
              
@@ -628,15 +691,18 @@ class cfg_mchoice(RuntimeMixin, MatlabClass):
             Copyright (C) 2007 Freiburg Brain Imaging  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/matlabbatch/@cfg_mchoice/subsasgn_check.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/matlabbatch/@cfg_mchoice/subsasgn_check.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("subsasgn_check", self._as_matlab_object(), *args, **kwargs)
 
     def subsasgn_job(self, *args, **kwargs):
-        """
+        r"""
           function item = subsasgn_job(item, subs, val)  
             Treat a subscript reference as a reference in a job structure instead  
             of a cfg_item structure. If subs is empty, then the subtree  
@@ -653,15 +719,18 @@ class cfg_mchoice(RuntimeMixin, MatlabClass):
             Copyright (C) 2007 Freiburg Brain Imaging  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/matlabbatch/@cfg_mchoice/subsasgn_job.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/matlabbatch/@cfg_mchoice/subsasgn_job.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("subsasgn_job", self._as_matlab_object(), *args, **kwargs)
 
     def subsref(self, *args, **kwargs):
-        """
+        r"""
           function varargout = subsref(item, subs)  
             subscript references we have to deal with are:  
             one level  
@@ -685,15 +754,18 @@ class cfg_mchoice(RuntimeMixin, MatlabClass):
             Copyright (C) 2007 Freiburg Brain Imaging  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/matlabbatch/@cfg_mchoice/subsref.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/matlabbatch/@cfg_mchoice/subsref.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("subsref", self._as_matlab_object(), *args, **kwargs)
 
     def subsref_job(self, *args, **kwargs):
-        """
+        r"""
           function [ritem varargout] = subsref_job(item, subs, c0)  
             Treat a subscript reference as a reference in a job structure instead  
             of a cfg_item structure. If subs is empty, then the harvested subtree  
@@ -713,15 +785,18 @@ class cfg_mchoice(RuntimeMixin, MatlabClass):
             Copyright (C) 2007 Freiburg Brain Imaging  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/matlabbatch/@cfg_mchoice/subsref_job.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/matlabbatch/@cfg_mchoice/subsref_job.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("subsref_job", self._as_matlab_object(), *args, **kwargs)
 
     def tag2cfgsubs(self, *args, **kwargs):
-        """
+        r"""
           function [id, stop, rtaglist] = tag2cfgsubs(item, taglist, finalspec, tropts)  
             Return the index into the values branch of a configuration tree which  
             corresponds to a list of tags.   
@@ -745,15 +820,18 @@ class cfg_mchoice(RuntimeMixin, MatlabClass):
             Copyright (C) 2007 Freiburg Brain Imaging  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/matlabbatch/@cfg_mchoice/tag2cfgsubs.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/matlabbatch/@cfg_mchoice/tag2cfgsubs.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("tag2cfgsubs", self._as_matlab_object(), *args, **kwargs)
 
     def tagnames(self, *args, **kwargs):
-        """
+        r"""
           function tn = tagnames(item, dflag)  
             Return the tags of all children in the job tree of an item. dflag  
             indicates whether the filled (false) or defaults (true) part of the  
@@ -769,15 +847,18 @@ class cfg_mchoice(RuntimeMixin, MatlabClass):
             Copyright (C) 2007 Freiburg Brain Imaging  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/matlabbatch/@cfg_mchoice/tagnames.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/matlabbatch/@cfg_mchoice/tagnames.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("tagnames", self._as_matlab_object(), *args, **kwargs)
 
     def treepart(self, *args, **kwargs):
-        """
+        r"""
           function tname = treepart(item, dflag)  
             tree part to search - for cfg_repeat/cfg_choice this is val for filled  
             cfg_items and values for default cfg_items.  
@@ -789,15 +870,18 @@ class cfg_mchoice(RuntimeMixin, MatlabClass):
             Copyright (C) 2007 Freiburg Brain Imaging  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/matlabbatch/@cfg_mchoice/treepart.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/matlabbatch/@cfg_mchoice/treepart.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("treepart", self._as_matlab_object(), *args, **kwargs)
 
     def update_deps(self, *args, **kwargs):
-        """
+        r"""
           function item = update_deps(item, varargin)  
             This function will run cfg_dep/update_deps in all leaf (cfg_entry,  
             cfg_menu, cfg_files) nodes of a configuration tree and update their  
@@ -812,15 +896,18 @@ class cfg_mchoice(RuntimeMixin, MatlabClass):
             Copyright (C) 2007 Freiburg Brain Imaging  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/matlabbatch/@cfg_mchoice/update_deps.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/matlabbatch/@cfg_mchoice/update_deps.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("update_deps", self._as_matlab_object(), *args, **kwargs)
 
     def val2def(self, *args, **kwargs):
-        """
+        r"""
           function [item, defaults] = val2def(item, defaults, funname, deftag)  
             If a cfg_leaf item has a value, extract it and generate code for defaults  
             retrieval. This function works in a way similar to harvest, but with a  
@@ -837,15 +924,18 @@ class cfg_mchoice(RuntimeMixin, MatlabClass):
             Copyright (C) 2007 Freiburg Brain Imaging  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/matlabbatch/@cfg_mchoice/val2def.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/matlabbatch/@cfg_mchoice/val2def.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("val2def", self._as_matlab_object(), *args, **kwargs)
 
     def _mysubs_fields(self, *args, **kwargs):
-        """
+        r"""
           function [fnames, defaults] = mysubs_fields  
             Additional fields for class cfg_choice. See help of  
             @cfg_item/subs_fields for general help about this function.  
@@ -857,9 +947,12 @@ class cfg_mchoice(RuntimeMixin, MatlabClass):
             Copyright (C) 2007 Freiburg Brain Imaging  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/matlabbatch/@cfg_mchoice/private/mysubs_fields.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/matlabbatch/@cfg_mchoice/private/mysubs_fields.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("mysubs_fields", self._as_matlab_object(), *args, **kwargs)

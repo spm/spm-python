@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _getorthoviewpos(*args, **kwargs):
-    """
+    r"""
       GETORTHOVIEWPOS obtains the orthographic projections of 3D positions  
         based on a given coordinate system and viewpoint  
          
@@ -15,9 +15,12 @@ def _getorthoviewpos(*args, **kwargs):
         See alo SETVIEWPOINT, COORDSYS2LABEL  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/getorthoviewpos.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/private/getorthoviewpos.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("getorthoviewpos", *args, **kwargs)

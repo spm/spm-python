@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_layoutplot(*args, **kwargs):
-    """
+    r"""
       FT_LAYOUTPLOT makes a figure with the 2-D layout of the channel positions  
         for topoplotting and the individual channel axes (i.e. width and height  
         of the subfigures) for multiplotting. A correct 2-D layout is a  
@@ -58,9 +58,12 @@ def ft_layoutplot(*args, **kwargs):
         See also FT_PREPARE_LAYOUT, FT_TOPOPLOTER, FT_TOPOPLOTTFR, FT_MULTIPLOTER, FT_MULTIPLOTTFR  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/ft_layoutplot.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/ft_layoutplot.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_layoutplot", *args, **kwargs)

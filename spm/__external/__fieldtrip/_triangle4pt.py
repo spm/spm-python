@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _triangle4pt(*args, **kwargs):
-    """
+    r"""
       TRIANGLE4PNT takes the volume model and estimates the 4th point of each  
         triangle of each mesh.  
          
@@ -41,9 +41,12 @@ def _triangle4pt(*args, **kwargs):
         $Id$  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/triangle4pt.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/private/triangle4pt.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("triangle4pt", *args, **kwargs)

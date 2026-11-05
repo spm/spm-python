@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_x_mfm_NMDA(*args, **kwargs):
-    """
+    r"""
       initialises a state structure for a mean field model  
         FORMAT [x,M] = spm_x_mfm_NMDA(P)  
          
@@ -26,9 +26,12 @@ def spm_x_mfm_NMDA(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/Neural_Models/NMDA_NMM_MFM/spm_x_mfm_NMDA.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/Neural_Models/NMDA_NMM_MFM/spm_x_mfm_NMDA.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_x_mfm_NMDA", *args, **kwargs)

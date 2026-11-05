@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _inifile(*args, **kwargs):
-    """
+    r"""
      readsett = INIFILE(fileName,operation,keys,style)  
           Creates, reads, or writes data from/to ini (ascii) file.  
          
@@ -60,9 +60,12 @@ def _inifile(*args, **kwargs):
           are used, at least Matlab 6.5 should be used.  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/inifile.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/fileio/private/inifile.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("inifile", *args, **kwargs)

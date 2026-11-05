@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_plot_text(*args, **kwargs):
-    """
+    r"""
       FT_PLOT_TEXT helper function for plotting text, which can also be used in  
         combination with the multiple channel layout display in FieldTrip.  
          
@@ -21,7 +21,7 @@ def ft_plot_text(*args, **kwargs):
           'rotation'            =  
           'tag'                 = string, the tag assigned to the plotted elements (default = '')  
          
-        It is possible to plot the object in a local pseudo-axis (c.f. subplot), which is specfied as follows  
+        It is possible to plot the object in a local pseudo-axis (c.f. subplot), which is specified as follows  
           'hpos'                = horizontal position of the center of the local axes  
           'vpos'                = vertical position of the center of the local axes  
           'width'               = width of the local axes  
@@ -38,9 +38,12 @@ def ft_plot_text(*args, **kwargs):
         See also FT_PLOT_VECTOR, FT_PLOT_MATRIX, FT_PLOT_LINE, FT_PLOT_BOX  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/plotting/ft_plot_text.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/plotting/ft_plot_text.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_plot_text", *args, **kwargs)

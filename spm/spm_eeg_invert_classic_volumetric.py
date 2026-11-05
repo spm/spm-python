@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_eeg_invert_classic_volumetric(*args, **kwargs):
-    """
+    r"""
       Volumetric multiple sparse priors  
         This version only handles single subject single modality data; the removal  
         of many scaling factors makes it easier to compare between forward models  
@@ -71,9 +71,12 @@ def spm_eeg_invert_classic_volumetric(*args, **kwargs):
         a Beamforming prior : inversion type 'EBB'.  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/spm_eeg_invert_classic_volumetric.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/spm_eeg_invert_classic_volumetric.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_eeg_invert_classic_volumetric", *args, **kwargs)

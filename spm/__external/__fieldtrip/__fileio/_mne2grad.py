@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _mne2grad(*args, **kwargs):
-    """
+    r"""
       MNE2GRAD converts a header from a fif file that was read using the MNE toolbox into  
         a gradiometer structure that can be understood by the FieldTrip low-level forward  
         and inverse routines.  
@@ -17,9 +17,12 @@ def _mne2grad(*args, **kwargs):
         See also CTF2GRAD, BTI2GRAD  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/mne2grad.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/fileio/private/mne2grad.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("mne2grad", *args, **kwargs)

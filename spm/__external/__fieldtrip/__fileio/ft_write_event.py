@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_write_event(*args, **kwargs):
-    """
+    r"""
       FT_WRITE_EVENT writes an event structure to a file, a message daemon listening on a  
         network socked, or to another computer connected through the serial port. Note that  
         this function is mostly for real-time streaming of events. For most data files on  
@@ -40,9 +40,12 @@ def ft_write_event(*args, **kwargs):
         See also FT_READ_HEADER, FT_READ_DATA, FT_READ_EVENT, FT_WRITE_DATA  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/ft_write_event.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/fileio/ft_write_event.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_write_event", *args, **kwargs, nargout=0)

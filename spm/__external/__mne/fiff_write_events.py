@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def fiff_write_events(*args, **kwargs):
-    """
+    r"""
        
         fiff_write_events(filename,eventlist,mappings)  
          
@@ -14,9 +14,12 @@ def fiff_write_events(*args, **kwargs):
         an open (for writing) fif-file.  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/mne/fiff_write_events.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/mne/fiff_write_events.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("fiff_write_events", *args, **kwargs, nargout=0)

@@ -2,12 +2,16 @@ from spm._runtime import Runtime
 
 
 def ft_statistics_montecarlo(*args, **kwargs):
-    """
+    r"""
       FT_STATISTICS_MONTECARLO performs a nonparametric statistical test by calculating  
         Monte-Carlo estimates of the significance probabilities and/or critical values from  
-        the permutation distribution. This function should not be called directly, instead  
-        you should call the function that is associated with the type of data on which you  
-        want to perform the test.  
+        the permutation distribution. It is not recommended to call this function directly,  
+        but instead you should call the function that is associated with the type of data on   
+        which you want to perform the test. This is because important data bookkeeping   
+        operations on the data are performed in the higher-level functions, which are  
+        assumed to have been handled correctly for the input arguments into this function.   
+        Also, notably, a prespecified randomseed in the cfg is handled in the higher  
+        level function, not here.  
          
         Use as  
           stat = ft_timelockstatistics(cfg, data1, data2, data3, ...)  
@@ -17,7 +21,7 @@ def ft_statistics_montecarlo(*args, **kwargs):
         where the data is obtained from FT_TIMELOCKANALYSIS, FT_FREQANALYSIS or  
         FT_SOURCEANALYSIS respectively, or from FT_TIMELOCKGRANDAVERAGE,  
         FT_FREQGRANDAVERAGE or FT_SOURCEGRANDAVERAGE respectively   
-        and with cfg.method = 'montecarlo'  
+        and with cfg.method = 'montecarlo'.   
          
         The configuration options that can be specified are:  
           cfg.numrandomization = number of randomizations, can be 'all'  
@@ -30,7 +34,11 @@ def ft_statistics_montecarlo(*args, **kwargs):
           cfg.wvar             = number or list with indices, within-cell variable(s)  
           cfg.cvar             = number or list with indices, control variable(s)  
           cfg.feedback         = string, 'gui', 'text', 'textbar' or 'no' (default = 'text')  
-          cfg.randomseed       = string, 'yes', 'no' or a number (default = 'yes')  
+          cfg.randomseed       = string, 'yes', 'no' or a number (default = 'yes'), this option is not used in this   
+                                   function directly, but is handled by ft_<something>statistics. If you want to control  
+                                   the random number generator while calling ft_statistics_montecarlo directly, it should   
+                                   be specified on the command line (or in the caller script) just prior to calling this  
+                                   function.  
          
         If you use a cluster-based statistic, you can specify the following options that  
         determine how the single-sample or single-voxel statistics will be thresholded and  
@@ -73,9 +81,12 @@ def ft_statistics_montecarlo(*args, **kwargs):
         FT_STATISTICS_CROSSVALIDATE  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/ft_statistics_montecarlo.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/ft_statistics_montecarlo.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_statistics_montecarlo", *args, **kwargs)

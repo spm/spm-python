@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_channelselection(*args, **kwargs):
-    """
+    r"""
       FT_CHANNELSELECTION makes a selection of EEG and/or MEG channel labels. This  
         function translates the user-specified list of channels into channel labels as they  
         occur in the data. This channel selection procedure can be used throughout  
@@ -54,9 +54,12 @@ def ft_channelselection(*args, **kwargs):
         FT_SINGLEPLOTER, FT_SINGLEPLOTTFR  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/utilities/ft_channelselection.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/utilities/ft_channelselection.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_channelselection", *args, **kwargs)

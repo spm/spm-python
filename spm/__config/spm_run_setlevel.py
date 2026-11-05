@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_run_setlevel(*args, **kwargs):
-    """
+    r"""
       out = spm_run_setlevel(job)  
         test to see how likely it is that an SPM statistical image is a random field.  
         based on:  
@@ -11,9 +11,12 @@ def spm_run_setlevel(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/config/spm_run_setlevel.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/config/spm_run_setlevel.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_run_setlevel", *args, **kwargs)

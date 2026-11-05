@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def DEM_demo_face_inference(*args, **kwargs):
-    """
+    r"""
       Recognising facial expressions: This demo uses the linear convolution  
         model with two hidden states and one cause to generate coefficients of  
         visual basis functions that produce a moving face. The basis functions are  
@@ -21,9 +21,12 @@ def DEM_demo_face_inference(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DEM/DEM_demo_face_inference.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/DEM/DEM_demo_face_inference.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("DEM_demo_face_inference", *args, **kwargs, nargout=0)

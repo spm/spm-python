@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_preproc_hilbert(*args, **kwargs):
-    """
+    r"""
       FT_PREPROC_HILBERT computes the Hilbert transform of the data and optionally  
         performs post-processing on the complex representation, e.g. the absolute  
         value of the Hilbert transform of a band-pass filtered signal corresponds  
@@ -27,9 +27,12 @@ def ft_preproc_hilbert(*args, **kwargs):
         See also PREPROC  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/preproc/ft_preproc_hilbert.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/preproc/ft_preproc_hilbert.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_preproc_hilbert", *args, **kwargs)

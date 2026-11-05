@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_nCr(*args, **kwargs):
-    """
+    r"""
       Combinatorics: n choose r, nCr  
         FORMAT c = spm_nCr(n,r)  
          
@@ -63,9 +63,12 @@ def spm_nCr(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/spm_nCr.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/spm_nCr.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_nCr", *args, **kwargs)

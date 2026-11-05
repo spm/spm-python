@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def FEP_lorenz_surprise(*args, **kwargs):
-    """
+    r"""
      __________________________________________________________________________  
         This demo provides an elementary characterisation of stochastic chaos  
         using the Lorenz system. Effectively, it uses iterated least-squares to  
@@ -25,9 +25,12 @@ def FEP_lorenz_surprise(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DEM/FEP_lorenz_surprise.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/DEM/FEP_lorenz_surprise.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("FEP_lorenz_surprise", *args, **kwargs, nargout=0)

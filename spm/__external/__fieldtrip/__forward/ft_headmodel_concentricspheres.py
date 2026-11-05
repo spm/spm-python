@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_headmodel_concentricspheres(*args, **kwargs):
-    """
+    r"""
       FT_HEADMODEL_CONCENTRICSPHERES creates a volume conduction model  
         of the head based on three or four concentric spheres. For a 3-sphere  
         model the spheres represent the skin surface, the outside of the  
@@ -26,12 +26,23 @@ def ft_headmodel_concentricspheres(*args, **kwargs):
           fitind       = vector with indices of the surfaces to use in fitting the center of the spheres  
           order        = number of iterations in series expansion (default = 60)  
          
-        See also FT_PREPARE_VOL_SENS, FT_COMPUTE_LEADFIELD  
+        You can also manually construct a concentric spheres headmodel like this  
+          headmodel.unit = 'mm';  
+          headmodel.cond = [1 1/80 1];  % the conductivity of each compartment  
+          headmodel.r    = [88 92 100]; % the radius of each sphere  
+          headmodel.o    = [0 0 0];     % the origin aka center of the spheres  
+         
+         
+         
+        See also FT_PREPARE_HEADMODEL, FT_COMPUTE_LEADFIELD  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/forward/ft_headmodel_concentricspheres.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/forward/ft_headmodel_concentricspheres.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_headmodel_concentricspheres", *args, **kwargs)

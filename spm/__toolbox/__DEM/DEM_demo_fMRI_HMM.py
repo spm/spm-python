@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def DEM_demo_fMRI_HMM(*args, **kwargs):
-    """
+    r"""
       Demonstration of Hidden Markov models for fMRI  
        __________________________________________________________________________  
          This demonstration routine illustrates the modelling of state  
@@ -43,9 +43,12 @@ def DEM_demo_fMRI_HMM(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DEM/DEM_demo_fMRI_HMM.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/DEM/DEM_demo_fMRI_HMM.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("DEM_demo_fMRI_HMM", *args, **kwargs, nargout=0)

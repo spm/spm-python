@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_dcm_HMM(*args, **kwargs):
-    """
+    r"""
       PEB Inversion of a DCM under a hidden Markov model of state transitions  
         FORMAT [HMM,CSD] = spm_dcm_HMM(DCM,N,b)  
         FORMAT [HMM]     = spm_dcm_HMM(CSD,b)  
@@ -51,9 +51,12 @@ def spm_dcm_HMM(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/spm_dcm_HMM.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/spm_dcm_HMM.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_dcm_HMM", *args, **kwargs)

@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def push(*args, **kwargs):
-    """
+    r"""
       GPU single precision push  
         FORMAT f0 = push(f1, phi, dm0, sett)  
         f1   - 3D float array  
@@ -12,9 +12,12 @@ def push(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/Spatial/push.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/Spatial/push.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("push", *args, **kwargs)

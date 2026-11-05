@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_epharm(*args, **kwargs):
-    """
+    r"""
       basis set of prolate spheroidal harmonics  for modelling magnetic  
         interfecnce observed by point magnetometers.   
         FORMAT harmonics = spm_epharm(v,n,a,b,L)  
@@ -17,9 +17,12 @@ def spm_epharm(*args, **kwargs):
         Copyright (C) 2023 Tim Tierney  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/spm_epharm.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/spm_epharm.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_epharm", *args, **kwargs)

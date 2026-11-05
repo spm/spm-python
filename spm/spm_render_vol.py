@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_render_vol(*args, **kwargs):
-    """
+    r"""
       Surface render a memory mapped 8 bit image - a compiled routine  
         FORMAT [REN, ZBUF, X, Y, Z] = spm_render_vol(V, A, [i j], [u n])  
         V       -  is the memory mapped volume  
@@ -32,9 +32,12 @@ def spm_render_vol(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/spm_render_vol.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/spm_render_vol.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_render_vol", *args, **kwargs)

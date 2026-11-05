@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_mci_fwd(*args, **kwargs):
-    """
+    r"""
       Integrate dynamics and apply observation model  
         FORMAT [y,x,st] = spm_mci_fwd (P,M,U)  
          
@@ -22,9 +22,12 @@ def spm_mci_fwd(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/mci/gradients/spm_mci_fwd.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/mci/gradients/spm_mci_fwd.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_mci_fwd", *args, **kwargs)

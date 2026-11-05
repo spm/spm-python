@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _prepare_freq_matrices(*args, **kwargs):
-    """
+    r"""
      %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  
         SUBFUNCTION that converts a freq structure into Cf, Cr and Pr  
         this is used in FT_SOURCEANALYSIS  
@@ -17,9 +17,12 @@ def _prepare_freq_matrices(*args, **kwargs):
        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/prepare_freq_matrices.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/private/prepare_freq_matrices.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("prepare_freq_matrices", *args, **kwargs)

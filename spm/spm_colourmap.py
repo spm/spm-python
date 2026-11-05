@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_colourmap(*args, **kwargs):
-    """
+    r"""
       Colourmap multi-function  
         FORMAT map = spm_colourmap  
         Return the colourmap of the current figure as a three-column matrix of  
@@ -39,9 +39,12 @@ def spm_colourmap(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/spm_colourmap.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/spm_colourmap.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_colourmap", *args, **kwargs)

@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_groupwise_ls(*args, **kwargs):
-    """
+    r"""
       Groupwise registration via least squares  
         FORMAT out = spm_groupwise_ls(Nii, output, prec, w_settings, b_settings, s_settings, ord)  
         Nii    - a nifti object for two or more image volumes.  
@@ -30,9 +30,12 @@ def spm_groupwise_ls(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/Longitudinal/spm_groupwise_ls.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/Longitudinal/spm_groupwise_ls.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_groupwise_ls", *args, **kwargs)

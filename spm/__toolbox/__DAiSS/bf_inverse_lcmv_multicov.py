@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def bf_inverse_lcmv_multicov(*args, **kwargs):
-    """
+    r"""
       Computes LCMV filters using spm_pca_order to constrain inverse of data  
         cov matrix.  
           
@@ -17,9 +17,12 @@ def bf_inverse_lcmv_multicov(*args, **kwargs):
         Neuroimage. Woolrich et al. 2013.  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DAiSS/bf_inverse_lcmv_multicov.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/DAiSS/bf_inverse_lcmv_multicov.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("bf_inverse_lcmv_multicov", *args, **kwargs)

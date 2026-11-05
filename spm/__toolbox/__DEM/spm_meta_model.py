@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_meta_model(*args, **kwargs):
-    """
+    r"""
       Meta-modelling of Bayes-optimal responses (Newton's method)  
         FORMAT DCM = spm_meta_model(DCM)  
          
@@ -57,9 +57,12 @@ def spm_meta_model(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DEM/spm_meta_model.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/DEM/spm_meta_model.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_meta_model", *args, **kwargs)

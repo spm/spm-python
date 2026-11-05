@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_read_header(*args, **kwargs):
-    """
+    r"""
       FT_READ_HEADER reads header information from a variety of EEG, MEG and other time  
         series data files and represents the header information in a common  
         data-independent structure. The supported formats are listed below.  
@@ -76,6 +76,7 @@ def ft_read_header(*args, **kwargs):
           NeuroScan (*.eeg, *.cnt, *.avg)  
           Nexstim (*.nxe)  
           OpenBCI (*.txt)  
+          PhysioNet (*.hea, *.dat)  
           TMSi (*.Poly5)  
          
         The following spike and LFP dataformats are supported  
@@ -103,9 +104,12 @@ def ft_read_header(*args, **kwargs):
         FT_CHANTYPE, FT_CHANUNIT  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/ft_read_header.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/fileio/ft_read_header.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_read_header", *args, **kwargs)

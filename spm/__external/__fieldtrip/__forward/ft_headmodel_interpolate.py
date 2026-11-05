@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_headmodel_interpolate(*args, **kwargs):
-    """
+    r"""
       FT_HEADMODEL_INTERPOLATE describes a volume conduction model of the head in which  
         subsequent leadfield computations can be performed using a simple interpolation  
         scheme.  
@@ -27,12 +27,15 @@ def ft_headmodel_interpolate(*args, **kwargs):
           headmodel.unit        = string with the geometrical units of the positions, e.g. 'cm' or 'mm'  
         to describe the source positions.  
          
-        See also FT_PREPARE_VOL_SENS, FT_COMPUTE_LEADFIELD  
+        See also FT_PREPARE_HEADMODEL, FT_COMPUTE_LEADFIELD  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/forward/ft_headmodel_interpolate.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/forward/ft_headmodel_interpolate.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_headmodel_interpolate", *args, **kwargs)

@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_appendsens(*args, **kwargs):
-    """
+    r"""
       FT_APPENDSENS concatenates multiple sensor definitions that have been processed  
         separately.  
          
@@ -18,9 +18,12 @@ def ft_appendsens(*args, **kwargs):
         FT_APPENDDATA, FT_APPENDTIMELOCK, FT_APPENDFREQ, FT_APPENDSOURCE  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/ft_appendsens.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/ft_appendsens.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_appendsens", *args, **kwargs)

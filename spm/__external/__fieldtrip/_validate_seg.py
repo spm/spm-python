@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _validate_seg(*args, **kwargs):
-    """
+    r"""
       VALIDATE_SEG ensures that the segmentation represents tissue types in a cumulative than exclusive   
         manner.   
          
@@ -22,9 +22,12 @@ def _validate_seg(*args, **kwargs):
         See also TRIANGULATE_SEG, PREPARE_MESH_SEGMENTATION  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/validate_seg.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/private/validate_seg.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("validate_seg", *args, **kwargs)

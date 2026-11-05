@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_padarray(*args, **kwargs):
-    """
+    r"""
       FORMAT Y = spm_padarray(X, padsize, [method], [direction])  
         X         - numeric array  
         padsize   - padding size along each dimension of the array (>= 0)  
@@ -17,9 +17,12 @@ def spm_padarray(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/spm_padarray.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/spm_padarray.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_padarray", *args, **kwargs)

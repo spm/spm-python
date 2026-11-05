@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_volumelookup(*args, **kwargs):
-    """
+    r"""
       FT_VOLUMELOOKUP can be used in to combine an anatomical or functional  
         atlas with the source reconstruction results. You can use it for forward  
         and reverse lookup.  
@@ -70,9 +70,12 @@ def ft_volumelookup(*args, **kwargs):
         See also FT_READ_ATLAS, FT_SOURCEPLOT  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/ft_volumelookup.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/ft_volumelookup.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_volumelookup", *args, **kwargs)

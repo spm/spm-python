@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_freqs(*args, **kwargs):
-    """
+    r"""
      FREQS Laplace-transform (s-domain) frequency response.    
           H = FREQS(B,A,W) returns the complex frequency response vector H   
           of the filter B/A:  
@@ -24,9 +24,12 @@ def spm_freqs(*args, **kwargs):
           See also LOGSPACE, POLYVAL, INVFREQS, and FREQZ.  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/Neural_Models/spm_freqs.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/Neural_Models/spm_freqs.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_freqs", *args, **kwargs)

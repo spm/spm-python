@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_save_workspace(*args, **kwargs):
-    """
+    r"""
       FT_SAVE_WORKSPACE saves every variable in the base workspace to a .mat file with  
         the same name as the variable in the workspace itself. For example, the variable  
         "ans" would be saved to the file "ans.mat". Prior to calling this function, you  
@@ -22,9 +22,12 @@ def ft_save_workspace(*args, **kwargs):
         See also SAVE, LOAD, SAVEFIG, CLEAR, KEEP  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/utilities/ft_save_workspace.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/utilities/ft_save_workspace.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_save_workspace", *args, **kwargs, nargout=0)

@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def DEM_demo_large_fMRI(*args, **kwargs):
-    """
+    r"""
       Demonstration of DCM for CSD (fMRI) with simulated responses  
        __________________________________________________________________________  
         This routine demonstrates Bayesian parameter averaging using the  
@@ -16,9 +16,12 @@ def DEM_demo_large_fMRI(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DEM/DEM_demo_large_fMRI.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/DEM/DEM_demo_large_fMRI.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("DEM_demo_large_fMRI", *args, **kwargs, nargout=0)

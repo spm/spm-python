@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _setsubfield(*args, **kwargs):
-    """
+    r"""
       SETSUBFIELD sets the contents of the specified field to a specified value  
         just like the standard Matlab SETFIELD function, except that you can also  
         specify nested fields using a '.' in the fieldname. The nesting can be  
@@ -19,9 +19,12 @@ def _setsubfield(*args, **kwargs):
         See also SETFIELD, GETSUBFIELD, ISSUBFIELD  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/setsubfield.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/private/setsubfield.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("setsubfield", *args, **kwargs)

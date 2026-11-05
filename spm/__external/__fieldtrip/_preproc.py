@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _preproc(*args, **kwargs):
-    """
+    r"""
       PREPROC applies various preprocessing steps on a single piece of EEG/MEG data  
         that has been read from a data file.  
          
@@ -117,9 +117,12 @@ def _preproc(*args, **kwargs):
         See also FT_READ_DATA, FT_READ_HEADER  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/preproc.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/private/preproc.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("preproc", *args, **kwargs)

@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_percentile(*args, **kwargs):
-    """
+    r"""
       Compute one or more percentiles from data  
         FORMAT [y] = spm_percentile(data, p)  
         data - arbitrarily sized input data (from which NaNs will be excluded)  
@@ -19,9 +19,12 @@ def spm_percentile(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/spm_percentile.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/spm_percentile.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_percentile", *args, **kwargs)

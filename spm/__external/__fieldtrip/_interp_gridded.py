@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _interp_gridded(*args, **kwargs):
-    """
+    r"""
       INTERP_GRIDDED computes a matrix that interpolates values that were  
         observed on positions in a regular 3-D grid onto positions that are  
         unstructured, e.g. the vertices of a cortical sheet.  
@@ -23,9 +23,12 @@ def _interp_gridded(*args, **kwargs):
            inside       = indices for inside voxels (or logical array)  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/interp_gridded.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/private/interp_gridded.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("interp_gridded", *args, **kwargs)

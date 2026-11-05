@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_selectdata(*args, **kwargs):
-    """
+    r"""
       FT_SELECTDATA makes a selection in the input data along specific data  
         dimensions, such as channels, time, frequency, trials, etc. It can also  
         be used to average the data along each of the specific dimensions.  
@@ -56,9 +56,12 @@ def ft_selectdata(*args, **kwargs):
         See also FT_DATATYPE, FT_CHANNELSELECTION, FT_CHANNELCOMBINATION  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/utilities/ft_selectdata.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/utilities/ft_selectdata.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_selectdata", *args, **kwargs)

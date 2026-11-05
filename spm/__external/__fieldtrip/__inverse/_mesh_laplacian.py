@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _mesh_laplacian(*args, **kwargs):
-    """
+    r"""
       MESH_LAPLACIAN: Laplacian of irregular triangular mesh  
          
         Useage: [lap,edge] = mesh_laplacian(vertex,face)  
@@ -31,9 +31,12 @@ def _mesh_laplacian(*args, **kwargs):
         See also, eeg_interp_scalp_mesh  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/inverse/private/mesh_laplacian.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/inverse/private/mesh_laplacian.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("mesh_laplacian", *args, **kwargs)

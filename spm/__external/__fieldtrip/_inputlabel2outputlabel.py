@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _inputlabel2outputlabel(*args, **kwargs):
-    """
+    r"""
       INPUTLABEL2OUTPUTLABEL is a subfunction which outputs the cell-arrays  
         outputlabel and the corresponding outputindex, and defines how the   
         channels in the original data have to be combined, to provide the   
@@ -14,9 +14,12 @@ def _inputlabel2outputlabel(*args, **kwargs):
           TODO: more flexible way of combining, e.g. by providing a cell-array  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/inputlabel2outputlabel.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/private/inputlabel2outputlabel.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("inputlabel2outputlabel", *args, **kwargs)

@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_powell(*args, **kwargs):
-    """
+    r"""
       Powell optimisation method  
         FORMAT [p,f] = spm_powell(p,xi,tolsc,func,varargin)  
           p        - Starting parameter values  
@@ -21,9 +21,12 @@ def spm_powell(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/spm_powell.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/spm_powell.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_powell", *args, **kwargs)

@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_permute_kron(*args, **kwargs):
-    """
+    r"""
       Permutation of a Kronecker tensor product   
         FORMAT A = spm_permute_kron(A,dim,order)  
         A     - 2-dimensional array (A1 x A2 x ...  
@@ -11,9 +11,12 @@ def spm_permute_kron(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/spm_permute_kron.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/spm_permute_kron.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_permute_kron", *args, **kwargs)

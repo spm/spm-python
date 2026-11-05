@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _ft_datatype_comp(*args, **kwargs):
-    """
+    r"""
       FT_DATATYPE_COMP describes the FieldTrip MATLAB structure for comp data  
          
         The comp data structure represents time-series channel-level data that has  
@@ -50,9 +50,12 @@ def _ft_datatype_comp(*args, **kwargs):
         FT_DATATYPE_TIMELOCK, FT_DATATYPE_VOLUME  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/ft_datatype_comp.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/fileio/private/ft_datatype_comp.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_datatype_comp", *args, **kwargs)

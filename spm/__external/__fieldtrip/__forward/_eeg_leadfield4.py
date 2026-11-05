@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _eeg_leadfield4(*args, **kwargs):
-    """
+    r"""
       EEG_LEADFIELD4 electric leadfield for a dipole in 4 concentric spheres  
           
         [lf] = eeg_leadfield4(R, elc, vol)  
@@ -26,9 +26,12 @@ def _eeg_leadfield4(*args, **kwargs):
         which can save time when multiple leadfield computations are done.  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/forward/private/eeg_leadfield4.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/forward/private/eeg_leadfield4.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("eeg_leadfield4", *args, **kwargs)

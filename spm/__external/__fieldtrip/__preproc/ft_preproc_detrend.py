@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_preproc_detrend(*args, **kwargs):
-    """
+    r"""
       FT_PREPROC_DETREND removes mean and linear trend from the  
         data using using a General Linear Modeling approach.  
          
@@ -19,9 +19,12 @@ def ft_preproc_detrend(*args, **kwargs):
         See also FT_PREPROC_BASELINECORRECT, FT_PREPROC_POLYREMOVAL  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/preproc/ft_preproc_detrend.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/preproc/ft_preproc_detrend.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_preproc_detrend", *args, **kwargs)

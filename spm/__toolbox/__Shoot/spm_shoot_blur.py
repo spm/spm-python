@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_shoot_blur(*args, **kwargs):
-    """
+    r"""
       A function for blurring ("smoothing") tissue probability maps  
         FORMAT [sig,a_new] = spm_shoot_blur(t,prm,its,sig)  
             t   - sufficient statistics  
@@ -23,9 +23,12 @@ def spm_shoot_blur(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/Shoot/spm_shoot_blur.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/Shoot/spm_shoot_blur.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_shoot_blur", *args, **kwargs)

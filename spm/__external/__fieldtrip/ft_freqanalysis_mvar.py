@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_freqanalysis_mvar(*args, **kwargs):
-    """
+    r"""
       FT_FREQANALYSIS_MVAR performs frequency analysis on  
         mvar data, by fourier transformation of the coefficients. The output  
         contains cross-spectral density, spectral transfer matrix, and the  
@@ -39,9 +39,12 @@ def ft_freqanalysis_mvar(*args, **kwargs):
         See also FT_MVARANALYSIS, FT_DATATYPE_MVAR, FT_PROGRESS  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/ft_freqanalysis_mvar.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/ft_freqanalysis_mvar.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_freqanalysis_mvar", *args, **kwargs)

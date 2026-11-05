@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def toy_example(*args, **kwargs):
-    """
+    r"""
       Example how to use matlabbatch in a simple application. Two steps are  
         necessary:   
         1) write configuration files that define the user interface for the  
@@ -23,9 +23,12 @@ def toy_example(*args, **kwargs):
         Copyright (C) 2007 Freiburg Brain Imaging  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/matlabbatch/examples/toy_example.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/matlabbatch/examples/toy_example.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("toy_example", *args, **kwargs, nargout=0)

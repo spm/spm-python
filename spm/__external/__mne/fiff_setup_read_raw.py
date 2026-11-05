@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def fiff_setup_read_raw(*args, **kwargs):
-    """
+    r"""
        
         [data] = fiff_setup_read_raw(fname,allow_maxshield)  
          
@@ -12,9 +12,12 @@ def fiff_setup_read_raw(*args, **kwargs):
         allow_maxshield     Accept unprocessed MaxShield data  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/mne/fiff_setup_read_raw.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/mne/fiff_setup_read_raw.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("fiff_setup_read_raw", *args, **kwargs)

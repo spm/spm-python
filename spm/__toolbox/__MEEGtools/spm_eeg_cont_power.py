@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_eeg_cont_power(*args, **kwargs):
-    """
+    r"""
       Compute power of continuous M/EEG data  
         FORMAT D = spm_eeg_cont_power(S)  
          
@@ -18,9 +18,12 @@ def spm_eeg_cont_power(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/MEEGtools/spm_eeg_cont_power.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/MEEGtools/spm_eeg_cont_power.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_eeg_cont_power", *args, **kwargs)

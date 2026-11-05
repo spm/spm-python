@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_statfun_gcmi(*args, **kwargs):
-    """
+    r"""
       FT_STATFUN_GCMI computes mutual information between the dependent variable  
         and a discrete-valued design vector.  
          
@@ -14,9 +14,12 @@ def ft_statfun_gcmi(*args, **kwargs):
           cfg.gcmi.tra         = matrix which specifies multivariate structure  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/statfun/ft_statfun_gcmi.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/statfun/ft_statfun_gcmi.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_statfun_gcmi", *args, **kwargs)

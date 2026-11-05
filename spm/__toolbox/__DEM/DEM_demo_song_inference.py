@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def DEM_demo_song_inference(*args, **kwargs):
-    """
+    r"""
       Perceptual categorisation of bird songs: The generative model of   
         birdsong used in this simulation comprises a Lorenz attractor with two   
         control parameters (or hidden causes), which, in turn, delivers two   
@@ -26,9 +26,12 @@ def DEM_demo_song_inference(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DEM/DEM_demo_song_inference.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/DEM/DEM_demo_song_inference.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("DEM_demo_song_inference", *args, **kwargs, nargout=0)

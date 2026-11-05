@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_nwcov(*args, **kwargs):
-    """
+    r"""
       Get second moments of Normal-Wishart  
         FORMAT [M] = spm_nwcov (M)  
          
@@ -20,9 +20,12 @@ def spm_nwcov(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/mci/inference/spm_nwcov.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/mci/inference/spm_nwcov.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_nwcov", *args, **kwargs)

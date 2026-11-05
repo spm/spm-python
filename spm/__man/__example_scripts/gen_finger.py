@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def gen_finger(*args, **kwargs):
-    """
+    r"""
       Generate finger movement data  
         FORMAT [yy,P,M,U] = gen_finger(sim)  
          
@@ -24,9 +24,12 @@ def gen_finger(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/man/example_scripts/gen_finger.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/man/example_scripts/gen_finger.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("gen_finger", *args, **kwargs)

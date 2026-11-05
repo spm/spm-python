@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def printstruct(*args, **kwargs):
-    """
+    r"""
       PRINTSTRUCT converts a MATLAB structure into a multiple-line string that, when  
         evaluated by MATLAB, results in the original structure. It also works for most  
         other standard MATLAB classes, such as numbers, vectors, matrices, and cell-arrays.  
@@ -28,9 +28,12 @@ def printstruct(*args, **kwargs):
         See also DISP, NUM2STR, INT2STR, MAT2STR  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/utilities/printstruct.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/utilities/printstruct.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("printstruct", *args, **kwargs)

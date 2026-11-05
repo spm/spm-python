@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_BMS_F_smpl(*args, **kwargs):
-    """
+    r"""
       Get sample and lower bound approx. for model evidence p(y|r) in group BMS  
         FORMAT [s_samp,s_bound] = spm_BMS_F_smpl(alpha,lme,alpha0)  
           
@@ -14,9 +14,12 @@ def spm_BMS_F_smpl(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/spm_BMS_F_smpl.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/spm_BMS_F_smpl.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_BMS_F_smpl", *args, **kwargs)

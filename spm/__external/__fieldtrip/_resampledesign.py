@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _resampledesign(*args, **kwargs):
-    """
+    r"""
       RESAMPLEDESIGN returns a resampling matrix, in which each row can be  
         used to resample either the original design matrix or the original data.  
         The random resampling is done given user-specified constraints on the  
@@ -50,9 +50,12 @@ def _resampledesign(*args, **kwargs):
         See also FT_STATISTICS_MONTECARLO  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/resampledesign.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/private/resampledesign.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("resampledesign", *args, **kwargs)

@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_volumedownsample(*args, **kwargs):
-    """
+    r"""
       FT_VOLUMEDOWNSAMPLE downsamples, or more precisely decimates an anatomical MRI or  
         source reconstruction and optionally normalizes its coordinate axes, keeping the  
         homogenous transformation matrix correct.  
@@ -31,9 +31,12 @@ def ft_volumedownsample(*args, **kwargs):
         See also FT_SOURCEINTERPOLATE, FT_VOLUMEWRITE and FT_VOLUMENORMALISE  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/ft_volumedownsample.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/ft_volumedownsample.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_volumedownsample", *args, **kwargs)

@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _isalmostequal(*args, **kwargs):
-    """
+    r"""
       ISALMOSTEQUAL compares two input variables and returns true/false  
         and a message containing the details on the observed difference.  
          
@@ -23,9 +23,12 @@ def _isalmostequal(*args, **kwargs):
         See also ISEQUAL, ISEQUALNAN  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/specest/private/isalmostequal.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/specest/private/isalmostequal.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("isalmostequal", *args, **kwargs)

@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_MH(*args, **kwargs):
-    """
+    r"""
       The Rejection-Metropolis-Hastings Algorithm  
         FORMAT [P,F] = spm_MH(L,B,y,M)  
          
@@ -21,9 +21,12 @@ def spm_MH(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/spm_MH.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/spm_MH.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_MH", *args, **kwargs)

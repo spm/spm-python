@@ -2,21 +2,23 @@ from spm._runtime import Runtime
 
 
 def spm_psi(*args, **kwargs):
-    """
-      Normalisation of a Dirichlet probability matrix (columns)  
+    r"""
+      log normalised Dirichlet probability matrix (columns)  
         FORMAT [A] = spm_psi(a)  
          
         a  - Dirichlet parameter tensor  
          
-        This can be regarded as log(spm_dir_norm(a)). More formally, it  
-        corresponds to  the expectation  of the log marginals: E[log(X)]: X(i)  
-        ~ Beta(a(i),a0 - a(i)). See also: psi.m  
+        This routine returns the expectation of log marginals: E[log(X)]: X(i) ~  
+        Beta(a(i),a0 - a(i)), for a > 1. See also: psi.m  
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/spm_psi.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/spm_psi.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_psi", *args, **kwargs)
