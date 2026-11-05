@@ -36,28 +36,28 @@ classifiers = [
 ]
 dependencies = [
     "mpython-core>=25.4rc1",
-    "spm-runtime-r2026b >= 26.10.1 ; python_version >= '3.10'",
-    "spm-runtime-r2025a == 26.10.1 ; python_version == '3.9'",
-    "spm-runtime-r2023a == 26.10.1 ; python_version == '3.8'",
-    "spm-runtime-r2021b == 26.10.1 ; python_version == '3.7'",
-    "spm-runtime-r2020b == 26.10.1 ; python_version == '3.6'",
+    "spm-runtime-r2026b >= 26.10.1.* ; python_version >= '3.10'",
+    "spm-runtime-r2025a == 26.10.1.* ; python_version == '3.9'",
+    "spm-runtime-r2023a == 26.10.1.* ; python_version == '3.8'",
+    "spm-runtime-r2021b == 26.10.1.* ; python_version == '3.7'",
+    "spm-runtime-r2020b == 26.10.1.* ; python_version == '3.6'",
 ]
 
 [project.optional-dependencies]
-latest = ["spm-runtime        == 26.10.1"]
-R2026b = ["spm-runtime-R2026b == 26.10.1"]
-R2026a = ["spm-runtime-R2026a == 26.10.1"]
-R2025b = ["spm-runtime-R2025b == 26.10.1"]
-R2025a = ["spm-runtime-R2025a == 26.10.1"]
-R2024b = ["spm-runtime-R2024b == 26.10.1"]
-R2024a = ["spm-runtime-R2024a == 26.10.1"]
-R2023b = ["spm-runtime-R2023b == 26.10.1"]
-R2023a = ["spm-runtime-R2023a == 26.10.1"]
-R2022b = ["spm-runtime-R2022b == 26.10.1"]
-R2022a = ["spm-runtime-R2022a == 26.10.1"]
-R2021b = ["spm-runtime-R2021b == 26.10.1"]
-R2021a = ["spm-runtime-R2021a == 26.10.1"]
-R2020b = ["spm-runtime-R2020b == 26.10.1"]
+latest = ["spm-runtime        == 26.10.1.*"]
+R2026b = ["spm-runtime-R2026b == 26.10.1.*"]
+R2026a = ["spm-runtime-R2026a == 26.10.1.*"]
+R2025b = ["spm-runtime-R2025b == 26.10.1.*"]
+R2025a = ["spm-runtime-R2025a == 26.10.1.*"]
+R2024b = ["spm-runtime-R2024b == 26.10.1.*"]
+R2024a = ["spm-runtime-R2024a == 26.10.1.*"]
+R2023b = ["spm-runtime-R2023b == 26.10.1.*"]
+R2023a = ["spm-runtime-R2023a == 26.10.1.*"]
+R2022b = ["spm-runtime-R2022b == 26.10.1.*"]
+R2022a = ["spm-runtime-R2022a == 26.10.1.*"]
+R2021b = ["spm-runtime-R2021b == 26.10.1.*"]
+R2021a = ["spm-runtime-R2021a == 26.10.1.*"]
+R2020b = ["spm-runtime-R2020b == 26.10.1.*"]
 
 [project.urls]
 Repository = "https://github.com/spm/spm-python"
