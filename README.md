@@ -78,7 +78,7 @@ By default, spm-python uses:
    ```
 2. Run the installer
    ```shell
-   install_matlab_runtime --version R2025b --yes
+   install_matlab_runtime --version R2026b --yes
    ```
 
 - **Advantages**
