@@ -30,12 +30,16 @@ jobs:
           - os: macos-15-intel
             os_name: macOS_Intel
             platform: Mac
+            matlab: R2025b
           - os: macos-latest
             os_name: macOS_Apple_Silicon
             platform: Mac
           - os: windows-latest
             os_name: Windows
             platform: Windows
+        exclude:
+          - os: macos-15-intel
+            matlab: R2026b
 
     steps:
       - name: Set up Python ${{ matrix.python-version }}
@@ -47,11 +51,19 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Install SPM Python
+        if: ${{ matrix.os_name != 'macOS_Intel' }}
         run: |
           python -m pip install --upgrade pip
-          python -m pip install mpython-core
           python -m pip install -e .
 
+      - name: Install SPM Python (macos intel)
+        if: ${{ matrix.os_name == 'macOS_Intel' }}
+        env:
+          MATLAB_VERSION: ${{ matrix.matlab }}
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -e ".[${MATLAB_VERSION}]"
+          
       # Setup MATLAB and Runtime
       - name: Set up MATLAB
         uses: matlab-actions/setup-matlab@v2
