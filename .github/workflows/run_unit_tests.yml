@@ -27,7 +27,7 @@ jobs:
           - os: ubuntu-latest
             os_name: Linux
             platform: Linux
-          - os: macos-13
+          - os: macos-15-intel
             os_name: macOS_Intel
             platform: Mac
           - os: macos-latest
