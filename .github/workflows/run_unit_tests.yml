@@ -40,7 +40,7 @@ jobs:
             platform: Mac
             matlab: R2025b
         exclude:
-          - matlab: R2025b
+          - os: macos-15-intel
             python-version: "3.14"
 
     steps:
