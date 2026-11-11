@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_preproc(*args, **kwargs):
-    """
+    r"""
       Combined Segmentation and Spatial Normalisation  
          
         FORMAT results = spm_preproc(V,opts)  
@@ -20,9 +20,12 @@ def spm_preproc(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/spm_preproc.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/spm_preproc.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_preproc", *args, **kwargs)

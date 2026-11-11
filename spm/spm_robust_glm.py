@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_robust_glm(*args, **kwargs):
-    """
+    r"""
       Apply robust GLM  
         FORMAT [B, W] = spm_robust_glm(Y, X, dim, ks)  
         Y      - data matrix  
@@ -21,9 +21,12 @@ def spm_robust_glm(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/spm_robust_glm.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/spm_robust_glm.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_robust_glm", *args, **kwargs)

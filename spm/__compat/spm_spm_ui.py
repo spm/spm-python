@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_spm_ui(*args, **kwargs):
-    """
+    r"""
       Setting up the general linear model for independent data  
         FORMATs (given in Programmers Help)  
        _______________________________________________________________________  
@@ -486,9 +486,12 @@ def spm_spm_ui(*args, **kwargs):
         Copyright (C) 2008 Wellcome Trust Centre for Neuroimaging  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/compat/spm_spm_ui.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/compat/spm_spm_ui.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_spm_ui", *args, **kwargs)

@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_mix_demo1d(*args, **kwargs):
-    """
+    r"""
       Demonstrate use of spm_mix on 1D data  
         FORMAT [vbmix logev mixdata] = spm_mix_demo1d (data, maxcomps, plotfits)  
          
@@ -16,9 +16,12 @@ def spm_mix_demo1d(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/mixture/spm_mix_demo1d.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/mixture/spm_mix_demo1d.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_mix_demo1d", *args, **kwargs)

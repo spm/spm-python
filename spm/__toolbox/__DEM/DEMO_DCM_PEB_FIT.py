@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def DEMO_DCM_PEB_FIT(*args, **kwargs):
-    """
+    r"""
       Test routine to check group DCM for electrophysiology  
        --------------------------------------------------------------------------  
         This routine illustrates the use of Bayesian model reduction when  
@@ -21,9 +21,12 @@ def DEMO_DCM_PEB_FIT(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DEM/DEMO_DCM_PEB_FIT.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/DEM/DEMO_DCM_PEB_FIT.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("DEMO_DCM_PEB_FIT", *args, **kwargs, nargout=0)

@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def cfg_getfile(*args, **kwargs):
-    """
+    r"""
       File selector  
         FORMAT [t,sts] = cfg_getfile(n,typ,mesg,sel,wd,filt,prms)  
             n    - Number of files  
@@ -92,9 +92,12 @@ def cfg_getfile(*args, **kwargs):
         Copyright (C) 2007 Freiburg Brain Imaging  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/matlabbatch/cfg_getfile.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/matlabbatch/cfg_getfile.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("cfg_getfile", *args, **kwargs)

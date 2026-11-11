@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_redefinetrial(*args, **kwargs):
-    """
+    r"""
       FT_REDEFINETRIAL allows you to adjust the time axis of your data, i.e. to  
         change from stimulus-locked to response-locked. Furthermore, it allows  
         you to select a time window of interest, or to resegment your long trials  
@@ -55,7 +55,13 @@ def ft_redefinetrial(*args, **kwargs):
         segments, starting from the beginning of each trial. This may lead to loss  
         of data at the end of the trials  
           cfg.length    = number (in seconds) that specifies the length of the required snippets  
-          cfg.overlap   = number between 0 and 1 (exclusive) specifying the fraction of overlap between snippets (0 = no overlap)  
+          cfg.overlap   = number between 0 and 1 (exclusive) specifying the fraction of overlap   
+                          between snippets (0 = no overlap)  
+          cfg.updatetrialinfo = 'no' (default), or 'yes', which adds a column  
+                          with original trial indices trialinfo  
+          cfg.keeppartial = 'no' (default), or 'yes', which keeps the partial sub  
+                          epochs at the end of the input trials  
+                            
          
         Alternatively you can merge or stitch pseudo-continuous segmented data back into a  
         continuous representation. This requires that the data has a valid sampleinfo field  
@@ -76,9 +82,12 @@ def ft_redefinetrial(*args, **kwargs):
         See also FT_DEFINETRIAL, FT_RECODEEVENT, FT_PREPROCESSING  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/ft_redefinetrial.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/ft_redefinetrial.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_redefinetrial", *args, **kwargs)

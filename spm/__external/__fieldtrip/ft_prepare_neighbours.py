@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_prepare_neighbours(*args, **kwargs):
-    """
+    r"""
       FT_PREPARE_NEIGHBOURS finds the channel neighbours for spatial clustering  
         or interpolation of bad channels. Using the 'distance' method, neighbours  
         are based on a minimum neighbourhood distance (in cfg.neighbourdist).  
@@ -58,9 +58,12 @@ def ft_prepare_neighbours(*args, **kwargs):
         FT_READ_SENS, FT_READ_ATLAS  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/ft_prepare_neighbours.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/ft_prepare_neighbours.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_prepare_neighbours", *args, **kwargs)

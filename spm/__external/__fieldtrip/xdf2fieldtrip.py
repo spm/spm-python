@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def xdf2fieldtrip(*args, **kwargs):
-    """
+    r"""
       XDF2FIELDTRIP reads continuously sampled data from a XDF file with multiple  
         streams. It upsamples the data of all streams to the highest sampling rate and  
         concatenates all channels in all streams into a raw data structure that is  
@@ -27,9 +27,12 @@ def xdf2fieldtrip(*args, **kwargs):
         See also FT_PREPROCESSING, FT_DEFINETRIAL, FT_REDEFINETRIAL  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/xdf2fieldtrip.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/xdf2fieldtrip.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("xdf2fieldtrip", *args, **kwargs)

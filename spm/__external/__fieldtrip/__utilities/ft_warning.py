@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_warning(*args, **kwargs):
-    """
+    r"""
       FT_WARNING prints a warning message on screen, depending on the verbosity   
         settings of the calling high-level FieldTrip function. This function works  
         similar to the standard WARNING function, but also features the "once" mode.  
@@ -38,9 +38,12 @@ def ft_warning(*args, **kwargs):
         See also FT_ERROR, FT_WARNING, FT_NOTICE, FT_INFO, FT_DEBUG, ERROR, WARNING  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/utilities/ft_warning.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/utilities/ft_warning.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_warning", *args, **kwargs)

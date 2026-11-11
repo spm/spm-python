@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_uitab(*args, **kwargs):
-    """
+    r"""
       Create tabs in a figure  
         FORMAT [handles] = spm_uitab(hparent,labels,callbacks,tag,active,height,tab_height)  
         This function creates tabs in the SPM graphics window.  
@@ -28,9 +28,12 @@ def spm_uitab(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/spm_uitab.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/spm_uitab.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_uitab", *args, **kwargs)

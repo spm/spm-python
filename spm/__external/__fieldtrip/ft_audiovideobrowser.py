@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_audiovideobrowser(*args, **kwargs):
-    """
+    r"""
       FT_AUDIOVIDEOBROWSER reads and vizualizes the audio and/or video data  
         corresponding to the EEG/MEG data that is passed into this function.  
          
@@ -30,9 +30,12 @@ def ft_audiovideobrowser(*args, **kwargs):
         See also FT_DATABROWSER  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/ft_audiovideobrowser.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/ft_audiovideobrowser.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_audiovideobrowser", *args, **kwargs, nargout=0)

@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _ft_findcfg(*args, **kwargs):
-    """
+    r"""
       FT_FINDCFG searches for an element in the cfg structure  
         or in the nested previous cfgs  
          
@@ -17,9 +17,12 @@ def _ft_findcfg(*args, **kwargs):
         See also FT_GETOPT, FT_CFG2KEYVAL  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/utilities/private/ft_findcfg.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/utilities/private/ft_findcfg.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_findcfg", *args, **kwargs)

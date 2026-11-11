@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def tcdf(*args, **kwargs):
-    """
+    r"""
       TCDF Student's T cumulative distribution function (cdf).  
          
         P = TCDF(X,V) computes the cdf for Student's T distribution  
@@ -31,9 +31,12 @@ def tcdf(*args, **kwargs):
         13 Jan 2016, Robert Oostenveld  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/external/stats/tcdf.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/external/stats/tcdf.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("tcdf", *args, **kwargs)

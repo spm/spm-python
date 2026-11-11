@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_volumereslice(*args, **kwargs):
-    """
+    r"""
       FT_VOLUMERESLICE flips, permutes, interpolates and/or reslices a volume along the  
         principal axes of the coordinate system according to a specified resolution.  
          
@@ -43,9 +43,12 @@ def ft_volumereslice(*args, **kwargs):
         See also FT_VOLUMEREALIGN, FT_VOLUMEDOWNSAMPLE, FT_SOURCEINTERPOLATE, FT_SOURCEPLOT  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/ft_volumereslice.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/ft_volumereslice.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_volumereslice", *args, **kwargs)

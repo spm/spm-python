@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_clusters(*args, **kwargs):
-    """
+    r"""
       Return the cluster index for a point list  
         FORMAT A = spm_clusters(L,n)  
         L     - locations [x y x]' {in voxels} ([3 x m] matrix)  
@@ -18,9 +18,12 @@ def spm_clusters(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/spm_clusters.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/spm_clusters.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_clusters", *args, **kwargs)

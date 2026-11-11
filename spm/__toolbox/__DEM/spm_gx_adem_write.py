@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_gx_adem_write(*args, **kwargs):
-    """
+    r"""
       returns the prediction for a two-joint arm (proprioception and vision)  
         FORMAT [g]= spm_gx_adem_write(x,v,a,P)  
          
@@ -27,9 +27,12 @@ def spm_gx_adem_write(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DEM/spm_gx_adem_write.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/DEM/spm_gx_adem_write.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_gx_adem_write", *args, **kwargs)

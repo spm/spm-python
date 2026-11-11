@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def help2cell(*args, **kwargs):
-    """
+    r"""
       HELP2CELL - translate help texts into cell arrays  
         cellhelp = help2cell(topic)  
         Create a cell array of help strings from the MATLAB help on 'topic'.  
@@ -16,9 +16,12 @@ def help2cell(*args, **kwargs):
         Copyright (C) 2007 Freiburg Brain Imaging  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/matlabbatch/help2cell.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/matlabbatch/help2cell.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("help2cell", *args, **kwargs)

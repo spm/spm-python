@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _alpha_taper(*args, **kwargs):
-    """
+    r"""
       ALPHA_TAPER returns an asymmetric taper that can be used to construct a  
         complex wavelet with the peak at a distance of 0.8 times the cycle length  
         from the end.  
@@ -35,9 +35,12 @@ def _alpha_taper(*args, **kwargs):
           W(F,t) = taper(F,t) * exp(i*2*pi*F*t)  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/alpha_taper.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/private/alpha_taper.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("alpha_taper", *args, **kwargs)

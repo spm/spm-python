@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _mkfilt_eloreta_v2(*args, **kwargs):
-    """
+    r"""
       makes spatial filter according to eLoreta   
         usage  A=mkfilt_eloreta_v2(L); or  A=mkfilt_eloreta_v2(L,regu);  
          
@@ -24,9 +24,12 @@ def _mkfilt_eloreta_v2(*args, **kwargs):
         error localization. arXiv:0710.3341 [math-ph], 2007-October-17, http://arxiv.org/pdf/0710.3341  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DAiSS/private/mkfilt_eloreta_v2.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/DAiSS/private/mkfilt_eloreta_v2.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("mkfilt_eloreta_v2", *args, **kwargs)

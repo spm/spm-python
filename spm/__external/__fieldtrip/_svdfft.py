@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _svdfft(*args, **kwargs):
-    """
+    r"""
       SVDFFT computes a rotated FFT matrix, using the real part of the cross-spectral  
         density matrix. This rotation ensures that the phase relationship of the underlying  
         sources does not change, while rotating the channels such that the first channel  
@@ -17,9 +17,12 @@ def _svdfft(*args, **kwargs):
         See also SVD  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/svdfft.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/private/svdfft.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("svdfft", *args, **kwargs)

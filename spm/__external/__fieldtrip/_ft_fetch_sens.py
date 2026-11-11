@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _ft_fetch_sens(*args, **kwargs):
-    """
+    r"""
       FT_FETCH_SENS mimics the behavior of FT_READ_SENS, but for a FieldTrip  
         data structure or a FieldTrip configuration instead of a file on disk.  
          
@@ -30,9 +30,12 @@ def _ft_fetch_sens(*args, **kwargs):
         See also FT_READ_SENS, FT_DATATYPE_SENS, FT_FETCH_DATA, FT_PREPARE_LAYOUT  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/ft_fetch_sens.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/private/ft_fetch_sens.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_fetch_sens", *args, **kwargs)

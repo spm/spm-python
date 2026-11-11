@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_find_pC(*args, **kwargs):
-    """
+    r"""
       Utility routine that finds the indices of non-zero covariance  
         FORMAT [i,pC,pE,Np] = spm_find_pC(pC,pE,fields)  
         FORMAT [i,pC,pE,Np] = spm_find_pC(DCM,fields)  
@@ -23,9 +23,12 @@ def spm_find_pC(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/spm_find_pC.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/spm_find_pC.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_find_pC", *args, **kwargs)

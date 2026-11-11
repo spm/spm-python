@@ -2,15 +2,18 @@ from spm._runtime import Runtime
 
 
 def _combine_transform(*args, **kwargs):
-    """
+    r"""
       COMBINE_TRANSFORM combines the 4x4 homogenous transformation  
         matrices of the rotation, the scaling and the translation and  
         combines them in the desired order.  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/combine_transform.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/private/combine_transform.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("combine_transform", *args, **kwargs)

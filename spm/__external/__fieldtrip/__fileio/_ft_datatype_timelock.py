@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _ft_datatype_timelock(*args, **kwargs):
-    """
+    r"""
       FT_DATATYPE_TIMELOCK describes the FieldTrip MATLAB structure for timelock data  
          
         The timelock data structure represents averaged or non-averaged event-releted  
@@ -46,9 +46,12 @@ def _ft_datatype_timelock(*args, **kwargs):
         See also FT_DATATYPE, FT_DATATYPE_COMP, FT_DATATYPE_FREQ, FT_DATATYPE_RAW  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/ft_datatype_timelock.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/fileio/private/ft_datatype_timelock.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_datatype_timelock", *args, **kwargs)

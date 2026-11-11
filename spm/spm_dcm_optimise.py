@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_dcm_optimise(*args, **kwargs):
-    """
+    r"""
       Optimise the priors of a model (under Laplace approximation)  
         FORMAT [rE,rC] = spm_dcm_optimise(qE,qC,pE,pC,priorfun,varargin)  
          
@@ -29,9 +29,12 @@ def spm_dcm_optimise(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/spm_dcm_optimise.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/spm_dcm_optimise.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_dcm_optimise", *args, **kwargs)

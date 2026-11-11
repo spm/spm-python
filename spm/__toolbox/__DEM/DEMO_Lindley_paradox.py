@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def DEMO_Lindley_paradox(*args, **kwargs):
-    """
+    r"""
       FORMAT DEMO_BAYES_FACTORS(pC,hE,hC)  
         Demonstration Bayes factors and classical p-values  
        --------------------------------------------------------------------------  
@@ -16,9 +16,12 @@ def DEMO_Lindley_paradox(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DEM/DEMO_Lindley_paradox.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/DEM/DEMO_Lindley_paradox.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("DEMO_Lindley_paradox", *args, **kwargs, nargout=0)

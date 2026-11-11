@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def mne_make_combined_event_file(*args, **kwargs):
-    """
+    r"""
        
           mne_make_combined_event_file(rawname,eventname,include,all,threshold)  
          
@@ -21,9 +21,12 @@ def mne_make_combined_event_file(*args, **kwargs):
           contain a composite trigger channel  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/mne/mne_make_combined_event_file.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/mne/mne_make_combined_event_file.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("mne_make_combined_event_file", *args, **kwargs, nargout=0)

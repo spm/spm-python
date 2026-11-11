@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_write_cifti(*args, **kwargs):
-    """
+    r"""
       FT_WRITE_CIFTI writes functional data or functional connectivity to a cifti-2  
         file. The geometrical description of the brainordinates can consist of  
         triangulated surfaces or voxels in a regular 3-D volumetric grid. The functional  
@@ -33,14 +33,17 @@ def ft_write_cifti(*args, **kwargs):
           'debug'            = boolean, write a debug.xml file (default = false)  
          
         The brainstructure refers to the global anatomical structure, such as CortexLeft, Thalamus, etc.  
-        The parcellation refers to the the detailled parcellation, such as BA1, BA2, BA3, etc.  
+        The parcellation refers to the the detailed parcellation, such as BA1, BA2, BA3, etc.  
          
         See also FT_READ_CIFTI, FT_READ_MRI, FT_WRITE_MRI  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/ft_write_cifti.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/fileio/ft_write_cifti.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_write_cifti", *args, **kwargs, nargout=0)

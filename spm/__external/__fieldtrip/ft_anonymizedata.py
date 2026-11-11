@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_anonymizedata(*args, **kwargs):
-    """
+    r"""
       FT_ANONYMIZEDATA clears the value of potentially identifying fields in  
         the data and in the provenance information, i.e., it updates the data and  
         the configuration structure and history that is maintained by FieldTrip  
@@ -39,9 +39,12 @@ def ft_anonymizedata(*args, **kwargs):
         See also FT_DEFACEVOLUME, FT_DEFACEMESH, FT_ANALYSISPIPELINE  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/ft_anonymizedata.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/ft_anonymizedata.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_anonymizedata", *args, **kwargs)

@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _align_ctf2acpc(*args, **kwargs):
-    """
+    r"""
       ALIGN_CTF2ACPC performs an approximate rigid body alignment of the anatomical  
         volume from CTF towards ACPC coordinates. Only the homogeneous transformation  
         matrix is modified and the coordsys-field is updated.  
@@ -25,9 +25,12 @@ def _align_ctf2acpc(*args, **kwargs):
         See also ALIGN_NEUROMAG2ACPC, ALIGN_FSAVERAGE2MNI  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/utilities/private/align_ctf2acpc.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/utilities/private/align_ctf2acpc.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("align_ctf2acpc", *args, **kwargs)

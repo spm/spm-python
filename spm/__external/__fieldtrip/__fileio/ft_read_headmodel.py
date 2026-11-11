@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_read_headmodel(*args, **kwargs):
-    """
+    r"""
       FT_READ_HEADMODEL reads a head model (or volume conduction model of the head) from  
         various manufacturer specific files. Currently supported are ASA, CTF, Neuromag,  
         MBFYS, MATLAB and SimNIBS. The volume conduction model is represented as a  
@@ -22,9 +22,12 @@ def ft_read_headmodel(*args, **kwargs):
         FT_PREPARE_VOL_SENS, FT_COMPUTE_LEADFIELD  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/ft_read_headmodel.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/fileio/ft_read_headmodel.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_read_headmodel", *args, **kwargs)

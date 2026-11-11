@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_fx_mmc(*args, **kwargs):
-    """
+    r"""
       State equations for a neural mass model of motor cortex  
         Bhatt et al. 2016 Neuroimage  
          
@@ -35,9 +35,12 @@ def spm_fx_mmc(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/dcm_meeg/spm_fx_mmc.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/dcm_meeg/spm_fx_mmc.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_fx_mmc", *args, **kwargs)

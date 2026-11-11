@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _read_nervus_header(*args, **kwargs):
-    """
+    r"""
       read_nervus_header  Returns header information from Nicolet file.  
          
           FILENAME is the file name of a file in the Natus/Nicolet/Nervus(TM)  
@@ -32,9 +32,12 @@ def _read_nervus_header(*args, **kwargs):
         $Id: $  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/read_nervus_header.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/fileio/private/read_nervus_header.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("read_nervus_header", *args, **kwargs)

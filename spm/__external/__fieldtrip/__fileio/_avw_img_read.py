@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _avw_img_read(*args, **kwargs):
-    """
+    r"""
       avw_img_read - read Analyze format data image (*.img)  
          
         [ avw, machine ] = avw_img_read(fileprefix,[orient],[machine],[verbose])  
@@ -62,9 +62,12 @@ def _avw_img_read(*args, **kwargs):
                   avw_view, avw_write, avw_img_write, avw_flip  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/avw_img_read.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/fileio/private/avw_img_read.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("avw_img_read", *args, **kwargs)

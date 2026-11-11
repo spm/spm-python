@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_eeg_remove_spikes(*args, **kwargs):
-    """
+    r"""
       Use Will Pennys robust GLM code to remove 'spikes' from continuous data.  
         Such spikes occur in EEG data recorded with the CTF MEG system at FIL  
         due to some obscure electrical problem.  
@@ -35,9 +35,12 @@ def spm_eeg_remove_spikes(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/MEEGtools/spm_eeg_remove_spikes.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/MEEGtools/spm_eeg_remove_spikes.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_eeg_remove_spikes", *args, **kwargs)

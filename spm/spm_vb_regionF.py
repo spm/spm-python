@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_vb_regionF(*args, **kwargs):
-    """
+    r"""
       Get log model evidence over a region of data for a GLM  
         FORMAT [F] = spm_vb_regionF (Y,xY,SPM)  
          
@@ -27,9 +27,12 @@ def spm_vb_regionF(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/spm_vb_regionF.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/spm_vb_regionF.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_vb_regionF", *args, **kwargs)

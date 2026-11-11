@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_timelockbaseline(*args, **kwargs):
-    """
+    r"""
       FT_TIMELOCKBASELINE performs baseline correction for ERF and ERP data. To apply  
         baseline correction to data that is not timelocked, use ft_preprocessing instead.  
          
@@ -26,9 +26,12 @@ def ft_timelockbaseline(*args, **kwargs):
         See also FT_TIMELOCKANALYSIS, FT_FREQBASELINE, FT_TIMELOCKGRANDAVERAGE, FT_DATATYPE_TIMELOCK  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/ft_timelockbaseline.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/ft_timelockbaseline.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_timelockbaseline", *args, **kwargs)

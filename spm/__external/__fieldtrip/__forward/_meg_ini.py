@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _meg_ini(*args, **kwargs):
-    """
+    r"""
       initializes MEG-forward calculation  
         usage: forwpar=meg_ini(vc,center,order,sens,refs,gradlocs,weights)  
          
@@ -33,9 +33,12 @@ def _meg_ini(*args, **kwargs):
         note: it is assumed that locations are in cm.  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/forward/private/meg_ini.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/forward/private/meg_ini.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("meg_ini", *args, **kwargs)

@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_connectivity_pdc(*args, **kwargs):
-    """
+    r"""
       FT_CONNECTIVITY_PDC computes partial directed coherence. This function implements  
         the metrices described in Baccala et al., Biological Cybernetics 2001, 84(6),  
         463-74. and in Baccala et al., 15th Int.Conf.on DSP 2007, 163-66.  
@@ -45,9 +45,12 @@ def ft_connectivity_pdc(*args, **kwargs):
         See also CONNECTIVITY, FT_CONNECTIVITYANALYSIS  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/connectivity/ft_connectivity_pdc.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/connectivity/ft_connectivity_pdc.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_connectivity_pdc", *args, **kwargs)

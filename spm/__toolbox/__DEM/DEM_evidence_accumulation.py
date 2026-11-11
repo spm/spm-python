@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def DEM_evidence_accumulation(*args, **kwargs):
-    """
+    r"""
       Saccadic eye movements under active inference:  
        __________________________________________________________________________  
         This demo illustrates evidence accumulation (and responses) using a very  
@@ -23,9 +23,12 @@ def DEM_evidence_accumulation(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DEM/DEM_evidence_accumulation.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/DEM/DEM_evidence_accumulation.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("DEM_evidence_accumulation", *args, **kwargs)

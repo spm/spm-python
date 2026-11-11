@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _read_plexon_plx(*args, **kwargs):
-    """
+    r"""
       READ_PLEXON_PLX reads header or data from a Plexon *.plx file, which  
         is a file containing action-potential (spike) timestamps and waveforms  
         (spike channels), event timestamps (event channels), and continuous  
@@ -22,9 +22,12 @@ def _read_plexon_plx(*args, **kwargs):
           'EventIndex'       = number, or list of numbers (that will result in multiple outputs)  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/read_plexon_plx.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/fileio/private/read_plexon_plx.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("read_plexon_plx", *args, **kwargs)

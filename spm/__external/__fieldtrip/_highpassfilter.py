@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _highpassfilter(*args, **kwargs):
-    """
+    r"""
       HIGHPASSFILTER removes low frequency components from EEG/MEG data  
           
         Use as  
@@ -27,9 +27,12 @@ def _highpassfilter(*args, **kwargs):
         See also LOWPASSFILTER, BANDPASSFILTER  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/highpassfilter.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/private/highpassfilter.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("highpassfilter", *args, **kwargs)

@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def cfg_ui_multibatch(*args, **kwargs):
-    """
+    r"""
       CFG_UI_MULTIBATCH MATLAB code for cfg_ui_multibatch.fig  
              CFG_UI_MULTIBATCH, by itself, creates a new CFG_UI_MULTIBATCH or raises the existing  
              singleton*.  
@@ -25,9 +25,12 @@ def cfg_ui_multibatch(*args, **kwargs):
         See also: GUIDE, GUIDATA, GUIHANDLES  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/matlabbatch/cfg_ui_multibatch.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/matlabbatch/cfg_ui_multibatch.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("cfg_ui_multibatch", *args, **kwargs)

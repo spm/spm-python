@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_prepare_montage(*args, **kwargs):
-    """
+    r"""
       FT_PREPARE_MONTAGE creates a referencing scheme based on the input configuration  
         options and the channels in the data structure. The resulting montage can be  
         given as input to FT_APPLY_MONTAGE, or as cfg.montage to FT_PREPROCESSING.  
@@ -40,9 +40,12 @@ def ft_prepare_montage(*args, **kwargs):
         See also FT_PREPROCESSING, FT_APPLY_MONTAGE  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/ft_prepare_montage.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/ft_prepare_montage.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_prepare_montage", *args, **kwargs)

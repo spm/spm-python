@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_DEM_M_set(*args, **kwargs):
-    """
+    r"""
       Set indices and performs checks on hierarchical models  
         FORMAT [M] = spm_DEM_M_set(M)  
          
@@ -51,9 +51,12 @@ def spm_DEM_M_set(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/spm_DEM_M_set.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/spm_DEM_M_set.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_DEM_M_set", *args, **kwargs)

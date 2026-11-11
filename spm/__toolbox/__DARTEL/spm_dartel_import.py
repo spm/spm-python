@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_dartel_import(*args, **kwargs):
-    """
+    r"""
       Import subjects' data for use with Dartel  
         FORMAT spm_dartel_import(job)  
         job.matnames  - Names of *_seg_sn.mat files to use  
@@ -18,9 +18,12 @@ def spm_dartel_import(*args, **kwargs):
        ___________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DARTEL/spm_dartel_import.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/DARTEL/spm_dartel_import.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_dartel_import", *args, **kwargs)

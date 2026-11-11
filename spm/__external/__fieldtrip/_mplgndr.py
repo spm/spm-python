@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _mplgndr(*args, **kwargs):
-    """
+    r"""
       MPLGNDR associated Legendre functions  
          
         y = mplgndr(n,k,x) computes the values of the associated Legendre  
@@ -13,9 +13,12 @@ def _mplgndr(*args, **kwargs):
         degree i-1.  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/mplgndr.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/private/mplgndr.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("mplgndr", *args, **kwargs)

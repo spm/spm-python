@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _buffer_wait_dat(*args, **kwargs):
-    """
+    r"""
       BUFFER_WAIT_DAT implementation that is also backwards compatibility with ft buffer version 1  
          
         Use as  
@@ -15,9 +15,12 @@ def _buffer_wait_dat(*args, **kwargs):
         It returns a structure with the available nsamples and nevents.  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/buffer_wait_dat.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/fileio/private/buffer_wait_dat.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("buffer_wait_dat", *args, **kwargs)

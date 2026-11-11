@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_mar2csd(*args, **kwargs):
-    """
+    r"""
       Get spectral estimates from MAR model  
         FORMAT [csd,dtf,coh,pha] = spm_mar2csd(mar,Hz,ns)  
          
@@ -27,9 +27,12 @@ def spm_mar2csd(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/spectral/spm_mar2csd.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/spectral/spm_mar2csd.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_mar2csd", *args, **kwargs)

@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _tokenize(*args, **kwargs):
-    """
+    r"""
       TOKENIZE cuts a string into pieces, returning the pieces in a cell-array  
          
         Use as  
@@ -22,9 +22,12 @@ def _tokenize(*args, **kwargs):
         See also STRSPLIT, SPLIT, STRTOK, TEXTSCAN  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/tokenize.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/fileio/private/tokenize.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("tokenize", *args, **kwargs)

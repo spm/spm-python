@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def DATA_WID_data(*args, **kwargs):
-    """
+    r"""
       Data retrieval function for COVID modelling  
         FORMAT D = DATA_WID_data  
          
@@ -13,9 +13,12 @@ def DATA_WID_data(*args, **kwargs):
         Copyright (C) 2020 Wellcome Centre for Human Neuroimaging  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DEM/DATA_WID_data.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/DEM/DATA_WID_data.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("DATA_WID_data", *args, **kwargs)

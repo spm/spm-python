@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def hanning(*args, **kwargs):
-    """
+    r"""
      HANNING   Hanning window.  
           HANNING(N) returns the N-point symmetric Hanning window in a column  
           vector.  Note that the first and last zero-weighted window samples  
@@ -22,9 +22,12 @@ def hanning(*args, **kwargs):
           This is a drop-in replacement to bypass the signal processing toolbox  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/external/signal/hanning.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/external/signal/hanning.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("hanning", *args, **kwargs)

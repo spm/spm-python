@@ -2,8 +2,8 @@ from spm._runtime import Runtime
 
 
 def ft_uilayout(*args, **kwargs):
-    """
-      FT_UILAYOUT is a helper function to make a consistent graphical user interafce with  
+    r"""
+      FT_UILAYOUT is a helper function to make a consistent graphical user interface with  
         multiple control elements. This function will find all elements with a specific tag  
         and style, and update or position them consistently.  
          
@@ -61,9 +61,12 @@ def ft_uilayout(*args, **kwargs):
         See also UICONTROL, ALIGN, UISTACK  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/plotting/ft_uilayout.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/plotting/ft_uilayout.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_uilayout", *args, **kwargs, nargout=0)

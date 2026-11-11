@@ -2,14 +2,15 @@ from spm._runtime import Runtime
 
 
 def spm_dx(*args, **kwargs):
-    """
+    r"""
       Returns dx(t) = (expm(dfdx*t) - I)*inv(dfdx)*f  
-        FORMAT [dx] = spm_dx(dfdx,f,[t])  
+        FORMAT [dx] = spm_dx(dfdx,f,[t],[OPT])  
         dfdx   = df/dx  
         f      = dx/dt  
         t      = integration time: (default t = Inf);  
                  if t is a cell (i.e., {t}) then t is set to:  
                  exp(t - log(diag(-dfdx))  
+        OPT    = 'Safe' or 'Solenoidal'  
          
         dx     = x(t) - x(0)  
        --------------------------------------------------------------------------  
@@ -50,9 +51,12 @@ def spm_dx(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/spm_dx.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/spm_dx.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_dx", *args, **kwargs)

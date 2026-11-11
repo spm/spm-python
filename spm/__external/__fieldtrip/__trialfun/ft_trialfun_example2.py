@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_trialfun_example2(*args, **kwargs):
-    """
+    r"""
       FT_TRIALFUN_EXAMPLE2 is an example trial function that detects muscle activity in  
         an EMG channel and defines variable length trials from the EMG onset up to the EMG  
         offset.  
@@ -20,9 +20,12 @@ def ft_trialfun_example2(*args, **kwargs):
         See also FT_DEFINETRIAL, FT_TRIALFUN_GENERAL  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/trialfun/ft_trialfun_example2.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/trialfun/ft_trialfun_example2.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_trialfun_example2", *args, **kwargs)

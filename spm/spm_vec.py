@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_vec(*args, **kwargs):
-    """
+    r"""
       Vectorise a numeric, cell or structure array - a compiled routine  
         FORMAT [vX] = spm_vec(X)  
         X  - numeric, cell or structure array[s]  
@@ -16,9 +16,12 @@ def spm_vec(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/spm_vec.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/spm_vec.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_vec", *args, **kwargs)

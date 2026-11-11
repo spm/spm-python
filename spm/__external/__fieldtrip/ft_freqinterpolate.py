@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_freqinterpolate(*args, **kwargs):
-    """
+    r"""
       FT_FREQINTERPOLATE interpolates frequencies by looking at neighbouring  
         values or simply replaces a piece in the spectrum by NaN.  
          
@@ -25,9 +25,12 @@ def ft_freqinterpolate(*args, **kwargs):
         See also FT_FREQANALYSIS, FT_FREQDESCRIPTIVES, FT_FREQSIMULATION  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/ft_freqinterpolate.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/ft_freqinterpolate.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_freqinterpolate", *args, **kwargs)

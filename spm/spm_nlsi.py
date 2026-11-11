@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_nlsi(*args, **kwargs):
-    """
+    r"""
       Nonlinear system identification of a MIMO system  
         FORMAT [Ep,Cp,Eh,K0,K1,K2,M0,M1,L1,L2] = spm_nlsi(M,U,Y)  
         FORMAT [K0,K1,K2,M0,M1,L1,L2]          = spm_nlsi(M)  
@@ -92,9 +92,12 @@ def spm_nlsi(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/spm_nlsi.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/spm_nlsi.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_nlsi", *args, **kwargs)

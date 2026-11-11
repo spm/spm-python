@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_trialfun_bids(*args, **kwargs):
-    """
+    r"""
       FT_TRIALFUN_BIDS determines trials/segments to be used for subsequent analysis, on  
         the basis of the BIDS "events.tsv" file. This function should in general not be  
         called directly, it will be called by FT_DEFINETRIAL.  
@@ -35,9 +35,12 @@ def ft_trialfun_bids(*args, **kwargs):
         See also FT_DEFINETRIAL, FT_TRIALFUN_GENERAL  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/trialfun/ft_trialfun_bids.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/trialfun/ft_trialfun_bids.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_trialfun_bids", *args, **kwargs)

@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_timelockgrandaverage(*args, **kwargs):
-    """
+    r"""
       FT_TIMELOCKGRANDAVERAGE computes ERF/ERP average and variance  
         over multiple subjects or over blocks within one subject  
          
@@ -46,9 +46,12 @@ def ft_timelockgrandaverage(*args, **kwargs):
         See also FT_TIMELOCKANALYSIS, FT_TIMELOCKSTATISTICS, FT_TIMELOCKBASELINE  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/ft_timelockgrandaverage.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/ft_timelockgrandaverage.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_timelockgrandaverage", *args, **kwargs)

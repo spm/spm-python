@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _read_brainvision_vhdr(*args, **kwargs):
-    """
+    r"""
       READ_BRAINVISION_VHDR reads the known items from the BrainVision EEG  
         header file and returns them in a structure.  
          
@@ -12,9 +12,12 @@ def _read_brainvision_vhdr(*args, **kwargs):
         See also READ_BRAINVISION_EEG, READ_BRAINVISION_VMRK  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/read_brainvision_vhdr.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/fileio/private/read_brainvision_vhdr.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("read_brainvision_vhdr", *args, **kwargs)

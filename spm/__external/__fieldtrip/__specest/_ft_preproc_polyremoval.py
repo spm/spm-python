@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _ft_preproc_polyremoval(*args, **kwargs):
-    """
+    r"""
       FT_PREPROC_POLYREMOVAL removed an Nth order polynomal from the data  
          
         Use as  
@@ -34,9 +34,12 @@ def _ft_preproc_polyremoval(*args, **kwargs):
         See also FT_PREPROC_BASELINECORRECT, FT_PREPROC_DETREND  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/specest/private/ft_preproc_polyremoval.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/specest/private/ft_preproc_polyremoval.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_preproc_polyremoval", *args, **kwargs)

@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_inverse_dipolefit(*args, **kwargs):
-    """
+    r"""
       FT_INVERSE_DIPOLEFIT performs an equivalent current dipole fit with a single  
         or a small number of dipoles to explain an EEG or MEG scalp topography.  
          
@@ -42,16 +42,24 @@ def ft_inverse_dipolefit(*args, **kwargs):
           constr.sequential = boolean, fit different dipoles to sequential slices of the data  
          
         The maximum likelihood estimation implements  
-        - Lutkenhoner B. "Dipole source localization by means of maximum likelihood  
+          Lutkenhoner B. "Dipole source localization by means of maximum likelihood  
           estimation I. Theory and simulations" Electroencephalogr Clin Neurophysiol. 1998  
           Apr;106(4):314-21.  
+         
+        The rigidbody constraint implements  
+          Pfeiffer C, Andersen LM, Lundqvist D, Hämäläinen M, Schneiderman JF, Oostenveld R.  
+          "Localizing on-scalp MEG sensors using an array of magnetic dipole coils" PLoS  
+          One. 2018 doi: 10.1371/journal.pone.0191111  
          
         See also FT_DIPOLEFITTING, FT_SOURCEANALYSIS, FT_PREPARE_HEADMODEL, FT_PREPARE_SOURCEMODEL  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/inverse/ft_inverse_dipolefit.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/inverse/ft_inverse_dipolefit.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_inverse_dipolefit", *args, **kwargs)

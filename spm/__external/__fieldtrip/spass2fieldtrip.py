@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spass2fieldtrip(*args, **kwargs):
-    """
+    r"""
       SPASS2FIELDTRIP reads data from a set of SPASS data files and converts  
         the contents into data structures that FieldTrip understands. Note that  
         dependent on the SPASS data it might be required to change some  
@@ -38,9 +38,12 @@ def spass2fieldtrip(*args, **kwargs):
         See also NUTMEG2FIELDTRIP, LORETA2FIELDTRIP, FIELDTRIP2SPSS  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/spass2fieldtrip.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/spass2fieldtrip.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spass2fieldtrip", *args, **kwargs)

@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_eeg_locate_channels(*args, **kwargs):
-    """
+    r"""
       Locate channels and generate mask for converting M/EEG data into images  
         FORMAT [Cel, x, y] = spm_eeg_locate_channels(D, n, channels)  
          
@@ -22,9 +22,12 @@ def spm_eeg_locate_channels(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/spm_eeg_locate_channels.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/spm_eeg_locate_channels.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_eeg_locate_channels", *args, **kwargs)

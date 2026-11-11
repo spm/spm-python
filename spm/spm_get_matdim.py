@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_get_matdim(*args, **kwargs):
-    """
+    r"""
       Voxel-to-world matrix and image dimensions from image or bbox and vox-dim  
          
         FORMAT [mat, dim] = spm_get_matdim(img, vx, bb)  
@@ -23,9 +23,12 @@ def spm_get_matdim(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/spm_get_matdim.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/spm_get_matdim.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_get_matdim", *args, **kwargs)

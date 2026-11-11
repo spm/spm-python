@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def DEMO_model_reduction_ERP(*args, **kwargs):
-    """
+    r"""
       Illustration of (post hoc) neuronal mass model optimisation  
        __________________________________________________________________________  
         This demonstration routine illustrates the post-hoc optimisation of  
@@ -24,9 +24,12 @@ def DEMO_model_reduction_ERP(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/Neural_Models/DEMO_model_reduction_ERP.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/Neural_Models/DEMO_model_reduction_ERP.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("DEMO_model_reduction_ERP", *args, **kwargs, nargout=0)

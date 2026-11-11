@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _align_neuromag2acpc(*args, **kwargs):
-    """
+    r"""
       ALIGN_NEUROMAG2ACPC performs an approximate alignment of the anatomical  
         volume from NEUROMAG towards ACPC coordinates. Only the homogenous transformation  
         matrix is modified and the coordsys-field is updated.  
@@ -25,9 +25,12 @@ def _align_neuromag2acpc(*args, **kwargs):
         See also ALIGN_CTF2ACPC, ALIGN_FSAVERAGE2MNI  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/utilities/private/align_neuromag2acpc.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/utilities/private/align_neuromag2acpc.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("align_neuromag2acpc", *args, **kwargs)

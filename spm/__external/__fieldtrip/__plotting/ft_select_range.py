@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_select_range(*args, **kwargs):
-    """
+    r"""
       FT_SELECT_RANGE is a helper function that can be used as callback function  
         in a figure. It allows the user to select a horizontal or a vertical  
         range, or one or multiple boxes.  
@@ -48,9 +48,12 @@ def ft_select_range(*args, **kwargs):
         See also FT_SELECT_BOX, FT_SELECT_CHANNEL, FT_SELECT_POINT, FT_SELECT_POINT3D, FT_SELECT_VOXEL  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/plotting/ft_select_range.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/plotting/ft_select_range.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_select_range", *args, **kwargs, nargout=0)

@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_componentanalysis(*args, **kwargs):
-    """
+    r"""
       FT_COMPONENTANALYSIS performs independent component analysis or other  
         spatio-temporal decompositions of EEG or MEG data. This function computes  
         the topography and timecourses of the components. The output of this  
@@ -24,8 +24,8 @@ def ft_componentanalysis(*args, **kwargs):
                              is split, it can also be 'all' or 'no' (default = 'no')  
           cfg.trials       = 'all' or a selection given as a 1xN vector (default = 'all')  
           cfg.numcomponent = 'all' or number (default = 'all')  
-          cfg.demean       = 'no' or 'yes', whether to demean the input data (default = 'yes')  
-          cfg.updatesens   = 'no' or 'yes' (default = 'yes')  
+          cfg.demean       = 'yes' or 'no', whether to demean the input data (default = 'yes')  
+          cfg.updatesens   = 'yes' or 'no', whether to update the sensor array with the spatial projector (default = 'yes')  
           cfg.feedback     = 'no', 'text', 'textbar', 'gui' (default = 'text')  
          
         The runica method supports the following method-specific options. The  
@@ -140,9 +140,12 @@ def ft_componentanalysis(*args, **kwargs):
         JADER, VARIMAX, DSS, CCA, SOBI, ICASSO  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/ft_componentanalysis.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/ft_componentanalysis.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_componentanalysis", *args, **kwargs)

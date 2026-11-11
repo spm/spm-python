@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_mfx(*args, **kwargs):
-    """
+    r"""
       Convert a 1st-level design specification into a MFX specification  
         FORMAT [SPM] = spm_mfx(SPM,c)  
         SPM {in} - design and estimation structure after a 1st-level analysis  
@@ -81,9 +81,12 @@ def spm_mfx(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/spm_mfx.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/spm_mfx.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_mfx", *args, **kwargs)

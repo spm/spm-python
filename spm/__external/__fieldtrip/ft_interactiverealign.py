@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_interactiverealign(*args, **kwargs):
-    """
+    r"""
       FT_INTERACTIVEREALIGN allows the user to interactively translate, rotate and scale an  
         individual geometrical object to a template geometrical object. It can for example be used  
         to align EEG electrodes to a model of the scalp surface.  
@@ -17,8 +17,8 @@ def ft_interactiverealign(*args, **kwargs):
           cfg.individual.opto           = structure, see FT_READ_SENS  
           cfg.individual.headmodel      = structure, see FT_PREPARE_HEADMODEL  
           cfg.individual.headshape      = structure, see FT_READ_HEADSHAPE  
-          cfg.individual.mri            = structure, see FT_READ_MRI  
           cfg.individual.mesh           = structure, see FT_PREPARE_MESH  
+          cfg.individual.mri            = structure, see FT_READ_MRI  
         You can specify the style with which the objects are displayed using  
           cfg.individual.headmodelstyle = 'vertex', 'edge', 'surface' or 'both' (default = 'edge')  
           cfg.individual.headshapestyle = 'vertex', 'edge', 'surface' or 'both' (default = 'vertex')  
@@ -31,8 +31,8 @@ def ft_interactiverealign(*args, **kwargs):
           cfg.template.opto             = structure, see FT_READ_SENS  
           cfg.template.headmodel        = structure, see FT_PREPARE_HEADMODEL  
           cfg.template.headshape        = structure, see FT_READ_HEADSHAPE  
-          cfg.template.mri              = structure, see FT_READ_MRI  
           cfg.template.mesh             = structure, see FT_PREPARE_MESH  
+          cfg.template.mri              = structure, see FT_READ_MRI  
         You can specify the style with which the objects are displayed using  
           cfg.template.headmodelstyle   = 'vertex', 'edge', 'surface' or 'both' (default = 'edge')  
           cfg.template.headshapestyle   = 'vertex', 'edge', 'surface' or 'both' (default = 'vertex')  
@@ -44,9 +44,12 @@ def ft_interactiverealign(*args, **kwargs):
         FT_READ_SENS, FT_READ_HEADMODEL, FT_READ_HEADSHAPE  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/ft_interactiverealign.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/ft_interactiverealign.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_interactiverealign", *args, **kwargs)

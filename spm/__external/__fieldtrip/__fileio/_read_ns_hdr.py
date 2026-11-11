@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _read_ns_hdr(*args, **kwargs):
-    """
+    r"""
       READ_NS_HDR read the header from a NeuroScan 3.x or 4.x AVG/EEG/CNT File  
          
         [hdr] = read_ns_hdr(filename)  
@@ -18,9 +18,12 @@ def _read_ns_hdr(*args, **kwargs):
           hdr.domain      - time (0) or frequency (1) domain  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/read_ns_hdr.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/fileio/private/read_ns_hdr.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("read_ns_hdr", *args, **kwargs)

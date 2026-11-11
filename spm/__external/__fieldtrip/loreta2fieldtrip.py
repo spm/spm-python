@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def loreta2fieldtrip(*args, **kwargs):
-    """
+    r"""
       LORETA2FIELDTRIP reads and converts a LORETA source reconstruction into a  
         FieldTrip data structure, which subsequently can be used for statistical  
         analysis or other analysis methods implemented in Fieldtrip.  
@@ -20,9 +20,12 @@ def loreta2fieldtrip(*args, **kwargs):
         See also EEGLAB2FIELDTRIP, SPM2FIELDTRIP, NUTMEG2FIELDTRIP, SPASS2FIELDTRIP  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/loreta2fieldtrip.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/loreta2fieldtrip.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("loreta2fieldtrip", *args, **kwargs)

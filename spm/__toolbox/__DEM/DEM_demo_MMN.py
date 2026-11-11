@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def DEM_demo_MMN(*args, **kwargs):
-    """
+    r"""
       This Demo uses the linear convolution model of previous examples to  
         simulate chirps (c.f., the bird song demos). By presenting a train of  
         chirps and changing the stimulus after a couple of presentations, we can  
@@ -17,9 +17,12 @@ def DEM_demo_MMN(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DEM/DEM_demo_MMN.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/DEM/DEM_demo_MMN.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("DEM_demo_MMN", *args, **kwargs, nargout=0)

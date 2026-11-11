@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_mfa_G(*args, **kwargs):
-    """
+    r"""
       Create a structure for a Gibb's ensemble  
         FORMAT [G] = spm_mfa_G(M,x)  
        --------------------------------------------------------------------------  
@@ -32,9 +32,12 @@ def spm_mfa_G(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/Neural_Models/spm_mfa_G.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/Neural_Models/spm_mfa_G.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_mfa_G", *args, **kwargs)

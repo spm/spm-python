@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _opto2homer(*args, **kwargs):
-    """
+    r"""
       OPTO2HOMER constructs a Homer-compatible sensor definition (SD) from a FieldTrip  
         opto structure.  
          
@@ -26,9 +26,12 @@ def _opto2homer(*args, **kwargs):
         See also HOMER2OPTO, FT_DATATYPE_SENS  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/opto2homer.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/private/opto2homer.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("opto2homer", *args, **kwargs)

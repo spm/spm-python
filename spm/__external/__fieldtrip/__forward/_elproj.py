@@ -2,12 +2,12 @@ from spm._runtime import Runtime
 
 
 def _elproj(*args, **kwargs):
-    """
-      ELPROJ makes a azimuthal projection of a 3D electrode cloud  
-         on a plane tangent to the sphere fitted through the electrodes  
-         the projection is along the z-axis  
+    r"""
+      ELPROJ makes a azimuthal projection of a 3D electrode cloud on a plane tangent to  
+        the sphere fitted through the electrodes. The projection is along the z-axis.  
          
-         [proj] = elproj([x, y, z], 'method');  
+        Use as  
+          proj = elproj([x, y, z], 'method');  
          
         Method should be one of these:  
             'gnomic'  
@@ -23,15 +23,18 @@ def _elproj(*args, **kwargs):
         projection results, if the light is antipodal a Sterographic,  
         and if at infinity, an Orthographic.  
          
-        The default projection is a polar projection (BESA like).  
+        The default projection is a BESA-like polar projection.  
         An inverse projection is the opposite of the default polar projection.  
          
         See also PROJECTTRI  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/forward/private/elproj.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/forward/private/elproj.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("elproj", *args, **kwargs)

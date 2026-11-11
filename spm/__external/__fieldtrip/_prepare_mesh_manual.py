@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _prepare_mesh_manual(*args, **kwargs):
-    """
+    r"""
       PREPARE_MESH_MANUAL is called by PREPARE_MESH and opens a GUI to manually  
         select points/polygons in an mri dataset.  
          
@@ -17,9 +17,12 @@ def _prepare_mesh_manual(*args, **kwargs):
         See also PREPARE_MESH_SEGMENTATION, PREPARE_MESH_HEADSHAPE  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/prepare_mesh_manual.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/private/prepare_mesh_manual.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("prepare_mesh_manual", *args, **kwargs)

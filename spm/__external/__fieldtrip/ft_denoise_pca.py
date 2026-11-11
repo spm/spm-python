@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_denoise_pca(*args, **kwargs):
-    """
+    r"""
       FT_DENOISE_PCA performs a principal component analysis (PCA) on specified reference  
         channels and subtracts the projection of the data of interest onto this orthogonal  
         basis from the data of interest. This is the algorithm which is applied by BTi/4D to  
@@ -23,24 +23,29 @@ def ft_denoise_pca(*args, **kwargs):
         consistent with the output of FT_PREPROCESSING.  
          
         The configuration should contain  
-          cfg.refchannel = the channels used as reference signal (default = 'MEGREF')  
           cfg.channel    = the channels to be denoised (default = 'MEG')  
+          cfg.refchannel = the channels used as reference signal (default = 'MEGREF')  
           cfg.truncate   = optional truncation of the singular value spectrum (default = 'no')  
-          cfg.zscore     = standardise reference data prior to PCA (default = 'no')  
-          cfg.pertrial   = 'no' (default) or 'yes'. Regress out the references on a per trial basis  
+          cfg.zscore     = standardize reference data prior to PCA (default = 'no')  
           cfg.trials     = list of trials that are used (default = 'all')  
-          cfg.updatesens = 'no' or 'yes' (default = 'yes')  
+          cfg.pertrial   = 'yes' or 'no', whether to regress out the references on a per-trial basis (default = 'no')  
+          cfg.updatesens = 'yes' or 'no', whether to update the sensor array with the spatial projector (default = 'yes')  
          
         if cfg.truncate is integer n > 1, n will be the number of singular values kept.  
         if 0 < cfg.truncate < 1, the singular value spectrum will be thresholded at the  
         fraction cfg.truncate of the largest singular value.  
          
-        See also FT_PREPROCESSING, FT_DENOISE_SYNTHETIC, FT_DENOISE_SSP  
+        See also FT_PREPROCESSING, FT_DENOISE_AMM, FT_DENOISE_DSSP,  
+        FT_DENOISE_HFC, FT_DENOISE_PREWHITEN, FT_DENOISE_SSP, FT_DENOISE_SSS,  
+        FT_DENOISE_SYNTHETIC, FT_DENOISE_TSR  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/ft_denoise_pca.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/ft_denoise_pca.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_denoise_pca", *args, **kwargs)

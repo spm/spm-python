@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_deface(*args, **kwargs):
-    """
+    r"""
       Face strip images  
         FORMAT names = spm_deface(job)  
         job.images   - cell array of NIfTI file names  
@@ -14,9 +14,12 @@ def spm_deface(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/spm_deface.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/spm_deface.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_deface", *args, **kwargs)

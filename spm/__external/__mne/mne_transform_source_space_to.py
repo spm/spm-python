@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def mne_transform_source_space_to(*args, **kwargs):
-    """
+    r"""
        
         [res] = mne_transform_source_space_to(src,dest,trans)  
          
@@ -13,9 +13,12 @@ def mne_transform_source_space_to(*args, **kwargs):
         trans      - The coordinate transformation structure to use  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/mne/mne_transform_source_space_to.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/mne/mne_transform_source_space_to.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("mne_transform_source_space_to", *args, **kwargs)

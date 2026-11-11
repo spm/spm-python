@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_gen_Q(*args, **kwargs):
-    """
+    r"""
       Helper routine for spm_gen routines  
         FORMAT [Q] = spm_gen_Q(P,X)  
          
@@ -21,9 +21,12 @@ def spm_gen_Q(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/dcm_meeg/spm_gen_Q.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/dcm_meeg/spm_gen_Q.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_gen_Q", *args, **kwargs)

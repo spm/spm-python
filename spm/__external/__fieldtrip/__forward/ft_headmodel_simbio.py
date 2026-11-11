@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_headmodel_simbio(*args, **kwargs):
-    """
+    r"""
       FT_HEADMODEL_SIMBIO creates a volume conduction model of the head  
         using the finite element method (FEM) for EEG. This function takes  
         as input a volumetric mesh (hexahedral or tetrahedral) and  
@@ -36,12 +36,15 @@ def ft_headmodel_simbio(*args, **kwargs):
          
        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  
          
-        See also FT_PREPARE_VOL_SENS, FT_COMPUTE_LEADFIELD  
+        See also FT_PREPARE_HEADMODEL, FT_COMPUTE_LEADFIELD  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/forward/ft_headmodel_simbio.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/forward/ft_headmodel_simbio.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_headmodel_simbio", *args, **kwargs)

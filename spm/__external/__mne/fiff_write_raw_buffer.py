@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def fiff_write_raw_buffer(*args, **kwargs):
-    """
+    r"""
        
         function fiff_write_raw_buffer(fid,buf,cals,datatype)  
          
@@ -12,9 +12,12 @@ def fiff_write_raw_buffer(*args, **kwargs):
         datatype   (optional) datatype to write, default float  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/mne/fiff_write_raw_buffer.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/mne/fiff_write_raw_buffer.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("fiff_write_raw_buffer", *args, **kwargs, nargout=0)

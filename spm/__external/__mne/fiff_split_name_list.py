@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def fiff_split_name_list(*args, **kwargs):
-    """
+    r"""
        
         [names] = fiff_split_name_list(list)  
          
@@ -11,9 +11,12 @@ def fiff_split_name_list(*args, **kwargs):
         containing the strings  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/mne/fiff_split_name_list.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/mne/fiff_split_name_list.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("fiff_split_name_list", *args, **kwargs)

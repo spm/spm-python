@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_mvb_G(*args, **kwargs):
-    """
+    r"""
       Multivariate Bayesian inversion of a linear model  
         FORMAT model = spm_mvb_G(X,L,X0,G,V);  
         X      - contrast or target vector  
@@ -41,9 +41,12 @@ def spm_mvb_G(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/spm_mvb_G.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/spm_mvb_G.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_mvb_G", *args, **kwargs)

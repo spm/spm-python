@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _leadfield_fns(*args, **kwargs):
-    """
+    r"""
       LEADFIELD_FNS calculates the FDM forward solution for a set of given  
         dipolar sources  
          
@@ -23,9 +23,12 @@ def _leadfield_fns(*args, **kwargs):
           vol.bnd        positions of the external surface vertices  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/forward/private/leadfield_fns.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/forward/private/leadfield_fns.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("leadfield_fns", *args, **kwargs)

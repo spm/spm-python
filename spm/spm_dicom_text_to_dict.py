@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_dicom_text_to_dict(*args, **kwargs):
-    """
+    r"""
       Create a DICOM dictionary .mat file from a text version  
         FORMAT dict = spm_dicom_text_to_dict(textfile)  
         OR            spm_dicom_text_to_dict(textfile)  
@@ -23,9 +23,12 @@ def spm_dicom_text_to_dict(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/spm_dicom_text_to_dict.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/spm_dicom_text_to_dict.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_dicom_text_to_dict", *args, **kwargs)

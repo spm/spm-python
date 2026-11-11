@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _estimate_fwhm1(*args, **kwargs):
-    """
+    r"""
       ESTIMATE_FWHM1(SOURCE, REMOVECENTER)  
          
         This function computes the fwhm of the spatial filters, according to  
@@ -13,9 +13,12 @@ def _estimate_fwhm1(*args, **kwargs):
         This function can only deal with scalar filters.  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/estimate_fwhm1.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/private/estimate_fwhm1.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("estimate_fwhm1", *args, **kwargs)

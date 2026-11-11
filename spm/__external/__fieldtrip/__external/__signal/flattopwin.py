@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def flattopwin(*args, **kwargs):
-    """
+    r"""
       Author: Paul Kienzle <pkienzle@users.sf.net> (2004)  
         This program is granted to the public domain.  
          
@@ -29,9 +29,12 @@ def flattopwin(*args, **kwargs):
         analysis (Part I)', Bruel & Kjaer Technical Review No.3.  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/external/signal/flattopwin.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/external/signal/flattopwin.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("flattopwin", *args, **kwargs)

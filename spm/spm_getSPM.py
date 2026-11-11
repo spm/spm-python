@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_getSPM(*args, **kwargs):
-    """
+    r"""
       Compute a specified and thresholded SPM/PPM following estimation  
         FORMAT [SPM,xSPM] = spm_getSPM;  
         Query SPM in interactive mode.  
@@ -185,9 +185,12 @@ def spm_getSPM(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/spm_getSPM.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/spm_getSPM.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_getSPM", *args, **kwargs)

@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_x_cmc(*args, **kwargs):
-    """
+    r"""
       Initial state of a canonical microcircuit model  
         FORMAT [x] = spm_x_cmc(P)  
         P - parameters  
@@ -14,9 +14,12 @@ def spm_x_cmc(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/dcm_meeg/spm_x_cmc.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/dcm_meeg/spm_x_cmc.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_x_cmc", *args, **kwargs)

@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_fp_display_nullclines(*args, **kwargs):
-    """
+    r"""
       Nullcline plot of flow and sample trajectory  
         FORMAT spm_fp_display_nullclines(M,x)  
          
@@ -13,9 +13,12 @@ def spm_fp_display_nullclines(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/spm_fp_display_nullclines.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/spm_fp_display_nullclines.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_fp_display_nullclines", *args, **kwargs)

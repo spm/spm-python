@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_trialfun_general(*args, **kwargs):
-    """
+    r"""
       FT_TRIALFUN_GENERAL reads events from the dataset using FT_READ_EVENT and  
         constructs a trial definition. This function should in general not be called  
         directly, it will be called by FT_DEFINETRIAL.  
@@ -35,9 +35,12 @@ def ft_trialfun_general(*args, **kwargs):
         See also FT_DEFINETRIAL, FT_TRIALFUN_GUI, FT_TRIALFUN_SHOW  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/trialfun/ft_trialfun_general.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/trialfun/ft_trialfun_general.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_trialfun_general", *args, **kwargs)

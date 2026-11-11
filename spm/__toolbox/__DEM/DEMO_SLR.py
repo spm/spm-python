@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def DEMO_SLR(*args, **kwargs):
-    """
+    r"""
       Demo of sparse logistic regression. This demonstration routines  
         illustrates the use of sparse acoustic regression (as implemented in   
         spm_sparse_regression.m) to recover a small number of causes that best  
@@ -38,9 +38,12 @@ def DEMO_SLR(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DEM/DEMO_SLR.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/DEM/DEMO_SLR.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("DEMO_SLR", *args, **kwargs, nargout=0)

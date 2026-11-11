@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_Npdf(*args, **kwargs):
-    """
+    r"""
       Probability Density Function (PDF) of univariate Normal distribution  
         FORMAT f = spm_Npdf(x,u,v)  
          
@@ -45,9 +45,12 @@ def spm_Npdf(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/spm_Npdf.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/spm_Npdf.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_Npdf", *args, **kwargs)

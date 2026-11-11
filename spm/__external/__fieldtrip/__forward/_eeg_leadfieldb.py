@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _eeg_leadfieldb(*args, **kwargs):
-    """
+    r"""
       EEG_LEADFIELDB computes the electric leadfield for a dipole in a volume  
         using the boundary element method  
          
@@ -23,9 +23,12 @@ def _eeg_leadfieldb(*args, **kwargs):
           vol.bnd(i).pos  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/forward/private/eeg_leadfieldb.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/forward/private/eeg_leadfieldb.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("eeg_leadfieldb", *args, **kwargs)

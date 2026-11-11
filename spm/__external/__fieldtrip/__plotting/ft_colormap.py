@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_colormap(*args, **kwargs):
-    """
+    r"""
       FT_COLORMAP is a wrapper function with the same usage as the normal COLORMAP  
         function, but it also knows about the colormaps from BREWERMAP and some colormaps  
         from MATPLOTLIB. The recommended colormaps include 'parula', 'cividis', 'balance',  
@@ -50,12 +50,15 @@ def ft_colormap(*args, **kwargs):
         - Cooper et al. 2021. Over the rainbow: Guidelines for meaningful use of colour maps in neurophysiology. https://doi.org/10.1016/j.neuroimage.2021.118628  
         - Kovesi 2015, Good colour maps: How to design them. https://doi.org/10.48550/arXiv.1509.03700  
          
-        See also COLORMAP, COLORMAPEDITOR, BREWERMAP, MATPLOTLIB, CMOCEAN, COLORCET  
+        See also COLORMAP, COLORMAPEDITOR, BREWERMAP, MATPLOTLIB, CMOCEAN, COLORCET, COLORSPEC2RGB  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/plotting/ft_colormap.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/plotting/ft_colormap.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_colormap", *args, **kwargs)

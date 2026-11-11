@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_determine_coordsys(*args, **kwargs):
-    """
+    r"""
       FT_DETERMINE_COORDSYS plots a geometrical object, allowing you to perform  
         a visual check on the coordinatesystem, the units and on the anatomical  
         labels for the coordinate system axes.  
@@ -11,8 +11,8 @@ def ft_determine_coordsys(*args, **kwargs):
           [dataout] = ft_determine_coordsys(datain, ...)  
         where the input data structure can be either  
          - an anatomical MRI  
-         - a cortical or head surface mesh  
          - an electrode, gradiometer or optode definition  
+         - a cortical or head surface mesh  
          - a volume conduction model of the head  
         or most other FieldTrip structures that represent geometrical information.  
          
@@ -30,9 +30,9 @@ def ft_determine_coordsys(*args, **kwargs):
         coordinate system, you should press the corresponding keyboard button.  
          
         Recognized and supported coordinate systems are 'ctf', 'bti', '4d', 'yokogawa',  
-        'eeglab', 'neuromag', 'itab', 'acpc', 'spm', 'mni', 'fsaverage', 'tal', 'scanras',  
+        'eeglab', 'eeglab-hj', 'neuromag', 'itab', 'acpc', 'spm', 'mni', 'fsaverage', 'tal', 'scanras',  
         'scanlps', 'dicom'.  
-          
+         
         Furthermore, supported coordinate systems that do not specify the origin are 'ras',  
         'als', 'lps', etc. See https://www.fieldtriptoolbox.org/faq/coordsys for more  
         details.  
@@ -40,9 +40,12 @@ def ft_determine_coordsys(*args, **kwargs):
         See also FT_CONVERT_COORDSYS, FT_DETERMINE_UNITS, FT_CONVERT_UNITS, FT_PLOT_AXES, FT_PLOT_XXX  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/utilities/ft_determine_coordsys.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/utilities/ft_determine_coordsys.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_determine_coordsys", *args, **kwargs)

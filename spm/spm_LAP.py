@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_LAP(*args, **kwargs):
-    """
+    r"""
       Laplacian model inversion (see also spm_LAPS)  
         FORMAT DEM = spm_LAP(DEM)  
          
@@ -80,9 +80,9 @@ def spm_LAP(*args, **kwargs):
         M(1).E.method.x = 0,1  switch for precision (hidden states)  
        __________________________________________________________________________  
          
-        spm_LAP implements a variational scheme under the Laplace  
-        approximation to the conditional joint density q on states u, parameters   
-        p and hyperparameters (h,g) of an analytic nonlinear hierarchical dynamic  
+        spm_LAP implements a variational scheme under the Laplace approximation  
+        to the conditional joint density q on states u, parameters p and  
+        hyperparameters (h,g) of an analytic nonlinear hierarchical dynamic  
         model, with additive Gaussian innovations.  
          
                    q(u,p,h,g) = max <L(t)>q  
@@ -92,9 +92,12 @@ def spm_LAP(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/spm_LAP.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/spm_LAP.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_LAP", *args, **kwargs)

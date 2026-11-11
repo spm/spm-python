@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_dcm_fnirs_estimate(*args, **kwargs):
-    """
+    r"""
       Estimate parameters of a DCM for fNIRS data  
         FORMAT [DCM] = spm_dcm_fnirs_estimate(P)  
          
@@ -62,9 +62,12 @@ def spm_dcm_fnirs_estimate(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/dcm_fnirs/spm_dcm_fnirs_estimate.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/dcm_fnirs/spm_dcm_fnirs_estimate.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_dcm_fnirs_estimate", *args, **kwargs)

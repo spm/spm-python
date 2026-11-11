@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_mesh_smooth(*args, **kwargs):
-    """
+    r"""
       Perform Gaussian smoothing on data lying on a surface mesh  
         FORMAT K = spm_mesh_smooth(M)  
         M        - patch structure  
@@ -15,9 +15,12 @@ def spm_mesh_smooth(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/spm_mesh_smooth.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/spm_mesh_smooth.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_mesh_smooth", *args, **kwargs)

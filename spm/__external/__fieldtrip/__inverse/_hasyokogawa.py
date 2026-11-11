@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _hasyokogawa(*args, **kwargs):
-    """
+    r"""
       HASYOKOGAWA tests whether the data input toolbox for MEG systems by  
         Yokogawa (www.yokogawa.com, designed by KIT/EagleTechnology) is  
         installed. Only the newest version of the toolbox is accepted.  
@@ -23,9 +23,12 @@ def _hasyokogawa(*args, **kwargs):
         YOKOGAWA2GRAD  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/inverse/private/hasyokogawa.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/inverse/private/hasyokogawa.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("hasyokogawa", *args, **kwargs)

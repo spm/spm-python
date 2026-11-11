@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_sde_dx(*args, **kwargs):
-    """
+    r"""
       Return dx(t) = (expm(dfdx*t) - I)*inv(dfdx)*f + w for SDEs  
         FORMAT [dx] = spm_sde_dx(dfdx,dfdw,f,t)  
         dfdx   = df/dx - x: states  
@@ -32,9 +32,12 @@ def spm_sde_dx(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/spm_sde_dx.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/spm_sde_dx.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_sde_dx", *args, **kwargs)

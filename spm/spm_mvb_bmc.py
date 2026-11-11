@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_mvb_bmc(*args, **kwargs):
-    """
+    r"""
       Multivariate Bayesian model comparison (Baysian decoding of a contrast)  
         FORMAT [F,P,MVB] = spm_mvb_bmc(mvb)  
          
@@ -13,9 +13,12 @@ def spm_mvb_bmc(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/spm_mvb_bmc.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/spm_mvb_bmc.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_mvb_bmc", *args, **kwargs)

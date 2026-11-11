@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _labelcmb2indx(*args, **kwargs):
-    """
+    r"""
       LABELCMB2INDX computes an array with indices, corresponding to the order  
         in a list of labels, for an Nx2 list of label combinations  
          
@@ -30,9 +30,12 @@ def _labelcmb2indx(*args, **kwargs):
         This is a helper function to FT_CONNECTIVITYANALYSIS  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/utilities/private/labelcmb2indx.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/utilities/private/labelcmb2indx.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("labelcmb2indx", *args, **kwargs)

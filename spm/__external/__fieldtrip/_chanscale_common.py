@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _chanscale_common(*args, **kwargs):
-    """
+    r"""
       CHANSCALE_COMMON applies a scaling to specific channel types  
          
         Use as  
@@ -29,9 +29,12 @@ def _chanscale_common(*args, **kwargs):
           cfg.mychan                  = Nx1 cell-array with selection of channels  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/chanscale_common.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/private/chanscale_common.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("chanscale_common", *args, **kwargs)

@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_dem_pursuit_movie(*args, **kwargs):
-    """
+    r"""
       creates a movie of visual prusuit in extrinsic and intrinsic coordinates  
         FORMAT spm_dem_pursuit_movie(DEM)  
          
@@ -28,9 +28,12 @@ def spm_dem_pursuit_movie(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DEM/spm_dem_pursuit_movie.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/DEM/spm_dem_pursuit_movie.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_dem_pursuit_movie", *args, **kwargs, nargout=0)

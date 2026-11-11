@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _getdimord(*args, **kwargs):
-    """
+    r"""
       GETDIMORD determine the dimensions and order of a data field in a FieldTrip  
         structure.  
          
@@ -12,9 +12,12 @@ def _getdimord(*args, **kwargs):
         See also GETDIMSIZ, GETDATFIELD, FIXDIMORD  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/utilities/private/getdimord.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/utilities/private/getdimord.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("getdimord", *args, **kwargs)

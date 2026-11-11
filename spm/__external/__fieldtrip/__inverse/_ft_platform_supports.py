@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _ft_platform_supports(*args, **kwargs):
-    """
+    r"""
       FT_PLATFORM_SUPPORTS returns a boolean indicating whether the current platform  
         supports a specific capability  
          
@@ -46,9 +46,12 @@ def _ft_platform_supports(*args, **kwargs):
         See also FT_VERSION, VERSION, VER, VERLESSTHAN  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/inverse/private/ft_platform_supports.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/inverse/private/ft_platform_supports.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_platform_supports", *args, **kwargs)

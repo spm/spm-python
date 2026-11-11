@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_vol(*args, **kwargs):
-    """
+    r"""
       Get header information for images  
         FORMAT V = spm_vol(P)  
         P - a char or cell array of filenames  
@@ -34,9 +34,12 @@ def spm_vol(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/spm_vol.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/spm_vol.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_vol", *args, **kwargs)

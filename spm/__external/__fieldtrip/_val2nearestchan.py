@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _val2nearestchan(*args, **kwargs):
-    """
+    r"""
       VAL2NEARESTCHAN returns the label of the channel with the value nearest  
         to the specified value.  
          
@@ -11,9 +11,12 @@ def _val2nearestchan(*args, **kwargs):
         works only on raw data  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/val2nearestchan.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/private/val2nearestchan.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("val2nearestchan", *args, **kwargs)

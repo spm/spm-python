@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _solid_angle(*args, **kwargs):
-    """
+    r"""
       SOLID_ANGLE of a planar triangle as seen from the origin  
          
         The solid angle W subtended by a surface S is defined as the surface  
@@ -10,7 +10,7 @@ def _solid_angle(*args, **kwargs):
         sphere. Solid angle is measured in steradians, and the solid angle  
         corresponding to all of space being subtended is 4*pi sterradians.  
          
-        Use:  
+        Use as  
           [w] = solid_angle(v1, v2, v3)  
         or  
           [w] = solid_angle(pnt, tri)  
@@ -19,9 +19,12 @@ def _solid_angle(*args, **kwargs):
         compute the solid angle for each triangle)  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/inverse/private/solid_angle.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/inverse/private/solid_angle.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("solid_angle", *args, **kwargs)

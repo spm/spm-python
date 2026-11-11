@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def MDP_DEM_Mixed_Models_Movement(*args, **kwargs):
-    """
+    r"""
       This demo illustrates a series of computational pathologies as elicited  
         during a synthetic neurological examination. This focuses upon an  
         examination of the biceps reflex, and a simple coordination task. Each of  
@@ -19,9 +19,12 @@ def MDP_DEM_Mixed_Models_Movement(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DEM/MDP_DEM_Mixed_Models_Movement.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/DEM/MDP_DEM_Mixed_Models_Movement.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("MDP_DEM_Mixed_Models_Movement", *args, **kwargs, nargout=0)

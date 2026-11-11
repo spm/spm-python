@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_determine_units(*args, **kwargs):
-    """
+    r"""
       FT_DETERMINE_UNITS tries to determine the units of a geometrical object by  
         looking at its size and by relating this to the approximate size of the  
         human head according to the following table:  
@@ -28,9 +28,12 @@ def ft_determine_units(*args, **kwargs):
         See also FT_CONVERT_UNITS, FT_DETERMINE_COODSYS, FT_CONVERT_COORDSYS, FT_PLOT_AXES, FT_PLOT_XXX  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/forward/ft_determine_units.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/forward/ft_determine_units.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_determine_units", *args, **kwargs)

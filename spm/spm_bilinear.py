@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_bilinear(*args, **kwargs):
-    """
+    r"""
       Return global Volterra kernels for a MIMO Bilinear system  
         FORMAT [H0,H1,H2] = spm_bilinear(A,B,C,D,x0,N,dt)  
         A     - (n x n)     df(x(0),0)/dx                    - n states  
@@ -29,9 +29,12 @@ def spm_bilinear(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/spm_bilinear.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/spm_bilinear.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_bilinear", *args, **kwargs)

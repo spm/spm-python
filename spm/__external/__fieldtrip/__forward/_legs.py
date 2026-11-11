@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _legs(*args, **kwargs):
-    """
+    r"""
       usage: [basis,gradbasis]=legs(x,dir,n,scale)  
          
         returns the values and directional derivatives  of (n+1)^2-1 basis functions   
@@ -33,9 +33,12 @@ def _legs(*args, **kwargs):
                             product of the gradient of the former with the j.th row of dir  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/forward/private/legs.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/forward/private/legs.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("legs", *args, **kwargs)

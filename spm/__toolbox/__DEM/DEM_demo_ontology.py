@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def DEM_demo_ontology(*args, **kwargs):
-    """
+    r"""
       This demonstration routine illustrates how a generative model can be used  
         to furnish a computational nosology. In brief, it generates symptoms and  
         diagnostic profiles from hidden or latent exogenous causes (e.g.,  
@@ -28,9 +28,12 @@ def DEM_demo_ontology(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DEM/DEM_demo_ontology.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/DEM/DEM_demo_ontology.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("DEM_demo_ontology", *args, **kwargs, nargout=0)

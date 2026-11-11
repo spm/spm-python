@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _fixsource(*args, **kwargs):
-    """
+    r"""
       FIXSOURCE converts old style source structures into new style source structures  
          
         Use as  
@@ -33,9 +33,12 @@ def _fixsource(*args, **kwargs):
         See also FT_CHECKDATA, FIXVOLUME  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/utilities/private/fixsource.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/utilities/private/fixsource.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("fixsource", *args, **kwargs)

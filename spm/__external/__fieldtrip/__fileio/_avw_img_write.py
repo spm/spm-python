@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _avw_img_write(*args, **kwargs):
-    """
+    r"""
       avw_img_write - write Analyze image files (*.img)  
          
         avw_img_write(avw,fileprefix,[IMGorient],[machine],[verbose])  
@@ -55,9 +55,12 @@ def _avw_img_write(*args, **kwargs):
                   avw_read, avw_hdr_read, avw_img_read, avw_view  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/avw_img_write.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/fileio/private/avw_img_write.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("avw_img_write", *args, **kwargs, nargout=0)

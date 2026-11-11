@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_mountaincar_fun(*args, **kwargs):
-    """
+    r"""
       [Cross-entropy] objective function for mountain car problem  
         FORMAT [f] = spm_mountaincar_fun(P,G)  
          
@@ -28,9 +28,12 @@ def spm_mountaincar_fun(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DEM/spm_mountaincar_fun.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/DEM/spm_mountaincar_fun.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_mountaincar_fun", *args, **kwargs)

@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_ind2sub(*args, **kwargs):
-    """
+    r"""
      IND2SUB Multiple subscripts from linear index.  
           IND2SUB is used to determine the equivalent subscript values  
           corresponding to a given single index into an array.  
@@ -24,9 +24,12 @@ def spm_ind2sub(*args, **kwargs):
           See also SUB2IND, FIND.  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/spm_ind2sub.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/spm_ind2sub.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_ind2sub", *args, **kwargs)

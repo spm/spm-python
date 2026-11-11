@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def mci_ramsay_fx(*args, **kwargs):
-    """
+    r"""
       State equation for Ramsay model  
         FORMAT [F] = mci_ramsay_fx (x,U,P,M)  
          
@@ -25,9 +25,12 @@ def mci_ramsay_fx(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/mci/models/ramsay/mci_ramsay_fx.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/mci/models/ramsay/mci_ramsay_fx.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("mci_ramsay_fx", *args, **kwargs)

@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _mesh_spherify(*args, **kwargs):
-    """
+    r"""
       Takes a cortical mesh and scales it so that it fits into a  
         unit sphere.  
          
@@ -20,9 +20,12 @@ def _mesh_spherify(*args, **kwargs):
           smooth = number (default = 20)  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/mesh_spherify.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/private/mesh_spherify.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("mesh_spherify", *args, **kwargs)

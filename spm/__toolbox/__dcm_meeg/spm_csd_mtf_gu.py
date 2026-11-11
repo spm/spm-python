@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_csd_mtf_gu(*args, **kwargs):
-    """
+    r"""
       Spectral desnities of innovations and noise for DCM for CSD  
         FORMAT [Gu,Gs,Gn,f] = spm_csd_mtf_gu(P,M)  
         FORMAT [Gu,Gs,Gn,f] = spm_csd_mtf_gu(P,f)  
@@ -27,9 +27,12 @@ def spm_csd_mtf_gu(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/dcm_meeg/spm_csd_mtf_gu.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/dcm_meeg/spm_csd_mtf_gu.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_csd_mtf_gu", *args, **kwargs)

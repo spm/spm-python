@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_ov_movie(*args, **kwargs):
-    """
+    r"""
       Movie tool - plugin for spm_orthviews  
          
         This plugin allows an automatic "fly-through" through all displayed  
@@ -21,9 +21,12 @@ def spm_ov_movie(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/spm_orthviews/spm_ov_movie.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/spm_orthviews/spm_ov_movie.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_ov_movie", *args, **kwargs)

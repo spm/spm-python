@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_slice_timing(*args, **kwargs):
-    """
+    r"""
       Correct differences in slice acquisition times  
         FORMAT spm_slice_timing(P, sliceorder, refslice, timing, prefix)  
         P           - char array of image filenames  
@@ -92,9 +92,12 @@ def spm_slice_timing(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/spm_slice_timing.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/spm_slice_timing.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_slice_timing", *args, **kwargs, nargout=0)

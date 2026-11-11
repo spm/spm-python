@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _continuous_ns(*args, **kwargs):
-    """
+    r"""
       CONTINUOUS_NS created a trial definition from a Neuroscan *.cnt file  
         which subsequently can be used in the EEG/MEG framework  
          
@@ -17,9 +17,12 @@ def _continuous_ns(*args, **kwargs):
         See also SINGLETRIAL_NS  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/continuous_ns.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/private/continuous_ns.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("continuous_ns", *args, **kwargs)

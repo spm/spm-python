@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_progress_bar(*args, **kwargs):
-    """
+    r"""
       Display a 'Progress Bar' in the 'Interactive' window  
         FORMAT spm_progress_bar('Init',height,xlabel,ylabel,flgs)  
         Initialise the bar in the 'Interactive' window.  
@@ -23,9 +23,12 @@ def spm_progress_bar(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/spm_progress_bar.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/spm_progress_bar.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_progress_bar", *args, **kwargs, nargout=0)

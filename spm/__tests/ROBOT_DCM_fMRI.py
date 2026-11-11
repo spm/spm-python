@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ROBOT_DCM_fMRI(*args, **kwargs):
-    """
+    r"""
       test routine to check current implementations of DCM for fMRI  
        ==========================================================================  
          
@@ -17,9 +17,12 @@ def ROBOT_DCM_fMRI(*args, **kwargs):
         DCM.options.hidden                 % indices of hidden regions  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/tests/ROBOT_DCM_fMRI.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/tests/ROBOT_DCM_fMRI.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ROBOT_DCM_fMRI", *args, **kwargs)

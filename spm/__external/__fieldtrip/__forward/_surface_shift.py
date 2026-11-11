@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _surface_shift(*args, **kwargs):
-    """
+    r"""
       SURFACE_SHIFT inflates or deflates a triangulated surface by moving the  
         vertices outward or inward along their normals.  
          
@@ -14,9 +14,12 @@ def _surface_shift(*args, **kwargs):
         SURFACE_NESTING  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/forward/private/surface_shift.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/forward/private/surface_shift.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("surface_shift", *args, **kwargs)

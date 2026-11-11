@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _handle_atlas_input(*args, **kwargs):
-    """
+    r"""
       HANDLE_ATLAS_INPUT handles user input to specify volumetric atlases in some coordinate. It  
         does two things: (1) call FT_READ_ATLAS to read the atlas from file, if it is specified as a  
         string input, and (2) if the optional second data input argument is provided, and it has a  
@@ -13,9 +13,12 @@ def _handle_atlas_input(*args, **kwargs):
         to ft_sourceplot_interactive.  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/handle_atlas_input.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/private/handle_atlas_input.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("handle_atlas_input", *args, **kwargs)

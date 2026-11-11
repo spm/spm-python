@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def mne_morph_data(*args, **kwargs):
-    """
+    r"""
       MNE_MORPH_DATA   Returns data morphed to a new subject.  
          
           SYNTAX  
@@ -21,9 +21,12 @@ def mne_morph_data(*args, **kwargs):
          stcs_morph = mne_morph_data(from,to,stcs,5);  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/mne/mne_morph_data.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/mne/mne_morph_data.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("mne_morph_data", *args, **kwargs)

@@ -2,15 +2,18 @@ from spm._runtime import Runtime
 
 
 def mne_fread3(*args, **kwargs):
-    """
+    r"""
        
         [retval] = mne_fread3(fid)  
         read a 3 byte integer out of a file  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/mne/mne_fread3.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/mne/mne_fread3.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("mne_fread3", *args, **kwargs)

@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def DEM_demo_Cornsweet(*args, **kwargs):
-    """
+    r"""
       The Cornsweet effect: This demo illustrates the inference underlying the  
         Cornsweet effect or illusion. It exploits formal priors on the spatial  
         contiguity of the illuminant and reflectance; where the illuminant does not  
@@ -15,9 +15,12 @@ def DEM_demo_Cornsweet(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DEM/DEM_demo_Cornsweet.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/DEM/DEM_demo_Cornsweet.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("DEM_demo_Cornsweet", *args, **kwargs, nargout=0)

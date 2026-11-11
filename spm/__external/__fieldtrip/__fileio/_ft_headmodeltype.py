@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _ft_headmodeltype(*args, **kwargs):
-    """
+    r"""
       FT_HEADMODELTYPE determines the type of volume conduction model of the head  
          
         Use as  
@@ -38,9 +38,12 @@ def _ft_headmodeltype(*args, **kwargs):
         FT_HEADMODEL_SINGLESHELL, FT_HEADMODEL_INTERPOLATE  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/ft_headmodeltype.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/fileio/private/ft_headmodeltype.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_headmodeltype", *args, **kwargs)

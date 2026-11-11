@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def DEM_Immune(*args, **kwargs):
-    """
+    r"""
       This demo builds upon the results of the COVID modelling demos, which  
         found that the epidemic data could best be explained by appealing to the  
         idea that much of the population may not be susceptible and that of those  
@@ -16,9 +16,12 @@ def DEM_Immune(*args, **kwargs):
         Copyright (C) 2020 Wellcome Centre for Human Neuroimaging  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DEM/DEM_Immune.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/DEM/DEM_Immune.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("DEM_Immune", *args, **kwargs)

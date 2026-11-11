@@ -2,13 +2,13 @@ from spm._runtime import Runtime
 
 
 def _dimassign(*args, **kwargs):
-    """
+    r"""
       function M=dimassign(A,dim,idx,B);  
           
         The purpose of the function is shown by the following example:  
         If A and B are multidimensional matrixes,  
         A=dimassign(A,4,23,B); is the same as A(:,:,:,23,:,:,...)=B;  
-        The difference is that the dimention is selected by a scalar, not by  
+        The difference is that the dimension is selected by a scalar, not by  
         the place between the brackets.  
         A(2,4,3)=B; will then be written as: A=dimassign(A,[1,2,3],[2,4,3],B);  
         In this last case B, of cource, must be a scalar.  
@@ -19,9 +19,12 @@ def _dimassign(*args, **kwargs):
         See also the function DIMINDEX  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/dimassign.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/private/dimassign.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("dimassign", *args, **kwargs)

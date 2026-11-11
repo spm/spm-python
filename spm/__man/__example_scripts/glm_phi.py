@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def glm_phi(*args, **kwargs):
-    """
+    r"""
       Estimate connectivity parameters using GLM/EMA method  
         FORMAT [A,fint] = glm_phi(phi,dt,fb)  
          
@@ -16,9 +16,12 @@ def glm_phi(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/man/example_scripts/glm_phi.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/man/example_scripts/glm_phi.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("glm_phi", *args, **kwargs)

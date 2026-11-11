@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def tinv(*args, **kwargs):
-    """
+    r"""
       TINV   Inverse of Student's T cumulative distribution function (cdf).  
           X=TINV(P,V) returns the inverse of Student's T cdf with V degrees   
           of freedom, at the values in P.  
@@ -14,9 +14,12 @@ def tinv(*args, **kwargs):
         open source subfunctions found on the web.  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/external/stats/tinv.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/external/stats/tinv.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("tinv", *args, **kwargs)

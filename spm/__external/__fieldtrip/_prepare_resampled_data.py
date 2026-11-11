@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _prepare_resampled_data(*args, **kwargs):
-    """
+    r"""
       PREPARE_RESAMPLED_DATA performs resampling of the input data for  
         multiple variables in a single or multiple conditions. The resampling  
         will be performed along the first dimension of every input variable. This  
@@ -40,9 +40,12 @@ def _prepare_resampled_data(*args, **kwargs):
           [cfg, r11..., r21 ..., r31 ...] = prepare_resampled_data(cfg, o11 ..., o21 ..., o31 ...);  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/prepare_resampled_data.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/private/prepare_resampled_data.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("prepare_resampled_data", *args, **kwargs)

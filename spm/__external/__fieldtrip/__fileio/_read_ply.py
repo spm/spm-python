@@ -2,8 +2,8 @@ from spm._runtime import Runtime
 
 
 def _read_ply(*args, **kwargs):
-    """
-      READ_PLY reads triangles, tetraheders or hexaheders from a Stanford *.ply file  
+    r"""
+      READ_PLY reads triangles, tetrahedrons or hexahedrons from a Stanford *.ply file  
          
         Use as  
           [vert, face, prop, face_prop] = read_ply(filename)  
@@ -15,9 +15,12 @@ def _read_ply(*args, **kwargs):
         See also WRITE_PLY, WRITE_VTK, READ_VTK  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/read_ply.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/fileio/private/read_ply.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("read_ply", *args, **kwargs)

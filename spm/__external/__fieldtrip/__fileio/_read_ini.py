@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _read_ini(*args, **kwargs):
-    """
+    r"""
       READ_INI reads a specified element from a Windows *.ini file  
          
         Use as  
@@ -26,9 +26,12 @@ def _read_ini(*args, **kwargs):
         the values from anything not wanted.  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/read_ini.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/fileio/private/read_ini.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("read_ini", *args, **kwargs)

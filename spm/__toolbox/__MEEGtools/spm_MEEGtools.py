@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_MEEGtools(*args, **kwargs):
-    """
+    r"""
       GUI gateway to MEEGtools toolbox  
          
         Disclaimer: the code in this directory is provided as an example and is  
@@ -13,9 +13,12 @@ def spm_MEEGtools(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/MEEGtools/spm_MEEGtools.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/MEEGtools/spm_MEEGtools.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_MEEGtools", *args, **kwargs, nargout=0)

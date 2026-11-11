@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def nutmeg2fieldtrip(*args, **kwargs):
-    """
+    r"""
       NUTMEG2FIELDTRIP converts from NUTMEG either a sensor data structure  
         ('nuts') to a valid FieldTrip 'raw' structure (plus 'sourcemodel' and  
         'mri' if available), OR a source structure ('beam') to a valid FieldTrip  
@@ -33,9 +33,12 @@ def nutmeg2fieldtrip(*args, **kwargs):
         FIELDTRIP2SPSS  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/nutmeg2fieldtrip.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/nutmeg2fieldtrip.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("nutmeg2fieldtrip", *args, **kwargs)

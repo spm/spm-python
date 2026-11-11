@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_connectivity_plm(*args, **kwargs):
-    """
+    r"""
       FT_CONNECTIVITY_PLM computes the phase linearity measurement from a cell array of  
         time-domain data, where each cell is an epoch. This implements the metric described  
         in Baselice et al. "Phase Linearity Measurement: a novel index for brain functional  
@@ -24,9 +24,12 @@ def ft_connectivity_plm(*args, **kwargs):
         See also CONNECTIVITY, FT_CONNECTIVITYANALYSIS  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/connectivity/ft_connectivity_plm.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/connectivity/ft_connectivity_plm.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_connectivity_plm", *args, **kwargs)

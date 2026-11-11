@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _interp_ungridded(*args, **kwargs):
-    """
+    r"""
       INTERP_UNGRIDDED computes an interpolation matrix for two clouds of 3-D points  
          
         To get the interpolated data, use as  
@@ -22,9 +22,12 @@ def _interp_ungridded(*args, **kwargs):
            power        = scalar, power parameter as in the Inverse Distance Weighting function proposed by Shepard (default = 1).  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/interp_ungridded.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/private/interp_ungridded.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("interp_ungridded", *args, **kwargs)

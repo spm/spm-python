@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_mci_joint_grad(*args, **kwargs):
-    """
+    r"""
       Gradient of Log Joint Probability  
         FORMAT [j,iCpY,st,L,L2] = spm_mci_joint_grad (Pr,M,U,Y)  
          
@@ -20,9 +20,12 @@ def spm_mci_joint_grad(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/mci/gradients/spm_mci_joint_grad.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/mci/gradients/spm_mci_joint_grad.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_mci_joint_grad", *args, **kwargs)

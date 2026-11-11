@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _avw_hdr_read(*args, **kwargs):
-    """
+    r"""
       avw_hdr_read - read Analyze format data header (*.hdr)  
          
         [ avw, machine ] = avw_hdr_read(fileprefix, [machine], [verbose])  
@@ -31,9 +31,12 @@ def _avw_hdr_read(*args, **kwargs):
         See also avw_hdr_write, avw_hdr_make, avw_view_hdr, avw_view  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/avw_hdr_read.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/fileio/private/avw_hdr_read.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("avw_hdr_read", *args, **kwargs)

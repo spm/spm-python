@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_mesh_clusters(*args, **kwargs):
-    """
+    r"""
       Label connected components of surface mesh data  
         FORMAT [C, N] = spm_mesh_clusters(M,T)  
         M        - a [mx3] faces array or a patch structure  
@@ -13,9 +13,12 @@ def spm_mesh_clusters(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/spm_mesh_clusters.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/spm_mesh_clusters.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_mesh_clusters", *args, **kwargs)

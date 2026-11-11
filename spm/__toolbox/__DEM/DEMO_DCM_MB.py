@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def DEMO_DCM_MB(*args, **kwargs):
-    """
+    r"""
       This demo uses the notion of Markov blankets and the renormalisation  
         group to evaluate the coupling among neuronal systems at increasing  
         spatial scales. The underlying generative model is based upon the  
@@ -52,9 +52,12 @@ def DEMO_DCM_MB(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DEM/DEMO_DCM_MB.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/DEM/DEMO_DCM_MB.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("DEMO_DCM_MB", *args, **kwargs)

@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_plot_patch(*args, **kwargs):
-    """
+    r"""
       FT_PLOT_PATCH plot a colored shape, similar to the MATLAB patch() function. It is  
         similar in usage as ft_plot_vector, and they can be combined, for example,  
         to plot an area equivalent to a SEM or STD-DEV around a line.  
@@ -26,7 +26,7 @@ def ft_plot_patch(*args, **kwargs):
           - as an 'RGB triplet', a 1x3 vector with values between 0 and 1  
           - as 'none' if you do not want the face of the patch to be filled (useful when you want to plot an empty box).  
          
-        It is possible to plot the object in a local pseudo-axis (c.f. subplot), which is specfied as follows  
+        It is possible to plot the object in a local pseudo-axis (c.f. subplot), which is specified as follows  
           'box'             = draw a box around the local axes, can be 'yes' or 'no'  
           'hpos'            = horizontal position of the center of the local axes  
           'vpos'            = vertical position of the center of the local axes  
@@ -44,9 +44,12 @@ def ft_plot_patch(*args, **kwargs):
         See also FT_PLOT_VECTOR, PATCH, PLOT  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/plotting/ft_plot_patch.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/plotting/ft_plot_patch.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_plot_patch", *args, **kwargs)

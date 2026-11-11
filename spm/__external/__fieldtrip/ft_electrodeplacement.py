@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_electrodeplacement(*args, **kwargs):
-    """
+    r"""
       FT_ELECTRODEPLACEMENT allows manual placement of electrodes on a MRI scan, CT scan  
         or on a triangulated surface of the head. This function supports different methods.  
          
@@ -58,9 +58,11 @@ def ft_electrodeplacement(*args, **kwargs):
                                'volume'          interactively locate electrodes on three orthogonal slices of a volumetric MRI or CT scan  
                                'headshape'       interactively locate electrodes on a head surface  
                                '1020'            automatically locate electrodes on a head surface according to the 10-20 system  
+                               'equidistant'     automatically locate electrodes on a head surface according to an equidistant dsitribution  
                                'shaft'           automatically locate electrodes along a linear sEEG shaft  
                                'grid'            automatically locate electrodes on a MxN ECoG grid  
           cfg.figure         = 'yes' or 'no', whether to open a new figure. You can also specify a figure handle from FIGURE, GCF or SUBPLOT. (default = 'yes')  
+          cfg.figurename     = string, title of the figure window  
           cfg.position       = location and size of the figure, specified as [left bottom width height] (default is automatic)  
           cfg.renderer       = string, 'opengl', 'zbuffer', 'painters', see RENDERERINFO (default = 'opengl')  
          
@@ -77,12 +79,19 @@ def ft_electrodeplacement(*args, **kwargs):
                                'weighted'        place electrodes at center-of-mass  
           cfg.magradius      = number representing the radius for the cfg.magtype based search (default = 3)  
          
-        The following options apply to the '1020' method  
+        The following options apply to the '1020' and 'equidistant' method  
           cfg.fiducial.nas   = 1x3 vector with coordinates  
           cfg.fiducial.ini   = 1x3 vector with coordinates  
           cfg.fiducial.lpa   = 1x3 vector with coordinates  
           cfg.fiducial.rpa   = 1x3 vector with coordinates  
           cfg.feedback       = string, can be 'yes' or 'no' for detailed feedback (default = 'yes')  
+         
+        The following additional options apply to the 'equidistant' method  
+          cfg.numelec        = scalar, how many electrodes to place (default = 64)  
+          cfg.nummidline     = scalar, how many electrodes along the midline over the vertex  
+          cfg.numsideline    = scalar, how many electrodes along the midline over the sideline above the ear  
+          cfg.maxiter        = scalar, maximum number of iterations at which to stop  
+          cfg.minchange      = scalar, minimum change at which to stop  
          
         The following options apply to the 'shaft' method  
           cfg.shaft.tip      = 1x3 position of the electrode at the tip of the shaft  
@@ -102,9 +111,12 @@ def ft_electrodeplacement(*args, **kwargs):
         See also FT_ELECTRODEREALIGN, FT_VOLUMEREALIGN, FT_VOLUMESEGMENT, FT_PREPARE_MESH  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/ft_electrodeplacement.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/ft_electrodeplacement.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_electrodeplacement", *args, **kwargs)

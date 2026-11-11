@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_dcm_evidence(*args, **kwargs):
-    """
+    r"""
       Compute evidence of DCM model  
         FORMAT evidence = spm_dcm_evidence(DCM)  
          
@@ -19,9 +19,12 @@ def spm_dcm_evidence(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/spm_dcm_evidence.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/spm_dcm_evidence.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_dcm_evidence", *args, **kwargs)

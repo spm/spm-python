@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def mne_ex_average_epochs(*args, **kwargs):
-    """
+    r"""
        
           An example of averaging over epochs  
          
@@ -17,9 +17,12 @@ def mne_ex_average_epochs(*args, **kwargs):
           returned from fiff_read_evoked  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/mne/mne_ex_average_epochs.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/mne/mne_ex_average_epochs.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("mne_ex_average_epochs", *args, **kwargs)

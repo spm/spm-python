@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_api_nmm(*args, **kwargs):
-    """
+    r"""
       SPM_API_NMM M-file for spm_api_nmm.fig  
              SPM_API_NMM, by itself, creates a new SPM_API_NMM or raises the existing  
              singleton*.  
@@ -25,9 +25,12 @@ def spm_api_nmm(*args, **kwargs):
         See also: GUIDE, GUIDATA, GUIHANDLES  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/dcm_meeg/spm_api_nmm.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/dcm_meeg/spm_api_nmm.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_api_nmm", *args, **kwargs)

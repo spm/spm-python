@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _constructplanargrad(*args, **kwargs):
-    """
+    r"""
       CONSTRUCTPLANARGRAD constructs a planar gradiometer array from an axial gradiometer  
         definition. This can be used to compute the planar field gradient for a known  
         (estimated) source configuration.  
@@ -32,9 +32,12 @@ def _constructplanargrad(*args, **kwargs):
         channels.  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/constructplanargrad.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/private/constructplanargrad.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("constructplanargrad", *args, **kwargs)

@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _read_ctf_dat(*args, **kwargs):
-    """
+    r"""
       READ_CTF_DAT reads MEG data from an ascii format CTF file  
          
         meg = read_ctf_dat(filename)  
@@ -14,9 +14,12 @@ def _read_ctf_dat(*args, **kwargs):
           meg.label       1xNchans cell-array with channel labels (string)  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/read_ctf_dat.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/fileio/private/read_ctf_dat.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("read_ctf_dat", *args, **kwargs)
