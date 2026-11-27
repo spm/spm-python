@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_dcm_fit(*args, **kwargs):
-    """
+    r"""
       Bayesian inversion of DCMs using Variational Laplace  
         FORMAT [DCM] = spm_dcm_fit(P)  
          
@@ -22,9 +22,12 @@ def spm_dcm_fit(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/spm_dcm_fit.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/spm_dcm_fit.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_dcm_fit", *args, **kwargs)

@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_steadystatesimulation(*args, **kwargs):
-    """
+    r"""
       FT_STEADYSTATESIMULATION creates a simulated EEG/MEG dataset. This function  
         allows to simulate the effect of several independent stimulus trains. These can  
         be presented as a periodic sequence, or as single (or few) transient stimuli.  
@@ -77,9 +77,12 @@ def ft_steadystatesimulation(*args, **kwargs):
         FT_CONNECTIVITYSIMULATION, FT_APPENDDATA  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/ft_steadystatesimulation.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/ft_steadystatesimulation.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_steadystatesimulation", *args, **kwargs)

@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_fx_phase(*args, **kwargs):
-    """
+    r"""
       State equation for a phase-coupled oscillator  
         FORMAT [f,J] = spm_fx_phase (phi,u,P,M)  
          
@@ -16,9 +16,12 @@ def spm_fx_phase(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/dcm_meeg/spm_fx_phase.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/dcm_meeg/spm_fx_phase.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_fx_phase", *args, **kwargs)

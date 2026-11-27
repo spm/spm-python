@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_VOI(*args, **kwargs):
-    """
+    r"""
       List of local maxima and adjusted p-values for a small Volume of Interest  
         FORMAT [TabDat,xSVC] = spm_VOI(SPM,xSPM,hReg,[xY])  
          
@@ -56,9 +56,12 @@ def spm_VOI(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/spm_VOI.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/spm_VOI.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_VOI", *args, **kwargs)

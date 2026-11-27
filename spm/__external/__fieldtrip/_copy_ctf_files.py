@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _copy_ctf_files(*args, **kwargs):
-    """
+    r"""
       COPY_CTF_FILES copies a CTF dataset with all files and directories to a new CTF  
         dataset with another name.  
          
@@ -19,9 +19,12 @@ def _copy_ctf_files(*args, **kwargs):
         See also COPY_BRAINVISION_FILES  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/copy_ctf_files.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/private/copy_ctf_files.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("copy_ctf_files", *args, **kwargs, nargout=0)

@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _mesh2edge(*args, **kwargs):
-    """
+    r"""
       MESH2EDGE finds the edge lines from a triangulated mesh or the edge  
         surfaces from a tetrahedral or hexahedral mesh. An edge is defined as an  
         element that does not border any other element. This also implies that a  
@@ -11,12 +11,15 @@ def _mesh2edge(*args, **kwargs):
         Use as  
           [edge] = mesh2edge(mesh)  
          
-        See also POLY2TRI  
+        See also POLY2TRI, TRI2BND  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/mesh2edge.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/private/mesh2edge.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("mesh2edge", *args, **kwargs)

@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_eeg_ctf_synth_gradiometer(*args, **kwargs):
-    """
+    r"""
       Apply CTF synthetic gradiometry to MEG data  
         FORMAT D = spm_opm_synth_gradiometer(S)  
           S               - input structure  
@@ -18,9 +18,12 @@ def spm_eeg_ctf_synth_gradiometer(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/MEEGtools/spm_eeg_ctf_synth_gradiometer.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/MEEGtools/spm_eeg_ctf_synth_gradiometer.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_eeg_ctf_synth_gradiometer", *args, **kwargs)

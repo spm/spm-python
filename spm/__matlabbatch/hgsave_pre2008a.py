@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def hgsave_pre2008a(*args, **kwargs):
-    """
+    r"""
       HGSAVE_PRE2008A  
         Starting with MATLAB 2008a, GUIDE saves figures with '%automatic'  
         functions (e.g. Callbacks, ResizeFcn ...) as anonymous function handles,  
@@ -61,9 +61,12 @@ def hgsave_pre2008a(*args, **kwargs):
         Copyright (C) 2007 Freiburg Brain Imaging  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/matlabbatch/hgsave_pre2008a.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/matlabbatch/hgsave_pre2008a.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("hgsave_pre2008a", *args, **kwargs)

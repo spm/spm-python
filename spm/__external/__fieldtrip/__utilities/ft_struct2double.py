@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_struct2double(*args, **kwargs):
-    """
+    r"""
       FT_STRUCT2DOUBLE converts all single precision numeric data in a structure  
         into double precision. It will also convert plain matrices and  
         cell-arrays.  
@@ -21,9 +21,12 @@ def ft_struct2double(*args, **kwargs):
         See also FT_STRUCT2SINGLE, FT_STRUCT2CHAR, FT_STRUCT2STRING  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/utilities/ft_struct2double.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/utilities/ft_struct2double.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_struct2double", *args, **kwargs)

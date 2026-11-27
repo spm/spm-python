@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_csd_mtf(*args, **kwargs):
-    """
+    r"""
       Spectral response of a NMM (transfer function x noise spectrum)  
         FORMAT [y,w,s,g] = spm_csd_mtf(P,M,U)  
         FORMAT [y,w,s,g] = spm_csd_mtf(P,M)  
@@ -37,9 +37,12 @@ def spm_csd_mtf(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/dcm_meeg/spm_csd_mtf.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/dcm_meeg/spm_csd_mtf.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_csd_mtf", *args, **kwargs)

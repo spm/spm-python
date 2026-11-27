@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_adjmean_ui(*args, **kwargs):
-    """
+    r"""
       Scaled (for grand mean) & adjusted (for global) means via General Linear Model  
         FORMAT spm_adjmean_ui  
        _______________________________________________________________________  
@@ -182,9 +182,12 @@ def spm_adjmean_ui(*args, **kwargs):
         Copyright (C) 2008 Wellcome Trust Centre for Neuroimaging  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/compat/spm_adjmean_ui.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/compat/spm_adjmean_ui.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_adjmean_ui", *args, **kwargs, nargout=0)

@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_connectivity_mutualinformation(*args, **kwargs):
-    """
+    r"""
       FT_CONNECTIVITY_MUTUALINFORMATION computes mutual information using either the  
         information breakdown toolbox (ibtb), as described in Magri et al., BMC  
         Neuroscience 2009, 1471-2202, or Robin Ince's Gaussian copula based parametric  
@@ -38,9 +38,12 @@ def ft_connectivity_mutualinformation(*args, **kwargs):
         See also CONNECTIVITY, FT_CONNECTIVITYANALYSIS  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/connectivity/ft_connectivity_mutualinformation.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/connectivity/ft_connectivity_mutualinformation.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_connectivity_mutualinformation", *args, **kwargs)

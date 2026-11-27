@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_eeg_invert_classic_mix(*args, **kwargs):
-    """
+    r"""
       FORMAT [D] = spm_eeg_invert_classic_mix(D,val,Qpriors,surfind,ugainfiles)  
          
         ReML inversion of multiple posterior current variances from previous  
@@ -21,9 +21,12 @@ def spm_eeg_invert_classic_mix(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/spm_eeg_invert_classic_mix.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/spm_eeg_invert_classic_mix.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_eeg_invert_classic_mix", *args, **kwargs)

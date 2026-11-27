@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _ft_getuserfun(*args, **kwargs):
-    """
+    r"""
       FT_GETUSERFUN will search the MATLAB path for a function with the  
         appropriate name, and return a function handle to the function.  
         Considered are, in this order:  
@@ -19,9 +19,12 @@ def _ft_getuserfun(*args, **kwargs):
         If no appropriate function is found, the empty array [] will be returned.  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/ft_getuserfun.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/private/ft_getuserfun.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_getuserfun", *args, **kwargs)

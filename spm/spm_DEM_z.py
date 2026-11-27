@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_DEM_z(*args, **kwargs):
-    """
+    r"""
       Create hierarchical innovations for generating data  
         FORMAT [z,w] = spm_DEM_z(M,N)  
         M    - model structure  
@@ -17,9 +17,12 @@ def spm_DEM_z(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/spm_DEM_z.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/spm_DEM_z.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_DEM_z", *args, **kwargs)

@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_badsegment(*args, **kwargs):
-    """
+    r"""
       FT_BADSEGMENT tries to identify bad segments or trials in a MEG or EEG dataset.  
         Different methods are implemented to identify bad channels, these are largely  
         shared with those implemented in FT_REJECTVISUAL with the summary method.  
@@ -68,9 +68,12 @@ def ft_badsegment(*args, **kwargs):
         See also FT_BADCHANNEL, FT_BADDATA, FT_REJECTVISUAL, FT_REJECTARTIFACT  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/ft_badsegment.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/ft_badsegment.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_badsegment", *args, **kwargs)

@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_dcm_local_minima(*args, **kwargs):
-    """
+    r"""
       Evaluate the free energy landscape around the posterior  
         FORMAT spm_dcm_local_minima(DCM)  
         DCM - (invert) model structure  
@@ -10,9 +10,12 @@ def spm_dcm_local_minima(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/dcm_meeg/spm_dcm_local_minima.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/dcm_meeg/spm_dcm_local_minima.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_dcm_local_minima", *args, **kwargs, nargout=0)

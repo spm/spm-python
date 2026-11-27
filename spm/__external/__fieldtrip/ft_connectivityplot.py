@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_connectivityplot(*args, **kwargs):
-    """
+    r"""
       FT_CONNECTIVITYPLOT plots channel-level frequency resolved connectivity. The  
         data are rendered in a square grid of subplots, each subplot containing the  
         connectivity spectrum between the two respective channels.  
@@ -24,9 +24,12 @@ def ft_connectivityplot(*args, **kwargs):
         See also FT_CONNECTIVITYANALYSIS, FT_CONNECTIVITYSIMULATION, FT_MULTIPLOTCC, FT_TOPOPLOTCC  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/ft_connectivityplot.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/ft_connectivityplot.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_connectivityplot", *args, **kwargs)

@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _write_plexon_nex(*args, **kwargs):
-    """
+    r"""
       WRITE_PLEXON_NEX writes a Plexon *.nex file, which is a file  
         containing action-potential (spike) timestamps and waveforms (spike  
         channels), event timestamps (event channels), and continuous variable  
@@ -22,9 +22,12 @@ def _write_plexon_nex(*args, **kwargs):
         See also READ_PLEXON_NEX, READ_PLEXON_PLX, READ_PLEXON_DDT  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/write_plexon_nex.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/fileio/private/write_plexon_nex.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("write_plexon_nex", *args, **kwargs, nargout=0)

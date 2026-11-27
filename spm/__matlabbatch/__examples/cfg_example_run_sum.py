@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def cfg_example_run_sum(*args, **kwargs):
-    """
+    r"""
       Example function that returns the sum of an vector given in job.a in out.  
         The output is referenced as out(1), this is defined in  
         cfg_example_vout_sum.  
@@ -14,9 +14,12 @@ def cfg_example_run_sum(*args, **kwargs):
         Copyright (C) 2007 Freiburg Brain Imaging  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/matlabbatch/examples/cfg_example_run_sum.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/matlabbatch/examples/cfg_example_run_sum.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("cfg_example_run_sum", *args, **kwargs)

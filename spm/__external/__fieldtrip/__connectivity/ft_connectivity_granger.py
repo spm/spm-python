@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_connectivity_granger(*args, **kwargs):
-    """
+    r"""
       FT_CONNECTIVITY_GRANGER computes spectrally resolved granger causality. This  
         implementation is loosely based on the code used in Brovelli, et. al., PNAS 101,  
         9849-9854 (2004).  
@@ -45,9 +45,12 @@ def ft_connectivity_granger(*args, **kwargs):
         See also CONNECTIVITY, FT_CONNECTIVITYANALYSIS  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/connectivity/ft_connectivity_granger.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/connectivity/ft_connectivity_granger.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_connectivity_granger", *args, **kwargs)

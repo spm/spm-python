@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_run_fmri_est(*args, **kwargs):
-    """
+    r"""
       Estimate parameters of a specified model  
         SPM job execution function  
         takes a harvested job data structure and call SPM functions to perform  
@@ -14,9 +14,12 @@ def spm_run_fmri_est(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/config/spm_run_fmri_est.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/config/spm_run_fmri_est.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_run_fmri_est", *args, **kwargs)

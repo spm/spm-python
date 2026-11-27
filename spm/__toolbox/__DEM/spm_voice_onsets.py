@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_voice_onsets(*args, **kwargs):
-    """
+    r"""
       Identify intervals containing acoustic energy and post onset minima  
         FORMAT [I] = spm_voice_onsets(Y,FS,C,U)  
          
@@ -12,9 +12,12 @@ def spm_voice_onsets(*args, **kwargs):
         U    - crossing threshold [Default: 1/8  a.u]  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DEM/spm_voice_onsets.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/DEM/spm_voice_onsets.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_voice_onsets", *args, **kwargs)

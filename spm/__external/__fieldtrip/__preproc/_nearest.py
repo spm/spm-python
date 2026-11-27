@@ -2,14 +2,13 @@ from spm._runtime import Runtime
 
 
 def _nearest(*args, **kwargs):
-    """
+    r"""
       NEAREST return the index of an array nearest to a scalar  
          
         Use as  
           [indx] = nearest(array, val, insideflag, toleranceflag)  
          
-        The second input val can be a scalar, or a [minval maxval] vector for  
-        limits selection.  
+        The second input val should be a scalar.  
          
         If not specified or if left empty, the insideflag and the toleranceflag  
         will default to false.  
@@ -26,12 +25,15 @@ def _nearest(*args, **kwargs):
         tolerance that is allowed is half the distance between the subsequent  
         values in the array.  
          
-        See also FIND  
+        See also FIND, DSEARCHN  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/preproc/private/nearest.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/preproc/private/nearest.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("nearest", *args, **kwargs)

@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def gencode_substructcode(*args, **kwargs):
-    """
+    r"""
       GENCODE_SUBSTRUCTCODE  Create code for a subscript structure  
         Generate MATLAB code (using SUBSTRUCT) to create subscript structure  
         subs. See help on SUBSTRUCT, SUBSASGN and SUBSREF for details how  
@@ -33,9 +33,12 @@ def gencode_substructcode(*args, **kwargs):
         Copyright (C) 2007 Freiburg Brain Imaging  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/matlabbatch/gencode_substructcode.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/matlabbatch/gencode_substructcode.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("gencode_substructcode", *args, **kwargs)

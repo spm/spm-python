@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_glass(*args, **kwargs):
-    """
+    r"""
       Glass brain plot  
         FORMAT fig = spm_glass(X,pos,S)  
           X               - (REQUIRED) values to be painted  
@@ -24,9 +24,12 @@ def spm_glass(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/spm_glass.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/spm_glass.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_glass", *args, **kwargs)

@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_sourcedescriptives(*args, **kwargs):
-    """
+    r"""
       FT_SOURCEDESCRIPTIVES computes descriptive parameters of the source  
         analysis results.  
          
@@ -48,9 +48,12 @@ def ft_sourcedescriptives(*args, **kwargs):
         See also FT_SOURCEANALYSIS, FT_SOURCESTATISTICS, FT_MATH  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/ft_sourcedescriptives.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/ft_sourcedescriptives.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_sourcedescriptives", *args, **kwargs)

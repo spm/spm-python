@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_swarp(*args, **kwargs):
-    """
+    r"""
       Warp surface  
         FORMAT that = spm_swarp(this,def)  
         this - a gifti object  
@@ -17,9 +17,12 @@ def spm_swarp(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/spm_swarp.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/spm_swarp.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_swarp", *args, **kwargs)

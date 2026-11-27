@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_mask(*args, **kwargs):
-    """
+    r"""
       Mask images  
         FORMAT spm_mask(P1, P2, thresh)  
         P1     - matrix of input image filenames from which  
@@ -24,9 +24,12 @@ def spm_mask(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/spm_mask.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/spm_mask.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_mask", *args, **kwargs, nargout=0)

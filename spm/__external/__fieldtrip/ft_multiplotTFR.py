@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_multiplotTFR(*args, **kwargs):
-    """
+    r"""
       FT_MULTIPLOTTFR plots the time-frequency representations of power or coherence  
         in a topographical layout. The plots of the indivual sensors are arranged  
         according to their location specified in the layout.  
@@ -54,6 +54,7 @@ def ft_multiplotTFR(*args, **kwargs):
                                  interactive plot when a selected area is clicked. Multiple areas  
                                  can be selected by holding down the SHIFT key.  
           cfg.figure           = 'yes' or 'no', whether to open a new figure. You can also specify a figure handle from FIGURE, GCF or SUBPLOT. (default = 'yes')  
+          cfg.figurename       = string, title of the figure window  
           cfg.position         = location and size of the figure, specified as [left bottom width height] (default is automatic)  
           cfg.renderer         = string, 'opengl', 'zbuffer', 'painters', see RENDERERINFO (default is automatic, try 'painters' when it crashes)  
           cfg.directionality   = '', 'inflow' or 'outflow' specifies for  
@@ -123,9 +124,12 @@ def ft_multiplotTFR(*args, **kwargs):
           FT_PREPARE_LAYOUT  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/ft_multiplotTFR.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/ft_multiplotTFR.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_multiplotTFR", *args, **kwargs)

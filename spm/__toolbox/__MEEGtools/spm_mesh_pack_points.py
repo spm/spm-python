@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_mesh_pack_points(*args, **kwargs):
-    """
+    r"""
       Place approximately equally spaced points over a convex (ideally) mesh  
         FORMAT [Pout,ms2s ,ims2s,n] = spm_mesh_pack_points(S)  
           S          - input structure  
@@ -21,9 +21,12 @@ def spm_mesh_pack_points(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/MEEGtools/spm_mesh_pack_points.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/MEEGtools/spm_mesh_pack_points.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_mesh_pack_points", *args, **kwargs)

@@ -2,15 +2,15 @@ from spm._runtime import Runtime
 
 
 def ft_volumerealign(*args, **kwargs):
-    """
+    r"""
       FT_VOLUMEREALIGN spatially aligns an anatomical MRI with head coordinates based on  
         external fiducials or anatomical landmarks. This function typically does not change  
         the anatomical MRI volume itself, but only adjusts the homogeneous transformation  
         matrix that describes the mapping from voxels to the coordinate system. It also  
         appends a coordsys-field to the output data, or it updates it. This field specifies  
         how the x/y/z-axes of the coordinate system should be interpreted. Occasionally,  
-        the orientation and handedness of the output volume may be different from the orientation  
-        and handedness of the input volume. This is determined by the cfg.flip  
+        the orientation and handedness of the output volume may be different from the  
+        orientation and handedness of the input volume. This is determined by the cfg.flip  
         argument. See the code for more details.  
          
         For spatial normalisation and deformation (i.e. warping) an MRI to a template brain  
@@ -19,10 +19,11 @@ def ft_volumerealign(*args, **kwargs):
         Different methods for aligning the anatomical MRI to a coordinate system are  
         implemented, which are described in detail below:  
          
-        INTERACTIVE - Use a graphical user interface to click on the location of anatomical  
-        landmarks or fiducials. The anatomical data can be displayed as three orthogonal  
-        MRI slices or as a rendering of the head surface. The coordinate system is updated  
-        according to the definition of the coordinates of these fiducials.  
+        INTERACTIVE - This shows a graphical user interface in which you can click on the  
+        location of anatomical landmarks or fiducials. The anatomical data can be displayed  
+        as three orthogonal MRI slices or as a rendering of the head surface. The  
+        coordinate system is updated according to the definition of the coordinates of  
+        these fiducials.  
          
         FIDUCIAL - The coordinate system is updated according to the definition of the  
         coordinates of anatomical landmarks or fiducials that are specified in the  
@@ -56,8 +57,8 @@ def ft_volumerealign(*args, **kwargs):
                                'fsl'         match to template anatomical MRI  
           cfg.coordsys       = string specifying the origin and the axes of the coordinate  
                                system. Supported coordinate systems are 'ctf', '4d', 'bti',  
-                               'eeglab', 'neuromag', 'itab', 'yokogawa', 'asa', 'acpc',  
-                               and 'paxinos'. See http://tinyurl.com/ojkuhqz  
+                               'eeglab', 'eeglab-hj', 'neuromag', 'itab', 'yokogawa', 'asa', 'acpc',  
+                               and 'paxinos'. See https://www.fieldtriptoolbox.org/faq/coordsys  
           cfg.clim           = [min max], scaling of the anatomy color (default is automatic)  
           cfg.parameter      = 'anatomy' the parameter which is used for the visualization  
           cfg.viewresult     = string, 'yes' or 'no', whether or not to visualize aligned volume(s)  
@@ -192,9 +193,12 @@ def ft_volumerealign(*args, **kwargs):
         FT_DETERMINE_COORDSYS, SPM_AFFREG, SPM_NORMALISE, SPM_COREG  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/ft_volumerealign.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/ft_volumerealign.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_volumerealign", *args, **kwargs)

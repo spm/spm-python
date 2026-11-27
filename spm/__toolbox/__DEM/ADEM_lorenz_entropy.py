@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ADEM_lorenz_entropy(*args, **kwargs):
-    """
+    r"""
       This demo shows how structure can be instilled from an environment. It  
         uses an agent that optimises its recognition density over successive  
         epochs of exposure to an environment. This environment causes the agent  
@@ -14,9 +14,12 @@ def ADEM_lorenz_entropy(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DEM/ADEM_lorenz_entropy.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/DEM/ADEM_lorenz_entropy.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ADEM_lorenz_entropy", *args, **kwargs, nargout=0)

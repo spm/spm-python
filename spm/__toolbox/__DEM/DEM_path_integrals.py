@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def DEM_path_integrals(*args, **kwargs):
-    """
+    r"""
      --------------------------------------------------------------------------  
         Illustration of approximations to path integrals. This routine generates  
         a path from dynamics whose Fokker Planck solution corresponds to a  
@@ -16,9 +16,12 @@ def DEM_path_integrals(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DEM/DEM_path_integrals.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/DEM/DEM_path_integrals.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("DEM_path_integrals", *args, **kwargs, nargout=0)

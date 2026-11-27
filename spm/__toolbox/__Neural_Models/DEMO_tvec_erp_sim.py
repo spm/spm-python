@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def DEMO_tvec_erp_sim(*args, **kwargs):
-    """
+    r"""
       DEMO_tvec_erp_sim - Demo script for modelling time-varying effective   
         connectivity in a DCM for ERP.  
          
@@ -41,9 +41,12 @@ def DEMO_tvec_erp_sim(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/Neural_Models/DEMO_tvec_erp_sim.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/Neural_Models/DEMO_tvec_erp_sim.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("DEMO_tvec_erp_sim", *args, **kwargs, nargout=0)

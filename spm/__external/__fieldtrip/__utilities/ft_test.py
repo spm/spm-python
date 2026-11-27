@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_test(*args, **kwargs):
-    """
+    r"""
       FT_TEST performs selected FieldTrip test scripts, finds and updates the dependencies of test scripts, finds which high-level FieldTrip functions are not tested, or reports on previous test  
         results from the dashboard database.  
          
@@ -133,9 +133,12 @@ def ft_test(*args, **kwargs):
         See also DCCNPATH, FT_VERSION  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/utilities/ft_test.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/utilities/ft_test.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_test", *args, **kwargs)

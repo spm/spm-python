@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def DEMO_tvec_erp_mmn(*args, **kwargs):
-    """
+    r"""
       DEMO_tvec_erp_mmn: Analyse modulatory dynamics in EEG Mismatch Negativity   
         using Dynamic Causal Modeling of Time-Varying Connectivity.  
          
@@ -37,9 +37,12 @@ def DEMO_tvec_erp_mmn(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/Neural_Models/DEMO_tvec_erp_mmn.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/Neural_Models/DEMO_tvec_erp_mmn.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("DEMO_tvec_erp_mmn", *args, **kwargs, nargout=0)

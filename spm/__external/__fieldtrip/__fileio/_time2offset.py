@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _time2offset(*args, **kwargs):
-    """
+    r"""
       TIME2OFFSET converts a time-axis of a trial into the offset in samples  
         according to the definition from DEFINETRIAL  
          
@@ -19,9 +19,12 @@ def _time2offset(*args, **kwargs):
         negative offset indicates a trial beginning before the trigger.  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/time2offset.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/fileio/private/time2offset.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("time2offset", *args, **kwargs)

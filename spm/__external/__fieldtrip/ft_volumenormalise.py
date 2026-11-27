@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_volumenormalise(*args, **kwargs):
-    """
+    r"""
       FT_VOLUMENORMALISE normalises anatomical and functional volume data  
         to a template anatomical MRI.  
          
@@ -28,7 +28,7 @@ def ft_volumenormalise(*args, **kwargs):
           cfg.templatemask     = string, filename of a mask for the template  
                                  anatomical MRI spcified in cfg.template, e.g. a  
                                  brain mask (optional).  
-          cfg.tpm              = string, file name of the SPM tissue probablility map to use in  
+          cfg.tpm              = string, file name of the SPM tissue probability map to use in  
                                  case spmversion is 'spm12' and spmmethod is 'new' or 'mars'  
           cfg.write            = 'yes' or 'no' (default = 'no'), writes the segmented volumes to SPM2  
                                  compatible analyze-file, with the suffix  
@@ -61,9 +61,12 @@ def ft_volumenormalise(*args, **kwargs):
         See also FT_READ_MRI, FT_VOLUMEDOWNSAMPLE, FT_SOURCEINTERPOLATE, FT_SOURCEPLOT  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/ft_volumenormalise.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/ft_volumenormalise.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_volumenormalise", *args, **kwargs)

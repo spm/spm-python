@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_headmodel_singlesphere(*args, **kwargs):
-    """
+    r"""
       FT_HEADMODEL_SINGLESPHERE creates a volume conduction model of the  
         head by fitting a spherical model to a set of points that describe  
         the head surface.  
@@ -20,12 +20,15 @@ def ft_headmodel_singlesphere(*args, **kwargs):
         Optional arguments should be specified in key-value pairs and can include  
           conductivity     = number, conductivity of the sphere  
          
-        See also FT_PREPARE_VOL_SENS, FT_COMPUTE_LEADFIELD  
+        See also FT_PREPARE_HEADMODEL, FT_COMPUTE_LEADFIELD  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/forward/ft_headmodel_singlesphere.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/forward/ft_headmodel_singlesphere.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_headmodel_singlesphere", *args, **kwargs)

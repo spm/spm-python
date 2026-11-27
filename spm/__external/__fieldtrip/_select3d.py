@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _select3d(*args, **kwargs):
-    """
+    r"""
      SELECT3D(H) Determines the selected point in 3-D data space.  
          P = SELECT3D determines the point, P, in data space corresponding   
          to the current selection position. P is a point on the first   
@@ -59,9 +59,12 @@ def _select3d(*args, **kwargs):
          See also GINPUT, GCO.  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/select3d.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/private/select3d.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("select3d", *args, **kwargs)

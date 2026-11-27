@@ -2,8 +2,8 @@ from spm._runtime import Runtime
 
 
 def DEM_morphogenesis(*args, **kwargs):
-    """
-      This routine illustrates self-assembly or more for genesis under active  
+    r"""
+      This routine illustrates self-assembly or morphogenesis under active  
         inference (free energy minimisation).  It exploits the fact that one can  
         express a systems (marginal) Lyapunov function in terms of a variational  
         free energy.  This means that one can prescribe an attracting set in  
@@ -26,9 +26,12 @@ def DEM_morphogenesis(*args, **kwargs):
         _________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DEM/DEM_morphogenesis.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/DEM/DEM_morphogenesis.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("DEM_morphogenesis", *args, **kwargs)

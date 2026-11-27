@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def DEM_demo_Bayesian_Model_Reduction(*args, **kwargs):
-    """
+    r"""
       This demonstration code illustrates the application of post hoc model   
         optimisation or Bayesian model reduction (BMR) in identifying gene and   
         gene-gene interaction effects in behavioural or physiological variables.    
@@ -42,9 +42,12 @@ def DEM_demo_Bayesian_Model_Reduction(*args, **kwargs):
         partition of model space (or families of models).  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DEM/DEM_demo_Bayesian_Model_Reduction.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/DEM/DEM_demo_Bayesian_Model_Reduction.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("DEM_demo_Bayesian_Model_Reduction", *args, **kwargs)

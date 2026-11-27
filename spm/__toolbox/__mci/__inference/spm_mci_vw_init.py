@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_mci_vw_init(*args, **kwargs):
-    """
+    r"""
       Initialise fixed and random effects  
         FORMAT [w_init,v_init,assign,update_ffx,update_rfx] = spm_mci_vw_init (MCI)  
          
@@ -17,9 +17,12 @@ def spm_mci_vw_init(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/mci/inference/spm_mci_vw_init.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/mci/inference/spm_mci_vw_init.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_mci_vw_init", *args, **kwargs)

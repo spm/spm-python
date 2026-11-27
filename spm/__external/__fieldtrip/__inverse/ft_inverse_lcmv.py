@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_inverse_lcmv(*args, **kwargs):
-    """
+    r"""
       FT_INVERSE_LCMV scans on pre-defined dipole locations with a single dipole  
         and returns the linear constrained minimum variance beamformer spatial filter  
         output for a dipole on every location.  
@@ -17,6 +17,10 @@ def ft_inverse_lcmv(*args, **kwargs):
           cov         is the data covariance or cross-spectral density matrix  
         and  
           estimate    contains the estimated source parameters  
+         
+        If the input data "dat" is in V, "cov" is in V^2, and the leadfield is in V/Am,  
+        then the estimated output "mom" is in Am, the output "pow" is (Am)^2, and the  
+        output "filter" is in Am/V, provided "weightnorm" has been specified to be 'no'.  
          
         Additional input arguments should be specified as key-value pairs and can include  
           'powmethod'        = can be 'trace' or 'lambda1'  
@@ -42,6 +46,7 @@ def ft_inverse_lcmv(*args, **kwargs):
          'lambda'           = regularisation parameter  
          'kappa'            = parameter for covariance matrix inversion  
          'tol'              = parameter for covariance matrix inversion  
+         'invmethod'        = method for covariance matrix inversion  
          
         If the dipole definition only specifies the dipole location, a rotating  
         dipole (regional source) is assumed on each location. If a dipole moment  
@@ -51,9 +56,12 @@ def ft_inverse_lcmv(*args, **kwargs):
         See also FT_SOURCEANALYSIS, FT_PREPARE_HEADMODEL, FT_PREPARE_SOURCEMODEL  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/inverse/ft_inverse_lcmv.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/inverse/ft_inverse_lcmv.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_inverse_lcmv", *args, **kwargs)

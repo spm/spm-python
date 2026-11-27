@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _nut_dSPM(*args, **kwargs):
-    """
+    r"""
       [weight,eta]=nut_dSPM(Lp,data,flags)  
         Lp : lead field  
         inputs for regularization contant:  
@@ -11,9 +11,12 @@ def _nut_dSPM(*args, **kwargs):
             leadfield-based regularization  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DAiSS/private/nut_dSPM.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/DAiSS/private/nut_dSPM.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("nut_dSPM", *args, **kwargs)

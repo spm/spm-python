@@ -1,5 +1,7 @@
+from .combineClusters import combineClusters
 from .det2x2 import det2x2
 from .det3x3 import det3x3
+from .ft_getopt import ft_getopt
 from .getpid import getpid
 from .inv2x2 import inv2x2
 from .inv3x3 import inv3x3
@@ -10,6 +12,7 @@ from .mtimes2x2 import mtimes2x2
 from .mtimes3x3 import mtimes3x3
 from .mxDeserialize import mxDeserialize
 from .mxSerialize import mxSerialize
+from .nanvar import nanvar
 from .plgndr import plgndr
 from .plinproj import plinproj
 from .ptriproj import ptriproj
@@ -26,8 +29,10 @@ from .write_ctf_shm import write_ctf_shm
 
 
 __all__ = [
+    "combineClusters",
     "det2x2",
     "det3x3",
+    "ft_getopt",
     "getpid",
     "inv2x2",
     "inv3x3",
@@ -38,6 +43,7 @@ __all__ = [
     "mtimes3x3",
     "mxDeserialize",
     "mxSerialize",
+    "nanvar",
     "plgndr",
     "plinproj",
     "ptriproj",

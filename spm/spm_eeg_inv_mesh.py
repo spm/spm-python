@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_eeg_inv_mesh(*args, **kwargs):
-    """
+    r"""
       Apply the inverse spatial deformation to the template mesh  
         to obtain the individual cortical mesh  
         save the individual GIFTI meshes  
@@ -16,9 +16,12 @@ def spm_eeg_inv_mesh(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/spm_eeg_inv_mesh.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/spm_eeg_inv_mesh.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_eeg_inv_mesh", *args, **kwargs)

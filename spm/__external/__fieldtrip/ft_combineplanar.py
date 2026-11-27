@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_combineplanar(*args, **kwargs):
-    """
+    r"""
       FT_COMBINEPLANAR computes the planar gradient magnitude over both directions  
         combining the two gradients at each sensor to a single positive-valued number. This  
         can be done for single-trial/averaged planar gradient ERFs or single-trial/averaged  
@@ -15,7 +15,7 @@ def ft_combineplanar(*args, **kwargs):
          
         The configuration can contain  
           cfg.method         = 'sum', 'svd', 'abssvd', or 'complex' (default = 'sum')  
-          cfg.updatesens     = 'no' or 'yes' (default = 'yes')  
+          cfg.updatesens     = 'yes' or 'no', whether to update the sensor array with the spatial projector (default = 'yes')  
         and for timelocked input data (i.e. ERFs), the configuration can also contain  
           cfg.demean         = 'yes' or 'no' (default = 'no')  
           cfg.baselinewindow = [begin end]  
@@ -31,9 +31,12 @@ def ft_combineplanar(*args, **kwargs):
         See also FT_MEGPLANAR  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/ft_combineplanar.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/ft_combineplanar.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_combineplanar", *args, **kwargs)

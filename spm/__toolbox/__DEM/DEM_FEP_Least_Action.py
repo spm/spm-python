@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def DEM_FEP_Least_Action(*args, **kwargs):
-    """
+    r"""
      --------------------------------------------------------------------------  
         This routine uses a Lorenz system to show that the most likely autonomous  
         path (or deterministic path) is uniquely identified by its initial and  
@@ -30,9 +30,12 @@ def DEM_FEP_Least_Action(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DEM/DEM_FEP_Least_Action.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/DEM/DEM_FEP_Least_Action.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("DEM_FEP_Least_Action", *args, **kwargs, nargout=0)

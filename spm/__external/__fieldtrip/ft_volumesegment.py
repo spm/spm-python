@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_volumesegment(*args, **kwargs):
-    """
+    r"""
       FT_VOLUMESEGMENT segments an anatomical MRI. The behavior depends on the output requested. It can  
         return probabilistic tissue maps of gray/white/csf compartments, a skull-stripped anatomy, or  
         binary masks representing the brain surface, skull, or scalp surface.  
@@ -17,9 +17,9 @@ def ft_volumesegment(*args, **kwargs):
         The configuration structure can contain  
           cfg.output         = string or cell-array of strings, see below (default = 'tpm')  
           cfg.spmversion     = string, 'spm2', 'spm8', 'spm12' (default = 'spm12')  
-          cfg.spmmethod      = string, 'old', 'new', 'mars', the algorithm used when   
-                               cfg.spmversion='spm12' (default = 'old')  
-          cfg.opts           = structure  with spm-version specific options. See the   
+          cfg.spmmethod      = string with he algorithm used when spm12 is used, this   
+                               can be 'old', 'new', 'mars' (default = 'old')  
+          cfg.opts           = structure with spm-version specific options. See the   
                                code and/or the SPM-documentation for more detail.  
           cfg.template       = filename of the template anatomical MRI (default =  
                                '/spm2/templates/T1.mnc' or '/spm8/templates/T1.nii')  
@@ -45,7 +45,7 @@ def ft_volumesegment(*args, **kwargs):
           cfg.scalpsmooth    = 'no', or scalar, the FWHM of the gaussian kernel in voxels, (default = 5)  
           cfg.skullsmooth    = 'no', or scalar, the FWHM of the gaussian kernel in voxels, (default = 5)  
                                this parameter is only used when the segmentation contains 6 tisuse types,   
-        %                      including 'bone'  
+                               including 'bone'  
           cfg.brainthreshold = 'no', or scalar, relative threshold value which is used to threshold the  
                                tpm in order to create a volumetric brainmask (see below), (default = 0.5)  
           cfg.scalpthreshold = 'no', or scalar, relative threshold value which is used to threshold the  
@@ -125,9 +125,12 @@ def ft_volumesegment(*args, **kwargs):
         See also FT_READ_MRI, FT_DETERMINE_COORDSYS, FT_PREPARE_HEADMODEL  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/ft_volumesegment.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/ft_volumesegment.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_volumesegment", *args, **kwargs)

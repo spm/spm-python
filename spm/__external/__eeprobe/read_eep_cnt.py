@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def read_eep_cnt(*args, **kwargs):
-    """
+    r"""
       READ_EEP_CNT reads continuous EEG data from an EEProbe *.cnt file  
         and returns a structure containing the header and data information.  
          
@@ -18,16 +18,18 @@ def read_eep_cnt(*args, **kwargs):
         eeg.nsample    
         eeg.time     ... array [1 x npnt] of time points (ms)  
         eeg.data     ... array [nchan x npnt] containing eeg data (uV)   
-        eeg.trigger  ... array [n, 4] containing trigger information  
          
         Author: Robert Oostenveld, Aalborg University, Denmark, 11 March 2003  
          
         See also READ_EEP_TRG, READ_EEP_REJ, READ_EEP_AVR  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/eeprobe/read_eep_cnt.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/eeprobe/read_eep_cnt.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("read_eep_cnt", *args, **kwargs)

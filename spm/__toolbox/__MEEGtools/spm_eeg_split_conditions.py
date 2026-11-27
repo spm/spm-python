@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_eeg_split_conditions(*args, **kwargs):
-    """
+    r"""
       Splits a file into different conditions in order to facilitate TF  
         processing. The idea is to create several smaller files, run TF, then  
         aveage within the condition files using spm_eeg_average_tf and lastly,  
@@ -21,9 +21,12 @@ def spm_eeg_split_conditions(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/MEEGtools/spm_eeg_split_conditions.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/MEEGtools/spm_eeg_split_conditions.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_eeg_split_conditions", *args, **kwargs)

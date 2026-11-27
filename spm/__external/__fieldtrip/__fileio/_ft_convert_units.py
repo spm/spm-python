@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _ft_convert_units(*args, **kwargs):
-    """
+    r"""
       FT_CONVERT_UNITS changes the geometrical dimension to the specified SI unit.  
         The units of the input object is determined from the structure field  
         object.unit, or is estimated based on the spatial extend of the structure,  
@@ -24,9 +24,12 @@ def _ft_convert_units(*args, **kwargs):
         See also FT_DETERMINE_UNITS, FT_DETERMINE_COORDSYS, FT_CONVERT_COORDSYS, FT_PLOT_AXES, FT_PLOT_XXX  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/ft_convert_units.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/fileio/private/ft_convert_units.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_convert_units", *args, **kwargs)

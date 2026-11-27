@@ -2,12 +2,13 @@ from spm._runtime import Runtime
 
 
 def _refine(*args, **kwargs):
-    """
+    r"""
       REFINE a 3D surface that is described by a triangulation  
          
         Use as  
           [pos, tri]          = refine(pos, tri)  
           [pos, tri]          = refine(pos, tri, 'banks')  
+          [pos, tri]          = refine(pos, tri, 'midpoint')  
           [pos, tri, texture] = refine(pos, tri, 'banks', texture)  
           [pos, tri]          = refine(pos, tri, 'updown', numtri)  
          
@@ -31,9 +32,12 @@ def _refine(*args, **kwargs):
         reference.  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/utilities/private/refine.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/utilities/private/refine.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("refine", *args, **kwargs)

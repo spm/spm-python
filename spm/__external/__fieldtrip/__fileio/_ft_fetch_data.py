@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _ft_fetch_data(*args, **kwargs):
-    """
+    r"""
       FT_FETCH_DATA mimics the behavior of FT_READ_DATA, but for a FieldTrip  
         raw data structure instead of a file on disk.  
          
@@ -12,9 +12,12 @@ def _ft_fetch_data(*args, **kwargs):
         See also FT_READ_DATA, FT_FETCH_HEADER, FT_FETCH_EVENT  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/ft_fetch_data.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/fileio/private/ft_fetch_data.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_fetch_data", *args, **kwargs)

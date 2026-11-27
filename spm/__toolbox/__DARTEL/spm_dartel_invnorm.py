@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_dartel_invnorm(*args, **kwargs):
-    """
+    r"""
       Warp template to match individuals  
         FORMAT spm_dartel_invnorm(job)  
         job.flowfields - Filenames of flowfields  
@@ -14,9 +14,12 @@ def spm_dartel_invnorm(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DARTEL/spm_dartel_invnorm.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/DARTEL/spm_dartel_invnorm.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_dartel_invnorm", *args, **kwargs)

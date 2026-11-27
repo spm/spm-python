@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ptriproj(*args, **kwargs):
-    """
+    r"""
       PTRIPROJ projects a point onto the plane going through a triangle  
          
         Use as  
@@ -15,9 +15,12 @@ def ptriproj(*args, **kwargs):
           1            project the point within or on the edge of the triangle  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/src/ptriproj.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/src/ptriproj.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ptriproj", *args, **kwargs)

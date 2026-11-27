@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _fixcoordsys(*args, **kwargs):
-    """
+    r"""
       FIXCOORDSYS ensures that the coordinate system is consistently  
         described. E.g. SPM and MNI are technically the same coordinate  
         system, but the strings 'spm' and 'mni' are different.  
@@ -10,9 +10,12 @@ def _fixcoordsys(*args, **kwargs):
         See also FT_DETERMINE_COORDSYS  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/forward/private/fixcoordsys.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/forward/private/fixcoordsys.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("fixcoordsys", *args, **kwargs)

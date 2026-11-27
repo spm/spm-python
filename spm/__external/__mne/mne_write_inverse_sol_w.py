@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def mne_write_inverse_sol_w(*args, **kwargs):
-    """
+    r"""
        
         function mne_write_inverse_sol_w(stem,inv,sol)  
          
@@ -13,9 +13,12 @@ def mne_write_inverse_sol_w(*args, **kwargs):
         sol       - The solution matrix (number of locations)  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/mne/mne_write_inverse_sol_w.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/mne/mne_write_inverse_sol_w.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("mne_write_inverse_sol_w", *args, **kwargs, nargout=0)

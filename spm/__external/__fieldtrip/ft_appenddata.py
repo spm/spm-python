@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_appenddata(*args, **kwargs):
-    """
+    r"""
       FT_APPENDDATA concatenates multiple raw data structures that have been preprocessed  
         separately into a single raw data structure.  
          
@@ -47,9 +47,12 @@ def ft_appenddata(*args, **kwargs):
         FT_APPENDSOURCE, FT_APPENDSENS  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/ft_appenddata.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/ft_appenddata.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_appenddata", *args, **kwargs)

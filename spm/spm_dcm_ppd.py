@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_dcm_ppd(*args, **kwargs):
-    """
+    r"""
       Posterior predictive density for empirical Bayes and DCM  
         FORMAT [qE,qC,P] = spm_dcm_ppd(TEST,TRAIN,Y,X,field,i)  
          
@@ -41,9 +41,12 @@ def spm_dcm_ppd(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/spm_dcm_ppd.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/spm_dcm_ppd.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_dcm_ppd", *args, **kwargs)

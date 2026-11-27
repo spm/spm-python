@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def mci_linear_gen(*args, **kwargs):
-    """
+    r"""
       Output of linear model  
         FORMAT [y] = mci_linear_gen (theta,M,U)  
          
@@ -14,9 +14,12 @@ def mci_linear_gen(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/mci/models/linear/mci_linear_gen.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/mci/models/linear/mci_linear_gen.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("mci_linear_gen", *args, **kwargs)

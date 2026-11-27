@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_resampledata(*args, **kwargs):
-    """
+    r"""
       FT_RESAMPLEDATA performs a resampling or downsampling of the data to a specified  
         new sampling frequency, or an inperpolation of the data measured with one sampling  
         frequency to another. The latter is useful when merging data measured on two  
@@ -57,9 +57,12 @@ def ft_resampledata(*args, **kwargs):
         See also FT_PREPROCESSING, FT_APPENDDATA, FT_PREPROC_LOWPASSFILTER, RESAMPLE, DOWNSAMPLE, DECIMATE, INTERP1  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/ft_resampledata.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/ft_resampledata.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_resampledata", *args, **kwargs)

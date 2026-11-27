@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_help(*args, **kwargs):
-    """
+    r"""
       SPM help and manual facilities  
         FORMAT spm_help  
          
@@ -59,9 +59,12 @@ def spm_help(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/spm_help.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/spm_help.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_help", *args, **kwargs)

@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _encode_nifti1(*args, **kwargs):
-    """
+    r"""
      function blob = encode_nifti1(H)  
          
         Encodes a NIFTI-1 header (=> raw 348 bytes (uint8)) from a Matlab structure  
@@ -11,9 +11,12 @@ def _encode_nifti1(*args, **kwargs):
         WARNING: This function currently ignores endianness !!!  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/encode_nifti1.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/fileio/private/encode_nifti1.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("encode_nifti1", *args, **kwargs)

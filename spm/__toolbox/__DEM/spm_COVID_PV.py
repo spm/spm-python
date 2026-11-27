@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_COVID_PV(*args, **kwargs):
-    """
+    r"""
       FORMAT spm_COVID_PV(DCM,i,T)  
         remove ( > T) data from country ( = i)  
        --------------------------------------------------------------------------  
@@ -12,9 +12,12 @@ def spm_COVID_PV(*args, **kwargs):
         Copyright (C) 2020 Wellcome Centre for Human Neuroimaging  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DEM/spm_COVID_PV.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/DEM/spm_COVID_PV.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_COVID_PV", *args, **kwargs, nargout=0)

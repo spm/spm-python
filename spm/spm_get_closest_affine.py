@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_get_closest_affine(*args, **kwargs):
-    """
+    r"""
       Determine the affine transform mapping x to y  
         FORMAT [M,R] = spm_get_closest_affine(X,Y,W)  
         X  - n1*n2*n3*3 array of floats representing coordinates.  
@@ -27,9 +27,12 @@ def spm_get_closest_affine(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/spm_get_closest_affine.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/spm_get_closest_affine.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_get_closest_affine", *args, **kwargs)

@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _ft_version(*args, **kwargs):
-    """
+    r"""
       FT_VERSION returns the version of FieldTrip and the path where it is installed  
          
         FieldTrip is not released with version numbers as "2.0", "2.1", etc. Instead, we  
@@ -40,9 +40,12 @@ def _ft_version(*args, **kwargs):
         See also FT_PLATFORM_SUPPORTS, VERSION, VER, VERLESSTHAN  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/preproc/private/ft_version.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/preproc/private/ft_version.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_version", *args, **kwargs)

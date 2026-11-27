@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _translate(*args, **kwargs):
-    """
+    r"""
       TRANSLATE returns the homogenous coordinate transformation matrix  
         corresponding to a translation along the x, y and z-axis  
          
@@ -15,9 +15,12 @@ def _translate(*args, **kwargs):
         See also ROTATE, SCALE, RIGIDBODY, QUATERNION, HOMOGENOUS2TRADITIONAL  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/translate.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/private/translate.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("translate", *args, **kwargs)

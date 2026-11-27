@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ALAP_demo_attenuation(*args, **kwargs):
-    """
+    r"""
       This demonstration illustrates context or state-dependent precision (i.e.  
         attention), which is necessary to disambiguate between sensations  
         caused exogenously and self-generated sensations. In brief, it is  
@@ -18,9 +18,12 @@ def ALAP_demo_attenuation(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DEM/ALAP_demo_attenuation.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/DEM/ALAP_demo_attenuation.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ALAP_demo_attenuation", *args, **kwargs, nargout=0)

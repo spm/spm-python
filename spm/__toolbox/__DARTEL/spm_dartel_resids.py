@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_dartel_resids(*args, **kwargs):
-    """
+    r"""
       Generate residuals in a form suitable for generating a Fisher kernel  
         FORMAT spm_dartel_residuals(job)  
         job.flowfields  
@@ -16,9 +16,12 @@ def spm_dartel_resids(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DARTEL/spm_dartel_resids.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/DARTEL/spm_dartel_resids.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_dartel_resids", *args, **kwargs)

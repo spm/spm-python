@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _smooth_source(*args, **kwargs):
-    """
+    r"""
      [SOURCE] = SMOOTH(SOURCE, VARARGIN)  
          
         computes location specific 3D gaussian kernels based on a FWHM estimate  
@@ -15,9 +15,12 @@ def _smooth_source(*args, **kwargs):
            maxdist   = scalar, maximum distance for filter kernel  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/smooth_source.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/private/smooth_source.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("smooth_source", *args, **kwargs)

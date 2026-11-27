@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _leadfield_simbio(*args, **kwargs):
-    """
+    r"""
       leadfield_simbio leadfields for a set of dipoles  
          
         [lf] = leadfield_simbio(pos, vol);  
@@ -15,9 +15,12 @@ def _leadfield_simbio(*args, **kwargs):
         the output lf is the leadfield matrix of dimensions m (rows) x n*3 (cols)  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/forward/private/leadfield_simbio.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/forward/private/leadfield_simbio.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("leadfield_simbio", *args, **kwargs)

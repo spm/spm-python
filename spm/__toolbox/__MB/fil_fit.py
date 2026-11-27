@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def fil_fit(*args, **kwargs):
-    """
+    r"""
       Bohning bound CCA stuff  
         FORMAT [mod,Z,V] = fil_fit(F,sett,ind,p,mod,Z,Z0,P0)  
         F{l}      - Nvox x M x N  
@@ -16,9 +16,12 @@ def fil_fit(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/MB/fil_fit.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/MB/fil_fit.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("fil_fit", *args, **kwargs)

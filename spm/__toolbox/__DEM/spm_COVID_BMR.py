@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_COVID_BMR(*args, **kwargs):
-    """
+    r"""
       Bayesian model reduction for COVID models  
         FORMAT spm_COVID_BMR(DCM)  
         DCM - dynamic causal model for covid outbreak  
@@ -16,9 +16,12 @@ def spm_COVID_BMR(*args, **kwargs):
         Copyright (C) 2020 Wellcome Centre for Human Neuroimaging  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DEM/spm_COVID_BMR.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/DEM/spm_COVID_BMR.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_COVID_BMR", *args, **kwargs, nargout=0)

@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_preproc_baselinecorrect(*args, **kwargs):
-    """
+    r"""
       FT_PREPROC_BASELINECORRECT performs a baseline correction, e.g. using the  
         prestimulus interval of the data or using the complete data  
          
@@ -22,9 +22,12 @@ def ft_preproc_baselinecorrect(*args, **kwargs):
         See also FT_PREPROC_DETREND, FT_PREPROC_POLYREMOVAL  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/preproc/ft_preproc_baselinecorrect.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/preproc/ft_preproc_baselinecorrect.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_preproc_baselinecorrect", *args, **kwargs)

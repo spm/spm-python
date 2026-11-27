@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_fp_cmc_tfm(*args, **kwargs):
-    """
+    r"""
       Parameter equations for a neural mass model (canonical microcircuit)  
         FORMAT [f] = spm_fp_cmc_tfm(x,u,P,M)  
          
@@ -31,9 +31,12 @@ def spm_fp_cmc_tfm(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/dcm_meeg/spm_fp_cmc_tfm.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/dcm_meeg/spm_fp_cmc_tfm.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_fp_cmc_tfm", *args, **kwargs)

@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_volumewrite(*args, **kwargs):
-    """
+    r"""
       FT_VOLUMEWRITE exports anatomical or functional volume data to a Analyze  
         or BrainVoyager file. The data in the resulting file(s) can be  
         further analyzed and/or visualized in MRIcro, SPM, BrainVoyager,  
@@ -71,9 +71,12 @@ def ft_volumewrite(*args, **kwargs):
         See also FT_SOURCEANALYSIS, FT_SOURCESTATISTICS, FT_SOURCEINTERPOLATE, FT_WRITE_MRI  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/ft_volumewrite.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/ft_volumewrite.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_volumewrite", *args, **kwargs, nargout=0)

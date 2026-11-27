@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_connectivity_powcorr_ortho(*args, **kwargs):
-    """
+    r"""
       FT_CONNECTIVITY_POWCORR_ORTHO computes power correlation after removing  
         the zero-lag contribution on a trial-by-trial basis, according to Hipp's  
         Nature Neuroscience paper.  
@@ -25,9 +25,12 @@ def ft_connectivity_powcorr_ortho(*args, **kwargs):
         See also CONNECTIVITY, FT_CONNECTIVITYANALYSIS  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/connectivity/ft_connectivity_powcorr_ortho.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/connectivity/ft_connectivity_powcorr_ortho.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_connectivity_powcorr_ortho", *args, **kwargs)

@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_write_mri(*args, **kwargs):
-    """
+    r"""
       FT_WRITE_MRI exports volumetric data such as anatomical and functional MRI  
         to a file.  
          
@@ -42,9 +42,12 @@ def ft_write_mri(*args, **kwargs):
         See also FT_READ_MRI, FT_DATATYPE_VOLUME, FT_WRITE_DATA, FT_WRITE_HEADSHAPE, FT_WRITE_SENS  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/ft_write_mri.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/fileio/ft_write_mri.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_write_mri", *args, **kwargs)

@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_pca_order(*args, **kwargs):
-    """
+    r"""
       Model order selection for PCA     
         FORMAT [M_opt,log_ev,lambda,var] = spm_pca_order (X, N)  
          
@@ -32,9 +32,12 @@ def spm_pca_order(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/mlm/spm_pca_order.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/mlm/spm_pca_order.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_pca_order", *args, **kwargs)

@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_int_B(*args, **kwargs):
-    """
+    r"""
       Integrate a MIMO nonlinear system using a bilinear Jacobian  
         FORMAT [y] = spm_int_B(P,M,U)  
         P   - model parameters  
@@ -62,9 +62,12 @@ def spm_int_B(*args, **kwargs):
        ___________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/spm_int_B.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/spm_int_B.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_int_B", *args, **kwargs)

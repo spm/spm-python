@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_dcm_peb_bmc(*args, **kwargs):
-    """
+    r"""
       Hierarchical (PEB) model comparison and averaging (2nd level)  
         FORMAT [BMA] = spm_dcm_peb_bmc(PEB,models)  
         FORMAT [BMA] = spm_dcm_peb_bmc(PEB)  
@@ -101,9 +101,12 @@ def spm_dcm_peb_bmc(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/spm_dcm_peb_bmc.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/spm_dcm_peb_bmc.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_dcm_peb_bmc", *args, **kwargs)

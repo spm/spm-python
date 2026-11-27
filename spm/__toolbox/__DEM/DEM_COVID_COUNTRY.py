@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def DEM_COVID_COUNTRY(*args, **kwargs):
-    """
+    r"""
       FORMAT DCM = DEM_COVID_COUNTRY(country)  
         country - country to model [default: 'United Kingdom')  
         T       - prediction period (days)  
@@ -20,9 +20,12 @@ def DEM_COVID_COUNTRY(*args, **kwargs):
         Copyright (C) 2020 Wellcome Centre for Human Neuroimaging  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DEM/DEM_COVID_COUNTRY.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/DEM/DEM_COVID_COUNTRY.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("DEM_COVID_COUNTRY", *args, **kwargs)

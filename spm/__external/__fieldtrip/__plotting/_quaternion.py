@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _quaternion(*args, **kwargs):
-    """
+    r"""
       QUATERNION returns the homogenous coordinate transformation matrix corresponding to  
         a coordinate transformation described by 7 quaternion parameters.  
          
@@ -20,9 +20,12 @@ def _quaternion(*args, **kwargs):
         See also TRANSLATE, ROTATE, SCALE, HOMOGENOUS2QUATERNION  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/plotting/private/quaternion.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/plotting/private/quaternion.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("quaternion", *args, **kwargs)

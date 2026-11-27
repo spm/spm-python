@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_sourcegrandaverage(*args, **kwargs):
-    """
+    r"""
       FT_SOURCEGRANDAVERAGE averages source reconstructions over either multiple  
         subjects or conditions. It computes the average and variance for all  
         known source parameters. The output can be used in FT_SOURCESTATISTICS  
@@ -37,9 +37,12 @@ def ft_sourcegrandaverage(*args, **kwargs):
         See also FT_SOURCEANALYSIS, FT_SOURCEDESCRIPTIVES, FT_SOURCESTATISTICS, FT_MATH  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/ft_sourcegrandaverage.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/ft_sourcegrandaverage.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_sourcegrandaverage", *args, **kwargs)

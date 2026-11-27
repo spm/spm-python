@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def DEM_demo_contact_lens(*args, **kwargs):
-    """
+    r"""
       This demo illustrates tracking under the contact lens problem:  
         The contact lens refers to the non-Gaussian uncertainty induced by  
         nonlinear measurements. Here it is illustrated in terms of tracking the  
@@ -18,9 +18,12 @@ def DEM_demo_contact_lens(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DEM/DEM_demo_contact_lens.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/DEM/DEM_demo_contact_lens.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("DEM_demo_contact_lens", *args, **kwargs, nargout=0)

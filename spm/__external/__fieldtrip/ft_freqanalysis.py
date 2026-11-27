@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_freqanalysis(*args, **kwargs):
-    """
+    r"""
       FT_FREQANALYSIS performs frequency and time-frequency analysis  
         on time series data over multiple trials  
          
@@ -97,9 +97,12 @@ def ft_freqanalysis(*args, **kwargs):
           cfg.foilim    = [begin end], frequency band of interest  
               OR  
           cfg.foi       = vector 1 x numfoi, frequencies of interest  
-          cfg.tapsmofrq = number, the amount of spectral smoothing through  
-                            multi-tapering. Note that 4 Hz smoothing means  
-                            plus-minus 4 Hz, i.e. a 8 Hz smoothing box.  
+          cfg.tapsmofrq = scalar (in Hz), the half bandwidth of the spectral smoothing window. Thus, 4 Hz smoothing  
+                            means that the spectra are 'smoothed' with a ~8 Hz smoothing box.  
+          cfg.mtmadapt  = string, 'mean', 'eig', 'adapt' determines how the individual dpss-tapered signals are combined to get the spetrum estimate  
+                            'mean': (default): averaging across the 2*NW-1 tapers  
+                            'eig': weight the tapered signals with the taper's specific concentration eigenvalue  
+                            'adapt': adaptive weighted average, with frequency specific weights, as per Thomson's adaptive method  
          
         MTMCONVOL performs time-frequency analysis on any time series trial data using  
         the 'multitaper method' (MTM) based on Slepian sequences as tapers.  
@@ -191,6 +194,23 @@ def ft_freqanalysis(*args, **kwargs):
                          deviations of the implicit Gaussian kernel and should  
                          be choosen >= 3; (default = 3)  
          
+        IRASA (Irregular-Resampling Auto-Spectral Analysis) estimates the  
+        'fractal' component of the power spectrum (https://doi.org/10.1007/s10548-015-0448-0),  
+        by stretching/compressing the sampling rate, and combining the geometric means of   
+        the power spectra resulting from the stretching/compression. The default behavior is   
+        according to the implementation in the referenced paper, where each input segment's  
+        power spectrum is computed according to a Welch-type overlapping windowed estimation.  
+          cfg.taper    = 'dpss', 'hanning' or many others, see WINDOW (default = 'hanning'), in case of 'dpss'  
+                           only the first Slepian is used  
+          cfg.hset     = vector of stretching/compression ratios (default = (1.1:0.05:1.9))  
+          cfg.nwindow  = scalar, number of overlapping windows per segment (default = 10)  
+          cfg.windowlength = scalar, 'auto', or 'all', length of window in seconds (default = 'auto')  
+          cfg.mfunc    = string, 'median', or 'trimmean', method to aggregate across geometric means of spectra (default = 'median')  
+          cfg.output   = string, 'fractal', or 'original' (default = 'fractal'), computes either fractal component, or the original  
+                           spectrum (for comparison), based on the same parameters (minus the stretching/compression)  
+         
+        MVAR estimates the spectrum based on Autoregressive models, requires output from FT_MVARANALYSIS.  
+          See FT_FREQANALYSIS_MVAR.            
          
         To facilitate data-handling and distributed computing you can use  
           cfg.inputfile   =  ...  
@@ -203,9 +223,12 @@ def ft_freqanalysis(*args, **kwargs):
         See also FT_FREQSTATISTICS, FT_FREQDESCRIPTIVES, FT_CONNECTIVITYANALYSIS  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/ft_freqanalysis.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/ft_freqanalysis.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_freqanalysis", *args, **kwargs)

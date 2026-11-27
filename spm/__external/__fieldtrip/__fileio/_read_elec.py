@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _read_elec(*args, **kwargs):
-    """
+    r"""
       READ_ELEC reads "la/mu" electrode parameters from a MBF electrode file  
         which are used to position them on a triangulated surface  
          
@@ -14,9 +14,12 @@ def _read_elec(*args, **kwargs):
         See also READ_TRI, TRANSFER_ELEC  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/read_elec.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/fileio/private/read_elec.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("read_elec", *args, **kwargs)

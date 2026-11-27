@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_sliceinterp(*args, **kwargs):
-    """
+    r"""
       FT_SLICEINTERP plots a 2D-montage of source reconstruction and anatomical MRI  
         after these have been interpolated onto the same grid.  
          
@@ -82,9 +82,12 @@ def ft_sliceinterp(*args, **kwargs):
         See also FT_SOURCEANALYSIS, FT_VOLUMERESLICE  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/ft_sliceinterp.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/ft_sliceinterp.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_sliceinterp", *args, **kwargs)

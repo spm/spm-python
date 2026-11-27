@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_mesh_utils(*args, **kwargs):
-    """
+    r"""
       A gateway function for surface mesh-related compiled algorithms   
          
         FORMAT [N, D] = spm_mesh_utils('neighbours',A)  
@@ -19,9 +19,12 @@ def spm_mesh_utils(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/spm_mesh_utils.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/spm_mesh_utils.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_mesh_utils", *args, **kwargs)

@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_prepare_leadfield(*args, **kwargs):
-    """
+    r"""
       FT_PREPARE_LEADFIELD computes the forward model for many dipole locations  
         on a regular 2D or 3D sourcemodel and stores it for efficient inverse modelling  
          
@@ -68,6 +68,12 @@ def ft_prepare_leadfield(*args, **kwargs):
                                       for which the leadfield is computed in a  
                                       single call to the low-level code. Trades off  
                                       memory efficiency for speed.  
+          
+        For HBF based headmodels:  
+          cfg.hbf.batchsize = scalar or 'all' (default 1), number of dipoles  
+                                      for which the leadfield is computed in a  
+                                      single call to the low-level code. Trades off  
+                                      memory efficiency for speed.  
          
         To facilitate data-handling and distributed computing you can use  
           cfg.inputfile   =  ...  
@@ -78,9 +84,12 @@ def ft_prepare_leadfield(*args, **kwargs):
         See also FT_SOURCEANALYSIS, FT_DIPOLEFITTING, FT_PREPARE_HEADMODEL, FT_PREPARE_SOURCEMODEL  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/ft_prepare_leadfield.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/ft_prepare_leadfield.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_prepare_leadfield", *args, **kwargs)

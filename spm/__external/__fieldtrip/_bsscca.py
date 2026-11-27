@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _bsscca(*args, **kwargs):
-    """
+    r"""
       BSSCCA computes the unmixing matrix based on the canonical correlation between   
         two sets of (possibly multivariate) signals, the sets may contain time shifted copies.   
         In its default, it implements the algorithm described in [1], computing the  
@@ -15,9 +15,12 @@ def _bsscca(*args, **kwargs):
         [1] DeClercq et al 2006, IEEE Biomed Eng 2583.  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/bsscca.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/private/bsscca.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("bsscca", *args, **kwargs)

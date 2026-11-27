@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_diff_dx(*args, **kwargs):
-    """
+    r"""
       Optimisation of finite difference for numerical differentiation  
         FORMAT [dx] = spm_diff_dx(f,x,...,n)  
         FORMAT [dx] = spm_diff_dx(f,x,...,n,V)  
@@ -16,9 +16,12 @@ def spm_diff_dx(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/spm_diff_dx.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/spm_diff_dx.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_diff_dx", *args, **kwargs)

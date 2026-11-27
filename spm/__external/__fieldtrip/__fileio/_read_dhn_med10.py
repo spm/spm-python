@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _read_dhn_med10(*args, **kwargs):
-    """
+    r"""
       READ_DHN_MED10 read header, event, and waveform data formated in Dark Horse Neuron MED 1.0  
          
         Syntax:  
@@ -37,9 +37,12 @@ def _read_dhn_med10(*args, **kwargs):
         See also FT_FILETYPE, FT_READ_HEADER, FT_READ_EVENT, FT_READ_DATA.  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/read_dhn_med10.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/fileio/private/read_dhn_med10.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("read_dhn_med10", *args, **kwargs)

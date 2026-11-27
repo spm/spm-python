@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_gx_dem_cue(*args, **kwargs):
-    """
+    r"""
       returns the prediction for cued responses (proprioception and vision)  
         FORMAT [g]= spm_gx_dem_cue(x,v,P)  
          
@@ -22,9 +22,12 @@ def spm_gx_dem_cue(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DEM/spm_gx_dem_cue.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/DEM/spm_gx_dem_cue.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_gx_dem_cue", *args, **kwargs)

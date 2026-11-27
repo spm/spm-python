@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _read_besa_avr(*args, **kwargs):
-    """
+    r"""
       READ_BESA_AVR reads average EEG data in BESA format  
          
         Use as  
@@ -20,9 +20,12 @@ def _read_besa_avr(*args, **kwargs):
           avr.data  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/read_besa_avr.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/private/read_besa_avr.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("read_besa_avr", *args, **kwargs)

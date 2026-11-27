@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_invdef(*args, **kwargs):
-    """
+    r"""
       Create the inverse of a deformation field  
         FORMAT [Y1,Y2,Y3] = spm_invdef(X1,X2,X3,dimY,MX,MY)  
           X1, X2 & X3 - Three components of original deformation field.  
@@ -32,9 +32,12 @@ def spm_invdef(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/OldSeg/spm_invdef.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/OldSeg/spm_invdef.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_invdef", *args, **kwargs)

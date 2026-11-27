@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _bandpassfilter(*args, **kwargs):
-    """
+    r"""
       BANDPASSFILTER filters EEG/MEG data in a specified band  
           
         Use as  
@@ -27,9 +27,12 @@ def _bandpassfilter(*args, **kwargs):
         See also LOWPASSFILTER, HIGHPASSFILTER  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/bandpassfilter.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/private/bandpassfilter.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("bandpassfilter", *args, **kwargs)

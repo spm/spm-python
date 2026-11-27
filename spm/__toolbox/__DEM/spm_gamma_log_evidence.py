@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_gamma_log_evidence(*args, **kwargs):
-    """
+    r"""
       Bayesian model reduction for gamma distibutions  
         FORMAT [F,sA] = spm_gamma_log_evidence(qA,pA,rA)  
          
@@ -19,9 +19,12 @@ def spm_gamma_log_evidence(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DEM/spm_gamma_log_evidence.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/DEM/spm_gamma_log_evidence.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_gamma_log_evidence", *args, **kwargs)

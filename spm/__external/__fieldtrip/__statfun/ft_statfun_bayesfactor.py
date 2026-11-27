@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_statfun_bayesfactor(*args, **kwargs):
-    """
+    r"""
       FT_STATFUN_BAYESFACTOR computes the Bayes factor for a H0 of the data in two  
         conditions having the same mean, versus H1 of the data having different means. This  
         function supports both unpaired and paired designs and assumes flat priors.  
@@ -44,9 +44,12 @@ def ft_statfun_bayesfactor(*args, **kwargs):
         See also FT_TIMELOCKSTATISTICS, FT_FREQSTATISTICS or FT_SOURCESTATISTICS  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/statfun/ft_statfun_bayesfactor.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/statfun/ft_statfun_bayesfactor.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_statfun_bayesfactor", *args, **kwargs)

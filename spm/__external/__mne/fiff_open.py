@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def fiff_open(*args, **kwargs):
-    """
+    r"""
        
         [fid, tree, dir] = fiff_open(fname)  
          
@@ -13,9 +13,12 @@ def fiff_open(*args, **kwargs):
         dir     the sequential tag directory  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/mne/fiff_open.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/mne/fiff_open.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("fiff_open", *args, **kwargs)

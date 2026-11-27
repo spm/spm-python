@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_trialfun_realtime(*args, **kwargs):
-    """
+    r"""
       FT_TRIALFUN_REALTIME can be used to segment a continuous stream of  
         data in real-time. Trials are defined as [begsample endsample offset  
         condition]  
@@ -17,9 +17,12 @@ def ft_trialfun_realtime(*args, **kwargs):
                            interest is read. Otherwise, all well-defined blocks are read (default = 'first')  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/trialfun/ft_trialfun_realtime.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/trialfun/ft_trialfun_realtime.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_trialfun_realtime", *args, **kwargs)

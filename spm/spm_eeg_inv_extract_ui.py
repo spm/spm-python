@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_eeg_inv_extract_ui(*args, **kwargs):
-    """
+    r"""
       GUI for contrast of evoked responses and power for an MEG-EEG model  
         FORMAT [D] = spm_eeg_inv_extract_ui(D, val, XYZ)  
         Sets:  
@@ -12,9 +12,12 @@ def spm_eeg_inv_extract_ui(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/spm_eeg_inv_extract_ui.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/spm_eeg_inv_extract_ui.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_eeg_inv_extract_ui", *args, **kwargs)

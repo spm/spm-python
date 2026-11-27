@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_read_vols(*args, **kwargs):
-    """
+    r"""
       Read in entire image volumes  
         FORMAT [Y,XYZmm] = spm_read_vols(V,mask)  
         V      - vector of mapped image volumes to read in (from spm_vol)  
@@ -18,9 +18,12 @@ def spm_read_vols(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/spm_read_vols.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/spm_read_vols.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_read_vols", *args, **kwargs)

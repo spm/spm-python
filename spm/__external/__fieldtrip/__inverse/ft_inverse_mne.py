@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_inverse_mne(*args, **kwargs):
-    """
+    r"""
       FT_INVERSE_MNE computes a minimum norm linear estimate of the current in a  
         distributed source model.  
          
@@ -15,6 +15,10 @@ def ft_inverse_mne(*args, **kwargs):
           dat         is the data matrix with the ERP or ERF  
         and  
           estimate    contains the estimated source parameters  
+         
+        If the input data "dat" is in V, "cov" is in V^2, and the leadfield is in V/Am,  
+        then the estimated output "mom" is in Am, the output "pow" is (Am)^2, and the  
+        output "filter" is in Am/V.  
          
         Additional input arguments should be specified as key-value pairs and can include  
           'noisecov'         = Nchan x Nchan matrix with noise covariance  
@@ -49,9 +53,12 @@ def ft_inverse_mne(*args, **kwargs):
         See also FT_SOURCEANALYSIS, FT_PREPARE_HEADMODEL, FT_PREPARE_SOURCEMODEL  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/inverse/ft_inverse_mne.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/inverse/ft_inverse_mne.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_inverse_mne", *args, **kwargs)

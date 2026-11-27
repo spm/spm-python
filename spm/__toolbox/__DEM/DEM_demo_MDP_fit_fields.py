@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def DEM_demo_MDP_fit_fields(*args, **kwargs):
-    """
+    r"""
       Demo of active inference for visual salience  
        __________________________________________________________________________  
          
@@ -26,9 +26,12 @@ def DEM_demo_MDP_fit_fields(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DEM/DEM_demo_MDP_fit_fields.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/DEM/DEM_demo_MDP_fit_fields.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("DEM_demo_MDP_fit_fields", *args, **kwargs)

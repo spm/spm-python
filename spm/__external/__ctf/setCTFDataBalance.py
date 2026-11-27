@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def setCTFDataBalance(*args, **kwargs):
-    """
+    r"""
        Version 1.1  13 April 2007  Mod to chanList:  If chanList is omitted and  
                                      size(data,2)<ds.res4.no_channels, then setCTFDataBalance  
                                      sets chanList=1:size(data,2) and prints a warning the first  
@@ -12,9 +12,12 @@ def setCTFDataBalance(*args, **kwargs):
          Version 1.0   27 October 2006  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/ctf/setCTFDataBalance.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/ctf/setCTFDataBalance.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("setCTFDataBalance", *args, **kwargs)

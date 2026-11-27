@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_subfun(*args, **kwargs):
-    """
+    r"""
       Enable calling local functions  
         FORMAT [o1,o2,...] = spm_subfun(localfunctions,action,i1,i2,...)  
          
@@ -13,9 +13,12 @@ def spm_subfun(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/spm_subfun.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/spm_subfun.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_subfun", *args, **kwargs)

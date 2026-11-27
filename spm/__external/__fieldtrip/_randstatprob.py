@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _randstatprob(*args, **kwargs):
-    """
+    r"""
       RANDSTATPROB computes the non-parametric probability of the observed  
         value under the assumption that the random observations are equally  
         probable under the null hypothesis.  
@@ -25,9 +25,12 @@ def _randstatprob(*args, **kwargs):
         of all voxels for each randomization.  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/randstatprob.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/private/randstatprob.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("randstatprob", *args, **kwargs)

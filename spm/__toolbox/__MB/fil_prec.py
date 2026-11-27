@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def fil_prec(*args, **kwargs):
-    """
+    r"""
       Attach matrices for computing priors  
         FORMAT model = fil_prec(model,sett)  
         model - The learned model from fil_train  
@@ -15,9 +15,12 @@ def fil_prec(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/MB/fil_prec.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/MB/fil_prec.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("fil_prec", *args, **kwargs)

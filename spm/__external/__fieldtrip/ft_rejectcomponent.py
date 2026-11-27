@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_rejectcomponent(*args, **kwargs):
-    """
+    r"""
       FT_REJECTCOMPONENT backprojects an ICA (or similar) decomposition to the  
         channel level after removing the independent components that contain  
         the artifacts. This function does not automatically detect the artifact  
@@ -26,7 +26,7 @@ def ft_rejectcomponent(*args, **kwargs):
         The configuration structure can contain  
           cfg.component  = list of components to remove, e.g. [1 4 7] or see FT_CHANNELSELECTION  
           cfg.demean     = 'no' or 'yes', whether to demean the input data (default = 'yes')  
-          cfg.updatesens = 'no' or 'yes' (default = 'yes')  
+          cfg.updatesens = 'yes' or 'no', whether to update the sensor array with the spatial projector (default = 'yes')  
          
         To facilitate data-handling and distributed computing you can use  
           cfg.inputfile   =  ...  
@@ -39,9 +39,12 @@ def ft_rejectcomponent(*args, **kwargs):
         See also FT_COMPONENTANALYSIS, FT_PREPROCESSING  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/ft_rejectcomponent.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/ft_rejectcomponent.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_rejectcomponent", *args, **kwargs)

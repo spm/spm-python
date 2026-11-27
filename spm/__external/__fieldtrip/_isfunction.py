@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _isfunction(*args, **kwargs):
-    """
+    r"""
       ISFUNCTION tests whether the function of the specified name is a callable  
         function on the current MATLAB path.  
          
@@ -10,9 +10,12 @@ def _isfunction(*args, **kwargs):
         since that will return 7 in case funcname exists as a folder.  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/isfunction.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/private/isfunction.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("isfunction", *args, **kwargs)

@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def Markov_blankets_and_NESS(*args, **kwargs):
-    """
+    r"""
       Meta-modelling of Bayes-optimal responses (Newton's method)  
         FORMAT Markov_blankets_and_NESS  
          
@@ -28,9 +28,12 @@ def Markov_blankets_and_NESS(*args, **kwargs):
         Copyright (C) 2020 Wellcome Centre for Human Neuroimaging  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DEM/Markov_blankets_and_NESS.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/DEM/Markov_blankets_and_NESS.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("Markov_blankets_and_NESS", *args, **kwargs, nargout=0)

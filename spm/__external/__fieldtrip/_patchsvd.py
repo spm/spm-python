@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _patchsvd(*args, **kwargs):
-    """
+    r"""
       PATCHSVD computes a linear basis to span the leadfield for a defined patch  
         of the source space. It is called by FT_PREPARE_LEADFIELD. This function   
         was originally written to do something like Limpiti et al.  
@@ -30,9 +30,12 @@ def _patchsvd(*args, **kwargs):
         See also FT_VIRTUALCHANNEL  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/patchsvd.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/private/patchsvd.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("patchsvd", *args, **kwargs)

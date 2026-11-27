@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _blockindx2cmbindx(*args, **kwargs):
-    """
+    r"""
       This is a helper function that is needed for the bookkeeping of the data,  
         when requesting (conditional)-blockwise granger causality estimates. Its  
         single use is in ft_connectivityanalysis, but in order to keep that code  
@@ -22,9 +22,12 @@ def _blockindx2cmbindx(*args, **kwargs):
         needed to compute a conditioned Granger spectrum.  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/blockindx2cmbindx.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/private/blockindx2cmbindx.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("blockindx2cmbindx", *args, **kwargs)

@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _triangle2distance(*args, **kwargs):
-    """
+    r"""
       TRIANGLE2DISTANCE computes the geodesic distance (across the edges) on a  
         mesh, using Dijkstra's algorithm. The Dijkstra code is an efficient  
         vectorized version of a function from MIT's graphtool toolbox, operating  
@@ -22,9 +22,12 @@ def _triangle2distance(*args, **kwargs):
           d   = Nxnumel(s) distance matrix  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/triangle2distance.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/private/triangle2distance.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("triangle2distance", *args, **kwargs)

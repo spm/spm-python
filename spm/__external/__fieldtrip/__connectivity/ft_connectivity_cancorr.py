@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_connectivity_cancorr(*args, **kwargs):
-    """
+    r"""
       FT_CONNECTIVITY_CANCORR computes the canonical correlation or canonical coherence  
         between multiple variables. Canonical correlation analysis (CCA) is a way of  
         measuring the linear relationship between two multidimensional variables. It finds  
@@ -29,9 +29,12 @@ def ft_connectivity_cancorr(*args, **kwargs):
         See also CONNECTIVITY, FT_CONNECTIVITYANALYSIS  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/connectivity/ft_connectivity_cancorr.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/connectivity/ft_connectivity_cancorr.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_connectivity_cancorr", *args, **kwargs)

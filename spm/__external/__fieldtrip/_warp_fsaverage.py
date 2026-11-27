@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _warp_fsaverage(*args, **kwargs):
-    """
+    r"""
       WARP_FSAVERAGE maps electrodes onto FreeSurfer's fsaverage brain.  
         This surface-based registration technique solely considers the curvature  
         patterns of the cortex and thus can be used for the spatial normalization  
@@ -18,9 +18,12 @@ def _warp_fsaverage(*args, **kwargs):
         See also FT_ELECTRODEREALIGN, FT_PREPARE_MESH  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/warp_fsaverage.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/private/warp_fsaverage.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("warp_fsaverage", *args, **kwargs)

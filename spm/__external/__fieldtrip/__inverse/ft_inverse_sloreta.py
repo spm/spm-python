@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_inverse_sloreta(*args, **kwargs):
-    """
+    r"""
       FT_INVERSE_SLORETA scans on pre-defined dipole locations with a single dipole and  
         returns the sLORETA spatial filter output for a dipole on every location.  
          
@@ -44,9 +44,12 @@ def ft_inverse_sloreta(*args, **kwargs):
         See also FT_SOURCEANALYSIS, FT_PREPARE_HEADMODEL, FT_PREPARE_SOURCEMODEL  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/inverse/ft_inverse_sloreta.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/inverse/ft_inverse_sloreta.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_inverse_sloreta", *args, **kwargs)

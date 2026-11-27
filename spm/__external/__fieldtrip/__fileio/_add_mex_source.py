@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _add_mex_source(*args, **kwargs):
-    """
+    r"""
       function L = add_mex_source(L, directory, relName, matchPlatform, excludePlatform, extras)  
          
         Input + output argument L is a structure array of directory names, source file names,  
@@ -23,9 +23,12 @@ def _add_mex_source(*args, **kwargs):
              extra arguments to the MEX command, e.g. additional source files  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/add_mex_source.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/fileio/private/add_mex_source.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("add_mex_source", *args, **kwargs)

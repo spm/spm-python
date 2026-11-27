@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_plot_topo(*args, **kwargs):
-    """
+    r"""
       FT_PLOT_TOPO interpolates and plots the 2-D spatial topography of the  
         potential or field distribution over the head  
          
@@ -15,7 +15,9 @@ def ft_plot_topo(*args, **kwargs):
           'mask'          = cell-array with line segments that forms the mask (see FT_PREPARE_LAYOUT)  
           'outline'       = cell-array with line segments that for the outline (see  FT_PREPARE_LAYOUT)  
           'isolines'      = vector with values for isocontour lines (default = [])  
-          'interplim'     = string, 'sensors' or 'mask' (default = 'sensors')  
+          'interplim'     = string, 'mask', 'mask_individual', 'square', 'convex' (default = automatic)  
+                             if the input contains a mask, then interplim='mask',  
+                             otherwise it defaults to 'convex'  
           'interpmethod'  = string, 'nearest', 'linear', 'natural', 'cubic' or 'v4' (default = 'v4')  
           'style'         = can be 'surf', 'iso', 'isofill', 'surfiso', 'imsat', 'imsatiso', 'colormix'  
           'clim'          = [min max], limits for color scaling  
@@ -23,7 +25,7 @@ def ft_plot_topo(*args, **kwargs):
           'parent'        = handle which is set as the parent for all plots (default = [])  
           'tag'           = string, the tag assigned to the plotted elements (default = '')  
          
-        It is possible to plot the object in a local pseudo-axis (c.f. subplot), which is specfied as follows  
+        It is possible to plot the object in a local pseudo-axis (c.f. subplot), which is specified as follows  
           'box'           = draw a box around the local axes, can be 'yes' or 'no'  
           'hpos'          = horizontal position of the lower left corner of the local axes  
           'vpos'          = vertical position of the lower left corner of the local axes  
@@ -35,9 +37,12 @@ def ft_plot_topo(*args, **kwargs):
         See also FT_PLOT_TOPO3D, FT_PLOT_LAYOUT, FT_TOPOPLOTER, FT_TOPOPLOTTFR  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/plotting/ft_plot_topo.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/plotting/ft_plot_topo.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_plot_topo", *args, **kwargs)

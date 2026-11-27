@@ -2,10 +2,10 @@ from spm._runtime import Runtime
 
 
 def ft_trialfun_twoclass_classification(*args, **kwargs):
-    """
+    r"""
       FT_TRIALFUN_TWOCLASS_CLASSIFICATION can be used to train and test a real-time  
         classifier in offline and online mode. It selects pieces of data in the two classes  
-        based on two trigger values. The first N occurences in each class are marked as  
+        based on two trigger values. The first N occurrences in each class are marked as  
         training items. All subsequent occurrences are marked as test items.  
          
         This function can be used in conjunction with FT_REALTIME_CLASSIFICATION. The  
@@ -22,9 +22,12 @@ def ft_trialfun_twoclass_classification(*args, **kwargs):
         See also FT_DEFINETRIAL, FT_TRIALFUN_GENERAL  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/trialfun/ft_trialfun_twoclass_classification.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/trialfun/ft_trialfun_twoclass_classification.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_trialfun_twoclass_classification", *args, **kwargs)

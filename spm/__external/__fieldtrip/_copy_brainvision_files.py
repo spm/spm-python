@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _copy_brainvision_files(*args, **kwargs):
-    """
+    r"""
       COPY_BRAINVISION_FILES copies a BrainVision EEG dataset, which consists of a vhdr  
         header file, vmrk marker file and a data file with the extension dat, eeg or seg.  
          
@@ -23,9 +23,12 @@ def _copy_brainvision_files(*args, **kwargs):
         See also COPY_CTF_FILES  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/copy_brainvision_files.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/private/copy_brainvision_files.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("copy_brainvision_files", *args, **kwargs, nargout=0)

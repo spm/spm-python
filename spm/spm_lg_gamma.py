@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_lg_gamma(*args, **kwargs):
-    """
+    r"""
       Log of generalised gamma function  
         FORMAT [lng] = spm_lg_gamma(p,b)  
          
@@ -16,9 +16,12 @@ def spm_lg_gamma(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/spm_lg_gamma.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/spm_lg_gamma.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_lg_gamma", *args, **kwargs)

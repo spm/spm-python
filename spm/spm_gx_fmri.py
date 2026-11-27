@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_gx_fmri(*args, **kwargs):
-    """
+    r"""
       Simulated BOLD response to input  
         FORMAT [g,dgdx] = spm_gx_fmri(x,u,P,M)  
         g          - BOLD response (%)  
@@ -18,9 +18,12 @@ def spm_gx_fmri(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/spm_gx_fmri.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/spm_gx_fmri.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_gx_fmri", *args, **kwargs)

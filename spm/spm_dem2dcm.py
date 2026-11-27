@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_dem2dcm(*args, **kwargs):
-    """
+    r"""
       Reorganisation of posteriors and priors into DCM format  
         FORMAT [DCM] = spm_dem2dcm(DEM)  
         FORMAT [DEM] = spm_dem2dcm(DEM,DCM)  
@@ -22,9 +22,12 @@ def spm_dem2dcm(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/spm_dem2dcm.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/spm_dem2dcm.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_dem2dcm", *args, **kwargs)

@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def mci_lds_par2lat(*args, **kwargs):
-    """
+    r"""
       Convert parmas to latent params  
         FORMAT [P] = mci_lds_par2lat (Pt,M)  
          
@@ -13,9 +13,12 @@ def mci_lds_par2lat(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/mci/models/lds/mci_lds_par2lat.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/mci/models/lds/mci_lds_par2lat.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("mci_lds_par2lat", *args, **kwargs)

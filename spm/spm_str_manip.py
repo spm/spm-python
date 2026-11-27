@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_str_manip(*args, **kwargs):
-    """
+    r"""
       Miscellaneous string manipulation options  
         FORMAT string_out = spm_str_manip(string_in,options)  
         string_in    - input string, string matrix, or cell array of strings  
@@ -35,7 +35,7 @@ def spm_str_manip(*args, **kwargs):
           'v'              - delete non valid filename characters  
                              Valid are '.a..zA..Z01..9_-: ' & filesep  
           'x'              - escape TeX special characters  
-          'p'              - canonicalise pathname (see spm_select('CPath',...))  
+          'p'              - canonicalise pathname (see spm_file(...,'CPath'))  
           'c'              - remove leading components common to all strings  
                              returns leading component as a second output argument  
           'C'              - returns single string compressed version of a  
@@ -51,9 +51,12 @@ def spm_str_manip(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/spm_str_manip.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/spm_str_manip.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_str_manip", *args, **kwargs)

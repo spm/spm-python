@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_fieldindices(*args, **kwargs):
-    """
+    r"""
       Return the indices of fields in a structure (and vice versa)  
         FORMAT [i]     = spm_fieldindices(X,field1,field2,...)  
         FORMAT [field] = spm_fieldindices(X,i)  
@@ -18,9 +18,12 @@ def spm_fieldindices(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/spm_fieldindices.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/spm_fieldindices.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_fieldindices", *args, **kwargs)

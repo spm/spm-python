@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_GPclass(*args, **kwargs):
-    """
+    r"""
       Gaussian process classification  
         [p,F,K,theta,bic] = spm_GPclass(XX,t,lab,cov_fun,fun_args)  
         Inputs:  
@@ -25,9 +25,12 @@ def spm_GPclass(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/Shoot/spm_GPclass.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/Shoot/spm_GPclass.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_GPclass", *args, **kwargs)

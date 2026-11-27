@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def pm_merge_regions(*args, **kwargs):
-    """
+    r"""
       Merges regions as defined in connectogram to minimise  
         total costfunction (sum of phase-differences across  
         region borders).  
@@ -75,9 +75,12 @@ def pm_merge_regions(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/FieldMap/pm_merge_regions.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/FieldMap/pm_merge_regions.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("pm_merge_regions", *args, **kwargs)

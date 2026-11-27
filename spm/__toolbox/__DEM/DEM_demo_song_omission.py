@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def DEM_demo_song_omission(*args, **kwargs):
-    """
+    r"""
       Demo for bird songs: In this example, we show that DEM can not only  
         estimate the hidden states of an autonomous system but can also  
         deconvolve dynamic changes in its control parameters.  We illustrate  
@@ -27,9 +27,12 @@ def DEM_demo_song_omission(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DEM/DEM_demo_song_omission.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/DEM/DEM_demo_song_omission.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("DEM_demo_song_omission", *args, **kwargs, nargout=0)

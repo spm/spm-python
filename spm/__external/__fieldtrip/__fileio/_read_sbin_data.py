@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _read_sbin_data(*args, **kwargs):
-    """
+    r"""
       READ_SBIN_DATA reads the data from an EGI segmented simple binary format file  
          
         Use as  
@@ -21,9 +21,12 @@ def _read_sbin_data(*args, **kwargs):
         Modified from EGI's readEGLY.m with permission 2008-03-31 Joseph Dien  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/read_sbin_data.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/fileio/private/read_sbin_data.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("read_sbin_data", *args, **kwargs)

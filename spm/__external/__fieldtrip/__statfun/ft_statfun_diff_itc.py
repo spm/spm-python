@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_statfun_diff_itc(*args, **kwargs):
-    """
+    r"""
       FT_STATFUN_DIFF_ITC computes the difference in the inter-trial coherence between  
         two conditions. The input data for this test should consist of complex-values  
         spectral estimates, e.g. computed using FT_FREQANALYSIS with cfg.method='mtmfft',  
@@ -39,9 +39,12 @@ def ft_statfun_diff_itc(*args, **kwargs):
         See also FT_FREQSTATISTICS and FT_STATISTICS_MONTECARLO  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/statfun/ft_statfun_diff_itc.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/statfun/ft_statfun_diff_itc.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_statfun_diff_itc", *args, **kwargs)

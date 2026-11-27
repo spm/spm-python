@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_wizard(*args, **kwargs):
-    """
+    r"""
       FT_WIZARD is a graphical user interface to evaluate a FieldTrip analysis  
         script one step at a time, allowing you to go to the next step if you are  
         content with the data so far, or to the previous step if you want to repeat it  
@@ -31,9 +31,12 @@ def ft_wizard(*args, **kwargs):
         See also FT_ANALYSISPROTOCOL  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/ft_wizard.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/ft_wizard.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_wizard", *args, **kwargs)

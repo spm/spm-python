@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_csd_int(*args, **kwargs):
-    """
+    r"""
       Time frequency response of a neural mass model  
         FORMAT [CSD,ERP,csd,mtf,w,pst,x,dP] = spm_csd_int(P,M,U)  
                ERP = spm_csd_int(P,M,U): M.ds = 0  
@@ -37,9 +37,12 @@ def spm_csd_int(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/dcm_meeg/spm_csd_int.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/dcm_meeg/spm_csd_int.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_csd_int", *args, **kwargs)

@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _globalrescale(*args, **kwargs):
-    """
+    r"""
       GLOBALRESCALE creates the homogenous spatial transformation matrix  
         for a 7 parameter rigid-body transformation with global rescaling  
          
@@ -21,9 +21,12 @@ def _globalrescale(*args, **kwargs):
           global rescaling factor  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/globalrescale.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/private/globalrescale.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("globalrescale", *args, **kwargs)

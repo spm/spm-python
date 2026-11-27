@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _expand_orthogonal(*args, **kwargs):
-    """
+    r"""
       EXPAND_ORTHOGONAL determines an orthogonal expansion of the orthogonal basis  
         for the subspace spanned by the columns of the matrix input argument, which  
         must have more rows than columns, using either singular value decomposition  
@@ -33,9 +33,12 @@ def _expand_orthogonal(*args, **kwargs):
         See also: SVD  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/expand_orthogonal.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/private/expand_orthogonal.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("expand_orthogonal", *args, **kwargs)

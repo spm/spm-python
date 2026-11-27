@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_epileptor_demo(*args, **kwargs):
-    """
+    r"""
       Demo routine for local field potential models  
        ==========================================================================  
           
@@ -16,9 +16,12 @@ def spm_epileptor_demo(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/dcm_meeg/spm_epileptor_demo.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/dcm_meeg/spm_epileptor_demo.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_epileptor_demo", *args, **kwargs, nargout=0)

@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_connectivity_psi(*args, **kwargs):
-    """
+    r"""
       FT_CONNECTIVITY_PSI computes the phase slope index from a data-matrix containing  
         the cross-spectral density. This implements the method described in Nolte et al.,  
         Robustly estimating the flow direction of information in complex physical systems.  
@@ -30,15 +30,19 @@ def ft_connectivity_psi(*args, **kwargs):
           'hasjack'		= boolean, specifying whether the repetitions represent leave-one-out samples (allowing for a variance estimate)  
           'feedback'  = 'none', 'text', 'textbar', 'dial', 'etf', 'gui' type of feedback showing progress of computation, see FT_PROGRESS  
           'dimord'		= string, specifying how the input matrix should be interpreted  
-          'powindx'   = ?  
-          'normalize' = ?  
+          'powindx'   = Nx2 linear indexing matrix that indexes for each combination the row of the corresponding autospectra  
+          'normalize' = string, 'no'/'yes' that specifies whether the coherency products are to be normalised to 1 before integrating   
+                        across the specified bandwidth  
          
         See also CONNECTIVITY, FT_CONNECTIVITYANALYSIS  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/connectivity/ft_connectivity_psi.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/connectivity/ft_connectivity_psi.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_connectivity_psi", *args, **kwargs)

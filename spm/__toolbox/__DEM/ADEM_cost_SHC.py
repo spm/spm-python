@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ADEM_cost_SHC(*args, **kwargs):
-    """
+    r"""
       This demo illustrates the use of priors on the motion of hidden states as  
         polices. It simulates exploration and exploitation using radial basis  
         function attractors and auto-vitiative (self-destroying) attractors  
@@ -22,9 +22,12 @@ def ADEM_cost_SHC(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DEM/ADEM_cost_SHC.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/DEM/ADEM_cost_SHC.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ADEM_cost_SHC", *args, **kwargs, nargout=0)

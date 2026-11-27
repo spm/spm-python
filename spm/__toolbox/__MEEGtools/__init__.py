@@ -17,6 +17,7 @@ from .spm_eeg_interpolate_artefact import spm_eeg_interpolate_artefact
 from .spm_eeg_inv_optireg import spm_eeg_inv_optireg
 from .spm_eeg_megheadloc import spm_eeg_megheadloc
 from .spm_eeg_recode_epoched_ctf import spm_eeg_recode_epoched_ctf
+from .spm_eeg_remove_dbs_artefact import spm_eeg_remove_dbs_artefact
 from .spm_eeg_remove_jumps import spm_eeg_remove_jumps
 from .spm_eeg_remove_spikes import spm_eeg_remove_spikes
 from .spm_eeg_reref_eeg import spm_eeg_reref_eeg
@@ -25,6 +26,8 @@ from .spm_eeg_tms_correct import spm_eeg_tms_correct
 from .spm_eeg_transform_cap import spm_eeg_transform_cap
 from .spm_eeg_var_measures import spm_eeg_var_measures
 from .spm_mesh_pack_points import spm_mesh_pack_points
+from .spm_opm_apply_calibration import spm_opm_apply_calibration
+from .spm_opm_calibrate_from_coils import spm_opm_calibrate_from_coils
 from .spm_opm_create import spm_opm_create
 from .spm_opm_epoch_trigger import spm_opm_epoch_trigger
 from .spm_opm_headmodel import spm_opm_headmodel
@@ -35,6 +38,7 @@ from .spm_opm_psd import spm_opm_psd
 from .spm_opm_read_lvm import spm_opm_read_lvm
 from .spm_opm_rpsd import spm_opm_rpsd
 from .spm_opm_sim import spm_opm_sim
+from .spm_opm_ssp import spm_opm_ssp
 from .spm_opm_synth_gradiometer import spm_opm_synth_gradiometer
 from .spm_opm_vslm import spm_opm_vslm
 
@@ -59,6 +63,7 @@ __all__ = [
     "spm_eeg_inv_optireg",
     "spm_eeg_megheadloc",
     "spm_eeg_recode_epoched_ctf",
+    "spm_eeg_remove_dbs_artefact",
     "spm_eeg_remove_jumps",
     "spm_eeg_remove_spikes",
     "spm_eeg_reref_eeg",
@@ -67,6 +72,8 @@ __all__ = [
     "spm_eeg_transform_cap",
     "spm_eeg_var_measures",
     "spm_mesh_pack_points",
+    "spm_opm_apply_calibration",
+    "spm_opm_calibrate_from_coils",
     "spm_opm_create",
     "spm_opm_epoch_trigger",
     "spm_opm_headmodel",
@@ -77,6 +84,7 @@ __all__ = [
     "spm_opm_read_lvm",
     "spm_opm_rpsd",
     "spm_opm_sim",
+    "spm_opm_ssp",
     "spm_opm_synth_gradiometer",
     "spm_opm_vslm"
 ]

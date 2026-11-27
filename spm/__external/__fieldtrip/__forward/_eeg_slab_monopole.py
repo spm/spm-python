@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _eeg_slab_monopole(*args, **kwargs):
-    """
+    r"""
       EEG_SLAB_MONOPOLE calculate the strip medium leadfield  
         on positions pnt for a monopole at position rd and conductivity cond  
         The halfspace solution requires a plane dividing a conductive zone of  
@@ -14,9 +14,12 @@ def _eeg_slab_monopole(*args, **kwargs):
         http://www.bem.fi/book/index.htm  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/forward/private/eeg_slab_monopole.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/forward/private/eeg_slab_monopole.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("eeg_slab_monopole", *args, **kwargs)

@@ -2,12 +2,12 @@ from spm._runtime import Runtime
 
 
 def plinproj(*args, **kwargs):
-    """
+    r"""
       PLINPROJ projects a point onto a line or linepiece  
          
         Use as  
           [proj, dist] = plinproj(l1, l2, r, flag)  
-        where l1 and l2 are the begin and endpoint of the linepiece, and r is   
+        where l1 and l2 are the begin and endpoint of the linepiece, and r is  
         the point that is projected onto the line  
          
         the optional flag can be:  
@@ -15,9 +15,12 @@ def plinproj(*args, **kwargs):
           1            project the point within or on the edge of the linepiece  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/src/plinproj.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/src/plinproj.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("plinproj", *args, **kwargs)

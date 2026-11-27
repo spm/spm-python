@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _sn2individual(*args, **kwargs):
-    """
+    r"""
       SN2INDIVIDUAL warps the input coordinates (defined as Nx3 matrix) from  
         normalised MNI coordinates to individual headspace coordinates, using the  
         warp parameters defined in the structure spmparams.  
@@ -12,9 +12,12 @@ def _sn2individual(*args, **kwargs):
         http://www.sph.umich.edu/~nichols/JG2/get_orig_coord2.m  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/utilities/private/sn2individual.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/utilities/private/sn2individual.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("sn2individual", *args, **kwargs)

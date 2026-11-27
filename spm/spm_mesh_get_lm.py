@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_mesh_get_lm(*args, **kwargs):
-    """
+    r"""
       Identification of local maxima on a textured surface mesh  
         FORMAT L = spm_mesh_get_lm(M,T)  
         M        - a [nx3] faces array or a patch structure or a [nxn] adjacency  
@@ -13,9 +13,12 @@ def spm_mesh_get_lm(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/spm_mesh_get_lm.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/spm_mesh_get_lm.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_mesh_get_lm", *args, **kwargs)

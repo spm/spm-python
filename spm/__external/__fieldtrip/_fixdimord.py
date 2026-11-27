@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _fixdimord(*args, **kwargs):
-    """
+    r"""
       FIXDIMORD ensures consistency between the dimord string and the axes  
         that describe the data dimensions. The main purpose of this function  
         is to ensure backward compatibility of all functions with data that has  
@@ -30,9 +30,12 @@ def _fixdimord(*args, **kwargs):
          'voxel'  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/fixdimord.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/private/fixdimord.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("fixdimord", *args, **kwargs)

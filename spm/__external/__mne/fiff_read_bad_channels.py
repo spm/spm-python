@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def fiff_read_bad_channels(*args, **kwargs):
-    """
+    r"""
        
         [bads] = fiff_read_bad_channels(fid,node[,ch_rename])  
          
@@ -13,9 +13,12 @@ def fiff_read_bad_channels(*args, **kwargs):
         ch_rename - Short-to-long channel name mapping  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/mne/fiff_read_bad_channels.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/mne/fiff_read_bad_channels.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("fiff_read_bad_channels", *args, **kwargs)

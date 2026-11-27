@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_compute_avg_mat(*args, **kwargs):
-    """
+    r"""
       Compute an average voxel-to-world mapping and suitable dimensions  
         FORMAT [M_avg,d] = spm_compute_avg_mat(Mat0,dims)  
         Mat0  - array of matrices (4x4xN)  
@@ -12,9 +12,12 @@ def spm_compute_avg_mat(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/Longitudinal/spm_compute_avg_mat.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/Longitudinal/spm_compute_avg_mat.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_compute_avg_mat", *args, **kwargs)

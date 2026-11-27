@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _coordsys2label(*args, **kwargs):
-    """
+    r"""
       COORDSYS2LABEL returns the labels for the three axes, given the symbolic  
         string representation of the coordinate system.  
          
@@ -22,9 +22,12 @@ def _coordsys2label(*args, **kwargs):
         See also FT_DETERMINE_COORDSYS, FT_PLOT_AXES, FT_HEADCOORDINATES, SETVIEWPOINT  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/plotting/private/coordsys2label.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/plotting/private/coordsys2label.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("coordsys2label", *args, **kwargs)

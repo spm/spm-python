@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_dcm_csd_priors(*args, **kwargs):
-    """
+    r"""
       Optimisation of priors  
         FORMAT [pE] = spm_dcm_csd_priors(M,U,Y,k)  
        __________________________________________________________________________  
@@ -45,9 +45,12 @@ def spm_dcm_csd_priors(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/dcm_meeg/spm_dcm_csd_priors.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/dcm_meeg/spm_dcm_csd_priors.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_dcm_csd_priors", *args, **kwargs)

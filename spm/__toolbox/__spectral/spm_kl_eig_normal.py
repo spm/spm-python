@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_kl_eig_normal(*args, **kwargs):
-    """
+    r"""
       KL divergence between normal densities using eigendecomposition   
         function [d] = spm_kl_eig_normal (m_q,c_q,c_p)  
          
@@ -18,9 +18,12 @@ def spm_kl_eig_normal(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/spectral/spm_kl_eig_normal.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/spectral/spm_kl_eig_normal.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_kl_eig_normal", *args, **kwargs)

@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def pp_settings(*args, **kwargs):
-    """
+    r"""
       Settings for push/pull  
         FORMAT sett = pp_settings(deg,bnd,ext)  
         deg - interpolation degree in each dimension (3 elements)  
@@ -19,9 +19,12 @@ def pp_settings(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/Spatial/pp_settings.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/Spatial/pp_settings.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("pp_settings", *args, **kwargs)

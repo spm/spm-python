@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ADEM_occulomotor_delays(*args, **kwargs):
-    """
+    r"""
       Oculomotor following and delays under active inference:  
        __________________________________________________________________________  
         This demo illustrates oculomotor following and slow pursuit. The focus  
@@ -22,9 +22,12 @@ def ADEM_occulomotor_delays(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DEM/ADEM_occulomotor_delays.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/DEM/ADEM_occulomotor_delays.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ADEM_occulomotor_delays", *args, **kwargs, nargout=0)

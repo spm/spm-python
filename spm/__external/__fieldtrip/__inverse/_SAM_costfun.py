@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _SAM_costfun(*args, **kwargs):
-    """
+    r"""
       costfunction for non-linear beamformer. Use this cost-function to  
         find the optimum orientation (in the tangential plane formed by  
         tanu and tanv) of the targetvoxel maximizes the pseudo_Z (i.e.  
@@ -15,9 +15,12 @@ def _SAM_costfun(*args, **kwargs):
         should be given in forward_resource (in mm in CTF co-ordinates)  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/inverse/private/SAM_costfun.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/inverse/private/SAM_costfun.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("SAM_costfun", *args, **kwargs)

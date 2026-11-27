@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _ft_hastoolbox(*args, **kwargs):
-    """
+    r"""
       FT_HASTOOLBOX tests whether an external toolbox is installed. Optionally it will  
         try to determine the path to the toolbox and install it automatically.  
          
@@ -19,9 +19,12 @@ def _ft_hastoolbox(*args, **kwargs):
         silent = 1 means that it will not give feedback  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/inverse/private/ft_hastoolbox.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/inverse/private/ft_hastoolbox.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_hastoolbox", *args, **kwargs)

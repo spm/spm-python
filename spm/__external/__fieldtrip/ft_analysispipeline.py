@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_analysispipeline(*args, **kwargs):
-    """
+    r"""
       FT_ANALYSIPIPELINE reconstructs the complete analysis pipeline that was used to create  
         the input FieldTrip data structure. The pipeline will be visualized as a flowchart.  
         In the future it might be possible to output the complete pipeline as a MATLAB script  
@@ -34,14 +34,6 @@ def ft_analysispipeline(*args, **kwargs):
                             be 'all', show all pipeline. Please note that if you want  
                             to show a lot of information, this will require a lot  
                             of screen real estate.  
-          cfg.remove      = cell-array with strings, determines which objects will  
-                            be removed from the configuration prior to writing it to  
-                            file. For readibility of the script, you may want to  
-                            remove the large objectssuch as event structure, trial  
-                            definition, source positions  
-          cfg.keepremoved = 'yes' or 'no', determines whether removed fields are  
-                            completely removed, or only replaced by a short textual  
-                            description (default = 'no')  
          
         This function uses the nested cfg and cfg.previous that are present in  
         the data structure. It will use the configuration and the nested previous  
@@ -71,9 +63,12 @@ def ft_analysispipeline(*args, **kwargs):
         FT_CONNECTIVITYANALYSIS, FT_NETWORKANALYSIS  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/ft_analysispipeline.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/ft_analysispipeline.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_analysispipeline", *args, **kwargs)

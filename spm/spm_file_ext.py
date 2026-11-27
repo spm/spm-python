@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_file_ext(*args, **kwargs):
-    """
+    r"""
       Return or set file extension for SPM images  
         FORMAT ext = spm_file_ext  
         ext   - file extension (e.g. '.img' or '.nii' for NIfTI images)  
@@ -16,9 +16,12 @@ def spm_file_ext(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/spm_file_ext.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/spm_file_ext.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_file_ext", *args, **kwargs)

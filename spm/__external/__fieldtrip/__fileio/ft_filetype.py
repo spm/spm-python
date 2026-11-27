@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_filetype(*args, **kwargs):
-    """
+    r"""
       FT_FILETYPE determines the filetype of many EEG/MEG/MRI data files by  
         looking at the name, extension and optionally (part of) its contents.  
         It tries to determine the global type of file (which usually  
@@ -78,9 +78,12 @@ def ft_filetype(*args, **kwargs):
          - York Instruments *.meghdf5  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/ft_filetype.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/fileio/ft_filetype.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_filetype", *args, **kwargs)

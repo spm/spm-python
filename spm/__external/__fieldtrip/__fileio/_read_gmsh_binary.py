@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _read_gmsh_binary(*args, **kwargs):
-    """
+    r"""
       READ_GMSH_BINARY reads a gmsh .msh binary file. Current support is only  
         for version 2. There are some ASCII-readers floating around on the net,  
         but they do not seem to work with the primary use case in FieldTrip (and  
@@ -11,9 +11,12 @@ def _read_gmsh_binary(*args, **kwargs):
         See also MESH_LOAD_GMSH4  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/read_gmsh_binary.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/fileio/private/read_gmsh_binary.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("read_gmsh_binary", *args, **kwargs)

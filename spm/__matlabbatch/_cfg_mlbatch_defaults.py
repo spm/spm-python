@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _cfg_mlbatch_defaults(*args, **kwargs):
-    """
+    r"""
       function cfg_defaults = cfg_mlbatch_defaults  
         This file contains defaults that control the behaviour and appearance   
         of matlabbatch.  
@@ -14,9 +14,12 @@ def _cfg_mlbatch_defaults(*args, **kwargs):
         Copyright (C) 2007 Freiburg Brain Imaging  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/matlabbatch/private/cfg_mlbatch_defaults.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/matlabbatch/private/cfg_mlbatch_defaults.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("cfg_mlbatch_defaults", *args, **kwargs)

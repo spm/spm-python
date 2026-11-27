@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_COVID_priors_R(*args, **kwargs):
-    """
+    r"""
       Prior expectation and covariance of between region parameters  
         FORMAT [pE,pC,str,erc] = spm_COVID_priors_R(data)  
           
@@ -32,9 +32,12 @@ def spm_COVID_priors_R(*args, **kwargs):
         Copyright (C) 2020 Wellcome Centre for Human Neuroimaging  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DEM/spm_COVID_priors_R.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/DEM/spm_COVID_priors_R.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_COVID_priors_R", *args, **kwargs)

@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _ft_apply_montage(*args, **kwargs):
-    """
+    r"""
       FT_APPLY_MONTAGE changes the montage (i.e. linear combination) of a set of  
         electrode or gradiometer channels. A montage can be used for EEG rereferencing, MEG  
         synthetic gradients, MEG planar gradients or unmixing using ICA. This function not  
@@ -39,8 +39,6 @@ def _ft_apply_montage(*args, **kwargs):
          
         Additional options should be specified in key-value pairs and can be  
           'keepunused'    = string, 'yes' or 'no' (default = 'no')  
-          'inverse'       = string, 'yes' or 'no' (default = 'no')  
-          'balancename'   = string, name of the montage (default = '')  
           'feedback'      = string, see FT_PROGRESS (default = 'text')  
           'warning'       = boolean, whether to show warnings (default = true)  
          
@@ -51,9 +49,12 @@ def _ft_apply_montage(*args, **kwargs):
         See also FT_READ_SENS, FT_DATATYPE_SENS  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/plotting/private/ft_apply_montage.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/plotting/private/ft_apply_montage.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_apply_montage", *args, **kwargs)

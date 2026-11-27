@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def mci_nmm_fx_delay(*args, **kwargs):
-    """
+    r"""
       State equations for a neural mass model of erps with first order delays  
         FORMAT [f] = mci_nmm_fx_delay (x,u,P,M)  
          
@@ -34,9 +34,12 @@ def mci_nmm_fx_delay(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/mci/models/nmm/mci_nmm_fx_delay.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/mci/models/nmm/mci_nmm_fx_delay.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("mci_nmm_fx_delay", *args, **kwargs)

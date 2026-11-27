@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_sourceparcellate(*args, **kwargs):
-    """
+    r"""
       FT_SOURCEPARCELLATE combines the source-reconstruction parameters over the parcels, for  
         example by averaging all the values in the anatomically or functionally labeled parcel.  
          
@@ -32,9 +32,12 @@ def ft_sourceparcellate(*args, **kwargs):
         See also FT_SOURCEANALYSIS, FT_DATATYPE_PARCELLATION, FT_DATATYPE_SEGMENTATION  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/ft_sourceparcellate.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/ft_sourceparcellate.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_sourceparcellate", *args, **kwargs)

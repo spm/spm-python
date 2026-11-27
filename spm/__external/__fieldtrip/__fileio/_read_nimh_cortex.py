@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _read_nimh_cortex(*args, **kwargs):
-    """
+    r"""
       READ_NIMH_CORTEX  
          
         Use as  
@@ -19,9 +19,12 @@ def _read_nimh_cortex(*args, **kwargs):
         The output is a structure array with one structure for every trial that was read.  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/read_nimh_cortex.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/fileio/private/read_nimh_cortex.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("read_nimh_cortex", *args, **kwargs)

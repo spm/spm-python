@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _triangulate_seg(*args, **kwargs):
-    """
+    r"""
       TRIANGULATE_SEG constructs a triangulation of the outer surface of a segmented  
         volume. It starts at the center of the volume and projects the vertices of an  
         evenly triangulated sphere onto the outer surface. The resulting surface is by  
@@ -30,9 +30,12 @@ def _triangulate_seg(*args, **kwargs):
         See also MESH_SPHERE  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/triangulate_seg.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/private/triangulate_seg.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("triangulate_seg", *args, **kwargs)

@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _warp_fsinflated(*args, **kwargs):
-    """
+    r"""
       WARP_FSINFLATED maps electrodes from FreeSurfer's pial surface to  
         FreeSurfer's inflated brain.  
          
@@ -14,9 +14,12 @@ def _warp_fsinflated(*args, **kwargs):
         See also FT_ELECTRODEREALIGN, FT_PREPARE_MESH  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/warp_fsinflated.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/private/warp_fsinflated.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("warp_fsinflated", *args, **kwargs)

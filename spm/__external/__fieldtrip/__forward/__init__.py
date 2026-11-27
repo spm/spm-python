@@ -1,4 +1,3 @@
-from .ft_apply_montage import ft_apply_montage
 from .ft_compute_leadfield import ft_compute_leadfield
 from .ft_convert_units import ft_convert_units
 from .ft_determine_units import ft_determine_units
@@ -10,6 +9,7 @@ from .ft_headmodel_dipoli import ft_headmodel_dipoli
 from .ft_headmodel_duneuro import ft_headmodel_duneuro
 from .ft_headmodel_fns import ft_headmodel_fns
 from .ft_headmodel_halfspace import ft_headmodel_halfspace
+from .ft_headmodel_hbf import ft_headmodel_hbf
 from .ft_headmodel_infinite import ft_headmodel_infinite
 from .ft_headmodel_interpolate import ft_headmodel_interpolate
 from .ft_headmodel_localspheres import ft_headmodel_localspheres
@@ -27,7 +27,6 @@ from .ft_sourcedepth import ft_sourcedepth
 
 
 __all__ = [
-    "ft_apply_montage",
     "ft_compute_leadfield",
     "ft_convert_units",
     "ft_determine_units",
@@ -39,6 +38,7 @@ __all__ = [
     "ft_headmodel_duneuro",
     "ft_headmodel_fns",
     "ft_headmodel_halfspace",
+    "ft_headmodel_hbf",
     "ft_headmodel_infinite",
     "ft_headmodel_interpolate",
     "ft_headmodel_localspheres",

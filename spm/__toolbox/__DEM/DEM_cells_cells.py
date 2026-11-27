@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def DEM_cells_cells(*args, **kwargs):
-    """
+    r"""
       This demo is a hierarchical extension of DEM_cells.m, where we have 16  
         ensembles comprising 16 cells. Each cell has a generative model (i.e.,  
         prior beliefs) about its possible local and global cell types (i.e.,  
@@ -29,9 +29,12 @@ def DEM_cells_cells(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DEM/DEM_cells_cells.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/DEM/DEM_cells_cells.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("DEM_cells_cells", *args, **kwargs)

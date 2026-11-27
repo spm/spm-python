@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_interpolatenan(*args, **kwargs):
-    """
+    r"""
       FT_INTERPOLATENAN interpolates time series that contains segments of nans obtained  
         by replacing artifactual data with nans using, for example, FT_REJECTARTIFACT, or  
         by redefining trials with FT_REDEFINETRIAL resulting in trials with gaps.  
@@ -32,9 +32,12 @@ def ft_interpolatenan(*args, **kwargs):
         See also FT_REJECTARTIFACT, FT_REDEFINETRIAL, FT_CHANNELREPAIR  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/ft_interpolatenan.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/ft_interpolatenan.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_interpolatenan", *args, **kwargs)

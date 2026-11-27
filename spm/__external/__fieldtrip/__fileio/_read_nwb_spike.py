@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _read_nwb_spike(*args, **kwargs):
-    """
+    r"""
       READ_NWB_SPIKE reads spike timestamps and waveforms (if present-not currently supported)   
         from NWB files and converts them to fieldtrip spike data format.   
          
@@ -32,9 +32,12 @@ def _read_nwb_spike(*args, **kwargs):
         Latest change: 01/06/2020  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/read_nwb_spike.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/fileio/private/read_nwb_spike.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("read_nwb_spike", *args, **kwargs)

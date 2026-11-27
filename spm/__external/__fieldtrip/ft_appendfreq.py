@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_appendfreq(*args, **kwargs):
-    """
+    r"""
       FT_APPENDFREQ concatenates multiple frequency or time-frequency data structures  
         that have been processed separately. If the input data structures contain different  
         channels, it will be concatenated along the channel direction. If the channels are  
@@ -28,13 +28,19 @@ def ft_appendfreq(*args, **kwargs):
         These mat files should contain only a single variable, corresponding with  
         the input/output structure.  
          
+        If you encounter difficulties with memory usage, you can use  
+          cfg.memory = 'low' or 'high', whether to be memory or computationally efficient, respectively (default = 'high')  
+         
         See also FT_FREQANALYSIS, FT_DATATYPE_FREQ, FT_APPENDDATA, FT_APPENDTIMELOCK,  
         FT_APPENDSENS  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/ft_appendfreq.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/ft_appendfreq.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_appendfreq", *args, **kwargs)

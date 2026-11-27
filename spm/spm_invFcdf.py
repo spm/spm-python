@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_invFcdf(*args, **kwargs):
-    """
+    r"""
       Inverse Cumulative Distribution (CDF) of F (Fisher-Snedecor) distribution  
         FORMAT x = spm_invFcdf(F,df)  
         FORMAT x = spm_invFcdf(F,v,w)  
@@ -64,9 +64,12 @@ def spm_invFcdf(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/spm_invFcdf.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/spm_invFcdf.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_invFcdf", *args, **kwargs)

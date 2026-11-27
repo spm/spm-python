@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_dipolesimulation(*args, **kwargs):
-    """
+    r"""
       FT_DIPOLESIMULATION simulates channel-level time-series data that consists of the  
         the spatial distribution of the the field or potential of one or multiple dipoles.  
          
@@ -61,9 +61,12 @@ def ft_dipolesimulation(*args, **kwargs):
         FT_FREQSIMULATION, FT_CONNECTIVITYSIMULATION  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/ft_dipolesimulation.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/ft_dipolesimulation.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_dipolesimulation", *args, **kwargs)

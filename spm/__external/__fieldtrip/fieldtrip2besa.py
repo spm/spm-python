@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def fieldtrip2besa(*args, **kwargs):
-    """
+    r"""
       FIELDTRIP2BESA saves a FieldTrip data structures to a corresponding BESA file. This  
         export function is based on documentation that was provided by Todor Jordanov of  
         BESA.  
@@ -25,9 +25,12 @@ def fieldtrip2besa(*args, **kwargs):
         See also FIELDTRIP2SPSS, FIELDTRIP2FIFF  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fieldtrip2besa.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/fieldtrip2besa.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("fieldtrip2besa", *args, **kwargs, nargout=0)

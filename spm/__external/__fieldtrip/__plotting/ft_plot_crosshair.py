@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_plot_crosshair(*args, **kwargs):
-    """
+    r"""
       FT_PLOT_CROSSHAIR plots a crosshair at a specified position in two [x, y] or three  
         [x, y, z] dimensions.  
          
@@ -26,9 +26,12 @@ def ft_plot_crosshair(*args, **kwargs):
         See also FT_PLOT_BOX, FT_PLOT_LINE, TEXT, LINE  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/plotting/ft_plot_crosshair.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/plotting/ft_plot_crosshair.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_plot_crosshair", *args, **kwargs)

@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_freqstatistics(*args, **kwargs):
-    """
+    r"""
       FT_FREQSTATISTICS computes significance probabilities and/or critical  
         values of a parametric statistical test or a non-parametric permutation  
         test.  
@@ -28,9 +28,11 @@ def ft_freqstatistics(*args, **kwargs):
         Furthermore, the configuration should contain  
           cfg.method       = different methods for calculating the significance probability and/or critical value  
                            'montecarlo'    get Monte-Carlo estimates of the significance probabilities and/or critical values from the permutation distribution,  
-                           'analytic'      get significance probabilities and/or critical values from the analytic reference distribution (typically, the sampling distribution under the null hypothesis),  
+                           'analytic'      get significance probabilities and/or critical values from the analytic reference distribution  
+                                            (typically, the sampling distribution under the null hypothesis),  
                            'stats'         use a parametric test from the MATLAB statistics toolbox,  
                            'crossvalidate' use crossvalidation to compute predictive performance  
+                           'mvpa'          use functionality from the MVPA-light toolbox for classification or multivariate regression  
          
           cfg.design       = Nxnumobservations: design matrix (for examples/advice, please see the Fieldtrip wiki,  
                              especially cluster-permutation tutorial and the 'walkthrough' design-matrix section)  
@@ -51,9 +53,12 @@ def ft_freqstatistics(*args, **kwargs):
         See also FT_FREQANALYSIS, FT_FREQDESCRIPTIVES, FT_FREQGRANDAVERAGE  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/ft_freqstatistics.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/ft_freqstatistics.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_freqstatistics", *args, **kwargs)

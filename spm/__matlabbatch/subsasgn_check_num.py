@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def subsasgn_check_num(*args, **kwargs):
-    """
+    r"""
       function sts = subsasgn_check_num(val)  
         Check, whether a num value is a numeric 2-vector, denoting a  
         minimum/maximum number of elements. val(1) must be >= 0 and   
@@ -17,9 +17,12 @@ def subsasgn_check_num(*args, **kwargs):
         Copyright (C) 2007 Freiburg Brain Imaging  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/matlabbatch/subsasgn_check_num.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/matlabbatch/subsasgn_check_num.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("subsasgn_check_num", *args, **kwargs)

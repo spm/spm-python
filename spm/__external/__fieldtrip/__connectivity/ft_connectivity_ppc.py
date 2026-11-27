@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_connectivity_ppc(*args, **kwargs):
-    """
+    r"""
       FT_CONNECTIVITY_PPC computes pairwise phase consistency or weighted pairwise phase  
         consistency from a data-matrix containing a cross-spectral density. This implements  
         the method described in Vinck M, van Wingerden M, Womelsdorf T, Fries P, Pennartz  
@@ -32,9 +32,12 @@ def ft_connectivity_ppc(*args, **kwargs):
         See also CONNECTIVITY, FT_CONNECTIVITYANALYSIS  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/connectivity/ft_connectivity_ppc.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/connectivity/ft_connectivity_ppc.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_connectivity_ppc", *args, **kwargs)

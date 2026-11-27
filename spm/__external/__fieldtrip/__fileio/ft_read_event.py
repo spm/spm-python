@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_read_event(*args, **kwargs):
-    """
+    r"""
       FT_READ_EVENT reads all events from an EEG, MEG or other time series dataset and  
         returns them in a common data-independent structure. The supported formats are  
         listed in the accompanying FT_READ_HEADER function.  
@@ -75,9 +75,12 @@ def ft_read_event(*args, **kwargs):
         See also FT_READ_HEADER, FT_READ_DATA, FT_WRITE_EVENT, FT_FILTER_EVENT  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/ft_read_event.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/fileio/ft_read_event.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_read_event", *args, **kwargs)

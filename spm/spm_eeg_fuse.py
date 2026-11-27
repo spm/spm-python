@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_eeg_fuse(*args, **kwargs):
-    """
+    r"""
       Fuse MEG and EEG datasets to create a multimodal dataset  
         FORMAT D = spm_eeg_fuse(S)  
          
@@ -18,9 +18,12 @@ def spm_eeg_fuse(*args, **kwargs):
         Copyright (C) 2008-2022 Wellcome Centre for Human Neuroimaging  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/spm_eeg_fuse.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/spm_eeg_fuse.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_eeg_fuse", *args, **kwargs)

@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_sepmul3d(*args, **kwargs):
-    """
+    r"""
       Compute t = kron(B3,kron(B2,B1))*T(:)  
          
         FORMAT t = spm_sepmul3d(B1,B2,B3,T)  
@@ -20,9 +20,12 @@ def spm_sepmul3d(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/spm_sepmul3d.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/spm_sepmul3d.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_sepmul3d", *args, **kwargs)

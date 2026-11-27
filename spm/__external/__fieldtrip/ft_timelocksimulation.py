@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_timelocksimulation(*args, **kwargs):
-    """
+    r"""
       FT_TIMELOCKSIMULATION computes simulated data that consists of multiple trials in  
         with each trial contains an event-related potential or field. Following  
         construction of the time-locked signal in each trial by this function, the signals  
@@ -42,9 +42,12 @@ def ft_timelocksimulation(*args, **kwargs):
         FT_DIPOLESIMULATION, FT_CONNECTIVITYSIMULATION  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/ft_timelocksimulation.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/ft_timelocksimulation.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_timelocksimulation", *args, **kwargs)

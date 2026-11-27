@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _ft_estimate_units(*args, **kwargs):
-    """
+    r"""
       FT_ESTIMATE_UNITS tries to determine the units of a geometrical object by  
         looking at its size and by relating this to the approximate size of the  
         human head according to the following table:  
@@ -16,15 +16,19 @@ def _ft_estimate_units(*args, **kwargs):
          
         This function will return one of the following strings  
           'm'  
+          'dm'  
           'cm'  
           'mm'  
          
         See also FT_CONVERT_UNITS  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/ft_estimate_units.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/fileio/private/ft_estimate_units.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_estimate_units", *args, **kwargs)

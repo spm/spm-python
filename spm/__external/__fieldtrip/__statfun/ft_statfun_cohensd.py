@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_statfun_cohensd(*args, **kwargs):
-    """
+    r"""
       FT_STATFUN_COHENSD computes the effect size according to Cohen's d. This function  
         supports both unpaired and paired designs.  
          
@@ -38,9 +38,12 @@ def ft_statfun_cohensd(*args, **kwargs):
         See also FT_TIMELOCKSTATISTICS, FT_FREQSTATISTICS or FT_SOURCESTATISTICS  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/statfun/ft_statfun_cohensd.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/statfun/ft_statfun_cohensd.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_statfun_cohensd", *args, **kwargs)

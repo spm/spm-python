@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def memtic(*args, **kwargs):
-    """
+    r"""
       MEMTIC start a MATLAB memory recorder  
          
           MEMTIC and MEMTOC functions work together to measure memory usage.  
@@ -42,9 +42,12 @@ def memtic(*args, **kwargs):
         See also TIC, TOC  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/utilities/memtic.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/utilities/memtic.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("memtic", *args, **kwargs)

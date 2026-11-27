@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_mvtpdf(*args, **kwargs):
-    """
+    r"""
       PDF of multivariate T-distribution  
         FORMAT [p] = spm_mvtpdf (x,mu,Lambda,v)  
          
@@ -18,9 +18,12 @@ def spm_mvtpdf(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/mci/inference/spm_mvtpdf.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/mci/inference/spm_mvtpdf.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_mvtpdf", *args, **kwargs)

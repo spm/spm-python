@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def fil_install(*args, **kwargs):
-    """
+    r"""
       Download files required for Factorisation-based Image Labelling  
         FORMAT [mufile,filfile] = fil_install(datadir)  
          
@@ -10,9 +10,12 @@ def fil_install(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/MB/fil_install.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/MB/fil_install.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("fil_install", *args, **kwargs)

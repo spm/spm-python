@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_eventtiminganalysis(*args, **kwargs):
-    """
+    r"""
       FT_EVENTTIMINGANALYSIS computes a model of single trial event- related activity,  
         by estimating per trial the latency (and amplitude) of event-related signal  
         components.  
@@ -77,9 +77,12 @@ def ft_eventtiminganalysis(*args, **kwargs):
         See also FT_SINGLETRIALANALYSIS_ASEO  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/ft_eventtiminganalysis.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/ft_eventtiminganalysis.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_eventtiminganalysis", *args, **kwargs)

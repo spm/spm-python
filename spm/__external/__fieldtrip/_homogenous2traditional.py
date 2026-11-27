@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _homogenous2traditional(*args, **kwargs):
-    """
+    r"""
       HOMOGENOUS2TRADITIONAL estimates the traditional translation, rotation  
         and scaling parameters from a homogenous transformation matrix. It will  
         give an error if the homogenous matrix also describes a perspective  
@@ -37,9 +37,12 @@ def _homogenous2traditional(*args, **kwargs):
         See also TRANSLATE, ROTATE, SCALE, HOMOGENOUS2QUATERNION, QUATERNION  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/homogenous2traditional.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/private/homogenous2traditional.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("homogenous2traditional", *args, **kwargs)

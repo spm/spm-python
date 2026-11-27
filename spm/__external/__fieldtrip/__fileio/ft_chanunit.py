@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_chanunit(*args, **kwargs):
-    """
+    r"""
       FT_CHANUNIT is a helper function that tries to determine the physical  
         units of each channel. In case the type of channel is not detected, it  
         will return 'unknown' for that channel.  
@@ -28,9 +28,12 @@ def ft_chanunit(*args, **kwargs):
         See also FT_CHANTYPE  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/ft_chanunit.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/fileio/ft_chanunit.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_chanunit", *args, **kwargs)

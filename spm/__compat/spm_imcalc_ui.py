@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_imcalc_ui(*args, **kwargs):
-    """
+    r"""
       Perform algebraic functions on images  
         FORMAT Q = spm_imcalc_ui(P,Q,f,flags)  
         P             - matrix of input image filenames  
@@ -30,9 +30,12 @@ def spm_imcalc_ui(*args, **kwargs):
         Copyright (C) 1998-2011 Wellcome Trust Centre for Neuroimaging  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/compat/spm_imcalc_ui.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/compat/spm_imcalc_ui.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_imcalc_ui", *args, **kwargs)

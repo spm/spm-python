@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def fieldtrip2homer(*args, **kwargs):
-    """
+    r"""
       FIELDTRIP2HOMER converts a continuous raw data structure from FieldTrip format to  
         Homer format.  
          
@@ -20,9 +20,12 @@ def fieldtrip2homer(*args, **kwargs):
         See also HOMER2FIELDTRIP, FT_PREPROCESSING, FT_DATATYPE_RAW  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fieldtrip2homer.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/fieldtrip2homer.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("fieldtrip2homer", *args, **kwargs)

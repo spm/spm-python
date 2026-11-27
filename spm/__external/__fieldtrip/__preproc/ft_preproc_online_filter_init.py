@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_preproc_online_filter_init(*args, **kwargs):
-    """
+    r"""
       FT_PREPROC_ONLINE_FILTER_INIT initialize an IIR filter model with coefficients B  
         and A, as used in filter and butter etc. The most recent sample of the signal must  
         be given as a column vector.  
@@ -16,9 +16,12 @@ def ft_preproc_online_filter_init(*args, **kwargs):
         See also PREPROC, FT_PREPROC_ONLINE_FILTER_APPLY  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/preproc/ft_preproc_online_filter_init.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/preproc/ft_preproc_online_filter_init.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_preproc_online_filter_init", *args, **kwargs)

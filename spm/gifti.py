@@ -4,7 +4,7 @@ from spm._runtime import Runtime, RuntimeMixin
 
 class gifti(RuntimeMixin, MatlabClass):
     def __init__(self, *args, **kwargs):
-        """
+        r"""
           GIfTI Geometry file format class  
             Geometry format under the Neuroimaging Informatics Technology Initiative  
             (NIfTI):  
@@ -17,30 +17,36 @@ class gifti(RuntimeMixin, MatlabClass):
             
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/@gifti/gifti.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/@gifti/gifti.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         super().__init__()
 
     def display(self, *args, **kwargs):
-        """
+        r"""
           Display method for GIfTI objects  
             FORMAT display(this)  
             this   -  GIfTI object  
            __________________________________________________________________________  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/@gifti/display.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/@gifti/display.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("display", self._as_matlab_object(), *args, **kwargs, nargout=0)
 
     def export(self, *args, **kwargs):
-        """
+        r"""
           Export a GIfTI object into specific MATLAB struct  
             FORMAT s = export(this,target)  
             this   - GIfTI object  
@@ -49,15 +55,18 @@ class gifti(RuntimeMixin, MatlabClass):
            __________________________________________________________________________  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/@gifti/export.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/@gifti/export.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("export", self._as_matlab_object(), *args, **kwargs)
 
     def fieldnames(self, *args, **kwargs):
-        """
+        r"""
           Fieldnames method for GIfTI objects  
             FORMAT names = fieldnames(this)  
             this   -  GIfTI object  
@@ -65,15 +74,18 @@ class gifti(RuntimeMixin, MatlabClass):
            __________________________________________________________________________  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/@gifti/fieldnames.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/@gifti/fieldnames.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("fieldnames", self._as_matlab_object(), *args, **kwargs)
 
     def isfield(self, *args, **kwargs):
-        """
+        r"""
           Isfield method for GIfTI objects  
             FORMAT tf = isfield(this,field)  
             this   -  GIfTI object  
@@ -82,28 +94,34 @@ class gifti(RuntimeMixin, MatlabClass):
            __________________________________________________________________________  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/@gifti/isfield.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/@gifti/isfield.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("isfield", self._as_matlab_object(), *args, **kwargs)
 
     def plot(self, *args, **kwargs):
-        """
+        r"""
           plot method for GIfTI objects  
            __________________________________________________________________________  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/@gifti/plot.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/@gifti/plot.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("plot", self._as_matlab_object(), *args, **kwargs)
 
     def save(self, *args, **kwargs):
-        """
+        r"""
           Save GIfTI object in a GIfTI format file  
             FORMAT save(this,filename,encoding)  
             this      - GIfTI object  
@@ -117,15 +135,18 @@ class gifti(RuntimeMixin, MatlabClass):
            __________________________________________________________________________  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/@gifti/save.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/@gifti/save.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("save", self._as_matlab_object(), *args, **kwargs, nargout=0)
 
     def saveas(self, *args, **kwargs):
-        """
+        r"""
           Save GIfTI object in external file format  
             FORMAT saveas(this,filename,format)  
             this      - GIfTI object  
@@ -137,15 +158,18 @@ class gifti(RuntimeMixin, MatlabClass):
            __________________________________________________________________________  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/@gifti/saveas.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/@gifti/saveas.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("saveas", self._as_matlab_object(), *args, **kwargs, nargout=0)
 
     def struct(self, *args, **kwargs):
-        """
+        r"""
           Struct method for GIfTI objects  
             FORMAT s = struct(this)  
             this   -  GIfTI object  
@@ -153,41 +177,50 @@ class gifti(RuntimeMixin, MatlabClass):
            __________________________________________________________________________  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/@gifti/struct.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/@gifti/struct.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("struct", self._as_matlab_object(), *args, **kwargs)
 
     def subsasgn(self, *args, **kwargs):
-        """
+        r"""
           Subscript assignment for GIfTI objects  
            __________________________________________________________________________  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/@gifti/subsasgn.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/@gifti/subsasgn.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("subsasgn", self._as_matlab_object(), *args, **kwargs)
 
     def subsref(self, *args, **kwargs):
-        """
+        r"""
           Subscript referencing for GIfTI objects  
            __________________________________________________________________________  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/@gifti/subsref.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/@gifti/subsref.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("subsref", self._as_matlab_object(), *args, **kwargs)
 
     def _base64(self, *args, **kwargs):
-        """
+        r"""
           Base64 binary-to-text encoding/decoding scheme  
             FORMAT y = zstream('encode',x)  
             x        - data stream to encode (uint8)  
@@ -205,15 +238,18 @@ class gifti(RuntimeMixin, MatlabClass):
            __________________________________________________________________________  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/@gifti/private/base64.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/@gifti/private/base64.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("base64", self._as_matlab_object(), *args, **kwargs)
 
     def _base64decode(self, *args, **kwargs):
-        """
+        r"""
          BASE64DECODE Perform base64 decoding on a string.  
              
               BASE64DECODE(STR) decodes the given base64 string STR.  
@@ -231,15 +267,18 @@ class gifti(RuntimeMixin, MatlabClass):
               See also BASE64ENCODE.  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/@gifti/private/base64decode.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/@gifti/private/base64decode.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("base64decode", self._as_matlab_object(), *args, **kwargs)
 
     def _base64encode(self, *args, **kwargs):
-        """
+        r"""
          BASE64ENCODE Perform base64 encoding on a string.  
              
               BASE64ENCODE(STR, EOL) encode the given string STR.  EOL is the line ending  
@@ -280,15 +319,18 @@ class gifti(RuntimeMixin, MatlabClass):
               See also BASE64DECODE.  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/@gifti/private/base64encode.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/@gifti/private/base64encode.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("base64encode", self._as_matlab_object(), *args, **kwargs)
 
     def _freesurfer_read(self, *args, **kwargs):
-        """
+        r"""
           Low level reader of FreeSurfer file  
             FORMAT this = freesurfer_read(filename)  
             filename    - FreeSurfer file  
@@ -298,28 +340,34 @@ class gifti(RuntimeMixin, MatlabClass):
            __________________________________________________________________________  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/@gifti/private/freesurfer_read.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/@gifti/private/freesurfer_read.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("freesurfer_read", self._as_matlab_object(), *args, **kwargs)
 
     def _getdict(self, *args, **kwargs):
-        """
+        r"""
           Dictionary of GIfTI/NIfTI stuff  
            __________________________________________________________________________  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/@gifti/private/getdict.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/@gifti/private/getdict.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("getdict", self._as_matlab_object(), *args, **kwargs)
 
     def _gifti_read(self, *args, **kwargs):
-        """
+        r"""
           Low level reader of GIfTI 1.0 files  
             FORMAT this = read_gifti_file(filename, this)  
             filename    - XML GIfTI filename  
@@ -327,15 +375,18 @@ class gifti(RuntimeMixin, MatlabClass):
            __________________________________________________________________________  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/@gifti/private/gifti_read.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/@gifti/private/gifti_read.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("gifti_read", self._as_matlab_object(), *args, **kwargs)
 
     def _isintent(self, *args, **kwargs):
-        """
+        r"""
           Correspondence between fieldnames and NIfTI intent codes  
             FORMAT ind = isintent(this,intent)  
             this    -  GIfTI object  
@@ -345,15 +396,18 @@ class gifti(RuntimeMixin, MatlabClass):
            __________________________________________________________________________  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/@gifti/private/isintent.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/@gifti/private/isintent.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("isintent", self._as_matlab_object(), *args, **kwargs)
 
     def _mvtk_read(self, *args, **kwargs):
-        """
+        r"""
           Read VTK formatted data from disk  
             FORMAT M = mvtk_read(filename)  
              
@@ -368,15 +422,18 @@ class gifti(RuntimeMixin, MatlabClass):
            __________________________________________________________________________  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/@gifti/private/mvtk_read.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/@gifti/private/mvtk_read.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("mvtk_read", self._as_matlab_object(), *args, **kwargs)
 
     def _mvtk_write(self, *args, **kwargs):
-        """
+        r"""
           Write geometric data on disk using VTK file format (legacy/XML,ascii/binary)  
             FORMAT mvtk_write(M,filename,format)  
               
@@ -393,15 +450,18 @@ class gifti(RuntimeMixin, MatlabClass):
            __________________________________________________________________________  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/@gifti/private/mvtk_write.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/@gifti/private/mvtk_write.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("mvtk_write", self._as_matlab_object(), *args, **kwargs, nargout=0)
 
     def _mz3_read(self, *args, **kwargs):
-        """
+        r"""
           Read MZ3-formatted data from disk  
             FORMAT M = mz3_read(filename)  
              
@@ -414,15 +474,18 @@ class gifti(RuntimeMixin, MatlabClass):
            __________________________________________________________________________  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/@gifti/private/mz3_read.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/@gifti/private/mz3_read.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("mz3_read", self._as_matlab_object(), *args, **kwargs)
 
     def _mz3_write(self, *args, **kwargs):
-        """
+        r"""
           Write MZ3-formatted data from disk  
             FORMAT mz3_write(M,filename,fmt)  
              
@@ -436,15 +499,18 @@ class gifti(RuntimeMixin, MatlabClass):
            __________________________________________________________________________  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/@gifti/private/mz3_write.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/@gifti/private/mz3_write.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("mz3_write", self._as_matlab_object(), *args, **kwargs, nargout=0)
 
     def _obj_read(self, *args, **kwargs):
-        """
+        r"""
           Read Wavefront OBJ-formatted data from disk  
             FORMAT M = obj_read(filename)  
              
@@ -457,15 +523,18 @@ class gifti(RuntimeMixin, MatlabClass):
            __________________________________________________________________________  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/@gifti/private/obj_read.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/@gifti/private/obj_read.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("obj_read", self._as_matlab_object(), *args, **kwargs)
 
     def _off_read(self, *args, **kwargs):
-        """
+        r"""
           Read OFF-formatted data from disk  
             FORMAT M = off_read(filename)  
              
@@ -478,15 +547,18 @@ class gifti(RuntimeMixin, MatlabClass):
            __________________________________________________________________________  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/@gifti/private/off_read.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/@gifti/private/off_read.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("off_read", self._as_matlab_object(), *args, **kwargs)
 
     def _ply_read(self, *args, **kwargs):
-        """
+        r"""
           Read PLY-formatted data from disk  
             FORMAT M = ply_read(filename)  
              
@@ -499,15 +571,18 @@ class gifti(RuntimeMixin, MatlabClass):
            __________________________________________________________________________  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/@gifti/private/ply_read.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/@gifti/private/ply_read.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("ply_read", self._as_matlab_object(), *args, **kwargs)
 
     def _stl_read(self, *args, **kwargs):
-        """
+        r"""
           Read STL-formatted data from disk  
             FORMAT M = stl_read(filename)  
              
@@ -520,15 +595,18 @@ class gifti(RuntimeMixin, MatlabClass):
            __________________________________________________________________________  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/@gifti/private/stl_read.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/@gifti/private/stl_read.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("stl_read", self._as_matlab_object(), *args, **kwargs)
 
     def _xml_parser(self, *args, **kwargs):
-        """
+        r"""
           XML Parser  
             FORMAT tree = xml_parser(xml)  
             xml         - XML-encoded string or filename of an XML document  
@@ -560,15 +638,18 @@ class gifti(RuntimeMixin, MatlabClass):
            __________________________________________________________________________  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/@gifti/private/xml_parser.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/@gifti/private/xml_parser.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("xml_parser", self._as_matlab_object(), *args, **kwargs)
 
     def _zstream(self, *args, **kwargs):
-        """
+        r"""
           Compress/decompress stream of bytes using Deflate/Inflate  
             FORMAT Z = zstream('C',D)  
             D        - data stream to compress (converted to uint8 if needed)  
@@ -591,9 +672,12 @@ class gifti(RuntimeMixin, MatlabClass):
            __________________________________________________________________________  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/@gifti/private/zstream.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/@gifti/private/zstream.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("zstream", self._as_matlab_object(), *args, **kwargs)

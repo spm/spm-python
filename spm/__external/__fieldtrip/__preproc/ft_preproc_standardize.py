@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_preproc_standardize(*args, **kwargs):
-    """
+    r"""
       FT_PREPROC_STANDARDIZE performs a z-transformation or standardization  
         of the data. The standardized data will have a zero-mean and a unit  
         standard deviation.  
@@ -23,9 +23,12 @@ def ft_preproc_standardize(*args, **kwargs):
         See also PREPROC  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/preproc/ft_preproc_standardize.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/preproc/ft_preproc_standardize.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_preproc_standardize", *args, **kwargs)

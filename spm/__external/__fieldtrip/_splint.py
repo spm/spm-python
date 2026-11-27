@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _splint(*args, **kwargs):
-    """
+    r"""
       SPLINT computes the spherical spline interpolation and the surface laplacian  
         of an EEG potential distribution  
           
@@ -31,9 +31,12 @@ def _splint(*args, **kwargs):
           Neurophysiology 76:565.  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/splint.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/private/splint.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("splint", *args, **kwargs)

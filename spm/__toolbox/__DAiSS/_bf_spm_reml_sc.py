@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _bf_spm_reml_sc(*args, **kwargs):
-    """
+    r"""
       ReML estimation of covariance components from y*y' - proper components  
         STANDLALONE VERSION FOR DAiSS in case fundamental changes are made in SPM  
         FORMAT [C,h,Ph,F,Fa,Fc,Eh,Ch,hE,hC,Q] = spm_reml_sc(YY,X,Q,N,[hE,hC,V])  
@@ -49,9 +49,12 @@ def _bf_spm_reml_sc(*args, **kwargs):
         Copyright (C) 2007-2020 Wellcome Centre for Human Neuroimaging  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DAiSS/private/bf_spm_reml_sc.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/DAiSS/private/bf_spm_reml_sc.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_reml_sc", *args, **kwargs)

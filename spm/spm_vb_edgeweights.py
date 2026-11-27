@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_vb_edgeweights(*args, **kwargs):
-    """
+    r"""
       Compute edge set and edge weights of a graph  
         FORMAT [edges,weights]= spm_vb_edgeweights(vxyz,img)  
           
@@ -13,9 +13,12 @@ def spm_vb_edgeweights(*args, **kwargs):
                  at neighbouring nodes  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/spm_vb_edgeweights.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/spm_vb_edgeweights.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_vb_edgeweights", *args, **kwargs)

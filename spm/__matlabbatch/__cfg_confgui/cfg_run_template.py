@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def cfg_run_template(*args, **kwargs):
-    """
+    r"""
       Template function to implement callbacks for an cfg_exbranch. The calling  
         syntax is  
         varargout = cfg_run_template(cmd, varargin)  
@@ -48,9 +48,12 @@ def cfg_run_template(*args, **kwargs):
         Copyright (C) 2007 Freiburg Brain Imaging  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/matlabbatch/cfg_confgui/cfg_run_template.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/matlabbatch/cfg_confgui/cfg_run_template.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("cfg_run_template", *args, **kwargs)

@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_get_omega(*args, **kwargs):
-    """
+    r"""
       Get expected error of MAR model  
         FORMAT [Omega] = spm_get_omega (p,d,w_cov,xtx)  
          
@@ -15,9 +15,12 @@ def spm_get_omega(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/spectral/spm_get_omega.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/spectral/spm_get_omega.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_get_omega", *args, **kwargs)

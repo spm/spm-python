@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_eeg_history(*args, **kwargs):
-    """
+    r"""
       Generate a MATLAB script from the history of an M/EEG SPM data file  
         FORMAT H = spm_eeg_history(S)  
          
@@ -25,9 +25,12 @@ def spm_eeg_history(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/spm_eeg_history.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/spm_eeg_history.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_eeg_history", *args, **kwargs)

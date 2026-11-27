@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def mne_find_source_space_hemi(*args, **kwargs):
-    """
+    r"""
        
         function mne_find_source_space_hemi(src)  
          
@@ -12,9 +12,12 @@ def mne_find_source_space_hemi(*args, **kwargs):
         hemi     - Deduced hemisphere id  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/mne/mne_find_source_space_hemi.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/mne/mne_find_source_space_hemi.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("mne_find_source_space_hemi", *args, **kwargs)

@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _read_neurosim_spikes(*args, **kwargs):
-    """
+    r"""
       READ_NEUROSIM_SPIKES reads the "spikes" file that is written by Jan  
         van der Eerden's NeuroSim software.  The output is represented in a  
         structure that is consistent with the FieldTrip spike representation.  
@@ -23,9 +23,12 @@ def _read_neurosim_spikes(*args, **kwargs):
         See also FT_READ_SPIKE, FT_DATATYPE_SPIKE  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/read_neurosim_spikes.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/fileio/private/read_neurosim_spikes.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("read_neurosim_spikes", *args, **kwargs)

@@ -2,28 +2,37 @@ from spm._runtime import Runtime
 
 
 def spm_MDP_structure_learning(*args, **kwargs):
-    """
+    r"""
       structure learning of factorised Markov decision processes  
-        FORMAT mdp = spm_MDP_structure_learning(MDP,[mdp])  
-        FORMAT mdp = spm_MDP_structure_learning(o,[mdp])  
+        FORMAT mdp = spm_MDP_structure_learning(mdp,O,[OPTIONS])  
          
-        MDP   - generative process or  
-        o     - cell array of outcomes  
-        mdp.p - initial Dirichlet counts [1/16]  
+        mdp.p - initial Dirichlet counts [1/32]  
         mdp.q - precise Dirichlet counts [512]  
+        O     - probabilitic exemplars of paths  
          
-        mdp   - generative model: with mdp.a, mdp.b (and mdp.k)  
+        OPTIONS.N  [0]   - suppress neuronal responses  
+        OPTIONS.P  [0]   - suppress plotting  
+        OPTIONS.G  [1]   - suppress graphics  
+        OPTIONS.B  [1]      - replay  
          
-        This routine returns a generative model in the form of an MDP, based upon  
-        a sequence of outcomes. If the outcomes are not supplied, then they are  
-        generated automatically from a generative process, specified with an MDP  
-        structure. The generative model learns from successive epochs of data  
-        generated under the first level of each factor of the process. By  
-        exploring different extensions to the model (using Bayesian model  
-        comparison) successive epochs are assimilated under a model structure  
-        that accommodates context sensitive dynamics. This routine makes certain  
-        assumptions about the basic structural form of generative models at any  
-        given level of a hierarchical model. These are minimal assumptions:  
+        OPTIONS.NF [4]   - maxmium number of factors  
+        OPTIONS.NS [32,...] - maxmium number of states  
+        OPTIONS.NU [16,...] - maxmium number of paths  
+        OPTIONS.UB [1]      - model prior: bound on Ns  
+         
+        mdp   - generative model: with mdp.a, mdp.b  
+         
+        This routine returns a generative model (mdp) in the form of an MDP,  
+        given a sequence of outcomes. If the outcomes are not available, then  
+        they can be generated automatically from a generative process, specified  
+        with an MDP structure (see spm_MDP_structure_teaching). The generative  
+        model learns from successive epochs of data generated under the first  
+        level of each factor of the process. By exploring different extensions to  
+        the model (using Bayesian model comparison) successive epochs are  
+        assimilated under a model structure that accommodates paths. This routine  
+        makes certain assumptions about the structural form of generative models  
+        at any given level of a hierarchical model. These are minimal  
+        assumptions:  
           
         (i) Dynamics are conditionally independent of outcomes. This means that  
         the generative model can be factorised into a likelihood mapping (A) and  
@@ -40,7 +49,7 @@ def spm_MDP_structure_learning(*args, **kwargs):
         modality) is a tensor whose trailing dimensions correspond to the  
         dimensions of each factor. The (transition) priors are tensors, with a  
         probability transition matrix for each path. In addition, the initial  
-        state and path of each factor is specified with D and E. With this form,  
+        state and path of each factor are specified with D and E. With this form,  
         structure learning can simply consider the addition of a latent state, a  
         latent path or a new factor.  
           
@@ -52,17 +61,18 @@ def spm_MDP_structure_learning(*args, **kwargs):
         this means that adding a factor entails adding a second state to the  
         implicit first state of the new factor.  
          
-        If called with two arguments, the outcomes are assimilated into an  
-        existing generative model.  
-         
         See: spm_MDP_log_evidence.m, spm_MDP_VB_update and spm_MDP_VB_sleep.m  
+             spm_MDP_structure_teaching.m  
        __________________________________________________________________________  
         Copyright (C) 2005 Wellcome Trust Centre for Neuroimaging  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DEM/spm_MDP_structure_learning.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/DEM/spm_MDP_structure_learning.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_MDP_structure_learning", *args, **kwargs)

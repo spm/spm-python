@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_mlm_makecon(*args, **kwargs):
-    """
+    r"""
       Make contrast to test if the subset of coefficients indexed by w = 0 ?  
         FORMAT [con_vec] = spm_mlm_makecon (mlm,w)  
          
@@ -16,9 +16,12 @@ def spm_mlm_makecon(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/mlm/spm_mlm_makecon.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/mlm/spm_mlm_makecon.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_mlm_makecon", *args, **kwargs)

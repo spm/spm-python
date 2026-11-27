@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_fmri_concatenate(*args, **kwargs):
-    """
+    r"""
       Adjust an SPM.mat which has concatenated sessions  
         FORMAT spm_fmri_concatenate(P, scans)  
         Session regressors are added and the high-pass filter and non-sphericity  
@@ -25,9 +25,12 @@ def spm_fmri_concatenate(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/spm_fmri_concatenate.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/spm_fmri_concatenate.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_fmri_concatenate", *args, **kwargs)

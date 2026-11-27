@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _read_neurosim_evolution(*args, **kwargs):
-    """
+    r"""
       READ_NEUROSIM_EVOLUTION reads the "evolution" file that is written  
         by Jan van der Eerden's NeuroSim software. When a directory is used  
         as input, the default filename 'evolution' is read.  
@@ -16,9 +16,12 @@ def _read_neurosim_evolution(*args, **kwargs):
         See also FT_READ_HEADER, FT_READ_DATA  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/read_neurosim_evolution.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/fileio/private/read_neurosim_evolution.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("read_neurosim_evolution", *args, **kwargs)

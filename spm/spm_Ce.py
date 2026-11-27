@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_Ce(*args, **kwargs):
-    """
+    r"""
       Error covariance constraints (for serially correlated data)  
         FORMAT [C] = spm_Ce(v,a)  
         FORMAT [C] = spm_Ce('ar',v,a)  
@@ -27,9 +27,12 @@ def spm_Ce(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/spm_Ce.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/spm_Ce.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_Ce", *args, **kwargs)

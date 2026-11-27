@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_kl_gamma(*args, **kwargs):
-    """
+    r"""
       KL divergence between two Gamma densities  
         FORMAT [d] = spm_kl_gamma(b_q,c_q,b_p,c_p)  
          
@@ -13,9 +13,12 @@ def spm_kl_gamma(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/spm_kl_gamma.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/spm_kl_gamma.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_kl_gamma", *args, **kwargs)

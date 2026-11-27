@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def DEM_HB_and_LE(*args, **kwargs):
-    """
+    r"""
      --------------------------------------------------------------------------  
         This routine is a numerical examination of the relationship between  
         entropy, mutual information and the exponential divergence of  
@@ -22,9 +22,12 @@ def DEM_HB_and_LE(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DEM/DEM_HB_and_LE.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/DEM/DEM_HB_and_LE.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("DEM_HB_and_LE", *args, **kwargs, nargout=0)

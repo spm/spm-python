@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_max(*args, **kwargs):
-    """
+    r"""
       Sizes, maxima and locations of local excursion sets  
         FORMAT [N Z M A XYZ] = spm_max(X,L)  
         X     - values of 3-D field  
@@ -26,9 +26,12 @@ def spm_max(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/spm_max.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/spm_max.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_max", *args, **kwargs)

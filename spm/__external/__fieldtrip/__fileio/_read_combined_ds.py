@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _read_combined_ds(*args, **kwargs):
-    """
+    r"""
       READ_COMBINED_DS reads electrophysiological data from a collection  
         of files that are located in one directory, where each of the files  
         should contain one channel and should have the same sampling frequency  
@@ -19,9 +19,12 @@ def _read_combined_ds(*args, **kwargs):
           fcdc_matbin  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/read_combined_ds.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/fileio/private/read_combined_ds.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("read_combined_ds", *args, **kwargs)

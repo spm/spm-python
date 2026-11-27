@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _rollback_provenance(*args, **kwargs):
-    """
+    r"""
       ROLLBACK_PROVENANCE rolls the provenance one step back and should  
         be used whenever a FT function calls another FT function without  
         the user being (or having to be) aware of this.  
@@ -23,9 +23,12 @@ def _rollback_provenance(*args, **kwargs):
         See also FT_PREAMBLE, FT_POSTAMBLE  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/rollback_provenance.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/private/rollback_provenance.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("rollback_provenance", *args, **kwargs)

@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _cfg_maxextent(*args, **kwargs):
-    """
+    r"""
       CFG_MAXEXTENT Returns the maximum extent of cellstr STR   
         Returns the maximum extent of obj OBJ when the cellstr STR will be  
         rendered in it. MATLAB is not able to work this out correctly on its own  
@@ -17,9 +17,12 @@ def _cfg_maxextent(*args, **kwargs):
         Copyright (C) 2007 Freiburg Brain Imaging  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/matlabbatch/private/cfg_maxextent.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/matlabbatch/private/cfg_maxextent.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("cfg_maxextent", *args, **kwargs)

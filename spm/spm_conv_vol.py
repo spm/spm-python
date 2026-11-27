@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_conv_vol(*args, **kwargs):
-    """
+    r"""
       Convolve a 3D volume with a three dimensional separable function  
         FORMAT spm_conv_vol(V,Q,fx,fy,fz,offsets)  
         V        -  input volume:  
@@ -34,9 +34,12 @@ def spm_conv_vol(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/spm_conv_vol.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/spm_conv_vol.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_conv_vol", *args, **kwargs)

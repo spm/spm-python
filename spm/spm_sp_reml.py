@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_sp_reml(*args, **kwargs):
-    """
+    r"""
       ReML estimation of covariance components from y*y' (for sparse patterns)  
         FORMAT [C,h,Ph,F,Fa,Fc] = spm_sp_reml(YY,X,Q,N);  
          
@@ -37,9 +37,12 @@ def spm_sp_reml(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/spm_sp_reml.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/spm_sp_reml.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_sp_reml", *args, **kwargs)

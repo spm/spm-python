@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _read_spike6mat_header(*args, **kwargs):
-    """
+    r"""
       read_spike6mat_header() - read Matlab files exported from Spike 6  
          
         Usage:  
@@ -18,9 +18,12 @@ def _read_spike6mat_header(*args, **kwargs):
         Vladimir Litvak  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/read_spike6mat_header.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/fileio/private/read_spike6mat_header.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("read_spike6mat_header", *args, **kwargs)

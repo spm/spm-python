@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _ft_datatype_sens(*args, **kwargs):
-    """
+    r"""
       FT_DATATYPE_SENS describes the FieldTrip structure that represents an MEG, EEG,  
         sEEG, ECoG, or NIRS sensor array. This structure is commonly called "grad" for MEG,  
         "elec" for EEG and intranial EEG, "opto" for NIRS, or in general "sens" if it could  
@@ -49,12 +49,14 @@ def _ft_datatype_sens(*args, **kwargs):
            sens.chanunit = Mx1 cell-array with the units of the channel signal, e.g. 'V', 'fT' or 'T/cm', see FT_CHANUNIT  
          
         Optional fields:  
-           type, unit, fid, chantype, chanunit, coordsys  
+           type, unit, fid, chantype, chanunit, coordsys, balance  
          
         Historical fields:  
            pnt, pos, ori, pnt1, pnt2, fiberpos, fibertype, fiberlabel, transceiver, transmits, laserstrength  
          
         Revision history:  
+        (2025/latest) Explicitly deal with the balance field and sequence of montages.  
+         
         (2020/latest) Updated the specification of the NIRS sensor definition.  
           Dropped the laserstrength and renamed transmits into tra for consistency.  
          
@@ -96,9 +98,12 @@ def _ft_datatype_sens(*args, **kwargs):
         BTI2GRAD, YOKOGAWA2GRAD, ITAB2GRAD  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/plotting/private/ft_datatype_sens.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/plotting/private/ft_datatype_sens.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_datatype_sens", *args, **kwargs)

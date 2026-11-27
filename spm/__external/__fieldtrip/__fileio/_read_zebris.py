@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _read_zebris(*args, **kwargs):
-    """
+    r"""
       Reads Zebris files:  
           fiducials locations, and  
           either sensor file or headshape file or both  
@@ -34,9 +34,12 @@ def _read_zebris(*args, **kwargs):
         Copyright (C) 2008 Wellcome Trust Centre for Neuroimaging  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/read_zebris.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/fileio/private/read_zebris.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("read_zebris", *args, **kwargs)

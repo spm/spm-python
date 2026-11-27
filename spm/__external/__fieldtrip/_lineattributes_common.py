@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _lineattributes_common(*args, **kwargs):
-    """
+    r"""
       LINEATTRIBUTES_COMMON implements consistent line attributes for multiple channels/conditions  
           
         This function is used by   
@@ -43,9 +43,12 @@ def _lineattributes_common(*args, **kwargs):
         the corresponding sensor.  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/lineattributes_common.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/private/lineattributes_common.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("lineattributes_common", *args, **kwargs)

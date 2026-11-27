@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _procrustes_trans(*args, **kwargs):
-    """
+    r"""
       PROCRUSTES_TRANS returns the homogenous coordinate transformation matrix  
         that warps the specified input points to the target points.   
          
@@ -19,9 +19,12 @@ def _procrustes_trans(*args, **kwargs):
         See also WARP_OPTIM, HEADCOORDINATES  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/procrustes_trans.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/private/procrustes_trans.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("procrustes_trans", *args, **kwargs)

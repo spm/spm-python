@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def mci_nmm_r2_gx(*args, **kwargs):
-    """
+    r"""
       Observation function for 2-region NMM  
         FORMAT [y,L] = mci_nmm_r2_gx (x,u,P,M)  
          
@@ -15,9 +15,12 @@ def mci_nmm_r2_gx(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/mci/models/nmm/mci_nmm_r2_gx.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/mci/models/nmm/mci_nmm_r2_gx.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("mci_nmm_r2_gx", *args, **kwargs)

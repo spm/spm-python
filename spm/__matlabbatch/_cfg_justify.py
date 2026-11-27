@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _cfg_justify(*args, **kwargs):
-    """
+    r"""
       CFG_JUSTIFY Justifies a text string  
            OUT = CFG_JUSTIFY(N,TXT) justifies text string TXT to  
            the length specified by N.  
@@ -33,9 +33,12 @@ def _cfg_justify(*args, **kwargs):
         Copyright (C) 2008 Wellcome Trust Centre for Neuroimaging  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/matlabbatch/private/cfg_justify.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/matlabbatch/private/cfg_justify.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("cfg_justify", *args, **kwargs)

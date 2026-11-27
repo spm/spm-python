@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _ft_info(*args, **kwargs):
-    """
+    r"""
       FT_INFO prints an info message on screen, depending on the verbosity   
         settings of the calling high-level FieldTrip function.  
          
@@ -37,9 +37,12 @@ def _ft_info(*args, **kwargs):
         See also FT_ERROR, FT_WARNING, FT_NOTICE, FT_INFO, FT_DEBUG, ERROR, WARNING  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/plotting/private/ft_info.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/plotting/private/ft_info.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_info", *args, **kwargs)

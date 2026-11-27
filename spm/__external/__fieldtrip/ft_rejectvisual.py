@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_rejectvisual(*args, **kwargs):
-    """
+    r"""
       FT_REJECTVISUAL shows the preprocessed data in all channels and/or trials to allow  
         the user to make a visual selection of the data that should be rejected. The data  
         can be displayed in a "summary" mode, in which case the variance (or another  
@@ -98,9 +98,12 @@ def ft_rejectvisual(*args, **kwargs):
         See also FT_REJECTARTIFACT, FT_REJECTCOMPONENT, FT_BADSEGMENT, FT_BADCHANNEL  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/ft_rejectvisual.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/ft_rejectvisual.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_rejectvisual", *args, **kwargs)

@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def write_eep_avr(*args, **kwargs):
-    """
+    r"""
       WRITE_EEG_AVR writes averaged EEG data to an EEProbe *.avr file  
          
         write_eep_avr(filename, eeg)  
@@ -25,9 +25,12 @@ def write_eep_avr(*args, **kwargs):
         See also READ_EEP_TRG, READ_EEP_REJ, READ_EEP_AVR  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/eeprobe/write_eep_avr.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/eeprobe/write_eep_avr.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("write_eep_avr", *args, **kwargs)

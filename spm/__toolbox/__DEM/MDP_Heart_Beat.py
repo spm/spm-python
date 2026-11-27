@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def MDP_Heart_Beat(*args, **kwargs):
-    """
+    r"""
       This simulation uses a Markov Decision process formulation of active  
         inference to demonstrate the interaction between interoceptive and  
         exteroceptive perception. This relies upon the fact that the function of  
@@ -11,9 +11,12 @@ def MDP_Heart_Beat(*args, **kwargs):
         blood flow, and its influence on vision, during a cardiac cycle.  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DEM/MDP_Heart_Beat.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/DEM/MDP_Heart_Beat.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("MDP_Heart_Beat", *args, **kwargs)

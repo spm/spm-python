@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_dcm_neural_priors(*args, **kwargs):
-    """
+    r"""
       Prepare the priors on the parameters of neural mass models  
         FORMAT [pE,pC] = spm_dcm_neural_priors(A,B,C,'model'))  
          
@@ -39,9 +39,12 @@ def spm_dcm_neural_priors(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/dcm_meeg/spm_dcm_neural_priors.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/dcm_meeg/spm_dcm_neural_priors.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_dcm_neural_priors", *args, **kwargs)

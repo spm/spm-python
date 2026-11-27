@@ -4,7 +4,7 @@ from spm._runtime import Runtime, RuntimeMixin
 
 class cfg_files(RuntimeMixin, MatlabClass):
     def __init__(self, *args, **kwargs):
-        """
+        r"""
           This is the file configuration item class  
              
             Data structure  
@@ -78,15 +78,18 @@ class cfg_files(RuntimeMixin, MatlabClass):
             
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/matlabbatch/@cfg_files/cfg_files.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/matlabbatch/@cfg_files/cfg_files.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         super().__init__()
 
     def cfg2struct(self, *args, **kwargs):
-        """
+        r"""
           function sitem = cfg2struct(item)  
             Return a struct containing all fields of item plus a field type. This is  
             the method suitable for entry classes.  
@@ -98,15 +101,18 @@ class cfg_files(RuntimeMixin, MatlabClass):
             Copyright (C) 2007 Freiburg Brain Imaging  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/matlabbatch/@cfg_files/cfg2struct.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/matlabbatch/@cfg_files/cfg2struct.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("cfg2struct", self._as_matlab_object(), *args, **kwargs)
 
     def fieldnames(self, *args, **kwargs):
-        """
+        r"""
           function fn = fieldnames(item)  
             Return a list of all (inherited and non-inherited) field names.  
              
@@ -117,15 +123,18 @@ class cfg_files(RuntimeMixin, MatlabClass):
             Copyright (C) 2007 Freiburg Brain Imaging  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/matlabbatch/@cfg_files/fieldnames.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/matlabbatch/@cfg_files/fieldnames.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("fieldnames", self._as_matlab_object(), *args, **kwargs)
 
     def gencode_item(self, *args, **kwargs):
-        """
+        r"""
           function [str, tag, cind, ccnt] = gencode_item(item, tag, tagctx, stoptag, tropts)  
             Generate code to recreate a generic item. This code does not deal with  
             arrays of cfg_items, such a configuration should not exist with the  
@@ -148,15 +157,18 @@ class cfg_files(RuntimeMixin, MatlabClass):
             Copyright (C) 2007 Freiburg Brain Imaging  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/matlabbatch/@cfg_files/gencode_item.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/matlabbatch/@cfg_files/gencode_item.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("gencode_item", self._as_matlab_object(), *args, **kwargs)
 
     def match(self, *args, **kwargs):
-        """
+        r"""
           function sts = match(item, spec)  
             This function is an implementation of find to search the cfg tree for  
             certain entries.  
@@ -188,15 +200,18 @@ class cfg_files(RuntimeMixin, MatlabClass):
             Copyright (C) 2007 Freiburg Brain Imaging  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/matlabbatch/@cfg_files/match.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/matlabbatch/@cfg_files/match.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("match", self._as_matlab_object(), *args, **kwargs)
 
     def showdetail(self, *args, **kwargs):
-        """
+        r"""
           function str = showdetail(item)  
             Display details for a cfg_files item.  
              
@@ -207,15 +222,18 @@ class cfg_files(RuntimeMixin, MatlabClass):
             Copyright (C) 2007 Freiburg Brain Imaging  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/matlabbatch/@cfg_files/showdetail.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/matlabbatch/@cfg_files/showdetail.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("showdetail", self._as_matlab_object(), *args, **kwargs)
 
     def subs_fields(self, *args, **kwargs):
-        """
+        r"""
           function fnames = subs_fields(item)  
             This function works as a "class-based switch" to return the value of  
             the private mysubs_fields function for the appropriate class.   
@@ -230,15 +248,18 @@ class cfg_files(RuntimeMixin, MatlabClass):
             Copyright (C) 2007 Freiburg Brain Imaging  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/matlabbatch/@cfg_files/subs_fields.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/matlabbatch/@cfg_files/subs_fields.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("subs_fields", self._as_matlab_object(), *args, **kwargs)
 
     def subsasgn(self, *args, **kwargs):
-        """
+        r"""
           function item = subsasgn(item, subs, varargin)  
             This function implements subsasgn for all classes derived from cfg_item.  
             It relies on the capability of each class constructor to re-classify a  
@@ -271,15 +292,18 @@ class cfg_files(RuntimeMixin, MatlabClass):
             Copyright (C) 2007 Freiburg Brain Imaging  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/matlabbatch/@cfg_files/subsasgn.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/matlabbatch/@cfg_files/subsasgn.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("subsasgn", self._as_matlab_object(), *args, **kwargs)
 
     def subsasgn_check(self, *args, **kwargs):
-        """
+        r"""
           function [sts, val] = subsasgn_check(item,subs,val)  
             Perform assignment checks for .num field. Checks for .val field could  
             include filtering and numel checks, if inputs are not passed as  
@@ -292,15 +316,18 @@ class cfg_files(RuntimeMixin, MatlabClass):
             Copyright (C) 2007 Freiburg Brain Imaging  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/matlabbatch/@cfg_files/subsasgn_check.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/matlabbatch/@cfg_files/subsasgn_check.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("subsasgn_check", self._as_matlab_object(), *args, **kwargs)
 
     def subsref(self, *args, **kwargs):
-        """
+        r"""
           function varargout = subsref(item, subs)  
             subscript references we have to deal with are:  
             one level  
@@ -324,15 +351,18 @@ class cfg_files(RuntimeMixin, MatlabClass):
             Copyright (C) 2007 Freiburg Brain Imaging  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/matlabbatch/@cfg_files/subsref.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/matlabbatch/@cfg_files/subsref.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("subsref", self._as_matlab_object(), *args, **kwargs)
 
     def _mysubs_fields(self, *args, **kwargs):
-        """
+        r"""
           function [fnames, defaults] = mysubs_fields  
             Additional fields for class cfg_files. See help of  
             @cfg_item/subs_fields for general help about this function.  
@@ -344,9 +374,12 @@ class cfg_files(RuntimeMixin, MatlabClass):
             Copyright (C) 2007 Freiburg Brain Imaging  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/matlabbatch/@cfg_files/private/mysubs_fields.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/matlabbatch/@cfg_files/private/mysubs_fields.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("mysubs_fields", self._as_matlab_object(), *args, **kwargs)

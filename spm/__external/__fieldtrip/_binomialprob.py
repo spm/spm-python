@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _binomialprob(*args, **kwargs):
-    """
+    r"""
       BINOMIALPROB computes the probability of observing a significant effect  
         in multiple tests. It allows you to test questions like "How likely  
         is it that there is a significant effect at this time-frequency point  
@@ -21,9 +21,12 @@ def _binomialprob(*args, **kwargs):
         See also BINOPDF, BINOCDF  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/binomialprob.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/private/binomialprob.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("binomialprob", *args, **kwargs)

@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def data2bids(*args, **kwargs):
-    """
+    r"""
       DATA2BIDS is a helper function to convert MRI, MEG, EEG, iEEG or NIRS data to the  
         Brain Imaging Data Structure. The overall idea is that you write a MATLAB script in  
         which you call this function multiple times, once for each individually recorded  
@@ -61,7 +61,7 @@ def data2bids(*args, **kwargs):
           cfg.ses                     = string, optional session name  
           cfg.run                     = number, optional  
           cfg.task                    = string, task name is required for functional data  
-          cfg.suffix                  = string, can be any of 'FLAIR', 'FLASH', 'PD', 'PDT2', 'PDmap', 'T1map', 'T1rho', 'T1w', 'T2map', 'T2star', 'T2w', 'angio', 'audio', 'bold', 'bval', 'bvec', 'channels', 'coordsystem', 'defacemask', 'dwi', 'eeg', 'emg', 'epi', 'events', 'eyetracker', 'fieldmap', 'headshape', 'ieeg', 'inplaneT1', 'inplaneT2', 'magnitude', 'magnitude1', 'magnitude2', 'meg', 'motion', 'nirs', 'phase1', 'phase2', 'phasediff', 'photo', 'physio', 'sbref', 'stim', 'video'  
+          cfg.suffix                  = string, can be any of 'FLAIR', 'FLASH', 'PD', 'PDT2', 'PDmap', 'T1map', 'T1rho', 'T1w', 'T2map', 'T2star', 'T2w', 'angio', 'audio', 'bold', 'bval', 'bvec', 'channels', 'coordsystem', 'defacemask', 'dwi', 'eeg', 'emg', 'epi', 'events', 'fieldmap', 'headshape', 'ieeg', 'inplaneT1', 'inplaneT2', 'magnitude', 'magnitude1', 'magnitude2', 'meg', 'motion', 'nirs', 'phase1', 'phase2', 'phasediff', 'photo', 'physio', 'sbref', 'stim', 'video'  
           cfg.acq                     = string  
           cfg.ce                      = string  
           cfg.rec                     = string  
@@ -181,9 +181,12 @@ def data2bids(*args, **kwargs):
         FT_PREPROCESSING, FT_READ_MRI, FT_READ_EVENT  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/data2bids.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/data2bids.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("data2bids", *args, **kwargs)

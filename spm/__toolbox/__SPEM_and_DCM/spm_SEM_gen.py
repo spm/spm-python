@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_SEM_gen(*args, **kwargs):
-    """
+    r"""
       Slow/saccadic eye movement prediction scheme  
         FORMAT [y,DEM] = spm_SEM_gen(P,M,U)  
          
@@ -20,9 +20,12 @@ def spm_SEM_gen(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/SPEM_and_DCM/spm_SEM_gen.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/SPEM_and_DCM/spm_SEM_gen.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_SEM_gen", *args, **kwargs)

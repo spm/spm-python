@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _align_presentation(*args, **kwargs):
-    """
+    r"""
       ALIGN_PRESENTATION is a helper function to align events from a NBS Presentation log  
         files to MEG/EEG triggers, or to a sequence of BOLD volumes.  
          
@@ -23,9 +23,12 @@ def _align_presentation(*args, **kwargs):
         See also DATA2BIDS, FT_READ_EVENT, FT_DEFINETRIAL  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/align_presentation.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/private/align_presentation.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("align_presentation", *args, **kwargs)

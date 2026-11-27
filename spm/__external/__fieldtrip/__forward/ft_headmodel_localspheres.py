@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_headmodel_localspheres(*args, **kwargs):
-    """
+    r"""
       FT_HEADMODEL_LOCALSPHERES constructs a MEG volume conduction model in  
         with a local sphere fitted to the head or brain surface for each separate  
         channel  
@@ -27,9 +27,12 @@ def ft_headmodel_localspheres(*args, **kwargs):
         See also FT_PREPARE_HEADMODEL, FT_PREPARE_VOL_SENS, FT_COMPUTE_LEADFIELD  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/forward/ft_headmodel_localspheres.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/forward/ft_headmodel_localspheres.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_headmodel_localspheres", *args, **kwargs)

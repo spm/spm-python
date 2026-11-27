@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_respiration(*args, **kwargs):
-    """
+    r"""
       FT_RESPIRATION estimates the respiration rate from a respiration belt, temperature  
         sensor, movement sensor or from the heart rate. It returns a new data structure  
         with a continuous representation of the rate and phase.  
@@ -23,9 +23,12 @@ def ft_respiration(*args, **kwargs):
         See also FT_HEARTRATE, FT_ELECTRODERMALACTIVITY, FT_HEADMOVEMENT, FT_REGRESSCONFOUND  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/ft_respiration.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/ft_respiration.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_respiration", *args, **kwargs)

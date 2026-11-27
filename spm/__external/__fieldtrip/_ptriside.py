@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _ptriside(*args, **kwargs):
-    """
+    r"""
       PTRISIDE determines the side of a plane on which a set of points lie. It  
         returns 0 for the points that lie exactly on the plane.  
          
@@ -13,9 +13,12 @@ def _ptriside(*args, **kwargs):
         Nx3 matrix  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/ptriside.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/private/ptriside.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ptriside", *args, **kwargs)

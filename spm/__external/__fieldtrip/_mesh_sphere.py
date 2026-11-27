@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _mesh_sphere(*args, **kwargs):
-    """
+    r"""
       MESH_SPHERE creates spherical mesh, with approximately nvertices vertices  
          
         Use as  
@@ -23,9 +23,12 @@ def _mesh_sphere(*args, **kwargs):
         See also MESH_TETRAHEDRON, MESH_OCTAHEDRON, MESH_ICOSAHEDRON  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/mesh_sphere.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/private/mesh_sphere.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("mesh_sphere", *args, **kwargs)

@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def read_eep_rej(*args, **kwargs):
-    """
+    r"""
       READ_EEP_REJ reads rejection marks from an EEProbe *.rej file  
          
         This function returns a Nx2 matrix with the begin and end latency  
@@ -22,9 +22,12 @@ def read_eep_rej(*args, **kwargs):
         See also READ_EEP_CNT, READ_EEP_TRG, READ_EEP_AVR  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/eeprobe/read_eep_rej.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/eeprobe/read_eep_rej.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("read_eep_rej", *args, **kwargs)

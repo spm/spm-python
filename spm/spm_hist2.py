@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_hist2(*args, **kwargs):
-    """
+    r"""
       Create 2D scatter-plot of two images after affine transformation  
         FORMAT H = spm_hist2(G,F,M,s)  
         G  - unsigned 8 bit 3D array representing the first volume  
@@ -22,9 +22,12 @@ def spm_hist2(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/spm_hist2.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/spm_hist2.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_hist2", *args, **kwargs)

@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def removefields(*args, **kwargs):
-    """
+    r"""
       REMOVEFIELDS makes a selection of the fields in a structure  
          
         Use as  
@@ -11,9 +11,12 @@ def removefields(*args, **kwargs):
         See also KEEPFIELDS, COPYFIELDS  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/utilities/removefields.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/utilities/removefields.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("removefields", *args, **kwargs)

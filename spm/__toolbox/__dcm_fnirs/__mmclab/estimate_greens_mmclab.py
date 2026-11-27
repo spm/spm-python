@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def estimate_greens_mmclab(*args, **kwargs):
-    """
+    r"""
       Estimate Green's function of the photon fluence by simulating photon  
         migration through the head and brain using the MMCLAB software  
          
@@ -45,9 +45,12 @@ def estimate_greens_mmclab(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/dcm_fnirs/mmclab/estimate_greens_mmclab.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/dcm_fnirs/mmclab/estimate_greens_mmclab.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("estimate_greens_mmclab", *args, **kwargs)

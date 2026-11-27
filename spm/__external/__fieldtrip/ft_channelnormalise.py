@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_channelnormalise(*args, **kwargs):
-    """
+    r"""
       FT_CHANNELNORMALISE shifts and scales all channels of the the input data.  
         The default behavior is to subtract each channel's mean, and scale to a  
         standard deviation of 1, for each channel individually.  
@@ -33,9 +33,12 @@ def ft_channelnormalise(*args, **kwargs):
         Copyright (C) 2010, Jan-Mathijs Schoffelen  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/ft_channelnormalise.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/ft_channelnormalise.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_channelnormalise", *args, **kwargs)

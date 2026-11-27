@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def mci_discount_act(*args, **kwargs):
-    """
+    r"""
       Activation of discounting model  
         FORMAT [a,v1,v2,k] = mci_discount_act (P,M,U)  
          
@@ -14,9 +14,12 @@ def mci_discount_act(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/mci/models/discount/mci_discount_act.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/mci/models/discount/mci_discount_act.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("mci_discount_act", *args, **kwargs)

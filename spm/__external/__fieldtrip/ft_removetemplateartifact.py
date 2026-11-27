@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_removetemplateartifact(*args, **kwargs):
-    """
+    r"""
       FT_REMOVETEMPLATEARTIFACT removes an artifact from preprocessed data by template  
         subtraction. The template can for example be formed by averaging an ECG-triggered  
         MEG timecourse.  
@@ -27,9 +27,12 @@ def ft_removetemplateartifact(*args, **kwargs):
         See also FT_ARTIFACT_ECG, FT_PREPROCESSING, FT_TIMELOCKANALYSIS, FT_REJECTCOMPONENT  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/ft_removetemplateartifact.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/ft_removetemplateartifact.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_removetemplateartifact", *args, **kwargs)

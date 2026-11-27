@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_electrodermalactivity(*args, **kwargs):
-    """
+    r"""
       FT_ELECTRODERMALACTIVITY estimates the electrodermal activity from a recording of  
         the electric resistance of the skin.  
          
@@ -26,9 +26,12 @@ def ft_electrodermalactivity(*args, **kwargs):
         See also FT_HEARTRATE, FT_HEADMOVEMENT, FT_REGRESSCONFOUND  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/ft_electrodermalactivity.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/ft_electrodermalactivity.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_electrodermalactivity", *args, **kwargs)

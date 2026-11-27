@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _decode_nifti1(*args, **kwargs):
-    """
+    r"""
       DECODE_NIFTI1 is a helper function for real-time processing of MRI data  
          
         Use as  
@@ -19,9 +19,12 @@ def _decode_nifti1(*args, **kwargs):
         See also DECODE_RES4, DECODE_NIFTI1, SAP2MATLAB  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/decode_nifti1.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/fileio/private/decode_nifti1.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("decode_nifti1", *args, **kwargs)

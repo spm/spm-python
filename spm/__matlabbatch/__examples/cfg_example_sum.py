@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def cfg_example_sum(*args, **kwargs):
-    """
+    r"""
       Example script that creates an cfg_exbranch to sum two numbers. The  
         inputs are entered as vector, the output is just a single  
         number. This function differs from cfg_example_add2 (except from names)  
@@ -15,9 +15,12 @@ def cfg_example_sum(*args, **kwargs):
         Copyright (C) 2007 Freiburg Brain Imaging  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/matlabbatch/examples/cfg_example_sum.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/matlabbatch/examples/cfg_example_sum.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("cfg_example_sum", *args, **kwargs)

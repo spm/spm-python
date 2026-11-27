@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_BIDS(*args, **kwargs):
-    """
+    r"""
       Parse and query a directory structure formatted according to the BIDS standard  
         FORMAT BIDS = spm_BIDS(root)  
         root   - directory formatted according to BIDS [Default: pwd]  
@@ -22,9 +22,12 @@ def spm_BIDS(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/spm_BIDS.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/spm_BIDS.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_BIDS", *args, **kwargs)

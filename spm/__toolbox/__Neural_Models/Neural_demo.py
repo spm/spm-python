@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def Neural_demo(*args, **kwargs):
-    """
+    r"""
       NEURAL_DEMO M-file for Neural_demo.fig  
              NEURAL_DEMO, by itself, creates a new NEURAL_DEMO or raises the existing  
              singleton*.  
@@ -25,9 +25,12 @@ def Neural_demo(*args, **kwargs):
         See also: GUIDE, GUIDATA, GUIHANDLES  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/Neural_Models/Neural_demo.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/Neural_Models/Neural_demo.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("Neural_demo", *args, **kwargs)

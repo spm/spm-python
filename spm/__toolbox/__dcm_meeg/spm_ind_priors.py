@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_ind_priors(*args, **kwargs):
-    """
+    r"""
       Prior moments for a neural-mass model of induced responses  
         FORMAT [pE,gE,pC,gC] = spm_ind_priors(A,B,C,dipfit,Nu,Nf)  
         A{2},B{m},C  - binary constraints on extrinsic connections  
@@ -30,9 +30,12 @@ def spm_ind_priors(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/dcm_meeg/spm_ind_priors.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/dcm_meeg/spm_ind_priors.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_ind_priors", *args, **kwargs)

@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_P(*args, **kwargs):
-    """
+    r"""
       Return the [un]corrected P value using unified EC theory  
         FORMAT [P,p,Ec,Ek] = spm_P(c,k,Z,df,STAT,R,n,S)  
          
@@ -34,9 +34,12 @@ def spm_P(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/spm_P.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/spm_P.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_P", *args, **kwargs)

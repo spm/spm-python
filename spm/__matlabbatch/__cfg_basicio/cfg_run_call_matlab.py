@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def cfg_run_call_matlab(*args, **kwargs):
-    """
+    r"""
       A generic interface to call any MATLAB function through the batch system  
         and make its output arguments available as dependencies.  
         varargout = cfg_run_call_matlab(cmd, varargin)  
@@ -47,9 +47,12 @@ def cfg_run_call_matlab(*args, **kwargs):
         Copyright (C) 2007 Freiburg Brain Imaging  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/matlabbatch/cfg_basicio/cfg_run_call_matlab.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/matlabbatch/cfg_basicio/cfg_run_call_matlab.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("cfg_run_call_matlab", *args, **kwargs)

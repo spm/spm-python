@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_preprocessing(*args, **kwargs):
-    """
+    r"""
       FT_PREPROCESSING reads MEG and/or EEG data according to user-specified trials  
         and applies several user-specified preprocessing steps to the signals.  
          
@@ -131,9 +131,12 @@ def ft_preprocessing(*args, **kwargs):
         See also FT_DEFINETRIAL, FT_REDEFINETRIAL, FT_APPENDDATA, FT_APPENDSPIKE  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/ft_preprocessing.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/ft_preprocessing.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_preprocessing", *args, **kwargs)

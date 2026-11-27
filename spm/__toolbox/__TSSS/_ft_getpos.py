@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _ft_getpos(*args, **kwargs):
-    """
+    r"""
       Compute the inputs to TSSS code from Fieldtrip representation of MEG  
         sensors and headshape.  
        _______________________________________________________________________  
@@ -18,9 +18,12 @@ def _ft_getpos(*args, **kwargs):
         in connection with its use and distribution of any and all parts of the Software under this license.  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/TSSS/private/ft_getpos.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/TSSS/private/ft_getpos.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_getpos", *args, **kwargs)

@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _mat2ades(*args, **kwargs):
-    """
+    r"""
       write in the current folder ADES and DAT files from matrix in MATLAB workspace  
         data = matrix of data (nbchannel * time points) - the data have to be in microVolt  
         fileName = string of the output files without extension ; the ades and dat files will have the same name  
@@ -17,9 +17,12 @@ def _mat2ades(*args, **kwargs):
         Modified by Robert Oostenveld - February 2019  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/mat2ades.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/fileio/private/mat2ades.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("mat2ades", *args, **kwargs, nargout=0)

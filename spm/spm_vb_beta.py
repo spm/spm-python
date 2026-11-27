@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_vb_beta(*args, **kwargs):
-    """
+    r"""
       Variational Bayes for GLM-AR modelling in a block - Update beta   
         FORMAT [block] = spm_vb_beta(Y,block)  
          
@@ -11,9 +11,12 @@ def spm_vb_beta(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/spm_vb_beta.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/spm_vb_beta.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_vb_beta", *args, **kwargs)

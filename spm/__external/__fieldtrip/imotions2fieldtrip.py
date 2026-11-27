@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def imotions2fieldtrip(*args, **kwargs):
-    """
+    r"""
       IMOTIONS2FIELDTRIP imports an iMotions *.txt file and represents it as a FieldTrip  
         raw data structure.  
          
@@ -30,9 +30,12 @@ def imotions2fieldtrip(*args, **kwargs):
         See also FT_DATATYPE_RAW, FT_PREPROCESSING, FT_HEARTRATE, FT_ELECTRODERMALACTIVITY  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/imotions2fieldtrip.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/imotions2fieldtrip.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("imotions2fieldtrip", *args, **kwargs)

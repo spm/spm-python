@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def hilbert(*args, **kwargs):
-    """
+    r"""
       Computes analytic signal  
         FORMAT [x] = hilbert(xr)  
          
@@ -12,9 +12,12 @@ def hilbert(*args, **kwargs):
         Copyright (C) 2009 Wellcome Trust Centre for Neuroimaging  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/external/signal/hilbert.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/external/signal/hilbert.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("hilbert", *args, **kwargs)

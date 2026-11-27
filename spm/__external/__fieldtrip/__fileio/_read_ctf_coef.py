@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _read_ctf_coef(*args, **kwargs):
-    """
+    r"""
       READ_CTF_COEF returns the spatial filter coefficients for the CTF MEG system  
         that has been installed at the F.C. Donders Centre (id 1706)  
          
@@ -13,9 +13,12 @@ def _read_ctf_coef(*args, **kwargs):
         odin:/opt/ctf/hardware/M016/M017_1706.coef  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/read_ctf_coef.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/fileio/private/read_ctf_coef.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("read_ctf_coef", *args, **kwargs)

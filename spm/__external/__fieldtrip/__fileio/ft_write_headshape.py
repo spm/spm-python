@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_write_headshape(*args, **kwargs):
-    """
+    r"""
       FT_WRITE_HEADSHAPE writes a head surface, cortical sheet or geometrical descrition  
         of the volume conduction model or source model to a file for further processing in  
         external software.  
@@ -39,13 +39,18 @@ def ft_write_headshape(*args, **kwargs):
           'tetgen'          see https://wias-berlin.de/software/tetgen/  
           'vista'           see http://www.cs.ubc.ca/nest/lci/vista/vista.html  
           'vtk'             Visualization ToolKit file format, for use with Paraview  
+          'dgf'             Duneuro geometry file format, for hexahedral meshes (uses io function from Brainstorm)  
+          'geo'             Cauchy geometry file format (simbio), for tetrahedral meshes (uses io function from Brainstorm)  
          
         See also FT_READ_HEADSHAPE, FT_WRITE_DATA, FT_WRITE_MRI, FT_WRITE_SENS  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/ft_write_headshape.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/fileio/ft_write_headshape.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_write_headshape", *args, **kwargs, nargout=0)

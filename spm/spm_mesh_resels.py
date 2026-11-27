@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_mesh_resels(*args, **kwargs):
-    """
+    r"""
       Return the RESEL counts of a search volume on a surface mesh  
         FORMAT R = spm_mesh_resels(M,T,[S])  
         M        - a patch structure or [nx3] faces array (#faces = n)  
@@ -24,9 +24,12 @@ def spm_mesh_resels(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/spm_mesh_resels.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/spm_mesh_resels.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_mesh_resels", *args, **kwargs)

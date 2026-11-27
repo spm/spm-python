@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _triplet_conditionalgranger(*args, **kwargs):
-    """
+    r"""
       TRIPLET_CONDITIONALGRANGER  
           
         Inputs:  
@@ -13,9 +13,12 @@ def _triplet_conditionalgranger(*args, **kwargs):
           cmbindx: Nx3 indices determining the output, abc = b->a/c  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/connectivity/private/triplet_conditionalgranger.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/connectivity/private/triplet_conditionalgranger.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("triplet_conditionalgranger", *args, **kwargs)

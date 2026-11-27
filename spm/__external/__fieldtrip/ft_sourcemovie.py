@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_sourcemovie(*args, **kwargs):
-    """
+    r"""
       FT_SOURCEMOVIE displays the source reconstruction on a cortical mesh  
         and allows the user to scroll through time with a movie.  
          
@@ -24,9 +24,12 @@ def ft_sourcemovie(*args, **kwargs):
         See also FT_SOURCEPLOT, FT_SOURCEINTERPOLATE, FT_SOURCEPARCELLATE  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/ft_sourcemovie.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/ft_sourcemovie.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_sourcemovie", *args, **kwargs)

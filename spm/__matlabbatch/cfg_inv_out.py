@@ -4,7 +4,7 @@ from spm._runtime import Runtime, RuntimeMixin
 
 class cfg_inv_out(RuntimeMixin, MatlabClass):
     def __init__(self, *args, **kwargs):
-        """
+        r"""
           function obj = cfg_inv_out(varargin)  
             Auxiliary class to mark invalid (i.e. not yet available) outputs of  
             cfg_exbranch'es. An object of this type will be assigned automatically  
@@ -22,9 +22,12 @@ class cfg_inv_out(RuntimeMixin, MatlabClass):
             
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/matlabbatch/@cfg_inv_out/cfg_inv_out.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/matlabbatch/@cfg_inv_out/cfg_inv_out.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         super().__init__()

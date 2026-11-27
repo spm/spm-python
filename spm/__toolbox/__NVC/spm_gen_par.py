@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_gen_par(*args, **kwargs):
-    """
+    r"""
       Generate condition specific parameters using DCM for M/EEG  
         FORMAT Q = spm_gen_par(P,U)  
          
@@ -20,9 +20,12 @@ def spm_gen_par(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/NVC/spm_gen_par.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/NVC/spm_gen_par.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_gen_par", *args, **kwargs)

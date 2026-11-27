@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _artifact_level(*args, **kwargs):
-    """
+    r"""
       This function is shared between FT_REJECTVISUAL, FT_BADCHANNEL,   
         FT_BADSEGMENT, and FT_BADDATA  
          
@@ -18,9 +18,12 @@ def _artifact_level(*args, **kwargs):
           level         = nchan*1 vector with values  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/artifact_level.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/private/artifact_level.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("artifact_level", *args, **kwargs)

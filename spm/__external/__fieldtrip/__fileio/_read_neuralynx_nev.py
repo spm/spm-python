@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _read_neuralynx_nev(*args, **kwargs):
-    """
+    r"""
       READ_NEURALYNX_NEV reads the event information from the *.nev file in a  
         Neuralynx dataset directory  
          
@@ -21,9 +21,12 @@ def _read_neuralynx_nev(*args, **kwargs):
         The output structure contains all events and timestamps.  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/read_neuralynx_nev.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/fileio/private/read_neuralynx_nev.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("read_neuralynx_nev", *args, **kwargs)

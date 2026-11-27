@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_eeg_fix_ctf_headloc(*args, **kwargs):
-    """
+    r"""
       Fix head localization data in a continuous CTF dataset with continuous  
         head localization. The tracking has to be valid at least some of the time  
          
@@ -29,9 +29,12 @@ def spm_eeg_fix_ctf_headloc(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/MEEGtools/spm_eeg_fix_ctf_headloc.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/MEEGtools/spm_eeg_fix_ctf_headloc.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_eeg_fix_ctf_headloc", *args, **kwargs)

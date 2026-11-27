@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _hcp_getopt(*args, **kwargs):
-    """
+    r"""
       HCP_GETOPT parses the command line to the megconnectome executable  
         application, separating the options that start with -- from the file  
         names of the scripts to be executed.  
@@ -19,9 +19,12 @@ def _hcp_getopt(*args, **kwargs):
         See also FT_GETOPT  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/utilities/private/hcp_getopt.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/utilities/private/hcp_getopt.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("hcp_getopt", *args, **kwargs)

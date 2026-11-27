@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _nut_swLORETA(*args, **kwargs):
-    """
+    r"""
       [weight,eta]=nut_swLORETA(Lp,data,flags)  
         Lp : lead field ( channels X 3 )  
         specify either:  
@@ -12,9 +12,12 @@ def _nut_swLORETA(*args, **kwargs):
         [2] flags.gamma = regularization constant [optional]  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DAiSS/private/nut_swLORETA.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/DAiSS/private/nut_swLORETA.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("nut_swLORETA", *args, **kwargs)

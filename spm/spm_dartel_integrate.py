@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_dartel_integrate(*args, **kwargs):
-    """
+    r"""
       Integrate a Dartel flow field  
         FORMAT [Phi,DPhi] = spm_dartel_exp(U,t,K)  
             U    - name of flow field (nx x ny x nz x nt x 3)  
@@ -23,9 +23,12 @@ def spm_dartel_integrate(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/spm_dartel_integrate.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/spm_dartel_integrate.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_dartel_integrate", *args, **kwargs)

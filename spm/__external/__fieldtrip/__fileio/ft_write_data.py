@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_write_data(*args, **kwargs):
-    """
+    r"""
       FT_WRITE_DATA exports electrophysiological data such as EEG to a file.  
          
         Use as  
@@ -22,6 +22,7 @@ def ft_write_data(*args, **kwargs):
           edf  
           gdf  
           anywave_ades  
+          biosemi_bdf  
           brainvision_eeg  
           neuralynx_ncs  
           neuralynx_sdma  
@@ -33,6 +34,7 @@ def ft_write_data(*args, **kwargs):
           matlab  
           homer_nirs  
           snirf  
+          csv  
          
         For EEG data, the input data is assumed to be scaled in microvolt.  
         For NIRS data, the input data is assumed to represent optical densities.  
@@ -40,9 +42,12 @@ def ft_write_data(*args, **kwargs):
         See also FT_READ_HEADER, FT_READ_DATA, FT_READ_EVENT, FT_WRITE_EVENT  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/ft_write_data.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/fileio/ft_write_data.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_write_data", *args, **kwargs, nargout=0)

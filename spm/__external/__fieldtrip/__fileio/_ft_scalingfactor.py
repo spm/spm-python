@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _ft_scalingfactor(*args, **kwargs):
-    """
+    r"""
       FT_SCALINGFACTOR determines the scaling factor from old to new units, i.e. it  
         returns a number with which the data in the old units needs to be multiplied  
         to get it expressed in the new units.   
@@ -62,9 +62,12 @@ def _ft_scalingfactor(*args, **kwargs):
         See also http://en.wikipedia.org/wiki/International_System_of_Units  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/ft_scalingfactor.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/fileio/private/ft_scalingfactor.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_scalingfactor", *args, **kwargs)

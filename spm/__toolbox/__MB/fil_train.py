@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def fil_train(*args, **kwargs):
-    """
+    r"""
       Fit the patch-wise CCA-like model.  
         FORMAT model = fil_train(data,sett,model)  
         data  - a data structure encoding the images used, as well as the  
@@ -22,9 +22,12 @@ def fil_train(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/MB/fil_train.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/MB/fil_train.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("fil_train", *args, **kwargs)

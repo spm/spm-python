@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _read_ctf_trigger(*args, **kwargs):
-    """
+    r"""
       READ_CTF_TRIGGER reads the STIM channel from a dataset and detects  
         the trigger moments and values  
          
@@ -18,9 +18,12 @@ def _read_ctf_trigger(*args, **kwargs):
         See also READ_CTF_MEG4, READ_CTF_RES4  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/read_ctf_trigger.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/fileio/private/read_ctf_trigger.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("read_ctf_trigger", *args, **kwargs)

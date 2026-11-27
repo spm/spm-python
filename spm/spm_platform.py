@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_platform(*args, **kwargs):
-    """
+    r"""
       Platform specific configuration parameters  
          
         FORMAT ans = spm_platform(param)  
@@ -16,6 +16,8 @@ def spm_platform(*args, **kwargs):
                 - 'host'    - return system's host name  
                 - 'tempdir' - return name of temp directory  
                 - 'desktop' - return whether or not the Desktop is in use  
+                - 'runtime' - return the name of the runtime environment  
+                              (MATLAB, Octave, ...)  
          
         FORMAT PlatFontNames = spm_platform('fonts')  
         Return structure with fields named after the generic (UNIX) fonts, the  
@@ -44,9 +46,12 @@ def spm_platform(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/spm_platform.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/spm_platform.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_platform", *args, **kwargs)

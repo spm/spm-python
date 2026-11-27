@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_struct2string(*args, **kwargs):
-    """
+    r"""
       FT_STRUCT2STRING converts all char-array elements in a structure  
         into strings.  
          
@@ -12,9 +12,12 @@ def ft_struct2string(*args, **kwargs):
         See also FT_STRUCT2CHAR, FT_STRUCT2SINGLE, FT_STRUCT2DOUBLE  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/utilities/ft_struct2string.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/utilities/ft_struct2string.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_struct2string", *args, **kwargs)

@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_lfp_mtf(*args, **kwargs):
-    """
+    r"""
       Spectral response of a NMM (transfer function x noise spectrum)  
         FORMAT [G,w] = spm_lfp_mtf(P,M,U)  
          
@@ -16,9 +16,12 @@ def spm_lfp_mtf(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/Neural_Models/spm_lfp_mtf.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/Neural_Models/spm_lfp_mtf.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_lfp_mtf", *args, **kwargs)

@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _dist(*args, **kwargs):
-    """
+    r"""
       DIST computes the Euclidian distance between the columns of the input matrix or  
         between the rows and columns of two input matrices.  
          
@@ -18,9 +18,12 @@ def _dist(*args, **kwargs):
         See also DSEARCHN, KNNSEARCH  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/dist.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/private/dist.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("dist", *args, **kwargs)

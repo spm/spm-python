@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_headmodel_slab(*args, **kwargs):
-    """
+    r"""
       FT_HEADMODEL_SLAB creates an EEG volume conduction model that  
         is described with an infinite conductive slab. You can think  
         of this as two parallel planes containing a mass of conductive  
@@ -21,12 +21,15 @@ def ft_headmodel_slab(*args, **kwargs):
           'sourcemodel'  = 'monopole'   
           'conductivity' = number ,  conductivity value of the conductive halfspace (default = 1)  
           
-        See also FT_PREPARE_VOL_SENS, FT_COMPUTE_LEADFIELD  
+        See also FT_PREPARE_HEADMODEL, FT_COMPUTE_LEADFIELD  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/forward/ft_headmodel_slab.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/forward/ft_headmodel_slab.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_headmodel_slab", *args, **kwargs)

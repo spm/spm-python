@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_minmax(*args, **kwargs):
-    """
+    r"""
       Compute a suitable range of intensities for VBM preprocessing stuff  
         FORMAT [mnv,mxv] = spm_minmax(g)  
         g    - array of data  
@@ -16,9 +16,12 @@ def spm_minmax(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/spm_minmax.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/spm_minmax.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_minmax", *args, **kwargs)

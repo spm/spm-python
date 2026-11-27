@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_ness(*args, **kwargs):
-    """
+    r"""
       Evaluation of hessian and solenoidal operators at NESS  
         FORMAT [H,R]     = spm_ness(J,G)  
         FORMAT [H,R,J,G] = spm_ness(J,G)   %%%% complex  
@@ -36,9 +36,12 @@ def spm_ness(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/spm_ness.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/spm_ness.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_ness", *args, **kwargs)

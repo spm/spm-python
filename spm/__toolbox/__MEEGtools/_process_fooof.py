@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _process_fooof(*args, **kwargs):
-    """
+    r"""
       PROCESS_FOOOF: Applies the "Fitting Oscillations and One Over F" (specparam) algorithm on a Welch's PSD  
          
         REFERENCE: Please cite the original algorithm:  
@@ -12,9 +12,12 @@ def _process_fooof(*args, **kwargs):
            Nature Neuroscience (2020)  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/MEEGtools/private/process_fooof.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/MEEGtools/private/process_fooof.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("process_fooof", *args, **kwargs)

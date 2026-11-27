@@ -2,13 +2,16 @@ from spm._runtime import Runtime
 
 
 def _checkfreq(*args, **kwargs):
-    """
+    r"""
       last input is always the required string  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/checkfreq.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/private/checkfreq.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("checkfreq", *args, **kwargs)

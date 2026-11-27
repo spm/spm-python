@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def FEP_MB_demo(*args, **kwargs):
-    """
+    r"""
       This  routine illustrates a hierarchical decomposition of Markov blankets  
         (of Markov blankets). It rests upon the dual operators of finding a  
         partition (a Markov partition) and then using an adiabatic dimensional  
@@ -19,9 +19,12 @@ def FEP_MB_demo(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DEM/FEP_MB_demo.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/DEM/FEP_MB_demo.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("FEP_MB_demo", *args, **kwargs, nargout=0)

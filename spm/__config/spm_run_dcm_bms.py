@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_run_dcm_bms(*args, **kwargs):
-    """
+    r"""
       Compare DCMs on the basis of their log-evidences  
         Four methods are available to identify the best among alternative models:  
          
@@ -20,9 +20,12 @@ def spm_run_dcm_bms(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/config/spm_run_dcm_bms.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/config/spm_run_dcm_bms.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_run_dcm_bms", *args, **kwargs)

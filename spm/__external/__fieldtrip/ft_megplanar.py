@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_megplanar(*args, **kwargs):
-    """
+    r"""
       FT_MEGPLANAR computes planar MEG gradients gradients for raw data or average  
         event-related field data. It can also convert frequency-domain data that was computed  
         using FT_FREQANALYSIS, as long as it contains the complex-valued fourierspcrm and not  
@@ -64,9 +64,12 @@ def ft_megplanar(*args, **kwargs):
         See also FT_COMBINEPLANAR, FT_PREPARE_NEIGHBOURS  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/ft_megplanar.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/ft_megplanar.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_megplanar", *args, **kwargs)

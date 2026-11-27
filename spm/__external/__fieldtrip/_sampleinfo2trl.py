@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _sampleinfo2trl(*args, **kwargs):
-    """
+    r"""
       SAMPLEINFO2TRL constructs the trial definition from the sampleinfo, the time axes  
         and optionally from the trialinfo  
          
@@ -12,9 +12,12 @@ def _sampleinfo2trl(*args, **kwargs):
         See also ARTIFACT2BOOLVEC, ARTIFACT2EVENT, ARTIFACT2TRL, BOOLVEC2ARTIFACT, BOOLVEC2EVENT, BOOLVEC2TRL, EVENT2ARTIFACT, EVENT2BOOLVEC, EVENT2TRL, TRL2ARTIFACT, TRL2BOOLVEC, TRL2EVENT  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/sampleinfo2trl.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/private/sampleinfo2trl.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("sampleinfo2trl", *args, **kwargs)

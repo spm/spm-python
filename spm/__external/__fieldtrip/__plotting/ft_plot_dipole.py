@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_plot_dipole(*args, **kwargs):
-    """
+    r"""
       FT_PLOT_DIPOLE makes a 3-D representation of a dipole using a sphere and a stick  
         pointing along the dipole orientation  
          
@@ -14,7 +14,7 @@ def ft_plot_dipole(*args, **kwargs):
           'diameter'  = number indicating sphere diameter (default = 'auto')  
           'length'    = number indicating length of the stick (default = 'auto')  
           'thickness' = number indicating thickness of the stick (default = 'auto')  
-          'color'     = [r g b] values or string, for example 'brain', 'cortex', 'skin', 'black', 'red', 'r' (default = 'r')  
+          'color'     = [r g b] values or string, for example 'skin', 'skull', 'brain', 'black', 'red', 'r' (default = 'r')  
           'alpha'     = alpha value of the plotted dipole  
           'scale'     = scale the dipole with the amplitude, can be 'none',  'both', 'diameter', 'length' (default = 'none')  
           'unit'      = 'm', 'cm' or 'mm', used for automatic scaling (default = 'cm')  
@@ -29,9 +29,12 @@ def ft_plot_dipole(*args, **kwargs):
         QUIVER3, PLOT3  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/plotting/ft_plot_dipole.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/plotting/ft_plot_dipole.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_plot_dipole", *args, **kwargs)

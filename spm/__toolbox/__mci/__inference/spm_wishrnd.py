@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_wishrnd(*args, **kwargs):
-    """
+    r"""
       Generate N samples from Wishart density  
         FORMAT [S] = spm_wishrnd (B,a,N)  
          
@@ -20,9 +20,12 @@ def spm_wishrnd(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/mci/inference/spm_wishrnd.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/mci/inference/spm_wishrnd.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_wishrnd", *args, **kwargs)

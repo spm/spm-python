@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_mesh_label(*args, **kwargs):
-    """
+    r"""
       Label connected components of a surface mesh  
         FORMAT C = spm_mesh_label(M)  
         M        - a [nx3] faces array or a patch structure  
@@ -15,9 +15,12 @@ def spm_mesh_label(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/spm_mesh_label.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/spm_mesh_label.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_mesh_label", *args, **kwargs)

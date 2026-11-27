@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_datatype_source(*args, **kwargs):
-    """
+    r"""
       FT_DATATYPE_SOURCE describes the FieldTrip MATLAB structure for data that is  
         represented at the source level. This is typically obtained with a beamformer of  
         minimum-norm source reconstruction using FT_SOURCEANALYSIS.  
@@ -58,9 +58,12 @@ def ft_datatype_source(*args, **kwargs):
         FT_DATATYPE_TIMELOCK, FT_DATATYPE_VOLUME  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/utilities/ft_datatype_source.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/utilities/ft_datatype_source.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_datatype_source", *args, **kwargs)

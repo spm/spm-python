@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_inside_headmodel(*args, **kwargs):
-    """
+    r"""
       FT_INSIDE_HEADMODEL locates dipole locations inside/outside the source  
         compartment of a volume conductor model.  
          
@@ -21,9 +21,12 @@ def ft_inside_headmodel(*args, **kwargs):
           headshape   = structure with headshape, used for old CTF localspheres strategy  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/forward/ft_inside_headmodel.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/forward/ft_inside_headmodel.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_inside_headmodel", *args, **kwargs)

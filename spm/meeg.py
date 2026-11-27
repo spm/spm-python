@@ -4,7 +4,7 @@ from spm._runtime import Runtime, RuntimeMixin
 
 class meeg(RuntimeMixin, MatlabClass):
     def __init__(self, *args, **kwargs):
-        """
+        r"""
           Function for creating meeg objects.  
             FORMAT   
                     D = meeg;  
@@ -127,57 +127,69 @@ class meeg(RuntimeMixin, MatlabClass):
             
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/@meeg/meeg.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/@meeg/meeg.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         super().__init__()
 
     def badchannels(self, *args, **kwargs):
-        """
+        r"""
           Method for getting/setting bad channels  
             FORMAT res = badchannels(this)  
            __________________________________________________________________________  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/@meeg/badchannels.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/@meeg/badchannels.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("badchannels", self._as_matlab_object(), *args, **kwargs)
 
     def badsamples(self, *args, **kwargs):
-        """
+        r"""
           Returns an array of 0/1 marking bad data based on artefact events and bad flags  
             FORMAT res = badsamples(this, chanind, sampind, trialind)  
            __________________________________________________________________________  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/@meeg/badsamples.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/@meeg/badsamples.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("badsamples", self._as_matlab_object(), *args, **kwargs)
 
     def badtrials(self, *args, **kwargs):
-        """
+        r"""
           Method for getting/setting bad trials  
             FORMAT res = badtrials(this)  
            __________________________________________________________________________  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/@meeg/badtrials.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/@meeg/badtrials.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("badtrials", self._as_matlab_object(), *args, **kwargs)
 
     def blank(self, *args, **kwargs):
-        """
+        r"""
           Creates a blank datafile matching in the header in dimensions   
             Will not erase existing datafile it it's there  
             FORMAT this = blank(this)   
@@ -187,29 +199,35 @@ class meeg(RuntimeMixin, MatlabClass):
            __________________________________________________________________________  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/@meeg/blank.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/@meeg/blank.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("blank", self._as_matlab_object(), *args, **kwargs)
 
     def chanlabels(self, *args, **kwargs):
-        """
+        r"""
           Method for getting/setting the channel labels  
             FORMAT res = chanlabels(this, ind, label)  
            __________________________________________________________________________  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/@meeg/chanlabels.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/@meeg/chanlabels.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("chanlabels", self._as_matlab_object(), *args, **kwargs)
 
     def chantype(self, *args, **kwargs):
-        """
+        r"""
           Method for setting/getting channel types  
             FORMAT chantype(this, ind, type)  
               ind - channel index  
@@ -220,15 +238,18 @@ class meeg(RuntimeMixin, MatlabClass):
            __________________________________________________________________________  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/@meeg/chantype.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/@meeg/chantype.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("chantype", self._as_matlab_object(), *args, **kwargs)
 
     def check(self, *args, **kwargs):
-        """
+        r"""
           Method that performs integrity checks of the meeg object  
             and its readiness for particular purposes.  
             FORMAT  this = check(this, option)  
@@ -242,15 +263,18 @@ class meeg(RuntimeMixin, MatlabClass):
            __________________________________________________________________________  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/@meeg/check.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/@meeg/check.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("check", self._as_matlab_object(), *args, **kwargs)
 
     def clone(self, *args, **kwargs):
-        """
+        r"""
           Creates a copy of the object with a new, empty data file,  
             possibly changing dimensions  
             FORMAT new = clone(this, fnamedat, dim, reset)  
@@ -265,58 +289,70 @@ class meeg(RuntimeMixin, MatlabClass):
            __________________________________________________________________________  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/@meeg/clone.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/@meeg/clone.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("clone", self._as_matlab_object(), *args, **kwargs)
 
     def conditions(self, *args, **kwargs):
-        """
+        r"""
           Method for getting condition labels, over trials  
             FORMAT res = conditions(this, ind, conditionlabels)  
            __________________________________________________________________________  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/@meeg/conditions.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/@meeg/conditions.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("conditions", self._as_matlab_object(), *args, **kwargs)
 
     def condlist(self, *args, **kwargs):
-        """
+        r"""
           Method for getting a list of unique condition labels sorted according to  
             the trial order in the file  
             FORMAT res = condlist(this)  
            __________________________________________________________________________  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/@meeg/condlist.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/@meeg/condlist.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("condlist", self._as_matlab_object(), *args, **kwargs)
 
     def coor2D(self, *args, **kwargs):
-        """
+        r"""
           x and y coordinates of channels in 2D plane  
             FORMAT coor2D(this)  
            __________________________________________________________________________  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/@meeg/coor2D.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/@meeg/coor2D.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("coor2D", self._as_matlab_object(), *args, **kwargs)
 
     def copy(self, *args, **kwargs):
-        """
+        r"""
           Method for copying a dataset  
             FORMAT res = copy(this, fname)  
              
@@ -326,85 +362,103 @@ class meeg(RuntimeMixin, MatlabClass):
            __________________________________________________________________________  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/@meeg/copy.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/@meeg/copy.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("copy", self._as_matlab_object(), *args, **kwargs)
 
     def delete(self, *args, **kwargs):
-        """
+        r"""
           Delete files of an M/EEG dataset from disk and return unlinked object  
             FORMAT this = delete(this)  
            __________________________________________________________________________  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/@meeg/delete.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/@meeg/delete.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("delete", self._as_matlab_object(), *args, **kwargs)
 
     def display(self, *args, **kwargs):
-        """
+        r"""
           Method for displaying information about an meeg object  
             FORMAT display(this)  
            __________________________________________________________________________  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/@meeg/display.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/@meeg/display.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("display", self._as_matlab_object(), *args, **kwargs)
 
     def end(self, *args, **kwargs):
-        """
+        r"""
           Overloaded end function for meeg objects.  
            __________________________________________________________________________  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/@meeg/end.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/@meeg/end.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("end", self._as_matlab_object(), *args, **kwargs)
 
     def events(self, *args, **kwargs):
-        """
+        r"""
           Method for getting/setting events per trial  
             FORMAT res = events(this, ind, event)  
               ind = indices of trials  
            __________________________________________________________________________  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/@meeg/events.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/@meeg/events.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("events", self._as_matlab_object(), *args, **kwargs)
 
     def fiducials(self, *args, **kwargs):
-        """
+        r"""
           Method for getting/setting the fiducials field  
             FORMAT res = fiducials(this, fiducials)  
            __________________________________________________________________________  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/@meeg/fiducials.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/@meeg/fiducials.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("fiducials", self._as_matlab_object(), *args, **kwargs)
 
     def fieldnames(self, *args, **kwargs):
-        """
+        r"""
           Returns names of the fields in .other  
             FORMAT res = fieldnames(this)  
              
@@ -412,85 +466,103 @@ class meeg(RuntimeMixin, MatlabClass):
            __________________________________________________________________________  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/@meeg/fieldnames.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/@meeg/fieldnames.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("fieldnames", self._as_matlab_object(), *args, **kwargs)
 
     def fname(self, *args, **kwargs):
-        """
+        r"""
           Method for getting/setting file name  
             FORMAT res = fname(this, name)  
            __________________________________________________________________________  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/@meeg/fname.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/@meeg/fname.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("fname", self._as_matlab_object(), *args, **kwargs)
 
     def fnamedat(self, *args, **kwargs):
-        """
+        r"""
           Method for getting the name of the data file  
             FORMAT res = fnamedat(this)  
            __________________________________________________________________________  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/@meeg/fnamedat.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/@meeg/fnamedat.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("fnamedat", self._as_matlab_object(), *args, **kwargs)
 
     def frequencies(self, *args, **kwargs):
-        """
+        r"""
           Method for getting/setting frequencies of TF data  
             FORMAT res = frequencies(this, ind, values)  
            __________________________________________________________________________  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/@meeg/frequencies.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/@meeg/frequencies.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("frequencies", self._as_matlab_object(), *args, **kwargs)
 
     def fsample(self, *args, **kwargs):
-        """
+        r"""
           Method for getting and setting the sampling rate  
             FORMAT res = fsample(this)  
            __________________________________________________________________________  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/@meeg/fsample.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/@meeg/fsample.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("fsample", self._as_matlab_object(), *args, **kwargs)
 
     def ftraw(self, *args, **kwargs):
-        """
+        r"""
           Method for converting meeg object to Fieldtrip raw struct  
             FORMAT raw  =  ftraw(this, chanind, timeind, trialind)  
            __________________________________________________________________________  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/@meeg/ftraw.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/@meeg/ftraw.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("ftraw", self._as_matlab_object(), *args, **kwargs)
 
     def fttimelock(self, *args, **kwargs):
-        """
+        r"""
           Method for converting meeg object to Fieldtrip timelock/freq struct  
             FORMAT timelock = fttimelock(this, chanind, timeind, trialind, freqind)  
              
@@ -500,29 +572,35 @@ class meeg(RuntimeMixin, MatlabClass):
            __________________________________________________________________________  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/@meeg/fttimelock.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/@meeg/fttimelock.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("fttimelock", self._as_matlab_object(), *args, **kwargs)
 
     def fullfile(self, *args, **kwargs):
-        """
+        r"""
           Returns full path to the meeg mat file  
             FORMAT p = fullfile(this)  
            __________________________________________________________________________  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/@meeg/fullfile.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/@meeg/fullfile.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("fullfile", self._as_matlab_object(), *args, **kwargs)
 
     def getfield(self, *args, **kwargs):
-        """
+        r"""
           Returns  fields in .other  
             FORMAT res = getfield(this, varargin)  
              
@@ -530,30 +608,36 @@ class meeg(RuntimeMixin, MatlabClass):
            __________________________________________________________________________  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/@meeg/getfield.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/@meeg/getfield.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("getfield", self._as_matlab_object(), *args, **kwargs)
 
     def history(self, *args, **kwargs):
-        """
+        r"""
           Method for getting or adding to the history of function calls of some  
             M/EEG data  
             FORMAT res = history(this, varargin)  
            __________________________________________________________________________  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/@meeg/history.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/@meeg/history.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("history", self._as_matlab_object(), *args, **kwargs)
 
     def indchannel(self, *args, **kwargs):
-        """
+        r"""
           Method for getting channel indices based on channel labels  
             FORMAT  res = indchannel(this, label)  
             this       - MEEG object  
@@ -563,15 +647,18 @@ class meeg(RuntimeMixin, MatlabClass):
            __________________________________________________________________________  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/@meeg/indchannel.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/@meeg/indchannel.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("indchannel", self._as_matlab_object(), *args, **kwargs)
 
     def indchantype(self, *args, **kwargs):
-        """
+        r"""
           Method for getting channel indices based on labels and/or types  
             FORMAT  ind = indchantype(this, types)  
             this       - MEEG object  
@@ -584,15 +671,18 @@ class meeg(RuntimeMixin, MatlabClass):
            __________________________________________________________________________  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/@meeg/indchantype.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/@meeg/indchantype.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("indchantype", self._as_matlab_object(), *args, **kwargs)
 
     def indfrequency(self, *args, **kwargs):
-        """
+        r"""
           Method for getting the index closest to given frequency  
             FORMAT  res = indfrequency(this, f)  
             this       - MEEG object  
@@ -602,15 +692,18 @@ class meeg(RuntimeMixin, MatlabClass):
            __________________________________________________________________________  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/@meeg/indfrequency.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/@meeg/indfrequency.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("indfrequency", self._as_matlab_object(), *args, **kwargs)
 
     def indsample(self, *args, **kwargs):
-        """
+        r"""
           Method for getting the sample closest to some time point  
             FORMAT res = indsample(this, t)  
             this       - MEEG object  
@@ -620,15 +713,18 @@ class meeg(RuntimeMixin, MatlabClass):
            __________________________________________________________________________  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/@meeg/indsample.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/@meeg/indsample.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("indsample", self._as_matlab_object(), *args, **kwargs)
 
     def indtrial(self, *args, **kwargs):
-        """
+        r"""
           Method for getting trial indices based on condition labels  
             FORMAT res = indtrial(this, label)  
             this       - MEEG object  
@@ -642,43 +738,52 @@ class meeg(RuntimeMixin, MatlabClass):
            __________________________________________________________________________  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/@meeg/indtrial.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/@meeg/indtrial.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("indtrial", self._as_matlab_object(), *args, **kwargs)
 
     def isempty(self, *args, **kwargs):
-        """
+        r"""
           True if the object is empty   
             FORMAT out = isempty(this)  
            __________________________________________________________________________  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/@meeg/isempty.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/@meeg/isempty.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("isempty", self._as_matlab_object(), *args, **kwargs)
 
     def isequal(self, *args, **kwargs):
-        """
+        r"""
           Method to check if 2 MEEG objects are the same  
             FORMAT res = isequal(this, that)  
            __________________________________________________________________________  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/@meeg/isequal.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/@meeg/isequal.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("isequal", self._as_matlab_object(), *args, **kwargs)
 
     def isfield(self, *args, **kwargs):
-        """
+        r"""
           Returns true if the string fieldname is the name of a field in the   
             substructure 'other' in the meeg object 'this'.  
             FORMAT res = isfield(this,fieldname)  
@@ -687,29 +792,35 @@ class meeg(RuntimeMixin, MatlabClass):
            __________________________________________________________________________  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/@meeg/isfield.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/@meeg/isfield.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("isfield", self._as_matlab_object(), *args, **kwargs)
 
     def islinked(self, *args, **kwargs):
-        """
+        r"""
           True if the object is linked to data file  
             FORMAT out = islinked(this)  
            __________________________________________________________________________  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/@meeg/islinked.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/@meeg/islinked.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("islinked", self._as_matlab_object(), *args, **kwargs)
 
     def link(self, *args, **kwargs):
-        """
+        r"""
           Links the object to data file (only if exists)  
             FORMAT this = link(this)   
               Will try to find the datafile based on fname and path       
@@ -720,15 +831,18 @@ class meeg(RuntimeMixin, MatlabClass):
            __________________________________________________________________________  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/@meeg/link.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/@meeg/link.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("link", self._as_matlab_object(), *args, **kwargs)
 
     def modality(self, *args, **kwargs):
-        """
+        r"""
           Returns data modality   
             FORMAT [res, list] = modality(this, scalp)  
              
@@ -741,15 +855,18 @@ class meeg(RuntimeMixin, MatlabClass):
            __________________________________________________________________________  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/@meeg/modality.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/@meeg/modality.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("modality", self._as_matlab_object(), *args, **kwargs)
 
     def montage(self, *args, **kwargs):
-        """
+        r"""
           Method for specifying an online montage, or setting one to use  
             FORMAT  
               res = montage(this, 'add', montage)  
@@ -773,15 +890,18 @@ class meeg(RuntimeMixin, MatlabClass):
            __________________________________________________________________________  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/@meeg/montage.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/@meeg/montage.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("montage", self._as_matlab_object(), *args, **kwargs)
 
     def move(self, *args, **kwargs):
-        """
+        r"""
           Method for moving or changing name of data file  
             FORMAT res = move(this, fname)  
              
@@ -792,99 +912,120 @@ class meeg(RuntimeMixin, MatlabClass):
            __________________________________________________________________________  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/@meeg/move.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/@meeg/move.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("move", self._as_matlab_object(), *args, **kwargs)
 
     def nchannels(self, *args, **kwargs):
-        """
+        r"""
           returns number of channels  
             FORMAT res = nchannels(this)  
            __________________________________________________________________________  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/@meeg/nchannels.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/@meeg/nchannels.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("nchannels", self._as_matlab_object(), *args, **kwargs)
 
     def nconditions(self, *args, **kwargs):
-        """
+        r"""
           Method for getting the number of unique conditions in the file  
             FORMAT res = nconditions(obj)  
            __________________________________________________________________________  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/@meeg/nconditions.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/@meeg/nconditions.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("nconditions", self._as_matlab_object(), *args, **kwargs)
 
     def nfrequencies(self, *args, **kwargs):
-        """
+        r"""
           Method for getting the number of frequencies for TF data  
             FORMAT res = nsamples(this)  
            __________________________________________________________________________  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/@meeg/nfrequencies.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/@meeg/nfrequencies.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("nfrequencies", self._as_matlab_object(), *args, **kwargs)
 
     def nsamples(self, *args, **kwargs):
-        """
+        r"""
           Method for getting the number of samples per trial  
             FORMAT res = nsamples(this)  
            __________________________________________________________________________  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/@meeg/nsamples.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/@meeg/nsamples.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("nsamples", self._as_matlab_object(), *args, **kwargs)
 
     def ntrials(self, *args, **kwargs):
-        """
+        r"""
           Method for getting the number of trials in the file  
             FORMAT res = ntrials(this)  
            __________________________________________________________________________  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/@meeg/ntrials.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/@meeg/ntrials.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("ntrials", self._as_matlab_object(), *args, **kwargs)
 
     def path(self, *args, **kwargs):
-        """
+        r"""
           Method for getting/setting path  
             FORMAT res = path(this, newpath)  
            __________________________________________________________________________  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/@meeg/path.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/@meeg/path.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("path", self._as_matlab_object(), *args, **kwargs)
 
     def reload(self, *args, **kwargs):
-        """
+        r"""
           Reload the file from disk  
             FORMAT this = reload(this)  
              
@@ -892,57 +1033,69 @@ class meeg(RuntimeMixin, MatlabClass):
            __________________________________________________________________________  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/@meeg/reload.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/@meeg/reload.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("reload", self._as_matlab_object(), *args, **kwargs)
 
     def repl(self, *args, **kwargs):
-        """
+        r"""
           Method for getting replication counts, over trials  
             FORMAT res = repl(this, index, nrepl)  
            __________________________________________________________________________  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/@meeg/repl.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/@meeg/repl.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("repl", self._as_matlab_object(), *args, **kwargs)
 
     def rmdata(self, *args, **kwargs):
-        """
+        r"""
           Deletes the data file and unlinks the header  
             FORMAT this = rmdata(this)  
            __________________________________________________________________________  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/@meeg/rmdata.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/@meeg/rmdata.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("rmdata", self._as_matlab_object(), *args, **kwargs)
 
     def rmfield(self, *args, **kwargs):
-        """
+        r"""
           Method for removing an object field  
             FORMAT this = rmfield(this, fields)  
            __________________________________________________________________________  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/@meeg/rmfield.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/@meeg/rmfield.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("rmfield", self._as_matlab_object(), *args, **kwargs)
 
     def save(self, *args, **kwargs):
-        """
+        r"""
           Save an meeg object into a file  
             FORMAT this = save(this)  
              
@@ -950,29 +1103,35 @@ class meeg(RuntimeMixin, MatlabClass):
            __________________________________________________________________________  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/@meeg/save.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/@meeg/save.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("save", self._as_matlab_object(), *args, **kwargs)
 
     def sconfounds(self, *args, **kwargs):
-        """
+        r"""
           Method for getting/setting spatial confounds  
             FORMAT res = sconfounds(this, newsconfounds)  
            __________________________________________________________________________  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/@meeg/sconfounds.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/@meeg/sconfounds.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("sconfounds", self._as_matlab_object(), *args, **kwargs)
 
     def selectchannels(self, *args, **kwargs):
-        """
+        r"""
           Method for getting channel indices based on labels and/or types  
             FORMAT  res = selectchannels(this, label)  
             this       - MEEG object  
@@ -983,15 +1142,18 @@ class meeg(RuntimeMixin, MatlabClass):
            __________________________________________________________________________  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/@meeg/selectchannels.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/@meeg/selectchannels.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("selectchannels", self._as_matlab_object(), *args, **kwargs)
 
     def selectdata(self, *args, **kwargs):
-        """
+        r"""
           Selects data using channel labels, time and condition labels as indices  
             FORMAT res = selectdata(D, chanlabel, timeborders, condition)  
                    res = selectdata(D, chanlabel, freqborders, timeborders, condition)  
@@ -1004,15 +1166,18 @@ class meeg(RuntimeMixin, MatlabClass):
            __________________________________________________________________________  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/@meeg/selectdata.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/@meeg/selectdata.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("selectdata", self._as_matlab_object(), *args, **kwargs)
 
     def sensors(self, *args, **kwargs):
-        """
+        r"""
           Sets and gets sensor fields for EEG and MEG  
             returns empty matrix if no sensors are defined.  
             FORMAT res = sensors(this, type, newsens)  
@@ -1020,114 +1185,138 @@ class meeg(RuntimeMixin, MatlabClass):
            __________________________________________________________________________  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/@meeg/sensors.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/@meeg/sensors.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("sensors", self._as_matlab_object(), *args, **kwargs)
 
     def size(self, *args, **kwargs):
-        """
+        r"""
           returns the dimensions of the data matrix  
             FORMAT res = size(this, dim))  
            __________________________________________________________________________  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/@meeg/size.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/@meeg/size.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("size", self._as_matlab_object(), *args, **kwargs)
 
     def subsasgn(self, *args, **kwargs):
-        """
+        r"""
           Overloaded subsasgn function for meeg objects.  
            __________________________________________________________________________  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/@meeg/subsasgn.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/@meeg/subsasgn.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("subsasgn", self._as_matlab_object(), *args, **kwargs)
 
     def subsref(self, *args, **kwargs):
-        """
+        r"""
           SUBSREF Subscripted reference  
             An overloaded function...  
            __________________________________________________________________________  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/@meeg/subsref.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/@meeg/subsref.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("subsref", self._as_matlab_object(), *args, **kwargs)
 
     def time(self, *args, **kwargs):
-        """
+        r"""
           Method for getting the time axis  
             FORMAT res = time(this, ind, format)  
            __________________________________________________________________________  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/@meeg/time.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/@meeg/time.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("time", self._as_matlab_object(), *args, **kwargs)
 
     def timeonset(self, *args, **kwargs):
-        """
+        r"""
           Method for reading and setting the time onset  
             FORMAT res = timeonset(this)  
                    res = timeonset(this, newonset)  
            __________________________________________________________________________  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/@meeg/timeonset.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/@meeg/timeonset.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("timeonset", self._as_matlab_object(), *args, **kwargs)
 
     def transformtype(self, *args, **kwargs):
-        """
+        r"""
           Method for getting/setting type of transform  
             FORMAT res = transformtype(this, name)  
            __________________________________________________________________________  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/@meeg/transformtype.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/@meeg/transformtype.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("transformtype", self._as_matlab_object(), *args, **kwargs)
 
     def trialonset(self, *args, **kwargs):
-        """
+        r"""
           Method for getting/setting trial onset times  
             FORMAT res = trialonset(this, ind, onset)  
               ind = indices of trials  
            __________________________________________________________________________  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/@meeg/trialonset.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/@meeg/trialonset.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("trialonset", self._as_matlab_object(), *args, **kwargs)
 
     def trialtag(self, *args, **kwargs):
-        """
+        r"""
           Method for getting/setting trial tag  
             FORMAT res = trialtag(this, ind, tag)  
               ind = indices of trials  
@@ -1138,100 +1327,121 @@ class meeg(RuntimeMixin, MatlabClass):
            __________________________________________________________________________  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/@meeg/trialtag.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/@meeg/trialtag.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("trialtag", self._as_matlab_object(), *args, **kwargs)
 
     def type_(self, *args, **kwargs):
-        """
+        r"""
           Method for and getting/setting EEG file type  
             FORMAT res = type(this, value)  
            __________________________________________________________________________  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/@meeg/type.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/@meeg/type.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("type", self._as_matlab_object(), *args, **kwargs)
 
     def units(self, *args, **kwargs):
-        """
+        r"""
           Method for setting/getting all units, over channels  
             FORMAT res = units(this, ind)  
            __________________________________________________________________________  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/@meeg/units.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/@meeg/units.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("units", self._as_matlab_object(), *args, **kwargs)
 
     def unlink(self, *args, **kwargs):
-        """
+        r"""
           Unlinks the object from the data file   
             FORMAT this = unlink(this)     
            __________________________________________________________________________  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/@meeg/unlink.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/@meeg/unlink.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("unlink", self._as_matlab_object(), *args, **kwargs)
 
     def _checkmeeg(self, *args, **kwargs):
-        """
+        r"""
           Check the internal structure of meeg objects  
             FORMAT this = checkmeeg(this)  
             this  - the struct to check (is returned modified if necessary)  
            __________________________________________________________________________  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/@meeg/private/checkmeeg.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/@meeg/private/checkmeeg.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("checkmeeg", self._as_matlab_object(), *args, **kwargs)
 
     def _fixpnt(self, *args, **kwargs):
-        """
+        r"""
           Rename point structure fields (backward compatibility)  
             FORMAT data = fixpnt(data, recurse)  
            __________________________________________________________________________  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/@meeg/private/fixpnt.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/@meeg/private/fixpnt.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("fixpnt", self._as_matlab_object(), *args, **kwargs)
 
     def _getset(self, *args, **kwargs):
-        """
+        r"""
           Generic method for getting and setting multiple fields of meeg struct  
             FORMAT res = getset(this, parent, fieldname, ind, values)  
            __________________________________________________________________________  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/@meeg/private/getset.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/@meeg/private/getset.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("getset", self._as_matlab_object(), *args, **kwargs)
 
     def _match_str(self, *args, **kwargs):
-        """
+        r"""
           MATCH_STR looks for matching labels in two lists of strings  
             and returns the indices into both the 1st and 2nd list of the matches.  
             They will be ordered according to the first input argument.  
@@ -1249,23 +1459,29 @@ class meeg(RuntimeMixin, MatlabClass):
             size of the input lists is meaningful.  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/@meeg/private/match_str.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/@meeg/private/match_str.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("match_str", self._as_matlab_object(), *args, **kwargs)
 
     def _warning_flexible(self, *args, **kwargs):
-        """
+        r"""
           Function allowing to have better control over the warnings  
             that might not be necessary at some point  
            __________________________________________________________________________  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/@meeg/private/warning_flexible.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/@meeg/private/warning_flexible.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("warning_flexible", self._as_matlab_object(), *args, **kwargs, nargout=0)

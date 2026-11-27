@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_mtf2ccf(*args, **kwargs):
-    """
+    r"""
       Converts modulation transfer function to cross covariance function  
         FORMAT [ccf,pst] = spm_mtf2ccf(mtf,Hz)  
          
@@ -18,9 +18,12 @@ def spm_mtf2ccf(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/spectral/spm_mtf2ccf.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/spectral/spm_mtf2ccf.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_mtf2ccf", *args, **kwargs)

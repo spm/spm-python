@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _sfactorization_wilson(*args, **kwargs):
-    """
+    r"""
       SFACTORIZATION_WILSON performs multivariate non-parametric spectral factorization on  
         cross-spectra, based on Wilson's algorithm.  
          
@@ -24,9 +24,12 @@ def _sfactorization_wilson(*args, **kwargs):
         Email addresses: mdhamala@bme.ufl.edu, rangaraj@math.iisc.ernet.in  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/connectivity/private/sfactorization_wilson.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/connectivity/private/sfactorization_wilson.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("sfactorization_wilson", *args, **kwargs)

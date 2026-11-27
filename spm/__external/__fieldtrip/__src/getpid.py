@@ -2,17 +2,19 @@ from spm._runtime import Runtime
 
 
 def getpid(*args, **kwargs):
-    """
-      GETPID returns the process identifier (PID) of the current Matlab  
-        process.  
+    r"""
+      GETPID returns the process identifier (PID) of the current MATLAB process  
          
         Use as  
-          num = getpid;  
+          num = getpid  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/src/getpid.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/src/getpid.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("getpid", *args, **kwargs)

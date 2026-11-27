@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def DEM_dSprites(*args, **kwargs):
-    """
+    r"""
       Demo of active inference and structure learning (i.e.,disentanglement)  
        __________________________________________________________________________  
          
@@ -41,9 +41,12 @@ def DEM_dSprites(*args, **kwargs):
         Copyright (C) 2019 Wellcome Trust Centre for Neuroimaging  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DEM/DEM_dSprites.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/DEM/DEM_dSprites.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("DEM_dSprites", *args, **kwargs)

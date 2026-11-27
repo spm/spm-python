@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_SHC_fx(*args, **kwargs):
-    """
+    r"""
       equations of motion for Lotka-Volterra dynamics  
         FORMAT [f] = spm_SHC_fx(x,v,P)  
          
@@ -20,9 +20,12 @@ def spm_SHC_fx(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DEM/spm_SHC_fx.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/DEM/spm_SHC_fx.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_SHC_fx", *args, **kwargs)

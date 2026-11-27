@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _ndgrid(*args, **kwargs):
-    """
+    r"""
       NDGRID Generation of arrays for N-D functions and interpolation.  
         [X1,X2,X3,...] = NDGRID(x1,x2,x3,...) transforms the domain  
         specified by vectors x1,x2,x3, etc. into arrays X1,X2,X3, etc. that  
@@ -33,9 +33,12 @@ def _ndgrid(*args, **kwargs):
         See also MESHGRID, INTERPN.  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/ndgrid.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/fileio/private/ndgrid.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ndgrid", *args, **kwargs)

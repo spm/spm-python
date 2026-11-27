@@ -2,13 +2,16 @@ from spm._runtime import Runtime
 
 
 def _cellStruct2StructCell(*args, **kwargs):
-    """
+    r"""
       Converts a cell-array of structure arrays into a structure array  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/cellStruct2StructCell.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/private/cellStruct2StructCell.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("cellStruct2StructCell", *args, **kwargs)

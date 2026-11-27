@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def cfg_check_assignin(*args, **kwargs):
-    """
+    r"""
       Check whether the name entered for the workspace variable is a proper  
         variable name.  
          
@@ -13,9 +13,12 @@ def cfg_check_assignin(*args, **kwargs):
         Copyright (C) 2007 Freiburg Brain Imaging  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/matlabbatch/cfg_basicio/cfg_check_assignin.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/matlabbatch/cfg_basicio/cfg_check_assignin.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("cfg_check_assignin", *args, **kwargs)

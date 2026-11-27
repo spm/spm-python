@@ -4,7 +4,7 @@ from spm._runtime import Runtime, RuntimeMixin
 
 class cfg_dep(RuntimeMixin, MatlabClass):
     def __init__(self, *args, **kwargs):
-        """
+        r"""
           This is the configuration dependency class  
              
             Data structure  
@@ -49,15 +49,18 @@ class cfg_dep(RuntimeMixin, MatlabClass):
             
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/matlabbatch/@cfg_dep/cfg_dep.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/matlabbatch/@cfg_dep/cfg_dep.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         super().__init__()
 
     def add_to_source(self, *args, **kwargs):
-        """
+        r"""
           Add foreign target dependencies to own source dependencies  
             function [cj tdeps cflag dflag] = add_to_source(tdeps, cj)  
             This function adds target dependencies to the corresponding source  
@@ -76,15 +79,18 @@ class cfg_dep(RuntimeMixin, MatlabClass):
             Copyright (C) 2007 Freiburg Brain Imaging  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/matlabbatch/@cfg_dep/add_to_source.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/matlabbatch/@cfg_dep/add_to_source.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("add_to_source", self._as_matlab_object(), *args, **kwargs)
 
     def ctranspose(self, *args, **kwargs):
-        """
+        r"""
           function b = ctranspose(a)  
             Transpose a configuration dependency  
              
@@ -95,15 +101,18 @@ class cfg_dep(RuntimeMixin, MatlabClass):
             Copyright (C) 2016 Freiburg Brain Imaging  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/matlabbatch/@cfg_dep/ctranspose.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/matlabbatch/@cfg_dep/ctranspose.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("ctranspose", self._as_matlab_object(), *args, **kwargs)
 
     def del_in_source(self, *args, **kwargs):
-        """
+        r"""
           function cj = del_in_source(tdeps, cj)  
             delete foreign target dependencies from own source dependencies.  
              
@@ -114,15 +123,18 @@ class cfg_dep(RuntimeMixin, MatlabClass):
             Copyright (C) 2007 Freiburg Brain Imaging  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/matlabbatch/@cfg_dep/del_in_source.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/matlabbatch/@cfg_dep/del_in_source.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("del_in_source", self._as_matlab_object(), *args, **kwargs)
 
     def del_in_target(self, *args, **kwargs):
-        """
+        r"""
           function cj = del_in_target(sdeps, cj)  
             If a dependency source has changed, drop all dependent (target)  
             references. Since dependencies only depend on input structure, this does  
@@ -136,15 +148,18 @@ class cfg_dep(RuntimeMixin, MatlabClass):
             Copyright (C) 2007 Freiburg Brain Imaging  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/matlabbatch/@cfg_dep/del_in_target.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/matlabbatch/@cfg_dep/del_in_target.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("del_in_target", self._as_matlab_object(), *args, **kwargs)
 
     def dep_add(self, *args, **kwargs):
-        """
+        r"""
           augment cdep tsubs references, and add them to dependency list  
              
             This code is part of a batch job configuration system for MATLAB. See   
@@ -154,15 +169,18 @@ class cfg_dep(RuntimeMixin, MatlabClass):
             Copyright (C) 2007 Freiburg Brain Imaging  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/matlabbatch/@cfg_dep/dep_add.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/matlabbatch/@cfg_dep/dep_add.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("dep_add", self._as_matlab_object(), *args, **kwargs)
 
     def disp(self, *args, **kwargs):
-        """
+        r"""
           function disp(obj)  
             Disp a configuration dependency  
              
@@ -173,15 +191,18 @@ class cfg_dep(RuntimeMixin, MatlabClass):
             Copyright (C) 2007 Freiburg Brain Imaging  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/matlabbatch/@cfg_dep/disp.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/matlabbatch/@cfg_dep/disp.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("disp", self._as_matlab_object(), *args, **kwargs, nargout=0)
 
     def display(self, *args, **kwargs):
-        """
+        r"""
           function display(dep)  
             Display a configuration dependency  
              
@@ -192,15 +213,18 @@ class cfg_dep(RuntimeMixin, MatlabClass):
             Copyright (C) 2007 Freiburg Brain Imaging  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/matlabbatch/@cfg_dep/display.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/matlabbatch/@cfg_dep/display.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("display", self._as_matlab_object(), *args, **kwargs, nargout=0)
 
     def gencode(self, *args, **kwargs):
-        """
+        r"""
           function [str, tag, cind] = gencode(item, tag, tagctx)  
             Generate code to recreate an cfg_dep object.  
              
@@ -211,15 +235,18 @@ class cfg_dep(RuntimeMixin, MatlabClass):
             Copyright (C) 2007 Freiburg Brain Imaging  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/matlabbatch/@cfg_dep/gencode.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/matlabbatch/@cfg_dep/gencode.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("gencode", self._as_matlab_object(), *args, **kwargs)
 
     def isequalsource(self, *args, **kwargs):
-        """
+        r"""
           function sts = isequalsource(dep1, dep2)  
             Compare source references of two dependencies and return true if both  
             point to the same object. If multiple dependencies are given, the  
@@ -231,15 +258,18 @@ class cfg_dep(RuntimeMixin, MatlabClass):
             Copyright (C) 2007 Freiburg Brain Imaging  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/matlabbatch/@cfg_dep/isequalsource.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/matlabbatch/@cfg_dep/isequalsource.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("isequalsource", self._as_matlab_object(), *args, **kwargs)
 
     def isequaltarget(self, *args, **kwargs):
-        """
+        r"""
           function sts = isequaltarget(dep1, dep2)  
             Compare source references of two dependencies and return true if both  
             point to the same object. If multiple dependencies are given, the  
@@ -251,15 +281,18 @@ class cfg_dep(RuntimeMixin, MatlabClass):
             Copyright (C) 2007 Freiburg Brain Imaging  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/matlabbatch/@cfg_dep/isequaltarget.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/matlabbatch/@cfg_dep/isequaltarget.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("isequaltarget", self._as_matlab_object(), *args, **kwargs)
 
     def subs_fields(self, *args, **kwargs):
-        """
+        r"""
           function fnames = subs_fields(item)  
             This function works as a "class-based switch" to return the value of  
             the private mysubs_fields function for the appropriate class. It is  
@@ -273,15 +306,18 @@ class cfg_dep(RuntimeMixin, MatlabClass):
             Copyright (C) 2007 Freiburg Brain Imaging  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/matlabbatch/@cfg_dep/subs_fields.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/matlabbatch/@cfg_dep/subs_fields.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("subs_fields", self._as_matlab_object(), *args, **kwargs)
 
     def subsasgn(self, *args, **kwargs):
-        """
+        r"""
           function dep = subsasgn(dep, subs, varargin)  
             subscript references we have to deal with are:  
             one level  
@@ -302,15 +338,18 @@ class cfg_dep(RuntimeMixin, MatlabClass):
             Copyright (C) 2007 Freiburg Brain Imaging  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/matlabbatch/@cfg_dep/subsasgn.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/matlabbatch/@cfg_dep/subsasgn.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("subsasgn", self._as_matlab_object(), *args, **kwargs)
 
     def subsref(self, *args, **kwargs):
-        """
+        r"""
           function varargout = subsref(dep, subs)  
             subscript references we have to deal with are:  
             one level  
@@ -331,15 +370,18 @@ class cfg_dep(RuntimeMixin, MatlabClass):
             Copyright (C) 2007 Freiburg Brain Imaging  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/matlabbatch/@cfg_dep/subsref.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/matlabbatch/@cfg_dep/subsref.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("subsref", self._as_matlab_object(), *args, **kwargs)
 
     def update_deps(self, *args, **kwargs):
-        """
+        r"""
           function dep = update_deps(dep, oid, nid)  
             go through an array of dependencies and update tgt_exbranch and src_exbranch entries.  
              
@@ -350,15 +392,18 @@ class cfg_dep(RuntimeMixin, MatlabClass):
             Copyright (C) 2007 Freiburg Brain Imaging  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/matlabbatch/@cfg_dep/update_deps.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/matlabbatch/@cfg_dep/update_deps.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("update_deps", self._as_matlab_object(), *args, **kwargs)
 
     def _mysubs_fields(self, *args, **kwargs):
-        """
+        r"""
           function fnames = mysubs_fields(dep)  
             This function returns a cell string of names containing the fields  
             implemented by the cfg_dep class. It is called from @cfg_dep/subsasgn  
@@ -371,9 +416,12 @@ class cfg_dep(RuntimeMixin, MatlabClass):
             Copyright (C) 2007 Freiburg Brain Imaging  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/matlabbatch/@cfg_dep/private/mysubs_fields.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/matlabbatch/@cfg_dep/private/mysubs_fields.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("mysubs_fields", self._as_matlab_object(), *args, **kwargs)

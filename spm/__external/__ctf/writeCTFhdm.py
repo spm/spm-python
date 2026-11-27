@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def writeCTFhdm(*args, **kwargs):
-    """
+    r"""
        Version 1.1   20 April 2007   Modified to make sure that clinical-0ise message and   
                                        creator software are not repeated.  
                                        Test date.  
@@ -14,9 +14,12 @@ def writeCTFhdm(*args, **kwargs):
          Structure hdm is in the format produced by readCTFhdm.  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/ctf/writeCTFhdm.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/ctf/writeCTFhdm.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("writeCTFhdm", *args, **kwargs, nargout=0)

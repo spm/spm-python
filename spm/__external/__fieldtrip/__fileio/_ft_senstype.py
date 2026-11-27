@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _ft_senstype(*args, **kwargs):
-    """
+    r"""
       FT_SENSTYPE determines the type of acquisition device by looking at the channel  
         names and comparing them with predefined lists.  
          
@@ -43,6 +43,7 @@ def _ft_senstype(*args, **kwargs):
           'magview'             this is a BabySQUID system from Tristan Technologies  
           'fieldline_v2'  
           'fieldline_v3'  
+          'quspin_neuro1'       this can be from a LVM or a FIF file  
           'egi32'  
           'egi64'  
           'egi128'  
@@ -90,7 +91,7 @@ def _ft_senstype(*args, **kwargs):
         If you specify the desired type, this function will return a boolean flag  
         indicating true/false depending on the input data.  
          
-        Besides specifiying a sensor definition (i.e. a grad or elec structure, see  
+        Besides specifying a sensor definition (i.e. a grad or elec structure, see  
         FT_DATATYPE_SENS), it is also possible to give a data structure containing a grad  
         or elec field, or giving a list of channel names (as cell-arrray). So assuming that  
         you have a FieldTrip data structure, any of the following calls would also be fine.  
@@ -103,9 +104,12 @@ def _ft_senstype(*args, **kwargs):
         See also FT_SENSLABEL, FT_CHANTYPE, FT_READ_SENS, FT_COMPUTE_LEADFIELD, FT_DATATYPE_SENS  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/ft_senstype.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/fileio/private/ft_senstype.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_senstype", *args, **kwargs)

@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_A_reduce(*args, **kwargs):
-    """
+    r"""
       Reduction of Markovian partition  
         FORMAT [J,z,v,s] = spm_A_reduce(J,x,T,N)  
         J  - Jacobian (x)  
@@ -19,9 +19,12 @@ def spm_A_reduce(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/spm_A_reduce.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/spm_A_reduce.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_A_reduce", *args, **kwargs)

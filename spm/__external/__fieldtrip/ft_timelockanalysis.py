@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_timelockanalysis(*args, **kwargs):
-    """
+    r"""
       FT_TIMELOCKANALYSIS computes the timelocked average ERP/ERF and optionally computes  
         the covariance matrix over the specified time window.  
          
@@ -32,9 +32,12 @@ def ft_timelockanalysis(*args, **kwargs):
         See also FT_TIMELOCKGRANDAVERAGE, FT_TIMELOCKSTATISTICS  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/ft_timelockanalysis.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/ft_timelockanalysis.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_timelockanalysis", *args, **kwargs)

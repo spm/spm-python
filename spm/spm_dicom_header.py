@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_dicom_header(*args, **kwargs):
-    """
+    r"""
       Read header information from a DICOM file  
         FORMAT Header = spm_dicom_header(DicomFilename, DicomDictionary, Options)  
         DicomFilename   - DICOM filename  
@@ -28,9 +28,12 @@ def spm_dicom_header(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/spm_dicom_header.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/spm_dicom_header.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_dicom_header", *args, **kwargs)

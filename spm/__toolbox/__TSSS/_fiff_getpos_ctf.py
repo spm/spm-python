@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _fiff_getpos_ctf(*args, **kwargs):
-    """
+    r"""
       Copyright (c) 2016, Elekta Oy  
         ---------------------------------------  
           
@@ -15,9 +15,12 @@ def _fiff_getpos_ctf(*args, **kwargs):
         in connection with its use and distribution of any and all parts of the Software under this license.  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/TSSS/private/fiff_getpos_ctf.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/TSSS/private/fiff_getpos_ctf.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("fiff_getpos_ctf", *args, **kwargs)

@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_connectivityanalysis(*args, **kwargs):
-    """
+    r"""
       FT_CONNECTIVITYANALYSIS computes various measures of connectivity between  
         MEG/EEG channels or between source-level signals.  
          
@@ -34,7 +34,7 @@ def ft_connectivityanalysis(*args, **kwargs):
             'plv',       phase-locking value, support for freq and freqmvar data  
             'powcorr',   power correlation, support for freq and source data  
             'powcorr_ortho', power correlation with single trial  
-                         orthogonalisation, support for source data  
+                         orthogonalisation, support for freq and source data  
             'ppc'        pairwise phase consistency  
             'psi',       phaseslope index, support for freq and freqmvar data  
             'wpli',      weighted phase lag index (signed one, still have to  
@@ -55,9 +55,12 @@ def ft_connectivityanalysis(*args, **kwargs):
                            when the input data is univariate. See FT_CHANNELSELECTION  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/ft_connectivityanalysis.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/ft_connectivityanalysis.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_connectivityanalysis", *args, **kwargs)

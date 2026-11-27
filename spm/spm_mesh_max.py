@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_mesh_max(*args, **kwargs):
-    """
+    r"""
       Sizes, local maxima and locations of excursion sets on a surface mesh  
         FORMAT [N,Z,M,A,XYZ] = spm_mesh_max(X,L,G)  
         X        - a [nx1] array of stat values  
@@ -20,9 +20,12 @@ def spm_mesh_max(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/spm_mesh_max.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/spm_mesh_max.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_mesh_max", *args, **kwargs)

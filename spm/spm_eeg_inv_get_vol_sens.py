@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_eeg_inv_get_vol_sens(*args, **kwargs):
-    """
+    r"""
       Retrieves data for leadfield computation from D.inv structure  
         FORMAT data = spm_eeg_inv_get_vol_sens(D, val, space, gradsource, modality)  
            D   -  @meeg object  
@@ -16,9 +16,12 @@ def spm_eeg_inv_get_vol_sens(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/spm_eeg_inv_get_vol_sens.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/spm_eeg_inv_get_vol_sens.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_eeg_inv_get_vol_sens", *args, **kwargs)

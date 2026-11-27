@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _read_fcdc_trl(*args, **kwargs):
-    """
+    r"""
       READ_FCDC_TRL reads trial definitions from a file  
          
         Given a file which defines N trials, this function returns a Nx3  
@@ -26,9 +26,12 @@ def _read_fcdc_trl(*args, **kwargs):
         correspond to "6.700 7.700 -0.300".  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/read_fcdc_trl.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/fileio/private/read_fcdc_trl.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("read_fcdc_trl", *args, **kwargs)

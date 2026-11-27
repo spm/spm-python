@@ -2,15 +2,18 @@ from spm._runtime import Runtime
 
 
 def _getthreads(*args, **kwargs):
-    """
+    r"""
       Size of block of threads on a CUDA kernel  
         FORMAT s = getthreads(kernel,d)  
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/Spatial/private/getthreads.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/Spatial/private/getthreads.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("getthreads", *args, **kwargs)

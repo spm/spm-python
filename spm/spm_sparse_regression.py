@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_sparse_regression(*args, **kwargs):
-    """
+    r"""
       Sparse (logistic) regression using Bayesian model reduction  
         FORMAT RCM = spm_sparse_regression(y,X,X0)  
         y   - univariate response variable  
@@ -26,9 +26,12 @@ def spm_sparse_regression(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/spm_sparse_regression.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/spm_sparse_regression.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_sparse_regression", *args, **kwargs)

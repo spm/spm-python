@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_dir_sort(*args, **kwargs):
-    """
+    r"""
       sorts the rows and columns of a square matrix  
         FORMAT [A,i,j] = spm_dir_sort(A)  
          
@@ -14,9 +14,12 @@ def spm_dir_sort(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/spm_dir_sort.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/spm_dir_sort.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_dir_sort", *args, **kwargs)

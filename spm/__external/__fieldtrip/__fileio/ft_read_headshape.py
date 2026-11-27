@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_read_headshape(*args, **kwargs):
-    """
+    r"""
       FT_READ_HEADSHAPE reads the fiducials and/or the measured headshape and/or meshes  
         that describe headsurfaces, headmodels or cortical sheets from a variety of files  
         (like CTF and Polhemus). The headshape and fiducials can for example be used for  
@@ -31,6 +31,7 @@ def ft_read_headshape(*args, **kwargs):
           'surface'     = specific surface to be read (only for Caret spec files)  
           'refine'      = number, used for refining Structure Sensor meshes (default = 1)  
           'jmeshopt'    = cell-array with {'name', 'value'} pairs, options for reading JSON/JMesh files  
+          'meshtype'    = string, which type of mesh to read in case the file contains multiple types, can be 'tri', 'tet' or 'hex'  
          
         Supported input file formats include  
           'gifti'           see https://www.nitrc.org/projects/gifti/  
@@ -73,9 +74,12 @@ def ft_read_headshape(*args, **kwargs):
         See also FT_READ_HEADMODEL, FT_READ_SENS, FT_READ_ATLAS, FT_WRITE_HEADSHAPE  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/ft_read_headshape.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/fileio/ft_read_headshape.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_read_headshape", *args, **kwargs)

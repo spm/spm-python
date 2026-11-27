@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def DEM_demo_GF_and_KF(*args, **kwargs):
-    """
+    r"""
       A demonstration of generalised and Kalman filtering where the number  
         of hidden states exceeds the number of variables observed. The metrics of  
         performance are the mean sum of squared error and the SSE normalized by  
@@ -15,9 +15,12 @@ def DEM_demo_GF_and_KF(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DEM/DEM_demo_GF_and_KF.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/DEM/DEM_demo_GF_and_KF.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("DEM_demo_GF_and_KF", *args, **kwargs, nargout=0)

@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_mesh_geodesic(*args, **kwargs):
-    """
+    r"""
       Compute geodesic distances on a triangle mesh - a compiled routine  
         FORMAT [D,L,P] = spm_mesh_geodesic(M,i,d,s)  
         M      - a patch structure with n vertices  
@@ -27,9 +27,12 @@ def spm_mesh_geodesic(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/spm_mesh_geodesic.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/spm_mesh_geodesic.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_mesh_geodesic", *args, **kwargs)

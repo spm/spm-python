@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _multivariate_decomp(*args, **kwargs):
-    """
+    r"""
       MULTIVARIATE_DECOMP does a linear decomposition of multivariate time series,  
         based on the covariance matrix.  
          
@@ -31,9 +31,12 @@ def _multivariate_decomp(*args, **kwargs):
           D = diagonal matrix with eigenvalues  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/connectivity/private/multivariate_decomp.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/connectivity/private/multivariate_decomp.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("multivariate_decomp", *args, **kwargs)

@@ -2,12 +2,12 @@ from spm._runtime import Runtime
 
 
 def ft_specest_mtmfft(*args, **kwargs):
-    """
+    r"""
       FT_SPECEST_MTMFFT computes a fast Fourier transform using multitapering with  
         multiple tapers from the DPSS sequence or using a variety of single tapers.  
          
         Use as  
-          [spectrum, ntaper, freqoi] = ft_specest_mtmfft(dat, time, ...)  
+          [spectrum, ntaper, freqoi, se] = ft_specest_mtmfft(dat, time, ...)  
         where the input arguments are  
           dat        = matrix of chan*sample  
           time       = vector, containing time in seconds for each sample  
@@ -15,11 +15,13 @@ def ft_specest_mtmfft(*args, **kwargs):
           spectrum   = matrix of ntaper*nchan*nfreq of fourier coefficients  
           ntaper     = vector containing number of tapers per element of freqoi  
           freqoi     = vector of frequencies in spectrum  
+          se         = (only with dpss-tapers) effective degrees of freedom  
          
         Optional arguments should be specified in key-value pairs and can include  
           freqoi     = vector, containing frequencies of interest  
           taper      = 'dpss', 'hanning' or many others, see WINDOW (default = 'dpss')  
           taperopt   = additional taper options to be used in the WINDOW function, see WINDOW  
+          weightopt  = 'mean', 'eig', 'adapt' (default = 'mean'), taper weights for dpss tapers, see ADAPTSPEC_DPSS  
           tapsmofrq  = the amount of spectral smoothing through multi-tapering. Note: 4 Hz smoothing means plus-minus 4 Hz, i.e. a 8 Hz smoothing box  
           pad        = number, total length of data after zero padding (in seconds)  
           padtype    = string, indicating type of padding to be used, can be 'zero', 'mean', 'localmean', 'edge', or 'mirror' (default = 'zero')  
@@ -30,9 +32,12 @@ def ft_specest_mtmfft(*args, **kwargs):
         See also FT_FREQANALYSIS, FT_SPECEST_MTMCONVOL, FT_SPECEST_TFR, FT_SPECEST_HILBERT, FT_SPECEST_WAVELET  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/specest/ft_specest_mtmfft.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/specest/ft_specest_mtmfft.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_specest_mtmfft", *args, **kwargs)

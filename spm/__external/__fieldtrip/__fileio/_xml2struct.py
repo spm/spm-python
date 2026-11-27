@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _xml2struct(*args, **kwargs):
-    """
+    r"""
      Convert xml file into a MATLAB structure  
         [ s ] = xml2struct( file )  
          
@@ -46,9 +46,12 @@ def _xml2struct(*args, **kwargs):
         2012/04/04 roboos: don't print the filename that is being read  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/xml2struct.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/fileio/private/xml2struct.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("xml2struct", *args, **kwargs)

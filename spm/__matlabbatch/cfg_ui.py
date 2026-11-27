@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def cfg_ui(*args, **kwargs):
-    """
+    r"""
       CFG_UI M-File for cfg_ui.fig  
              CFG_UI, by itself, creates a new CFG_UI or raises the existing  
              singleton*.  
@@ -31,9 +31,12 @@ def cfg_ui(*args, **kwargs):
         Copyright (C) 2007 Freiburg Brain Imaging  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/matlabbatch/cfg_ui.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/matlabbatch/cfg_ui.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("cfg_ui", *args, **kwargs)

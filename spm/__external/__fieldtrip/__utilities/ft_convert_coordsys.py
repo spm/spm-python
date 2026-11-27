@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_convert_coordsys(*args, **kwargs):
-    """
+    r"""
       FT_CONVERT_COORDSYS changes the coordinate system of the input object to the  
         specified coordinate system. The coordinate system of the input object is  
         determined from the 'coordsys' field in the input data, or needs to be determined  
@@ -29,7 +29,7 @@ def ft_convert_coordsys(*args, **kwargs):
           anatomical or functional atlas, see FT_READ_ATLAS  
          
         Recognized and supported coordinate systems are 'ctf', 'bti', '4d', 'yokogawa',  
-        'eeglab', 'neuromag', 'itab', 'acpc', 'spm', 'mni', 'fsaverage', 'tal', 'scanras',  
+        'eeglab', 'eeglab-hj', 'neuromag', 'itab', 'acpc', 'spm', 'mni', 'fsaverage', 'tal', 'scanras',  
         'scanlps', 'dicom'.  
          
         Furthermore, supported coordinate systems that do not specify the origin are 'ras',  
@@ -43,9 +43,12 @@ def ft_convert_coordsys(*args, **kwargs):
         See also FT_DETERMINE_COORDSYS, FT_DETERMINE_UNITS, FT_CONVERT_UNITS, FT_PLOT_AXES, FT_PLOT_XXX  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/utilities/ft_convert_coordsys.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/utilities/ft_convert_coordsys.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_convert_coordsys", *args, **kwargs)

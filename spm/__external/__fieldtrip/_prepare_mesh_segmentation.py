@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _prepare_mesh_segmentation(*args, **kwargs):
-    """
+    r"""
       PREPARE_MESH_SEGMENTATION  
          
         The following configuration options can be specified for the iso2mesh method  
@@ -15,9 +15,12 @@ def _prepare_mesh_segmentation(*args, **kwargs):
         PREPARE_MESH_TETRAHEDRAL  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/prepare_mesh_segmentation.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/private/prepare_mesh_segmentation.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("prepare_mesh_segmentation", *args, **kwargs)

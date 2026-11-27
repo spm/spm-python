@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def fieldtrip2fiff(*args, **kwargs):
-    """
+    r"""
       FIELDTRIP2FIFF saves a FieldTrip raw data structure as a fiff-file, allowing it  
         to be further analyzed by the Neuromag/Elekta/Megin software, or in MNE-python.  
          
@@ -47,9 +47,12 @@ def fieldtrip2fiff(*args, **kwargs):
         See also FT_DATATYPE_RAW, FT_DATATYPE_TIMELOCK  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fieldtrip2fiff.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/fieldtrip2fiff.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("fieldtrip2fiff", *args, **kwargs, nargout=0)

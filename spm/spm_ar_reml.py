@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_ar_reml(*args, **kwargs):
-    """
+    r"""
       ReML estimation of covariance components from y*y'  
         FORMAT [C,h,Ph,F] = spm_ar_reml(YY,X,m,N)  
          
@@ -23,9 +23,12 @@ def spm_ar_reml(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/spm_ar_reml.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/spm_ar_reml.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_ar_reml", *args, **kwargs)

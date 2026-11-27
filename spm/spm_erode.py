@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_erode(*args, **kwargs):
-    """
+    r"""
       Perform an erosion on an image (2D or 3D)  
         FORMAT ima = spm_erode(ima)  
         FORMAT ima = spm_erode(ima,kernel)  
@@ -33,9 +33,12 @@ def spm_erode(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/spm_erode.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/spm_erode.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_erode", *args, **kwargs)

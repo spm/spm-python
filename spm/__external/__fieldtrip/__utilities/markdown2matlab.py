@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def markdown2matlab(*args, **kwargs):
-    """
+    r"""
       MARKDOWN2MATLAB converts a Markdown file to a MATLAB script or function. All text  
         is converted to comments, headings are converted to comment lines starting with %%  
         sections with code are properly formatted, and words that appear in bold, italic or  
@@ -23,9 +23,12 @@ def markdown2matlab(*args, **kwargs):
         See also MATLAB2MARKDOWN  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/utilities/markdown2matlab.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/utilities/markdown2matlab.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("markdown2matlab", *args, **kwargs, nargout=0)

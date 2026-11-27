@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_mb_ui(*args, **kwargs):
-    """
+    r"""
       VOI extraction of adjusted data and Markov Blanket decomposition  
         FORMAT [MB] = spm_mb_ui('specify',SPM)  
         FORMAT [MB] = spm_mb_ui('blocking',MB)  
@@ -128,9 +128,12 @@ def spm_mb_ui(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/spm_mb_ui.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/spm_mb_ui.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_mb_ui", *args, **kwargs)

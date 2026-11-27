@@ -20,7 +20,7 @@ authors = [
   {name = "Peter Zeidman"},
   {name = "Olivia Kowalczyk"},
 ]
-requires-python = ">=3.6,<3.14"
+requires-python = ">=3.6,<3.15"
 classifiers = [
   "Development Status :: 5 - Production/Stable",
   "License :: OSI Approved :: GNU General Public License v2 (GPLv2)",
@@ -32,29 +32,32 @@ classifiers = [
   "Programming Language :: Python :: 3.11",
   "Programming Language :: Python :: 3.12",
   "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: 3.14",
 ]
 dependencies = [
-    "mpython-core>=25.4rc1",
-    "spm-runtime-r2025b >= 25.1.2 ; python_version >= '3.10'",
-    "spm-runtime-r2025a == 25.1.2 ; python_version == '3.9'",
-    "spm-runtime-r2023a == 25.1.2 ; python_version == '3.8'",
-    "spm-runtime-r2021b == 25.1.2 ; python_version == '3.7'",
-    "spm-runtime-r2020b == 25.1.2 ; python_version == '3.6'",
+    "mpython-core>=26.11.1",
+    "spm-runtime-r2026b ~= 26.10.1.post1 ; python_version >= '3.10'",
+    "spm-runtime-r2025a ~= 26.10.1.post1 ; python_version == '3.9'",
+    "spm-runtime-r2023a ~= 26.10.1.post1 ; python_version == '3.8'",
+    "spm-runtime-r2021b ~= 26.10.1.post1 ; python_version == '3.7'",
+    "spm-runtime-r2020b ~= 26.10.1.post1 ; python_version == '3.6'",
 ]
 
 [project.optional-dependencies]
-latest = ["spm-runtime        == 25.1.2"]
-R2025b = ["spm-runtime-R2025b == 25.1.2"]
-R2025a = ["spm-runtime-R2025a == 25.1.2"]
-R2024b = ["spm-runtime-R2024b == 25.1.2"]
-R2024a = ["spm-runtime-R2024a == 25.1.2"]
-R2023b = ["spm-runtime-R2023b == 25.1.2"]
-R2023a = ["spm-runtime-R2023a == 25.1.2"]
-R2022b = ["spm-runtime-R2022b == 25.1.2"]
-R2022a = ["spm-runtime-R2022a == 25.1.2"]
-R2021b = ["spm-runtime-R2021b == 25.1.2"]
-R2021a = ["spm-runtime-R2021a == 25.1.2"]
-R2020b = ["spm-runtime-R2020b == 25.1.2"]
+latest = ["spm-runtime        ~= 26.10.1.post1"]
+R2026b = ["spm-runtime-R2026b ~= 26.10.1.post1"]
+R2026a = ["spm-runtime-R2026a ~= 26.10.1.post1"]
+R2025b = ["spm-runtime-R2025b ~= 26.10.1.post1"]
+R2025a = ["spm-runtime-R2025a ~= 26.10.1.post1"]
+R2024b = ["spm-runtime-R2024b ~= 26.10.1.post1"]
+R2024a = ["spm-runtime-R2024a ~= 26.10.1.post1"]
+R2023b = ["spm-runtime-R2023b ~= 26.10.1.post1"]
+R2023a = ["spm-runtime-R2023a ~= 26.10.1.post1"]
+R2022b = ["spm-runtime-R2022b ~= 26.10.1.post1"]
+R2022a = ["spm-runtime-R2022a ~= 26.10.1.post1"]
+R2021b = ["spm-runtime-R2021b ~= 26.10.1.post1"]
+R2021a = ["spm-runtime-R2021a ~= 26.10.1.post1"]
+R2020b = ["spm-runtime-R2020b ~= 26.10.1.post1"]
 
 [project.urls]
 Repository = "https://github.com/spm/spm-python"

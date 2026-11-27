@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_orientations(*args, **kwargs):
-    """
+    r"""
       Show the orientations that SPM assumes that the data are  
         stored in.  Standard Analyze format axial images will  
         normally be reported as 'RPI   Left-handed'.  Some people  
@@ -50,9 +50,12 @@ def spm_orientations(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/spm_orientations.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/spm_orientations.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_orientations", *args, **kwargs, nargout=0)

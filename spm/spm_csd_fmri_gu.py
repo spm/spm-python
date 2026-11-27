@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_csd_fmri_gu(*args, **kwargs):
-    """
+    r"""
       Spectra of neuronal fluctuations and noise  
         FORMAT [Gu,Gn,Hz,dt] = spm_csd_fmri_gu(P,dt)  
          
@@ -14,9 +14,12 @@ def spm_csd_fmri_gu(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/spm_csd_fmri_gu.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/spm_csd_fmri_gu.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_csd_fmri_gu", *args, **kwargs)

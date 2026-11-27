@@ -61,6 +61,8 @@ from .cfg_dbstop import cfg_dbstop
 from .cfg_findspec import cfg_findspec
 from .cfg_get_defaults import cfg_get_defaults
 from .cfg_getfile import cfg_getfile
+from .cfg_getfile_cpath import cfg_getfile_cpath
+from .cfg_getfile_pathparts import cfg_getfile_pathparts
 from .cfg_load_jobs import cfg_load_jobs
 from .cfg_message import cfg_message
 from .cfg_mlbatch_appcfg import cfg_mlbatch_appcfg
@@ -159,6 +161,8 @@ __all__ = [
     "cfg_findspec",
     "cfg_get_defaults",
     "cfg_getfile",
+    "cfg_getfile_cpath",
+    "cfg_getfile_pathparts",
     "cfg_load_jobs",
     "cfg_message",
     "cfg_mlbatch_appcfg",

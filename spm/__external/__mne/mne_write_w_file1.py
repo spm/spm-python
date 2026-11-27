@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def mne_write_w_file1(*args, **kwargs):
-    """
+    r"""
       mne_write_w_file1(filename, w)  
          
          writes a binary 'w' file  
@@ -14,9 +14,12 @@ def mne_write_w_file1(*args, **kwargs):
         data     - vector of data values  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/mne/mne_write_w_file1.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/mne/mne_write_w_file1.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("mne_write_w_file1", *args, **kwargs)

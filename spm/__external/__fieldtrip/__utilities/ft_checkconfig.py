@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_checkconfig(*args, **kwargs):
-    """
+    r"""
       FT_CHECKCONFIG checks the input cfg of the main FieldTrip functions  
          
         It checks whether the cfg contains all the required options, it gives  
@@ -43,9 +43,12 @@ def ft_checkconfig(*args, **kwargs):
         See also FT_CHECKDATA, FT_CHECKOPT, FT_DEFAULTS  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/utilities/ft_checkconfig.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/utilities/ft_checkconfig.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_checkconfig", *args, **kwargs)

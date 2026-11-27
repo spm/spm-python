@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_DEM(*args, **kwargs):
-    """
+    r"""
       Dynamic expectation maximisation (Variational Laplacian filtering)  
         FORMAT DEM   = spm_DEM(DEM)  
          
@@ -39,8 +39,8 @@ def spm_DEM(*args, **kwargs):
           qU.v    = Conditional expectation of causal states  
           qU.w    = Conditional prediction error (states)  
           qU.z    = Conditional prediction error (causes)  
-          qU.C    = Conditional covariance: cov(v)  
           qU.S    = Conditional covariance: cov(x)  
+          qU.C    = Conditional covariance: cov(v)  
          
         conditional moments of model-parameters - q(p)  
        --------------------------------------------------------------------------  
@@ -93,9 +93,12 @@ def spm_DEM(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/spm_DEM.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/spm_DEM.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_DEM", *args, **kwargs)

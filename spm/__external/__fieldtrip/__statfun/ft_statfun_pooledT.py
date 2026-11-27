@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_statfun_pooledT(*args, **kwargs):
-    """
+    r"""
       FT_STATFUN_POOLEDT computes the pooled t-value over a number of replications. The  
         idea behind this function is that you first (prior to calling this function)  
         compute a contrast between two conditions per subject, and that subsequently you  
@@ -38,9 +38,12 @@ def ft_statfun_pooledT(*args, **kwargs):
         See also FT_TIMELOCKSTATISTICS, FT_FREQSTATISTICS or FT_SOURCESTATISTICS  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/statfun/ft_statfun_pooledT.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/statfun/ft_statfun_pooledT.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_statfun_pooledT", *args, **kwargs)

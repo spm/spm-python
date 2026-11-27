@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _bids_sidecar(*args, **kwargs):
-    """
+    r"""
       BIDS_SIDECAR will search for corresponding BIDS sidecar files that go together with  
         a specific data file. This function respects the inheritance rules and will also  
         search higher up in the directory structure.  
@@ -37,9 +37,12 @@ def _bids_sidecar(*args, **kwargs):
         See also BIDS_DATAFILE, BIDS_TSV, EVENTS_TSV, FT_READ_HEADER, FT_READ_EVENT  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/bids_sidecar.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/fileio/private/bids_sidecar.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("bids_sidecar", *args, **kwargs)

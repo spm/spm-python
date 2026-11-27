@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def dartel3(*args, **kwargs):
-    """
+    r"""
       DARTEL 3D image registration stuff  
        __________________________________________________________________________  
          
@@ -203,9 +203,12 @@ def dartel3(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DARTEL/dartel3.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/DARTEL/dartel3.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("dartel3", *args, **kwargs)

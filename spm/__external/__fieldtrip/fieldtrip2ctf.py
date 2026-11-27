@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def fieldtrip2ctf(*args, **kwargs):
-    """
+    r"""
       FIELDTRIP2CTF saves a FieldTrip data structure to a CTF dataset.  
          
         The file to which the data is exported depends on the input data structure that you  
@@ -20,9 +20,12 @@ def fieldtrip2ctf(*args, **kwargs):
         See also FT_DATATYPE, FT_APPLY_MONTAGE, FT_VOLUMEWRITE, FT_SOURCEWRITE, FT_WRITE_DATA  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fieldtrip2ctf.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/fieldtrip2ctf.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("fieldtrip2ctf", *args, **kwargs, nargout=0)

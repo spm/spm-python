@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _ft_datatype_mvar(*args, **kwargs):
-    """
+    r"""
       FT_DATATYPE_MVAR describes the FieldTrip MATLAB structure for multi-variate  
         autoregressive model data.  
          
@@ -56,9 +56,12 @@ def _ft_datatype_mvar(*args, **kwargs):
         FT_DATATYPE_TIMELOCK, FT_DATATYPE_VOLUME  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/ft_datatype_mvar.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/fileio/private/ft_datatype_mvar.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_datatype_mvar", *args, **kwargs)

@@ -2,6 +2,7 @@ from .appendstruct import appendstruct
 from .copyfields import copyfields
 from .dccnpath import dccnpath
 from .ft_affinecoordinates import ft_affinecoordinates
+from .ft_apply_montage import ft_apply_montage
 from .ft_average_sens import ft_average_sens
 from .ft_cfg2keyval import ft_cfg2keyval
 from .ft_channelcombination import ft_channelcombination
@@ -27,6 +28,7 @@ from .ft_datatype_spike import ft_datatype_spike
 from .ft_datatype_timelock import ft_datatype_timelock
 from .ft_datatype_volume import ft_datatype_volume
 from .ft_debug import ft_debug
+from .ft_deleteopt import ft_deleteopt
 from .ft_determine_coordsys import ft_determine_coordsys
 from .ft_documentationconfiguration import ft_documentationconfiguration
 from .ft_documentationreference import ft_documentationreference
@@ -40,6 +42,7 @@ from .ft_hash import ft_hash
 from .ft_hastoolbox import ft_hastoolbox
 from .ft_headcoordinates import ft_headcoordinates
 from .ft_info import ft_info
+from .ft_inverse_montage import ft_inverse_montage
 from .ft_keyval2cfg import ft_keyval2cfg
 from .ft_notice import ft_notice
 from .ft_platform_supports import ft_platform_supports
@@ -98,6 +101,7 @@ __all__ = [
     "copyfields",
     "dccnpath",
     "ft_affinecoordinates",
+    "ft_apply_montage",
     "ft_average_sens",
     "ft_cfg2keyval",
     "ft_channelcombination",
@@ -123,6 +127,7 @@ __all__ = [
     "ft_datatype_timelock",
     "ft_datatype_volume",
     "ft_debug",
+    "ft_deleteopt",
     "ft_determine_coordsys",
     "ft_documentationconfiguration",
     "ft_documentationreference",
@@ -136,6 +141,7 @@ __all__ = [
     "ft_hastoolbox",
     "ft_headcoordinates",
     "ft_info",
+    "ft_inverse_montage",
     "ft_keyval2cfg",
     "ft_notice",
     "ft_platform_supports",

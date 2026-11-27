@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_mb_io(*args, **kwargs):
-    """
+    r"""
       File I/O Multi-Brain functionalities  
          
         FORMAT fn      = spm_mb_io('get_image',datn)  
@@ -14,9 +14,12 @@ def spm_mb_io(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/MB/spm_mb_io.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/MB/spm_mb_io.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_mb_io", *args, **kwargs)

@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def fiff_reset_ch_pos(*args, **kwargs):
-    """
+    r"""
        
         [res] = fiff_reset_ch_pos(chs)  
          
@@ -13,9 +13,12 @@ def fiff_reset_ch_pos(*args, **kwargs):
         loc which remains to reflect the original data read from the fif file  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/mne/fiff_reset_ch_pos.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/mne/fiff_reset_ch_pos.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("fiff_reset_ch_pos", *args, **kwargs)

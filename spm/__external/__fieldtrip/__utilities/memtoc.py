@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def memtoc(*args, **kwargs):
-    """
+    r"""
       MEMTOC return the memory that was used  
          
           MEMTIC and MEMTOC functions work together to measure memory usage.  
@@ -42,9 +42,12 @@ def memtoc(*args, **kwargs):
         See also TIC, TOC  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/utilities/memtoc.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/utilities/memtoc.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("memtoc", *args, **kwargs)

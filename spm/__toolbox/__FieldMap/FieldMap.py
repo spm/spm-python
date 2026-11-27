@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def FieldMap(*args, **kwargs):
-    """
+    r"""
       FieldMap is an SPM Toolbox for creating field maps and unwarping EPI.  
         A full description of the toolbox and a usage manual can be found in  
         FieldMap.md. This can launched by the toolbox help button or using  
@@ -54,13 +54,10 @@ def FieldMap(*args, **kwargs):
         .bmask  
          
         IP.mflags         : Struct containing parameters for brain maskin  
-        .template         : Name of template for segmentation.  
         .fwhm             : fwhm of smoothing kernel for generating mask.  
         .nerode           : number of erosions  
         .ndilate          : number of dilations  
         .thresh           : threshold for smoothed mask.  
-        .reg              : bias field regularisation  
-        .graphics         : display or not  
          
         IP.fm             : Struct containing field map information  
         IP.fm.upm         : Phase-unwrapped field map (Hz).  
@@ -109,9 +106,12 @@ def FieldMap(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/FieldMap/FieldMap.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/FieldMap/FieldMap.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("FieldMap", *args, **kwargs)

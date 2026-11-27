@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_P_peakFDR(*args, **kwargs):
-    """
+    r"""
       Return the corrected peak FDR q-value  
         FORMAT [Q] = spm_P_peakFDR(Z,df,STAT,R,n,ui,Ps)  
          
@@ -31,9 +31,12 @@ def spm_P_peakFDR(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/spm_P_peakFDR.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/spm_P_peakFDR.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_P_peakFDR", *args, **kwargs)

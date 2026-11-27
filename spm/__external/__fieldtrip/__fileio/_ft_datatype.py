@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _ft_datatype(*args, **kwargs):
-    """
+    r"""
       FT_DATATYPE determines the type of data represented in a FieldTrip data structure  
         and returns a string with raw, freq, timelock source, comp, spike, source, volume,  
         dip, montage, event.  
@@ -17,9 +17,12 @@ def _ft_datatype(*args, **kwargs):
         FT_DATATYPE_RAW, FT_DATATYPE_SENS, FT_DATATYPE_SPIKE, FT_DATATYPE_VOLUME  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/ft_datatype.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/fileio/private/ft_datatype.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_datatype", *args, **kwargs)

@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_mc_loss_G(*args, **kwargs):
-    """
+    r"""
       assumed potential gradient for the mountain car problem  
         problem  
         FORMAT [G] = spm_mc_loss_G(x,P)  
@@ -14,9 +14,12 @@ def spm_mc_loss_G(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DEM/spm_mc_loss_G.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/DEM/spm_mc_loss_G.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_mc_loss_G", *args, **kwargs)

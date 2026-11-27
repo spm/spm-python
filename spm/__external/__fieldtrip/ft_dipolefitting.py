@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_dipolefitting(*args, **kwargs):
-    """
+    r"""
       FT_DIPOLEFITTING perform grid search and non-linear fit with one or multiple  
         dipoles and try to find the location where the dipole model is best able  
         to explain the measured EEG or MEG topography.  
@@ -95,9 +95,12 @@ def ft_dipolefitting(*args, **kwargs):
         See also FT_SOURCEANALYSIS, FT_PREPARE_LEADFIELD, FT_PREPARE_HEADMODEL  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/ft_dipolefitting.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/ft_dipolefitting.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_dipolefitting", *args, **kwargs)

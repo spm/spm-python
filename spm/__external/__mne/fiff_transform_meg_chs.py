@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def fiff_transform_meg_chs(*args, **kwargs):
-    """
+    r"""
        
         [res, count] = fiff_transform_meg_chs(chs,trans)  
          
@@ -13,9 +13,12 @@ def fiff_transform_meg_chs(*args, **kwargs):
         loc which remains to reflect the original data read from the fif file  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/mne/fiff_transform_meg_chs.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/mne/fiff_transform_meg_chs.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("fiff_transform_meg_chs", *args, **kwargs)

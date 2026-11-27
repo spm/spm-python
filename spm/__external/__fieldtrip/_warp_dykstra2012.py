@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _warp_dykstra2012(*args, **kwargs):
-    """
+    r"""
       WARP_DYKSTRA2012 projects the ECoG grid / strip onto a cortex hull  
         using the algorithm described in Dykstra et al. (2012, Neuroimage) in   
         which the distance from original positions and the deformation of the   
@@ -23,9 +23,12 @@ def _warp_dykstra2012(*args, **kwargs):
         See also FT_ELECTRODEREALIGN, FT_PREPARE_MESH, WARP_HERMES2010  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/warp_dykstra2012.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/private/warp_dykstra2012.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("warp_dykstra2012", *args, **kwargs)

@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_dcm_fmri_mar(*args, **kwargs):
-    """
+    r"""
       Estimate parameters of a DCM using a MAR model of temporal dependencies  
         FORMAT DCM = spm_dcm_fmri_mar(DCM)  
           DCM - DCM structure  
@@ -40,9 +40,12 @@ def spm_dcm_fmri_mar(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/spm_dcm_fmri_mar.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/spm_dcm_fmri_mar.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_dcm_fmri_mar", *args, **kwargs)

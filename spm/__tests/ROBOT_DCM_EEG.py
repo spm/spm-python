@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ROBOT_DCM_EEG(*args, **kwargs):
-    """
+    r"""
       test routine to check current implementations of DCM (electrophysiology)  
        ==========================================================================  
           options.analysis     - 'ERP','CSD', 'IND' or 'TFM  
@@ -10,9 +10,12 @@ def ROBOT_DCM_EEG(*args, **kwargs):
           options.spatial      - 'ECD','LFP' or 'IMG'  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/tests/ROBOT_DCM_EEG.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/tests/ROBOT_DCM_EEG.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ROBOT_DCM_EEG", *args, **kwargs)

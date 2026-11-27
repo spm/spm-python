@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def cfg_vout_save_vars(*args, **kwargs):
-    """
+    r"""
       Define virtual output for cfg_run_save_vars. Output can be passed on to  
         either a cfg_file or an evaluated cfg_entry.  
          
@@ -13,9 +13,12 @@ def cfg_vout_save_vars(*args, **kwargs):
         Copyright (C) 2007 Freiburg Brain Imaging  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/matlabbatch/cfg_basicio/cfg_vout_save_vars.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/matlabbatch/cfg_basicio/cfg_vout_save_vars.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("cfg_vout_save_vars", *args, **kwargs)

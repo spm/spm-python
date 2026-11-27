@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _ft_datatype_spike(*args, **kwargs):
-    """
+    r"""
       FT_DATATYPE_SPIKE describes the FieldTrip MATLAB structure for spike data  
          
         Spike data is obtained using FT_READ_SPIKE to read files from a Plexon,  
@@ -128,9 +128,12 @@ def _ft_datatype_spike(*args, **kwargs):
         See also FT_DATATYPE, FT_DATATYPE_RAW, FT_DATATYPE_FREQ, FT_DATATYPE_TIMELOCK  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/ft_datatype_spike.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/fileio/private/ft_datatype_spike.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_datatype_spike", *args, **kwargs)

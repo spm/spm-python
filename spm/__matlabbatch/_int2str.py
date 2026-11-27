@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _int2str(*args, **kwargs):
-    """
+    r"""
      INT2STR Convert integer to string.  
           S = INT2STR(X) rounds the elements of the matrix X to  
           integers and converts the result into a string matrix.  
@@ -14,9 +14,12 @@ def _int2str(*args, **kwargs):
           See also NUM2STR, SPRINTF, FPRINTF, MAT2STR.  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/matlabbatch/private/int2str.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/matlabbatch/private/int2str.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("int2str", *args, **kwargs)

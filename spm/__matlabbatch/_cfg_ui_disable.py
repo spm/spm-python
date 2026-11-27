@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _cfg_ui_disable(*args, **kwargs):
-    """
+    r"""
      CFG_UI_DISABLE Disable properties  
         en = CFG_UI_DISABLE(hObject, property) disables property in all children  
         of hObject, returning their handles in en.c and previous state in cell  
@@ -20,9 +20,12 @@ def _cfg_ui_disable(*args, **kwargs):
         Copyright (C) 2007 Freiburg Brain Imaging  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/matlabbatch/private/cfg_ui_disable.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/matlabbatch/private/cfg_ui_disable.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("cfg_ui_disable", *args, **kwargs)

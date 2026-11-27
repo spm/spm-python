@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_peb_ppi(*args, **kwargs):
-    """
+    r"""
       Bold deconvolution to create physio- or psycho-physiologic interactions  
         FORMAT PPI = spm_peb_ppi(SPMname,ppiflag,VOI,Uu,ppiname,showGraphics)  
          
@@ -50,9 +50,12 @@ def spm_peb_ppi(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/spm_peb_ppi.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/spm_peb_ppi.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_peb_ppi", *args, **kwargs)

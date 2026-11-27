@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_regressconfound(*args, **kwargs):
-    """
+    r"""
       FT_REGRESSCONFOUND estimates the regression weight of a set of confounds  
         using a General Linear Model (GLM) and removes the estimated contribution  
         from the single-trial data.  
@@ -45,9 +45,12 @@ def ft_regressconfound(*args, **kwargs):
         See also FT_REJECTCOMPONENT, FT_REJECTARTIFACT  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/ft_regressconfound.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/ft_regressconfound.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_regressconfound", *args, **kwargs)

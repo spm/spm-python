@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_LAPF(*args, **kwargs):
-    """
+    r"""
       Laplacian model inversion (see also spm_LAPS)  
         FORMAT DEM = spm_LAPF(DEM)  
          
@@ -70,9 +70,12 @@ def spm_LAPF(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/spm_LAPF.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/spm_LAPF.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_LAPF", *args, **kwargs)

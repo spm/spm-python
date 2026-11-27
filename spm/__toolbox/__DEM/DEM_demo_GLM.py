@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def DEM_demo_GLM(*args, **kwargs):
-    """
+    r"""
       Demo comparing DEM and ReML (restricted maximum likelihood) under a simple  
         general linear model (GLM).  Slight differences in the hyperpriors of both  
         schemes make this an interesting exercise.  Note that ReML uses a  
@@ -12,9 +12,12 @@ def DEM_demo_GLM(*args, **kwargs):
         DEM inversion.  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DEM/DEM_demo_GLM.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/DEM/DEM_demo_GLM.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("DEM_demo_GLM", *args, **kwargs, nargout=0)

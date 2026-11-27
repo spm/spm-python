@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_topoplotIC(*args, **kwargs):
-    """
+    r"""
       FT_TOPOPLOTIC plots the topographic distribution of an independent  
         component that was computed using the FT_COMPONENTANALYSIS function,  
         as a 2-D circular view (looking down at the top of the head).  
@@ -64,7 +64,7 @@ def ft_topoplotIC(*args, **kwargs):
                                    'layout' to place comment as specified for COMNT in layout  
                                    [x y] coordinates  
           cfg.title              = string or 'auto' or 'off', specify a figure title, or use 'component N' (default) as the title  
-          cfg.figure             = 'yes' or 'no', whether to open a new figure. You can also specify a figure handle from FIGURE, GCF or SUBPLOT. (default = 'yes')  
+          cfg.figure             = 'yes', 'no' or 'subplot', whether to open a new figure. You can also specify a figure handle from FIGURE, GCF or SUBPLOT. (default = 'subplot')  
           cfg.renderer           = string, 'opengl', 'zbuffer', 'painters', see RENDERERINFO (default is automatic, try 'painters' when it crashes)  
          
         The layout defines how the channels are arranged. You can specify the  
@@ -83,9 +83,12 @@ def ft_topoplotIC(*args, **kwargs):
         FT_SINGLEPLOTTFR, FT_MULTIPLOTTFR, FT_PREPARE_LAYOUT  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/ft_topoplotIC.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/ft_topoplotIC.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_topoplotIC", *args, **kwargs)

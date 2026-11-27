@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_networkanalysis(*args, **kwargs):
-    """
+    r"""
       FT_NETWORKANALYSIS computes various network graph measures from  
         between-channel or between source-level EEG/MEG signals. This function  
         acts as a wrapper aroun the network metrics implemented in the brain  
@@ -47,9 +47,12 @@ def ft_networkanalysis(*args, **kwargs):
         See also FT_CONNECTIVITYANALYSIS, FT_CONNECTIVITYPLOT  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/ft_networkanalysis.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/ft_networkanalysis.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_networkanalysis", *args, **kwargs)

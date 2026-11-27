@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_eeg_var_measures(*args, **kwargs):
-    """
+    r"""
       Function for computing Fourier coherence using Fieldtrip and VAR based directed measures  
         using SPM's spectral toolbox, developed by Will Penny.  
          
@@ -14,9 +14,12 @@ def spm_eeg_var_measures(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/MEEGtools/spm_eeg_var_measures.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/MEEGtools/spm_eeg_var_measures.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_eeg_var_measures", *args, **kwargs, nargout=0)

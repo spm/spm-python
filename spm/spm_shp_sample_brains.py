@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_shp_sample_brains(*args, **kwargs):
-    """
+    r"""
       FORMAT  [z,z0,mesh] = spm_shp_sample_brains(mesh, K, ...)  
          
         Positional  
@@ -23,7 +23,8 @@ def spm_shp_sample_brains(*args, **kwargs):
         r2n    - Subject's import to native transform [default: identity]  
         can    - If true:  center samples about canonical brain (z=0)  
                  If false: center samples about subject's brain (z=z0)  
-         
+        RandSeed - the random seed used to make this brain (used only to neaten directory structure)  
+        WriteClean - removes random seed directory if it exists  
         Returns  
         -------  
         z       - (M x K) Sampled latent codes  
@@ -36,9 +37,12 @@ def spm_shp_sample_brains(*args, **kwargs):
        ______________________________  ____________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/spm_shp_sample_brains.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/spm_shp_sample_brains.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_shp_sample_brains", *args, **kwargs)

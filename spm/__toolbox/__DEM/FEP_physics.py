@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def FEP_physics(*args, **kwargs):
-    """
+    r"""
       This demonstration  uses an ensemble of particles with intrinsic (Lorenz  
         attractor) dynamics and (Newtonian) short-range coupling. the setup is  
         used to solve for dynamics among an ensemble of particles; from which a  
@@ -16,9 +16,12 @@ def FEP_physics(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DEM/FEP_physics.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/DEM/FEP_physics.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("FEP_physics", *args, **kwargs, nargout=0)

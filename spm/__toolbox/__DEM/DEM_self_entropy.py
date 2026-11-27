@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def DEM_self_entropy(*args, **kwargs):
-    """
+    r"""
      --------------------------------------------------------------------------  
         Routine to produce graphics illustrating self organisation in terms of  
         the entropy of blanket states and associated trajectories. A low blanket  
@@ -18,9 +18,12 @@ def DEM_self_entropy(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DEM/DEM_self_entropy.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/DEM/DEM_self_entropy.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("DEM_self_entropy", *args, **kwargs, nargout=0)

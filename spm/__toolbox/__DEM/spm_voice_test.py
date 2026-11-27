@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_voice_test(*args, **kwargs):
-    """
+    r"""
       Read and translate a sound file to assess recognition accuracy  
         FORMAT [L] = spm_voice_test(wfile,sfile)  
          
@@ -23,9 +23,12 @@ def spm_voice_test(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DEM/spm_voice_test.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/DEM/spm_voice_test.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_voice_test", *args, **kwargs)

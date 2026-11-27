@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_connectivity_corr(*args, **kwargs):
-    """
+    r"""
       FT_CONNECTIVITY_CORR computes correlation, coherence or a related quantity from a  
         data-matrix containing a covariance or cross-spectral density. This implements the  
         methods as described in the following papers:  
@@ -61,9 +61,12 @@ def ft_connectivity_corr(*args, **kwargs):
         See also CONNECTIVITY, FT_CONNECTIVITYANALYSIS  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/connectivity/ft_connectivity_corr.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/connectivity/ft_connectivity_corr.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_connectivity_corr", *args, **kwargs)

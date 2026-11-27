@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _scale(*args, **kwargs):
-    """
+    r"""
       SCALE returns the homogenous coordinate transformation matrix  
         corresponding to a scaling along the x, y and z-axis  
           
@@ -15,9 +15,12 @@ def _scale(*args, **kwargs):
         See also TRANSLATE, ROTATE, RIGIDBODY, QUATERNION, HOMOGENOUS2TRADITIONAL  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/plotting/private/scale.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/plotting/private/scale.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("scale", *args, **kwargs)

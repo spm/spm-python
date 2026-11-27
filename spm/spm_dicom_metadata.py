@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_dicom_metadata(*args, **kwargs):
-    """
+    r"""
       Export image metadata as side-car JSON file  
         FORMAT N = spm_dicom_metadata(N,hdr)  
         N(input)  - nifti object  
@@ -17,9 +17,12 @@ def spm_dicom_metadata(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/spm_dicom_metadata.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/spm_dicom_metadata.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_dicom_metadata", *args, **kwargs)

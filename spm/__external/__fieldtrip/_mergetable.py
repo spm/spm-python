@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _mergetable(*args, **kwargs):
-    """
+    r"""
       MERGETABLE merges two tables where the rows and columns can be partially  
         overlapping or different. Values from the 2nd input have precedence in case the  
         same row and column is also present in the 1st.  
@@ -15,9 +15,12 @@ def _mergetable(*args, **kwargs):
         See also MERGESTRUCT, JOIN, INNERJOIN, OUTERJOIN  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/mergetable.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/private/mergetable.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("mergetable", *args, **kwargs)

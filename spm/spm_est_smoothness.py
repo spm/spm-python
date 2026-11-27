@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_est_smoothness(*args, **kwargs):
-    """
+    r"""
       Estimation of smoothness based on [residual] images  
         FORMAT [FWHM,VRpv,R] = spm_est_smoothness(V,VM,[ndf])  
          
@@ -56,9 +56,12 @@ def spm_est_smoothness(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/spm_est_smoothness.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/spm_est_smoothness.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_est_smoothness", *args, **kwargs)

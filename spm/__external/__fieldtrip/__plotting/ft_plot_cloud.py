@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_plot_cloud(*args, **kwargs):
-    """
+    r"""
       FT_PLOT_CLOUD visualizes spatially sparse scalar data as spheres or  
         spherical clouds of points and optionally 2D slices through those clouds  
          
@@ -52,9 +52,12 @@ def ft_plot_cloud(*args, **kwargs):
         See also FT_ELECTRODEPLACEMENT, FT_PLOT_SENS, FT_PLOT_TOPO, FT_PLOT_TOPO3D  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/plotting/ft_plot_cloud.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/plotting/ft_plot_cloud.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_plot_cloud", *args, **kwargs, nargout=0)

@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _read_nexstim_nxe(*args, **kwargs):
-    """
+    r"""
       READ_NEXSTIM_NXE reads specified samples from a NXE continuous datafile  
          
         Use as  
@@ -27,9 +27,12 @@ def _read_nexstim_nxe(*args, **kwargs):
         This returns a Nchans X Nsamples data matrix  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/read_nexstim_nxe.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/fileio/private/read_nexstim_nxe.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("read_nexstim_nxe", *args, **kwargs)

@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _plinprojn(*args, **kwargs):
-    """
+    r"""
       PLINPROJN projects a point onto a line or linepiece  
          
         [proj, dist] = plinprojn(l1, l2, r, flag)  
@@ -17,9 +17,12 @@ def _plinprojn(*args, **kwargs):
           1            project the point within or on the edge of the linepiece  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/plinprojn.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/private/plinprojn.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("plinprojn", *args, **kwargs)

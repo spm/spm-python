@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_diff_all(*args, **kwargs):
-    """
+    r"""
       matrix high-order numerical differentiation  
         FORMAT [dfdx] = spm_diff(f,x,...,n)  
         FORMAT [dfdx] = spm_diff(f,x,...,n,V)  
@@ -27,9 +27,12 @@ def spm_diff_all(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DEM/spm_diff_all.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/DEM/spm_diff_all.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_diff_all", *args, **kwargs)

@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_trialfun_example1(*args, **kwargs):
-    """
+    r"""
       FT_TRIALFUN_EXAMPLE1 is an example trial function. It searches for events  
         of type "trigger" and specifically for a trigger with value 7, followed  
         by a trigger with value 64.  
@@ -20,9 +20,12 @@ def ft_trialfun_example1(*args, **kwargs):
         See also FT_DEFINETRIAL, FT_TRIALFUN_GENERAL  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/trialfun/ft_trialfun_example1.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/trialfun/ft_trialfun_example1.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_trialfun_example1", *args, **kwargs)

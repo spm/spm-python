@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def pm_create_connectogram(*args, **kwargs):
-    """
+    r"""
       Create vectors corresponding to a connectogram based on label-map.  
         FORMAT [ii,jj,nn,pp] = pm_create_connectogram(rima,pm)  
         or  
@@ -58,9 +58,12 @@ def pm_create_connectogram(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/FieldMap/pm_create_connectogram.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/FieldMap/pm_create_connectogram.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("pm_create_connectogram", *args, **kwargs)

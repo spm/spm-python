@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _write_edf(*args, **kwargs):
-    """
+    r"""
       WRITE_EDF(filename, header, data)  
          
         Writes a EDF file from the given header (only label, Fs, nChans are of interest)  
@@ -16,9 +16,12 @@ def _write_edf(*args, **kwargs):
         which we could easily violate if we write the whole data as *one* record.  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/write_edf.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/fileio/private/write_edf.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("write_edf", *args, **kwargs, nargout=0)

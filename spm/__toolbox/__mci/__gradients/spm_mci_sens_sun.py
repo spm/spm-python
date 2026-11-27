@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_mci_sens_sun(*args, **kwargs):
-    """
+    r"""
       As spm_mci_sens.m but using Sundials  
         FORMAT [y,sy,st,x,sx] = spm_mci_sens_sun (P,M,U,csx)  
          
@@ -29,9 +29,12 @@ def spm_mci_sens_sun(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/mci/gradients/spm_mci_sens_sun.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/mci/gradients/spm_mci_sens_sun.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_mci_sens_sun", *args, **kwargs)

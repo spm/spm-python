@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_slice2vol_estimate(*args, **kwargs):
-    """
+    r"""
       Slice-to-volume alignment estimation  
         FORMAT [Q,mu] = spm_slice2vol_estimate(Nii)  
          
@@ -37,9 +37,12 @@ def spm_slice2vol_estimate(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/Spatial/spm_slice2vol_estimate.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/Spatial/spm_slice2vol_estimate.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_slice2vol_estimate", *args, **kwargs)

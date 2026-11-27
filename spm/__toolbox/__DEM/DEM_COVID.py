@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def DEM_COVID(*args, **kwargs):
-    """
+    r"""
       FORMAT [DCM,GCM] = DEM_COVID(country,data)  
         data    - data    to model [default: data = DATA_COVID_JHU]  
         country - country to model [default: 'United Kingdom')  
@@ -26,9 +26,12 @@ def DEM_COVID(*args, **kwargs):
         Copyright (C) 2020 Wellcome Centre for Human Neuroimaging  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DEM/DEM_COVID.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/DEM/DEM_COVID.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("DEM_COVID", *args, **kwargs)

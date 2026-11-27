@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _specest_nanfft(*args, **kwargs):
-    """
+    r"""
       SPECEST_NANFFT computes a fast Fourier transform in the presence of NaNs  
         in the data  
          
@@ -23,9 +23,12 @@ def _specest_nanfft(*args, **kwargs):
         See also SPECEST_MTMFFT, SPECEST_CONVOL, SPECEST_HILBERT, SPECEST_MTMCONVOL, SPECEST_MVAR, SPECEST_WAVELET  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/specest_nanfft.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/private/specest_nanfft.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("specest_nanfft", *args, **kwargs)

@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_mci_grad_curve(*args, **kwargs):
-    """
+    r"""
       Compute gradient and curvature for MFX model  
         FORMAT [dLdp,iCpY,st] = spm_mci_grad_curve (assign,w,v,M,U,Y,fxtype)  
          
@@ -18,9 +18,12 @@ def spm_mci_grad_curve(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/mci/gradients/spm_mci_grad_curve.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/mci/gradients/spm_mci_grad_curve.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_mci_grad_curve", *args, **kwargs)

@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_fx_hdm(*args, **kwargs):
-    """
+    r"""
       State equation for the hemodynamic model  
         FORMAT [f] = spm_fx_hdm(x,u,P,M)  
         x      - state vector  
@@ -30,9 +30,12 @@ def spm_fx_hdm(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/spm_fx_hdm.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/spm_fx_hdm.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_fx_hdm", *args, **kwargs)

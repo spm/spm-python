@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ADEM_motor(*args, **kwargs):
-    """
+    r"""
       This demo illustrates how action can fulfil prior expectations by  
         explaining away sensory prediction errors prescribed by desired movement  
         trajectory. It is based on the same linear convolution model of the  
@@ -14,9 +14,12 @@ def ADEM_motor(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DEM/ADEM_motor.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/DEM/ADEM_motor.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ADEM_motor", *args, **kwargs, nargout=0)

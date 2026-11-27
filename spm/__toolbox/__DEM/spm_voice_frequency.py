@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_voice_frequency(*args, **kwargs):
-    """
+    r"""
       Segmentation of timeseries at fundamental frequency  
         FORMAT [I] = spm_voice_frequency(Y,FS,F0)  
          
@@ -19,9 +19,12 @@ def spm_voice_frequency(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DEM/spm_voice_frequency.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/DEM/spm_voice_frequency.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_voice_frequency", *args, **kwargs)

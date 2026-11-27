@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_DEM_int(*args, **kwargs):
-    """
+    r"""
       Integrate/evaluate a hierarchical model given innovations z{i} and w{i}  
         FORMAT [V,X,Z,W] = spm_DEM_int(M,z,w,c)  
          
@@ -20,9 +20,12 @@ def spm_DEM_int(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/spm_DEM_int.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/spm_DEM_int.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_DEM_int", *args, **kwargs)

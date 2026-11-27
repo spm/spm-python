@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_inverse_music(*args, **kwargs):
-    """
+    r"""
       FT_INVERSE_MUSIC source localization using MUltiple SIgnal Classification.  
         This is a signal subspace method, which covers the techniques for  
         multiple source localization by using the eigen-structure of the  
@@ -38,9 +38,12 @@ def ft_inverse_music(*args, **kwargs):
         See also FT_SOURCEANALYSIS, FT_PREPARE_HEADMODEL, FT_PREPARE_SOURCEMODEL  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/inverse/ft_inverse_music.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/inverse/ft_inverse_music.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_inverse_music", *args, **kwargs)

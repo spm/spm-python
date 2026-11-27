@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _bids_datafile(*args, **kwargs):
-    """
+    r"""
       BIDS_DATAFILE will search for the data file, given one of the corresponding sidecar files  
          
         Use as  
@@ -11,9 +11,12 @@ def _bids_datafile(*args, **kwargs):
         See also BIDS_SIDECAR, BIDS_TSV, EVENTS_TSV  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/bids_datafile.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/fileio/private/bids_datafile.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("bids_datafile", *args, **kwargs)

@@ -2,15 +2,18 @@ from spm._runtime import Runtime
 
 
 def _volumesmooth(*args, **kwargs):
-    """
+    r"""
       VOLUMESMOOTH is a helper function for segmentations  
          
         See also VOLUMETHRESHOLD, VOLUMEFILLHOLES  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/volumesmooth.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/private/volumesmooth.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("volumesmooth", *args, **kwargs)

@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_maff8(*args, **kwargs):
-    """
+    r"""
       Affine registration to MNI space using mutual information  
         FORMAT [M,ll,h] = spm_maff8(P,samp,fwhm,tpm,M0,regtyp)  
         P       - filename or structure handle of image  
@@ -23,9 +23,12 @@ def spm_maff8(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/spm_maff8.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/spm_maff8.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_maff8", *args, **kwargs)

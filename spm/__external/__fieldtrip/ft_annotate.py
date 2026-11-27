@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_annotate(*args, **kwargs):
-    """
+    r"""
       FT_ANNOTATE returns the same output data as the user has provided as input, but allows  
         to add comments to that data structure. These comments are stored along with the other  
         provenance information and can be displayed with FT_ANALYSISPIPELINE. Adding comments  
@@ -26,9 +26,12 @@ def ft_annotate(*args, **kwargs):
         See also FT_ANALYSISPIPELINE, FT_MATH  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/ft_annotate.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/ft_annotate.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_annotate", *args, **kwargs)

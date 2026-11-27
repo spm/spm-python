@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _prepare_design(*args, **kwargs):
-    """
+    r"""
       PREPARE_DESIGN makes a design matrix on the basis of the information in  
         cfg (i.c., cfg.statistic, cfg.ext, and an initial design in cfg.design)   
         and puts this design matrix in cfg.design. PREPARE_DESIGN also gives default  
@@ -47,9 +47,12 @@ def _prepare_design(*args, **kwargs):
           specifying 'ivar' and 'cvar'.  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/prepare_design.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/private/prepare_design.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("prepare_design", *args, **kwargs)

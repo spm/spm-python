@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def uimagesc(*args, **kwargs):
-    """
+    r"""
      UIMAGESC  Display scaled image with uneven axis.  
           UIMAGESC(...) is the same as UIMAGE(...) except the data is scaled  
           to use the full colormap. See UIMAGE for details.  
@@ -18,9 +18,12 @@ def uimagesc(*args, **kwargs):
         This function is downloaded on Oct 24th 2008 from www.mathworks.com/matlabcentral/fileexchange/11368  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/external/fileexchange/uimagesc.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/external/fileexchange/uimagesc.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("uimagesc", *args, **kwargs)

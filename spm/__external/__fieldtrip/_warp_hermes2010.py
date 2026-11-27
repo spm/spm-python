@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _warp_hermes2010(*args, **kwargs):
-    """
+    r"""
       WARP_HERMES2010 projects the ECoG grid / strip onto a cortex hull  
         using the algorithm described in Hermes et al. (2010,  
         J Neurosci methods) in which electrodes are projected onto the pial  
@@ -13,9 +13,12 @@ def _warp_hermes2010(*args, **kwargs):
         See also FT_ELECTRODEREALIGN, FT_PREPARE_MESH, WARP_DYKSTRA2012  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/warp_hermes2010.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/private/warp_hermes2010.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("warp_hermes2010", *args, **kwargs)

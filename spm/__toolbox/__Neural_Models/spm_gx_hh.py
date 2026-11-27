@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_gx_hh(*args, **kwargs):
-    """
+    r"""
       output for a single Hodgkin-Huxley like unit  
         FORMAT [y] = spm_gx_hh(x,u,P)  
          
@@ -24,9 +24,12 @@ def spm_gx_hh(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/Neural_Models/spm_gx_hh.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/Neural_Models/spm_gx_hh.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_gx_hh", *args, **kwargs)

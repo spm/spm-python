@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_plot_axes(*args, **kwargs):
-    """
+    r"""
       FT_PLOT_AXES adds three axes of 150 mm and a 10 mm sphere at the origin to the  
         present 3-D figure. The axes and sphere are scaled according to the units of the  
         geometrical object that is passed to this function. Furthermore, when possible,  
@@ -28,9 +28,12 @@ def ft_plot_axes(*args, **kwargs):
         See also FT_PLOT_SENS, FT_PLOT_MESH, FT_PLOT_ORTHO, FT_PLOT_HEADSHAPE, FT_PLOT_DIPOLE, FT_PLOT_HEADMODEL  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/plotting/ft_plot_axes.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/plotting/ft_plot_axes.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_plot_axes", *args, **kwargs, nargout=0)

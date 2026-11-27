@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_get_defaults(*args, **kwargs):
-    """
+    r"""
       Get/set the defaults values associated with an identifier  
         FORMAT defaults = spm_get_defaults  
         Return the global "defaults" variable defined in spm_defaults.m.  
@@ -22,9 +22,12 @@ def spm_get_defaults(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/spm_get_defaults.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/spm_get_defaults.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_get_defaults", *args, **kwargs)

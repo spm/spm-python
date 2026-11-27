@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_resss(*args, **kwargs):
-    """
+    r"""
       Create residual sum of squares image (ResSS)  
         FORMAT Vo = spm_resss(Vi,Vo,R,flags)  
         Vi          - vector of mapped image volumes to work on (from spm_vol)  
@@ -79,9 +79,12 @@ def spm_resss(*args, **kwargs):
         Copyright (C) 1999-2012 Wellcome Trust Centre for Neuroimaging  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/compat/spm_resss.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/compat/spm_resss.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_resss", *args, **kwargs)

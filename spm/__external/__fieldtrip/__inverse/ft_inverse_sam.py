@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_inverse_sam(*args, **kwargs):
-    """
+    r"""
       FT_INVERSE_SAM scans on pre-defined dipole locations with a single dipole and  
         returns the Synthetic Aperture Magnetometry (SAM) beamformer estimates.  
          
@@ -16,6 +16,10 @@ def ft_inverse_sam(*args, **kwargs):
           cov         is the data covariance or cross-spectral density matrix  
         and  
           estimate    contains the estimated source parameters  
+         
+        If the input data "dat" is in V, "cov" is in V^2, and the leadfield is in V/Am,  
+        then the estimated output "mom" is in Am, the output "pow" is (Am)^2, and the  
+        output "filter" is in Am/V.  
          
         Additional input arguments should be specified as key-value pairs and can include  
           'feedback'  
@@ -36,12 +40,21 @@ def ft_inverse_sam(*args, **kwargs):
           'normalizeparam'  = parameter for depth normalization (default = 0.5)  
           'weight'          = number or Nx1 vector, weight for each dipole position to compensate for the size of the corresponding patch (default = 1)  
          
+        These options influence the mathematical inversion of the covariance matrix  
+         'lambda'           = regularisation parameter  
+         'kappa'            = parameter for covariance matrix inversion  
+         'tol'              = parameter for covariance matrix inversion  
+         'invmethod'        = method for covariance matrix inversion  
+         
         See also FT_SOURCEANALYSIS, FT_PREPARE_HEADMODEL, FT_PREPARE_SOURCEMODEL  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/inverse/ft_inverse_sam.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/inverse/ft_inverse_sam.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_inverse_sam", *args, **kwargs)

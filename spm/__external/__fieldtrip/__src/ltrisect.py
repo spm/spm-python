@@ -2,18 +2,21 @@ from spm._runtime import Runtime
 
 
 def ltrisect(*args, **kwargs):
-    """
+    r"""
       LTRISECT intersects a line with a plane spanned by three vertices  
          
         Use as  
-          [sect] = ltrisect(v1, v2, v3, l1, l2)  
+          [pos] = ltrisect(v1, v2, v3, l1, l2)  
         where v1, v2 and v3 are three vertices spanning the plane, and l1 and l2  
         are two points on the line  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/src/ltrisect.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/src/ltrisect.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ltrisect", *args, **kwargs)

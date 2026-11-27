@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_inv_spd(*args, **kwargs):
-    """
+    r"""
       Inverse for symmetric positive (semi)definite matrices  
         FORMAT X = spm_inv_spd(A,TOL)  
          
@@ -13,9 +13,12 @@ def spm_inv_spd(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/spm_inv_spd.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/spm_inv_spd.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_inv_spd", *args, **kwargs)

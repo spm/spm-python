@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_COVID(*args, **kwargs):
-    """
+    r"""
       Variational inversion of COVID model  
         FORMAT [F,Ep,Cp,pE,pC,Eh] = spm_COVID(Y,pE,pC,hC)  
         Y   - timeseries data  
@@ -44,9 +44,12 @@ def spm_COVID(*args, **kwargs):
         Copyright (C) 2020 Wellcome Centre for Human Neuroimaging  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DEM/spm_COVID.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/DEM/spm_COVID.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_COVID", *args, **kwargs)

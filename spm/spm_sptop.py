@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_sptop(*args, **kwargs):
-    """
+    r"""
       Sparse Toeplitz convolution matrix given convolution kernel  
         FORMAT [K] = spm_sptop(sigma,q,c)  
          
@@ -23,9 +23,12 @@ def spm_sptop(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/spm_sptop.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/spm_sptop.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_sptop", *args, **kwargs)

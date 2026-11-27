@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_geometryplot(*args, **kwargs):
-    """
+    r"""
       FT_GEOMETRYPLOT plots objects in 3D, such as sensors, headmodels, sourcemodels,  
         headshapes, meshes, etcetera. It provides an easy-to-use wrapper for the  
         corresponding FT_PLOT_XXX functions.  
@@ -56,9 +56,12 @@ def ft_geometryplot(*args, **kwargs):
         See also PLOTTING, FT_SOURCEPLOT, FT_INTERACTIVEREALIGN  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/ft_geometryplot.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/ft_geometryplot.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_geometryplot", *args, **kwargs)

@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_imcalc(*args, **kwargs):
-    """
+    r"""
       Perform algebraic functions on images  
         FORMAT Vo = spm_imcalc(Vi, Vo, f [,flags [,extra_vars...]])  
         Vi            - struct array (from spm_vol) of images to work on  
@@ -85,9 +85,12 @@ def spm_imcalc(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/spm_imcalc.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/spm_imcalc.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_imcalc", *args, **kwargs)

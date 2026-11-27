@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _surface_nesting(*args, **kwargs):
-    """
+    r"""
       SURFACE_NESTING determines what the order of multiple boundaries is to  
         get them sorted with the innermost or outermost surface first.  
          
@@ -16,9 +16,12 @@ def _surface_nesting(*args, **kwargs):
         See also SURFACE_ORIENTATION, SURFACE_NORMALS, SURFACE_INSIDE  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/forward/private/surface_nesting.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/forward/private/surface_nesting.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("surface_nesting", *args, **kwargs)

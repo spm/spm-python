@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_appendsource(*args, **kwargs):
-    """
+    r"""
       FT_APPENDSOURCE concatenates multiple volumetric source reconstruction data  
         structures that have been processed separately.  
          
@@ -24,9 +24,12 @@ def ft_appendsource(*args, **kwargs):
         FT_APPENDFREQ  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/ft_appendsource.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/ft_appendsource.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_appendsource", *args, **kwargs)

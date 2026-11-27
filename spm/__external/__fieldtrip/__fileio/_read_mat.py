@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _read_mat(*args, **kwargs):
-    """
+    r"""
       READ_MAT reads a matrix from an ascii or binary MBF format file  
          
          Usage: m         = loadmat('file');  
@@ -15,9 +15,12 @@ def _read_mat(*args, **kwargs):
          See also WRITE_MAT  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/read_mat.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/fileio/private/read_mat.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("read_mat", *args, **kwargs)

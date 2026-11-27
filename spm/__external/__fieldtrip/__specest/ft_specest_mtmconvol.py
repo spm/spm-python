@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_specest_mtmconvol(*args, **kwargs):
-    """
+    r"""
       FT_SPECEST_MTMCONVOL performs wavelet convolution in the time domain by  
         multiplication in the frequency domain.  
          
@@ -33,9 +33,12 @@ def ft_specest_mtmconvol(*args, **kwargs):
         See also FT_FREQANALYSIS, FT_SPECEST_MTMFFT, FT_SPECEST_TFR, FT_SPECEST_HILBERT, FT_SPECEST_WAVELET  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/specest/ft_specest_mtmconvol.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/specest/ft_specest_mtmconvol.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_specest_mtmconvol", *args, **kwargs)

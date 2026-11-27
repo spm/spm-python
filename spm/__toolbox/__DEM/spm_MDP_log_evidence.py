@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_MDP_log_evidence(*args, **kwargs):
-    """
+    r"""
       Bayesian model reduction for Dirichlet hyperparameters  
         FORMAT [F,sA,dFdA] = spm_MDP_log_evidence(qA,pA,rA)  
          
@@ -12,22 +12,25 @@ def spm_MDP_log_evidence(*args, **kwargs):
          
         F    - free energy or (negative) log evidence of reduced model  
         sA   - sufficient statistics of reduced posterior  
-        dFdA - total (negative) free energy gradients with respect to rA  
+        dFdA - total free energy gradients with respect to rA  
          
         This routine computes the negative log evidence of a reduced model of a  
-        categorical distribution parameterised in terms of Dirichlet  
-        hyperparameters (i.e., concentration parameters encoding probabilities).  
-        It uses Bayesian model reduction to evaluate the evidence for models with  
-        and without a particular parameter.  
+        categorical distribution parameterised in terms of Dirichlet parameters  
+        (i.e., parameters encoding probabilities). It uses Bayesian model  
+        reduction to evaluate the evidence for models with and without a  
+        particular parameter.  
          
         A demonstration of the implicit pruning can be found at the end of this  
         routine  
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DEM/spm_MDP_log_evidence.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/DEM/spm_MDP_log_evidence.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_MDP_log_evidence", *args, **kwargs)

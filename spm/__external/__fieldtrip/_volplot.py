@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _volplot(*args, **kwargs):
-    """
+    r"""
       VOLPLOT make 2D or 3D plot of volumetric data (e.g. MRI)  
         that is defined on a regular orthogonal grid  
           
@@ -26,9 +26,12 @@ def _volplot(*args, **kwargs):
         See also NDGRID  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/volplot.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/private/volplot.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("volplot", *args, **kwargs)

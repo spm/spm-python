@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _read_besa_src(*args, **kwargs):
-    """
+    r"""
       READ_BESA_SRC reads a beamformer source reconstruction from a BESA file  
          
         Use as  
@@ -12,9 +12,12 @@ def _read_besa_src(*args, **kwargs):
         of the file.  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/read_besa_src.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/private/read_besa_src.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("read_besa_src", *args, **kwargs)

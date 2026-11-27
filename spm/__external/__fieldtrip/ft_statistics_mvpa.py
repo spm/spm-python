@@ -2,13 +2,18 @@ from spm._runtime import Runtime
 
 
 def ft_statistics_mvpa(*args, **kwargs):
-    """
+    r"""
       FT_STATISTICS_MVPA performs multivariate pattern classification or regression using  
         the MVPA-Light toolbox. The function supports cross-validation, searchlight  
         analysis, generalization, nested preprocessing, a variety of classification and  
-        regression metrics, as well as statistical testing of these metrics. This function  
-        should not be called directly, instead you should call the function that is  
-        associated with the type of data on which you want to perform the test.  
+        regression metrics, as well as statistical testing of these metrics.   
+        It is not recommended to call this function directly,  
+        but instead you should call the function that is associated with the type of data on   
+        which you want to perform the test. This is because important data bookkeeping   
+        operations on the data are performed in the higher-level functions, which are  
+        assumed to have been handled correctly for the input arguments into this function.   
+        Also, notably, a prespecified randomseed in the cfg is handled in the higher  
+        level function, not here.  
          
         Use as  
           stat = ft_timelockstatistics(cfg, data1, data2, data3, ...)  
@@ -19,6 +24,14 @@ def ft_statistics_mvpa(*args, **kwargs):
         FT_SOURCEANALYSIS respectively, or from FT_TIMELOCKGRANDAVERAGE,  
         FT_FREQGRANDAVERAGE or FT_SOURCEGRANDAVERAGE respectively  
         and with cfg.method = 'mvpa'  
+         
+        In relation to the other ft_statistics_<> functions, FT_STATISTICS_MVPA stands out  
+        because it allows for cross-classification analysis; where the model is trained on  
+        the single trial data present in the first data argument, and tested on the single  
+        trial data present in the second data argument. In this case the highe level function  
+        (e.g. FT_TIMELOCKSTATISTICS) needs to be called with 2 data arguments containing single  
+        trial data, and with cfg.design as a 1x2 cell-array, where each cell corresponds with  
+        a design, consistent with the respective data argument.  
          
         The configuration options that can be specified are:  
           cfg.features        = specifies the name or index of the dimension(s)  
@@ -140,18 +153,23 @@ def ft_statistics_mvpa(*args, **kwargs):
                              together with the immediately preceding and following  
                              time points. Increasing timwin typially  
                              leads to smoother results along the time axis.  
+          cfg.tstep        = integer, size of time step, only works in  
+                             combination with cfg.timwin  
           cfg.freqwin      = integer, acts like cfg.timwin but across frequencies  
          
         This returns:  
-          stat.metric = this contains the requested metric  
+          stat.<metric> = this contains the requested metric  
          
         See also FT_TIMELOCKSTATISTICS, FT_FREQSTATISTICS, FT_SOURCESTATISTICS,  
-        FT_STATISTICS_ANALYTIC, FT_STATISTICS_STATS, FT_STATISTICS_MONTECARLO, FT_STATISTICS_CROSSVALIDATE  
+        FT_STATISTICS_ANALYTIC, FT_STATISTICS_STATS, FT_STATISTICS_MONTECARLO  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/ft_statistics_mvpa.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/ft_statistics_mvpa.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_statistics_mvpa", *args, **kwargs)

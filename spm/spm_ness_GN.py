@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_ness_GN(*args, **kwargs):
-    """
+    r"""
       Nonequilibrium steady-state under a Helmholtz decomposition  
         FORMAT [NESS] = spm_ness_GN(M,x)  
        --------------------------------------------------------------------------  
@@ -30,9 +30,12 @@ def spm_ness_GN(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/spm_ness_GN.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/spm_ness_GN.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_ness_GN", *args, **kwargs)

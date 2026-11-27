@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def fieldtrip2spss(*args, **kwargs):
-    """
+    r"""
       FIELDTRIP2SPSS compiles data and correpsonding labels into a textfile,  
         suitable for importing into SPSS or JASP (jasp-stats.org).  
          
@@ -28,9 +28,12 @@ def fieldtrip2spss(*args, **kwargs):
         window and enter 9999 as the missing value definition.  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fieldtrip2spss.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/fieldtrip2spss.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("fieldtrip2spss", *args, **kwargs, nargout=0)

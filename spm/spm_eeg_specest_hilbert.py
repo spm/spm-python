@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_eeg_specest_hilbert(*args, **kwargs):
-    """
+    r"""
       Plugin for spm_eeg_tf implementing spectral estimation using Hilbert transform  
         FORMAT res = spm_eeg_specest_hilbert(S, data, time)  
          
@@ -26,9 +26,12 @@ def spm_eeg_specest_hilbert(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/spm_eeg_specest_hilbert.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/spm_eeg_specest_hilbert.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_eeg_specest_hilbert", *args, **kwargs)

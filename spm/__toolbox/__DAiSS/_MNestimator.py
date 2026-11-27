@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _MNestimator(*args, **kwargs):
-    """
+    r"""
       function [Linv,W]=MNestimator(L,C,SNR2,trunc)  
         This function makes a basic minimum-morm pseudoinverse operator = MN estimator.  
         - L: the forward solution, lead-field matrix  
@@ -31,9 +31,12 @@ def _MNestimator(*args, **kwargs):
         17 Oct 2013  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DAiSS/private/MNestimator.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/DAiSS/private/MNestimator.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("MNestimator", *args, **kwargs)

@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_sourcewrite(*args, **kwargs):
-    """
+    r"""
       FT_SOURCEWRITE exports source-reconstructed results to gifti or nifti format file.  
         The appropriate output file depends on whether the source locations are described by  
         on a cortically constrained sheet (gifti) or by a regular 3D lattice (nifti).  
@@ -13,7 +13,7 @@ def ft_sourcewrite(*args, **kwargs):
         cfg is a structure that should contain  
          
           cfg.filename  = string, filename without the extension  
-          cfg.filetype  = string, can be 'nifti', 'gifti' or 'cifti' (default is automatic)  
+          cfg.filetype  = string, can be 'nifti', 'nifti_gz', 'gifti' or 'cifti' (default is automatic)  
           cfg.parameter = string, functional parameter to be written to file  
           cfg.precision = string, can be 'single', 'double', etc.  
          
@@ -26,9 +26,12 @@ def ft_sourcewrite(*args, **kwargs):
         See also FT_SOURCEANALYSIS, FT_SOURCEDESCRIPTIVES, FT_VOLUMEWRITE  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/ft_sourcewrite.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/ft_sourcewrite.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_sourcewrite", *args, **kwargs, nargout=0)

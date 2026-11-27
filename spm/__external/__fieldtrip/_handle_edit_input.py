@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _handle_edit_input(*args, **kwargs):
-    """
+    r"""
       HANDLE_EDIT_INPUT deals with user-entered input in the GUI. This is used to select  
         channels and/or trials in FT_REJECTVISUAL and to select channels in FT_DATABROWSER  
          
@@ -19,9 +19,12 @@ def _handle_edit_input(*args, **kwargs):
           {'MEG', '-MR*'}  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/handle_edit_input.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/private/handle_edit_input.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("handle_edit_input", *args, **kwargs)

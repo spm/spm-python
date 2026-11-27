@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_preproc_highpassfilter(*args, **kwargs):
-    """
+    r"""
       FT_PREPROC_HIGHPASSFILTER applies a high-pass filter to the data and thereby removes  
         the low frequency components in the data  
          
@@ -46,17 +46,31 @@ def ft_preproc_highpassfilter(*args, **kwargs):
         i.e. a two-pass filter with the same filter order will attenuate the signal twice as  
         strong.  
          
-        Further note that the filter type 'brickwall' filters in the frequency domain,  
-        but may have severe issues. For instance, it has the implication that the time  
-        domain signal is periodic. Another issue pertains to that frequencies are  
-        not well defined over short time intervals; particularly for low frequencies.  
+        Further note that the filter type 'brickwall' operates in the frequency domain,  
+        which may have severe issues. For instance, it is assumed that the time  
+        domain signal is periodic over the finite period of observation. In other words,   
+        given that the FFT is performed on untapered data, substantial signal leakage  
+        may occur. Another issue pertains to 0/1 nature of the brick wall mask in the  
+        frequency domain. Particularly with short data segments, the frequency resolution  
+        will be low, and one should realise that frequency bins are widely spaced on short   
+        time intervals, which has consequences for the low frequencies. In general, one   
+        should be aware of the frequency bins' width, and how this interacts with the filter  
+        parameters. Only use this filter if you know what you are doing.  
+         
+        If the data contains NaNs, these will affect the output. With an IIR  
+        filter, and/or with FFT-filtering, local NaNs will spread to the whole  
+        time series. With a FIR filter, local NaNs will spread locally, depending  
+        on the filter order.  
          
         See also PREPROC  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/preproc/ft_preproc_highpassfilter.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/preproc/ft_preproc_highpassfilter.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_preproc_highpassfilter", *args, **kwargs)

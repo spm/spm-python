@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_kl_dirichlet(*args, **kwargs):
-    """
+    r"""
       KL divergence between two Dirichlet densities  
         FORMAT [d] = spm_kl_dirichlet(lambda_q,lambda_p,log_tilde_pi)  
          
@@ -16,9 +16,12 @@ def spm_kl_dirichlet(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/spm_kl_dirichlet.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/spm_kl_dirichlet.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_kl_dirichlet", *args, **kwargs)

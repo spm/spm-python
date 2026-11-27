@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def mci_linsqr_struct(*args, **kwargs):
-    """
+    r"""
       Set up data structures for linsqr model  
         FORMAT [M,U,Xfull] = mci_linsqr_struct (Nobs,lambda,des)  
          
@@ -16,9 +16,12 @@ def mci_linsqr_struct(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/mci/models/linsqr/mci_linsqr_struct.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/mci/models/linsqr/mci_linsqr_struct.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("mci_linsqr_struct", *args, **kwargs)

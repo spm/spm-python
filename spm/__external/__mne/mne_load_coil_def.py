@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def mne_load_coil_def(*args, **kwargs):
-    """
+    r"""
        
          
           [CoilDef,Header] = mne_load_coil_def(fname);  
@@ -18,9 +18,12 @@ def mne_load_coil_def(*args, **kwargs):
           created by John C. Mosher  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/mne/mne_load_coil_def.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/mne/mne_load_coil_def.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("mne_load_coil_def", *args, **kwargs)

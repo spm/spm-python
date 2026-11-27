@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_MDP_VB_update(*args, **kwargs):
-    """
+    r"""
       Bayesian model reduction (sleep) for MDP models  
         FORMAT [MDP] = spm_MDP_VB_update(MDP,PDP,OPTIONS)  
          
@@ -10,10 +10,9 @@ def spm_MDP_VB_update(*args, **kwargs):
         PDP  - MDP structure (after exposure)  
          
         OPTIONS.d   - update of initial states of hidden factors d [default: []]  
-        OPTIONS.eta - forgetting rate [default: 1]  
         OPTIONS.BMR - Bayesian model reduction options:  
          
-        BMR.g - Bayesian model reduction of modality g [default: 1]  
+        BMR.g - Bayesian model reduction of modality g [default: all]  
         BMR.f - hidden factors to contract over [default: 0]  
         BMR.o - outcomes - that induce REM [default: {}]  
         BMR.T - Occams threshold [default: 2]  
@@ -44,9 +43,12 @@ def spm_MDP_VB_update(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DEM/spm_MDP_VB_update.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/DEM/spm_MDP_VB_update.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_MDP_VB_update", *args, **kwargs)

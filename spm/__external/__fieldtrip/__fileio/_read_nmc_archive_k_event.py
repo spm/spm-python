@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _read_nmc_archive_k_event(*args, **kwargs):
-    """
+    r"""
       READ_NMC_ARCHIVE_K_EVENT extracts event-data from nmc_archive_k datasets  
          
         Use as  
@@ -16,9 +16,12 @@ def _read_nmc_archive_k_event(*args, **kwargs):
         format.  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/read_nmc_archive_k_event.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/fileio/private/read_nmc_archive_k_event.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("read_nmc_archive_k_event", *args, **kwargs)

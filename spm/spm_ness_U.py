@@ -2,8 +2,8 @@ from spm._runtime import Runtime
 
 
 def spm_ness_U(*args, **kwargs):
-    """
-      Nonequilibrium steady-state under a Helmholtz decomposition  
+    r"""
+      basis functions for NESS under a Helmholtz decomposition  
         FORMAT U = spm_ness_U(M,x)  
        --------------------------------------------------------------------------  
         M   - model specification structure  
@@ -13,7 +13,8 @@ def spm_ness_U(*args, **kwargs):
            M.x   - (n x 1) = x(0) = expansion point  
            M.W   - (n x n) - precision matrix of random fluctuations  
            M.X   - sample points  
-           M.K   - order of polynomial expansion  
+           M.K   - order of polynomial expansion (suprisal)  
+           M.L   - order of polynomial expansion (solenoidal)  
          
         x       - sample points  
          
@@ -24,6 +25,7 @@ def spm_ness_U(*args, **kwargs):
         U.b     - polynomial basis  
         U.D     - derivative operator  
         U.G     - amplitude of random fluctuations  
+        U.H     - Hessian operator  
         U.dQdp  - gradients of flow operator Q  w.r.t. flow parameters  
         U.dbQdp - gradients of bQ w.r.t. flow parameters  
         U.dLdp  - gradients of L w.r.t. flow parameters  
@@ -32,9 +34,12 @@ def spm_ness_U(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/spm_ness_U.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/spm_ness_U.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_ness_U", *args, **kwargs)

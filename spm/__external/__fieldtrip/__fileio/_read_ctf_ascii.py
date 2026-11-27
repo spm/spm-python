@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _read_ctf_ascii(*args, **kwargs):
-    """
+    r"""
       READ_CTF_ASCII reads general data from an CTF configuration file  
          
         The file should be formatted like  
@@ -22,9 +22,12 @@ def _read_ctf_ascii(*args, **kwargs):
         and maybe for other files as well.  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/read_ctf_ascii.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/fileio/private/read_ctf_ascii.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("read_ctf_ascii", *args, **kwargs)

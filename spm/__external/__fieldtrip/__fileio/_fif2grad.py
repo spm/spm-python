@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _fif2grad(*args, **kwargs):
-    """
+    r"""
       FIF2GRAD constructs a gradiometer definition from a Neuromag *.fif file  
         The resulting gradiometer definition can be used by Fieldtrip for forward  
         and inverse computations.  
@@ -14,9 +14,12 @@ def _fif2grad(*args, **kwargs):
         FT_READ_SENS, FT_READ_HEADER  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/fif2grad.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/fileio/private/fif2grad.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("fif2grad", *args, **kwargs)

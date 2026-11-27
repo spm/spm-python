@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _eeg_leadfield4_prepare(*args, **kwargs):
-    """
+    r"""
       EEG_LEADFIELD4_PREPARE computes constant factors for series expansion  
         for the 4 concentric sphere electric leadfield computation. Calling  
         this function speeds up subsequent computations, as the constant  
@@ -25,9 +25,12 @@ def _eeg_leadfield4_prepare(*args, **kwargs):
         See also EEG_LEADFIELD4  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/forward/private/eeg_leadfield4_prepare.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/forward/private/eeg_leadfield4_prepare.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("eeg_leadfield4_prepare", *args, **kwargs)

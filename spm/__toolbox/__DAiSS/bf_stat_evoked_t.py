@@ -2,8 +2,8 @@ from spm._runtime import Runtime
 
 
 def bf_stat_evoked_t(*args, **kwargs):
-    """
-      Compute t-stat accross trials for evoked response  
+    r"""
+      Compute t-stat across trials for evoked response  
         FORMAT BF = bf_stat_evoked_t(S)  
           S               - input structure  
          fields of S:  
@@ -19,9 +19,12 @@ def bf_stat_evoked_t(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DAiSS/bf_stat_evoked_t.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/DAiSS/bf_stat_evoked_t.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("bf_stat_evoked_t", *args, **kwargs)

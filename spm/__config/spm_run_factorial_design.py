@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_run_factorial_design(*args, **kwargs):
-    """
+    r"""
       SPM job execution function - factorial design specification  
         Input:  
         job    - harvested job data structure (see matlabbatch help)  
@@ -11,9 +11,12 @@ def spm_run_factorial_design(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/config/spm_run_factorial_design.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/config/spm_run_factorial_design.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_run_factorial_design", *args, **kwargs)

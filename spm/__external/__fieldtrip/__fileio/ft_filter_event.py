@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_filter_event(*args, **kwargs):
-    """
+    r"""
       FT_FILTER_EVENT does what its name implies  
          
         Use as  
@@ -28,9 +28,12 @@ def ft_filter_event(*args, **kwargs):
         See also FT_READ_EVENT, FT_WRITE_EVENT  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/ft_filter_event.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/fileio/ft_filter_event.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_filter_event", *args, **kwargs)

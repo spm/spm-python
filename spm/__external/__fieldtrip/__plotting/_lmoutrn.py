@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _lmoutrn(*args, **kwargs):
-    """
+    r"""
       LMOUTRN computes the la/mu parameters of a point projected to triangles  
          
         Use as  
@@ -16,9 +16,12 @@ def _lmoutrn(*args, **kwargs):
         lies closer to the average across all vertices and the triangle under consideration.  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/plotting/private/lmoutrn.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/plotting/private/lmoutrn.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("lmoutrn", *args, **kwargs)

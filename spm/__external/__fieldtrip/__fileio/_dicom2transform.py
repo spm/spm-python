@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _dicom2transform(*args, **kwargs):
-    """
+    r"""
       DICOM2TRANSFORM converts the DICOM header parameters into a 4x4 homogenous  
         transformation matrix that maps voxel indices to the Patient Coordinate System.  
         Note that voxel indices are to be counted starting from 1 (MATLAB and Fortran  
@@ -30,9 +30,12 @@ def _dicom2transform(*args, **kwargs):
         See also DCMINFO, LOAD_DICOM_SERIES  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/dicom2transform.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/fileio/private/dicom2transform.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("dicom2transform", *args, **kwargs)

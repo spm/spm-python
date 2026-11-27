@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_plot_topo3d(*args, **kwargs):
-    """
+    r"""
       FT_PLOT_TOPO3D visualizes a 3D topographic representation of the electric potential  
         or magnetic field distribution at the sensor locations.  
          
@@ -25,9 +25,12 @@ def ft_plot_topo3d(*args, **kwargs):
         FT_TOPOPLOTER, FT_TOPOPLOTTFR  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/plotting/ft_plot_topo3d.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/plotting/ft_plot_topo3d.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_plot_topo3d", *args, **kwargs, nargout=0)

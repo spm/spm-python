@@ -4,7 +4,7 @@ from spm._runtime import Runtime, RuntimeMixin
 
 class xmltree(RuntimeMixin, MatlabClass):
     def __init__(self, *args, **kwargs):
-        """
+        r"""
           XMLTREE/XMLTREE Constructor of the XMLTree class  
             FORMAT tree = xmltree(varargin)  
               
@@ -28,15 +28,18 @@ class xmltree(RuntimeMixin, MatlabClass):
             
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/@xmltree/xmltree.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/@xmltree/xmltree.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         super().__init__()
 
     def add(self, *args, **kwargs):
-        """
+        r"""
           XMLTREE/ADD Method (add children to elements of an XML Tree)  
             FORMAT vararout = add(tree,uid,type,parameter)  
               
@@ -60,15 +63,18 @@ class xmltree(RuntimeMixin, MatlabClass):
            __________________________________________________________________________  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/@xmltree/add.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/@xmltree/add.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("add", self._as_matlab_object(), *args, **kwargs)
 
     def attributes(self, *args, **kwargs):
-        """
+        r"""
           XMLTREE/ATTRIBUTES Method (handle attributes of an element node)  
             FORMAT varargout = attributes(varargin)  
               
@@ -94,15 +100,18 @@ class xmltree(RuntimeMixin, MatlabClass):
            __________________________________________________________________________  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/@xmltree/attributes.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/@xmltree/attributes.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("attributes", self._as_matlab_object(), *args, **kwargs)
 
     def branch(self, *args, **kwargs):
-        """
+        r"""
           XMLTREE/BRANCH Branch Method  
             FORMAT uid = parent(tree,uid)  
               
@@ -115,15 +124,18 @@ class xmltree(RuntimeMixin, MatlabClass):
            __________________________________________________________________________  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/@xmltree/branch.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/@xmltree/branch.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("branch", self._as_matlab_object(), *args, **kwargs)
 
     def char(self, *args, **kwargs):
-        """
+        r"""
           XMLTREE/CHAR Converter function from XMLTree to a description string  
             FORMAT s = char(tree)  
              
@@ -136,15 +148,18 @@ class xmltree(RuntimeMixin, MatlabClass):
            __________________________________________________________________________  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/@xmltree/char.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/@xmltree/char.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("char", self._as_matlab_object(), *args, **kwargs)
 
     def children(self, *args, **kwargs):
-        """
+        r"""
           XMLTREE/CHILDREN Return children's UIDs of node uid  
             FORMAT child = children(tree,uid)  
              
@@ -157,15 +172,18 @@ class xmltree(RuntimeMixin, MatlabClass):
            __________________________________________________________________________  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/@xmltree/children.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/@xmltree/children.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("children", self._as_matlab_object(), *args, **kwargs)
 
     def convert(self, *args, **kwargs):
-        """
+        r"""
           XMLTREE/CONVERT Convert an XML tree into a structure  
               
             tree     - XMLTree object  
@@ -187,15 +205,18 @@ class xmltree(RuntimeMixin, MatlabClass):
            __________________________________________________________________________  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/@xmltree/convert.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/@xmltree/convert.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("convert", self._as_matlab_object(), *args, **kwargs)
 
     def copy(self, *args, **kwargs):
-        """
+        r"""
           XMLTREE/COPY Copy Method (copy a subtree in another branch)  
             FORMAT tree = copy(tree,subuid,uid)  
               
@@ -209,15 +230,18 @@ class xmltree(RuntimeMixin, MatlabClass):
            __________________________________________________________________________  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/@xmltree/copy.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/@xmltree/copy.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("copy", self._as_matlab_object(), *args, **kwargs)
 
     def delete(self, *args, **kwargs):
-        """
+        r"""
           XMLTREE/DELETE Delete (delete a subtree given its UID)  
               
             tree      - XMLTree object  
@@ -229,15 +253,18 @@ class xmltree(RuntimeMixin, MatlabClass):
            __________________________________________________________________________  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/@xmltree/delete.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/@xmltree/delete.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("delete", self._as_matlab_object(), *args, **kwargs)
 
     def display(self, *args, **kwargs):
-        """
+        r"""
           XMLTREE/DISPLAY Command window display of an XMLTree  
             FORMAT display(tree)  
               
@@ -249,15 +276,18 @@ class xmltree(RuntimeMixin, MatlabClass):
            __________________________________________________________________________  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/@xmltree/display.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/@xmltree/display.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("display", self._as_matlab_object(), *args, **kwargs, nargout=0)
 
     def editor(self, *args, **kwargs):
-        """
+        r"""
          XMLTREE/EDITOR A Graphical User Interface for an XML tree  
              EDITOR(TREE) opens a new figure displaying the xmltree object TREE.  
              H = EDITOR(TREE) also returns the figure handle H.  
@@ -268,15 +298,18 @@ class xmltree(RuntimeMixin, MatlabClass):
            __________________________________________________________________________  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/@xmltree/editor.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/@xmltree/editor.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("editor", self._as_matlab_object(), *args, **kwargs, nargout=0)
 
     def find(self, *args, **kwargs):
-        """
+        r"""
           XMLTREE/FIND Find elements in a tree with specified characteristics  
             FORMAT list = find(varargin)  
              
@@ -300,15 +333,18 @@ class xmltree(RuntimeMixin, MatlabClass):
            __________________________________________________________________________  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/@xmltree/find.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/@xmltree/find.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("find", self._as_matlab_object(), *args, **kwargs)
 
     def flush(self, *args, **kwargs):
-        """
+        r"""
           XMLTREE/FLUSH Flush (Clear a subtree given its UID)  
               
             tree      - XMLTree object  
@@ -321,15 +357,18 @@ class xmltree(RuntimeMixin, MatlabClass):
            __________________________________________________________________________  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/@xmltree/flush.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/@xmltree/flush.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("flush", self._as_matlab_object(), *args, **kwargs)
 
     def get(self, *args, **kwargs):
-        """
+        r"""
           XMLTREE/GET Get Method (get object properties)  
             FORMAT value = get(tree,uid,parameter)  
               
@@ -343,15 +382,18 @@ class xmltree(RuntimeMixin, MatlabClass):
            __________________________________________________________________________  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/@xmltree/get.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/@xmltree/get.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("get", self._as_matlab_object(), *args, **kwargs)
 
     def getfilename(self, *args, **kwargs):
-        """
+        r"""
           XMLTREE/GETFILENAME Get filename method  
             FORMAT filename = getfilename(tree)  
               
@@ -364,15 +406,18 @@ class xmltree(RuntimeMixin, MatlabClass):
            __________________________________________________________________________  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/@xmltree/getfilename.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/@xmltree/getfilename.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("getfilename", self._as_matlab_object(), *args, **kwargs)
 
     def isfield(self, *args, **kwargs):
-        """
+        r"""
           XMLTREE/ISFIELD Is parameter a field of tree{uid} ?  
             FORMAT F = isfield(tree,uid,parameter)  
              
@@ -386,15 +431,18 @@ class xmltree(RuntimeMixin, MatlabClass):
            __________________________________________________________________________  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/@xmltree/isfield.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/@xmltree/isfield.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("isfield", self._as_matlab_object(), *args, **kwargs)
 
     def length(self, *args, **kwargs):
-        """
+        r"""
           XMLTREE/LENGTH Length Method  
             FORMAT l = length(tree,r)  
               
@@ -408,15 +456,18 @@ class xmltree(RuntimeMixin, MatlabClass):
            __________________________________________________________________________  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/@xmltree/length.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/@xmltree/length.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("length", self._as_matlab_object(), *args, **kwargs)
 
     def move(self, *args, **kwargs):
-        """
+        r"""
           XMLTREE/MOVE Move (move a subtree inside a tree from A to B)  
               
             tree   - XMLTree object  
@@ -429,15 +480,18 @@ class xmltree(RuntimeMixin, MatlabClass):
            __________________________________________________________________________  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/@xmltree/move.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/@xmltree/move.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("move", self._as_matlab_object(), *args, **kwargs)
 
     def parent(self, *args, **kwargs):
-        """
+        r"""
           XMLTREE/PARENT Parent Method  
             FORMAT uid = parent(tree,uid)  
               
@@ -450,15 +504,18 @@ class xmltree(RuntimeMixin, MatlabClass):
            __________________________________________________________________________  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/@xmltree/parent.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/@xmltree/parent.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("parent", self._as_matlab_object(), *args, **kwargs)
 
     def root(self, *args, **kwargs):
-        """
+        r"""
           XMLTREE/ROOT Root Method  
             FORMAT uid = root(tree)  
               
@@ -470,15 +527,18 @@ class xmltree(RuntimeMixin, MatlabClass):
            __________________________________________________________________________  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/@xmltree/root.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/@xmltree/root.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("root", self._as_matlab_object(), *args, **kwargs)
 
     def save(self, *args, **kwargs):
-        """
+        r"""
           XMLTREE/SAVE Save an XML tree in an XML file  
             FORMAT varargout = save(tree,filename)  
              
@@ -492,15 +552,18 @@ class xmltree(RuntimeMixin, MatlabClass):
            __________________________________________________________________________  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/@xmltree/save.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/@xmltree/save.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("save", self._as_matlab_object(), *args, **kwargs)
 
     def set_(self, *args, **kwargs):
-        """
+        r"""
           XMLTREE/SET Method (set object properties)  
             FORMAT tree = set(tree,uid,parameter,value)  
               
@@ -515,15 +578,18 @@ class xmltree(RuntimeMixin, MatlabClass):
            __________________________________________________________________________  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/@xmltree/set.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/@xmltree/set.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("set", self._as_matlab_object(), *args, **kwargs)
 
     def setfilename(self, *args, **kwargs):
-        """
+        r"""
           XMLTREE/SETFILENAME Set filename method  
             FORMAT tree = setfilename(tree,filename)  
               
@@ -535,15 +601,18 @@ class xmltree(RuntimeMixin, MatlabClass):
            __________________________________________________________________________  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/@xmltree/setfilename.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/@xmltree/setfilename.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("setfilename", self._as_matlab_object(), *args, **kwargs)
 
     def view(self, *args, **kwargs):
-        """
+        r"""
           XMLTREE/VIEW View Method (deprecated)  
             FORMAT view(tree)  
               
@@ -556,15 +625,18 @@ class xmltree(RuntimeMixin, MatlabClass):
            __________________________________________________________________________  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/@xmltree/view.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/@xmltree/view.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("view", self._as_matlab_object(), *args, **kwargs, nargout=0)
 
     def _struct2xml(self, *args, **kwargs):
-        """
+        r"""
           STRUCT2XML Convert a structure to an XML tree object  
             FORMAT tree = struct2xml(s,rootname)  
              
@@ -582,15 +654,18 @@ class xmltree(RuntimeMixin, MatlabClass):
            __________________________________________________________________________  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/@xmltree/private/struct2xml.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/@xmltree/private/struct2xml.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("struct2xml", self._as_matlab_object(), *args, **kwargs)
 
     def _xml_findstr(self, *args, **kwargs):
-        """
+        r"""
          XML_FINDSTR Find one string within another  
               K = XML_FINDSTR(TEXT,PATTERN) returns the starting indices of any   
               occurrences of the string PATTERN in the string TEXT.  
@@ -614,15 +689,18 @@ class xmltree(RuntimeMixin, MatlabClass):
            __________________________________________________________________________  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/@xmltree/private/xml_findstr.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/@xmltree/private/xml_findstr.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("xml_findstr", self._as_matlab_object(), *args, **kwargs)
 
     def _xml_parser(self, *args, **kwargs):
-        """
+        r"""
           XML (eXtensible Markup Language) Processor  
             FORMAT tree = xml_parser(xmlstr)  
              
@@ -639,9 +717,12 @@ class xmltree(RuntimeMixin, MatlabClass):
            __________________________________________________________________________  
           
 
-        [Matlab code]( https://github.com/spm/spm/blob/main/@xmltree/private/xml_parser.m )
+        Generated from SPM26.10.01.
 
-        Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+        [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/@xmltree/private/xml_parser.m )
+
+        Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+        Department of Imaging Neuroscience, UCL
         """
 
         return Runtime.call("xml_parser", self._as_matlab_object(), *args, **kwargs)

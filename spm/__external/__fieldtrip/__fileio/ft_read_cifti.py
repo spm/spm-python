@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_read_cifti(*args, **kwargs):
-    """
+    r"""
       FT_READ_CIFTI read functional data or functional connectivity from a cifti-1 or  
         cifti-2 file. The functional data can consist of a dense or a parcellated  
         representation. The geometrical description of the brainordinates can consist of  
@@ -35,9 +35,12 @@ def ft_read_cifti(*args, **kwargs):
         See also FT_WRITE_CIFTI, FT_READ_MRI, FT_WRITE_MRI  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/ft_read_cifti.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/fileio/ft_read_cifti.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_read_cifti", *args, **kwargs)

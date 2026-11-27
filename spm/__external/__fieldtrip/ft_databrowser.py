@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_databrowser(*args, **kwargs):
-    """
+    r"""
       FT_DATABROWSER can be used for visual inspection of data. Artifacts that were  
         detected by artifact functions (see FT_ARTIFACT_xxx functions where xxx is the type  
         of artifact) are marked. Additionally data pieces can be marked and unmarked as  
@@ -18,7 +18,7 @@ def ft_databrowser(*args, **kwargs):
          
         If you want to browse data that is on disk, you have to specify  
           cfg.dataset                 = string with the filename  
-        Instead of specifying the dataset, you can also explicitely specify the name of the  
+        Instead of specifying the dataset, you can also explicitly specify the name of the  
         file containing the header information and the name of the file containing the  
         data, using  
           cfg.datafile                = string with the filename  
@@ -52,6 +52,7 @@ def ft_databrowser(*args, **kwargs):
           cfg.selcfg                  = configuration options for function in cfg.selfun  
           cfg.seldat                  = 'selected' or 'all', specifies whether only the currently selected or all channels will be passed to the selfun (default = 'selected')  
           cfg.figure                  = 'yes' or 'no', whether to open a new figure. You can also specify a figure handle from FIGURE, GCF or SUBPLOT. (default = 'yes')  
+          cfg.figurename              = string, title of the figure window  
           cfg.visible                 = string, 'on' or 'off' whether figure will be visible (default = 'on')  
           cfg.position                = location and size of the figure, specified as [left bottom width height] (default is automatic)  
           cfg.renderer                = string, 'opengl', 'zbuffer', 'painters', see RENDERERINFO (default is automatic, try 'painters' when it crashes)  
@@ -127,9 +128,12 @@ def ft_databrowser(*args, **kwargs):
         FT_ARTIFACT_ECG, FT_COMPONENTANALYSIS  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/ft_databrowser.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/ft_databrowser.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_databrowser", *args, **kwargs)

@@ -2,16 +2,19 @@ from spm._runtime import Runtime
 
 
 def _mxDeserialize(*args, **kwargs):
-    """
+    r"""
       MXDESERIALIZE reconstructs a MATLAB object from a uint8 array suitable  
         for passing down a comms channel to be reconstructed at the other end.  
          
         See also MXSERIALIZE  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/private/mxDeserialize.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/private/mxDeserialize.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("mxDeserialize", *args, **kwargs)

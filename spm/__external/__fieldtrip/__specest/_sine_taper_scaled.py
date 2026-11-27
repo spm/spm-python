@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _sine_taper_scaled(*args, **kwargs):
-    """
+    r"""
       Compute Riedel & Sidorenko sine tapers.  
         sine_taper_scaled(n, k) produces the first 2*k tapers of length n,  
         returned as the columns of d. The norm of the tapers will not be 1. The  
@@ -12,9 +12,12 @@ def _sine_taper_scaled(*args, **kwargs):
         the powerspectra of the tapered data segments, prior to averaging.  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/specest/private/sine_taper_scaled.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/specest/private/sine_taper_scaled.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("sine_taper_scaled", *args, **kwargs)

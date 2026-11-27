@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ADEM_visual(*args, **kwargs):
-    """
+    r"""
       DEM demo for active inference (i.e. action-perception optimisation of free  
         energy).  This simulation calls on spm_ADEM to simulate visual sampling of  
         the world and demonstrate retinal stabilisation or visual tracking. We  
@@ -16,9 +16,12 @@ def ADEM_visual(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/DEM/ADEM_visual.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/DEM/ADEM_visual.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ADEM_visual", *args, **kwargs, nargout=0)

@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_plot_slice(*args, **kwargs):
-    """
+    r"""
       FT_PLOT_SLICE plots a single slice that cuts through a 3-D volume and interpolates  
         the data if needed.  
          
@@ -47,9 +47,12 @@ def ft_plot_slice(*args, **kwargs):
         See also FT_PLOT_ORTHO, FT_PLOT_MONTAGE, FT_SOURCEPLOT  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/plotting/ft_plot_slice.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/plotting/ft_plot_slice.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_plot_slice", *args, **kwargs)

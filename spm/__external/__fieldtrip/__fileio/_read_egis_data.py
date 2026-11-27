@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _read_egis_data(*args, **kwargs):
-    """
+    r"""
       READ_EGIS_DATA reads the data from an EGI EGIS format file  
          
         Use as  
@@ -25,9 +25,12 @@ def _read_egis_data(*args, **kwargs):
         Modified from EGI's EGI Toolbox with permission 2007-06-28 Joseph Dien  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/fileio/private/read_egis_data.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/fileio/private/read_egis_data.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("read_egis_data", *args, **kwargs)

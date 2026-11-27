@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_eeg_inv_ecd_DrawDip(*args, **kwargs):
-    """
+    r"""
       Display the dipoles as obtained from VB-ECD  
         FORMAT spm_eeg_inv_ecd_DrawDip('Init',[sdip,[P]])  
         Display dipoles from SDIP structure on image P [Default is avg152T1]  
@@ -37,9 +37,12 @@ def spm_eeg_inv_ecd_DrawDip(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/dcm_meeg/spm_eeg_inv_ecd_DrawDip.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/dcm_meeg/spm_eeg_inv_ecd_DrawDip.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_eeg_inv_ecd_DrawDip", *args, **kwargs, nargout=0)

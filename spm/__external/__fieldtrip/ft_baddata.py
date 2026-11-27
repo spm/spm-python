@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_baddata(*args, **kwargs):
-    """
+    r"""
       FT_BADDATA identifies bad data in a MEG or EEG dataset by looping over all trials  
         and all channels. Each channel in each trial is considered separately, in the  
         remainder of the help we will refer to this as "traces". Different methods are  
@@ -46,9 +46,12 @@ def ft_baddata(*args, **kwargs):
         See also FT_BADCHANNEL, FT_BADSEGMENT, FT_REJECTVISUAL, FT_CHANNELREPAIR  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/ft_baddata.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/ft_baddata.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_baddata", *args, **kwargs)

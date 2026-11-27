@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_granger(*args, **kwargs):
-    """
+    r"""
       Compute Granger causality matrix   
         FORMAT [G,Psig] = spm_granger (mar)  
          
@@ -16,9 +16,12 @@ def spm_granger(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/toolbox/spectral/spm_granger.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/toolbox/spectral/spm_granger.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_granger", *args, **kwargs)

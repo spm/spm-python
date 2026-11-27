@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_specest_irasa(*args, **kwargs):
-    """
+    r"""
       FT_SPECEST_IRASA separates the fractal components from the orginal power spectrum  
         using Irregular-Resampling Auto-Spectral Analysis (IRASA)  
          
@@ -34,9 +34,12 @@ def ft_specest_irasa(*args, **kwargs):
         See also FT_FREQANALYSIS, FT_SPECEST_MTMFFT, FT_SPECEST_MTMCONVOL, FT_SPECEST_TFR, FT_SPECEST_HILBERT, FT_SPECEST_WAVELET  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/specest/ft_specest_irasa.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/specest/ft_specest_irasa.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_specest_irasa", *args, **kwargs)

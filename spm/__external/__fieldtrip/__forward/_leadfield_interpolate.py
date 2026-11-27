@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _leadfield_interpolate(*args, **kwargs):
-    """
+    r"""
       LEADFIELD_INTERPOLATE interpolates the leadfield for a source at  
         an arbitrary location given the pre-computed leadfields on a regular  
         grid.  
@@ -11,9 +11,12 @@ def _leadfield_interpolate(*args, **kwargs):
           lf = leadfield_interpolate(pos, vol)  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/forward/private/leadfield_interpolate.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/forward/private/leadfield_interpolate.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("leadfield_interpolate", *args, **kwargs)

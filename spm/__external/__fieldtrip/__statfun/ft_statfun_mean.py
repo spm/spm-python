@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_statfun_mean(*args, **kwargs):
-    """
+    r"""
       FT_STATFUN_MEAN demonstrates how to compute the mean over all conditions in the  
         data. Since this does NOT depend on the experimental design, it cannot be used for  
         testing for differences between conditions.  
@@ -15,9 +15,12 @@ def ft_statfun_mean(*args, **kwargs):
         See also FT_TIMELOCKSTATISTICS, FT_FREQSTATISTICS or FT_SOURCESTATISTICS, and see FT_STATFUN_DIFF for a similar example  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/statfun/ft_statfun_mean.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/statfun/ft_statfun_mean.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_statfun_mean", *args, **kwargs)

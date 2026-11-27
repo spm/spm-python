@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def _fixname(*args, **kwargs):
-    """
+    r"""
       FIXNAME changes all inappropriate characters in a string into '_'  
         so that it can be used as a filename or as a field name in a structure.  
         If the string begins with a digit, an 'x' is prepended.  
@@ -18,9 +18,12 @@ def _fixname(*args, **kwargs):
         See also DEBLANK, STRIP, PAD  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/statfun/private/fixname.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/statfun/private/fixname.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("fixname", *args, **kwargs)

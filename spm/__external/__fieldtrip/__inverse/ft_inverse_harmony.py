@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_inverse_harmony(*args, **kwargs):
-    """
+    r"""
       FT_INVERSE_HARMONY computes a linear estimate of the current in a distributed  
         source model using a mesh harmonic based low-pass filter.  
          
@@ -43,9 +43,12 @@ def ft_inverse_harmony(*args, **kwargs):
         See also FT_SOURCEANALYSIS, FT_PREPARE_HEADMODEL, FT_PREPARE_SOURCEMODEL  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/inverse/ft_inverse_harmony.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/inverse/ft_inverse_harmony.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_inverse_harmony", *args, **kwargs)

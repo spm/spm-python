@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_math(*args, **kwargs):
-    """
+    r"""
       FT_MATH performs mathematical operations on FieldTrip data structures,  
         such as addition, subtraction, division, etc.  
          
@@ -62,9 +62,12 @@ def ft_math(*args, **kwargs):
         See also FT_DATATYPE  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/ft_math.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/ft_math.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_math", *args, **kwargs)

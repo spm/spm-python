@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def ft_datatype_segmentation(*args, **kwargs):
-    """
+    r"""
       FT_DATATYPE_SEGMENTATION describes the FieldTrip MATLAB structure for segmented  
         voxel-based data and atlasses. A segmentation can either be indexed or  
         probabilistic (see below).  
@@ -81,9 +81,12 @@ def ft_datatype_segmentation(*args, **kwargs):
         See also FT_DATATYPE, FT_DATATYPE_VOLUME, FT_DATATYPE_PARCELLATION  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/external/fieldtrip/utilities/ft_datatype_segmentation.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/external/fieldtrip/utilities/ft_datatype_segmentation.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("ft_datatype_segmentation", *args, **kwargs)

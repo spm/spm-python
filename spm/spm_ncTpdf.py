@@ -2,7 +2,7 @@ from spm._runtime import Runtime
 
 
 def spm_ncTpdf(*args, **kwargs):
-    """
+    r"""
       Probability Density Function (PDF) of non-central t-distribution  
         FORMAT f = spm_ncTpdf(x,v,d)  
         x - t-ordinates  
@@ -20,9 +20,12 @@ def spm_ncTpdf(*args, **kwargs):
        __________________________________________________________________________  
       
 
-    [Matlab code]( https://github.com/spm/spm/blob/main/spm_ncTpdf.m )
+    Generated from SPM26.10.01.
 
-    Copyright (C) 1995-2025 Functional Imaging Laboratory, Department of Imaging Neuroscience, UCL
+    [Source Matlab code]( https://github.com/spm/spm/blob/26.10.01/spm_ncTpdf.m )
+
+    Copyright (C) 1995-2026 Functional Imaging Laboratory, 
+    Department of Imaging Neuroscience, UCL
     """
 
     return Runtime.call("spm_ncTpdf", *args, **kwargs)
